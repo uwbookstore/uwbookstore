@@ -1,0 +1,39 @@
+.artclub {
+    margin-bottom: 3rem;
+    &__img {
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-weight: 700;
+        color: $primary-color;
+        font-size: 6.1rem;
+        text-align: center;
+        margin: 2rem auto;
+    }
+
+    &__embed {
+        width: 56rem;
+        margin: 0 auto;
+    }
+
+    &__wrap {
+        border-top: 1px solid $light-gray-3;
+        border-bottom: 1px solid $light-gray-3;
+        margin-bottom: 2rem;
+        padding: 2rem 0;
+    }
+
+    &__footer {
+        &-head {
+            border-bottom: 1px solid darken($light-gray-3, 5%);
+            margin-bottom: 2rem;
+            font-size: 1.9rem;
+            text-align-last: left;
+        }
+
+        &-btn {
+            margin: auto;
+        }
+    }
+}

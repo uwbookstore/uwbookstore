@@ -1,0 +1,209 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+  height: auto;
+  margin: 0px;
+  width: 100%;
+}
+
+/*---------------*/
+/*--Outside Div--*/
+/*---------------*/
+#c-content {
+  width: 100%;
+  margin: auto;
+}
+
+.PaymentDetailHeader {
+  display: none;
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+  padding: 5px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+/*------------------------------------------*/
+/*--Universal Styling for all Input Fields--*/
+/*------------------------------------------*/
+#c-ct,
+#c-cardnumber,
+#c-cardname,
+#c-stmth,
+#c-stmth,
+#c-styr,
+#c-exmth,
+#c-exyr,
+#c-cvv {
+  display: block;
+  width: 91%;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  margin-bottom: 5px;
+}
+
+#c-ct:focus,
+#c-cn:focus,
+#c-chn:focus,
+#c-stmth:focus,
+#c-stmth:focus,
+#c-styr:focus,
+#c-exmth:focus,
+#c-exyr:focus,
+#c-cvv:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+/*-----------------------------*/
+/*--Style for Cart Type Label--*/
+/*-----------------------------*/
+#lbl-c-ct {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/*---------------------------------*/
+/*--Style for Cart Type Droppdown--*/
+/*---------------------------------*/
+
+#c-ct {
+  width: auto;
+}
+
+/*-------------------------------*/
+/*--Style for Card Number Input--*/
+/*-------------------------------*/
+#c-cn {}
+
+/*-------------------------------*/
+/*--Style for Card Number Label--*/
+/*-------------------------------*/
+#lbl-c-cardnumber {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/*--------------------------------*/
+/*--Style for Name on Card Input--*/
+/*--------------------------------*/
+#c-chn {}
+
+/*--------------------------------*/
+/*--Style for Name on Card Label--*/
+/*--------------------------------*/
+#lbl-c-cardname {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/*----------------------------------*/
+/*--Style for Start Month Dropdown--*/
+/*----------------------------------*/
+#c-stmth {
+  width: auto;
+  display: inline-block;
+}
+
+/*----------------------------------*/
+/*--Style for Start Year Dropdown --*/
+/*----------------------------------*/
+#c-styr {
+  width: auto;
+  display: inline-block;
+}
+
+/*------------------------------*/
+/*--Style for Start Date Label--*/
+/*------------------------------*/
+#lbl-c-stmth {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/*---------------------------------------*/
+/*--Style for Expiration Month Dropdown--*/
+/*---------------------------------------*/
+#c-exmth {
+  width: auto;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/*--------------------------------------*/
+/*--Style for Expiration Year Dropdown--*/
+/*--------------------------------------*/
+#c-exyr {
+  width: auto;
+  display: inline-block;
+}
+
+/*------------------------------*/
+/*--Style for Expiration Label--*/
+/*------------------------------*/
+#lbl-c-exmth {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/*-----------------------*/
+/*--Style for CVV Input--*/
+/*-----------------------*/
+#c-cvv {}
+
+/*-----------------------*/
+/*--Style for CVV Label--*/
+/*-----------------------*/
+#lbl-c-cvv {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/*------------------------*/
+/*--Style for All Errors--*/
+/*------------------------*/
+#c-cardnumber-error,
+#c-cardname-error,
+#c-exyr-error,
+#c-exyr-error,
+#c-cvv-error {
+  color: #c10000;
+  font-weight: bold;
+}
+
+/*-------------------------*/
+/*--Style for width Error--*/
+/*-------------------------*/
+html {
+  width: 100% !important;
+}

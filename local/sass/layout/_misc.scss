@@ -1,0 +1,153 @@
+table.loyalty {
+    @media #{$mq-medium} {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    td {
+        width: 50%;
+    }
+}
+
+.table {
+    &-heading {
+        background-color: $primary-color;
+        color: $white;
+    }
+}
+
+// Monthly coupons
+#couponbook {
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.coupons {
+    ul {
+        list-style: none;
+
+        li {
+            position: relative;
+            list-style: none;
+            width: auto;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            margin: 0 0 2rem 0;
+            background: transparent;
+            border: 2px dashed $light-gray-3;
+            cursor: pointer;
+
+            .check {
+                background-image: url("https://www.uwbookstore.com/SiteImages/11-SchoolImages/11-css/11-pagecurl_07.png");
+                background-position: 0 0;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: -2px;
+                left: -3px;
+                height: 4.3rem;
+                width: 3.6rem;
+            }
+
+            img {
+                margin: auto;
+            }
+
+            @media #{$mq-medium} {
+                margin: 0 1rem 2rem;
+                width: 50rem;
+            }
+
+            &.print {
+                .check {
+                    background-position: -7.2rem 0;
+                }
+            }
+        }
+    }
+}
+
+/* =displays */
+@media print {
+    .donotprint {
+        display: none;
+    }
+    .printonly {
+        display: block;
+    }
+    body {
+        background-color: #fff;
+    }
+}
+@media screen {
+    .printonly {
+        display: none;
+    }
+    .speakonly,
+    .accessKey {
+        display: none;
+    }
+}
+@media speech {
+    .donotspeak {
+        speak: never;
+    }
+    .speakonly,
+    .accessKey {
+        speak: never;
+    }
+}
+.DoNotPrint {
+    display: none;
+}
+
+@media print {
+    #couponbook .coupons {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+    .coupons ul li .check,
+    #couponbook .coupons ul li {
+        display: none;
+    }
+    #couponbook .coupons ul li.print {
+        display: inline-block;
+        width: 45%;
+    }
+    #couponbook .coupons ul li .coupon {
+        position: relative;
+    }
+    .donotprint,
+    #ubsHead,
+    [id*="div_bottom_sec"],
+    [id*="div_top_sec"],
+    .printbutton {
+        display: none;
+    }
+}
+
+.progress {
+    &-wrapper {
+        margin-bottom: 2rem;
+        padding: 0;
+    }
+
+    &-bar {
+        margin: 0 -1px -1px;
+        background-color: $primary-color;
+
+        &-wrapper {
+            border: 2px solid $primary-color;
+        }
+    }
+
+    &-percent {
+        display: block;
+        height: 2.6rem;
+    }
+}

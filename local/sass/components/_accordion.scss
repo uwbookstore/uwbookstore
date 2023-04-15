@@ -1,0 +1,182 @@
+// .accordion {
+//     h3,
+//     dt {
+//         position: relative;
+//         color: $black;
+//         background-color: $light-gray;
+//         border: 1px solid $light-gray-2;
+//         padding: 1.5rem 2rem 1.5rem 1.5rem;
+//         line-height: 1;
+//         margin: 1.5rem 0 0;
+//         font-size: inherit;
+//         font-weight: 400;
+//         cursor: pointer;
+//         height: auto;
+//         transition: all 0.2s ease;
+
+//         &:before {
+//             font-family: fontawesome;
+//             float: right;
+//             //color: $ubs-primary;
+//             font-size: 2rem;
+//             position: absolute;
+//             content: "\f067";
+//             right: 1rem;
+//             display: block;
+//             transition: transform 0.25s ease-in-out;
+
+//             @media #{$mq-small} {
+//                 font-size: 1.6rem;
+//             }
+//         }
+
+//         &.active:before {
+//             transform: rotate(45deg);
+//             transition: transform 0.25s ease-in-out;
+//         }
+
+//         @media #{$mq-medium} {
+//             // font-size: 1.4rem;
+//             padding: 1rem;
+//         }
+
+//         &:hover {
+//             background-color: darken($light-gray, 3%);
+//         }
+//     }
+
+//     & > div,
+//     & dd {
+//         padding: 1.5rem;
+//         border: 1px solid $light-gray-2;
+//         border-top: none;
+
+//         ul {
+//             list-style: circle;
+//             margin-left: 2rem;
+//             padding-bottom: 1.5rem;
+//         }
+
+//         @media #{$mq-small} {
+//             // font-size: 1.4rem;
+//         }
+//     }
+
+//     @media #{$mq-small} {
+//         div {
+//             &.phone {
+//                 display: inline;
+//                 border: none;
+//                 padding: 0;
+//             }
+//         }
+//     }
+
+//     table {
+//         @media #{$mq-small} {
+//             width: 50%;
+//             margin: 0 auto;
+//         }
+//     }
+// }
+
+.Accordion {
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid $light-gray-2;
+    width: 100%;
+
+    h3 {
+        margin: 0;
+        padding: 0;
+    }
+
+    &.focus {
+        border-color: hsl(216, 94%, 73%);
+
+        h3 {
+            background-color: $light-gray;
+        }
+    }
+
+    > * + * {
+        border-top: 1px solid $light-gray-2;
+    }
+
+    &-trigger {
+        background-color: $light-gray;
+        color: $black;
+        display: block;
+        font-size: 1.6rem;
+        font-weight: normal;
+        margin: 0;
+        padding: 1rem;
+        position: relative;
+        text-align: left;
+        width: 100%;
+        outline: none;
+
+        &:focus,
+        &:hover {
+            background-color: darken($light-gray, 3%);
+        }
+
+        &:focus .Accordion-title {
+            border-color: hsl(216, 94%, 73%);
+        }
+
+        &:focus .Accordion-icon,
+        &:hover .Accordion-icon {
+            border-color: hsl(216, 94%, 73%);
+        }
+
+        &[aria-expanded="true"] .Accordion-icon {
+            transform: translateY(-50%) rotate(-135deg);
+            transition: all 0.25s ease-in-out;
+        }
+    }
+
+    &-icon {
+        border: solid hsl(0, 0%, 62%);
+        border-width: 0 2px 2px 0;
+        height: 8px;
+        pointer-events: none;
+        position: absolute;
+        right: 3.2rem;
+        top: 50%;
+        transform: translateY(-60%) rotate(45deg);
+        width: 8px;
+        transition: all 0.25s ease-in-out;
+    }
+
+    button {
+        border-style: none;
+
+        &::-moz-focus-inner {
+            border: 0;
+        }
+    }
+
+    &-title {
+        display: block;
+        pointer-events: none;
+        border: transparent 1px solid;
+        outline: none;
+    }
+
+    &-panel {
+        margin: 0;
+        padding: 1.5rem;
+
+        /* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
+        &[hidden] {
+            display: none;
+        }
+
+        ul {
+            list-style: circle;
+            margin-left: 2rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+}

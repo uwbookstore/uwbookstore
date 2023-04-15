@@ -1,0 +1,347 @@
+.btn {
+    border: 2px solid transparent;
+    // border-radius: 0;
+    transition: all 0.2s ease-in-out;
+    padding: 0 1.5rem;
+    height: 5rem;
+    line-height: 5rem;
+    text-decoration: none;
+
+    &:hover {
+        color: currentColor;
+    }
+
+    &-primary {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $white;
+        &:link,
+        &:visited {
+        }
+
+        &:hover {
+            background-color: darken($primary-color, 8%);
+            border-color: darken($primary-color, 10%);
+            color: $white;
+        }
+
+        &:active,
+        &:active:hover,
+        &:focus,
+        &:active:focus {
+            background-color: darken($primary-color, 4%);
+            border-color: darken($primary-color, 5%);
+            color: $white;
+        }
+
+        &-outline {
+            background-color: transparent;
+            border-color: $primary-color;
+            color: $primary-color;
+
+            &:hover,
+            &:active,
+            &:active:hover,
+            &:focus,
+            &:active:focus {
+                background-color: $primary-color;
+                color: $white;
+            }
+        }
+    }
+
+    &-success {
+        border-color: $success-color;
+        background-color: $success-color;
+        color: $white;
+
+        &:link,
+        &:visited {
+            color: $white;
+        }
+
+        &:hover,
+        &:active,
+        &:active:hover,
+        &:focus,
+        &:active:focus,
+        &-inverted {
+            background-color: darken($success-color, 8%);
+            border-color: darken($success-color, 10%);
+            color: $white;
+        }
+    }
+
+    &-special {
+        border-color: $alt-link;
+        background-color: $alt-link;
+        color: $white;
+
+        &:link,
+        &:visited {
+            color: $white;
+        }
+
+        &:hover,
+        &:active,
+        &:active:hover,
+        &:focus,
+        &:active:focus,
+        &-inverted {
+            background-color: darken($alt-link, 8%);
+            border-color: darken($alt-link, 10%);
+            color: $white;
+        }
+    }
+
+    &-default {
+        border-color: $secondary-color;
+        color: $secondary-color;
+        opacity: 1;
+
+        &:hover,
+        &:active,
+        &:active:hover,
+        &:focus,
+        &:active:focus,
+        &-inverted {
+            opacity: 0.9;
+        }
+    }
+
+    &-disabled {
+        cursor: not-allowed;
+        //pointer-events: none;
+        background-color: $disabled;
+        border: 1px solid $secondary-color;
+        box-shadow: none;
+        color: $white;
+
+        &:hover,
+        &:active,
+        &:active:focus {
+            cursor: not-allowed;
+            background-color: $disabled;
+            border: 1px solid $secondary-color;
+            box-shadow: none;
+            color: $white;
+            transform: none;
+        }
+    }
+
+    &-secondary {
+        background-color: transparent;
+        border-color: $secondary-color;
+        color: $secondary-color;
+
+        &:link,
+        &:visited {
+            color: $secondary-color;
+        }
+
+        &:hover,
+        &:active,
+        &:active:focus {
+            color: $white;
+            border-color: $primary-color;
+            background-color: $primary-color;
+        }
+    }
+
+    &-link {
+        &:link,
+        &:visited {
+            font-weight: normal;
+            font-size: inherit;
+            margin-bottom: 1.5rem;
+            transition: all 0.2s ease-in-out;
+            text-transform: capitalize;
+        }
+
+        &:hover,
+        &:active {
+            color: $primary-color;
+            text-decoration: underline;
+            box-shadow: none;
+            transform: none;
+        }
+
+        i,
+        em {
+            font-size: 1rem;
+        }
+    }
+
+    &-text {
+        text-decoration: underline;
+
+        &.active,
+        &:active {
+            box-shadow: none;
+        }
+    }
+
+    @media #{$mq-medium} {
+        border-width: 1px;
+        height: 3.5rem;
+        line-height: 3.5rem;
+    }
+
+    &-rnd {
+        border-radius: 10rem;
+        padding: 0;
+        width: 5rem;
+        height: 5rem;
+        line-height: 5rem;
+
+        @media #{$mq-medium} {
+            width: 3rem;
+            height: 3rem;
+            line-height: 3rem;
+        }
+
+        i {
+            font-size: 3.5rem;
+            padding-top: 0.5rem;
+            font-size: 3.5rem;
+
+            @media #{$mq-medium} {
+                font-size: 1.9rem;
+            }
+        }
+    }
+
+    &-alt {
+        &:link,
+        &:visited {
+            padding-left: 0;
+            padding-right: 0;
+            display: inline-block;
+            color: $alt-link;
+            font-size: inherit;
+        }
+    }
+
+    &-wishlist {
+        width: 100%;
+
+        @media #{$mq-medium} {
+            width: auto;
+        }
+    }
+
+    &-cta {
+        background-color: $white;
+        border-color: $primary-color;
+        color: $primary-color;
+        font-weight: 700;
+        box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+        border-width: 2px;
+        &:link,
+        &:visited {
+        }
+
+        &:hover {
+            background-color: $primary-color;
+            border-color: $primary-color;
+            color: $white;
+            transform: translateY(-3px);
+        }
+
+        &:active,
+        &:active:hover,
+        &:focus,
+        &:active:focus {
+            background-color: darken($primary-color, 4%);
+            border-color: darken($primary-color, 5%);
+        }
+    }
+
+    &-container {
+        button {
+            border: none;
+            background-color: transparent;
+            color: $primary-color;
+            border-bottom: 1px solid $primary-color;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &-x-lg {
+        background-color: $primary-color;
+        color: $white;
+        font-size: 2rem;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        padding: 1.5rem;
+        height: auto;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+            background-color: darken($primary-color, 8%);
+            border-color: darken($primary-color, 10%);
+            text-decoration: none;
+            transition: all 0.25s ease-in-out;
+            color: $white;
+        }
+
+        &:active,
+        &:active:hover,
+        &:focus,
+        &:active:focus {
+            background-color: darken($primary-color, 4%);
+            border-color: darken($primary-color, 5%);
+            text-decoration: none;
+            color: $white;
+            transition: all 0.25s ease-in-out;
+        }
+
+        @media #{$mq-medium} {
+            width: 50%;
+        }
+    }
+}
+
+.blk-hlt {
+    &:link,
+    &:active {
+        display: block;
+        width: auto;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $white;
+        text-decoration: none;
+        background-color: darken($black, 5%);
+        padding: 1rem;
+        font-size: 3.8rem;
+        transition: all 0.2s ease;
+        box-shadow: 0 0.5rem 0.5rem rgba($black, 0.6);
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($black, 0.4);
+        transition: all 0.2s ease;
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba($black, 0.6);
+        transition: all 0.2s ease;
+    }
+
+    span {
+        text-align: center;
+        display: block;
+        color: $white;
+
+        @media #{$mq-ie} {
+            background-color: darken($black, 5%);
+        }
+    }
+}

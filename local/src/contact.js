@@ -142,7 +142,7 @@ $(document).ready(() => {
       ).hide();
       $('#msg-text')
         .html(
-          '<div class="text-center"><h2 class="heading__line-center" style="margin-bottom: 2.5rem;">APPLE SERVICE - GRAPHITE</h2><p class="mainP">Your campus service &amp; support<br>for Mac, iPhone&reg;, iPad&reg; and<br>all Apple branded accessories</p><p class="hours">Graphite Hours: Monday-Friday 9am-5:30pm</p><p class="contact">Call <a href="tel:+16082332775">608-233-2775</a> or email <a href="mailto:campus-service@graphiteas.com">campus-service@graphiteas.com</a> to contactGraphite. For more information about Graphite, visit <a href="https://www.graphiteas.com/" target="_blank">www.graphiteas.com</a></p></div>'
+          '<div class="text-center"><h2 class="heading__line-center" style="margin-bottom: 2.5rem;">APPLE SERVICE - GRAPHITE</h2><p class="mainP">Your campus service &amp; support<br>for Mac, iPhone&reg;, iPad&reg; and<br>all Apple branded accessories</p><p class="hours past">Graphite Hours: Monday-Friday 9am-5:30pm</p><p class="hours">Graphite Hours: Monday-Friday 1pm-5:00pm - Until Further Notice</p><p class="contact">Call <a href="tel:+16082332775">608-233-2775</a> or email <a href="mailto:campus-service@graphiteas.com">campus-service@graphiteas.com</a> to contactGraphite. For more information about Graphite, visit <a href="https://www.graphiteas.com/" target="_blank">www.graphiteas.com</a></p></div>'
         )
         .show();
     } else if (selOpt === 1184 || selOpt === 195) {

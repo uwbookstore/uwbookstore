@@ -1,10 +1,10 @@
-const slideToHide = document.getElementById('ship99');
+const slideToHide = document.querySelectorAll('.divToHide');
 // const slideToHide2 = document.getElementById("divToHide2");
-const slideToActivate = document.getElementById('divToShow');
+const slideToActivate = document.querySelectorAll('.divToShow');
 // const slide2ToActivate = document.getElementById("setToShow");
 
 // months are ZERO index based;
-const futureDate = new Date(Date.UTC(2022, 10, 28, 6, 0, 0));
+const futureDate = new Date(Date.UTC(2023, 4, 14, 5, 0, 0));
 
 const futureTime = futureDate.getTime();
 
@@ -18,7 +18,7 @@ function getRemainingTime() {
     clearInterval(countdown);
     slideToHide.remove();
     // slideToHide2.remove();
-    slideToActivate.classList.remove('hide');
+    slideToActivate.classList.add('active');
     // slide2ToActivate.classList.remove("hide");
   }
 }

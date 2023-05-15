@@ -2504,14 +2504,14 @@ div#graphite {
 }
 .btn-disabled {
   cursor: not-allowed;
-  background-color: #969696;
+  background-color: #727272;
   border: 1px solid #777777;
   box-shadow: none;
   color: #fff;
 }
 .btn-disabled:hover, .btn-disabled:active, .btn-disabled:active:focus {
   cursor: not-allowed;
-  background-color: #969696;
+  background-color: #727272;
   border: 1px solid #777777;
   box-shadow: none;
   color: #fff;
@@ -5356,7 +5356,7 @@ p.merchPrice.red {
 .merch__card-restock {
   position: absolute;
   background-color: #ffae00;
-  color: #fff;
+  color: #3e3e3e;
   top: 0.5rem;
   left: 0.5rem;
   font-weight: 700;

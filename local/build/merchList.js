@@ -153,9 +153,11 @@ $(document).ready(function () {
     $('<img src="https://i.univbkstr.com/images/banners/AmFamGolf.png" class="img-responsive img__center" alt="AmFam Championship. Official Merchandise Partner of the American Family Insurance Championship.">').insertBefore('.merch__filter');
   }
 
-  if (categoryTitle.toLowerCase().substring(0, 15) === 'cap & gown pack') {
-    $(`<div class="alert alert-danger text-center">Online rentals are now closed. You may rent in store or over the telephone (1-800-993-2665 ext.5907 - add $10.00 for service fee).</div>`).insertAfter('.merch__filter');
-  }
+  // if (categoryTitle.toLowerCase().substring(0, 15) === 'cap & gown pack') {
+  //   $(
+  //     `<div class="alert alert-danger text-center">Online rentals are now closed. You may rent in store or over the telephone (1-800-993-2665 ext.5907 - add $10.00 for service fee).</div>`
+  //   ).insertAfter('.merch__filter');
+  // }
 
   if (categoryTitle.toLowerCase().substring(0, 6) === 'laptop') {
     if (window.location.host === 'www.uwbookstore.com') {

@@ -1,5 +1,4 @@
 .welcome {
-
   &__header {
     background-color: $light-gray-3;
     margin-top: -2rem;
@@ -25,7 +24,6 @@
       flex-direction: column;
 
       &-item {
-
         img {
           border-radius: 50%;
           height: 17.5rem;
@@ -36,7 +34,7 @@
           margin-bottom: 2rem;
           font-size: 3rem;
           font-weight: 800;
-          color: $primary-color;
+          color: $black;
         }
 
         p {
@@ -63,7 +61,7 @@
       hr {
         width: 60%;
       }
-      
+
       h1 {
         font-size: 7rem;
       }
@@ -74,7 +72,6 @@
         justify-content: space-around;
         flex-direction: row;
 
-        
         &-item {
           img {
             margin-right: 5rem;
@@ -83,7 +80,7 @@
           }
 
           h2 {
-            font-size: 5rem;
+            font-size: 3.5rem;
           }
 
           p {
@@ -101,7 +98,7 @@
 
   &__header {
     color: $primary-color;
-    font-family: "Dancing Script";
+    font-family: 'Dancing Script';
     font-size: 7.5rem;
 
     @media #{$mq-medium} {
@@ -150,7 +147,6 @@
   text-align: center;
 
   &__media {
-
     &-grid {
       display: flex;
       flex-wrap: wrap;
@@ -160,7 +156,7 @@
       flex: 0 0 50%;
       margin-bottom: 10rem;
       transform: scale(1);
-      transition: all .25s ease-in-out;
+      transition: all 0.25s ease-in-out;
 
       @media #{$mq-small} {
         flex: 0 0 25%;
@@ -168,7 +164,6 @@
       }
 
       a {
-
         &:hover {
           text-decoration: none;
         }
@@ -176,7 +171,7 @@
 
       &:hover {
         transform: scale(1.05);
-        transition: all .25s ease-in-out;
+        transition: all 0.25s ease-in-out;
       }
 
       .fa-brands {
@@ -184,7 +179,6 @@
         color: $primary-color;
       }
     }
-
 
     &-title {
       display: block;

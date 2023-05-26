@@ -2,7 +2,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JMHE05BYZM"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-JMHE05BYZM');
@@ -44,35 +44,47 @@
 
     // #merch-info > div.grid.merch__detail-add > div.merch__detail-add-btn > a
 
-  const order_id = document.querySelector('h2.thankYouSubHeader').text().match(/d+/);
-  const order_total = document.querySelector('span#paymentTotalText').text();
-  let order_tax = document.querySelector('span#paymentEstimatedText').text().replace('$', '');
+  const order_id = document.querySelector('h2.thankYouSubHeader').textContent.split(' ')[4];
+  const order_total = document.querySelector('span#paymentTotalText').textContent;
+  let order_tax = document.querySelector('span#paymentEstimatedText').textContent.replace('$', '');
   order_tax = parseFloat(order_tax);
-  let order_shipping = document.querySelector('span.shipChargeText').text().replace('$', '');
+  let order_shipping = document.querySelector('span.shipChargeText').textContent.replace('$', '');
   order_shipping = parseFloat(order_shipping);
 
 
   gtm_products = [];
 
-  document.querySelector('.merchPanel.panel.panel-info').each(function () {
+  document.querySelectorAll('.merchPanel.panel.panel-info').forEach((el) => {
+    let item_id, item_category;
+    let sku = el.querySelector('span.oneMerchNumText').textContent;
+    item_id = sku.trim();
+
+    if (el.querySelector('span.oneMerchOptionText')) {
+      let size = el.querySelector('span.oneMerchOptionText').textContent;
+      size = size.replaceAll(' ', '').trim();
+      item_category = size;
+    } else {
+      item_category = null;
+    }
+    
     gtm_products.push({
-      item_id: document.querySelector(this).querySelector('span.oneMerchNumText').text().trim() + '-' + document.querySelector(this).querySelector('span.oneMerchOptionText').text(),
-      item_name: document.querySelector(this).querySelector('span.oneMerchDescText').text(),
-      item_category: document.querySelector(this).querySelector('span.oneMerchOptionText').text(),
-      price: document.querySelector(this).querySelector('span.oneMerchTotalText').text(),
-      quantity: document.querySelector(this).querySelector('span.oneMerchQTYText').text()
+      item_id,
+      item_name: el.querySelector('span.oneMerchDescText').textContent.trim(),
+      item_category,
+      price: el.querySelector('span.oneMerchTotalText').textContent.trim(),
+      quantity: el.querySelector('span.oneMerchQTYText').textContent.trim()
     });
   });
 
   console.log(gtm_products)
-
   gtag("event", "gtmUBS.orderComplete", {
+  // gtag("event", "purchase", {
     transaction_id: order_id,
     value: <<<ORDERTOTAL>>>,
-      tax: order_tax,
-      shipping: order_shipping,
-      currency: "USD",
-      items: gtm_products
+    tax: order_tax,
+    shipping: order_shipping,
+    currency: "USD",
+    items: gtm_products
   });
 </script>
 

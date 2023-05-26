@@ -120,7 +120,7 @@ $(document).ready(function () {
     $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
     $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
     $('.normal').html(
-      '<strong>PLEASE READ BEFORE PURCHASE!</strong> Shipping time takes 10-15 days.  This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for store pick-up, promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>'
+      '<strong>PLEASE READ BEFORE PURCHASE!</strong> Shipping time takes 10-15 business days (M-F).  This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for store pick-up, promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>'
     );
     $('div#kyleCavan').hide();
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');

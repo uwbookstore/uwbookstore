@@ -77,8 +77,8 @@
   });
 
   console.log(gtm_products)
-  gtag("event", "gtmUBS.orderComplete", {
-  // gtag("event", "purchase", {
+  // gtag("event", "gtmUBS.orderComplete", {
+  gtag("event", "purchase", {
     transaction_id: order_id,
     value: <<<ORDERTOTAL>>>,
     tax: order_tax,

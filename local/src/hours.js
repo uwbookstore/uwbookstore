@@ -134,11 +134,11 @@ function getHslcHrs() {
         <ul class="hours">
             <li><strong>Hours: </strong></li>
             <li class="closed"><span class="hours__day">Sunday:</span> <span class="hours__times">Closed</span></li>
-            <li><span class="hours__day">Monday:</span> <span class="hours__times">8:00am - 4:00pm</span></li>
-            <li><span class="hours__day">Tuesday:</span> <span class="hours__times">8:00am - 4:00pm</span></li>
-            <li><span class="hours__day">Wednesday:</span> <span class="hours__times">8:00am - 4:00pm</span></li>
-            <li><span class="hours__day">Thursday:</span> <span class="hours__times">8:00am - 4:00pm</span></li>
-            <li><span class="hours__day">Friday:</span> <span class="hours__times">8:00am - 4:00pm</span></li>
+            <li><span class="hours__day">Monday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
+            <li><span class="hours__day">Tuesday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
+            <li><span class="hours__day">Wednesday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
+            <li><span class="hours__day">Thursday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
+            <li><span class="hours__day">Friday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
             <li class="closed"><span class="hours__day">Saturday:</span> <span class="hours__times">Closed</span></li>
         </ul>
     `;
@@ -158,9 +158,9 @@ function getHslcHrs() {
       case 4:
       case 5:
         open = 8;
-        openMin = 0;
+        openMin = 30;
         close = 16;
-        closeMin = 0;
+        closeMin = 30;
         break;
       default:
         open = 0;

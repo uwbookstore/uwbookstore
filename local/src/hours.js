@@ -39,7 +39,7 @@ function getStateStHrs() {
     <ul class="hours">
         <li><strong>REGULAR HOURS</strong></li>
         <li><span class="red bold">Campus Shipping Center closes &frac12; hour before the store closes.</li>
-        <li><span class="hours__day">Sunday:</span> <span class="hours__times">12:00pm - 5:00pm</span></li>
+        <li><span class="hours__day">Sunday:</span> <span class="hours__times">10:30am - 5:00pm</span></li>
         <li><span class="hours__day">Monday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
         <li><span class="hours__day">Tuesday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
         <li><span class="hours__day">Wednesday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
@@ -75,8 +75,8 @@ function getStateStHrs() {
         closeMin = 30;
         break;
       default:
-        open = 12;
-        openMin = 0;
+        open = 10;
+        openMin = 30;
         close = 17;
         closeMin = 0;
     }

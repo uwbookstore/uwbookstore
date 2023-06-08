@@ -141,37 +141,16 @@ $(document).ready(function () {
             </div>
             <div id="merch__card" class="group"></div>
             <div id="promo-alert" class="alert alert-info">
-              <strong>Shop at The University Book Store and get AirPods with the purchase of a Mac or iPad at low education
-                pricing.*</strong><br>This Back-to-School when you buy an eligible Mac or iPad, you can get AirPods on us, in addition
-              to our everyday educational discounts!*<ol>
-                <li>Add an eligible Mac or iPad to your cart.</li>
-                <li>Add eligible AirPods to your cart.</li>
-                <li>AirPods discount will automatically be applied at checkout with eligible device purchase.<br>You may also upgrade
-                  your promotional item to AirPods 3rd-Gen for just $50 plus tax, or to AirPods Pro for only $120 plus tax!</li>
+              This Back-to-School when you buy a qualifying Mac you can get free AirPods 3rd-Gen with Lightning Case, in addition to our everyday educational discounts!*<ol>
+                <li>Add a qualifying Mac to your cart.</li>
+                <li>Add eligible AirPods to your cart.<br>
+                  AirPods 3rd-Gen with Lightning Case are free after $169 promotional savings.<br>
+                  Or upgrade to AirPods 3rd-Gen with MagSafe Wireless Charging Case for $10 plus tax after $169 promotional savings.<br>
+                  Or upgrade to AirPods Pro 2nd-Gen with MagSafe Wireless Charging Case for $80 plus tax after $169 promotional savings.</li>
+                <li>AirPods discount will automatically be applied to eligible AirPods at end of checkout with qualifying Mac purchase.</li>
                 <li>Complete your purchase by logging in or creating an account and supplying your payment info.</li>
               </ol><br><br>
-              <div class="fineprint">*Qualified Purchasers receive Promotion Savings when they purchase an eligible Mac or
-                eligible iPad with eligible AirPods at uwbookstore.com or The University Book Store at 711 State St or Health
-                Sciences. Qualified Purchasers may receive a maximum of two Promotion Products (AirPods)- one with eligible Mac
-                purchase and one with eligible iPad purchase. The Promotion Product is not a "gift." Offer subject to availability.
-                While supplies last. Offer good through September 26, 2022. This offer cannot be combined with the Corporate Employee
-                Purchase Program, or business loyalty pricing. Additional restrictions may apply. For full terms and conditions of
-                offer, see <a
-                  href="https://edseminarsonline.s3-us-west-2.amazonaws.com/usfm_fy22/BTS%20FY22%20T%26Cs%20US-05.26.22.pdf"
-                  target="_blank">edseminarsonline.s3-us-west-2.amazonaws.com/usfm_fy22/BTS%20FY22%20T%26Cs%20US-05.26.22.pdf</a>.<br><br>*Qualified
-                purchasers include students attending or accepted into the University of Wisconsin, and Faculty or staff of the
-                University of Wisconsin and UW Health EXCLUDING temporary employees and those employed as contractors or acting as a
-                consultant. Parents purchasing on behalf of their child, who is a student currently attending or accepted into the
-                University of Wisconsin are eligible. Purchases are not for institutional purchase or resale.<br><br>*Promotion Period is
-                June 24, 2022, through September 26, 2022. The Promotion Period may be changed, terminated or extended at any time
-                without prior notice.<br>
-                <ul class="ul mt-3">
-                  <li>Eligible Macs include MacBook Air, MacBook Pro, iMac, and Mac mini, including configure-to-order versions (each
-                    an “Eligible Mac”)</li>
-                  <li>Eligible iPads include iPad Air, and iPad Pro</li>
-                  <li>Promotion Products include AirPods 2nd-Gen, AirPods 3rd-Gen, AirPods Pro</li>
-                  <li>Promotional Savings equals $129.</li>
-                </ul>
+              <div class="fineprint">*Qualified Purchasers receive Promotion Savings when they purchase an eligible Mac with eligible AirPods or eligible iPad with eligible Apple Pencil at a Qualifying Location. Only one eligible Promotion Product per eligible Mac or eligible iPad per Qualified Purchaser. Offer subject to availability. While supplies last. Additional restrictions may apply. View full <a href="https://edseminarsonline.s3-us-west-2.amazonaws.com/usfm_fy23/BTS/3%20-%20BTS%20FY23%20T%26Cs%20US%20-%205.30.pdf">terms and conditions</a> of offer.
               </div>
             </div>`
     ).insertAfter('.filterColumn');

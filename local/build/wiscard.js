@@ -89,4 +89,6 @@ $(document).ready(function () {
     default:
       break;
   }
+
+  $(`<p class="bold red mb-0">International Shipping unavailable at this time.</p>`).insertAfter('#shipPolicyLink');
 });

@@ -1,19 +1,25 @@
-const gmPromo = document.querySelectorAll("p.gmPromo");
-const promoMsg = document.querySelectorAll("span.Merch_Promo_Message");
+const gmPromo = document.querySelectorAll('p.gmPromo');
+const promoMsg = document.querySelectorAll('span.Merch_Promo_Message');
 
 const updatePromo = (el) => {
-    if (el.length) {
-        el.forEach((x) => {
-            x.classList.remove("red", "bold");
-            x.classList.add("alert", "alert-success");
-            x.innerHTML = `<strong>Get 20% Off this item when purchased with the ABSN bundle.</strong><br>Promotional Discounts applied to items on your cart may not be viewable until the end of the checkout process.`;
-        });
-    }
+  if (el.length) {
+    el.forEach((x) => {
+      x.classList.remove('red', 'bold');
+      x.classList.add('alert', 'alert-success');
+      const promoTxt = x.textContent;
+
+      if (promoTxt === 'Buy 1 Get 20 Percent Off') {
+        x.innerHTML = `<strong>Get 20% Off this item when purchased with the ABSN bundle.</strong><br>Promotional Discounts applied to items on your cart may not be viewable until the end of the checkout process.`;
+      } else if (promoTxt === 'Buy 1 Get $129.00 Off') {
+        x.innerHTML = `<strong>Apple Back-to-School Promo</strong><br>
+                      Get $129.00 Off <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Back-to-School-AirPods">AirPods</a> (limit one) with eligible Mac or iPad purchase.<br>Valid for UW student, staff, faculty and UW Health personal purchases, NOT for department purchases.<br> Qualified purchasers may only receive one promo with iPad purchase and one promo with Mac purchase.<br><br>Discount will not reflect until related items are added to your cart and/or after shipping/delivery method is chosen during checkout.`;
+      }
+    });
+  }
 };
 
 updatePromo(gmPromo);
 updatePromo(promoMsg);
-
 
 // $(document).ready(function () {
 //   'use strict';

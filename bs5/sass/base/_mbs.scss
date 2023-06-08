@@ -1,0 +1,80 @@
+// Create some space under the
+// iCM editor menu since we use
+// a negative top margin on the
+// hero images.
+#modMenu {
+  margin-bottom: 2rem;
+}
+
+header,
+footer {
+  display: none;
+}
+
+#ContainDiv {
+  background-color: $white;
+  padding: 0;
+}
+
+#contentSection {
+  padding: 0px 5px;
+
+  @media #{$mq-medium} {
+    padding: 0;
+  }
+}
+
+// HIDE ALL UNNECESSARY MBS ELEMENTS
+#Cart,
+#h_nav,
+#div_privacy,
+.firstBackward,
+.lastForward,
+.help.textr,
+.prev_link,
+.loginDisclaimer,
+.custLogoutHelpWrapper,
+.lostPasswordHelp,
+#Server,
+#custBillMI,
+#custShipMiddle,
+.loyaltyRedeemLink,
+#needHelp,
+a#goToTop,
+.disco {
+  display: none !important;
+}
+
+.page_header {
+  display: none;
+}
+
+#custAddInfoWrap,
+#loyaltyWrap,
+#custEmailOptWrap,
+#custSMSOptWrap {
+  padding: 0;
+}
+
+// MBS apparently thinks folks will
+// only want to use the colors MBS
+// chooses.
+
+/*.radioButton,*/
+input[class^='radio'] {
+  & + span {
+    &::before {
+      width: 1.2rem;
+      height: 1.2rem;
+      vertical-align: 0;
+    }
+  }
+
+  &:checked {
+    & + span {
+      &::before {
+        background-color: $primary-color;
+      }
+    }
+  }
+}

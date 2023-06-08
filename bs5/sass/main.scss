@@ -1,0 +1,19 @@
+/*
+Theme Name: University Book Store eCommerce Platform
+Theme URI: http://i.univbkstr.com/uwbookstore/
+Version: 4.0.0
+Description:  
+Author: Clayton Dewey - University Book Store
+Author URI: https://www.uwbookstore.com
+*/
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/base';
+@import 'base/typography';
+@import 'base/mbs';
+@import 'base/utilities';
+@import 'base/bootstrap';
+
+@import 'layout/header';
+@import 'layout/navigation';

@@ -1,0 +1,41 @@
+.contain,
+.container {
+  @media #{$mq-medium} {
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+select.form-control {
+  padding-right: 2rem;
+}
+
+.alert {
+  &-narrow {
+    @media #{$mq-medium} {
+      width: 50%;
+      padding: 3rem;
+      margin: 2rem auto;
+    }
+  }
+
+  &-warning {
+    background-color: $warning;
+    color: $black;
+
+    em {
+      color: $warning-em;
+      font-weight: 700;
+    }
+  }
+
+  &-default {
+    text-align: center;
+    background-color: $light-gray;
+    border-color: darken($light-gray, 10%);
+  }
+}
+
+.card {
+  // new Bootstrap card styles here...
+}

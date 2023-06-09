@@ -138,9 +138,8 @@
     display: none;
     float: left;
     min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    font-size: 14px;
+    padding: 2rem 0;
+    margin-top: 0;
     text-align: left;
     list-style: none;
     background-color: #fff;
@@ -171,8 +170,7 @@
 
   &-menu.show {
     display: flex;
-    margin-top: 0;
-    border-radius: 0;
+    margin: 0;
 
     > div {
       padding: 0 5px;
@@ -181,103 +179,91 @@
 }
 
 // nav dropdown content
-.col-megamenu {
-  background-color: $white;
-  padding: 0 5px;
-
-  ul {
-    display: none;
-
-    @media #{$mq-menu} {
-      display: block;
-      margin-bottom: 1.5rem;
-    }
+@media #{$mq-menu} {
+  .navbar {
+    padding-top: 0;
+    padding-bottom: 0;
   }
+  .navbar .has-megamenu {
+    position: static;
+  }
+  .navbar .megamenu {
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    color: $black;
+  }
+  .navbar .nav-link {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
 
-  h2.nav-title a {
-    text-decoration: none;
+.megamenu {
+  padding: 0;
+  border-bottom: 1px solid $light-gray-3;
+
+  h2 {
     font-size: 1.6rem;
     font-weight: 500;
     border-bottom: 1px solid $light-gray-3;
-    display: block;
-    padding: 1rem 1.5rem;
-    color: $black;
 
-    &:hover {
+    a {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: $black;
       text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     @media #{$mq-menu} {
       margin-bottom: 5px;
       font-weight: 700;
-      padding: 2px 5px;
-    }
-  }
+      padding-bottom: 5px;
 
-  ol {
-    li {
       a {
-        &:link,
-        &:visited {
-          display: block;
-          padding: 1rem 1.5rem;
-          color: $black;
-          font-size: 1.6rem;
-        }
-
-        &:hover {
-          text-decoration: none;
-        }
-
-        @media #{$mq-menu} {
-          &:link,
-          &:visited {
-            font-size: 1.4rem;
-            padding: 1rem 1.5rem;
-            display: inline-block;
-            color: #0054ad;
-          }
-
-          &:hover {
-            background-color: transparent;
-            color: $primary-color;
-            transition: all 0.25s ease-in-out;
-          }
-        }
-
-        @media #{$mq-medium} {
-          &:link,
-          &:visited {
-            padding: 2px 5px;
-          }
-        }
+        padding: 2px 5px;
       }
     }
-    @media #{$mq-small} {
-      margin-top: -1rem;
+  }
+
+  [class^='col-'] {
+    padding: 0;
+
+    @media #{$mq-menu} {
+      padding-left: 5px;
+      padding-right: 5px;
     }
   }
 
-  &-no-header li a {
-    background-color: $white;
-    font-size: 1.8rem;
-    font-weight: 500;
-    border-bottom: 1px solid $light-gray-3;
-    display: block;
-    padding: 1rem 1.5rem;
-    color: $black;
-
-    &:hover {
+  li {
+    a {
+      padding: 1rem 2.5rem;
+      display: block;
+      transition: all 0.25s ease-in-out;
       text-decoration: none;
-    }
 
-    @media #{$mq-menu} {
-      // margin-bottom: 5px;
-      font-weight: 400;
-      padding: 2px 5px;
-      border-bottom: none;
-      font-size: 1.5rem;
-      color: #337ab7;
+      &:hover {
+        text-decoration: none;
+        background-color: darken($light-gray-2, 5%);
+        transition: all 0.25s ease-in-out;
+      }
+
+      @media #{$mq-menu} {
+        padding: 2px 5px;
+        // display: inline-block;
+
+        &:hover {
+          // background-color: $primary-color;
+          border-radius: 3px;
+          color: $black;
+          transition: all 0.25s ease-in-out;
+        }
+      }
     }
   }
 }

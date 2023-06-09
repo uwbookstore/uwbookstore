@@ -1098,6 +1098,84 @@ select.form-control {
   background-color: #c5050c;
   padding: 0;
 }
+.navbar-toggler {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+}
+.navbar-toggler .icon-bar {
+  background-color: #3e3e3e;
+  width: 2.2rem;
+  transition: all 0.25s ease-in-out;
+}
+.navbar-toggler.collapsed .top-bar,
+.navbar-toggler.collapsed .bottom-bar {
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+}
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+}
+.navbar-toggler .top-bar {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 10% 10%;
+  transform-origin: 10% 10%;
+}
+.navbar-toggler .middle-bar {
+  opacity: 0;
+}
+.navbar-toggler .bottom-bar {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 10% 90%;
+  transform-origin: 10% 90%;
+}
+@media screen and (min-width: 48em) {
+  .navbar-toggler {
+    display: block;
+  }
+}
+@media screen and (min-width: 70.5625em) {
+  .navbar-toggler {
+    display: none;
+  }
+}
+.navbar-header::after, .navbar-header::before {
+  display: table;
+  content: " ";
+}
+.navbar__site {
+  height: 7rem;
+  position: relative;
+  border-bottom: 2px solid #c5050c;
+  padding: 1.5rem 0;
+  background-color: #fff;
+  background-size: cover;
+}
+@media screen and (min-width: 70.5625em) {
+  .navbar__site {
+    height: auto;
+    border-bottom: none;
+  }
+}
+.navbar__ubs {
+  border-radius: 0;
+  margin-bottom: 2rem;
+  min-height: 0;
+  border: none;
+  background-color: #c5050c;
+  color: #fff;
+}
+@media screen and (min-width: 70.5625em) {
+  .navbar__ubs {
+    min-height: 4rem;
+  }
+}
 .navbar-collapse {
   justify-content: center;
 }
@@ -1119,9 +1197,6 @@ select.form-control {
 }
 .navbar-toggler-icon {
   background-image: var(--bs-navbar-toggler-icon-bg);
-}
-.navbar-ubs {
-  min-height: 4rem;
 }
 
 .dropdown {
@@ -1162,9 +1237,120 @@ select.form-control {
   display: none;
 }
 .dropdown:hover > .dropdown-menu.show {
-  display: block;
+  display: flex;
 }
 .dropdown-menu.show {
+  display: flex;
   margin-top: 0;
   border-radius: 0;
+}
+.dropdown-menu.show > div {
+  padding: 0 5px;
+}
+
+.col-megamenu {
+  background-color: #fff;
+  padding: 0 5px;
+}
+.col-megamenu ul {
+  display: none;
+}
+@media screen and (min-width: 70.5625em) {
+  .col-megamenu ul {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+}
+.col-megamenu h2.nav-title a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-bottom: 1px solid #cacaca;
+  display: block;
+  padding: 1rem 1.5rem;
+  color: #3e3e3e;
+}
+.col-megamenu h2.nav-title a:hover {
+  text-decoration: none;
+}
+@media screen and (min-width: 70.5625em) {
+  .col-megamenu h2.nav-title a {
+    margin-bottom: 5px;
+    font-weight: 700;
+    padding: 2px 5px;
+  }
+}
+.col-megamenu ol li a:link, .col-megamenu ol li a:visited {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: #3e3e3e;
+  font-size: 1.6rem;
+}
+.col-megamenu ol li a:hover {
+  text-decoration: none;
+}
+@media screen and (min-width: 70.5625em) {
+  .col-megamenu ol li a:link, .col-megamenu ol li a:visited {
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    color: #0054ad;
+  }
+  .col-megamenu ol li a:hover {
+    background-color: transparent;
+    color: #c5050c;
+    transition: all 0.25s ease-in-out;
+  }
+}
+@media screen and (min-width: 64em) {
+  .col-megamenu ol li a:link, .col-megamenu ol li a:visited {
+    padding: 2px 5px;
+  }
+}
+@media screen and (min-width: 48em) {
+  .col-megamenu ol {
+    margin-top: -1rem;
+  }
+}
+.col-megamenu-no-header li a {
+  background-color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border-bottom: 1px solid #cacaca;
+  display: block;
+  padding: 1rem 1.5rem;
+  color: #3e3e3e;
+}
+.col-megamenu-no-header li a:hover {
+  text-decoration: none;
+}
+@media screen and (min-width: 70.5625em) {
+  .col-megamenu-no-header li a {
+    font-weight: 400;
+    padding: 2px 5px;
+    border-bottom: none;
+    font-size: 1.5rem;
+    color: #337ab7;
+  }
+}
+
+.view-all {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.view-all a:link, .view-all a:visited {
+  color: #c5050c;
+  font-weight: 700;
+  padding: 1rem;
+  border-bottom: 1px solid currentColor;
+  transition: all 0.25s ease-in-out;
+}
+.view-all a:hover, .view-all a:active {
+  text-decoration: none;
+  background-color: #c5050c;
+  color: #fff;
+}
+
+.nav.navbar-nav .view-all {
+  text-align: center;
 }

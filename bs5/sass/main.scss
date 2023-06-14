@@ -15,7 +15,8 @@ Author URI: https://www.uwbookstore.com
 @import 'base/utilities';
 @import 'base/bootstrap';
 
-// @import 'layout/grid';
+@import 'layout/grid';
+@import 'layout/event';
 @import 'layout/header';
 @import 'layout/misc';
 @import 'layout/navigation';
@@ -23,7 +24,9 @@ Author URI: https://www.uwbookstore.com
 @import 'components/accordion';
 @import 'components/button';
 @import 'components/card';
+@import 'components/form';
 
 @import 'pages/help';
 @import 'pages/home';
+@import 'pages/merchlist';
 @import 'pages/store';

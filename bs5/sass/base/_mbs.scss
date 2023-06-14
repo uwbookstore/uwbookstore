@@ -12,8 +12,13 @@ footer {
 }
 
 #ContainDiv {
-  background-color: $white;
+  background-color: transparent;
   padding: 0;
+}
+
+.contain,
+.container {
+  max-width: 117rem;
 }
 
 #contentSection {

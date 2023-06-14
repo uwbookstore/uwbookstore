@@ -1,0 +1,240 @@
+.welcome {
+  &__header {
+    display: block;
+    background-color: $light-gray-3;
+    margin-top: -2rem;
+    padding: 3rem 1rem 5rem;
+    text-align: center;
+
+    hr {
+      display: block;
+      margin: 4rem auto;
+      border-top: 3px solid #000;
+      height: 1px;
+    }
+
+    h1 {
+      color: #a11d2f;
+      font-weight: 700;
+      font-size: 3.5rem;
+    }
+
+    &-grid {
+      display: flex;
+      padding: 2rem 0;
+      flex-direction: column;
+
+      &-item {
+        img {
+          border-radius: 50%;
+          height: 17.5rem;
+          width: 17.5rem;
+        }
+
+        h2 {
+          margin-bottom: 2rem;
+          font-size: 3rem;
+          font-weight: 800;
+          color: $black;
+        }
+
+        p {
+          font-weight: 800;
+          font-size: 1.6rem;
+          text-align: justify;
+        }
+
+        .btn {
+          border-radius: 1rem;
+          text-transform: uppercase;
+          font-weight: 800;
+          font-size: 2.5rem;
+          padding: 1rem 2rem;
+          height: auto;
+        }
+      }
+    }
+
+    @media #{$mq-medium} {
+      padding-left: 0;
+      padding-right: 0;
+
+      hr {
+        width: 60%;
+      }
+
+      h1 {
+        font-size: 7rem;
+      }
+
+      &-grid {
+        padding: 2rem 10.5rem;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+
+        &-item {
+          img {
+            margin-right: 5rem;
+            height: 30rem;
+            width: 30rem;
+          }
+
+          h2 {
+            font-size: 3.5rem;
+          }
+
+          p {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contest {
+  margin: 3rem 0;
+  text-align: center;
+
+  &__header {
+    color: $primary-color;
+    font-family: 'Dancing Script';
+    font-size: 7.5rem;
+
+    @media #{$mq-medium} {
+      font-size: 15rem;
+    }
+  }
+
+  &__subhead {
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+
+    @media #{$mq-medium} {
+      font-size: 6rem;
+    }
+  }
+
+  p {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+
+    @media #{$mq-medium} {
+      font-size: 3rem;
+    }
+  }
+
+  .btn {
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 2.5rem;
+    padding: 1rem 2rem;
+    height: auto;
+  }
+
+  hr {
+    display: block;
+    margin: 4rem auto;
+    border-top: 3px solid #000;
+    width: 60%;
+    height: 1px;
+  }
+}
+
+.social {
+  text-align: center;
+
+  &__media {
+    &-grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &-item {
+      flex: 0 0 50%;
+      margin-bottom: 10rem;
+      transform: scale(1);
+      transition: all 0.25s ease-in-out;
+
+      @media #{$mq-small} {
+        flex: 0 0 25%;
+        margin-bottom: 3rem;
+      }
+
+      a {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        transition: all 0.25s ease-in-out;
+      }
+
+      .fa-brands {
+        font-size: 6rem;
+        color: $primary-color;
+      }
+    }
+
+    &-title {
+      display: block;
+      font-size: 3rem;
+      margin-bottom: 0;
+      font-weight: 700;
+      color: $black;
+    }
+
+    &-name {
+      display: block;
+      font-size: 2rem;
+      font-weight: 400;
+      color: $black;
+    }
+  }
+}
+
+.soar {
+  padding: 5rem 1.5rem;
+
+  &__grid {
+    display: flex;
+    flex-flow: row wrap;
+
+    &-item {
+      flex: 0 1 100%;
+      padding: 2rem;
+      margin-bottom: 4rem;
+      display: flex;
+      flex-direction: column;
+
+      ul {
+        padding-left: 3rem;
+      }
+
+      @media #{$mq-medium} {
+        flex: 0 0 50%;
+      }
+    }
+
+    &-btn {
+      text-align: center;
+      margin-top: auto;
+
+      a {
+        margin-top: 2rem;
+        width: 100%;
+        font-size: 2rem;
+
+        @media #{$mq-medium} {
+          width: auto;
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+}

@@ -801,6 +801,14 @@ input[class^=radio]:checked + span::before {
   }
 }
 
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #cacaca;
+  height: 0;
+}
+
 select.form-control {
   padding-right: 2rem;
 }
@@ -1099,6 +1107,116 @@ select.form-control {
   right: 3rem;
 }
 
+.table-heading {
+  background-color: #c5050c !important;
+  color: #fff;
+}
+
+#couponbook {
+  width: 100%;
+  max-width: 100%;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.coupons ul {
+  list-style: none;
+}
+.coupons ul li {
+  position: relative;
+  list-style: none;
+  width: auto;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin: 0 0 2rem 0;
+  background: transparent;
+  border: 2px dashed #cacaca;
+  cursor: pointer;
+}
+.coupons ul li .check {
+  background-image: url("https://www.uwbookstore.com/SiteImages/11-SchoolImages/11-css/11-pagecurl_07.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -2px;
+  left: -3px;
+  height: 4.3rem;
+  width: 3.6rem;
+}
+.coupons ul li img {
+  margin: auto;
+}
+@media screen and (min-width: 64em) {
+  .coupons ul li {
+    margin: 0 1rem 2rem;
+    width: 50rem;
+  }
+}
+.coupons ul li.print .check {
+  background-position: -7.2rem 0;
+}
+
+/* =displays */
+@media print {
+  .donotprint {
+    display: none;
+  }
+  .printonly {
+    display: block;
+  }
+  body {
+    background-color: #fff;
+  }
+}
+@media screen {
+  .printonly {
+    display: none;
+  }
+  .speakonly,
+.accessKey {
+    display: none;
+  }
+}
+@media speech {
+  .donotspeak {
+    speak: never;
+  }
+  .speakonly,
+.accessKey {
+    speak: never;
+  }
+}
+.DoNotPrint {
+  display: none;
+}
+
+@media print {
+  #couponbook .coupons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+  .coupons ul li .check,
+#couponbook .coupons ul li {
+    display: none;
+  }
+  #couponbook .coupons ul li.print {
+    display: inline-block;
+    width: 45%;
+  }
+  #couponbook .coupons ul li .coupon {
+    position: relative;
+  }
+  .donotprint,
+#ubsHead,
+[id*=div_bottom_sec],
+[id*=div_top_sec],
+.printbutton {
+    display: none;
+  }
+}
 .navbar {
   margin: 0;
   padding: 0;
@@ -1163,6 +1281,89 @@ select.form-control {
   .collapse.navbar-collapse {
     justify-content: center;
   }
+}
+
+.Accordion {
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid #e1e1e1;
+  width: 100%;
+}
+.Accordion h3 {
+  margin: 0;
+  padding: 0;
+}
+.Accordion.focus {
+  border-color: hsl(216deg, 94%, 73%);
+}
+.Accordion.focus h3 {
+  background-color: #f1f1f1;
+}
+.Accordion > * + * {
+  border-top: 1px solid #e1e1e1;
+}
+.Accordion-trigger {
+  background-color: #f1f1f1;
+  color: #3e3e3e;
+  display: block;
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 1rem;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  outline: none;
+}
+.Accordion-trigger:focus, .Accordion-trigger:hover {
+  background-color: #e9e9e9;
+}
+.Accordion-trigger:focus .Accordion-title {
+  border-color: hsl(216deg, 94%, 73%);
+}
+.Accordion-trigger:focus .Accordion-icon, .Accordion-trigger:hover .Accordion-icon {
+  border-color: hsl(216deg, 94%, 73%);
+}
+.Accordion-trigger[aria-expanded=true] .Accordion-icon {
+  transform: translateY(-50%) rotate(-135deg);
+  transition: all 0.25s ease-in-out;
+}
+.Accordion-icon {
+  border: solid hsl(0deg, 0%, 62%);
+  border-width: 0 2px 2px 0;
+  height: 8px;
+  pointer-events: none;
+  position: absolute;
+  right: 3.2rem;
+  top: 50%;
+  transform: translateY(-60%) rotate(45deg);
+  width: 8px;
+  transition: all 0.25s ease-in-out;
+}
+.Accordion button {
+  border-style: none;
+}
+.Accordion button::-moz-focus-inner {
+  border: 0;
+}
+.Accordion-title {
+  display: block;
+  pointer-events: none;
+  border: transparent 1px solid;
+  outline: none;
+}
+.Accordion-panel {
+  margin: 0;
+  padding: 1.5rem;
+  /* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
+}
+.Accordion-panel[hidden] {
+  display: none;
+}
+.Accordion-panel ul {
+  list-style: circle;
+  margin-left: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 .btn {
@@ -1470,6 +1671,42 @@ select.form-control {
 }
 .card-header-ubs a:hover {
   text-decoration: none;
+}
+
+.customer h2 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #3e3e3e;
+  font-size: 1.8rem;
+}
+.customer__faq {
+  margin-top: 5rem;
+}
+.customer__returns-merch {
+  margin-top: 2rem;
+}
+.customer__clearance {
+  margin-top: 5rem;
+}
+.customer__sizes {
+  margin-top: 5rem;
+}
+.customer__sizes table {
+  margin: 2rem auto;
+}
+.customer__sizes table.table > tbody > tr > td {
+  padding: 0.3rem;
+}
+@media screen and (min-width: 64em) {
+  .customer__sizes table {
+    width: 70%;
+  }
+  .customer__sizes table.table > tbody > tr > td {
+    padding: 1rem;
+  }
+}
+.customer__disclaimer {
+  margin-top: 4rem;
 }
 
 .price_match {
@@ -1955,5 +2192,131 @@ a.hiring__now {
   .uw-info {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+#page-nav,
+.page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+}
+#page-nav li,
+.page-nav li {
+  flex: 0 0 50%;
+  padding: 0 0.5rem;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 64em) {
+  #page-nav li,
+.page-nav li {
+    flex: 0 0 auto;
+  }
+}
+#page-nav li a,
+.page-nav li a {
+  display: block;
+  width: 100%;
+}
+@media screen and (min-width: 64em) {
+  #page-nav li a,
+.page-nav li a {
+    width: auto;
+  }
+}
+
+.size-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.size-links a {
+  flex: 0 0 50%;
+  margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 64em) {
+  .size-links a {
+    flex: 1;
+  }
+}
+
+.store ul {
+  margin-left: 3rem;
+}
+
+.header__video {
+  height: 70vh;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  position: relative;
+  background-color: lightgray;
+  background-image: url("https://i.univbkstr.com/uwbookstore/img/no-video-bg.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header__video h2 {
+  color: white;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #333;
+  padding: 4rem;
+}
+.header__video p {
+  color: white;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #333;
+  padding: 0 0 1.5rem;
+  margin-top: -2.5rem;
+}
+.header__video video,
+.header__video button.playpause {
+  display: none;
+}
+.header__video-message {
+  position: absolute;
+  top: 0;
+  height: auto;
+  left: 0;
+  right: 0;
+  /* padding: 3rem 0; */
+}
+@media screen and (min-width: 64em) {
+  .header__video {
+    height: 63vh;
+  }
+  .header__video video {
+    width: 100%;
+    margin: auto;
+    display: block;
+    height: auto;
+  }
+  .header__video button.playpause {
+    display: block;
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    z-index: 100;
+    border: 0;
+    color: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 1rem;
+  }
+}
+@media screen and (min-width: 85.375em) {
+  .header__video {
+    height: 75vh;
+  }
+}
+
+.heading__line br {
+  display: block;
+}
+@media screen and (min-width: 28.125em) {
+  .heading__line br {
+    display: none;
   }
 }

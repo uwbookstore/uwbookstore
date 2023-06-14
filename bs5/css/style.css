@@ -35,7 +35,8 @@ body {
   position: relative;
 }
 
-.visually-hidden {
+.visually-hidden,
+.sr-only {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -105,6 +106,14 @@ p {
   margin-bottom: 2rem;
   text-rendering: optimizeLegibility;
   line-height: 1.5;
+}
+
+a {
+  color: #0054ad;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
 }
 
 ol {
@@ -908,6 +917,322 @@ select.form-control {
   }
 }
 
+#BottomSection {
+  margin-bottom: 0;
+}
+
+.footer {
+  display: block;
+  margin-top: 2rem;
+  padding: 0 0 2.5rem;
+  background-color: #f1f1f1;
+  color: #3e3e3e;
+}
+.footer svg {
+  fill: #3e3e3e;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .footer svg {
+    height: 3.9rem;
+  }
+}
+.footer dt {
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  border-bottom: 1px solid;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 64em) {
+  .footer dt {
+    text-align: left;
+    font-size: 1.6rem;
+  }
+}
+.footer dd a {
+  color: #3e3e3e;
+  line-height: 2.5;
+  height: 5rem;
+  display: block;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+}
+.footer dd a:hover {
+  color: #c5050c;
+  text-decoration: underline;
+  transition: all 0.25s ease-in-out;
+}
+@media screen and (min-width: 64em) {
+  .footer dd a {
+    height: auto;
+    line-height: 2;
+  }
+}
+.footer address {
+  margin-bottom: 0;
+}
+.footer address a {
+  font-size: 1em;
+  font-weight: 700;
+  background: #29943d;
+  border-radius: 0;
+  color: #fff;
+  display: block;
+  line-height: 1.5;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  margin: 1rem auto;
+}
+.footer address a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.footer address a:before {
+  font-family: "FontAwesome";
+  content: "\f095";
+  padding: 0 0.5rem 0 0;
+}
+@media screen and (min-width: 48em) {
+  .footer address a {
+    cursor: text;
+    line-height: 1.5;
+    background-color: transparent;
+    color: #3e3e3e;
+    font-weight: normal;
+    padding: 0;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+  .footer address a:before {
+    content: "";
+    padding: 0;
+  }
+  .footer address a:hover {
+    color: #3e3e3e;
+    text-decoration: none;
+  }
+}
+.footer .footer-row-2 {
+  margin: 2rem 0;
+}
+.footer .social-footer {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.footer .social-footer a {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  opacity: 1;
+  transition: all 0.25s ease-in-out;
+}
+.footer .social-footer a.facebook, .footer .social-footer a.twitter, .footer .social-footer a.instagram, .footer .social-footer a.tiktok {
+  background-image: url("https://i.univbkstr.com/uwbookstore/img/social/social_sprite.png");
+}
+.footer .social-footer a.facebook {
+  background-position: 0 32px;
+}
+.footer .social-footer a.twitter {
+  background-position: 96px 32px;
+}
+.footer .social-footer a.instagram {
+  background-position: 64px 32px;
+}
+.footer .social-footer a.tiktok {
+  background-position: 32px 32px;
+}
+.footer .social-footer a:link, .footer .social-footer a:visited {
+  margin-right: 1rem;
+  transition: all 0.25s ease-in-out;
+}
+.footer .social-footer a:hover, .footer .social-footer a:focus {
+  transform: translateY(-2px);
+}
+.footer .social-footer a:last-child {
+  margin-right: 0;
+}
+@media screen and (min-width: 64em) {
+  .footer .social-footer {
+    text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
+}
+.footer .payment-options {
+  text-align: center;
+  color: #3e3e3e;
+}
+.footer .payment-options span {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.footer .payment-options em.fa-cc-visa {
+  color: #182168;
+}
+.footer .payment-options em.fa-cc-mastercard {
+  color: #5b6770;
+}
+.footer .payment-options em.fa-cc-discover {
+  color: #c35a00;
+}
+.footer .payment-options em.fa-cc-amex {
+  color: #0078a9;
+}
+@media screen and (min-width: 64em) {
+  .footer .payment-options {
+    text-align: right;
+  }
+  .footer .payment-options span {
+    display: inline;
+    margin-bottom: 0;
+    margin-right: 5px;
+  }
+}
+.footer .copyright {
+  margin: 1rem 0 0;
+  font-size: 1.7rem;
+}
+.footer .copyright a,
+.footer .copyright a:hover,
+.footer .copyright a:visited {
+  text-decoration: underline;
+  color: #fff;
+  display: inline-block;
+  margin: 1.5rem auto;
+}
+@media screen and (min-width: 48em) {
+  .footer .copyright {
+    font-size: 1.2rem;
+  }
+  .footer .copyright a,
+.footer .copyright a:hover,
+.footer .copyright a:visited {
+    margin: 0.5rem auto;
+  }
+}
+.footer a,
+.footer a:hover,
+.footer a:visited {
+  color: #3e3e3e;
+}
+.footer em.fa.fa-envelope-o {
+  margin-left: 1rem;
+}
+.footer a.privacy {
+  color: #3e3e3e;
+  transition: all 0.25s ease-in-out;
+}
+.footer a.privacy:hover {
+  color: #c5050c;
+  transition: all 0.25s ease-in-out;
+}
+.footer a.privacy:visited {
+  color: rebeccapurple;
+}
+
+.center-link {
+  font-size: 2rem;
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
+}
+@media screen and (min-width: 64em) {
+  .center-link {
+    display: inline;
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: left;
+  }
+}
+
+.mail-list {
+  background-color: #cacaca;
+  background-image: url(https://www.uwbookstore.com/SiteImages/11-SchoolImages/11-css/11-light_noise_diagonal.png);
+  background-image: linear-gradient(to top, rgba(202, 202, 202, 0.5), rgba(202, 202, 202, 0.8)), url(https://www.uwbookstore.com/SiteImages/11-SchoolImages/11-css/11-light_noise_diagonal.png);
+  border-top: 1px solid #b1b1b1;
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+}
+.mail-list h2 {
+  color: #3e3e3e;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.mail-list .form-inline {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+  width: 100%;
+}
+.mail-list .form-inline .form-control {
+  margin-bottom: 0;
+  width: 100%;
+  border: 2px solid #8b8b8b;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+@media screen and (min-width: 64em) {
+  .mail-list .form-inline .form-control {
+    display: inline-block;
+    vertical-align: middle;
+    width: 25rem;
+    border-right: none;
+    border-bottom: 2px solid #8b8b8b;
+    border-radius: 4px 0 0 4px;
+  }
+}
+.mail-list .email-submit {
+  width: 100%;
+  border-radius: 0 0 4px 4px;
+  border: 2px solid #8b8b8b;
+  border-top: none;
+}
+@media screen and (min-width: 64em) {
+  .mail-list .email-submit {
+    width: auto;
+    border-left: none;
+    border-top: 2px solid #8b8b8b;
+    border-radius: 0 4px 4px 0;
+  }
+}
+.mail-list-small {
+  background-image: url(https://www.uwbookstore.com/SiteImages/11-SchoolImages/11-css/11-light_noise_diagonal.png);
+  background-image: linear-gradient(to top, rgba(241, 241, 241, 0.5), rgba(241, 241, 241, 0.8)), url(https://www.uwbookstore.com/SiteImages/11-SchoolImages/11-css/11-light_noise_diagonal.png);
+  padding: 2.5rem;
+  width: 100%;
+}
+.mail-list-small p {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+.mail-list-small h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.mail-list-small button {
+  width: 100%;
+}
+.mail-list-small .form-group {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 64em) {
+  .mail-list-small p {
+    font-size: 1.4rem;
+  }
+  .mail-list-small h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
 .header {
   display: block;
 }
@@ -1181,6 +1506,24 @@ select.form-control {
   right: 3rem;
 }
 
+.item-hdr {
+  font-weight: 700;
+  background-color: #000;
+  color: #fff;
+  padding: 2px 5px;
+}
+
+.img__border {
+  border: 2px solid #c5050c;
+  padding: 2px;
+}
+.img__border-radius {
+  border-radius: 2.5rem;
+}
+.img__center {
+  margin-inline: auto;
+}
+
 .table-heading {
   background-color: #c5050c !important;
   color: #fff;
@@ -1291,6 +1634,33 @@ select.form-control {
     display: none;
   }
 }
+.framing img {
+  border: 2px solid #c5050c;
+  padding: 5px;
+  margin-inline: auto;
+}
+.framing blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 2rem;
+  line-height: 1.5;
+  border-left: none;
+  padding: 0;
+  text-align: center;
+}
+.framing .row [class^=col-] {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 1rem;
+}
+.framing figcaption {
+  margin-top: 1rem;
+  text-align: center;
+}
+
 .navbar {
   margin: 0;
   padding: 0;
@@ -1406,23 +1776,6 @@ select.form-control {
 .meganav__wrap--item {
   display: flex;
 }
-.meganav__wrap .jumbotron.landing {
-  background: url("https://i.univbkstr.com/ubs-beta/img/rotator/jt-bg.jpg") no-repeat top center;
-  background-size: cover;
-  height: 15rem;
-  margin: -2rem 0 0 0;
-  padding: 4rem;
-  color: white;
-  border-radius: 0;
-}
-.meganav__wrap .jumbotron.landing h1 {
-  margin-bottom: 1.5rem;
-}
-@media screen and (min-width: 64em) {
-  .meganav__wrap .jumbotron.landing {
-    height: 20rem;
-  }
-}
 .meganav__menu {
   list-style-type: none;
   justify-content: center;
@@ -1499,6 +1852,29 @@ select.form-control {
   }
   .meganav__menu--img img {
     margin: 0 auto;
+  }
+}
+
+.jumbotron.landing {
+  background: url("https://i.univbkstr.com/ubs-beta/img/rotator/jt-bg.jpg") no-repeat top center;
+  background-size: cover;
+  height: 15rem;
+  margin: -2rem 0 0 0;
+  padding: 4rem;
+  color: white;
+  border-radius: 0;
+}
+.jumbotron.landing h1 {
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 64em) {
+  .jumbotron.landing h1 {
+    font-size: 6.3rem;
+  }
+}
+@media screen and (min-width: 64em) {
+  .jumbotron.landing {
+    height: 20rem;
   }
 }
 
@@ -1806,6 +2182,9 @@ select.form-control {
     width: 50%;
   }
 }
+.btn:hover {
+  text-decoration: none;
+}
 
 .blk-hlt:link, .blk-hlt:active {
   display: block;
@@ -1933,6 +2312,214 @@ select.form-control.dd-hidden {
   padding: 0;
   margin-top: -1rem;
   cursor: text;
+}
+
+.welcome__header {
+  display: block;
+  background-color: #cacaca;
+  margin-top: -2rem;
+  padding: 3rem 1rem 5rem;
+  text-align: center;
+}
+.welcome__header hr {
+  display: block;
+  margin: 4rem auto;
+  border-top: 3px solid #000;
+  height: 1px;
+}
+.welcome__header h1 {
+  color: #a11d2f;
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+.welcome__header-grid {
+  display: flex;
+  padding: 2rem 0;
+  flex-direction: column;
+}
+.welcome__header-grid-item img {
+  border-radius: 50%;
+  height: 17.5rem;
+  width: 17.5rem;
+}
+.welcome__header-grid-item h2 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #3e3e3e;
+}
+.welcome__header-grid-item p {
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-align: justify;
+}
+.welcome__header-grid-item .btn {
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 2.5rem;
+  padding: 1rem 2rem;
+  height: auto;
+}
+@media screen and (min-width: 64em) {
+  .welcome__header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .welcome__header hr {
+    width: 60%;
+  }
+  .welcome__header h1 {
+    font-size: 7rem;
+  }
+  .welcome__header-grid {
+    padding: 2rem 10.5rem;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .welcome__header-grid-item img {
+    margin-right: 5rem;
+    height: 30rem;
+    width: 30rem;
+  }
+  .welcome__header-grid-item h2 {
+    font-size: 3.5rem;
+  }
+  .welcome__header-grid-item p {
+    font-size: 3rem;
+  }
+}
+
+.contest {
+  margin: 3rem 0;
+  text-align: center;
+}
+.contest__header {
+  color: #c5050c;
+  font-family: "Dancing Script";
+  font-size: 7.5rem;
+}
+@media screen and (min-width: 64em) {
+  .contest__header {
+    font-size: 15rem;
+  }
+}
+.contest__subhead {
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 64em) {
+  .contest__subhead {
+    font-size: 6rem;
+  }
+}
+.contest p {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 64em) {
+  .contest p {
+    font-size: 3rem;
+  }
+}
+.contest .btn {
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 2.5rem;
+  padding: 1rem 2rem;
+  height: auto;
+}
+.contest hr {
+  display: block;
+  margin: 4rem auto;
+  border-top: 3px solid #000;
+  width: 60%;
+  height: 1px;
+}
+
+.social {
+  text-align: center;
+}
+.social__media-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.social__media-item {
+  flex: 0 0 50%;
+  margin-bottom: 10rem;
+  transform: scale(1);
+  transition: all 0.25s ease-in-out;
+}
+@media screen and (min-width: 48em) {
+  .social__media-item {
+    flex: 0 0 25%;
+    margin-bottom: 3rem;
+  }
+}
+.social__media-item a:hover {
+  text-decoration: none;
+}
+.social__media-item:hover {
+  transform: scale(1.05);
+  transition: all 0.25s ease-in-out;
+}
+.social__media-item .fa-brands {
+  font-size: 6rem;
+  color: #c5050c;
+}
+.social__media-title {
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 0;
+  font-weight: 700;
+  color: #3e3e3e;
+}
+.social__media-name {
+  display: block;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #3e3e3e;
+}
+
+.soar {
+  padding: 5rem 1.5rem;
+}
+.soar__grid {
+  display: flex;
+  flex-flow: row wrap;
+}
+.soar__grid-item {
+  flex: 0 1 100%;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.soar__grid-item ul {
+  padding-left: 3rem;
+}
+@media screen and (min-width: 64em) {
+  .soar__grid-item {
+    flex: 0 0 50%;
+  }
+}
+.soar__grid-btn {
+  text-align: center;
+  margin-top: auto;
+}
+.soar__grid-btn a {
+  margin-top: 2rem;
+  width: 100%;
+  font-size: 2rem;
+}
+@media screen and (min-width: 64em) {
+  .soar__grid-btn a {
+    width: auto;
+    font-size: 1.7rem;
+  }
 }
 
 .customer h2 {
@@ -2455,6 +3042,18 @@ a.hiring__now {
     margin-left: 0;
     margin-right: 0;
   }
+}
+
+.clearance {
+  height: 20rem;
+  width: 20rem;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.fa.clearance__icon {
+  font-size: 18.5rem;
+  color: #c5050c;
 }
 
 a.merchLink p.merchTitle {
@@ -3056,6 +3655,191 @@ li.attribute a:hover {
 @media screen and (min-width: 64em) {
   .dynamicRightArrow {
     right: 2rem;
+  }
+}
+
+#shipping-banner {
+  text-align: center;
+  padding: 0 1.5rem;
+}
+#shipping-banner > * {
+  font-weight: 700;
+}
+#shipping-banner span {
+  display: none;
+}
+@media screen and (min-width: 64em) {
+  #shipping-banner span {
+    display: inline;
+  }
+}
+#shipping-banner .sale-banner {
+  background-color: #326cec;
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.5;
+  padding: 1rem;
+}
+@media screen and (min-width: 64em) {
+  #shipping-banner .sale-banner {
+    font-size: 4rem;
+  }
+}
+#shipping-banner .lg-text {
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 64em) {
+  #shipping-banner .lg-text {
+    font-size: 2rem;
+  }
+}
+#shipping-banner .btn-xlrg.btn-blue {
+  background-color: #326cec;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 0.5rem 0.5rem rgba(77, 77, 77, 0.6);
+}
+#shipping-banner .btn-xlrg.btn-blue:hover {
+  text-decoration: none;
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(77, 77, 77, 0.4);
+  transition: all 0.2s ease;
+}
+@media screen and (min-width: 64em) {
+  #shipping-banner .btn-xlrg.btn-blue {
+    font-size: 4rem;
+  }
+}
+#shipping-banner .small-disclaimer {
+  font-size: 1.2rem;
+}
+#shipping-banner p {
+  color: #4d4d4d;
+}
+
+.coupon {
+  margin: 3rem auto;
+  padding: 1rem;
+  text-align: center;
+  border: 5px dashed #333;
+  width: 100%;
+}
+.coupon__header {
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.coupon__header h3 {
+  font-size: 6rem;
+  text-align: center;
+}
+.coupon__header span {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+@media screen and (min-width: 64em) {
+  .coupon__header {
+    padding: 5px 1.5rem;
+  }
+  .coupon__header h3 {
+    font-size: 12rem;
+    text-align: left;
+    letter-spacing: 2px;
+  }
+  .coupon__header span {
+    font-size: 5rem;
+  }
+}
+.coupon__body {
+  margin-top: 2rem;
+}
+.coupon__body h3 {
+  font-size: 10rem;
+}
+.coupon__body-logo {
+  margin-bottom: 2rem;
+}
+.coupon__body-bucky {
+  display: none;
+}
+@media screen and (min-width: 64em) {
+  .coupon__body-bucky {
+    display: block;
+  }
+}
+.coupon__code {
+  background-color: #333;
+  padding: 5px;
+  height: 7rem;
+  width: 65%;
+  margin: auto;
+}
+.coupon__code-text {
+  display: inline-block;
+  background-color: #fff;
+  color: #333;
+  padding: 0 1rem;
+  float: left;
+  margin-right: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.5rem;
+  height: 6rem;
+  line-height: 6rem;
+}
+.coupon__code-id {
+  color: white;
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 6rem;
+}
+.coupon__code-store {
+  color: #c5050c;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  font-size: 3.5rem;
+  border-bottom: 1px solid gray;
+  padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 64em) {
+  .coupon__code-store {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+.coupon__stores {
+  font-weight: 700;
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+.coupon__footer {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  text-align: justify;
+  position: relative;
+}
+.coupon__footer p {
+  margin-bottom: 1rem;
+}
+.coupon__footer-id {
+  position: absolute;
+  right: 0;
+  bottom: -1.5rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 0;
+}
+@media screen and (min-width: 64em) {
+  .coupon {
+    width: 100rem;
   }
 }
 

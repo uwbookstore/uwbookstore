@@ -118,3 +118,39 @@
     display: none;
   }
 }
+
+.framing {
+  // text-align: center;
+
+  img {
+    border: 2px solid $primary-color;
+    padding: 5px;
+    margin-inline: auto;
+  }
+
+  blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0 0 2rem;
+    line-height: 1.5;
+    border-left: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  .row {
+    [class^='col-'] {
+      display: flex;
+      align-items: stretch;
+      flex-direction: column;
+      justify-content: center;
+      padding-inline: 1rem;
+    }
+  }
+
+  figcaption {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}

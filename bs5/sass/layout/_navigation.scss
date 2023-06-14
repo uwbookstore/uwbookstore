@@ -138,25 +138,6 @@
     &--item {
       display: flex;
     }
-
-    .jumbotron.landing {
-      background: url('https://i.univbkstr.com/ubs-beta/img/rotator/jt-bg.jpg')
-        no-repeat top center;
-      background-size: cover;
-      height: 15rem;
-      margin: -2rem 0 0 0;
-      padding: 4rem;
-      color: white;
-      border-radius: 0;
-
-      h1 {
-        margin-bottom: 1.5rem;
-      }
-
-      @media #{$mq-medium} {
-        height: 20rem;
-      }
-    }
   }
 
   &__menu {
@@ -244,5 +225,28 @@
         }
       }
     }
+  }
+}
+
+.jumbotron.landing {
+  background: url('https://i.univbkstr.com/ubs-beta/img/rotator/jt-bg.jpg')
+    no-repeat top center;
+  background-size: cover;
+  height: 15rem;
+  margin: -2rem 0 0 0;
+  padding: 4rem;
+  color: white;
+  border-radius: 0;
+
+  h1 {
+    margin-bottom: 1.5rem;
+
+    @media #{$mq-medium} {
+      font-size: 6.3rem;
+    }
+  }
+
+  @media #{$mq-medium} {
+    height: 20rem;
   }
 }

@@ -2,6 +2,10 @@
   &__border {
     border: 2px solid $primary-color;
     padding: 2px;
+
+    &-radius {
+      border-radius: 2.5rem;
+    }
   }
 
   &__center {

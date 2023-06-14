@@ -79,7 +79,7 @@ $(document).ready(function () {
     }
   });
 
-  if (categoryTitle.toLowerCase() !== 'back to school airpods') {
+  if (categoryTitle.toLowerCase() !== 'back to school promo') {
     $('.merchButtons').first().hide();
     $('.viewfiltersDiv,.filterSelections').hide();
     $('.merchButtons a').removeClass('btn-xs top5');
@@ -136,23 +136,70 @@ $(document).ready(function () {
       )
       .addClass('merch__card-item');
     $(
-      `<div class="text-center"> <img class="img-responsive mx-auto mb-4"
-                src="https://i.univbkstr.com/uwbookstore/img/tech/appleTech.jpg" alt="Save on Mac or iPad, get AirPods." />
-            </div>
-            <div id="merch__card" class="group"></div>
-            <div id="promo-alert" class="alert alert-info">
-              This Back-to-School when you buy a qualifying Mac you can get free AirPods 3rd-Gen with Lightning Case, in addition to our everyday educational discounts!*<ol>
-                <li>Add a qualifying Mac to your cart.</li>
-                <li>Add eligible AirPods to your cart.<br>
-                  AirPods 3rd-Gen with Lightning Case are free after $169 promotional savings.<br>
-                  Or upgrade to AirPods 3rd-Gen with MagSafe Wireless Charging Case for $10 plus tax after $169 promotional savings.<br>
-                  Or upgrade to AirPods Pro 2nd-Gen with MagSafe Wireless Charging Case for $80 plus tax after $169 promotional savings.</li>
-                <li>AirPods discount will automatically be applied to eligible AirPods at end of checkout with qualifying Mac purchase.</li>
-                <li>Complete your purchase by logging in or creating an account and supplying your payment info.</li>
-              </ol><br><br>
-              <div class="fineprint">*Qualified Purchasers receive Promotion Savings when they purchase an eligible Mac with eligible AirPods or eligible iPad with eligible Apple Pencil at a Qualifying Location. Only one eligible Promotion Product per eligible Mac or eligible iPad per Qualified Purchaser. Offer subject to availability. While supplies last. Additional restrictions may apply. View full <a href="https://edseminarsonline.s3-us-west-2.amazonaws.com/usfm_fy23/BTS/3%20-%20BTS%20FY23%20T%26Cs%20US%20-%205.30.pdf">terms and conditions</a> of offer.
-              </div>
-            </div>`
+      `    <div class="text-center"> <img class="img-responsive mx-auto mb-4 mobi-hide"
+        src="https://i.univbkstr.com/uwbookstore/img/apple/backToSchool.jpg"
+        alt="Save on Mac or iPad, get AirPods. Save on an iPad for college. Get Apple Pencil." />
+      <img class="img-responsive mx-auto mb-4 dt-hide"
+        src="https://i.univbkstr.com/uwbookstore/img/apple/backToSchool-sm.jpg"
+        alt="Save on Mac or iPad, get AirPods. Save on an iPad for college. Get Apple Pencil." />
+    </div>
+    <div id="merch__card" class="group"></div>
+    <div class="row">
+      <div class="col-md-6">
+        <div id="promo-alert" class="alert alert-info">
+          <strong>This Back-to-School when you buy a qualifying Mac you can get free AirPods 3rd-Gen with Lightning
+            Case, in
+            addition to our everyday educational discounts!*</strong>
+          <ol>
+            <li>Add a qualifying Mac to your cart.</li>
+            <li>Add eligible AirPods to your cart.<br>
+              AirPods 3rd-Gen with Lightning Case are free after $169 promotional savings.<br>
+              Or upgrade to AirPods 3rd-Gen with MagSafe Wireless Charging Case for $10 plus tax after $169 promotional
+              savings.<br>
+              Or upgrade to AirPods Pro 2nd-Gen with MagSafe Wireless Charging Case for $80 plus tax after $169
+              promotional
+              savings.</li>
+            <li>AirPods discount will automatically be applied to eligible AirPods at end of checkout with qualifying
+              Mac
+              purchase.</li>
+            <li>Complete your purchase by logging in or creating an account and supplying your payment info.</li>
+          </ol><br><br>
+          <div class="fineprint">*Qualified Purchasers receive Promotion Savings when they purchase an eligible Mac with
+            eligible AirPods or eligible iPad with eligible Apple Pencil at a Qualifying Location. Only one eligible
+            Promotion
+            Product per eligible Mac or eligible iPad per Qualified Purchaser. Offer subject to availability. While
+            supplies
+            last. Additional restrictions may apply. View full <a
+              href="https://edseminarsonline.s3-us-west-2.amazonaws.com/usfm_fy23/BTS/3%20-%20BTS%20FY23%20T%26Cs%20US%20-%205.30.pdf"
+              style="text-decoration: underline;">terms
+              and conditions</a> of offer.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div id="promo-alert" class="alert alert-info">
+          <strong>This Back-to-School when you buy a qualifying iPad Air or Pro you can get a free Apple Pencil 2nd-Gen,
+            in addition to
+            our everyday educational discounts!*</strong>
+          <ol>
+            <li>Add a qualifying iPad to your cart.</li>
+            <li>Add Apple Pencil 2nd-Gen to your cart.</li>
+            <li>Apple Pencil 2nd-Gen will automatically be discounted to free at end of checkout with qualifying iPad
+              purchase.</li>
+            <li>Complete your purchase by logging in or creating an account and supplying your payment info.</li>
+          </ol><br><br>
+          <div class="fineprint">*Qualified Purchasers receive Promotion Savings when they purchase an eligible iPad
+            with Apple Pencil 2nd-Gen at a
+            Qualifying Location. Only one Eligible Apple Pencil Promotion Product per Eligible iPad per Qualified
+            Purchaser. Offer
+            subject to availability. While supplies last. Additional restrictions apply. For <a
+              href="https://edseminarsonline.s3-us-west-2.amazonaws.com/usfm_fy23/BTS/3%20-%20BTS%20FY23%20T%26Cs%20US%20-%205.30.pdf"
+              style="text-decoration: underline;">full terms and conditions</a> of offer, see
+            here.
+          </div>
+        </div>
+      </div>
+    </div>`
     ).insertAfter('.filterColumn');
     const pageItems = $('.pagination li');
 
@@ -194,11 +241,13 @@ $(document).ready(function () {
   if (categoryTitle.toLowerCase().substring(0, 6) === 'laptop') {
     if (window.location.host === 'www.uwbookstore.com') {
       $(
-        // <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook">
-        //         <img src="https://i.univbkstr.com/uwbookstore/img/tech/appleTech.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-responsive mobi-hide mb-2">
-        //         <img src="https://i.univbkstr.com/uwbookstore/img/home/appleTech.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-responsive dt-hide mb-2">
-        //         </a>
-        `<ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li></ul>`
+        `<img class="img-responsive mx-auto mb-4 mobi-hide"
+        src="https://i.univbkstr.com/uwbookstore/img/apple/backToSchool.jpg"
+        alt="Save on Mac or iPad, get AirPods. Save on an iPad for college. Get Apple Pencil." />
+      <img class="img-responsive mx-auto mb-4 dt-hide"
+        src="https://i.univbkstr.com/uwbookstore/img/apple/backToSchool-sm.jpg"
+        alt="Save on Mac or iPad, get AirPods. Save on an iPad for college. Get Apple Pencil." />
+        <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li></ul>`
       ).insertAfter('.merch__filter');
     } else {
       $(
@@ -238,8 +287,13 @@ $(document).ready(function () {
   if (categoryTitle.toLowerCase().substring(0, 7) === 'macbook') {
     if (window.location.host === 'www.uwbookstore.com') {
       $(
-        `
-                <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li></ul>`
+        `<img class="img-responsive mx-auto mb-4 mobi-hide"
+        src="https://i.univbkstr.com/uwbookstore/img/apple/backToSchool.jpg"
+        alt="Save on Mac or iPad, get AirPods. Save on an iPad for college. Get Apple Pencil." />
+      <img class="img-responsive mx-auto mb-4 dt-hide"
+        src="https://i.univbkstr.com/uwbookstore/img/apple/backToSchool-sm.jpg"
+        alt="Save on Mac or iPad, get AirPods. Save on an iPad for college. Get Apple Pencil." />
+        <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li></ul>`
       ).insertAfter('.merch__filter');
       // $('<div class="merch__card-special">UW Discount</div>').prependTo('div.merchItem');;
     } else {

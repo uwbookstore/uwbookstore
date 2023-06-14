@@ -58,6 +58,16 @@ p {
   line-height: 1.5;
 }
 
+a {
+  color: #0054ad;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
 ol {
   padding-left: 3rem;
 }

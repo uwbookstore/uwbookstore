@@ -2558,38 +2558,38 @@ select.form-control.dd-hidden {
   margin-top: 4rem;
 }
 
-.price_match {
+.price-match {
   padding-top: 2.5rem;
   margin: 2.5rem auto;
 }
-.price_match h2 {
+.price-match h2 {
   margin-bottom: 1rem;
   font-weight: 700;
   font-size: 3rem;
   border-bottom: 2px solid #3e3e3e;
   line-height: 2;
 }
-.price_match p {
+.price-match p {
   font-weight: 600;
   margin-top: 1rem;
   font-size: 1.6rem;
   line-height: 2.5;
 }
-.price_match p.lg {
+.price-match p.lg {
   font-size: 3rem;
   line-height: 1;
   margin: 0;
   margin-top: 2rem;
 }
-.price_match ul {
+.price-match ul {
   list-style: disc outside;
   margin-left: 3rem;
 }
 @media screen and (min-width: 64em) {
-  .price_match [class^=col-] {
+  .price-match [class^=col-] {
     padding: 0;
   }
-  .price_match [class^=col-]:first-child {
+  .price-match [class^=col-]:first-child {
     border-right: 2px solid #3e3e3e;
   }
 }

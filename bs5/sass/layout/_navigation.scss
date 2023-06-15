@@ -2,16 +2,14 @@
   &bar {
     margin: 0;
     padding: 0;
-    &-ubs {
-      background-color: $primary-color;
-      margin-bottom: 2rem;
-    }
-    &-center {
-      justify-content: center;
-    }
 
     &__site {
+      height: 7rem;
+      position: relative;
+      border-bottom: 2px solid $primary-color;
       padding: 1.5rem 0;
+      background-color: $white;
+      background-size: cover;
     }
   }
 }

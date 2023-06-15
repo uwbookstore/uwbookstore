@@ -1,0 +1,39 @@
+.tech-block {
+  margin-top: -2rem;
+}
+
+.tech-block,
+.graphite {
+  padding: 0 0 3rem 0;
+}
+
+.tech-signup,
+.graphite {
+  padding: 6rem 0;
+}
+
+.tech-block {
+  background-image: linear-gradient(
+    to top,
+    rgba(77, 77, 77, 0.01),
+    rgba(77, 77, 77, 0.035)
+  );
+
+  .col-md-3 {
+    box-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    background-color: $off-white;
+  }
+
+  .col-md-9 {
+    padding: 0 0 0 1.5rem;
+  }
+}
+
+.graphite {
+  .mainP {
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-top: 2rem;
+  }
+}

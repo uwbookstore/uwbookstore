@@ -11,3 +11,14 @@
     color: $primary-color;
   }
 }
+
+#shipping {
+  table {
+    width: 100%;
+
+    @media #{$mq-small} {
+      width: 75%;
+      margin: 1rem auto;
+    }
+  }
+}

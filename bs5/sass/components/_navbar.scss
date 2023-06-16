@@ -1,3 +1,56 @@
+// Main menu toggler
+.navbar {
+  &-toggle {
+    display: block;
+    padding: 1rem;
+    background: transparent;
+    border: none;
+
+    .icon-bar {
+      display: block;
+      width: 2.2rem;
+      height: 2px;
+      border-radius: 1px;
+      background-color: $black;
+      transition: all 0.25s ease-in-out;
+
+      + .icon-bar {
+        margin-top: 4px;
+      }
+    }
+
+    .top-bar {
+      transform: rotate(45deg);
+      transform-origin: 10% 10%;
+    }
+
+    .middle-bar {
+      opacity: 0;
+    }
+
+    .bottom-bar {
+      transform: rotate(-45deg);
+      transform-origin: 10% 90%;
+    }
+
+    @media #{$mq-menu} {
+      display: none;
+    }
+
+    &.collapsed {
+      .top-bar,
+      .bottom-bar {
+        transform: rotate(0);
+      }
+
+      .middle-bar {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// Main menu navbar
 .nav {
   &-ubs {
     position: relative;
@@ -20,6 +73,19 @@
     background-color: #f1f1f1;
     padding-left: 0;
     padding-right: 0;
+
+    &.show {
+      // overflow: hidden;
+      // height: 42.4rem;
+      // transition: all 0.45s ease-in-out;
+    }
+
+    &:not(.show) {
+      // display: block;
+      // height: 0;
+      // overflow-x: hidden;
+      // transition: all 0.45s ease-in-out;
+    }
   }
 
   &-ul {
@@ -64,7 +130,7 @@
     }
 
     &-li {
-      a {
+      > a {
         font-size: 1.5rem;
         height: 100%;
         color: $white;
@@ -75,6 +141,78 @@
         &:hover,
         &:focus {
           background-color: darken($primary-color, 5%);
+        }
+      }
+    }
+  }
+}
+
+// Dropdown Menus
+.drop-down {
+  &-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  }
+
+  &.open {
+    .drop-down {
+      &-menu {
+        display: block;
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  @media #{$mq-menu} {
+    &.open {
+      .drop-down {
+        &-menu {
+          position: absolute;
+          padding: 2rem;
+          top: 100%;
+          left: 0;
+          right: 0;
+          z-index: 1000;
+          background-color: $white;
+          color: $black;
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+
+          li {
+            a {
+              padding: 2px 5px;
+              font-size: 1.5rem;
+
+              &:hover,
+              &:focus {
+                border-radius: 3px;
+                background-color: darken($light-gray-2, 5%);
+              }
+            }
+          }
         }
       }
     }

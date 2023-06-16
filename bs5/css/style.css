@@ -2327,6 +2327,47 @@ select.form-control.dd-hidden {
   cursor: text;
 }
 
+.navbar-toggle {
+  display: block;
+  padding: 1rem;
+  background: transparent;
+  border: none;
+}
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 2.2rem;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #3e3e3e;
+  transition: all 0.25s ease-in-out;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+.navbar-toggle .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+.navbar-toggle .middle-bar {
+  opacity: 0;
+}
+.navbar-toggle .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+@media screen and (min-width: 70.5625em) {
+  .navbar-toggle {
+    display: none;
+  }
+}
+.navbar-toggle.collapsed .top-bar,
+.navbar-toggle.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+.navbar-toggle.collapsed .middle-bar {
+  opacity: 1;
+}
+
 .nav-ubs {
   position: relative;
   margin-bottom: 2rem;
@@ -2379,15 +2420,69 @@ select.form-control.dd-hidden {
     height: 4rem;
     align-items: center;
   }
-  .nav-li a {
+  .nav-li > a {
     font-size: 1.5rem;
     height: 100%;
     color: #fff;
     text-transform: uppercase;
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 1px 1px 3px rgba(0, 0, 0, 0.5);
   }
-  .nav-li a:hover, .nav-li a:focus {
+  .nav-li > a:hover, .nav-li > a:focus {
     background-color: #ac040a;
+  }
+}
+
+.drop-down-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+.drop-down.open .drop-down-menu {
+  display: block;
+  position: static;
+  float: none;
+  width: auto;
+  margin-top: 0;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+@media screen and (min-width: 70.5625em) {
+  .drop-down.open .drop-down-menu {
+    position: absolute;
+    padding: 2rem;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #fff;
+    color: #3e3e3e;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  }
+  .drop-down.open .drop-down-menu li a {
+    padding: 2px 5px;
+    font-size: 1.5rem;
+  }
+  .drop-down.open .drop-down-menu li a:hover, .drop-down.open .drop-down-menu li a:focus {
+    border-radius: 3px;
+    background-color: #d4d4d4;
   }
 }
 

@@ -304,6 +304,49 @@
   &:hover {
     text-decoration: none;
   }
+
+  &-xlrg {
+    height: auto;
+    padding: 1rem 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &:hover {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      color: $white;
+      &:link,
+      &:visited {
+      }
+
+      &:hover {
+        background-color: darken($primary-color, 8%);
+        border-color: darken($primary-color, 10%);
+        color: $white;
+      }
+
+      &:active,
+      &:active:hover,
+      &:focus,
+      &:active:focus {
+        background-color: darken($primary-color, 4%);
+        border-color: darken($primary-color, 5%);
+        color: $white;
+      }
+    }
+
+    @media #{$mq-medium} {
+      font-size: 2.5rem !important;
+    }
+
+    @media #{$mq-large} {
+      font-size: 3rem !important;
+    }
+
+    @media #{$mq-xlarge} {
+      font-size: 3.6rem !important;
+    }
+  }
 }
 
 .blk-hlt {

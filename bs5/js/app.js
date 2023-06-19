@@ -1,20 +1,18 @@
-// const navToggle = document.getElementById('ubs-nav-toggle');
-// const navbar = document.getElementById('ubs-nav');
+const navToggle = document.getElementById('ubs-nav-toggle');
+const navbar = document.getElementById('ubs-nav');
 
-// navToggle.addEventListener('click', toggleCollapse);
+navToggle.addEventListener('click', toggleCollapse);
 
-// function toggleCollapse() {
-//   toggleAriaExpanded(navToggle);
-//   toggleAriaExpanded(navbar);
-//   navToggle.classList.toggle('collapsed');
-//   navbar.classList.toggle('show');
-// }
+function toggleCollapse() {
+  toggleAriaExpanded(navToggle);
+  toggleAriaExpanded(navbar);
+}
 
-// function toggleAriaExpanded(elem) {
-//   let x = elem.getAttribute('aria-expanded');
-//   x === 'true' ? (x = 'false') : (x = 'true');
-//   elem.setAttribute('aria-expanded', x);
-// }
+function toggleAriaExpanded(elem) {
+  let x = elem.getAttribute('aria-expanded');
+  x === 'true' ? (x = 'false') : (x = 'true');
+  elem.setAttribute('aria-expanded', x);
+}
 
 // https://getbutterfly.com/how-to-implement-jquery-slidetoggle-in-vanilla-javascript/
 
@@ -45,4 +43,21 @@ $(document).ready(() => {
       $(this).parent().toggleClass('open');
     }
   });
+});
+
+$('.nav-title').on('click', function (e) {
+  const width = $(window).width();
+
+  if (width < 1129) {
+    $(this).next().slideToggle(500);
+    e.preventDefault();
+  }
+});
+
+$(document).keyup(function (e) {
+  if (e.keyCode === 27) {
+    if ($('.nav-ul li').hasClass('open')) {
+      $('.nav-ul li').removeClass('open');
+    }
+  }
 });

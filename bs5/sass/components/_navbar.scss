@@ -218,3 +218,90 @@
     }
   }
 }
+
+.megamenu {
+  padding-top: 0;
+  .row > * {
+    padding: 0;
+    margin-top: 0;
+
+    @media #{$mq-menu} {
+      padding: 0px 5px;
+    }
+  }
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-bottom: 1px solid $light-gray-3;
+
+    a {
+      color: $black;
+    }
+
+    @media #{$mq-menu} {
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+      font-weight: 700;
+
+      a {
+        font-size: 1.5rem;
+        padding: 2px 5px;
+
+        &:hover,
+        &:focus {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  li {
+    em {
+      color: $black;
+    }
+    a {
+      padding: 1rem 2.5rem;
+    }
+  }
+}
+
+.col-megamenu {
+  background-color: $white;
+
+  ul {
+    display: none;
+  }
+
+  @media #{$mq-menu} {
+    padding-inline: 5px;
+    ul {
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+// Navbar View All button
+.view-all {
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  a {
+    display: inline-block;
+    &:link,
+    &:visited {
+      color: $primary-color;
+      font-weight: 700;
+      padding: 1rem;
+      border-bottom: 1px solid currentColor;
+      transition: all 0.25s ease-in-out;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $primary-color;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}

@@ -808,6 +808,24 @@ input[class^=radio]:checked + span::before {
   border-left: 1px solid #cacaca;
 }
 
+.external {
+  position: relative;
+}
+.external em {
+  display: inline-block;
+  position: absolute;
+  top: 1.6rem;
+  right: 1.5rem;
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 64em) {
+  .external em {
+    top: 0.5rem;
+    right: 2.5rem;
+    font-size: 1.4rem;
+  }
+}
+
 @media screen and (min-width: 64em) {
   .contain,
 .container {
@@ -2198,6 +2216,42 @@ select.form-control {
 .btn:hover {
   text-decoration: none;
 }
+.btn-xlrg {
+  height: auto;
+  padding: 1rem 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.btn-xlrg:hover {
+  background-color: #c5050c;
+  border-color: #c5050c;
+  color: #fff;
+}
+.btn-xlrg:hover:hover {
+  background-color: #9d040a;
+  border-color: #930409;
+  color: #fff;
+}
+.btn-xlrg:hover:active, .btn-xlrg:hover:active:hover, .btn-xlrg:hover:focus, .btn-xlrg:hover:active:focus {
+  background-color: #b1040b;
+  border-color: #ac040a;
+  color: #fff;
+}
+@media screen and (min-width: 64em) {
+  .btn-xlrg {
+    font-size: 2.5rem !important;
+  }
+}
+@media screen and (min-width: 85.375em) {
+  .btn-xlrg {
+    font-size: 3rem !important;
+  }
+}
+@media screen and (min-width: 120em) {
+  .btn-xlrg {
+    font-size: 3.6rem !important;
+  }
+}
 
 .blk-hlt:link, .blk-hlt:active {
   display: block;
@@ -2484,6 +2538,83 @@ select.form-control.dd-hidden {
     border-radius: 3px;
     background-color: #d4d4d4;
   }
+}
+
+.megamenu {
+  padding-top: 0;
+}
+.megamenu .row > * {
+  padding: 0;
+  margin-top: 0;
+}
+@media screen and (min-width: 70.5625em) {
+  .megamenu .row > * {
+    padding: 0px 5px;
+  }
+}
+.megamenu h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-bottom: 1px solid #cacaca;
+}
+.megamenu h2 a {
+  color: #3e3e3e;
+}
+@media screen and (min-width: 70.5625em) {
+  .megamenu h2 {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    font-weight: 700;
+  }
+  .megamenu h2 a {
+    font-size: 1.5rem;
+    padding: 2px 5px;
+  }
+  .megamenu h2 a:hover, .megamenu h2 a:focus {
+    background-color: transparent;
+  }
+}
+.megamenu li em {
+  color: #3e3e3e;
+}
+.megamenu li a {
+  padding: 1rem 2.5rem;
+}
+
+.col-megamenu {
+  background-color: #fff;
+}
+.col-megamenu ul {
+  display: none;
+}
+@media screen and (min-width: 70.5625em) {
+  .col-megamenu {
+    padding-inline: 5px;
+  }
+  .col-megamenu ul {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.view-all {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.view-all a {
+  display: inline-block;
+}
+.view-all a:link, .view-all a:visited {
+  color: #c5050c;
+  font-weight: 700;
+  padding: 1rem;
+  border-bottom: 1px solid currentColor;
+  transition: all 0.25s ease-in-out;
+}
+.view-all a:hover, .view-all a:active {
+  background-color: #c5050c;
+  color: #fff;
+  text-decoration: none;
 }
 
 .welcome__header {

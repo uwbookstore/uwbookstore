@@ -2436,7 +2436,6 @@ select.form-control.dd-hidden {
 }
 .nav-collapse {
   overflow-x: visible;
-  border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   background-color: #f1f1f1;
   padding-left: 0;
@@ -2447,36 +2446,41 @@ select.form-control.dd-hidden {
   padding: 0;
   list-style: none;
 }
-.nav-li a {
+.nav-li > a {
   position: relative;
   display: block;
   padding: 1rem 1.5rem;
   font-size: 1.8rem;
 }
-.nav-li a:hover, .nav-li a:focus {
+.nav-li > a:hover, .nav-li > a:focus {
   background-color: #d4d4d4;
   transition: all 0.25s ease-in-out;
   text-decoration: none;
 }
 @media screen and (min-width: 70.5625em) {
+  .nav-ubs {
+    height: 4rem;
+  }
   .nav-collapse {
     background-color: #c5050c;
     display: flex !important;
-    height: 4.25rem;
-  }
-  .nav-collapse.collapse {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    height: 4rem;
   }
   .nav-ul {
     display: flex;
     flex-direction: row;
     margin: auto;
-    height: 4rem;
+    height: 100%;
     align-items: center;
   }
+  .nav-li {
+    display: flex;
+    height: 4rem;
+  }
   .nav-li > a {
+    padding: 0 1.5rem;
+    line-height: 4rem;
     font-size: 1.5rem;
-    height: 100%;
     color: #fff;
     text-transform: uppercase;
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -2552,13 +2556,16 @@ select.form-control.dd-hidden {
     padding: 0px 5px;
   }
 }
-.megamenu h2 {
-  font-size: 1.6rem;
+.megamenu h2 a {
+  display: block;
+  padding: 1rem 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
   border-bottom: 1px solid #cacaca;
-}
-.megamenu h2 a {
   color: #3e3e3e;
+}
+.megamenu h2 a:hover, .megamenu h2 a:focus {
+  text-decoration: none;
 }
 @media screen and (min-width: 70.5625em) {
   .megamenu h2 {
@@ -2579,6 +2586,12 @@ select.form-control.dd-hidden {
 }
 .megamenu li a {
   padding: 1rem 2.5rem;
+  display: block;
+  font-size: 1.8rem;
+}
+.megamenu li a:hover {
+  text-decoration: none;
+  background-color: #e1e1e1;
 }
 
 .col-megamenu {

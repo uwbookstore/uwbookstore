@@ -61,3 +61,9 @@ $(document).keyup(function (e) {
     }
   }
 });
+
+$(document).on('click', (event) => {
+  if ($('.nav-ul li').hasClass('open')) {
+    $('.nav-ul li').removeClass('open');
+  }
+});

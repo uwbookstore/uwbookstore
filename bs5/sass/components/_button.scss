@@ -278,7 +278,7 @@
     transition: all 0.25s ease-in-out;
 
     &:hover {
-      background-color: darken($primary-color, 8%);
+      background-color: darken($primary-color, 8%) !important;
       border-color: darken($primary-color, 10%);
       text-decoration: none;
       transition: all 0.25s ease-in-out;

@@ -2195,7 +2195,7 @@ select.form-control {
   transition: all 0.25s ease-in-out;
 }
 .btn-x-lg:hover {
-  background-color: #9d040a;
+  background-color: #9d040a !important;
   border-color: #930409;
   text-decoration: none;
   transition: all 0.25s ease-in-out;

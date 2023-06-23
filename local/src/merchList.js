@@ -266,6 +266,12 @@ $(document).ready(function () {
     ).insertBefore('.merch__filter');
   }
 
+  if (categoryTitle.toLowerCase().substring(0, 19) === 'maxwell street days') {
+    $(
+      '<img alt="Maxwell Street Days" src="https://i.univbkstr.com/images/banners/maxwellStreetDays-sm.jpg" class="img-responsive dt-hide"><img alt="Maxwell Street Days" src="https://i.univbkstr.com/images/banners/maxwellStreetDays.jpg" class="img-responsive mobi-hide">'
+    ).insertBefore('.merch__filter');
+  }
+
   if (categoryTitle.toLowerCase().substring(0, 16) === 'dell laptop') {
     if (window.location.host === 'www.uwbookstore.com') {
       // $(

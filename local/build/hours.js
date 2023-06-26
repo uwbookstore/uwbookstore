@@ -174,8 +174,8 @@ function getBrookfieldHrs() {
         <ul class="hours">
             <li><strong>Hours: </strong></li>
             <li><span class="hours__day">Sunday:</span> <span class="hours__times">11:00am - 6:00pm</span></li>
-            <li><span class="hours__day">Monday:</span> <span class="hours__times">3:pm - 8:00pm</span></li>
-            <li><span class="hours__day">Tuesday:</span> <span class="hours__times">3:00pm - 8:00pm</span></li>
+            <li><span class="hours__day">Monday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
+            <li><span class="hours__day">Tuesday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
             <li><span class="hours__day">Wednesday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
             <li><span class="hours__day">Thursday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
             <li><span class="hours__day">Friday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
@@ -194,11 +194,6 @@ function getBrookfieldHrs() {
     switch (day) {
       case 1:
       case 2:
-        open = 15;
-        openMin = 0;
-        close = 20;
-        closeMin = 0;
-        break;
       case 3:
       case 4:
       case 5:

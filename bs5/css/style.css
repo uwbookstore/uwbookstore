@@ -2371,6 +2371,7 @@ select.form-control.dd-hidden {
 }
 .navbar-nav > li > a {
   padding: 1rem 1.5rem !important;
+  justify-content: flex-start;
 }
 .navbar-nav > li > a:hover, .navbar-nav > li > a:active, .navbar-nav > li > a:focus {
   background-color: #d4d4d4;
@@ -2528,6 +2529,89 @@ select.form-control.dd-hidden {
     color: #3e3e3e;
     transition: all 0.25s ease-in-out;
   }
+}
+
+.col-megamenu {
+  background-color: #fff;
+}
+.col-megamenu ul {
+  display: none;
+}
+@media screen and (min-width: 70.5625em) {
+  .col-megamenu ul {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+}
+.col-megamenu ol li a:link, .col-megamenu ol li a:visited {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: #3e3e3e;
+  font-size: 1.6rem;
+}
+.col-megamenu ol li a:hover {
+  text-decoration: none;
+}
+@media screen and (min-width: 70.5625em) {
+  .col-megamenu ol li a:link, .col-megamenu ol li a:visited {
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    color: #0054ad;
+  }
+  .col-megamenu ol li a:hover {
+    background-color: transparent;
+    color: #c5050c;
+    transition: all 0.25s ease-in-out;
+  }
+}
+@media screen and (min-width: 64em) {
+  .col-megamenu ol li a:link, .col-megamenu ol li a:visited {
+    padding: 2px 5px;
+  }
+}
+@media screen and (min-width: 48em) {
+  .col-megamenu ol {
+    margin-top: -1rem;
+  }
+}
+.col-megamenu-no-header li a {
+  background-color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border-bottom: 1px solid #cacaca;
+  display: block;
+  padding: 1rem 1.5rem;
+  color: #3e3e3e;
+}
+.col-megamenu-no-header li a:hover {
+  text-decoration: none;
+}
+@media screen and (min-width: 70.5625em) {
+  .col-megamenu-no-header li a {
+    font-weight: 400;
+    padding: 2px 5px;
+    border-bottom: none;
+    font-size: 1.5rem;
+    color: #337ab7;
+  }
+}
+
+.view-all {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.view-all a:link, .view-all a:visited {
+  color: #c5050c;
+  font-weight: 700;
+  padding: 1rem;
+  border-bottom: 1px solid currentColor;
+  transition: all 0.25s ease-in-out;
+}
+.view-all a:hover, .view-all a:active {
+  text-decoration: none;
+  background-color: #c5050c;
+  color: #fff;
 }
 
 .welcome__header {

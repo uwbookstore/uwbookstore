@@ -1514,6 +1514,53 @@ select.form-control {
   padding: 2px 5px;
 }
 
+.backtotop {
+  display: none;
+  position: fixed;
+  z-index: 9999999999999;
+  bottom: 4rem;
+  right: 4rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.backtotop a:link, .backtotop a:visited {
+  display: block;
+  opacity: 1;
+  width: 5rem;
+  height: 5rem;
+  background: #930409;
+  border: 1px solid #890308;
+  border-radius: 0;
+  outline: 0;
+  position: absolute;
+  transition: all 0.2s ease;
+  opacity: 0.7;
+}
+@media screen and (min-width: 64em) {
+  .backtotop a:link, .backtotop a:visited {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+.backtotop a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1px 2px rgba(62, 62, 62, 0.6);
+}
+.backtotop a:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(62, 62, 62, 0.8);
+}
+
+.backtotop em {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+}
+
 .img__border {
   border: 2px solid #c5050c;
   padding: 2px;
@@ -2291,6 +2338,68 @@ select.form-control.dd-hidden {
   padding: 0;
   margin-top: -1rem;
   cursor: text;
+}
+
+.banner {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.banner__info {
+  background-color: #3e3e3e;
+  color: #fff;
+}
+.banner__message {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.banner__message span.promo__code {
+  padding: 5px 1rem;
+  background-color: #fff;
+  color: #3e3e3e;
+  text-transform: uppercase;
+  width: 30rem;
+  margin: auto;
+  border-radius: 2px;
+}
+.banner__message span.small {
+  font-size: 75%;
+}
+@media screen and (min-width: 64em) {
+  .banner__message {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 3rem;
+    line-height: 1.4;
+    font-size: 1.4rem;
+  }
+  .banner__message span.promo__code {
+    width: auto;
+    padding: 2px 5px;
+    margin-right: 1rem;
+  }
+}
+.banner__dropdown {
+  font-style: normal;
+  font-weight: 300;
+  display: none;
+  background-color: #f1f1f1;
+  font-size: 1.5rem;
+  padding: 2rem;
+  border: 1px solid #cacaca;
+  border-top: 1px solid transparent;
+}
+.banner__dropdown p {
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-toggler {

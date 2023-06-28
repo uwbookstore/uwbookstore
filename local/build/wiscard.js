@@ -6,12 +6,12 @@ $(document).ready(function () {
 
   if ($('.accountNumberTitle').length > 0) {
     if ($('input#promoCode').val().trim() === '') {
-      $('input#promoCode').val('WISCARD3');
+      $('input#promoCode').val('WISCARD4');
       $('#applyPromoBtnHidden').click();
     }
   }
 
-  if ($('input#promoCode').val() === 'WISCARD3') {
+  if ($('input#promoCode').val() === 'WISCARD4') {
     $('input#promoCode').css('color', '#fff').attr('onfocus', "this.value=''");
     $('p#lblValidPromoMsg').hide();
   }
@@ -19,7 +19,7 @@ $(document).ready(function () {
   // Suppress promo code error
   // for WISCARD promo when
   // inelligible item is selected
-  if ($('input#promoCode').val() === 'WISCARD3' && $("div.validation-summary-errors ul li:contains('You do not have items in your shopping cart that qualify for the promotion.')").length) {
+  if ($('input#promoCode').val() === 'WISCARD4' && $("div.validation-summary-errors ul li:contains('You do not have items in your shopping cart that qualify for the promotion.')").length) {
     $("div.validation-summary-errors ul li:contains('You do not have items in your shopping cart that qualify for the promotion.')").hide();
   }
 

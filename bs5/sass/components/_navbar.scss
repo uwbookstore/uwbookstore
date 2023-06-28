@@ -72,7 +72,9 @@
       > li {
         > a {
           padding: 1rem 1.5rem !important;
-          justify-content: flex-start;
+          display: block;
+          font-size: 1.8rem;
+          color: #0054ad;
 
           &:hover,
           &:active,
@@ -84,6 +86,12 @@
         }
 
         @media #{$mq-menu} {
+          &.open {
+            > a {
+              color: $white;
+              background-color: darken($primary-color, 5%);
+            }
+          }
           > a {
             color: $white;
             font-size: 1.5rem;
@@ -149,7 +157,7 @@
 }
 
 /* ============ desktop view ============ */
-@media all and (min-width: 992px) {
+@media all and (min-width: 1129px) {
   .navbar .has-megamenu {
     position: static !important;
   }
@@ -160,21 +168,59 @@
     margin-top: 0;
     padding: 2rem;
   }
+
+  .navbar-expand-lg .navbar-collapse {
+    display: flex;
+    flex-basis: auto;
+  }
 }
 /* ============ desktop view .end// ============ */
 
 /* ============ mobile view ============ */
-@media (max-width: 991px) {
+@media (max-width: 1128px) {
   .navbar.fixed-top .navbar-collapse,
   .navbar.sticky-top .navbar-collapse {
     overflow-y: auto;
     max-height: 90vh;
     margin-top: 10px;
   }
+
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    display: block !important;
+  }
+
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    width: 100%;
+  }
+
+  .collapse:not(.show) {
+    display: none !important;
+  }
+
+  .megamenu [class^='col-'] {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .megamenu [class*='offset-'] {
+    margin-left: 0;
+  }
+
+  .dropdown:hover > .dropdown-menu {
+    display: none;
+  }
+  .dropdown:hover > .dropdown-menu.show {
+    display: block;
+  }
 }
+/* ============ mobile view .end// ============ */
 
 .collapse.navbar-collapse {
-  @media #{$mq-medium} {
+  @media #{$mq-menu} {
     justify-content: center;
   }
 }
@@ -305,7 +351,7 @@
           }
         }
 
-        @media #{$mq-medium} {
+        @media #{$mq-menu} {
           &:link,
           &:visited {
             padding: 2px 5px;

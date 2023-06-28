@@ -324,3 +324,51 @@
   color: #fff;
   padding: 2px 5px;
 }
+
+.backtotop {
+  display: none;
+  position: fixed;
+  z-index: 9999999999999;
+  bottom: 4rem;
+  right: 4rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.backtotop a {
+  &:link,
+  &:visited {
+    display: block;
+    opacity: 1;
+    width: 5rem;
+    height: 5rem;
+    background: darken($primary-color, 10%);
+    border: 1px solid darken($primary-color, 12%);
+    border-radius: 0;
+    outline: 0;
+    position: absolute;
+    transition: all 0.2s ease;
+    opacity: 0.7;
+
+    @media #{$mq-medium} {
+      // border-radius: 0;
+      height: 4rem;
+      width: 4rem;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1px 2px rgba($black, 0.6);
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba($black, 0.8);
+  }
+}
+
+.backtotop em {
+  @include absCenter;
+  color: $white;
+  font-size: 2rem;
+}

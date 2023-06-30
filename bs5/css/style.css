@@ -1891,6 +1891,54 @@ select.form-control {
   }
 }
 
+.sidenav {
+  list-style: none;
+  border: 1px solid #fefefe;
+  margin: 0;
+  padding: 0;
+}
+.sidenav li {
+  padding: 1rem;
+  border-bottom: 1px solid #cacaca;
+  transition: background-color 0.25s ease-in-out;
+}
+.sidenav li:hover {
+  background-color: #cacaca;
+}
+.sidenav li a:link, .sidenav li a:visited {
+  display: block;
+  padding: 5px 1rem;
+}
+.sidenav li h2.nav-title a {
+  display: block;
+  background-color: #000;
+  font-size: 1.6rem;
+  color: #fff;
+}
+@media screen and (min-width: 64em) {
+  .sidenav {
+    border: none;
+    padding-left: 3rem;
+  }
+  .sidenav li {
+    border: none;
+    padding: 0;
+  }
+  .sidenav li:hover {
+    background-color: transparent;
+  }
+  .sidenav li a:link, .sidenav li a:visited {
+    display: inline-block;
+    padding: 5px;
+    color: #585858;
+    transition: color 0.25s ease-in-out;
+  }
+  .sidenav li a:link:hover, .sidenav li a:visited:hover {
+    text-decoration: none;
+    color: #c5050c;
+  }
+}
+
 .Accordion {
   margin: 0 auto;
   padding: 0;
@@ -1981,7 +2029,7 @@ select.form-control {
   height: 5rem;
   line-height: 5rem;
   text-decoration: none;
-  font-size: inherit;
+  font-size: 1.4rem;
 }
 .btn-primary {
   background-color: #c5050c;
@@ -2469,6 +2517,7 @@ select.form-control.dd-hidden {
 .navbar {
   margin: 0;
   padding: 0;
+  z-index: 1;
 }
 .navbar__site {
   height: 7rem;
@@ -2786,7 +2835,6 @@ select.form-control.dd-hidden {
 .welcome__header {
   display: block;
   background-color: #cacaca;
-  margin-top: -2rem;
   padding: 3rem 1rem 5rem;
   text-align: center;
 }
@@ -4446,10 +4494,6 @@ li.attribute a:hover {
   .heading__line br {
     display: none;
   }
-}
-
-.tech-block {
-  margin-top: -2rem;
 }
 
 .tech-block,

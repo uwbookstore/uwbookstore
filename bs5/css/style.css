@@ -79,6 +79,30 @@ h6 {
   margin: 0;
 }
 
+h1 {
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
 .num-lg {
   font-size: 120%;
   font-style: normal;
@@ -1189,14 +1213,14 @@ select.form-control {
     border-radius: 4px 0 0 4px;
   }
 }
-.mail-list .email-submit {
+.mail-list .email-submit.btn.btn-primary {
   width: 100%;
   border-radius: 0 0 4px 4px;
   border: 2px solid #8b8b8b;
   border-top: none;
 }
 @media screen and (min-width: 64em) {
-  .mail-list .email-submit {
+  .mail-list .email-submit.btn.btn-primary {
     width: auto;
     border-left: none;
     border-top: 2px solid #8b8b8b;
@@ -1711,7 +1735,7 @@ select.form-control {
 
 .meganav {
   width: 100%;
-  margin: -2rem 0;
+  margin: 0;
   flex-direction: row;
 }
 .meganav__tabs {
@@ -1841,7 +1865,6 @@ select.form-control {
   background: url("https://i.univbkstr.com/ubs-beta/img/rotator/jt-bg.jpg") no-repeat top center;
   background-size: cover;
   height: 15rem;
-  margin: -2rem 0 0 0;
   padding: 4rem;
   color: white;
   border-radius: 0;

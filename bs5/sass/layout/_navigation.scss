@@ -176,3 +176,68 @@
     height: 20rem;
   }
 }
+
+.sidenav {
+  list-style: none;
+  border: 1px solid $off-white;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding: 1rem;
+    border-bottom: 1px solid $light-gray-3;
+    transition: background-color 0.25s ease-in-out;
+
+    &:hover {
+      background-color: $light-gray-3;
+    }
+
+    a {
+      &:link,
+      &:visited {
+        display: block;
+        padding: 5px 1rem;
+      }
+    }
+
+    h2 {
+      &.nav-title {
+        a {
+          display: block;
+          background-color: #000;
+          font-size: 1.6rem;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  @media #{$mq-medium} {
+    border: none;
+    padding-left: 3rem;
+
+    li {
+      border: none;
+      padding: 0;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      a {
+        &:link,
+        &:visited {
+          display: inline-block;
+          padding: 5px;
+          color: lighten($black, 10%);
+          transition: color 0.25s ease-in-out;
+
+          &:hover {
+            text-decoration: none;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}

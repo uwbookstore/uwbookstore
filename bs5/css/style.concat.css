@@ -2320,7 +2320,6 @@ select.form-control {
 
 .box {
   width: 100%;
-  height: 100%;
 }
 .box__gray {
   background-color: #f1f1f1;
@@ -4647,3 +4646,5 @@ textarea.st-signupform-validation-error:focus {
 .step2-confirmationText {
   font-size: 2rem;
 }
+
+/*# sourceMappingURL=style.comp.css.map */

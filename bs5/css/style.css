@@ -2351,12 +2351,16 @@ select.form-control {
   margin: 0;
 }
 
+.card-header {
+  font-weight: 700;
+}
 .card-header-ubs {
   color: #fff;
   background-color: #c5050c;
   border-color: #930409;
   padding: 0.5rem 1.5rem;
   margin-bottom: 2rem;
+  font-weight: normal;
 }
 .card-header-ubs a:link, .card-header-ubs a:visited {
   color: #fff;

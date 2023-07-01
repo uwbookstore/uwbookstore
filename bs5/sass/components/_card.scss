@@ -39,12 +39,15 @@
 
 .card {
   &-header {
+    font-weight: 700;
+
     &-ubs {
       color: $white;
       background-color: $primary-color;
       border-color: darken($primary-color, 10%);
       padding: 0.5rem 1.5rem;
       margin-bottom: 2rem;
+      font-weight: normal;
 
       a {
         &:link,

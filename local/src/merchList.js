@@ -13,13 +13,25 @@ $(document).ready(function () {
     const searchTerm = searched[2].replace(/%20/g, ' ');
 
     // HANDLE NO SEARCH RESULTS RETURNED
-    if ($('.noListItems').length) {
-      $('.noListItems').hide();
-      $(
-        '<div class="empty-results"><h1>Sorry, we couldn\'t find any products.</h1><p>We were unable to find results for <strong>' +
-          searchTerm +
-          '</strong>. Please check your spelling or try searching for similar terms.</p></div>'
-      ).insertAfter('.searchCatWrap');
+    if (
+      baseUrl === 'https://www.uwbookstore.com/' ||
+      baseUrl === 'https://www.uwalumnistore.com/'
+    ) {
+      if ($('.noListItems').length) {
+        $('.noListItems').hide();
+        $(
+          `<div class="empty-results"><h1>Sorry, we couldn't find any products.</h1><p>We were unable to find results for <strong>${searchTerm}</strong>. Please check your spelling or try searching for similar terms.</p></div>`
+        ).insertAfter('.searchCatWrap');
+      }
+      console.log(`UW Book Store or UW Alumni Store`);
+    } else {
+      if ($('.noListItems').length) {
+        $('.noListItems').hide();
+        $(
+          `<div class="empty-results"><h1>Sorry, we couldn't find any products.</h1><p>We were unable to find results for <strong>${searchTerm}</strong>. Please check your spelling or try searching for similar terms.</p></div><div class="text-center"><a class="btn btn-primary" href="https://text.uwbookstore.com/SelectTermDept">Search Textbooks</a></div>`
+        ).insertAfter('.searchCatWrap');
+      }
+      console.log(`Texbooks...`);
     }
 
     categoryTitle = 'Search Results For: ' + searchTerm;

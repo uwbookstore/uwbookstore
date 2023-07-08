@@ -244,24 +244,10 @@ a.hiring__now {
   }
 }
 
-.carousel {
-  &-indicators {
-    bottom: 0;
-
-    li {
-      background-color: transparent;
-      border: 1px solid $black;
-    }
-
-    .active {
-      background-color: $black;
-    }
-  }
-}
-
 .hero__image {
   background-color: $white;
   padding-bottom: 4rem;
+  margin-top: 2rem;
 
   .img {
     &-small {

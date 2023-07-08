@@ -401,6 +401,10 @@ ol.alpha {
   float: none !important;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .dancing-script {
   color: #c5050c;
   font-family: "Dancing Script";
@@ -831,6 +835,23 @@ input[class^=radio]:checked + span::before {
     right: 2.5rem;
     font-size: 1.4rem;
   }
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.bootstrapv5-hide {
+  display: none;
 }
 
 @media screen and (min-width: 64em) {

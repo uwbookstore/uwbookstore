@@ -41,3 +41,20 @@
     }
   }
 }
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.bootstrapv5-hide {
+  display: none;
+}

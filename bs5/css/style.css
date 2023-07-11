@@ -46,6 +46,10 @@ body {
   width: 1px;
 }
 
+.entry-content {
+  margin-top: 2rem;
+}
+
 html {
   /* This defines what 1rem is. */
   font-size: 62.5%;

@@ -1747,6 +1747,12 @@ select.form-control {
   padding: 0;
   text-align: center;
 }
+.framing blockquote cite {
+  display: block;
+}
+.framing blockquote cite::before {
+  content: " - ";
+}
 .framing .row [class^=col-] {
   display: flex;
   align-items: stretch;

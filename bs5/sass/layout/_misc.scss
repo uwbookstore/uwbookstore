@@ -120,8 +120,6 @@
 }
 
 .framing {
-  // text-align: center;
-
   img {
     border: 2px solid $primary-color;
     padding: 5px;
@@ -137,6 +135,14 @@
     border-left: none;
     padding: 0;
     text-align: center;
+
+    cite {
+      display: block;
+
+      &::before {
+        content: ' - ';
+      }
+    }
   }
 
   .row {

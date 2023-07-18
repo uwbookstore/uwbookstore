@@ -49,31 +49,31 @@ $(document).ready(function () {
       $(this).find('.No_Material_Course_Text_Req').hide();
 
       $(
-        '<div class="panel-body"><p class="col-xs-12 textl alert alert-warning p-15">This course includes an eText textbook. The eText fees will be automatically charged via your tuition.</p></div>'
+        '<div class="panel-body"><p class="col-xs-12 textl alert alert-warning p-2">This course includes an eText textbook. The eText fees will be automatically charged via your tuition.</p></div>'
       ).appendTo($(this).find('.panel-body:last()'));
     } else if ($(this).is(':contains("SEE ")')) {
       const instructor = $('span.No_Material_Course_Instructor').text();
       $(this)
         .find('.No_Material_Course_Text')
         .html(
-          '<!-- <p class="bold">Please go to <a href="https://text.uwbookstore.com/SelectTermDept">' +
+          '<p class="bold">Please go to <a href="https://text.uwbookstore.com/SelectTermDept">' +
             instructor.split('|')[index].split('SEE')[1] +
-            '</a> for course requirements.</p><div class="alert alert-info p-15"><p>Textbook requirements have not yet been determined for this course.If your instructor decides not to require any materials, this course will not be processed.</p></div><div class="alert alert-info p-15"><p><em>We have not yet received information on requirements for this course.</em></p><p class="center">If you\'ve received a syllabus from your professor indicating there is a required book or required materials, send a screenshot (must be legible) of your syllabus to Amber, <a href="mailto:textbooks@uwbookstore.com">textbooks@uwbookstore.com</a>.  Be the first person to do so and receive a free Book Store t-shirt!<br>If your instructor decides not to require any materials, this course will not be processed.</p></div> -->'
+            '</a> for course requirements.</p><div class="alert alert-info p-2"><p>Textbook requirements have not yet been determined for this course.If your instructor decides not to require any materials, this course will not be processed.</p></div><!-- <div class="alert alert-info p-2"><p><em>We have not yet received information on requirements for this course.</em></p><p class="center">If you\'ve received a syllabus from your professor indicating there is a required book or required materials, send a screenshot (must be legible) of your syllabus to Amber, <a href="mailto:textbooks@uwbookstore.com">textbooks@uwbookstore.com</a>.  Be the first person to do so and receive a free Book Store t-shirt!<br>If your instructor decides not to require any materials, this course will not be processed.</p> </div>-->'
         );
 
       $(this)
         .find('.No_Material_Course_Text_Req')
-        .addClass('alert alert-info p-15');
+        .addClass('alert alert-info p-2');
     } else {
       $(this)
         .find('.No_Material_Course_Text')
         .html(
-          '<!-- <div class="alert alert-info p-15"><p><em>We have not yet received information on requirements for this course.</em></p><p class="center">If you\'ve received a syllabus from your professor indicating there is a required book or required materials, send a screenshot (must be legible) of your syllabus to Amber, <a href="mailto:textbooks@uwbookstore.com">textbooks@uwbookstore.com</a>.  Be the first person to do so and receive a free Book Store t-shirt!<br>If your instructor decides not to require any materials, this course will not be processed.</p></div> -->'
+          '<div class="alert alert-info p-2"><p><em>We have not yet received information on requirements for this course.</em></p><!-- <p class="center">If you\'ve received a syllabus from your professor indicating there is a required book or required materials, send a screenshot (must be legible) of your syllabus to Amber, <a href="mailto:textbooks@uwbookstore.com">textbooks@uwbookstore.com</a>.  Be the first person to do so and receive a free Book Store t-shirt!<br>If your instructor decides not to require any materials, this course will not be processed.</p> --></div>'
         );
 
       $(this)
         .find('.No_Material_Course_Text_Req')
-        .addClass('alert alert-info p-15');
+        .addClass('alert alert-info p-2');
     }
   });
 });

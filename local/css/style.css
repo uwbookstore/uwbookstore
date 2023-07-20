@@ -6028,7 +6028,7 @@ span.btn-default.typeSelected:hover {
 .merch__detail-description ul ol,
 .merch__detail-description ol ul,
 .merch__detail-description ol ol {
-  padding-left: 4rem;
+  padding-left: 1rem;
 }
 .merch__detail-description-open {
   line-height: 1.6;

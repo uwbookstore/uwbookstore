@@ -1076,6 +1076,11 @@ select.form-control {
   text-align: center;
   margin-bottom: 3rem;
 }
+.footer .social-footer .local-business {
+  height: 15rem;
+  width: 15rem;
+  margin-top: 2rem;
+}
 .footer .social-footer a {
   display: inline-block;
   height: 32px;
@@ -3137,6 +3142,10 @@ select.form-control.dd-hidden {
 .social__media-item:hover {
   transform: scale(1.05);
   transition: all 0.25s ease-in-out;
+}
+.social__media-item .twitterX {
+  fill: #c5050c;
+  height: 6rem;
 }
 .social__media-item .fa-brands {
   font-size: 6rem;

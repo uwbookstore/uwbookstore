@@ -84,14 +84,14 @@ $(document).ready(function () {
     $('<div id="item-disclaimer" class="alert alert-warning"><label></label></div>').appendTo('div#merch-info');
     $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
     $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
-    $('.normal').html('<strong>PLEASE READ BEFORE PURCHASE!</strong> This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for store pick-up, promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>');
+    $('.normal').html('<strong>PLEASE READ BEFORE PURCHASE!  Store pick-up orders will incur a $7.50 drop ship charge.</strong> This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>');
     $('div#landsEnd').hide();
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
   } else if (itemDisclaimer.length > 0 && $('div#landsEndReally').length > 0) {
     $('<div id="item-disclaimer" class="alert alert-warning"><label></label></div>').appendTo('div#merch-info');
     $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
     $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
-    $('.normal').html(`<strong>PLEASE READ BEFORE PURCHASE! — Lands' End may take 9-14 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge.</strong>This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>`);
+    $('.normal').html(`<strong>PLEASE READ BEFORE PURCHASE! — Lands' End may take 10-15 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge.</strong>This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>`);
     $('div#landsEnd').hide();
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
   } else if (itemDisclaimer.length > 0) {

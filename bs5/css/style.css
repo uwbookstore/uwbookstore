@@ -1089,7 +1089,7 @@ select.form-control {
   transition: all 0.25s ease-in-out;
 }
 .footer .social-footer a.facebook, .footer .social-footer a.twitter, .footer .social-footer a.instagram, .footer .social-footer a.tiktok {
-  background-image: url("https://i.univbkstr.com/uwbookstore/img/social/social_sprite.png");
+  background-image: url("https://i.univbkstr.com/v3/css/img/social_sprite.png");
 }
 .footer .social-footer a.facebook {
   background-position: 0 32px;
@@ -1899,7 +1899,7 @@ select.form-control {
 }
 
 .jumbotron.landing {
-  background: url("https://i.univbkstr.com/ubs-beta/img/rotator/jt-bg.jpg") no-repeat top center;
+  background: url("https://i.univbkstr.com/v3/css/img/jt-bg.jpg") no-repeat top center;
   background-size: cover;
   height: 15rem;
   padding: 4rem;
@@ -4714,7 +4714,7 @@ li.attribute a:hover {
   overflow: hidden;
   position: relative;
   background-color: lightgray;
-  background-image: url("https://i.univbkstr.com/uwbookstore/img/no-video-bg.jpg");
+  background-image: url("https://i.univbkstr.com/v3/css/img/no-video-bg.jpg");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;

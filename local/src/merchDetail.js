@@ -559,24 +559,17 @@ $(document).ready(function () {
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
-    prodName.substring(0, 9) === "'47 Brand"
-  ) {
-    $(
-      '<a href="https://i.univbkstr.com/sizeChart/47Brand/" class="merch__detail-size-link gtmSizeTrack" title="&#39;47 Brand Size Guide">Size Guide</a>'
-    ).insertAfter('.merch__detail-size-label');
-  } else if (
-    (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
-    prodName.substring(0, 8) === 'JanSport'
-  ) {
-    $(
-      '<a href="https://i.univbkstr.com/sizeChart/jansport/chart.html" class="merch__detail-size-link gtmSizeTrack" title="JanSport Size Guide">Size Guide</a>'
-    ).insertAfter('.merch__detail-size-label');
-  } else if (
-    (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 13) === 'All Star Dogs'
   ) {
     $(
       '<a href="https://i.univbkstr.com/sizeChart/allStarDog/" class="merch__detail-size-link gtmSizeTrack" title="All Star Dogs Size Guide">Size Guide</a>'
+    ).insertAfter('.merch__detail-size-label');
+  } else if (
+    (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
+    prodName.substring(0, 7).toLowerCase() === 'zoozatz'
+  ) {
+    $(
+      '<a href="https://i.univbkstr.com/sizeChart/zooZatz/" class="merch__detail-size-link gtmSizeTrack" title="ZooZatz Size Guide">Size Guide</a>'
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&

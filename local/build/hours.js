@@ -12,7 +12,10 @@ const hour = date.getUTCHours() - 5;
 const minutes = date.getUTCMinutes();
 
 function displayHours(li, idx, open, openMin, close, closeMin) {
-  if (day === idx && (hour >= open && hour < close || hour === close && minutes < closeMin)) {
+  if (
+    day === idx &&
+    ((hour >= open && hour < close) || (hour === close && minutes < closeMin))
+  ) {
     li.parentElement.classList.add('open');
     li.parentElement.style.backgroundColor = 'rgba(0,0,0,0.065)';
     li.innerText += ` - open`;

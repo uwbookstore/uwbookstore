@@ -37,7 +37,7 @@ function displayHours(li, idx, open, openMin, close, closeMin) {
 function getStateStHrs() {
   stateSt.innerHTML = `
     <ul class="hours">
-        <li><strong>REGULAR HOURS</strong></li>
+        <li><strong>STORE HOURS</strong></li>
         <li><span class="red bold">Campus Shipping Center closes &frac12; hour before the store closes.</li>
         <li><span class="hours__day">Sunday:</span> <span class="hours__times">10:30am - 4:30pm</span></li>
         <li><span class="hours__day">Monday (Labor Day):</span> <span class="hours__times">12:00pm - 5:00pm</span></li>
@@ -87,7 +87,7 @@ function getStateStHrs() {
 function getHilldaleHrs() {
   hilldale.innerHTML = `
     <ul class="hours">
-        <li><strong>REGULAR HOURS</strong></li>
+        <li><strong>STORE HOURS</strong></li>
         <li><span class="hours__day">Sunday:</span> <span class="hours__times">11:00am - 6:00pm</span></li>
         <li><span class="hours__day">Monday (Labor Day):</span> <span class="hours__times">10:00am - 6:00pm</span></li>
         <li><span class="hours__day">Tuesday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
@@ -136,7 +136,7 @@ function getHilldaleHrs() {
 function getHslcHrs() {
   hslc.innerHTML = `
         <ul class="hours">
-            <li><strong>Hours: </strong></li>
+            <li><strong>STORE HOURS</strong></li>
             <li class="closed"><span class="hours__day">Sunday:</span> <span class="hours__times">Closed</span></li>
             <li class="closed"><span class="hours__day">Monday (Labor Day):</span> <span class="hours__times">Closed</span></li>
             <!-- <li><span class="hours__day">Monday:</span> <span class="hours__times">8:30am - 4:30pm</span></li> -->
@@ -180,7 +180,7 @@ function getHslcHrs() {
 function getBrookfieldHrs() {
   brookfield.innerHTML = `
         <ul class="hours">
-            <li><strong>Hours: </strong></li>
+            <li><strong>STORE HOURS</strong></li>
             <li><span class="hours__day">Sunday:</span> <span class="hours__times">11:00am - 6:00pm</span></li>
             <li><span class="hours__day">Monday (Labor Day):</span> <span class="hours__times">10:00am - 6:00pm</span></li>
             <li><span class="hours__day">Tuesday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
@@ -229,7 +229,7 @@ function getBrookfieldHrs() {
 function getWarehousHrs() {
   warehouse.innerHTML = `
         <ul class="hours">
-            <li><strong>Hours: </strong></li>
+            <li><strong>STORE HOURS</strong></li>
             <li class="closed"><span class="hours__day">Sunday:</span> <span class="hours__times">Closed</span></li>
             <li class="closed"><span class="hours__day">Monday (Labor Day):</span> <span class="hours__times">Closed</span></li>
             <!-- <li><span class="hours__day">Monday:</span> <span class="hours__times">9:00am - 5:00pm</span></li> -->

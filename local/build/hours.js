@@ -36,12 +36,12 @@ function getStateStHrs() {
     <ul class="hours">
         <li><strong>STORE HOURS</strong></li>
         <li><span class="red bold">Campus Shipping Center closes &frac12; hour before the store closes.</li>
-        <li><span class="hours__day">Sunday:</span> <span class="hours__times">10:30am - 4:30pm</span></li>
-        <li><span class="hours__day">Monday (Labor Day):</span> <span class="hours__times">12:00pm - 5:00pm</span></li>
-        <li><span class="hours__day">Tuesday:</span> <span class="hours__times">8:30am - 7:00pm</span></li>
-        <li><span class="hours__day">Wednesday:</span> <span class="hours__times">8:30am - 7:00pm</span></li>
-        <li><span class="hours__day">Thursday:</span> <span class="hours__times">8:30am - 7:00pm</span></li>
-        <li><span class="hours__day">Friday:</span> <span class="hours__times">8:30am - 7:00pm</span></li>
+        <li><span class="hours__day">Sunday:</span> <span class="hours__times">10:30am - 5:00pm</span></li>
+        <li><span class="hours__day">Monday:</span> <span class="hours__times">9:00pm - 7:00pm</span></li>
+        <li><span class="hours__day">Tuesday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
+        <li><span class="hours__day">Wednesday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
+        <li><span class="hours__day">Thursday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
+        <li><span class="hours__day">Friday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
         <li><span class="hours__day">Saturday:</span> <span class="hours__times">8:30am - 5:30pm</span></li>
     </ul>
 `;
@@ -60,8 +60,8 @@ function getStateStHrs() {
       case 3:
       case 4:
       case 5:
-        open = 8;
-        openMin = 30;
+        open = 9;
+        openMin = 0;
         close = 19;
         closeMin = 0;
         break;
@@ -74,8 +74,8 @@ function getStateStHrs() {
       default:
         open = 10;
         openMin = 30;
-        close = 16;
-        closeMin = 30;
+        close = 17;
+        closeMin = 0;
     }
     displayHours(li, idx, open, openMin, close, closeMin);
   });
@@ -86,7 +86,7 @@ function getHilldaleHrs() {
     <ul class="hours">
         <li><strong>STORE HOURS</strong></li>
         <li><span class="hours__day">Sunday:</span> <span class="hours__times">11:00am - 6:00pm</span></li>
-        <li><span class="hours__day">Monday (Labor Day):</span> <span class="hours__times">10:00am - 6:00pm</span></li>
+        <li><span class="hours__day">Monday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
         <li><span class="hours__day">Tuesday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
         <li><span class="hours__day">Wednesday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
         <li><span class="hours__day">Thursday:</span> <span class="hours__times">10:00pm - 8:00pm</span></li>
@@ -104,6 +104,7 @@ function getHilldaleHrs() {
     let closeMin;
 
     switch (day) {
+      case 1:
       case 2:
       case 3:
       case 4:
@@ -112,12 +113,6 @@ function getHilldaleHrs() {
         open = 10;
         openMin = 0;
         close = 20;
-        closeMin = 0;
-        break;
-      case 1:
-        open = 10;
-        openMin = 0;
-        close = 18;
         closeMin = 0;
         break;
       default:
@@ -135,8 +130,7 @@ function getHslcHrs() {
         <ul class="hours">
             <li><strong>STORE HOURS</strong></li>
             <li class="closed"><span class="hours__day">Sunday:</span> <span class="hours__times">Closed</span></li>
-            <li class="closed"><span class="hours__day">Monday (Labor Day):</span> <span class="hours__times">Closed</span></li>
-            <!-- <li><span class="hours__day">Monday:</span> <span class="hours__times">8:30am - 4:30pm</span></li> -->
+            <li><span class="hours__day">Monday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
             <li><span class="hours__day">Tuesday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
             <li><span class="hours__day">Wednesday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
             <li><span class="hours__day">Thursday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
@@ -154,6 +148,7 @@ function getHslcHrs() {
     let closeMin;
 
     switch (day) {
+      case 1:
       case 2:
       case 3:
       case 4:
@@ -163,7 +158,6 @@ function getHslcHrs() {
         close = 16;
         closeMin = 30;
         break;
-      case 1:
       default:
         open = 0;
         openMin = 0;
@@ -179,7 +173,7 @@ function getBrookfieldHrs() {
         <ul class="hours">
             <li><strong>STORE HOURS</strong></li>
             <li><span class="hours__day">Sunday:</span> <span class="hours__times">11:00am - 6:00pm</span></li>
-            <li><span class="hours__day">Monday (Labor Day):</span> <span class="hours__times">10:00am - 6:00pm</span></li>
+            <li><span class="hours__day">Monday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
             <li><span class="hours__day">Tuesday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
             <li><span class="hours__day">Wednesday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
             <li><span class="hours__day">Thursday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
@@ -197,6 +191,7 @@ function getBrookfieldHrs() {
     let closeMin;
 
     switch (day) {
+      case 1:
       case 2:
       case 3:
       case 4:
@@ -205,12 +200,6 @@ function getBrookfieldHrs() {
         open = 10;
         openMin = 0;
         close = 20;
-        closeMin = 0;
-        break;
-      case 1:
-        open = 10;
-        openMin = 0;
-        close = 18;
         closeMin = 0;
         break;
       default:
@@ -228,8 +217,7 @@ function getWarehousHrs() {
         <ul class="hours">
             <li><strong>STORE HOURS</strong></li>
             <li class="closed"><span class="hours__day">Sunday:</span> <span class="hours__times">Closed</span></li>
-            <li class="closed"><span class="hours__day">Monday (Labor Day):</span> <span class="hours__times">Closed</span></li>
-            <!-- <li><span class="hours__day">Monday:</span> <span class="hours__times">9:00am - 5:00pm</span></li> -->
+            <li><span class="hours__day">Monday:</span> <span class="hours__times">9:00am - 5:00pm</span></li>
             <li><span class="hours__day">Tuesday:</span> <span class="hours__times">9:00am - 5:00pm</span></li>
             <li><span class="hours__day">Wednesday:</span> <span class="hours__times">9:00am - 5:00pm</span></li>
             <li><span class="hours__day">Thursday:</span> <span class="hours__times">9:00am - 5:00pm</span></li>
@@ -247,6 +235,7 @@ function getWarehousHrs() {
     let closeMin;
 
     switch (day) {
+      case 1:
       case 2:
       case 3:
       case 4:
@@ -256,7 +245,6 @@ function getWarehousHrs() {
         close = 17;
         closeMin = 0;
         break;
-      case 1:
       default:
         open = 0;
         openMin = 0;

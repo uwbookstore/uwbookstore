@@ -278,6 +278,30 @@ $(document).ready(function () {
     ).insertBefore('.merch__filter');
   }
 
+  if (categoryTitle.toLowerCase().substring(0, 16) === 'touchdown monday') {
+    $(
+      `
+      <img src="https://i.univbkstr.com/v3/img/landing/tdMonday/tdMonday-sm.png" alt="Touchdown Monday" class="img-fluid mx-auto mb-2 dt-hide">
+      <img src="https://i.univbkstr.com/v3/img/landing/tdMonday/tdMonday.png" alt="Touchdown Monday" class="img-fluid mx-auto mb-2 mobi-hide">
+
+      <section class="text-center">
+        <p>Show your support for the Wisconsin Badgers in style every Monday after a home game with Touchdown Monday! Score big with 5% off for every touchdown the Badgers make, and watch your savings skyrocket up to an incredible 25% off. It&apos;s the ultimate win-win - you support the Badgers and treat yourself to some fresh new red and white gear. Don&apos;t miss out on this perfect opportunity - touchdown fever awaits!</p>
+      </section>
+      `
+    ).insertBefore('.merch__filter');
+    $('.merch__filter').hide();
+    $(
+      `
+      <section class="text-center tdMonday-footer">
+        <h1 class="red">This is an EXCLUSIVE IN-STORE offer you don't want to miss!</h1>
+        <p>No need to keep track of those touchdowns, we've got you covered. Sign up now and be the first to get the inside scoop on new products and exciting updates.</p>
+        <!-- <i class="fa-solid fa-arrow-down"></i> -->
+        <a href="https://i.univbkstr.com/email/" class="btn btn-primary mb-5">Sign Up Now!</a>
+      </section>
+      `
+    ).insertAfter('.merch__card');
+  }
+
   // if (categoryTitle.toLowerCase().substring(0, 19) === 'maxwell street days') {
   //   $(
   //     '<img alt="Maxwell Street Days" src="https://i.univbkstr.com/images/banners/maxwellStreetDays-sm.jpg" class="img-responsive dt-hide"><img alt="Maxwell Street Days" src="https://i.univbkstr.com/images/banners/maxwellStreetDays.jpg" class="img-responsive mobi-hide">'

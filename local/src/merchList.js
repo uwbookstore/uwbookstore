@@ -285,18 +285,21 @@ $(document).ready(function () {
       <img src="https://i.univbkstr.com/v3/img/landing/tdMonday/tdMonday.png" alt="Touchdown Monday" class="img-fluid mx-auto mb-2 mobi-hide">
 
       <section class="text-center">
-        <p>Show your support for the Wisconsin Badgers in style every Monday after a home game with Touchdown Monday! Score big with 5% off for every touchdown the Badgers make, and watch your savings skyrocket up to an incredible 25% off. It&apos;s the ultimate win-win - you support the Badgers and treat yourself to some fresh new red and white gear. Don&apos;t miss out on this perfect opportunity - touchdown fever awaits!</p>
+        <p style="font-size: 2rem">Show your support for the Wisconsin Badgers in style every Monday after a home game with Touchdown Monday! Score big with 5% off<sup>*</sup> for every touchdown the Badgers make, and watch your savings skyrocket up to an incredible 25% off. It&apos;s the ultimate win-win - you support the Badgers and treat yourself to some fresh new red and white gear. Don&apos;t miss out on this perfect opportunity - touchdown fever awaits!</p>
+      </section>
+      <section class="text-center tdMonday-footer">
+        <h1 class="red">This is an EXCLUSIVE IN-STORE offer you don't want to miss!</h1>
+        <p>No need to keep track of those touchdowns, we've got you covered.<br>Sign up now and be the first to get the inside scoop on new products and exciting updates.</p>
+        <!-- <i class="fa-solid fa-arrow-down"></i> -->
+        <a href="https://i.univbkstr.com/email/" class="btn btn-primary mb-2" style="font-size: 2rem; padding-inline: 4rem; height: 5rem; line-height: 5rem;">Sign Up Now!</a>
       </section>
       `
     ).insertBefore('.merch__filter');
     $('.merch__filter').hide();
     $(
       `
-      <section class="text-center tdMonday-footer">
-        <h1 class="red">This is an EXCLUSIVE IN-STORE offer you don't want to miss!</h1>
-        <p>No need to keep track of those touchdowns, we've got you covered. Sign up now and be the first to get the inside scoop on new products and exciting updates.</p>
-        <!-- <i class="fa-solid fa-arrow-down"></i> -->
-        <a href="https://i.univbkstr.com/email/" class="btn btn-primary mb-5">Sign Up Now!</a>
+      <section class="text-center">
+        <p style="font-size: 11px;">*5% off your purchase of collegiate clothing and gifts, for every Badger touchdown on Monday, 09.18.23 only. Maximum discount of 25% off. Sale is valid on regularly priced eligible items at all store locations. Excludes sale items, textbooks, school supplies, gift cards, The Red Shirt, Public Access Lands items, Lands&rsquo; End items, Alumni Park items, Fine Gifts by M.LaHart &amp; Company, all Standard Chair of Gardner products, computers, computer accessories, consumer electronics, magazines, tickets, food, special orders, academic attire, previous purchases, drop-ship items, and shipping and handling charges. This offer cannot be combined with any other offers. Not valid online.</p>
       </section>
       `
     ).insertAfter('.merch__card');

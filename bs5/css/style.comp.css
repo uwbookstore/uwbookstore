@@ -46,6 +46,10 @@ body {
   width: 1px;
 }
 
+.entry-content {
+  margin-top: 2rem;
+}
+
 html {
   /* This defines what 1rem is. */
   font-size: 62.5%;
@@ -399,6 +403,10 @@ ol.alpha {
 .wi-50 {
   width: 50%;
   float: none !important;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 .dancing-script {
@@ -833,6 +841,23 @@ input[class^=radio]:checked + span::before {
   }
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.bootstrapv5-hide {
+  display: none;
+}
+
 @media screen and (min-width: 64em) {
   .contain,
 .container {
@@ -847,6 +872,7 @@ hr {
   border: 0;
   border-top: 1px solid #cacaca;
   height: 0;
+  opacity: 1;
 }
 
 select.form-control {
@@ -1050,6 +1076,11 @@ select.form-control {
   text-align: center;
   margin-bottom: 3rem;
 }
+.footer .social-footer .local-business {
+  height: 15rem;
+  width: 15rem;
+  margin-top: 2rem;
+}
 .footer .social-footer a {
   display: inline-block;
   height: 32px;
@@ -1058,7 +1089,7 @@ select.form-control {
   transition: all 0.25s ease-in-out;
 }
 .footer .social-footer a.facebook, .footer .social-footer a.twitter, .footer .social-footer a.instagram, .footer .social-footer a.tiktok {
-  background-image: url("https://i.univbkstr.com/uwbookstore/img/social/social_sprite.png");
+  background-image: url("https://i.univbkstr.com/v3/css/img/social_sprite.png");
 }
 .footer .social-footer a.facebook {
   background-position: 0 32px;
@@ -1178,8 +1209,8 @@ select.form-control {
 
 .mail-list {
   background-color: #cacaca;
-  background-image: url(https://www.uwbookstore.com/SiteImages/11-SchoolImages/11-css/11-light_noise_diagonal.png);
-  background-image: linear-gradient(to top, rgba(202, 202, 202, 0.5), rgba(202, 202, 202, 0.8)), url(https://www.uwbookstore.com/SiteImages/11-SchoolImages/11-css/11-light_noise_diagonal.png);
+  background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png);
+  background-image: linear-gradient(to top, rgba(202, 202, 202, 0.5), rgba(202, 202, 202, 0.8)), url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png);
   border-top: 1px solid #b1b1b1;
   padding: 3rem;
   margin-bottom: 3.5rem;
@@ -1228,8 +1259,8 @@ select.form-control {
   }
 }
 .mail-list-small {
-  background-image: url(https://www.uwbookstore.com/SiteImages/11-SchoolImages/11-css/11-light_noise_diagonal.png);
-  background-image: linear-gradient(to top, rgba(241, 241, 241, 0.5), rgba(241, 241, 241, 0.8)), url(https://www.uwbookstore.com/SiteImages/11-SchoolImages/11-css/11-light_noise_diagonal.png);
+  background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png);
+  background-image: linear-gradient(to top, rgba(241, 241, 241, 0.5), rgba(241, 241, 241, 0.8)), url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png);
   padding: 2.5rem;
   width: 100%;
 }
@@ -1256,6 +1287,16 @@ select.form-control {
     font-size: 2rem;
     margin-bottom: 2.5rem;
   }
+}
+
+.shop-local {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  height: 150px;
+  width: 150px;
+  margin-top: 2rem;
 }
 
 .header {
@@ -1624,7 +1665,7 @@ select.form-control {
   cursor: pointer;
 }
 .coupons ul li .check {
-  background-image: url("https://www.uwbookstore.com/SiteImages/11-SchoolImages/11-css/11-pagecurl_07.png");
+  background-image: url("https://i.univbkstr.com/v3/img/coupons/pagecurl.png");
   background-position: 0 0;
   background-repeat: no-repeat;
   position: absolute;
@@ -1720,6 +1761,12 @@ select.form-control {
   border-left: none;
   padding: 0;
   text-align: center;
+}
+.framing blockquote cite {
+  display: block;
+}
+.framing blockquote cite::before {
+  content: " - ";
 }
 .framing .row [class^=col-] {
   display: flex;
@@ -1862,7 +1909,7 @@ select.form-control {
 }
 
 .jumbotron.landing {
-  background: url("https://i.univbkstr.com/ubs-beta/img/rotator/jt-bg.jpg") no-repeat top center;
+  background: url("https://i.univbkstr.com/v3/css/img/jt-bg.jpg") no-repeat top center;
   background-size: cover;
   height: 15rem;
   padding: 4rem;
@@ -2320,6 +2367,7 @@ select.form-control {
 
 .box {
   width: 100%;
+  height: 100%;
 }
 .box__gray {
   background-color: #f1f1f1;
@@ -2350,12 +2398,16 @@ select.form-control {
   margin: 0;
 }
 
+.card-header {
+  font-weight: 700;
+}
 .card-header-ubs {
   color: #fff;
   background-color: #c5050c;
   border-color: #930409;
   padding: 0.5rem 1.5rem;
   margin-bottom: 2rem;
+  font-weight: normal;
 }
 .card-header-ubs a:link, .card-header-ubs a:visited {
   color: #fff;
@@ -2368,6 +2420,83 @@ select.form-control {
   text-decoration: none;
 }
 
+@media screen and (min-width: 48em) {
+  .carousel .img-small {
+    display: none !important;
+  }
+}
+.carousel .img-medium {
+  display: none !important;
+}
+.carousel .img-large {
+  display: none !important;
+}
+@media screen and (min-width: 48em) {
+  .carousel .img-large {
+    display: block !important;
+  }
+}
+.carousel-control.left,
+.carousel-control.right {
+  color: #b1b1b1;
+  background-image: none;
+  opacity: 1;
+  width: 2.5%;
+}
+
+.carousel-indicators {
+  display: none;
+}
+
+@media screen and (min-width: 64em) {
+  .carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+    display: block;
+    bottom: 0;
+  }
+  .carousel-indicators [data-bs-target] {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000 \9 ;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #3e3e3e;
+    border-radius: 10px;
+  }
+  .carousel-indicators button {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .carousel-indicators button,
+.carousel-indicators .active {
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 100%;
+  }
+  .carousel-indicators button {
+    background-color: transparent;
+    border: 2px solid #3e3e3e;
+  }
+  .carousel-indicators button.active {
+    background-color: #3e3e3e;
+  }
+}
 .form-control {
   height: 5rem;
   padding: 0 1.5rem;
@@ -2613,6 +2742,43 @@ select.form-control.dd-hidden {
     display: flex;
     flex-basis: auto;
   }
+  .dropdown-menu {
+    border: 1px solid #fff;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  }
+  .dropdown-menu.show:not(.megamenu) li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+  }
+  .dropdown-menu.show:not(.megamenu) li > a:hover {
+    color: #262626;
+    text-decoration: none;
+    background-color: #f5f5f5;
+  }
+  .dropdown-menu.show.megamenu {
+    padding: 2rem;
+  }
 }
 /* ============ desktop view .end// ============ */
 /* ============ mobile view ============ */
@@ -2647,6 +2813,10 @@ select.form-control.dd-hidden {
   }
   .dropdown:hover > .dropdown-menu.show {
     display: block;
+  }
+  .dropdown-menu.show li > a {
+    display: block;
+    padding: 1rem 2rem;
   }
 }
 /* ============ mobile view .end// ============ */
@@ -2754,7 +2924,7 @@ select.form-control.dd-hidden {
 }
 @media screen and (min-width: 70.5625em) {
   .col-megamenu ol li a:link, .col-megamenu ol li a:visited {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     padding: 1rem 1.5rem;
     display: inline-block;
     color: #0054ad;
@@ -2982,6 +3152,10 @@ select.form-control.dd-hidden {
 .social__media-item:hover {
   transform: scale(1.05);
   transition: all 0.25s ease-in-out;
+}
+.social__media-item .twitterX {
+  fill: #c5050c;
+  height: 6rem;
 }
 .social__media-item .fa-brands {
   font-size: 6rem;
@@ -3288,20 +3462,10 @@ a.hiring__now {
   border-radius: 2rem;
 }
 
-.carousel-indicators {
-  bottom: 0;
-}
-.carousel-indicators li {
-  background-color: transparent;
-  border: 1px solid #3e3e3e;
-}
-.carousel-indicators .active {
-  background-color: #3e3e3e;
-}
-
 .hero__image {
   background-color: #fff;
   padding-bottom: 4rem;
+  margin-top: 2rem;
 }
 @media screen and (min-width: 48em) {
   .hero__image .img-small {
@@ -3581,6 +3745,140 @@ a.hiring__now {
     width: 75%;
     margin: 1rem auto;
   }
+}
+
+.entry-content.store-hours {
+  padding-top: 2rem;
+}
+.entry-content.store-hours h2 {
+  flex: 2.4rem;
+  margin-bottom: 1rem;
+}
+.entry-content.store-hours ul {
+  padding: 0;
+}
+
+.locations__nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+.locations__nav li {
+  flex: 0 0 50%;
+  padding: 0 0.5rem;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 64em) {
+  .locations__nav li {
+    flex: 0 0 auto;
+  }
+}
+.locations__nav li a {
+  display: block;
+  width: 100%;
+}
+@media screen and (min-width: 64em) {
+  .locations__nav li a {
+    width: auto;
+  }
+}
+.locations__nav li a.active {
+  background-color: #c5050c;
+  color: #fff;
+  box-shadow: none;
+  text-decoration: none;
+}
+.locations__map {
+  position: relative;
+  padding-bottom: 65%;
+  height: 0;
+  overflow: hidden;
+  border-bottom: 1px solid #cacaca;
+}
+@media screen and (min-width: 64em) {
+  .locations__map {
+    padding-bottom: 35%;
+  }
+}
+.locations__map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.locations__hours {
+  flex: 1 1 100%;
+  background-color: #f1f1f1;
+  border: 1px solid #e4e4e4;
+  padding: 2rem 1rem;
+}
+.locations__hours p {
+  margin-bottom: 1rem;
+}
+.locations__hours ul {
+  list-style: none;
+}
+@media screen and (min-width: 64em) {
+  .locations__hours {
+    flex: 0 0 40%;
+    padding: 2rem;
+  }
+}
+.locations__info {
+  flex: 1 1 100%;
+  padding: 2rem 1rem 2rem 2rem;
+}
+.locations__info img {
+  display: block;
+  border: 5px solid #e4e4e4;
+  border-radius: 100%;
+  height: 15rem;
+  width: 15rem;
+}
+@media screen and (min-width: 64em) {
+  .locations__info img {
+    height: 20rem;
+    width: 20rem;
+  }
+}
+.locations__info ul {
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+}
+.locations__info h3 {
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 64em) {
+  .locations__info {
+    flex: 0 0 60%;
+  }
+}
+
+.hours {
+  list-style: none;
+}
+.hours li {
+  padding: 5px;
+}
+.hours li + li {
+  border-top: 1px solid #cacaca;
+}
+.hours li.closed {
+  color: #de060e;
+}
+.hours li.open {
+  color: #3d8b3d;
+}
+.hours__day {
+  display: inline-block;
+  width: 50%;
+}
+
+ul.store-phone li {
+  margin-bottom: 1rem;
 }
 
 a.merchLink p.merchTitle {
@@ -4426,7 +4724,7 @@ li.attribute a:hover {
   overflow: hidden;
   position: relative;
   background-color: lightgray;
-  background-image: url("https://i.univbkstr.com/uwbookstore/img/no-video-bg.jpg");
+  background-image: url("https://i.univbkstr.com/v3/css/img/no-video-bg.jpg");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;

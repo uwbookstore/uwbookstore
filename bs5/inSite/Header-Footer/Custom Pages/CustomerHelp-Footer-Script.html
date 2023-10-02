@@ -1,0 +1,13 @@
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".sizeCharts").colorbox({ current: '{current} of {total}', rel: 'sizeCharts', iframe: true, width: "90%", height: "90%" });
+
+    if (window.matchMedia) {
+      // Establishing media check
+      width700Check = window.matchMedia("(max-width: 700px)");
+      if (width700Check.matches) {
+        $.colorbox.remove();
+      }
+    }
+  });
+</script>

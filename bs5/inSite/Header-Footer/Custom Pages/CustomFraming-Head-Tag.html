@@ -1,0 +1,37 @@
+<style>
+  .framing img {
+    border: 2px solid #c5050c;
+    padding: 5px;
+  }
+
+  .framing figcaption {
+    margin-top: 1rem;
+  }
+
+  .framing blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0 0 2rem;
+    line-height: 1.5;
+    border-left: none;
+    padding: 0;
+  }
+
+  .framing blockquote cite {
+    display: block;
+  }
+
+  .framing blockquote cite::before {
+    content: " - ";
+  }
+
+
+  .framing .row [class^=col-] {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 1rem;
+  }
+</style>

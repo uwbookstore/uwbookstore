@@ -816,6 +816,14 @@ input[class^=radio]:checked + span::before {
   padding: 5px;
 }
 
+#promo-toggle-wrapper {
+  display: none;
+}
+
+#promo-content {
+  display: flex !important;
+}
+
 @media screen and (min-width: 64em) {
   .dt-hide {
     display: none;

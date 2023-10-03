@@ -64,7 +64,7 @@ body {
 }
 @media screen and (min-width: 64em) {
   body {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -731,6 +731,10 @@ ol.alpha {
   margin-bottom: 2rem;
 }
 
+.hide {
+  display: none;
+}
+
 header,
 footer {
   display: none;
@@ -794,6 +798,22 @@ input[class^=radio] + span::before {
 }
 input[class^=radio]:checked + span::before {
   background-color: #c5050c;
+}
+
+.paymentBilling-wrapper p {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  font-size: 15px;
+  padding: 5px;
 }
 
 @media screen and (min-width: 64em) {
@@ -877,6 +897,15 @@ hr {
 
 select.form-control {
   padding-right: 2rem;
+}
+
+.form-control, .form-select {
+  font-size: 1.9rem;
+}
+@media screen and (min-width: 64em) {
+  .form-control, .form-select {
+    font-size: 1.6rem;
+  }
 }
 
 @media screen and (min-width: 64em) {
@@ -1152,7 +1181,7 @@ select.form-control {
 }
 .footer .copyright {
   margin: 1rem 0 0;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
 }
 .footer .copyright a,
 .footer .copyright a:hover,
@@ -1400,6 +1429,7 @@ select.form-control {
 .header__nav ul {
   display: flex;
   list-style: none;
+  align-items: center;
   margin-right: 1.5rem;
 }
 .header__nav ul li {
@@ -1426,6 +1456,22 @@ select.form-control {
 }
 .header__nav ul #login a em {
   font-size: 2.5rem;
+}
+@media screen and (min-width: 70.5625em) {
+  .header__nav ul #login a span {
+    font-size: 1.4rem;
+  }
+  .header__nav ul #login a em {
+    display: none;
+  }
+}
+.header__nav ul #login .logout {
+  display: none;
+}
+@media screen and (min-width: 70.5625em) {
+  .header__nav ul #login .logout {
+    display: inline;
+  }
 }
 .header__nav ul .logout {
   display: none;
@@ -1626,6 +1672,14 @@ select.form-control {
   font-size: 2rem;
 }
 
+@media (min-width: 768px) {
+  .dropdown:hover > .dropdown-menu {
+    display: none;
+  }
+  .dropdown:hover > .dropdown-menu.show {
+    display: block;
+  }
+}
 .img__border {
   border: 2px solid #c5050c;
   padding: 2px;
@@ -2076,7 +2130,7 @@ select.form-control {
   height: 5rem;
   line-height: 5rem;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 .btn-primary {
   background-color: #c5050c;
@@ -2453,7 +2507,7 @@ select.form-control {
     position: absolute;
     bottom: -4rem;
     left: 50%;
-    z-index: 15;
+    z-index: 0;
     width: 60%;
     padding-left: 0;
     margin-left: -30%;
@@ -2496,6 +2550,236 @@ select.form-control {
     background-color: #3e3e3e;
   }
 }
+/*------------------------------------*\
+  COLORBOX
+\*------------------------------------*/
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox,
+#cboxOverlay,
+#cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+#cboxMiddleLeft,
+#cboxBottomLeft {
+  clear: left;
+}
+
+#cboxContent {
+  position: relative;
+}
+
+#cboxLoadedContent {
+  overflow: auto;
+}
+
+#cboxTitle {
+  margin: 0;
+}
+
+#cboxLoadingOverlay,
+#cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#cboxPrevious,
+#cboxNext,
+#cboxClose,
+#cboxSlideshow {
+  cursor: pointer;
+}
+
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block;
+  max-width: none;
+}
+
+.cboxIframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+#colorbox,
+#cboxContent,
+#cboxLoadedContent {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+
+#cboxOverlay {
+  background: #fff;
+}
+
+div#colorbox button {
+  border: none;
+  margin: 0;
+}
+
+#cboxTopLeft {
+  width: 1.4rem;
+  height: 1.4rem;
+  background: #fff;
+}
+
+#cboxTopCenter {
+  height: 1.4rem;
+  background: #fff;
+}
+
+#cboxTopRight {
+  width: 1.4rem;
+  height: 1.4rem;
+  background: #fff;
+}
+
+#cboxBottomLeft {
+  width: 1.4rem;
+  height: 4.3rem;
+  background: #fff;
+}
+
+#cboxBottomCenter {
+  height: 4.3rem;
+  background: #fff;
+}
+
+#cboxBottomRight {
+  width: 1.4rem;
+  height: 4.3rem;
+  background: #fff;
+}
+
+#cboxMiddleLeft {
+  width: 1.4rem;
+  background: #fff;
+}
+
+#cboxMiddleRight {
+  width: 1.4rem;
+  background: #fff;
+}
+
+#cboxContent {
+  background: #fff;
+  overflow: visible;
+}
+
+.cboxIframe {
+  background: #fff;
+}
+
+#cboxError {
+  padding: 5rem;
+  border: 1px solid #cacaca;
+}
+
+#cboxLoadedContent {
+  margin-bottom: 0.5rem;
+}
+
+#cboxLoadingGraphic {
+  background: url(https://i.univbkstr.com/css/img/cbox/loading.gif) no-repeat center center;
+}
+
+#cboxTitle {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+  color: #777777;
+}
+
+#cboxCurrent {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 5.8rem;
+  font-weight: 700;
+  color: #777777;
+}
+
+#cboxPrevious,
+#cboxNext,
+#cboxClose,
+#cboxSlideshow {
+  position: absolute;
+  bottom: -2.9rem;
+  background: url(https://i.univbkstr.com/css/img/cbox/controls.png) no-repeat 0 0;
+  width: 2.3rem;
+  height: 2.3rem;
+  text-indent: -9999px;
+}
+
+#cboxPrevious {
+  left: 0px;
+  background-position: -5.1rem -2.5rem;
+}
+
+#cboxPrevious:hover {
+  background-position: -5.1rem 0;
+}
+
+#cboxNext {
+  left: 2.7rem;
+  background-position: -7.5rem -2.5rem;
+}
+
+#cboxNext:hover {
+  background-position: -7.5rem 0;
+}
+
+#cboxClose {
+  right: 0;
+  background-position: -10rem -2.5rem;
+}
+
+#cboxClose:hover {
+  background-position: -10rem 0;
+}
+
+.cboxSlideshow_on #cboxSlideshow {
+  background-position: -12.5rem 0;
+  right: 2.7rem;
+}
+
+.cboxSlideshow_on #cboxSlideshow:hover {
+  background-position: -15rem 0;
+}
+
+.cboxSlideshow_off #cboxSlideshow {
+  background-position: -15rem -2.5rem;
+  right: 2.7rem;
+}
+
+.cboxSlideshow_off #cboxSlideshow:hover {
+  background-position: -12.5rem 0;
+}
+
 .form-control {
   height: 5rem;
   padding: 0 1.5rem;
@@ -2506,6 +2790,12 @@ select.form-control {
     height: 3.5rem;
     line-height: 3.5rem;
   }
+}
+
+.form-floating > .form-control {
+  height: auto;
+  line-height: 1;
+  width: 100%;
 }
 
 select,
@@ -2537,6 +2827,14 @@ select.form-control.dd-hidden {
   padding: 0;
   margin-top: -1rem;
   cursor: text;
+}
+
+.form-floating > .form-control:focus,
+.form-floating > .form-control:not(:placeholder-shown),
+.form-floating > .form-control-plaintext:focus,
+.form-floating > .form-control-plaintext:not(:placeholder-shown) {
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
 }
 
 .banner {
@@ -2981,6 +3279,97 @@ select.form-control.dd-hidden {
   text-decoration: none;
   background-color: #c5050c;
   color: #fff;
+}
+
+.tabs {
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 48em) {
+  .tabs {
+    font-size: 1.4rem;
+  }
+}
+.tabs__nav {
+  display: table;
+  text-align: center;
+  width: 100%;
+  list-style: none;
+}
+.tabs__item {
+  display: block;
+}
+@media screen and (min-width: 48em) {
+  .tabs__item {
+    display: inline-block;
+    width: auto;
+  }
+  .tabs__item:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+}
+.tabs__link:link, .tabs__link:visited {
+  display: block;
+  width: 100%;
+  font-size: 1.2rem;
+  background: #f1f1f1;
+  border-bottom: 0.4rem solid transparent;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2rem;
+  text-decoration: none;
+  position: relative;
+  text-align: center;
+  color: #3e3e3e;
+  height: 6rem;
+  transition: all 0.2s ease-in-out;
+}
+.tabs__link-active:link, .tabs__link-active:visited {
+  border-bottom: 0.4rem solid #c5050c;
+  cursor: default;
+  background-color: #cacaca;
+}
+.tabs__link i {
+  margin-right: 1rem;
+}
+.tabs__link i.fa.fa-exclamation-triangle {
+  color: #c5050c;
+}
+@media screen and (min-width: 48em) {
+  .tabs__link:link, .tabs__link:visited {
+    background: transparent;
+    padding: 1rem;
+    height: auto;
+  }
+  .tabs__link:hover, .tabs__link:active {
+    opacity: 0.7;
+  }
+  .tabs__link-active:link, .tabs__link-active:visited {
+    opacity: 1;
+    background: transparent;
+  }
+}
+.tabs__container > div {
+  margin: 2rem 0 3rem;
+  padding: 0 2rem;
+}
+.tabs__container > div span {
+  color: #c5050c;
+  font-weight: 700;
+}
+.tabs__container > div ol {
+  margin-left: 3rem;
+}
+@media screen and (min-width: 48em) {
+  .tabs__container > div ol {
+    margin: 1rem auto;
+    width: 75%;
+  }
+}
+@media screen and (min-width: 64em) {
+  .tabs__container #shipping {
+    height: 30rem;
+    overflow-y: scroll;
+  }
 }
 
 .pg-404 h2 {
@@ -3724,6 +4113,122 @@ a.hiring__now {
   }
 }
 
+/* TEXTBOOK HOMEPAGE */
+/* ***************** */
+.text-home__grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.text-home__grid-item {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media screen and (min-width: 64em) {
+  .text-home__grid-item {
+    flex: 0 0 33.3333%;
+  }
+}
+.text-home__grid-item .wiscard .header {
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  font-size: 2.7rem;
+  font-weight: 300;
+}
+.text-home__grid-item .wiscard .header .discount {
+  color: #c5050c;
+}
+.text-home__grid-item .wiscard .subhead {
+  color: #c5050c;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.text-home__grid-item .wiscard img {
+  margin-bottom: 2rem;
+}
+.text-home__grid-item .wiscard .fine-print {
+  font-size: 1.2rem;
+}
+
+.buy-now-hdr {
+  text-align: center;
+  margin: 5rem auto;
+  color: #c5050c;
+}
+.buy-now-hdr h2 {
+  font-size: 4.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+.buy-now-hdr .btn-xlrg {
+  text-transform: uppercase;
+  font-size: 3.6rem;
+  font-weight: 700;
+  height: 7rem;
+  line-height: 7rem;
+}
+@media screen and (min-width: 64em) {
+  .buy-now-hdr .btn-xlrg {
+    height: 9rem;
+    font-size: 4.8rem;
+    line-height: 9rem;
+    padding: 0px 4rem;
+  }
+}
+
+.text__grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.text__grid-item {
+  flex: 1 1 100%;
+  display: flex;
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 64em) {
+  .text__grid-item {
+    flex: 0 0 33.3333%;
+    padding: 0 2rem;
+  }
+}
+.text__grid .item-icon {
+  color: #c5050c;
+  flex: 0 0 20%;
+  display: block;
+  text-align: center;
+  padding: 0 1rem;
+  font-size: 6rem;
+}
+@media screen and (min-width: 64em) {
+  .text__grid .item-icon {
+    font-size: 7.5rem;
+  }
+}
+.text__grid .item-text {
+  flex: 0 0 80%;
+  padding: 0 1rem;
+}
+.text__grid .item-text a.btn {
+  width: 100%;
+  margin-top: auto;
+}
+@media screen and (min-width: 64em) {
+  .text__grid .item-text a.btn {
+    width: auto;
+  }
+}
+@media screen and (min-width: 64em) {
+  .text__grid {
+    padding: 4rem 0;
+  }
+}
+
 .clearance {
   height: 20rem;
   width: 20rem;
@@ -4001,6 +4506,7 @@ p.merchPrice.red {
   font-weight: 700;
   padding: 0.5rem 1rem;
   font-size: 1.4rem;
+  width: auto;
   z-index: 20;
 }
 .merch__card-in-cart {
@@ -4480,6 +4986,573 @@ li.attribute a:hover {
   .dynamicRightArrow {
     right: 2rem;
   }
+}
+
+.flexslider {
+  width: 100%;
+  margin: 1rem auto;
+  text-align: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+@media screen and (min-width: 64em) {
+  .flexslider {
+    position: relative;
+    display: flex;
+    margin: 0;
+    border-bottom: none;
+  }
+}
+
+input.merchDisclaimer {
+  margin-right: 5px;
+}
+
+p.merchDiscount {
+  display: none;
+}
+
+span.btn-default,
+button.btn-default.typeCodeOption {
+  width: 47%;
+  margin: 0 0.5rem 3rem;
+}
+span.btn-default:hover, span.btn-default.typeSelected,
+button.btn-default.typeCodeOption:hover,
+button.btn-default.typeCodeOption.typeSelected {
+  border-width: 1px !important;
+  border-color: #c5050c !important;
+  color: #fff;
+  background-color: #c5050c;
+}
+span.btn-default.disabled,
+button.btn-default.typeCodeOption.disabled {
+  cursor: not-allowed;
+  background: url("https://i.univbkstr.com/ubsMain/css/images/disabled-bg.png");
+  background-size: 100% 100%;
+  background-color: transparent;
+  color: #747474;
+  border-color: #747474;
+}
+@media screen and (min-width: 64em) {
+  span.btn-default,
+button.btn-default.typeCodeOption {
+    width: 6rem;
+  }
+  span.btn-default.btn-w-auto,
+button.btn-default.typeCodeOption.btn-w-auto {
+    width: auto;
+    padding: 0 1rem;
+  }
+}
+
+span.btn-default.typeSelected:hover {
+  cursor: default;
+}
+
+.flex-control-nav {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 1.5rem;
+}
+.flex-control-nav li {
+  width: 10rem;
+  height: 10rem;
+  margin: 0 1rem 0 0;
+  padding: 0;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+.flex-control-nav li img {
+  cursor: pointer;
+  opacity: 0.5;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.flex-control-nav li img.flex-active {
+  cursor: default;
+  opacity: 1;
+}
+@media screen and (min-width: 64em) {
+  .flex-control-nav {
+    flex: 1 20%;
+    margin-top: 3rem;
+  }
+  .flex-control-nav li {
+    margin-bottom: 2rem;
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+.rankImageWrapper span.ranking {
+  color: #fff;
+}
+
+.merch__detail {
+  margin: 2rem auto;
+  padding: 0 5px;
+}
+.merch__detail-slides {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.merch__detail-images {
+  width: 100%;
+}
+@supports (display: flex) {
+  .merch__detail-images {
+    width: auto;
+    flex: 1 100%;
+    z-index: 10;
+  }
+}
+.merch__detail-img {
+  display: block;
+  width: 100%;
+  max-width: 60rem;
+  height: auto;
+  margin: auto;
+}
+.merch__detail-info {
+  width: 100%;
+  font-size: 1.6rem;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+@supports (display: flex) {
+  .merch__detail-info {
+    width: auto;
+    flex: 1 100%;
+  }
+}
+.merch__detail-info .message_merch_promo {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #357935;
+}
+.merch__detail-title {
+  margin: 1.5rem auto;
+  font-size: 2.4rem;
+  font-style: italic;
+  font-weight: 700;
+  color: #c5050c;
+}
+.merch__detail-title-small {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.merch__detail-price {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.merch__detail-price .original {
+  text-decoration: line-through;
+  margin-right: 1rem;
+}
+.merch__detail-price .sale {
+  color: #c5050c;
+}
+.merch__detail-description {
+  margin: 1.5rem auto;
+  padding: 1rem 0 2rem;
+  border-top: 1px solid #3e3e3e;
+  border-bottom: 1px solid #3e3e3e;
+  position: relative;
+  line-height: 1.6;
+}
+.merch__detail-description ul,
+.merch__detail-description ol {
+  list-style-position: outside;
+  margin-left: 2rem;
+}
+.merch__detail-description ul ul,
+.merch__detail-description ul ol,
+.merch__detail-description ol ul,
+.merch__detail-description ol ol {
+  padding-left: 1rem;
+}
+.merch__detail-description-open {
+  line-height: 1.6;
+}
+.merch__detail-sku span {
+  font-weight: 700;
+}
+.merch__detail-size {
+  margin: 1.5rem auto;
+  padding: 0 0 1.5rem;
+  border-bottom: 1px solid #3e3e3e;
+  position: relative;
+}
+.merch__detail-size-link:link, .merch__detail-size-link:visited {
+  text-decoration: underline;
+  font-size: 1.6rem;
+  text-transform: lowercase;
+  margin-left: 0.5rem;
+  color: #3e3e3e;
+}
+.merch__detail-size-label {
+  margin-bottom: 3rem;
+}
+.merch__detail-size-picker {
+  margin-bottom: 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+.merch__detail-size-picker div {
+  width: 47%;
+  height: 5rem;
+  text-align: center;
+  margin: 0 0.5rem 3rem;
+  font-size: 1.6rem;
+  position: relative;
+}
+.merch__detail-size-picker div input {
+  display: none;
+}
+.merch__detail-size-picker div input:checked + label {
+  background-color: #c5050c;
+  color: #fff;
+  font-weight: 700;
+  cursor: default;
+  border-color: #c5050c;
+}
+.merch__detail-size-picker div label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.5rem;
+  margin: 0;
+  line-height: 1.5;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border: 1px solid #3e3e3e;
+  cursor: pointer;
+  font-weight: 400;
+  width: 100%;
+  transition: all 0.25s ease;
+}
+.merch__detail-size-picker div.disabled label {
+  cursor: not-allowed;
+  background: url("https://i.univbkstr.com/ubsMain/css/images/disabled-bg.png");
+  background-size: 100% 100%;
+  background-color: transparent;
+  color: rgba(100, 100, 100, 0.5);
+  border-color: rgba(100, 100, 100, 0.5);
+}
+@media screen and (min-width: 64em) {
+  .merch__detail-size-picker {
+    justify-content: initial;
+  }
+}
+.merch__detail-add {
+  flex-direction: column;
+}
+.merch__detail-add-btn a {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  width: 100%;
+}
+.merch__detail-qty {
+  margin-bottom: 3rem;
+}
+.merch__detail-qty label {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.merch__detail-qty input {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 5rem;
+  height: 5rem;
+}
+.merch__detail-overflow {
+  display: none;
+}
+@media screen and (min-width: 64em) {
+  .merch__detail-slides {
+    flex: 1 80%;
+    order: 2;
+  }
+  .merch__detail-images {
+    width: 60%;
+  }
+  @supports (display: flex) {
+    .merch__detail-images {
+      width: auto;
+      flex: 1 60%;
+    }
+  }
+  .merch__detail-info {
+    width: 40%;
+    padding-left: 2rem;
+  }
+  @supports (display: flex) {
+    .merch__detail-info {
+      width: auto;
+      flex: 1 40%;
+    }
+  }
+  .merch__detail-title {
+    font-size: 2rem;
+  }
+  .merch__detail-title-small {
+    font-size: 1.4rem;
+  }
+  .merch__detail-price {
+    font-size: 1.4rem;
+  }
+  .merch__detail-size-link:link, .merch__detail-size-link:visited {
+    font-size: 1.2rem;
+  }
+  .merch__detail-size-label {
+    margin-bottom: 1.5rem;
+  }
+  .merch__detail-size-picker div {
+    width: 10rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    line-height: 2;
+  }
+  .merch__detail-size-picker div label {
+    padding: 0.5rem;
+  }
+  .merch__detail-size-picker div.picker {
+    width: 6rem;
+  }
+  .merch__detail-size-picker .btn {
+    padding: 0;
+  }
+  .merch__detail-add {
+    flex-direction: row;
+  }
+  .merch__detail-add-btn {
+    display: flex;
+    flex: 1 1 85%;
+    flex-direction: row;
+    padding-left: 0.5rem;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 64em) and (-ms-high-contrast: none), screen and (min-width: 64em) and (-ms-high-contrast: active) {
+  .merch__detail-add-btn {
+    flex: 1 1 84%;
+  }
+}
+@media screen and (min-width: 64em) {
+  .merch__detail-add-btn a {
+    margin-bottom: 0;
+    width: 50%;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 64em) {
+  .merch__detail-qty {
+    flex: 1 1 15%;
+    flex-direction: inherit;
+    margin-bottom: 0;
+    padding-right: 0.5rem;
+  }
+}
+@media screen and (min-width: 64em) and (-ms-high-contrast: none), screen and (min-width: 64em) and (-ms-high-contrast: active) {
+  .merch__detail-qty {
+    flex: 1 1 13%;
+  }
+}
+@media screen and (min-width: 64em) {
+  .merch__detail-qty label {
+    display: none;
+  }
+}
+@media screen and (min-width: 64em) {
+  .merch__detail-qty input {
+    height: 3.5rem;
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 3.5rem;
+    padding: 0 0.5rem 0;
+  }
+}
+@media screen and (min-width: 64em) {
+  .merch__detail {
+    padding: 0;
+  }
+}
+
+.suggestedItem.merch__card-item {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+.suggestedItem.merch__card-item:hover {
+  opacity: 0.7;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.suggestedLink.merch__card-link {
+  text-decoration: none;
+}
+.suggestedLink.merch__card-link .suggestedName.merch__card-title {
+  font-weight: 700;
+  color: #3e3e3e;
+}
+
+.addedToCart {
+  font-size: 1.6rem;
+  margin-left: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+@media screen and (min-width: 64em) {
+  .addedToCart {
+    font-size: 1.2rem;
+    padding: 0 0 0 1.5rem;
+    margin-bottom: 0;
+    line-height: 1.2;
+    width: 50%;
+    font-size: 1.4rem;
+  }
+}
+
+#item-disclaimer span.normal em {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 0 0.5rem;
+  line-height: 0.5;
+}
+
+.merchDisclaimerError,
+.merchSelectError,
+.addGiftErrorLCS,
+.addGiftError,
+#wishlist-error {
+  position: fixed;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  z-index: 2000;
+  background: rgba(242, 222, 222, 0.9);
+  padding: 2rem;
+  color: #a94442;
+  border: 1px solid #ebccd1;
+}
+.merchDisclaimerError i,
+.merchSelectError i,
+.addGiftErrorLCS i,
+.addGiftError i,
+#wishlist-error i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+  cursor: pointer;
+  font-size: 3rem;
+}
+@media screen and (min-width: 64em) {
+  .merchDisclaimerError i,
+.merchSelectError i,
+.addGiftErrorLCS i,
+.addGiftError i,
+#wishlist-error i {
+    top: 1rem;
+    transform: translateY(0);
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 64em) {
+  .merchDisclaimerError,
+.merchSelectError,
+.addGiftErrorLCS,
+.addGiftError,
+#wishlist-error {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30rem;
+    right: 10rem;
+    left: initial;
+    bottom: initial;
+  }
+}
+
+.suggestedImg {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heatgear,
+.coldgear,
+.storm,
+.sideline {
+  display: block;
+  height: 2.4rem;
+  width: 10rem;
+  margin-bottom: 5px;
+}
+
+.heatgear {
+  background: url("https://i.univbkstr.com/images/landing/UnderArmour/tech/heatgear.png") no-repeat;
+}
+
+.coldgear {
+  background: url("https://i.univbkstr.com/images/landing/UnderArmour/tech/coldgear.png") no-repeat;
+}
+
+.storm {
+  background: url("https://i.univbkstr.com/images/landing/UnderArmour/tech/storm.png") no-repeat;
+}
+
+.sideline {
+  background: url("https://i.univbkstr.com/images/landing/UnderArmour/tech/sideline.png") no-repeat;
+}
+
+.regLink {
+  margin: 2rem 0;
+}
+
+.giftRegDropdown {
+  margin-bottom: 1rem;
+}
+
+.addGiftRegButton i,
+.addSingleReg i,
+.btn-wishlist i {
+  margin-right: 0.5rem;
+}
+
+.addSingleReg.pulse {
+  animation-iteration-count: infinite;
+}
+
+p.sale-info {
+  font-weight: bold;
+  color: #c5050c;
+  margin: 5px 0;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.modal-body .addedToCartDeposit,
+.modal-body .addedToCartSKU,
+.modal-body .addedToCartQTY {
+  display: none;
+}
+
+.lcsSizeWrapper .btn.typeCodeOption {
+  width: auto;
 }
 
 #shipping-banner {

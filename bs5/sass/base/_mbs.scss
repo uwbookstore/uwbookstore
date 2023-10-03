@@ -6,6 +6,10 @@
   margin-bottom: 2rem;
 }
 
+.hide {
+  display: none;
+}
+
 header,
 footer {
   display: none;
@@ -82,4 +86,20 @@ input[class^='radio'] {
       }
     }
   }
+}
+
+.paymentBilling-wrapper p {
+  font-size: $default-font-size;
+  margin-bottom: 1rem;
+}
+
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  font-size: 15px;
+  padding: 5px;
 }

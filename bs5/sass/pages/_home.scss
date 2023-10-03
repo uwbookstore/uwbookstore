@@ -556,3 +556,131 @@ a.hiring__now {
     margin-right: 0;
   }
 }
+
+/* TEXTBOOK HOMEPAGE */
+/* ***************** */
+.text-home {
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+
+    &-item {
+      flex: 0 0 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      @media #{$mq-medium} {
+        flex: 0 0 33.3333%;
+      }
+
+      .wiscard {
+        .header {
+          margin-bottom: 1rem;
+          line-height: 1.1;
+          font-size: 2.7rem;
+          font-weight: 300;
+
+          .discount {
+            color: $primary-color;
+          }
+        }
+
+        .subhead {
+          color: $primary-color;
+          font-size: 1.5rem;
+          font-weight: 300;
+        }
+
+        img {
+          margin-bottom: 2rem;
+        }
+
+        .fine-print {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+.buy-now-hdr {
+  text-align: center;
+  margin: 5rem auto;
+  color: $primary-color;
+
+  h2 {
+    font-size: 4.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+
+  .btn-xlrg {
+    text-transform: uppercase;
+    font-size: 3.6rem;
+    font-weight: 700;
+    height: 7rem;
+    line-height: 7rem;
+
+    @media #{$mq-medium} {
+      height: 9rem;
+      font-size: 4.8rem;
+      line-height: 9rem;
+      padding: 0px 4rem;
+    }
+  }
+}
+
+.text {
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    &-item {
+      flex: 1 1 100%;
+      display: flex;
+      margin-bottom: 4rem;
+
+      @media #{$mq-medium} {
+        flex: 0 0 33.3333%;
+        padding: 0 2rem;
+      }
+    }
+
+    .item-icon {
+      color: $primary-color;
+      flex: 0 0 20%;
+      display: block;
+      text-align: center;
+      padding: 0 1rem;
+      font-size: 6rem;
+
+      @media #{$mq-medium} {
+        font-size: 7.5rem;
+      }
+    }
+
+    .item-text {
+      flex: 0 0 80%;
+      padding: 0 1rem;
+
+      a.btn {
+        width: 100%;
+        margin-top: auto;
+
+        @media #{$mq-medium} {
+          width: auto;
+        }
+      }
+    }
+
+    @media #{$mq-medium} {
+      padding: 4rem 0;
+    }
+  }
+}

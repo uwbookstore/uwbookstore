@@ -19,6 +19,17 @@ select.form-control {
   padding-right: 2rem;
 }
 
+.form {
+  &-control,
+  &-select {
+    font-size: $default-font-size-mobile;
+
+    @media #{$mq-medium} {
+      font-size: $default-font-size;
+    }
+  }
+}
+
 .alert {
   &-narrow {
     @media #{$mq-medium} {

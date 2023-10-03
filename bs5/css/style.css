@@ -2451,7 +2451,7 @@ select.form-control {
 @media screen and (min-width: 64em) {
   .carousel-indicators {
     position: absolute;
-    bottom: 10px;
+    bottom: -4rem;
     left: 50%;
     z-index: 15;
     width: 60%;
@@ -2460,7 +2460,6 @@ select.form-control {
     text-align: center;
     list-style: none;
     display: block;
-    bottom: 0;
   }
   .carousel-indicators [data-bs-target] {
     display: inline-block;

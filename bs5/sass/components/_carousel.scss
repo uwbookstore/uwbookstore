@@ -52,7 +52,7 @@
 @media #{$mq-medium} {
   .carousel-indicators {
     position: absolute;
-    bottom: 10px;
+    bottom: -4rem;
     left: 50%;
     z-index: 15;
     width: 60%;
@@ -61,7 +61,6 @@
     text-align: center;
     list-style: none;
     display: block;
-    bottom: 0;
 
     [data-bs-target] {
       display: inline-block;

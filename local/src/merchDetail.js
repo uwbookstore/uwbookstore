@@ -31,6 +31,7 @@ $(document).ready(function () {
       $.each(detail, function (j) {
         $('li#thumbnail_' + j).attr('data-thumb', $(this).attr('data-full'));
         $('li#thumbnail_' + j).attr('data-thumb-alt', $(this).attr('alt'));
+        $('img#fullsize_' + j).attr('src', $(this).attr('data-high'));
         $('img#fullsize_' + j).attr('data-src', $(this).attr('data-high'));
       });
     }

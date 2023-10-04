@@ -103,3 +103,11 @@ input[class^='radio'] {
   font-size: 15px;
   padding: 5px;
 }
+
+#promo-toggle-wrapper {
+  display: none;
+}
+
+#promo-content {
+  display: flex !important;
+}

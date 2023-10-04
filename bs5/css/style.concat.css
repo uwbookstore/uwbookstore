@@ -937,6 +937,10 @@ select.form-control {
   border-color: #d8d8d8;
 }
 
+.card p {
+  margin-bottom: 0;
+}
+
 .grid {
   display: flex;
   flex-direction: row;
@@ -2952,6 +2956,7 @@ select.form-control.dd-hidden {
   margin: 0;
   padding: 0;
   z-index: 1;
+  margin-bottom: 2rem;
 }
 .navbar__site {
   height: 7rem;
@@ -3861,7 +3866,6 @@ a.hiring__now {
 .hero__image {
   background-color: #fff;
   padding-bottom: 4rem;
-  margin-top: 2rem;
 }
 @media screen and (min-width: 48em) {
   .hero__image .img-small {
@@ -4393,6 +4397,37 @@ ul.store-phone li {
   margin-bottom: 1rem;
 }
 
+#loginPanel,
+#logoutPanel,
+#lostPasswordPanel {
+  width: 100%;
+  max-width: 45rem;
+  font-size: 1.6rem;
+  margin: 2rem auto;
+  padding: 2.5rem 2.5rem 4.5rem;
+  border-color: transparent;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+}
+
+.login__btns a {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+}
+.login__btns a:not(:last-child) {
+  margin-bottom: 3.5rem;
+}
+@media screen and (min-width: 64em) {
+  .login__btns a {
+    width: 60%;
+  }
+  .login__btns a:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
 a.merchLink p.merchTitle {
   color: #3e3e3e;
 }
@@ -4569,6 +4604,10 @@ p.merchPrice.red {
 .merch__card-link:hover {
   opacity: 0.7;
   text-decoration: none;
+}
+.merch__card .row {
+  width: 100%;
+  justify-content: center;
 }
 .merch__filter {
   width: 100%;

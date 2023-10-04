@@ -13,13 +13,15 @@ $(document).on('ajaxComplete', function (event, xhr, settings) {
     // bind change event
     $('input[name=paymentType]').change(function () {
       let ptId = $(this).val();
-      if (ptId == uwWiscardPaymentType) {
-        // check that account number was input automatically
-        if (!$('#accountNumber-input').length > 0) return;
 
-        // passed check, add and apply promo
-        $('#coPromoCode').val(uwWiscardPromo);
-        $('#promo-apply').click();
+      if (ptId === uwWiscardPaymentType) {
+        if ($('#coPromoCode').val().trim() === '') {
+          // passed check, add and apply promo
+          $('#coPromoCode').val(uwWiscardPromo);
+          $('#promo-apply').click();
+          $('#coPromoCodeSuccess').hide();
+          $('#coPromoCode').css('color', '#e9ecef');
+        }
       } else {
         // optional remove this else statement to prevent promo from being removed if payment type is changed away from set payment type
         if ($('#coPromoCode').val() == uwWiscardPromo) $('#promo-apply').click();
@@ -126,4 +128,3 @@ $(document).ready(function () {
   // International Shipping Notice
   $(`<p class="bold red mb-0">International Shipping unavailable at this time.</p>`).insertAfter('#shippingPolicy');
 });
-Save;

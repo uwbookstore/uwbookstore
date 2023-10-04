@@ -55,3 +55,7 @@ select.form-control {
     border-color: darken($light-gray, 10%);
   }
 }
+
+.card-header p {
+  margin-bottom: 0;
+}

@@ -824,6 +824,10 @@ input[class^=radio]:checked + span::before {
   display: flex !important;
 }
 
+.rem1 {
+  font-size: 1.6rem;
+}
+
 @media screen and (min-width: 64em) {
   .dt-hide {
     display: none;
@@ -937,7 +941,7 @@ select.form-control {
   border-color: #d8d8d8;
 }
 
-.card p {
+.card-header p {
   margin-bottom: 0;
 }
 

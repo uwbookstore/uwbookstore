@@ -50,7 +50,7 @@ $(document).ready(function () {
 
       $(
         '<div class="panel-body"><p class="col-xs-12 textl alert alert-warning p-2">This course includes an eText textbook. The eText fees will be automatically charged via your tuition.</p></div>'
-      ).appendTo($(this).find('.panel-body:last()'));
+      ).appendTo($(this).find('.card-body:last()'));
     } else if ($(this).is(':contains("SEE ")')) {
       const instructor = $('span.No_Material_Course_Instructor').text();
       $(this)

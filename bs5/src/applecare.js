@@ -419,8 +419,9 @@ $(document).ready(function () {
 
   for (let i = 0; i < skuArr.length; i += 1) {
     if (
-      $('.cart_title').text().indexOf(skuArr[i][0]) !== -1 &&
-      $('.cart_title').text().indexOf('AppleCare') === -1
+      $('.merch-wrapper p').text().indexOf(skuArr[i][0]) !== -1 &&
+      $('.merch-wrapper a.black.hover_pointer').text().indexOf('AppleCare') ===
+        -1
     ) {
       if (!sessionStorage.getItem('apple-care')) {
         $(
@@ -432,8 +433,8 @@ $(document).ready(function () {
             '<div class="modal-dialog" role="document">',
             '<div class="modal-content">',
             '<div class="modal-header" id="apple-careModal">',
-            '<button type="button" data-dismiss="modal" aria-label="Close" class="close">',
-            '<span>×</span>',
+            '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">',
+            '<span>&times;</span>',
             '</button>',
             '<h3 class="modal-title">AppleCare+</h3>',
             '</div>',
@@ -446,7 +447,7 @@ $(document).ready(function () {
               '" class="btn btn-primary">Yes, Purchase AppleCare+</a>',
             '</div>',
             '<div class="modal-footer">',
-            '<button type="button" class="btn btn-default" data-dismiss="modal">No Thank You</button>',
+            '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No Thank You</button>',
             '</div>',
             '</div>',
             '</div>',

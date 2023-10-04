@@ -190,6 +190,11 @@ p.merchPrice.red {
         text-decoration: none;
       }
     }
+
+    .row {
+      width: 100%;
+      justify-content: center;
+    }
   }
 
   &__filter {

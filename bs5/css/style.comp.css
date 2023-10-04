@@ -46,10 +46,6 @@ body {
   width: 1px;
 }
 
-.entry-content {
-  margin-top: 2rem;
-}
-
 html {
   /* This defines what 1rem is. */
   font-size: 62.5%;
@@ -826,6 +822,15 @@ input[class^=radio]:checked + span::before {
 
 .rem1 {
   font-size: 1.6rem;
+}
+
+.req-astrisk {
+  float: left;
+  margin-right: 5px;
+}
+
+.coExistingAddressText p {
+  margin-bottom: 5px;
 }
 
 @media screen and (min-width: 64em) {
@@ -5015,7 +5020,7 @@ li.attribute a:hover {
   border: none;
 }
 
-.card .col-12 {
+.dynamicCard .card-body .row.col-12 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -5162,7 +5167,6 @@ span.btn-default.typeSelected:hover {
   .merch__detail-images {
     width: auto;
     flex: 1 100%;
-    z-index: 10;
   }
 }
 .merch__detail-img {

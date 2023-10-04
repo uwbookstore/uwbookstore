@@ -46,10 +46,6 @@ body {
   width: 1px;
 }
 
-.entry-content {
-  margin-top: 2rem;
-}
-
 html {
   /* This defines what 1rem is. */
   font-size: 62.5%;
@@ -800,6 +796,34 @@ input[class^=radio]:checked + span::before {
   background-color: #c5050c;
 }
 
+.paymentBilling-wrapper p {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  font-size: 15px;
+  padding: 5px;
+}
+
+#promo-toggle-wrapper {
+  display: none;
+}
+
+#promo-content {
+  display: flex !important;
+}
+
+.rem1 {
+  font-size: 1.6rem;
+}
+
 @media screen and (min-width: 64em) {
   .dt-hide {
     display: none;
@@ -911,6 +935,10 @@ select.form-control {
   text-align: center;
   background-color: #f1f1f1;
   border-color: #d8d8d8;
+}
+
+.card-header p {
+  margin-bottom: 0;
 }
 
 .grid {
@@ -1413,6 +1441,7 @@ select.form-control {
 .header__nav ul {
   display: flex;
   list-style: none;
+  align-items: center;
   margin-right: 1.5rem;
 }
 .header__nav ul li {
@@ -1439,6 +1468,22 @@ select.form-control {
 }
 .header__nav ul #login a em {
   font-size: 2.5rem;
+}
+@media screen and (min-width: 70.5625em) {
+  .header__nav ul #login a span {
+    font-size: 1.4rem;
+  }
+  .header__nav ul #login a em {
+    display: none;
+  }
+}
+.header__nav ul #login .logout {
+  display: none;
+}
+@media screen and (min-width: 70.5625em) {
+  .header__nav ul #login .logout {
+    display: inline;
+  }
 }
 .header__nav ul .logout {
   display: none;
@@ -2097,7 +2142,7 @@ select.form-control {
   height: 5rem;
   line-height: 5rem;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 .btn-primary {
   background-color: #c5050c;
@@ -2517,6 +2562,236 @@ select.form-control {
     background-color: #3e3e3e;
   }
 }
+/*------------------------------------*\
+  COLORBOX
+\*------------------------------------*/
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox,
+#cboxOverlay,
+#cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+#cboxMiddleLeft,
+#cboxBottomLeft {
+  clear: left;
+}
+
+#cboxContent {
+  position: relative;
+}
+
+#cboxLoadedContent {
+  overflow: auto;
+}
+
+#cboxTitle {
+  margin: 0;
+}
+
+#cboxLoadingOverlay,
+#cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#cboxPrevious,
+#cboxNext,
+#cboxClose,
+#cboxSlideshow {
+  cursor: pointer;
+}
+
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block;
+  max-width: none;
+}
+
+.cboxIframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+#colorbox,
+#cboxContent,
+#cboxLoadedContent {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+
+#cboxOverlay {
+  background: #fff;
+}
+
+div#colorbox button {
+  border: none;
+  margin: 0;
+}
+
+#cboxTopLeft {
+  width: 1.4rem;
+  height: 1.4rem;
+  background: #fff;
+}
+
+#cboxTopCenter {
+  height: 1.4rem;
+  background: #fff;
+}
+
+#cboxTopRight {
+  width: 1.4rem;
+  height: 1.4rem;
+  background: #fff;
+}
+
+#cboxBottomLeft {
+  width: 1.4rem;
+  height: 4.3rem;
+  background: #fff;
+}
+
+#cboxBottomCenter {
+  height: 4.3rem;
+  background: #fff;
+}
+
+#cboxBottomRight {
+  width: 1.4rem;
+  height: 4.3rem;
+  background: #fff;
+}
+
+#cboxMiddleLeft {
+  width: 1.4rem;
+  background: #fff;
+}
+
+#cboxMiddleRight {
+  width: 1.4rem;
+  background: #fff;
+}
+
+#cboxContent {
+  background: #fff;
+  overflow: visible;
+}
+
+.cboxIframe {
+  background: #fff;
+}
+
+#cboxError {
+  padding: 5rem;
+  border: 1px solid #cacaca;
+}
+
+#cboxLoadedContent {
+  margin-bottom: 0.5rem;
+}
+
+#cboxLoadingGraphic {
+  background: url(https://i.univbkstr.com/css/img/cbox/loading.gif) no-repeat center center;
+}
+
+#cboxTitle {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+  color: #777777;
+}
+
+#cboxCurrent {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 5.8rem;
+  font-weight: 700;
+  color: #777777;
+}
+
+#cboxPrevious,
+#cboxNext,
+#cboxClose,
+#cboxSlideshow {
+  position: absolute;
+  bottom: -2.9rem;
+  background: url(https://i.univbkstr.com/css/img/cbox/controls.png) no-repeat 0 0;
+  width: 2.3rem;
+  height: 2.3rem;
+  text-indent: -9999px;
+}
+
+#cboxPrevious {
+  left: 0px;
+  background-position: -5.1rem -2.5rem;
+}
+
+#cboxPrevious:hover {
+  background-position: -5.1rem 0;
+}
+
+#cboxNext {
+  left: 2.7rem;
+  background-position: -7.5rem -2.5rem;
+}
+
+#cboxNext:hover {
+  background-position: -7.5rem 0;
+}
+
+#cboxClose {
+  right: 0;
+  background-position: -10rem -2.5rem;
+}
+
+#cboxClose:hover {
+  background-position: -10rem 0;
+}
+
+.cboxSlideshow_on #cboxSlideshow {
+  background-position: -12.5rem 0;
+  right: 2.7rem;
+}
+
+.cboxSlideshow_on #cboxSlideshow:hover {
+  background-position: -15rem 0;
+}
+
+.cboxSlideshow_off #cboxSlideshow {
+  background-position: -15rem -2.5rem;
+  right: 2.7rem;
+}
+
+.cboxSlideshow_off #cboxSlideshow:hover {
+  background-position: -12.5rem 0;
+}
+
 .form-control {
   height: 5rem;
   padding: 0 1.5rem;
@@ -2531,7 +2806,6 @@ select.form-control {
 
 .form-floating > .form-control {
   height: auto;
-  padding: 0 1.5rem;
   line-height: 1;
   width: 100%;
 }
@@ -2565,6 +2839,14 @@ select.form-control.dd-hidden {
   padding: 0;
   margin-top: -1rem;
   cursor: text;
+}
+
+.form-floating > .form-control:focus,
+.form-floating > .form-control:not(:placeholder-shown),
+.form-floating > .form-control-plaintext:focus,
+.form-floating > .form-control-plaintext:not(:placeholder-shown) {
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
 }
 
 .banner {
@@ -2674,6 +2956,7 @@ select.form-control.dd-hidden {
   margin: 0;
   padding: 0;
   z-index: 1;
+  margin-bottom: 2rem;
 }
 .navbar__site {
   height: 7rem;
@@ -3583,7 +3866,6 @@ a.hiring__now {
 .hero__image {
   background-color: #fff;
   padding-bottom: 4rem;
-  margin-top: 2rem;
 }
 @media screen and (min-width: 48em) {
   .hero__image .img-small {
@@ -4115,6 +4397,37 @@ ul.store-phone li {
   margin-bottom: 1rem;
 }
 
+#loginPanel,
+#logoutPanel,
+#lostPasswordPanel {
+  width: 100%;
+  max-width: 45rem;
+  font-size: 1.6rem;
+  margin: 2rem auto;
+  padding: 2.5rem 2.5rem 4.5rem;
+  border-color: transparent;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+}
+
+.login__btns a {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+}
+.login__btns a:not(:last-child) {
+  margin-bottom: 3.5rem;
+}
+@media screen and (min-width: 64em) {
+  .login__btns a {
+    width: 60%;
+  }
+  .login__btns a:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
 a.merchLink p.merchTitle {
   color: #3e3e3e;
 }
@@ -4291,6 +4604,10 @@ p.merchPrice.red {
 .merch__card-link:hover {
   opacity: 0.7;
   text-decoration: none;
+}
+.merch__card .row {
+  width: 100%;
+  justify-content: center;
 }
 .merch__filter {
   width: 100%;
@@ -4694,7 +5011,7 @@ li.attribute a:hover {
   border: none;
 }
 
-.card .col-xs-12 {
+.card .col-12 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -4841,7 +5158,6 @@ span.btn-default.typeSelected:hover {
   .merch__detail-images {
     width: auto;
     flex: 1 100%;
-    z-index: 10;
   }
 }
 .merch__detail-img {

@@ -636,7 +636,7 @@ li.attribute {
   border: none;
 }
 
-.card .col-12 {
+.dynamicCard .card-body .row.col-12 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;

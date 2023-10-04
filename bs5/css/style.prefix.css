@@ -5024,7 +5024,7 @@ li.attribute a:hover {
   border: none;
 }
 
-.card .col-xs-12 {
+.card .col-12 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;

@@ -1,7 +1,6 @@
 // Auto apply promocode when Wiscard option is selected
 // Optional: auto remove promo code if Wiscard is deselected and applied promo code is Wiscard promo code
 const uwWiscardPromo = 'WISCARD4';
-const uwWiscardPaymentType = '1651';
 
 // We need to hook into ajaxComplete function since payment section is not present on page load
 $(document).on('ajaxComplete', function (event, xhr, settings) {
@@ -14,14 +13,15 @@ $(document).on('ajaxComplete', function (event, xhr, settings) {
     $('input[name=paymentType]').change(function () {
       let ptId = $(this).val();
 
-      if (ptId === uwWiscardPaymentType || ptId === '1521') {
+      if (ptId === '1651' || ptId === '1521') {
         if ($('#coPromoCode').val().trim() !== '') return;
 
         // passed check, add and apply promo
         $('#coPromoCode').val(uwWiscardPromo);
         $('#promo-apply').click();
         $('#coPromoCodeSuccess').hide();
-        $('#coPromoCode').css('color', '#e9ecef');
+        $('#coPromoCodeFeedback').hide();
+        $('#coPromoCode').css('color', 'transparent');
       } else {
         // optional remove this else statement to prevent promo from being removed if payment type is changed away from set payment type
         if ($('#coPromoCode').val() === uwWiscardPromo)

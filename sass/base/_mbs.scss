@@ -88,6 +88,14 @@ input[class^='radio'] {
   }
 }
 
+// MBS script editor
+#hScript,
+#fScript {
+  font-family: Monaco, monospace;
+  font-size: 1.4rem;
+  width: 100%;
+}
+
 .paymentBilling-wrapper p {
   font-size: $default-font-size;
   margin-bottom: 1rem;

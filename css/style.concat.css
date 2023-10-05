@@ -769,6 +769,7 @@ footer {
 #custBillMI,
 #custShipMiddle,
 .loyaltyRedeemLink,
+#loyaltyWrap,
 #needHelp,
 a#goToTop,
 .disco {
@@ -780,7 +781,6 @@ a#goToTop,
 }
 
 #custAddInfoWrap,
-#loyaltyWrap,
 #custEmailOptWrap,
 #custSMSOptWrap {
   padding: 0;

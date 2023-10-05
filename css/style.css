@@ -769,6 +769,7 @@ footer {
 #custBillMI,
 #custShipMiddle,
 .loyaltyRedeemLink,
+#loyaltyWrap,
 #needHelp,
 a#goToTop,
 .disco {
@@ -780,7 +781,6 @@ a#goToTop,
 }
 
 #custAddInfoWrap,
-#loyaltyWrap,
 #custEmailOptWrap,
 #custSMSOptWrap {
   padding: 0;
@@ -794,6 +794,13 @@ input[class^=radio] + span::before {
 }
 input[class^=radio]:checked + span::before {
   background-color: #c5050c;
+}
+
+#hScript,
+#fScript {
+  font-family: Monaco, monospace;
+  font-size: 1.4rem;
+  width: 100%;
 }
 
 .paymentBilling-wrapper p {
@@ -822,6 +829,19 @@ input[class^=radio]:checked + span::before {
 
 .rem1 {
   font-size: 1.6rem;
+}
+
+.req-astrisk {
+  float: left;
+  margin-right: 5px;
+}
+
+.coExistingAddressText p {
+  margin-bottom: 5px;
+}
+
+#cart-rightCard .sticky-top {
+  z-index: 0;
 }
 
 @media screen and (min-width: 64em) {
@@ -4473,6 +4493,8 @@ p.merchPrice.red {
 }
 
 .merch__card {
+  position: relative;
+  z-index: 0;
   margin-bottom: 2rem;
   justify-content: center;
 }
@@ -5011,7 +5033,7 @@ li.attribute a:hover {
   border: none;
 }
 
-.card .col-12 {
+.dynamicCard .card-body .row.col-12 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -5436,6 +5458,8 @@ span.btn-default.typeSelected:hover {
 @media screen and (min-width: 64em) {
   .merch__detail {
     padding: 0;
+    position: relative;
+    z-index: 0;
   }
 }
 

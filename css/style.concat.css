@@ -796,6 +796,13 @@ input[class^=radio]:checked + span::before {
   background-color: #c5050c;
 }
 
+#hScript,
+#fScript {
+  font-family: Monaco, monospace;
+  font-size: 1.4rem;
+  width: 100%;
+}
+
 .paymentBilling-wrapper p {
   font-size: 1.6rem;
   margin-bottom: 1rem;

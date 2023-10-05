@@ -1,72 +1,40 @@
 <div class="backtotop">
   <a href="#" title="Back to top"><em class="fa fa-chevron-up" aria-hidden="true"></em></a>
 </div>
-<header class="header donotprint" data-role="header">
-  <div id="ship99" class="banner">
-    <div id="toggle-exclusions" class="banner__message banner__info">
-      <div>
-        Free Ground Shipping with <em class="num-lg">$99</em> Order*. Must Enter Code: <span class="promo__code">Ship<em
-            class="num-lg">99</em></span> <span class="small">(Click for Details)</span>
-      </div>
+<div id="ship99" class="banner">
+  <div id="toggle-exclusions" class="banner__message banner__info">
+    <div>
+      Free Ground Shipping with <em class="num-lg">$99</em> Order*. Must Enter Code: <span class="promo__code">Ship<em
+          class="num-lg">99</em></span> <span class="small">(Click for Details)</span>
     </div>
-    <div id="exclusions" class="banner__dropdown">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <p><em>*</em>Free ground shipping to a contiguous U.S. delivery address on any $99+ online order (prior to
-            tax). Must enter code SHIP<em class="num-lg">99</em> in the "Apply a promo code" box to receive offer.
-            Excludes previous purchases, custom items, Lands' End custom orders, textbooks, all Standard Chair of
-            Gardner products, Kyle Cavan Jewelry, academic attire, computers, computer accessories, Public Access Lands
-            Atlas of Wisconsin, Gift Cards, and drop-ship items. All items with a handling charge will receive free
-            ground shipping but handling charge will still be applied. This offer cannot be combined with any other
-            offers. Contact the Online Sales Department with order questions: <a
-              href="mailto:onlinesales@uwbookstore.com">onlinesales@uwbookstore.com</a> or 1-800-993-2665. </p>
-        </div>
+  </div>
+  <div id="exclusions" class="banner__dropdown">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <p><em>*</em>Free ground shipping to a contiguous U.S. delivery address on any $99+ online order (prior to
+          tax). Must enter code SHIP<em class="num-lg">99</em> in the "Apply a promo code" box to receive offer.
+          Excludes previous purchases, custom items, Lands' End custom orders, textbooks, all Standard Chair of
+          Gardner products, Kyle Cavan Jewelry, academic attire, computers, computer accessories, Public Access Lands
+          Atlas of Wisconsin, Gift Cards, and drop-ship items. All items with a handling charge will receive free
+          ground shipping but handling charge will still be applied. This offer cannot be combined with any other
+          offers. Contact the Online Sales Department with order questions: <a
+            href="mailto:onlinesales@uwbookstore.com">onlinesales@uwbookstore.com</a> or 1-800-993-2665. </p>
       </div>
     </div>
   </div>
-  <!--
-<div id="divToShow" class="banner">
-<div id="toggle-exclusions" class="banner__message banner__info">
-<div>
-Annual <span class="num-lg">1</span>-Day Sale! <span class="num-lg ml-1">25</span>% OFF SITEWIDE <span class="num-lg">&amp;</span> STOREWIDE! No code needed. (click for
-details)
 </div>
-</div>
-<div id="exclusions" class="banner__dropdown">
-<div class="row">
-<div class="col-md-6 col-md-offset-3">
-<p>No promotional code is needed. Sale is valid on regularly priced items at all locations and online.
-Excludes sale items,
-textbooks, gift cards, The Red Shirt, select Lands' End items, Alumni Park items, Public Access Lands items,
-The Bucky
-Book, Fine Gifts by M.LaHart &amp; Company, all Standard Chair of Gardner products, computers, computer
-accessories,
-consumer electronics, magazines, tickets, food, academic attire, medical apparel/equipment/gifts, previous
-purchases,
-special orders, drop-ship items, and shipping and handling charges. See a salesperson for other exclusions.
-One offer
-per customer. This offer cannot be combined with any other offers. Valid 11/28/22 until 11:59pm CT or until
-store
-closing.
-</p>
-</div>
-</div>
-</div>
-</div>
--->
-  <!-- ************************** -->
-  <!-- *** END HEADER MESSAGE *** -->
-  <!-- ************************** -->
+<header class="header donotprint" data-role="header">
   <nav class="header__wrapper navbar__site" role="navigation"
     aria-label="Site Search, Account/Login, and Shopping Cart">
     <div class="navbar-header pull-left">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ubs-nav"
-        aria-expanded="false">
+      <button id="ubs-nav-toggle" class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#ubs-nav">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar top-bar"></span>
         <span class="icon-bar middle-bar"></span>
         <span class="icon-bar bottom-bar"></span>
       </button>
+
     </div>
     <div class="header__grid">
       <div class="header__grid-item header__search">
@@ -77,14 +45,13 @@ closing.
           </button>
           <label for="search-term" class="sr-only">Search</label>
           <input type="search" id="search-term" class="search-field form-control" placeholder="Search...">
-          <span id="searchclear" class="fa fa-times-circle-o"></span>
+          <!-- <span id="searchclear" class="fa fa-times-circle-o"></span> -->
         </div>
       </div>
       <div class="header__grid-item header__logo">
         <h1>
           <a href="https://www.uwbookstore.com/home">
-            <img src="https://i.univbkstr.com/global/img/ubsLogo.png" alt="University Book Store" class="center-block">
-            <!-- <img src="https://i.univbkstr.com/css/img/ubsLogo.png" alt="University Book Store" class="center-block"> -->
+            <img src="https://i.univbkstr.com/v3/img/logos/ubsLogo.png" alt="University Book Store">
           </a>
         </h1>
         <div class="visually-hidden"><a href="https://www.uwbookstore.com/home">University Book Store</a>
@@ -103,10 +70,10 @@ closing.
                   <label for="search-term-mobile" class="sr-only">Search</label>
                   <input type="search" id="search-term-mobile" class="search-field-mobile form-control"
                     placeholder="Search...">
-                  <span id="searchclear-mobile" class="fa fa-times-circle-o" aria-hidden="true"></span>
+                  <!-- <span id="searchclear-mobile" class="fa fa-times-circle-o" aria-hidden="true"></span> -->
                 </div>
                 <div class="grid-item search-sb">
-                  <input type="submit" class="search-submit-mobile btn btn-primary" value="Go" tabindex="0">
+                  <input type="submit" class="search-submit-mobile btn btn-primary" value="Go" heabindex="0">
                 </div>
               </div>
             </div>
@@ -127,1226 +94,1128 @@ closing.
   </nav>
 </header>
 <!-- END OF UBS HEADER -->
-<nav class="navbar navbar__ubs" role="navigation" aria-label="Site Navigation">
-  <div class="container-fluid">
-    <div class="navbar-collapse collapse" id="ubs-nav">
-      <ul class="nav navbar-nav">
-        <li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/New-Items">New
-            Arrivals</a></li>
-        <li class="dropdown has-megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Clothing</a>
-          <div class="dropdown-menu megamenu" role="menu">
-            <!-- <div class="row mb-2">
-                                                    <div class="col-md-12 view-all">
-                                                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/New-Items">New
-                                                            Arrivals</a>
-                                                    </div>
-                                                </div> -->
-            <div class="row">
-              <div class="col-md-offset-1 col-md-2">
-                <div class="col-megamenu">
-                  <h2 class="nav-title"><a href="https://www.uwbookstore.com/Mens-Clothing">Men</a>
-                  </h2>
-                  <ul class="list-unstyled" id="mens-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Accessories">Accessories</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Alumni">Alumni</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Big-and-Tall">Big
-                        &amp; Tall</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Jackets">Jackets</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Jerseys">Jerseys</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Long-Sleeve">Long
-                        Sleeve
-                        Tees</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Pants-and-Shorts">Pants
-                        &amp;
-                        Shorts</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Polo-Dress-Shirts">Polo/Dress
-                        Shirts</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/HSLC">School
-                        of
-                        Nursing Uniforms</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Socks-and-Footwear">Socks
-                        &amp;
-                        Footwear</a>
-                    </li>
-                    <!-- <li><a href="https://www.uwbookstore.com/Mens-Tops">Men's Tops</a></li> -->
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Sweatshirts">Sweatshirts
-                        &amp;
-                        Sweaters</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/T-Shirts">T-Shirts</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Tank-Tops">Tank
-                        Tops</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Mens">Under
-                        Armour</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Winter-Wear">Winter
-                        Wear</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Shop-by-Brand">Shop by
-                        Brand</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Badgers-Sports">Shop by
-                        Sport</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Made-in-USA">Made
-                        in U.S.A.</a>
-                    </li>
-                  </ul>
-                </div>
-                <!-- col-megamenu.// -->
-              </div>
-              <!-- end col-3 -->
-              <div class="col-md-2">
-                <div class="col-megamenu">
-                  <h2 class="nav-title"><a href="https://www.uwbookstore.com/Womens-Clothing">Women</a></h2>
-                  <ul class="list-unstyled" id="womens-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Accessories">Accessories</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Alumni">Alumni</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Bottoms">Bottoms</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Jackets">Jackets</a>
-                    </li>
-                    <!-- <li>
-                                            <a
-                                                href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Leggings">Leggings</a>
-                                        </li> -->
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Long-Sleeves">Long
-                        Sleeves</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Polo-Dress-Shirts">Polo/Dress
-                        Shirts</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Relaxed-Fit">Relaxed
-                        Fit</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/HSLC">School
-                        of
-                        Nursing Uniforms</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Footwear">Socks
-                        &amp;
-                        Footwear</a>
-                    </li>
-                    <!-- <li><a href="https://www.uwbookstore.com/Womens-Tops">Women's Tops</a></li> -->
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Sweatshirts">Sweatshirts
-                        &amp;
-                        Sweaters</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/T-Shirts">T-Shirts</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Tank-Tops">Tank
-                        Tops</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Womens">Under
-                        Armour</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Winter-Wear">Winter
-                        Wear</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Shop-by-Brand">Shop by
-                        Brand</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Badgers-Sports">Shop by
-                        Sport</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Made-in-USA">Made
-                        in
-                        U.S.A.</a>
-                    </li>
-                  </ul>
-                </div>
-                <!-- col-megamenu.// -->
-              </div>
-              <!-- end col-3 -->
-              <div class="col-md-2">
-                <div class="col-megamenu">
-                  <h2 class="nav-title"><a href="https://www.uwbookstore.com/Kids-Clothing">Infant</a>
-                  </h2>
-                  <ul class="list-unstyled" id="infant-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Infant-Clothing">Infant
-                        Clothing</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Infant">Infant
-                        Gifts</a>
-                    </li>
-                  </ul>
-                  <h2 class="nav-title"><a href="https://www.uwbookstore.com/Kids-Clothing">Toddler</a></h2>
-                  <ul class="list-unstyled" id="toddler-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Toddler-Tops">Toddler
-                        Tops</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Toddler-Bottoms">Toddler
-                        Bottoms</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Toddler-Set">Toddler
-                        Sets</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Toddler">Toddler
-                        Gifts</a>
-                    </li>
-                  </ul>
-                  <h2 class="nav-title"><a href="https://www.uwbookstore.com/Kids-Clothing">Youth</a>
-                  </h2>
-                  <ul class="list-unstyled" id="youth-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Youth-Tops">Youth
-                        Tops</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Youth-Bottoms">Youth
-                        Bottoms</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Youth">Youth
-                        Gifts</a>
-                    </li>
-                  </ul>
-                  <ul class="list-unstyled" id="kids-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Kids-Hats">Kids
-                        Hats</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Winter-Wear">Kids
-                        Winter
-                        Wear</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Youth">Kids
-                        Under Armour</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Made-in-the-USA">Kids
-                        Made in
-                        U.S.A.</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Shop-by-Brand">Shop by Brand</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Badgers-Sports">Shop by Sport</a>
-                    </li>
-                  </ul>
-                </div>
-                <!-- col-megamenu.// -->
-              </div>
-              <div class="col-md-2">
-                <div class="col-megamenu">
-                  <h2 class="nav-title"><a href="https://www.uwbookstore.com/Under-Armour">Under
-                      Armour</a></h2>
-                  <ul class="list-unstyled" id="ua-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Mens">Men's</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Womens">Women's</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Youth">Youth</a>
-                    </li>
-                    <!-- <li>
-                                            <a
-                                                href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Official-On-Field-Collection">Official
-                                                On-Field Collection</a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Headwear">Headwear</a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Storm">Storm</a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Coldgear">cold°gear</a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Heatgear">heat°gear</a>
-                                        </li> -->
-                  </ul>
-                  <h2 class="nav-title"><a href="https://www.uwbookstore.com/Headwear">Headwear</a>
-                  </h2>
-                  <ul class="list-unstyled" id="hat-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Caps-and-Visors">Caps
-                        &amp;
-                        Visors</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Womens-Hats">Women's
-                        Hats</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Kids-Hats">Kid's
-                        Hats</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Winter-Hats-and-Accessories">Winter
-                        Hats &amp; Accessories</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Cheeseheads">Cheeseheads</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Bucket-Hats-and-Fedoras">Bucket
-                        Hats &amp; Fedoras</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Shop-by-Brand">Shop by
-                        Brand</a>
-                    </li>
-                  </ul>
-                </div>
-                <!-- col-megamenu.// -->
-              </div>
-              <!-- end col-3 -->
-              <div class="col-md-2">
-                <div class="col-megamenu">
-                  <h2 class="nav-title"><a href="https://www.uwbookstore.com/Clearance-Items">Clearance Items</a>
-                  </h2>
-                  <ul class="list-unstyled" id="clearance-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Clearance-Items">Men's</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Clearance-Items">Women's</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Clearance-Items">Kid's</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Clearance-Items">Badger
-                        Gifts</a>
-                    </li>
-                  </ul>
-                  <h2 class="title">
-                    <a href="https://www.uwbookstore.com/Shop-by-Brand">Shop by Brand</a>
-                  </h2>
-                  <h2 class="title">
-                    <a href="https://www.uwbookstore.com/Shop-by-School">Shop by School</a>
-                  </h2>
-                  <h2 class="title">
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Dairyland-Gifts">Dairyland
-                      Gifts</a>
-                  </h2>
-                  <h2 class="title">
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/American-Family">AmFam
-                      Championship</a>
-                  </h2>
-                  <h2 class="nav-title">
-                    <a href="https://www.uwbookstore.com/Badgers-Sports">Shop by Sport</a>
-                  </h2>
-                  <ul class="list-unstyled" id="sport-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Basketball">Basketball</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Football">Football</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Hockey">Hockey</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Golf">Golf</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Volleyball">Volleyball</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Wrestling">Wrestling</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Soccer">Soccer</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Other-Sports">Other
-                        Sports</a>
-                    </li>
-                  </ul>
-                  <ol class="list-unstyled">
-                    <li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Brewers-and-Bucks">Brewers
-                        &amp;
-                        Bucks</a></li>
-                  </ol>
-                </div>
-                <!-- col-megamenu.// -->
-              </div>
-              <!-- end col-3 -->
-            </div>
-            <!-- end row -->
-          </div>
-          <!-- dropdown-mega-menu.// -->
-        </li>
-        <li class="dropdown has-megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Gifts</a>
-          <div class="dropdown-menu megamenu" role="menu">
-            <div class="row">
-              <div class="col-md-3">
-                <div class="col-megamenu">
-                  <h2 class="nav-title">
-                    <a href="https://www.uwbookstore.com/Badger-Gifts">Bags &amp; Wallets</a>
-                  </h2>
-                  <ul class="list-unstyled" id="bag-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Backpacks">Backpacks</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Totes-and-Purses">Totes
-                        &amp; Purses</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Wallets-and-ID-Holders">Wallets
-                        &amp; ID Holders</a>
-                    </li>
-                  </ul>
-                  <h2 class="nav-title">
-                    <a href="https://www.uwbookstore.com/Badger-Gifts">Drinkware</a>
-                  </h2>
-                  <ul class="list-unstyled" id="drink-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Barware">Barware</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Mugs">Mugs</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Travel-Mugs-and-Water-Bottles">Travel
-                        Mugs/Water Bottles</a>
-                    </li>
-                  </ul>
-                  <h2 class="nav-title">
-                    <a href="https://www.mlahart.com/Wisconsin?leadsource=7524">Fine Gifts by
-                      M.LaHart &amp; Co</a>
-                  </h2>
-                  <ul class="list-unstyled" id="fineGift-nav">
-                    <li>
-                      <a href="https://www.mlahart.com/Wisconsin/Wisconsin-TAG-Heuer?leadsource=7524"
-                        target="_blank">Tag Heuer® Watches</a>
-                    </li>
-                    <li>
-                      <a href="https://www.mlahart.com/Wisconsin/Wisconsin-MOVADO?leadsource=7524"
-                        target="_blank">Movado Watches</a>
-                    </li>
-                    <li>
-                      <a href="https://www.mlahart.com/Wisconsin/Wisconsin-Montblanc?leadsource=7524"
-                        target="_blank">Montblanc™ Writing Instruments</a>
-                    </li>
-                    <li>
-                      <a href="https://www.mlahart.com/Wisconsin/Wisconsin-Simon-Pearce?leadsource=7524"
-                        target="_blank">Simon Pearce Crystal Glassware</a>
-                    </li>
-                  </ul>
-                  <h2 class="nav-title">
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Kyle-Cavan">Jewelry by Kyle
-                      Cavan</a>
-                  </h2>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="col-megamenu">
-                  <h2 class="nav-title">
-                    <a href="https://www.uwbookstore.com/Badger-Gifts">Home</a>
-                  </h2>
-                  <ul class="list-unstyled" id="home-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Banners-and-Flags">Banners
-                        &amp; Flags</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Bed-and-Bath">Bed
-                        &amp;
-                        Bath</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Blankets-and-Rugs">Blankets
-                        &amp; Rugs</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/For-the-Wall">For
-                        The
-                        Wall</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Kitchen-and-Dining">Kitchen
-                        &amp; Dining</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Patio-and-Outdoor">Patio
-                        &amp; Outdoor</a>
-                    </li>
-                  </ul>
-                  <h2 class="nav-title">
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tailgate-Gear">Tailgate</a>
-                  </h2>
-                  <ul class="list-unstyled" id="tailgate-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Balls-Pucks-Helmets">Balls,
-                        Pucks, &amp; Helmets</a>
-                    </li>
-                    <li class="submenu__item dup-dn">
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Banners-and-Flags">Banners
-                        &amp; Flags</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Hair-Accessories">Hair
-                        Accessories</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Rain-Gear">Rain
-                        Gear</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Tailgate-Gear">Tailgate
-                        Gear</a>
-                    </li>
-                  </ul>
-                  <h2 class="nav-title">
-                    <a href="#">Kid's Gifts</a>
-                  </h2>
-                  <ul class="list-unstyled" id="kidsGift-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Infant">Infant
-                        Gifts</a>
-                    </li>
-                    <li class="submenu__item dup-dn">
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Toddler">Toddler
-                        Gifts</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Youth">Youth
-                        Gifts</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="col-megamenu-no-header">
-                  <ul class="list-unstyled" id="gift1-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Alumni">Alumni</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/American-Family">AmFam
-                        Championship</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Badger-Pets">Badger
-                        Pets</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Brewers-and-Bucks">Brewers
-                        &amp;
-                        Bucks</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Books">Books</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Buckys-On-Parade">Bucky
-                        on
-                        Parade</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Car-Accessories">Car
-                        Accessories</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Cheeseheads">Cheeseheads</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Clearance-Items">Clearance
-                        Items</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Dairyland-Gifts">Dairyland
-                        Gifts</a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Decals-Patches-Stickers">Decals/Patches/Stickers</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Diploma-Frames">Diploma Frames</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Electronic-Accessories">Electronic
-                        Accessories</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Face-Masks">Face
-                        Masks</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Gift-Cards">Gift Cards</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="col-megamenu-no-header">
-                  <ul class="list-unstyled" id="gift2-nav">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Golf">Golf
-                        Items</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Greek-Life">Greek
-                        Life</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Health-and-Beauty">Health
-                        &amp;
-                        Beauty</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Holiday">Holiday
-                        Items</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Jewelry-Watches-Pins">Jewelry,
-                        Watches, &amp; Pins</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Keychains">Key
-                        Chains</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Lanyards">Lanyards</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Magnets">Magnets</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Office-Supplies-Furnishings">Office
-                        Supplies &amp; Furnishings</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Party-Supplies">Party
-                        Supplies</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Plush">Plush</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Shop-by-Brand">Shop by Brand</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Toys-and-Games">Toys
-                        &amp;
-                        Games</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Winter-Hats-and-Accessories">Winter
-                        Hats &amp; Accessories</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="dropdown has-megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">School Supplies</a>
-          <div class="dropdown-menu megamenu" role="menu">
-            <div class="row">
-              <div class="col-md-2 col-md-offset-2">
-                <ul class="list-unstyled">
+<nav class="navbar navbar-expand-lg navbar-ubs">
+
+  <div class="collapse navbar-collapse" id="ubs-nav">
+    <ul class="navbar-nav">
+      <li class="nav-item"> <a class="nav-link"
+          href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/New-Items">New Arrivals</a> </li>
+      <li class="nav-item dropdown has-megamenu">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Clothing</a>
+        <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+          <div class="row g-3">
+            <div class="col-md-2 offset-md-1">
+              <div class="col-megamenu">
+                <h2 class="nav-title"><a href="https://www.uwbookstore.com/Mens-Clothing">Men</a>
+                </h2>
+                <ul class="list-unstyled" id="mens-nav">
                   <li>
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Art-Kits">Art
-                      Kits</a>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Accessories">Accessories</a>
                   </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Alumni">Alumni</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Big-and-Tall">Big
+                      &amp; Tall</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Jackets">Jackets</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Jerseys">Jerseys</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Long-Sleeve">Long
+                      Sleeve
+                      Tees</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Pants-and-Shorts">Pants
+                      &amp;
+                      Shorts</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Polo-Dress-Shirts">Polo/Dress
+                      Shirts</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/HSLC">School
+                      of
+                      Nursing Uniforms</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Socks-and-Footwear">Socks
+                      &amp;
+                      Footwear</a>
+                  </li>
+                  <!-- <li><a href="https://www.uwbookstore.com/Mens-Tops">Men's Tops</a></li> -->
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Sweatshirts">Sweatshirts
+                      &amp;
+                      Sweaters</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/T-Shirts">T-Shirts</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Tank-Tops">Tank
+                      Tops</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Mens">Under
+                      Armour</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Winter-Wear">Winter
+                      Wear</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Shop-by-Brand">Shop by
+                      Brand</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Badgers-Sports">Shop by
+                      Sport</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Made-in-USA">Made
+                      in U.S.A.</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- col-megamenu.// -->
+            </div>
+            <!-- end col-3 -->
+            <div class="col-md-2">
+              <div class="col-megamenu">
+                <h2 class="nav-title"><a href="https://www.uwbookstore.com/Womens-Clothing">Women</a></h2>
+                <ul class="list-unstyled" id="womens-nav">
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Accessories">Accessories</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Alumni">Alumni</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Bottoms">Bottoms</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Jackets">Jackets</a>
+                  </li>
+                  <!-- <li>
+                                                            <a
+                                                                href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Leggings">Leggings</a>
+                                                        </li> -->
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Long-Sleeves">Long
+                      Sleeves</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Polo-Dress-Shirts">Polo/Dress
+                      Shirts</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Relaxed-Fit">Relaxed
+                      Fit</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/HSLC">School
+                      of
+                      Nursing Uniforms</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Footwear">Socks
+                      &amp;
+                      Footwear</a>
+                  </li>
+                  <!-- <li><a href="https://www.uwbookstore.com/Womens-Tops">Women's Tops</a></li> -->
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Sweatshirts">Sweatshirts
+                      &amp;
+                      Sweaters</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/T-Shirts">T-Shirts</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Tank-Tops">Tank
+                      Tops</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Womens">Under
+                      Armour</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Winter-Wear">Winter
+                      Wear</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Shop-by-Brand">Shop by
+                      Brand</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Badgers-Sports">Shop by
+                      Sport</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Made-in-USA">Made
+                      in
+                      U.S.A.</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- col-megamenu.// -->
+            </div>
+            <!-- end col-3 -->
+            <div class="col-md-2">
+              <div class="col-megamenu">
+                <h2 class="nav-title"><a href="https://www.uwbookstore.com/Kids-Clothing">Infant</a>
+                </h2>
+                <ul class="list-unstyled" id="infant-nav">
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Infant-Clothing">Infant
+                      Clothing</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Infant">Infant
+                      Gifts</a>
+                  </li>
+                </ul>
+                <h2 class="nav-title"><a href="https://www.uwbookstore.com/Kids-Clothing">Toddler</a></h2>
+                <ul class="list-unstyled" id="toddler-nav">
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Toddler-Tops">Toddler
+                      Tops</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Toddler-Bottoms">Toddler
+                      Bottoms</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Toddler-Set">Toddler
+                      Sets</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Toddler">Toddler
+                      Gifts</a>
+                  </li>
+                </ul>
+                <h2 class="nav-title"><a href="https://www.uwbookstore.com/Kids-Clothing">Youth</a>
+                </h2>
+                <ul class="list-unstyled" id="youth-nav">
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Youth-Tops">Youth
+                      Tops</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Youth-Bottoms">Youth
+                      Bottoms</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Youth">Youth
+                      Gifts</a>
+                  </li>
+                </ul>
+                <ul class="list-unstyled" id="kids-nav">
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Kids-Hats">Kids
+                      Hats</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Winter-Wear">Kids
+                      Winter
+                      Wear</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Youth">Kids
+                      Under Armour</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Made-in-the-USA">Kids
+                      Made in
+                      U.S.A.</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Shop-by-Brand">Shop by Brand</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Badgers-Sports">Shop by Sport</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- col-megamenu.// -->
+            </div>
+            <div class="col-md-2">
+              <div class="col-megamenu">
+                <h2 class="nav-title"><a href="https://www.uwbookstore.com/Under-Armour">Under
+                    Armour</a></h2>
+                <ul class="list-unstyled" id="ua-nav">
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Mens">Men's</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Womens">Women's</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Youth">Youth</a>
+                  </li>
+                  <!-- <li>
+                                                            <a
+                                                                href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Official-On-Field-Collection">Official
+                                                                On-Field Collection</a>
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Headwear">Headwear</a>
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Storm">Storm</a>
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Coldgear">cold°gear</a>
+                                                        </li>
+                                                        <li>
+                                                            <a
+                                                                href="https://www.uwbookstore.com/Wisconsin-Badgers/Under-Armour/Heatgear">heat°gear</a>
+                                                        </li> -->
+                </ul>
+                <h2 class="nav-title"><a href="https://www.uwbookstore.com/Headwear">Headwear</a>
+                </h2>
+                <ul class="list-unstyled" id="hat-nav">
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Caps-and-Visors">Caps
+                      &amp;
+                      Visors</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Womens-Hats">Women's
+                      Hats</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Kids-Hats">Kid's
+                      Hats</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Winter-Hats-and-Accessories">Winter
+                      Hats &amp; Accessories</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Cheeseheads">Cheeseheads</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Bucket-Hats-and-Fedoras">Bucket
+                      Hats &amp; Fedoras</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Shop-by-Brand">Shop by
+                      Brand</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- col-megamenu.// -->
+            </div>
+            <!-- end col-3 -->
+            <div class="col-md-2">
+              <div class="col-megamenu">
+                <h2 class="nav-title"><a href="https://www.uwbookstore.com/Clearance-Items">Clearance Items</a>
+                </h2>
+                <ul class="list-unstyled" id="clearance-nav">
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Clearance-Items">Men's</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Clearance-Items">Women's</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Childrens/Clearance-Items">Kid's</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Clearance-Items">Badger
+                      Gifts</a>
+                  </li>
+                </ul>
+                <h2 class="title">
+                  <a href="https://www.uwbookstore.com/Shop-by-Brand">Shop by Brand</a>
+                </h2>
+                <h2 class="title">
+                  <a href="https://www.uwbookstore.com/Shop-by-School">Shop by School</a>
+                </h2>
+                <h2 class="title">
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Dairyland-Gifts">Dairyland
+                    Gifts</a>
+                </h2>
+                <h2 class="title">
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/American-Family">AmFam
+                    Championship</a>
+                </h2>
+                <h2 class="nav-title">
+                  <a href="https://www.uwbookstore.com/Badgers-Sports">Shop by Sport</a>
+                </h2>
+                <ul class="list-unstyled" id="sport-nav">
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Basketball">Basketball</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Football">Football</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Hockey">Hockey</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Golf">Golf</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Volleyball">Volleyball</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Wrestling">Wrestling</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Soccer">Soccer</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Other-Sports">Other
+                      Sports</a>
+                  </li>
+                </ul>
+                <ol class="list-unstyled">
+                  <li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Brewers-and-Bucks">Brewers
+                      &amp;
+                      Bucks</a></li>
+                </ol>
+              </div>
+              <!-- col-megamenu.// -->
+            </div>
+            <!-- end col-3 -->
+          </div>
+          <!-- end row -->
+        </div>
+      </li>
+      <li class="nav-item dropdown has-megamenu">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Gifts</a>
+        <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+          <div class="row">
+            <div class="col-md-2 offset-md-2">
+              <div class="col-megamenu">
+                <h2 class="nav-title">
+                  <a href="https://www.uwbookstore.com/Badger-Gifts">Bags &amp; Wallets</a>
+                </h2>
+                <ul class="list-unstyled" id="bag-nav">
                   <li>
                     <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Backpacks">Backpacks</a>
                   </li>
                   <li>
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Study-Aids/BarCharts/">BarCharts</a>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Totes-and-Purses">Totes
+                      &amp; Purses</a>
                   </li>
                   <li>
-                    <a href="https://www.uwbookstore.com/Tech">School Tech</a>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Wallets-and-ID-Holders">Wallets
+                      &amp; ID Holders</a>
+                  </li>
+                </ul>
+                <h2 class="nav-title">
+                  <a href="https://www.uwbookstore.com/Badger-Gifts">Drinkware</a>
+                </h2>
+                <ul class="list-unstyled" id="drink-nav">
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Barware">Barware</a>
                   </li>
                   <li>
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Dorm-Accessories">Dorm
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Mugs">Mugs</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Travel-Mugs-and-Water-Bottles">Travel
+                      Mugs/Water Bottles</a>
+                  </li>
+                </ul>
+                <h2 class="nav-title">
+                  <a href="https://www.mlahart.com/Wisconsin?leadsource=7524">Fine Gifts by
+                    M.LaHart &amp; Co</a>
+                </h2>
+                <ul class="list-unstyled" id="fineGift-nav">
+                  <li>
+                    <a href="https://www.mlahart.com/Wisconsin/Wisconsin-TAG-Heuer?leadsource=7524" target="_blank">Tag
+                      Heuer®
+                      Watches</a>
+                  </li>
+                  <li>
+                    <a href="https://www.mlahart.com/Wisconsin/Wisconsin-MOVADO?leadsource=7524" target="_blank">Movado
+                      Watches</a>
+                  </li>
+                  <li>
+                    <a href="https://www.mlahart.com/Wisconsin/Wisconsin-Montblanc?leadsource=7524"
+                      target="_blank">Montblanc™
+                      Writing Instruments</a>
+                  </li>
+                  <li>
+                    <a href="https://www.mlahart.com/Wisconsin/Wisconsin-Simon-Pearce?leadsource=7524"
+                      target="_blank">Simon
+                      Pearce Crystal Glassware</a>
+                  </li>
+                </ul>
+                <h2 class="nav-title">
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Kyle-Cavan">Jewelry by Kyle
+                    Cavan</a>
+                </h2>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="col-megamenu">
+                <h2 class="nav-title">
+                  <a href="https://www.uwbookstore.com/Badger-Gifts">Home</a>
+                </h2>
+                <ul class="list-unstyled" id="home-nav">
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Banners-and-Flags">Banners
+                      &amp; Flags</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Bed-and-Bath">Bed
+                      &amp;
+                      Bath</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Blankets-and-Rugs">Blankets
+                      &amp; Rugs</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/For-the-Wall">For
+                      The
+                      Wall</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Kitchen-and-Dining">Kitchen
+                      &amp; Dining</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Patio-and-Outdoor">Patio
+                      &amp; Outdoor</a>
+                  </li>
+                </ul>
+                <h2 class="nav-title">
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tailgate-Gear">Tailgate</a>
+                </h2>
+                <ul class="list-unstyled" id="tailgate-nav">
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Balls-Pucks-Helmets">Balls,
+                      Pucks, &amp; Helmets</a>
+                  </li>
+                  <li class="submenu__item dup-dn">
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Banners-and-Flags">Banners
+                      &amp; Flags</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Hair-Accessories">Hair
                       Accessories</a>
                   </li>
                   <li>
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Engineering-Supplies">Engineering
-                      Supplies</a>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Rain-Gear">Rain
+                      Gear</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Tailgate-Gear">Tailgate
+                      Gear</a>
+                  </li>
+                </ul>
+                <h2 class="nav-title">
+                  <a href="#">Kid's Gifts</a>
+                </h2>
+                <ul class="list-unstyled" id="kidsGift-nav">
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Infant">Infant
+                      Gifts</a>
+                  </li>
+                  <li class="submenu__item dup-dn">
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Toddler">Toddler
+                      Gifts</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Youth">Youth
+                      Gifts</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="col-megamenu-no-header">
+                <ul class="list-unstyled" id="gift1-nav">
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Alumni">Alumni</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/American-Family">AmFam
+                      Championship</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Badger-Pets">Badger
+                      Pets</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Brewers-and-Bucks">Brewers
+                      &amp;
+                      Bucks</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Books">Books</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Buckys-On-Parade">Bucky
+                      on
+                      Parade</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Car-Accessories">Car
+                      Accessories</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Cheeseheads">Cheeseheads</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Clearance-Items">Clearance
+                      Items</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Dairyland-Gifts">Dairyland
+                      Gifts</a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Decals-Patches-Stickers">Decals/Patches/Stickers</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Diploma-Frames">Diploma Frames</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Electronic-Accessories">Electronic
+                      Accessories</a>
                   </li>
                   <li>
                     <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Face-Masks">Face
                       Masks</a>
                   </li>
                   <li>
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Index-Cards">Index
-                      Cards</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Miscellaneous-Supplies">Miscellaneous
-                      Supplies</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Notebooks-Pads">Spirals,
-                      Notebooks,
-                      &amp; Pads</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Organizers-Ring-Binders">Organizers
-                      &amp; Ring Binders</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Paper">Paper</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Planners-Record-Books">Planners
-                      &amp; Record Books</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Writing-Supplies">Writing
-                      Supplies</a>
+                    <a href="https://www.uwbookstore.com/Gift-Cards">Gift Cards</a>
                   </li>
                 </ul>
               </div>
-              <div class="col-sm-6 mobi-hide">
-                <img data-src="https://i.univbkstr.com/images/landing/schoolSupplies.jpg"
-                  alt="Dorm &amp; School Supplies" class="img-responsive lazyload">
-              </div>
             </div>
-            <div class="row mt-2">
-              <div class="col-md-12 view-all"><a href="https://www.uwbookstore.com/School-Supplies">View
-                  All Dorm &amp; School
-                  Supplies</a></div>
-            </div>
-          </div>
-        </li>
-        <li class="dropdown has-megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Textbooks &amp; Course
-            Materials</a>
-          <div class="dropdown-menu megamenu" role="menu">
-            <div class="row">
-              <div class="col-md-2 col-md-offset-1 col-lg-offset-2">
-                <ul class="list-unstyled">
+            <div class="col-md-2">
+              <div class="col-megamenu-no-header">
+                <ul class="list-unstyled" id="gift2-nav">
                   <li>
-                    <a href="https://text.uwbookstore.com/SelectTermDept">Compare Pricing
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Golf">Golf
+                      Items</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Greek-Life">Greek
+                      Life</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Health-and-Beauty">Health
                       &amp;
-                      Order</a>
+                      Beauty</a>
                   </li>
                   <li>
-                    <a href="https://www.uwbookstore.com/Price-Match">Price Match
-                      Guarantee</a>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Holiday">Holiday
+                      Items</a>
                   </li>
                   <li>
-                    <a href="https://www.uwbookstore.com/School-Supplies">School
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Jewelry-Watches-Pins">Jewelry,
+                      Watches, &amp; Pins</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Keychains">Key
+                      Chains</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Lanyards">Lanyards</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Magnets">Magnets</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Office-Supplies-Furnishings">Office
+                      Supplies &amp; Furnishings</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Party-Supplies">Party
                       Supplies</a>
                   </li>
                   <li>
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Dorm-Accessories">Dorm
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Plush">Plush</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Shop-by-Brand">Shop by Brand</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Toys-and-Games">Toys
+                      &amp;
+                      Games</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Winter-Hats-and-Accessories">Winter
+                      Hats &amp; Accessories</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item dropdown has-megamenu">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">School Supplies</a>
+        <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+          <div class="row">
+            <div class="col-md-2 offset-md-2">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Art-Kits">Art
+                    Kits</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Backpacks">Backpacks</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Study-Aids/BarCharts/">BarCharts</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Tech">School Tech</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Dorm-Accessories">Dorm
+                    Accessories</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Engineering-Supplies">Engineering
+                    Supplies</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Face-Masks">Face
+                    Masks</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Index-Cards">Index
+                    Cards</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Miscellaneous-Supplies">Miscellaneous
+                    Supplies</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Notebooks-Pads">Spirals,
+                    Notebooks,
+                    &amp; Pads</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Organizers-Ring-Binders">Organizers
+                    &amp; Ring Binders</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Paper">Paper</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Planners-Record-Books">Planners
+                    &amp; Record Books</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Writing-Supplies">Writing
+                    Supplies</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-6 mobi-hide">
+              <img data-src="https://i.univbkstr.com/v3/img/landing/schoolSupplies.jpg" alt="Dorm &amp; School Supplies"
+                class="img-fluid lazyloaded" src="https://i.univbkstr.com/v3/img/landing/schoolSupplies.jpg">
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-12 view-all"><a href="https://www.uwbookstore.com/School-Supplies">View
+                All Dorm &amp; School
+                Supplies</a></div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item dropdown has-megamenu">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Textbooks &amp; Course Materials</a>
+        <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+          <div class="row">
+            <div class="col-md-2 offset-md-1 offset-lg-2">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="https://text.uwbookstore.com/SelectTermDept">Compare Pricing
+                    &amp;
+                    Order</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Price-Match">Price Match
+                    Guarantee</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/School-Supplies">School
+                    Supplies</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Dorm-Accessories">Dorm
+                    Accessories</a>
+                </li>
+                <li>
+                  <a href="https://text.uwbookstore.com/buyback">In Store Text Buyback</a>
+                </li>
+                <!-- <li>
+                                                  <a class="modal-open2" href="#buyback-confirm" data-toggle="modal"
+                                                      data-target="#buyback-confirm">Online Text Buyback</a>
+                                              </li> -->
+                <li class="external">
+                  <a href="https://my.wisc.edu " target="_blank" title="Opens in new tab">Check
+                    Your
+                    Schedule</a><em class="fa fa-external-link" aria-hidden="true"></em>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Textbook-Return-Policy">Textbook
+                    Return
+                    Policy</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Professor-Information">Info for
+                    Professors</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Customer-Help#online-textfaq">Textbook
+                    FAQ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-8 col-lg-6 text-center mobi-hide">
+              <div class="row">
+                <div class="col-md-4">
+                  <a href="https://www.uwbookstore.com/Price-Match">
+                    <img data-src="https://i.univbkstr.com/v3/img/pages/textbooks/priceMatch.jpg" alt="Price Match"
+                      class="img-fluid img__center lazyloaded"
+                      src="https://i.univbkstr.com/v3/img/pages/textbooks/priceMatch.jpg">
+                  </a>
+                </div>
+                <div class="col-md-4">
+                  <img alt="" data-src="https://i.univbkstr.com/v3/img/pages/textbooks/priceMatch-Model.png"
+                    class="img-fluid img__center lazyloaded"
+                    src="https://i.univbkstr.com/v3/img/pages/textbooks/priceMatch-Model.png">
+                </div>
+                <div class="col-md-4">
+                  <div class="price-match">
+                    <a href="https://text.uwbookstore.com/SelectTermDept" class="btn btn-primary menu btn-xlrg"
+                      tabindex="0"><span>Buy<br>
+                        Textbooks</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-md-12 view-all">
+              <a href="https://text.uwbookstore.com/home">Visit text.uwbookstore.com</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item dropdown has-megamenu">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tech</a>
+        <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+          <div class="row">
+            <div class="col-md-3" id="technav-1">
+              <div class="col-megamenu">
+                <h2 class="nav-title">
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops">Laptops</a>
+                </h2>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook">Apple</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop">Dell</a>
+                  </li>
+                  <!-- <li>
+                                                                                                                                  <a class="modal-open" href="#coming-soon" data-toggle="modal"
+                                                                                                                                      data-target="#coming-soon">Microsoft
+                                                                                                                                      Surface</a>
+                                                                                                                              </li> -->
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3" id="technav-2">
+              <div class="col-megamenu">
+                <h2 class="nav-title">
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Apple-Products">Apple</a>
+                </h2>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Apple-Products"
+                      class="submenu__item--parent">Apple</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook">MacBook</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-Desktop">Desktop</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-iPads">iPads</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-AirPods">AirPods</a>
+                  </li>
+                  <!-- <li>
+                                                      <a
+                                                          href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-Beats">Beats</a>
+                                                  </li> -->
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-Watch">Apple
+                      Watch</a>
+                  </li>
+                  <!-- <li>
+                                                                                                                                  <a class="modal-open" href="#coming-soon" data-toggle="modal"
+                                                                                                                                      data-target="#coming-soon">Apple
+                                                                                                                                      Watch Accessories</a>
+                                                                                                                              </li> -->
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare">AppleCare+</a>
+                  </li>
+                  <li>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-Accessories">Apple
                       Accessories</a>
                   </li>
-                  <li>
-                    <a href="https://text.uwbookstore.com/buyback">In Store Text Buyback</a>
-                  </li>
-                  <!-- <li>
-                                        <a class="modal-open2" href="#buyback-confirm" data-toggle="modal"
-                                            data-target="#buyback-confirm">Online Text Buyback</a>
-                                    </li> -->
-                  <li class="external">
-                    <a href="https://my.wisc.edu " target="_blank" title="Opens in new tab">Check
-                      Your
-                      Schedule</a><em class="fa fa-external-link" aria-hidden="true"></em>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Textbook-Return-Policy">Textbook
-                      Return
-                      Policy</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Professor-Information">Info for
-                      Professors</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Customer-Help#online-textfaq">Textbook
-                      FAQ</a>
-                  </li>
                 </ul>
               </div>
-              <div class="col-md-8 col-lg-6 text-center mobi-hide">
-                <div class="row">
-                  <div class="col-md-4">
-                    <a href="https://www.uwbookstore.com/Price-Match">
-                      <img data-src="https://i.univbkstr.com/text/images/priceMatch.png" alt="Price Match"
-                        class="img-responsive img__center lazyload">
-                    </a>
-                  </div>
-                  <div class="col-md-4">
-                    <img alt="" data-src="https://i.univbkstr.com/text/images/priceMatch-Model.png"
-                      class="img-responsive img__center lazyload">
-                  </div>
-                  <div class="col-md-4">
-                    <div class="price-match">
-                      <a href="https://text.uwbookstore.com/SelectTermDept"
-                        class="btn btn-primary menu btn-xlrg"><span>Buy<br>
-                          Textbooks</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div class="row mt-2">
-              <div class="col-md-12 view-all">
-                <a href="https://text.uwbookstore.com/home">Visit text.uwbookstore.com</a>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="dropdown-menu megamenu" role="menu">
-            <div class="row">
-                <div class="col-md-2 col-md-offset-1 col-lg-offset-2">
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="https://text.uwbookstore.com/SelectTermDept">Compare Pricing
-                                &amp;
-                                Order</a>
-                        </li>
-                        <li>
-                            <a href="https://www.uwbookstore.com/Price-Match">Price Match
-                                Guarantee</a>
-                        </li>
-                        <li>
-                            <a href="https://www.uwbookstore.com/School-Supplies">School
-                                Supplies</a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Dorm-Accessories">Dorm
-                                Accessories</a>
-                        </li>
-                        <li>
-                            <a href="https://text.uwbookstore.com/buyback">In Store Text Buyback</a>
-                        </li>
-                        <li>
-                            <a class="modal-open2" href="#buyback-confirm" data-toggle="modal"
-                                data-target="#buyback-confirm">Online Text Buyback</a>
-                        </li>
-                        <li class="external">
-                            <a href="https://my.wisc.edu " target="_blank" title="Opens in new tab">Check
-                                Your
-                                Schedule</a><em class="fa fa-external-link" aria-hidden="true"></em>
-                        </li>
-                        <li>
-                            <a href="https://www.uwbookstore.com/Textbook-Return-Policy">Textbook
-                                Return
-                                Policy</a>
-                        </li>
-                        <li>
-                            <a href="https://www.uwbookstore.com/Professor-Information">Info for
-                                Professors</a>
-                        </li>
-                        <li>
-                            <a href="https://www.uwbookstore.com/Customer-Help#online-textfaq">Textbook
-                                FAQ</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-8 text-center">
-                    <div class="row">
-                        <div class="col-md-9 shipping-banner" style="text-align: center !important;">
-                            <div class="sale-banner mb-2" style="text-align: center !important;">Get
-                                Free Ground Shipping<br>
-                                on Spring Semester Textbooks!</div>
-                            <p class="lg-text" style="text-align: center !important; color: #4d4d4d;">No
-                                promo code
-                                needed<br class="dt-hide">
-                                <span>·</span> Valid
-                                thru January 31
-                            </p>
-                            <a href="https://text.uwbookstore.com/SelectTermDept" class="btn-xlrg btn-blue"
-                                style="text-decoration: none;">buy
-                                textbooks</a>
-                            <p class="small-disclaimer"
-                                style="text-align: center !important; color: #4d4d4d;">Free
-                                ground shipping on textbooks at
-                                text.uwbookstore.com. Choose free shipping
-                                method at checkout. No promo code needed. Incomplete orders will not be
-                                shipped until the week of January 18<sup>th</sup> to avoid multiple
-                                shipments.<br>
-                                Free ground shipping
-                                to a
-                                contiguous U.S.delivery address only. Through 01/31/21 @ 11:59pmCT.</p>
-                        </div>
-                        <div class="col-md-3 mobi-hide">
-                            <div>
-                                <img alt="Price Match Model"
-                                    data-src="https://i.univbkstr.com/text/images/priceMatch-Model-2.png"
-                                    class="img-responsive center-block lazyload">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-md-12 view-all">
-                    <a href="https://text.uwbookstore.com/home">Visit text.uwbookstore.com</a>
-                </div>
-            </div>
-        </div> -->
-        </li>
-        <li class="dropdown has-megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Tech</a>
-          <div class="dropdown-menu megamenu" role="menu">
-            <div class="row">
-              <div class="col-md-3" id="technav-1">
-                <div class="col-megamenu">
-                  <h2 class="nav-title">
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops">Laptops</a>
-                  </h2>
-                  <ul class="list-unstyled">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook">Apple</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop">Dell</a>
-                    </li>
-                    <!-- <li>
-                                                                                                                        <a class="modal-open" href="#coming-soon" data-toggle="modal"
-                                                                                                                            data-target="#coming-soon">Microsoft
-                                                                                                                            Surface</a>
-                                                                                                                    </li> -->
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-3" id="technav-2">
-                <div class="col-megamenu">
-                  <h2 class="nav-title">
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Apple-Products">Apple</a>
-                  </h2>
-                  <ul class="list-unstyled">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Apple-Products"
-                        class="submenu__item--parent">Apple</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook">MacBook</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-Desktop">Desktop</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-iPads">iPads</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-AirPods">AirPods</a>
-                    </li>
-                    <!-- <li>
-                                            <a
-                                                href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-Beats">Beats</a>
-                                        </li> -->
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-Watch">Apple
-                        Watch</a>
-                    </li>
-                    <!-- <li>
-                                                                                                                        <a class="modal-open" href="#coming-soon" data-toggle="modal"
-                                                                                                                            data-target="#coming-soon">Apple
-                                                                                                                            Watch Accessories</a>
-                                                                                                                    </li> -->
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare">AppleCare+</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-Accessories">Apple
-                        Accessories</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-3" id="technav-3">
-                <div class="col-megamenu">
-                  <h2 class="nav-title"><a href="#">Accessories</a></h2>
-                  <ul class="list-unstyled">
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Calculators">Calculators</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Headphones-and-Speakers">Headphones
-                        &amp; Speakers</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Power-and-Chargers">Power
-                        &amp;
-                        Chargers</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Cases-and-Covers">Cases
-                        &amp;
-                        Covers</a>
-                    </li>
-                    <!-- <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Phone-Cases">Phone
-                        Cases</a>
-                    </li> -->
-                    <li>
-                      <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Tech/Cables-and-Adapters">Cables
-                        &amp;
-                        Adapters</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Storage-and-Drives">Storage
-                        &amp;
-                        Drives</a>
-                    </li>
-                    <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Misc-Accessories">Misc.
-                        Accessories</a>
-                    </li>
-                    <!-- <li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Back-to-School-Beats">Back to School Beats</a></li> -->
-                  </ul>
-                </div>
-              </div>
-              <div id="graphite" class="col-md-3">
-                <a href="https://www.uwbookstore.com/Tech#graphite-block">
-                  <img data-src="https://i.univbkstr.com/global/img/tech/graphiteLogo.jpg" alt="Graphite Service at UBS"
-                    class="img-responsive center-block lazyload">
-                </a>
-              </div>
-            </div>
-            <div class="row mt-2">
-              <div class="col-md-12 view-all">
-                <a href="https://www.uwbookstore.com/Tech">View All Tech</a>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li><a href="https://www.uwbookstore.com/Gift-Cards">Gift Cards</a></li>
-        <li class="dropdown has-megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-            <!-- Graduation -->Cap &amp; Gown
-          </a>
-          <div class="dropdown-menu megamenu" role="menu">
-            <div class="row">
-              <div class="col-md-3 col-md-offset-1">
-                <ul class="list-unstyled">
-                  <!-- <li>
-                    <a href="https://www.uwbookstore.com/May-Graduation-Timeline" class="btn btn-primary">
-                      Reserve Your Cap &amp; Gown
-                    </a>&nbsp;
-                  </li> -->
-                  <li>
-                    <a href="https://www.commencement.wisc.edu/">commencement.wisc.edu</a>
-                  </li>
-                  <li class="item-hdr">
-                    Cap &amp; Gown Rental/Purchase
-                  </li>
-                  <li>
-                    <!-- <a href="http://colleges.herffjones.com/college/_uwisconsinmadison/" target="_blank">Rental</a> -->
-                    <!-- <a href="https://www.uwbookstore.com/May-Graduation-Timeline">Rental</a> -->
-                    <a href="https://www.uwbookstore.com/December-Graduation-Timeline">Rental</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Cap-and-Gown-Purchase">Purchase</a>
-                  </li>
-                  <li>
-                    <a href="https://i.univbkstr.com/downloads/DoctorSalePackage.pdf" target="_blank">The Classic
-                      Gown
-                      Sale Package</a>
-                  </li>
-                  <li>
-                    <a href="https://i.univbkstr.com/downloads/OfficialSchoolRegaliaPackage.pdf" target="_blank">The
-                      Wisconsin Red Gown</a>
-                  </li>
-                  <li>
-                    <a href="https://i.univbkstr.com/downloads/BlackRegaliaPackage.pdf" target="_blank">The
-                      Wisconsin
-                      Doctoral Gown</a>
-                  </li>
-                  <li class="item-hdr">
-                    Graduation Announcements
-                  </li>
-                  <li>
-                    <a href="https://www.cbgrad.com">C.B. Announcements</a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.jostens.com/apps/store/customer/1116914/University-of-Wisconsin-Madison/?error=true&amp;errorFile=no-group-error-specific.htm&amp;errorGroupName=Graduation+Announcements">Jostens</a>
-                  </li>
-                  <li>
-                    <a href="https://collegegrad.herffjones.com/">Herff Jones</a>
-                  </li>
-                  <li class="item-hdr">Class Rings</li>
-                  <li>
-                    <a
-                      href="https://www.jostens.com/apps/store/productBrowse/1116914/University-of-Wisconsin-Madison/Class-Rings/colringsub_1116914/CATALOG_COLLEGE/">Jostens</a>
-                  </li>
-                  <li>
-                    <a href="http://colleges.herffjones.com/college/_uwisconsinmadison/">Herff
-                      Jones</a>
-                  </li>
-                  <li class="item-hdr">
-                    Graduation Gifts
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.jostens.com/apps/store/productBrowse/1116914/University-of-Wisconsin-Madison/Uploma/972998111/CATALOG_REPOSITORY/">Uploma™</a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Alumni/Herff-Jones-The-Stole-of-Gratitude-Black">The
-                      Stole of Gratitude</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Alumni">Alumni
-                      Apparel (Men)</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Alumni">Alumni
-                      Apparel (Women)</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Alumni">Alumni
-                      Gifts</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Diploma-Frames">Diploma Frames</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-md-7">
-                <div class="row py-3">
-                  <div class="col-md-12 text-center">
-                    <!-- <a href="https://www.uwbookstore.com/May-Graduation-Timeline" class="btn-x-lg page-scroll mb-3"
-                      style="text-align: center !important;">2023 - Rent Your Cap &amp; Gown</a> -->
-                    <a href="https://www.uwbookstore.com/December-Graduation-Timeline" class="btn-x-lg page-scroll mb-3"
-                      style="text-align: center !important;">2023 - Rent Your Cap &amp; Gown</a>
-                  </div>
-                </div>
-                <img alt="Congratulations, University of Wisconsin-Madison Graduates!" style="margin: 0px auto;"
-                  data-src="https://i.univbkstr.com/images/landing/graduation/splashImage-2.png"
-                  class="img-responsive lazyload">
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="dropdown has-megamenu">
-          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-            About <span class="visually-hidden">UBS</span>
-          </a>
-          <div class="dropdown-menu megamenu" role="menu">
-            <div class="row">
-              <div class="col-md-2 col-md-offset-2">
+            <div class="col-md-3" id="technav-3">
+              <div class="col-megamenu">
+                <h2 class="nav-title"><a href="#">Accessories</a></h2>
                 <ul class="list-unstyled">
                   <li>
-                    <a href="https://www.uwbookstore.com/StoreAbout">About Us</a>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Calculators">Calculators</a>
                   </li>
                   <li>
-                    <a href="https://www.uwbookstore.com/StoreHours">Location &amp;
-                      Hours</a>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Headphones-and-Speakers">Headphones
+                      &amp; Speakers</a>
                   </li>
                   <li>
-                    <a href="https://www.uwbookstore.com/Contests-Events">Contests</a>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Power-and-Chargers">Power
+                      &amp;
+                      Chargers</a>
                   </li>
                   <li>
-                    <a href="https://www.uwbookstore.com/Book-Store-Deals">Book Store Deals</a>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Cases-and-Covers">Cases
+                      &amp;
+                      Covers</a>
                   </li>
                   <!-- <li>
-                                                                    <a href="https://www.uwbookstore.com/ArtClub">Art Club</a>
-                                                                </li> -->
+                                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Phone-Cases">Phone
+                                  Cases</a>
+                              </li> -->
                   <li>
-                    <a href="https://www.uwbookstore.com/Monthly-Coupons">Monthly
-                      Coupons</a>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Cables-and-Adapters">Cables
+                      &amp;
+                      Adapters</a>
                   </li>
                   <li>
-                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/General-Books/Scandinavian-Studies">Scandinavian
-                      Studies Books</a>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Storage-and-Drives">Storage
+                      &amp;
+                      Drives</a>
                   </li>
                   <li>
-                    <a href="https://www.uwbookstore.com/Framing">Custom Framing</a>
+                    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Misc-Accessories">Misc.
+                      Accessories</a>
                   </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Campus-Shipping-Center">Campus
-                      Shipping Center</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Customer-Help#return">Exchanges/Returns</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Contact">Contact Us</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Customer-Help">Customer Help</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Our-Models">Our Models</a>
-                  </li>
-                  <li>
-                    <a href="https://www.uwbookstore.com/Employment">Employment</a>
-                  </li>
+                  <!-- <li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Back-to-School-Beats">Back to School Beats</a></li> -->
                 </ul>
               </div>
-              <div class="col-sm-6 mobi-hide">
-                <img alt="" data-src="https://i.univbkstr.com/images/landing/storeFront.jpg"
-                  class="img-responsive lazyload">
-              </div>
+            </div>
+            <div id="graphite" class="col-md-3">
+              <a href="https://www.uwbookstore.com/Tech#graphite-block">
+                <img data-src="https://i.univbkstr.com/v3/img/pages/tech/graphiteLogo.jpg" alt="Graphite Service at UBS"
+                  class="img-fluid center-block ls-is-cached lazyloaded"
+                  src="https://i.univbkstr.com/v3/img/pages/tech/graphiteLogo.jpg">
+              </a>
             </div>
           </div>
-        </li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
+          <div class="row mt-2">
+            <div class="col-md-12 view-all">
+              <a href="https://www.uwbookstore.com/Tech">View All Tech</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="https://www.uwbookstore.com/Gift-Cards">Gift Cards</a> </li>
+      <li class="nav-item dropdown has-megamenu">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Cap &amp; Gown</a>
+        <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+          <div class="row">
+            <div class="col-md-3 offset-md-1">
+              <ul class="list-unstyled">
+                <!-- <li>
+                              <a href="https://www.uwbookstore.com/May-Graduation-Timeline" class="btn btn-primary">
+                                Reserve Your Cap &amp; Gown
+                              </a>&nbsp;
+                            </li> -->
+                <li>
+                  <a href="https://www.commencement.wisc.edu/">commencement.wisc.edu</a>
+                </li>
+                <li class="item-hdr">
+                  Cap &amp; Gown Rental/Purchase
+                </li>
+                <li>
+                  <!-- <a href="http://colleges.herffjones.com/college/_uwisconsinmadison/" target="_blank">Rental</a> -->
+                  <!-- <a href="https://www.uwbookstore.com/May-Graduation-Timeline">Rental</a> -->
+                  <a href="https://www.uwbookstore.com/December-Graduation-Timeline">Rental</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Cap-and-Gown-Purchase">Purchase</a>
+                </li>
+                <li>
+                  <a href="https://i.univbkstr.com/downloads/DoctorSalePackage.pdf" target="_blank">The Classic
+                    Gown
+                    Sale Package</a>
+                </li>
+                <li>
+                  <a href="https://i.univbkstr.com/downloads/OfficialSchoolRegaliaPackage.pdf" target="_blank">The
+                    Wisconsin Red Gown</a>
+                </li>
+                <li>
+                  <a href="https://i.univbkstr.com/downloads/BlackRegaliaPackage.pdf" target="_blank">The
+                    Wisconsin
+                    Doctoral Gown</a>
+                </li>
+                <li class="item-hdr">
+                  Graduation Announcements
+                </li>
+                <li>
+                  <a href="https://www.cbgrad.com">C.B. Announcements</a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.jostens.com/apps/store/customer/1116914/University-of-Wisconsin-Madison/?error=true&amp;errorFile=no-group-error-specific.htm&amp;errorGroupName=Graduation+Announcements">Jostens</a>
+                </li>
+                <li>
+                  <a href="https://collegegrad.herffjones.com/">Herff Jones</a>
+                </li>
+                <li class="item-hdr">Class Rings</li>
+                <li>
+                  <a
+                    href="https://www.jostens.com/apps/store/productBrowse/1116914/University-of-Wisconsin-Madison/Class-Rings/colringsub_1116914/CATALOG_COLLEGE/">Jostens</a>
+                </li>
+                <li>
+                  <a href="http://colleges.herffjones.com/college/_uwisconsinmadison/">Herff
+                    Jones</a>
+                </li>
+                <li class="item-hdr">
+                  Graduation Gifts
+                </li>
+                <li>
+                  <a
+                    href="https://www.jostens.com/apps/store/productBrowse/1116914/University-of-Wisconsin-Madison/Uploma/972998111/CATALOG_REPOSITORY/">Uploma™</a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Alumni/Herff-Jones-The-Stole-of-Gratitude-Black">The
+                    Stole of Gratitude</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Alumni">Alumni
+                    Apparel (Men)</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Alumni">Alumni
+                    Apparel (Women)</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Alumni">Alumni
+                    Gifts</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Diploma-Frames">Diploma Frames</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-7 text-center">
+              <div class="row py-3">
+                <div class="col-md-12">
+                  <!-- <a href="https://www.uwbookstore.com/May-Graduation-Timeline" class="btn-x-lg page-scroll mb-3"
+                                style="text-align: center !important;">2023 - Rent Your Cap &amp; Gown</a> -->
+                  <a href="https://www.uwbookstore.com/December-Graduation-Timeline" class="btn-x-lg page-scroll mb-3"
+                    style="text-align: center !important;">2023 - Rent Your Cap &amp; Gown</a>
+                </div>
+              </div>
+              <img alt="Congratulations, University of Wisconsin-Madison Graduates!" style="margin: 0px auto;"
+                data-src="https://i.univbkstr.com/v3/img/landing/graduation/splashImage-2.png"
+                class="img-fluid lazyloaded" src="https://i.univbkstr.com/v3/img/landing/graduation/splashImage-2.png">
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item dropdown has-megamenu">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About</a>
+        <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+          <div class="row">
+            <div class="col-md-2 offset-md-2">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="https://www.uwbookstore.com/StoreAbout">About Us</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/StoreHours">Location &amp;
+                    Hours</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Contests-Events">Contests</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Book-Store-Deals">Book Store Deals</a>
+                </li>
+                <!-- <li>
+                                                                              <a href="https://www.uwbookstore.com/ArtClub">Art Club</a>
+                                                                          </li> -->
+                <li>
+                  <a href="https://www.uwbookstore.com/Monthly-Coupons">Monthly
+                    Coupons</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/General-Books/Scandinavian-Studies">Scandinavian
+                    Studies Books</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Framing">Custom Framing</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Campus-Shipping-Center">Campus
+                    Shipping Center</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Customer-Help#return">Exchanges/Returns</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Contact">Contact Us</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Customer-Help">Customer Help</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Our-Models">Our Models</a>
+                </li>
+                <li>
+                  <a href="https://www.uwbookstore.com/Employment">Employment</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-6 mobi-hide text-center">
+              <img alt="" data-src="https://i.univbkstr.com/v3/img/landing/storeFront.jpg" class="img-fluid lazyloaded"
+                src="https://i.univbkstr.com/v3/img/landing/storeFront.jpg">
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
-  <!-- /.container-fluid -->
+  <!-- navbar-collapse.// -->
+
 </nav>

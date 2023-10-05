@@ -50,6 +50,8 @@ p.merchPrice.red {
 
 .merch {
   &__card {
+    position: relative;
+    z-index: 0;
     margin-bottom: 2rem;
     justify-content: center;
 

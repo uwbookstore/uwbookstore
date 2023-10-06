@@ -149,7 +149,5 @@ inSite/app.js
 inSite/index.html
 
 /progress
-# /bs5/js
-/bs5/inSite Pages
-bs5/inSite Pages/Contests & Events.html
-bs5/inSite/inSite Pages/Home-bs3.html
+/build
+/js

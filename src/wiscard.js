@@ -28,6 +28,8 @@ $(document).on('ajaxComplete', function (event, xhr, settings) {
           $('#promo-apply').click();
       }
     });
+    // prettier-ignore
+    $('<h2 class="heading__billing">Billing Address</h2>').insertBefore('.paymentBilling-name');
   }
 });
 

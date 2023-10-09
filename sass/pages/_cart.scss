@@ -77,10 +77,21 @@ a.paymentBilling-change:active:focus {
   }
 }
 
+p.paymentBilling-studentnumber {
+  display: none;
+}
+
 h2.heading__billing {
   font-size: 2.4rem;
   text-align: center;
   margin-bottom: 1.5rem;
   padding-bottom: 5px;
   border-bottom: 1px solid $light-gray-3;
+}
+
+#coShipStudentNumber-wrapper p {
+  margin-top: -1rem;
+  padding: 1rem;
+  background-color: #fff3d9;
+  color: #646464;
 }

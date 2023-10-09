@@ -4,7 +4,7 @@ const slideToActivate = document.querySelectorAll('.divToShow');
 // const slide2ToActivate = document.getElementById("setToShow");
 
 // months are ZERO index based;
-const futureDate = new Date(Date.UTC(2023, 9, 3, 6, 0, 0));
+const futureDate = new Date(Date.UTC(2023, 9, 10, 6, 0, 0));
 
 const futureTime = futureDate.getTime();
 

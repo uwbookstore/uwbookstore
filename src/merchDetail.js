@@ -40,7 +40,7 @@ $(document).ready(function () {
     if ($('img.merchDetailImage').attr('src') === '/images/notavail.gif') {
       // No image available
       $(
-        '<img src="https://i.univbkstr.com/uwbookstore/img/no-image.jpg" data-src="holder.js/600x600?auto=yes&text=Image not available" class="merch__detail-img" alt="Image not available">'
+        '<img src="https://i.univbkstr.com/v3/img/misc/no-image.jpg" data-src="holder.js/600x600?auto=yes&text=Image not available" class="merch__detail-img" alt="Image not available">'
       ).appendTo('div#merch-imgs');
     } else {
       $(
@@ -695,8 +695,8 @@ $(document).ready(function () {
       '<div id="shipping">',
       '<h2 class="tabs__header">Shipping &amp; Handling</h2>',
       '<div class="text-center">',
-      '<img src="https://i.univbkstr.com/images/catalog/usps.png" alt="USPS Logo" class="lazyload">',
-      '<img src="https://i.univbkstr.com/images/catalog/ups.png" alt="UPS Logo" class="lazyload">',
+      '<img src="https://i.univbkstr.com/v3/img/misc/usps.png" alt="USPS Logo" class="lazyload">',
+      '<img src="https://i.univbkstr.com/v3/img/misc/ups.png" alt="UPS Logo" class="lazyload">',
       '</div>',
       '<p><strong>Methods for shipping are:</strong></p>',
       '<table class="table table-striped">',

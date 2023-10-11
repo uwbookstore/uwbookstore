@@ -36,7 +36,7 @@ button.btn-default.typeCodeOption {
 
   &.disabled {
     cursor: not-allowed;
-    background: url('https://i.univbkstr.com/ubsMain/css/images/disabled-bg.png');
+    background: url('https://i.univbkstr.com/v3/css/img/disabled-bg.png');
     background-size: 100% 100%;
     background-color: transparent;
     color: darken($dark-gray, 5%);
@@ -288,7 +288,7 @@ span.btn-default.typeSelected {
           &.disabled {
             label {
               cursor: not-allowed;
-              background: url('https://i.univbkstr.com/ubsMain/css/images/disabled-bg.png');
+              background: url('https://i.univbkstr.com/v3/css/img/disabled-bg.png');
               background-size: 100% 100%;
               background-color: transparent;
               color: rgba(100, 100, 100, 0.5);

@@ -274,7 +274,7 @@ $(document).ready(function () {
 
   if (categoryTitle.toLowerCase().substring(0, 10) === 'julia gash') {
     $(
-      '<img alt="Julia Gash" src="https://i.univbkstr.com/global/img/banners/JuliaGash.png" class="img-fluid">'
+      '<img alt="Julia Gash" src="https://i.univbkstr.com/v3/img/banners/JuliaGash.png" class="img-fluid">'
     ).insertBefore('.merch__filter');
   }
 
@@ -308,14 +308,14 @@ $(document).ready(function () {
   if (categoryTitle.toLowerCase().substring(0, 16) === 'dell laptop') {
     if (window.location.host === 'www.uwbookstore.com') {
       // $(
-      //     '<a href="https://i.univbkstr.com/downloads/4746_Dell_BTS_POP_Kit_2022_RETAIL_POSTCARD_EDITABLE.pdf" target="_blank"><img src="https://i.univbkstr.com/global/img/banners/Dell-Rebate-2022.jpg" class="mobi-hide img-fluid img__center" alt="Student Rebate"><img src="https://i.univbkstr.com/global/img/banners/Dell-Rebate-2022-sm.jpg" class="dt-hide img-fluid img__center" alt="Student Rebate"><div class="visually-hidden">STUDENT OFFER. $100 Rebate - WITH THE PURCHASE OF A DELL PC $499+. Offer valid 05/01/2022 - 10/31/2022</div></a>'
+      //     '<a href="https://i.univbkstr.com/downloads/4746_Dell_BTS_POP_Kit_2022_RETAIL_POSTCARD_EDITABLE.pdf" target="_blank"><img src="https://i.univbkstr.com/v3/img/banners/Dell-Rebate-2021.jpg" class="mobi-hide img-fluid img__center" alt="Student Rebate"><img src="https://i.univbkstr.com/v3/img/banners/Dell-Rebate-2021-sm.jpg" class="dt-hide img-fluid img__center" alt="Student Rebate"><div class="visually-hidden">STUDENT OFFER. $100 Rebate - WITH THE PURCHASE OF A DELL PC $499+. Offer valid 05/01/2022 - 10/31/2022</div></a>'
       // ).insertBefore(".merch__filter");
       $(
         '<ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li></ul>'
       ).insertAfter('.merch__filter');
     } else {
       // $(
-      //     '<a href="https://i.univbkstr.com/downloads/4746_Dell_BTS_POP_Kit_2022_RETAIL_POSTCARD_EDITABLE.pdf" target="_blank"><img src="https://i.univbkstr.com/global/img/banners/Dell-Rebate-2022.jpg" class="mobi-hide img-fluid img__center" alt="Student Rebate"><img src="https://i.univbkstr.com/global/img/banners/Dell-Rebate-2022-sm.jpg" class="dt-hide img-fluid img__center" alt="Student Rebate"><div class="visually-hidden">STUDENT OFFER. $100 Rebate - OF A DELL PC $499+ OF A DELL PC $499+. Offer valid 05/01/2022 - 10/31/2022</div></a>'
+      //     '<a href="https://i.univbkstr.com/downloads/4746_Dell_BTS_POP_Kit_2022_RETAIL_POSTCARD_EDITABLE.pdf" target="_blank"><img src="https://i.univbkstr.com/v3/img/banners/Dell-Rebate-2021.jpg" class="mobi-hide img-fluid img__center" alt="Student Rebate"><img src="https://i.univbkstr.com/v3/img/banners/Dell-Rebate-2021-sm.jpg" class="dt-hide img-fluid img__center" alt="Student Rebate"><div class="visually-hidden">STUDENT OFFER. $100 Rebate - OF A DELL PC $499+ OF A DELL PC $499+. Offer valid 05/01/2022 - 10/31/2022</div></a>'
       // ).insertBefore(".merch__filter");
       $(
         '<ul class="page-nav"><li><a href="https://text.uwbookstore.com/MerchList?ID=28462" class="btn btn-primary">All Laptops</a></li><li><a href="https://text.uwbookstore.com/MerchList?ID=28367" class="btn btn-primary">MacBooks</a></li></ul>'
@@ -387,7 +387,7 @@ $(document).ready(function () {
 
   if (categoryTitle.toLowerCase().substring(0, 9) === 'higher ed') {
     $(
-      '<img class="img-fluid mobi-hide mx-auto mb-4" src="https://i.univbkstr.com/global/img/banners/higherEducation.jpg" alt="Free Tote and Cheet Sheet&reg; with any $35+ Purchase. Available for a limited time. One per purchase. While supplies last." /><img class="img-fluid dt-hide mx-auto" src="https://i.univbkstr.com/global/img/banners/higherEducation-sm.jpg" alt="Free Tote and Cheet Sheet&reg; with any $35+ Purchase. Available for a limited time. One per purchase. While supplies last." />'
+      '<img class="img-fluid mobi-hide mx-auto mb-4" src="https://i.univbkstr.com/v3/img/banners/higherEducation.jpg" alt="Free Tote and Cheet Sheet&reg; with any $35+ Purchase. Available for a limited time. One per purchase. While supplies last." /><img class="img-fluid dt-hide mx-auto" src="https://i.univbkstr.com/v3/img/banners/higherEducation-sm.jpg" alt="Free Tote and Cheet Sheet&reg; with any $35+ Purchase. Available for a limited time. One per purchase. While supplies last." />'
     ).insertBefore('.merch__filter');
   }
 

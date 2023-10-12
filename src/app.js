@@ -343,20 +343,38 @@ $(document).ready(function () {
   })(jQuery);
 
   /* Account Options */
-  if ($('#h_nav a:contains("Log Out")').length) {
-    // console.log("You can view your acount or logout!");
-    $('#login').html(
-      [
-        '<a href="https://www.uwbookstore.com/customeraccount?s=www.uwbookstore.com"><span>My Account</span> <em class="fa fa-user"></em></a> <span class="logout"> / <a href="https://www.uwbookstore.com/logout">logout</a></span>',
-      ].join('\n')
-    );
-  } else {
-    // console.log("You can log in...");
-    $('#login').html(
-      [
-        '<a href="https://www.uwbookstore.com/login"><span>login</span> <em class="fa fa-user"></em></a>',
-      ].join('\n')
-    );
+  if (baseUrl === 'https://www.uwbookstore.com/') {
+    if ($('#h_nav a:contains("Log Out")').length) {
+      // console.log("You can view your acount or logout!");
+      $('#login').html(
+        [
+          '<a href="https://www.uwbookstore.com/customeraccount?s=www.uwbookstore.com"><span>My Account</span> <em class="fa fa-user"></em></a> <span class="logout"> / <a href="https://www.uwbookstore.com/logout">logout</a></span>',
+        ].join('\n')
+      );
+    } else {
+      // console.log("You can log in...");
+      $('#login').html(
+        [
+          '<a href="https://www.uwbookstore.com/login"><span>login</span> <em class="fa fa-user"></em></a>',
+        ].join('\n')
+      );
+    }
+  } else if (baseUrl === 'https://med.uwbookstore.com/') {
+    if ($('#h_nav a:contains("Log Out")').length) {
+      // console.log("You can view your acount or logout!");
+      $('#login').html(
+        [
+          '<a href="https://med.uwbookstore.com/customeraccount?s=med.uwbookstore.com"><span>My Account</span> <em class="fa fa-user"></em></a> <span class="logout"> / <a href="https://med.uwbookstore.com/logout">logout</a></span>',
+        ].join('\n')
+      );
+    } else {
+      // console.log("You can log in...");
+      $('#login').html(
+        [
+          '<a href="https://med.uwbookstore.com/login"><span>login</span> <em class="fa fa-user"></em></a>',
+        ].join('\n')
+      );
+    }
   }
 
   // LOGIN
@@ -465,15 +483,28 @@ $(document).ready(function () {
     ).appendTo('.list-group');
   }
 
-  if ($('#h_nav a:contains("Login")').length) {
-    $('#logoutPanelHeader').hide();
-    $(
-      '<h1 class="heading__line-center"><span>You are now logged out</span></h1>'
-    ).appendTo('#logoutPanel');
-    $('.logoutText').remove();
-    $(
-      '<div class="login__btns"><a href="https://www.uwbookstore.com/login" class="btn btn-secondary">Log Back In</a><a href="https://www.uwbookstore.com/home" class="btn btn-primary">UW Book Store</a></div>'
-    ).appendTo('#logoutPanel');
+  if (baseUrl === 'https://www.uwbookstore.com/') {
+    if ($('#h_nav a:contains("Login")').length) {
+      $('#logoutPanelHeader').hide();
+      $(
+        '<h1 class="heading__line-center"><span>You are now logged out</span></h1>'
+      ).appendTo('#logoutPanel');
+      $('.logoutText').remove();
+      $(
+        '<div class="login__btns"><a href="https://www.uwbookstore.com/login" class="btn btn-secondary">Log Back In</a><a href="https://www.uwbookstore.com/home" class="btn btn-primary">UW Book Store</a></div>'
+      ).appendTo('#logoutPanel');
+    }
+  } else if (baseUrl === 'https://med.uwbookstore.com/') {
+    if ($('#h_nav a:contains("Login")').length) {
+      $('#logoutPanelHeader').hide();
+      $(
+        '<h1 class="heading__line-center"><span>You are now logged out</span></h1>'
+      ).appendTo('#logoutPanel');
+      $('.logoutText').remove();
+      $(
+        '<div class="login__btns"><a href="https://med.uwbookstore.com/login" class="btn btn-secondary">Log Back In</a><a href="https://med.uwbookstore.com/home" class="btn btn-primary">Home</a></div>'
+      ).appendTo('#logoutPanel');
+    }
   }
 
   // SHOPPING CART CODE

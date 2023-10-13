@@ -22,10 +22,18 @@ $(document).on('ajaxComplete', function (event, xhr, settings) {
         $('#coPromoCodeSuccess').hide();
         $('#coPromoCodeFeedback').hide();
         $('#coPromoCode').css('color', 'transparent');
-      } else {
+        $('#coPromoCode').addClass('is-invalid-hide');
+        $('#coPromoCode').addClass('is-valid-hide');
+        $('#coPromoCode').prop('disabled', false);
+      } else if (ptId === '99' || ptId === '1284' || ptId === '1144') {
         // optional remove this else statement to prevent promo from being removed if payment type is changed away from set payment type
-        if ($('#coPromoCode').val() === uwWiscardPromo)
-          $('#promo-apply').click();
+        // if ($('#coPromoCode').val() === uwWiscardPromo)
+        //   $('#promo-apply').click();
+        console.log('focus on input...');
+        $('#coPromoCode').val('');
+        $('#coPromoCode').css('color', '#212529');
+        $('#coPromoCodeSuccess').show();
+        $('#coPromoCodeFeedback').show();
       }
     });
     // prettier-ignore

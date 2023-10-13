@@ -95,3 +95,9 @@ h2.heading__billing {
   background-color: #fff3d9;
   color: #646464;
 }
+
+.is-invalid-hide,
+.is-valid-hide {
+  border-color: #ced4da !important;
+  background-image: none !important;
+}

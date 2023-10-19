@@ -198,3 +198,98 @@
     width: 100rem;
   }
 }
+
+// Braelon Allen Page
+.braelon-allen {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  max-width: 117rem;
+
+  .event-header {
+    background-color: #9d152d;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+
+    h2 {
+      margin-bottom: 3rem;
+      font-size: 5rem;
+      text-transform: uppercase;
+      text-shadow: 8px 5px 0 black;
+    }
+
+    p {
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+  }
+
+  .event-info {
+    text-align: center;
+
+    img {
+      max-width: 70%;
+    }
+
+    h2 {
+      color: #9d152d;
+      font-size: 4.25rem;
+      letter-spacing: 1px;
+      margin: 2rem 0 3rem;
+      text-transform: uppercase;
+    }
+
+    ol {
+      font-weight: 700;
+      font-size: 2.25rem;
+      margin: 0 auto;
+      padding: 0;
+      max-width: 90%;
+
+      li {
+        list-style-position: inside;
+        margin-bottom: 3rem;
+
+        span {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+  .event-disclaimer {
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #9d152d;
+  }
+
+  @media #{$mq-medium} {
+    .event-header {
+      h2 {
+        font-size: 10rem;
+      }
+
+      p {
+        font-size: 7rem;
+      }
+    }
+
+    .event-info {
+      //
+      h2 {
+        font-size: 8.5rem;
+      }
+
+      ol {
+        font-size: 4.5rem;
+      }
+    }
+
+    .event-disclaimer {
+      font-size: 1.8em;
+    }
+  }
+}

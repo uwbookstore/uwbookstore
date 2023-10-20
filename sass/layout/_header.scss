@@ -78,8 +78,8 @@
   }
 
   &__logo {
-    flex: 0 0 65%;
-    padding-left: 5rem;
+    flex: 0 0 57%;
+    padding-left: 1.5rem;
 
     a {
       display: block;
@@ -147,6 +147,7 @@
 
       #login {
         a {
+          display: flex;
           span {
             font-size: 0;
           }
@@ -158,6 +159,7 @@
 
         @media #{$mq-menu} {
           a {
+            display: inline-block;
             span {
               font-size: 1.4rem;
             }

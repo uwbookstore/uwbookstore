@@ -85,6 +85,7 @@ p {
 a {
   color: #0054ad;
   text-decoration: none;
+  transition: all 0.25s ease-in-out;
 
   &:hover,
   &:focus {

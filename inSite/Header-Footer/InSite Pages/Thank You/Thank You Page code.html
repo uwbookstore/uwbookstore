@@ -1,0 +1,218 @@
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JMHE05BYZM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JMHE05BYZM');
+</script>
+
+<!-- Google Ecommerce Code -->
+<script>
+  // purchase
+    // add_payment_info
+    // add_shipping_info
+    // Place this JavaScript code on the ThankYou Page in the Footer Script
+    var transaction_id = $('.thankYouSubHeader')
+      .text()
+      .replace(/[^0-9]/gi, '');
+    var value = parseFloat(
+      $('#paymentGrandText')
+        .text()
+        .replace(/[^0-9.]/gi, '')
+    );
+    var tax = parseFloat(
+      $('#paymentEstimatedText')
+        .text()
+        .replace(/[^0-9.]/gi, '')
+    );
+    var shipping = parseFloat(
+      $('#paymentShipText')
+        .text()
+        .replace(/[^0-9.]/gi, '')
+    );
+    var payType = $('#paymentTypeText').text().trim();
+    var shippingType = $('.shipMethodText').text().trim();
+
+    var items_to_send = [];
+
+    // Add textbooks
+    $('.oneTextItem').each(function () {
+      var isbn = $(this).find('.oneTextISBN > .oneTextISBNText').text();
+      var name = $(this).find('.oneTextTitleWrapper > .oneTextTitle').text();
+      var category = 'Textbooks';
+      var type = $(this).find('.oneTextPref > .oneTextPrefText').text();
+      var price = parseFloat(
+        $(this)
+          .find('.oneTextSub > .oneTextSubText')
+          .text()
+          .replace(/[^0-9.]/gi, '')
+      );
+      var qty = parseInt($(this).find('.oneTextQTY > .oneTextQTYText').text());
+
+      var this_item = {
+        item_id: isbn,
+        item_name: name,
+        item_category: category,
+        item_variant: type,
+        price: price,
+        quantity: qty,
+      };
+
+      items_to_send.push(this_item);
+    });
+
+    // Add merchandise
+    $('.oneMerchItem').each(function () {
+      var sku = $(this).find('.oneMerchNumText').text().trim();
+      var name = $(this).find('.oneMerchDescText').text().trim();
+      var category = 'Merchandise';
+      var types = [];
+      var type = '';
+      var types = $(this)
+        .find('.oneMerchOption > .oneMerchOptionText')
+        .text()
+        .trim()
+        .split('-', 5);
+      types.forEach(function (item, index) {
+        type = type + item.trim() + ' ';
+      });
+      type = type.trim();
+      var price = parseFloat(
+        $(this)
+          .find('.oneMerchUnitText')
+          .text()
+          .replace(/[^0-9.]/gi, '')
+      );
+      var qty = parseInt($(this).find('.oneMerchQTYText').text());
+
+      var this_item = {
+        item_id: sku,
+        item_name: name,
+        item_category: category,
+        item_variant: type,
+        price: price,
+        quantity: qty,
+      };
+
+      items_to_send.push(this_item);
+    });
+
+    gtag('event', 'purchase', {
+      transaction_id: transaction_id, // required (order number)
+      value: value, // required (total order $ amount)
+      tax: tax, // optional
+      shipping: shipping, // optional
+      currency: 'USD', // required
+      items: items_to_send,
+    });
+
+    gtag('event', 'add_shipping_info', {
+      currency: 'USD',
+      value: shipping,
+      shipping_tier: shippingType,
+      items: items_to_send,
+    });
+
+    gtag('event', 'add_payment_info', {
+      currency: 'USD',
+      value: value,
+      payment_type: payType,
+      items: items_to_send,
+    });
+
+// const order_id = document.querySelector('h2.thankYouSubHeader').textContent.split(' ')[4];
+//   const order_total = document.querySelector('span#paymentTotalText').textContent;
+//   let order_tax = document.querySelector('span#paymentEstimatedText').textContent.replace('$', '');
+//   order_tax = parseFloat(order_tax);
+//   let order_shipping = document.querySelector('span.shipChargeText').textContent.replace('$', '');
+//   order_shipping = parseFloat(order_shipping);
+
+
+//   gtm_products = [];
+
+//   document.querySelectorAll('.merchPanel.panel.panel-info').forEach((el) => {
+//     let item_id, item_category;
+//     let sku = el.querySelector('span.oneMerchNumText').textContent;
+//     item_id = sku.trim();
+
+//     if (el.querySelector('span.oneMerchOptionText')) {
+//       let size = el.querySelector('span.oneMerchOptionText').textContent;
+//       size = size.replaceAll(' ', '').trim();
+//       item_category = size;
+//     } else {
+//       item_category = null;
+//     }
+    
+//     gtm_products.push({
+//       item_id,
+//       item_name: el.querySelector('span.oneMerchDescText').textContent.trim(),
+//       item_category,
+//       price: el.querySelector('span.oneMerchTotalText').textContent.trim(),
+//       quantity: el.querySelector('span.oneMerchQTYText').textContent.trim()
+//     });
+//   });
+
+//   console.log(gtm_products)
+//   gtag("event", "purchase", {
+//     transaction_id: order_id,
+//     value: <<<ORDERTOTAL>>>,
+//     tax: order_tax,
+//     shipping: order_shipping,
+//     currency: "USD",
+//     items: gtm_products
+//   });
+</script>
+
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt=""
+            src="//www.googleadservices.com/pagead/conversion/1063661403/?value=<<<ORDERTOTAL>>>&amp;currency_code=USD&amp;label=jGqaCI215gEQ296Y-wM&amp;guid=ON&amp;script=0" />
+    </div>
+</noscript>
+
+<!-- BingAds Conversion Code for Checkouts -->
+<script>
+    (function(w, d, t, r, u) {
+      var f, n, i;
+      (w[u] = w[u] || []),
+        (f = function() {
+          var o = {ti: "4046066" };
+          (o.q = w[u]), (w[u] = new UET(o)), w[u].push("pageLoad");
+        }),
+        (n = d.createElement(t)),
+        (n.src = r),
+        (n.async = 1),
+        (n.onload = n.onreadystatechange = function() {
+          var s = this.readyState;
+          (s && s !== "loaded" && s !== "complete") ||
+            (f(), (n.onload = n.onreadystatechange = null));
+        }),
+        (i = d.getElementsByTagName(t)[0]),
+        i.parentNode.insertBefore(n, i);
+    })(window, document, "script", "//bat.bing.com/bat.js", "uetq");</script><noscript><img
+        src="//bat.bing.com/action/0?ti=4046066&Ver=2" height="0" width="0"
+        style="display:none; visibility: hidden;" /></noscript>
+<script>
+    window.uetq = window.uetq || [];
+    window.uetq.push({'gv': <<<ORDERTOTAL>>> });
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
+              n.callMethod.apply(n, arguments) : n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '282269236407947');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=282269236407947&ev=PageView&noscript=1" /></noscript>
+<!-- End Facebook Pixel Code -->

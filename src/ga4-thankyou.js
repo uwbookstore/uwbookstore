@@ -2,42 +2,43 @@
 // add_payment_info
 // add_shipping_info
 // Place this JavaScript code on the ThankYou Page in the Footer Script
-var transaction_id = $('.thankYouSubHeader')
-  .text()
-  .replace(/[^0-9]/gi, '');
+var transaction_id = $('#ty-orderNumber-val').val();
 var value = parseFloat(
-  $('#paymentGrandText')
+  $('.tyTotal-val.floatr')
     .text()
     .replace(/[^0-9.]/gi, '')
 );
 var tax = parseFloat(
-  $('#paymentEstimatedText')
+  $('.tyTax-val.floatr')
     .text()
     .replace(/[^0-9.]/gi, '')
 );
 var shipping = parseFloat(
-  $('#paymentShipText')
+  $('.tyShipHand-val.floatr')
     .text()
     .replace(/[^0-9.]/gi, '')
 );
-var payType = $('#paymentTypeText').text().trim();
-var shippingType = $('.shipMethodText').text().trim();
+// var payType = $('#paymentTypeText').text().trim();
+var shippingType = $(
+  '.tyshipment-wrapper.row.bottomBorder .col-md-6.col-12.padding-left0.padding-right0:nth-of-type(2) p:nth-of-type(1)'
+)
+  .first()
+  .contents()
+  .filter(function () {
+    return this.nodeType == 3;
+  })
+  .text();
 
 var items_to_send = [];
 
 // Add textbooks
-$('.oneTextItem').each(function () {
-  var isbn = $(this).find('.oneTextISBN > .oneTextISBNText').text();
-  var name = $(this).find('.oneTextTitleWrapper > .oneTextTitle').text();
+$('.tybook-wrapper.row.top10').each(function () {
+  var isbn = $(this).find('.ty-textbook-isbn').val();
+  var name = $(this).find('.ty-textbook-name').val();
   var category = 'Textbooks';
-  var type = $(this).find('.oneTextPref > .oneTextPrefText').text();
-  var price = parseFloat(
-    $(this)
-      .find('.oneTextSub > .oneTextSubText')
-      .text()
-      .replace(/[^0-9.]/gi, '')
-  );
-  var qty = parseInt($(this).find('.oneTextQTY > .oneTextQTYText').text());
+  var type = $(this).find('.ty-textbook-pref').val();
+  var price = parseFloat($(this).find('ty-textbook-price').val());
+  var qty = parseInt($(this).find('.ty-textbook-quantity').val());
 
   var this_item = {
     item_id: isbn,
@@ -52,34 +53,34 @@ $('.oneTextItem').each(function () {
 });
 
 // Add merchandise
-$('.oneMerchItem').each(function () {
-  var sku = $(this).find('.oneMerchNumText').text().trim();
-  var name = $(this).find('.oneMerchDescText').text().trim();
+$('.row.tymerch-wrapper').each(function () {
+  var sku = $(this).find('.ty-merch-sku').val().trim();
+  var name = $(this).find('.ty-merch-name').val().trim();
   var category = 'Merchandise';
-  var types = [];
-  var type = '';
-  var types = $(this)
-    .find('.oneMerchOption > .oneMerchOptionText')
-    .text()
-    .trim()
-    .split('-', 5);
-  types.forEach(function (item, index) {
-    type = type + item.trim() + ' ';
-  });
-  type = type.trim();
+  // var types = [];
+  // var type = '';
+  // var types = $(this)
+  //   .find('.oneMerchOption > .oneMerchOptionText')
+  //   .text()
+  //   .trim()
+  //   .split('-', 5);
+  // types.forEach(function (item, index) {
+  //   type = type + item.trim() + ' ';
+  // });
+  // type = type.trim();
   var price = parseFloat(
     $(this)
-      .find('.oneMerchUnitText')
-      .text()
+      .find('.ty-merch-price')
+      .val()
       .replace(/[^0-9.]/gi, '')
   );
-  var qty = parseInt($(this).find('.oneMerchQTYText').text());
+  var qty = parseInt($(this).find('.ty-merch-quantity').val());
 
   var this_item = {
     item_id: sku,
     item_name: name,
     item_category: category,
-    item_variant: type,
+    // item_variant: type,
     price: price,
     quantity: qty,
   };
@@ -96,6 +97,7 @@ gtag('event', 'purchase', {
   items: items_to_send,
 });
 
+console.log(items_to_send);
 gtag('event', 'add_shipping_info', {
   currency: 'USD',
   value: shipping,
@@ -103,9 +105,9 @@ gtag('event', 'add_shipping_info', {
   items: items_to_send,
 });
 
-gtag('event', 'add_payment_info', {
-  currency: 'USD',
-  value: value,
-  payment_type: payType,
-  items: items_to_send,
-});
+// gtag('event', 'add_payment_info', {
+//   currency: 'USD',
+//   value: value,
+//   payment_type: payType,
+//   items: items_to_send,
+// });

@@ -44,7 +44,8 @@
     color: $primary-color;
   }
 }
-.paymentBilling-wrapper br {
+.paymentBilling-wrapper br,
+p.paymentBilling-studentnumber {
   display: none;
 }
 
@@ -58,16 +59,27 @@ a.paymentBilling-change {
   text-decoration: none;
   font-size: 1.6rem;
   background-color: transparent;
-  border-color: #c5050c;
-  color: #c5050c;
-}
-a.paymentBilling-change:hover,
-a.paymentBilling-change:active,
-a.paymentBilling-change:active:hover,
-a.paymentBilling-change:focus,
-a.paymentBilling-change:active:focus {
-  background-color: #c5050c;
-  color: #fff;
+  background-color: $primary-color;
+  border-color: $primary-color;
+  color: $white;
+  &:link,
+  &:visited {
+  }
+
+  &:hover {
+    background-color: darken($primary-color, 8%);
+    border-color: darken($primary-color, 10%);
+    color: $white;
+  }
+
+  &:active,
+  &:active:hover,
+  &:focus,
+  &:active:focus {
+    background-color: darken($primary-color, 4%);
+    border-color: darken($primary-color, 5%);
+    color: $white;
+  }
 }
 
 @media #{$mq-medium} {
@@ -75,10 +87,6 @@ a.paymentBilling-change:active:focus {
     width: 9rem;
     height: 3.5rem;
   }
-}
-
-p.paymentBilling-studentnumber {
-  display: none;
 }
 
 h2.heading__billing {

@@ -50,18 +50,19 @@ p.paymentBilling-studentnumber {
 }
 
 a.paymentBilling-change {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  cursor: pointer;
+  display: block;
   border: 2px solid;
   transition: all 0.2s ease-in-out;
   height: 5rem;
+  line-height: 5rem;
+  padding: 0 2rem;
   text-decoration: none;
   font-size: 1.6rem;
   background-color: transparent;
-  background-color: $primary-color;
   border-color: $primary-color;
-  color: $white;
+  color: $primary-color;
+  text-align: center;
   &:link,
   &:visited {
   }
@@ -84,8 +85,10 @@ a.paymentBilling-change {
 
 @media #{$mq-medium} {
   a.paymentBilling-change {
-    width: 9rem;
+    display: inline-block;
+    width: auto;
     height: 3.5rem;
+    line-height: 3.5rem;
   }
 }
 

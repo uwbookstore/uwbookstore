@@ -1,31 +1,45 @@
-$(document).ready(() => {
-  const itemCount = $('span#cart-itemCount').text();
+$(document).ajaxComplete(function (_, _, options) {
+  // Check if this was payment selection ajax call
+  if (!options.url.includes('PayId=')) return;
 
-  if (itemCount === '0') {
-    if (baseUrl === 'https://www.uwbookstore.com/') {
-      $(`
-      <div class="cart__container"><i class="cart__icon fa fa-shopping-cart" aria-hidden="true"></i>
-        <p class="cart__p">Your shopping cart is empty.</p><a class="btn btn-primary cart__btn" href="${baseUrl}" title="Shop Clothing &amp; Gifts">Shop Clothing &amp; Gifts</a>
-        <div class="cart__account">
-          <p><a class="btn btn-text" href="${baseUrl}Customer-Help" title="Customer Help">Customer Help</a></p><span class="phone">(608) 257-3784</span> or <span
-            class="phone">(800) 993-2665</span>
-        </div>
-      </div>
-      </div>      
-      `).insertAfter('.cart-leftCard-header');
-      $('.cart-leftCard-header').hide();
-    } else if (baseUrl === 'https://text.uwbookstore.com/') {
-      $(`
-      <div class="cart__container"><i class="cart__icon fa fa-shopping-cart" aria-hidden="true"></i>
-        <p class="cart__p">Your shopping cart is empty.</p><a class="btn btn-primary cart__btn" href="${baseUrl}" title="Shop Clothing &amp; Gifts">Shop Clothing &amp; Gifts</a>
-        <div class="cart__account">
-          <p><a class="btn btn-text" href="${baseUrl}Customer-Help" title="Customer Help">Customer Help</a></p><span class="phone">(608) 257-3784</span> or <span
-            class="phone">(800) 993-2665</span>
-        </div>
-      </div>
-      </div>      
-      `).insertAfter('.cart-leftCard-header');
-      $('.cart-leftCard-header').hide();
-    }
+  const replacementMessage =
+    'Your billing address (listed above) must match the billing address on file with your card issuer. If the address listed above is not correct, click the button marked "Update Billing Address."';
+
+  // Get potential targets. This should really only ever return 1 element...
+  const potentialTargets = $('.paymentBilling-wrapper > p.red.rem1.top20');
+
+  // but to be safe, we'll iterate through all potential matches and look for the replacement string
+  $(potentialTargets).each(function () {
+    if (
+      $(this).text() ==
+      'The billing address must match the billing address on the card.'
+    )
+      $(this).text(replacementMessage);
+  });
+  $('.paymentBilling-change').text('Update Billing Address');
+  $('<h2 class="heading__line-center mb-1">Billing Addres</h2>').prependTo(
+    '.paymentBilling-wrapper'
+  );
+});
+
+$(document).ready(function () {
+  $('#coShipStudentNumber').attr(
+    'placeholder',
+    '10 digit phone number or UW Student ID*'
+  );
+  // $('.validation-summary-errors').clone().appendTo('#contentSection');
+});
+
+$(document).on('ajaxComplete', function (_, options) {
+  if (
+    options.responseJSON.showPayment != undefined &&
+    options.responseJSON.showPayment == true
+  ) {
+    $('html, body').animate(
+      {
+        scrollTop: $('.coPaymentCard').offset().top - 10,
+      },
+      200
+    );
   }
 });

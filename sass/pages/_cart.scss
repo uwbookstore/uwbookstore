@@ -136,3 +136,7 @@ h2.heading__billing {
 [class^='helpSection'] span.fa {
   color: $primary-color;
 }
+
+a#helpSection-email {
+  display: none;
+}

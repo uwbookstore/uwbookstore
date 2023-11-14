@@ -6,7 +6,7 @@ const warehouse = document.querySelector('.warehouse');
 const date = new Date();
 const day = date.getDay();
 // const day = 6;
-const hour = date.getUTCHours() - 5;
+const hour = date.getUTCHours() - 6;
 // const hour = 17;
 // console.log(hour);
 const minutes = date.getUTCMinutes();

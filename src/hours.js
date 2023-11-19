@@ -10,6 +10,7 @@ const hour = date.getUTCHours() - 6;
 // const hour = 17;
 // console.log(hour);
 const minutes = date.getUTCMinutes();
+console.log(hour);
 
 function displayHours(li, idx, open, openMin, close, closeMin) {
   if (
@@ -44,8 +45,8 @@ function getStateStHrs() {
         <li><span class="hours__day">Tuesday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
         <li><span class="hours__day">Wednesday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
         <li><span class="hours__day">Thursday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
-        <li><span class="hours__day">Friday:</span> <span class="hours__times">9:00am - 5:30pm</span></li>
-        <li><span class="hours__day">Saturday:</span> <span class="hours__times">9:00am - 5:30pm</span></li>
+        <li><span class="hours__day">Friday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
+        <li><span class="hours__day">Saturday:</span> <span class="hours__times">8:30am - 5:30pm</span></li>
     </ul>
 `;
 
@@ -62,15 +63,15 @@ function getStateStHrs() {
       case 2:
       case 3:
       case 4:
+      case 5:
         open = 9;
         openMin = 0;
         close = 19;
         closeMin = 0;
         break;
-      case 5:
       case 6:
-        open = 9;
-        openMin = 0;
+        open = 8;
+        openMin = 30;
         close = 17;
         closeMin = 30;
         break;

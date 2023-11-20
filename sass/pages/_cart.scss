@@ -50,6 +50,7 @@ p.paymentBilling-studentnumber {
 }
 
 a.paymentBilling-change {
+  border-radius: 4px;
   cursor: pointer;
   display: block;
   border: 2px solid;
@@ -59,17 +60,18 @@ a.paymentBilling-change {
   padding: 0 2rem;
   text-decoration: none;
   font-size: 1.6rem;
-  background-color: transparent;
-  border-color: $primary-color;
-  color: $primary-color;
+  background-color: $info-color;
+  border-color: $info-color;
+  color: $black;
+  font-weight: 700;
   text-align: center;
   &:link,
   &:visited {
   }
 
   &:hover {
-    background-color: darken($primary-color, 8%);
-    border-color: darken($primary-color, 10%);
+    background-color: darken($info-color, 4%);
+    border-color: darken($info-color, 5%);
     color: $white;
   }
 
@@ -77,8 +79,8 @@ a.paymentBilling-change {
   &:active:hover,
   &:focus,
   &:active:focus {
-    background-color: darken($primary-color, 4%);
-    border-color: darken($primary-color, 5%);
+    background-color: darken($info-color, 2%);
+    border-color: darken($info-color, 3%);
     color: $white;
   }
 }

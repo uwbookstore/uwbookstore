@@ -47,7 +47,7 @@ $(document).ready(function () {
       window.location.href.indexOf('13th') > -1
     ) {
       $(
-        '<div class="m-2 text-center">Looking for The Red Shirt&trade;, Fifteenth Edition? Find it here:<br><a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/The-Red-Shirt-15th-Edition" class="btn btn-primary m-2">The Red Shirt&trade;</a></div>'
+        '<div class="m-2 text-center">Looking for The Red Shirt&trade;, Sixteenth Edition? Find it here:<br><a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/The-Red-Shirt-16th-Edition" class="btn btn-primary m-2">The Red Shirt&trade;</a></div>'
       ).prependTo('#contentSection');
     }
   }

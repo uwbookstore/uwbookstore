@@ -150,3 +150,12 @@ a#helpSection-email {
 .coCheckoutBtnWrap {
   position: initial;
 }
+
+span.shippingMethod-description-span {
+  margin-left: 0 !important;
+  margin-top: -1rem;
+
+  div.alert {
+    font-size: 1.6rem;
+  }
+}

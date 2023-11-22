@@ -142,3 +142,11 @@ h2.heading__billing {
 a#helpSection-email {
   display: none;
 }
+
+// MBS fixes the Place Order button
+// to the bottom of the page.
+// Very confusing to the customer,
+// This will fix it.
+.coCheckoutBtnWrap {
+  position: initial;
+}

@@ -22,15 +22,20 @@
 //   );
 // });
 
-// $(document).ready(function () {
-//   $('#coShipStudentNumber').attr(
-//     'placeholder',
-//     '10 digit phone number or UW Student ID*'
-//   );
+// $(document).on('ajaxComplete', (_, options) => {
+//   if (
+//     options.responseJSON.showAddress !== undefined &&
+//     options.responseJSON.showAddress === true
+//   ) {
+//     $('label[for="coShipStudentNumber"]').text(
+//       'Student ID or 10 digit phone number'
+//     );
+//   }
 //   // $('.validation-summary-errors').clone().appendTo('#contentSection');
 // });
 
 // $(document).on('ajaxComplete', function (_, options) {
+//   console.log(options.responseJSON);
 //   if (
 //     options.responseJSON.showPayment != undefined &&
 //     options.responseJSON.showPayment == true

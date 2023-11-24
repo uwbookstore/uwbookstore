@@ -45,7 +45,7 @@ $(document).ready(function () {
 
   $('#shipsubmit').removeClass('btn-default').addClass('btn-primary');
 
-  $('p#studentIDText, p.studentNumberText').addClass('alert alert-warning');
+  $('p#studentIDText, p.studentNumberText').addClass('alert alert-info');
   $('p#studentIDText').parent().removeClass('left5');
   $('p#studentIDText').css('margin-top', '-1.5rem');
 

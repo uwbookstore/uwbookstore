@@ -115,7 +115,7 @@ $(document).ready(function () {
   $('#shipsubmit').removeClass('btn-default').addClass('btn-primary');
 
   $('p#studentIDText, div#billingstudentNumberWrapper').addClass(
-    'alert alert-warning'
+    'alert alert-info bold'
   );
   $('p.studentNumberText').addClass('mt-1');
   $('p#studentIDText').parent().removeClass('left5');

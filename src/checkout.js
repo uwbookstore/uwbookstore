@@ -48,3 +48,15 @@
 //     );
 //   }
 // });
+
+// $('#shippingMethod-select option:contains("GC Only Ground est. $3.99")').text(
+//   'Gift Card Only Ground est. $3.99'
+// );
+
+// $(
+//   '#shippingMethod-select option:contains("GC 2nd Day est. $20.00")'
+// ).text('Gift Card 2nd Day est $20.00');
+
+// $('#shippingMethod-select option:contains("GC Next Day est. $30.00")').text(
+//   'Gift Card Next Day est. $30.00'
+// );

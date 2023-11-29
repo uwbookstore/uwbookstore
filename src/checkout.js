@@ -60,3 +60,19 @@
 // $('#shippingMethod-select option:contains("GC Next Day est. $30.00")').text(
 //   'Gift Card Next Day est. $30.00'
 // );
+
+// $(document).on('ajaxComplete', (_, options) => {
+//   if ( options.responseJSON.showAddress != undefined && options.responseJSON.showAddress === true ) {
+//     if (
+//       $('p#shippingMethod-h2:contains("Pick up")') || $('p#shippingMethod-h2:contains("Pickup")')
+//     ) {
+//       console.log('needs to enter an address...');
+//       $(`
+//       <div class="alert alert-danger center bold">
+//         Please enter a shipping address to continue.<br>
+//         This is required even for Pick Up at Store orders.
+//       </div>
+//       `).insertAfter('#coShipAdd');
+//     }
+//   }
+// });

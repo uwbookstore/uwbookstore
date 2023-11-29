@@ -49,6 +49,7 @@ p.paymentBilling-studentnumber {
   display: none;
 }
 
+a#coShipAdd,
 a.paymentBilling-change {
   border-radius: 4px;
   cursor: pointer;
@@ -82,6 +83,15 @@ a.paymentBilling-change {
     background-color: darken($info-color, 2%);
     border-color: darken($info-color, 3%);
     color: $white;
+  }
+}
+
+a#coShipAdd {
+  @media #{$mq-medium} {
+    display: inline-block;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    border-width: 1px;
   }
 }
 

@@ -278,6 +278,18 @@ $(document).ready(function () {
     ).insertBefore('.merch__filter');
   }
 
+  if (categoryTitle.toLowerCase().substring(0, 10) === 'cap & gown') {
+    $(
+      `
+        <div class="alert alert-danger">
+          <p class="text-center bold mt-2">
+            To receive Cap and Gown Packages in time for the December Ceremony please choose pick up in store.
+          </p>
+        </div>
+      `
+    ).insertBefore('.merch__filter');
+  }
+
   if (categoryTitle.toLowerCase().substring(0, 16) === 'touchdown monday') {
     $(
       `

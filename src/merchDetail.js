@@ -565,7 +565,7 @@ $(document).ready(function () {
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
-    prodName.substring(0, 8) === '47 Brand'
+    prodName.substring(0, 9) === "'47 Brand"
   ) {
     $(
       '<a href="https://i.univbkstr.com/sizeChart/47Brand/" class="merch__detail-size-link gtmSizeTrack" title="&#39;47 Brand Size Guide">Size Guide</a>'

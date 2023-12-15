@@ -283,7 +283,7 @@ $(document).ready(function () {
       `
         <div class="alert alert-danger">
           <p class="text-center bold mt-2">
-            To receive Cap and Gown Packages in time for the December Ceremony please choose pick up in store.
+            If you need a cap and gown for the December Ceremony please visit the Lower Level of The University Book Store.
           </p>
         </div>
       `

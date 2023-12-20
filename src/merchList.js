@@ -278,17 +278,17 @@ $(document).ready(function () {
     ).insertBefore('.merch__filter');
   }
 
-  if (categoryTitle.toLowerCase().substring(0, 10) === 'cap & gown') {
-    $(
-      `
-        <div class="alert alert-danger">
-          <p class="text-center bold mt-2">
-            If you need a cap and gown for the December Ceremony please visit the Lower Level of The University Book Store.
-          </p>
-        </div>
-      `
-    ).insertBefore('.merch__filter');
-  }
+  // if (categoryTitle.toLowerCase().substring(0, 10) === 'cap & gown') {
+  //   $(
+  //     `
+  //       <div class="alert alert-danger">
+  //         <p class="text-center bold mt-2">
+  //           If you need a cap and gown for the December Ceremony please visit the Lower Level of The University Book Store.
+  //         </p>
+  //       </div>
+  //     `
+  //   ).insertBefore('.merch__filter');
+  // }
 
   if (categoryTitle.toLowerCase().substring(0, 16) === 'touchdown monday') {
     $(

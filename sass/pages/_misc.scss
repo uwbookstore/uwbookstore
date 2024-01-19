@@ -199,112 +199,56 @@
   }
 }
 
-// Braelon Allen Page
-.braelon-allen {
+// Generic Signing Event Page
+.signing {
+  background: #9d1c30
+    url('https://i.univbkstr.com/v3/img/pages/signing/bg-image.jpg') no-repeat
+    left top;
+  background-size: contain;
+  color: $white;
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
   max-width: 117rem;
+  padding: 75% 4rem 2rem;
 
-  .event-header {
-    background-color: #9d152d;
-    color: white;
+  &__body {
     text-align: center;
-    margin-bottom: 2rem;
-    padding: 2rem;
 
-    h2 {
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+
+    h1 {
+      margin-left: 1.5rem;
       margin-bottom: 3rem;
-      font-size: 5rem;
-      text-transform: uppercase;
-      text-shadow: 8px 5px 0 black;
-    }
-
-    p {
-      font-size: 3.5rem;
-      font-weight: 700;
-      line-height: 1.25;
-
-      a {
-        color: white;
-        display: inline-block;
-        text-decoration: underline;
-        -moz-transition: all 0.25s ease-in-out;
-        -webkit-transition: all 0.25s ease-in-out;
-        -o-transition: all 0.25s ease-in-out;
-        transition: all 0.25s ease-in-out;
-
-        &:hover {
-          color: white;
-          -webkit-transform: skewX(-20deg);
-          -moz-transform: skewX(-20deg);
-          -o-transform: skewX(-20deg);
-          transform: skewX(-20deg);
-        }
-      }
-    }
-  }
-
-  .event-info {
-    text-align: center;
-
-    h2 {
-      color: #9d152d;
-      font-size: 4.25rem;
-      letter-spacing: 1px;
-      margin: 2rem 0 3rem;
-      text-transform: capitalize;
     }
 
     ol {
-      font-weight: 700;
-      font-size: 2.25rem;
-      margin: 0 auto;
-      padding: 0;
-      max-width: 90%;
+      list-style-type: none;
 
       li {
-        list-style-position: inside;
-        margin-bottom: 3.5rem;
-
-        span {
-          font-size: 2.5rem;
-        }
+        margin-bottom: 3rem;
       }
     }
   }
-  .event-disclaimer {
-    font-weight: 700;
-    font-size: 1.6rem;
-    text-align: center;
-    color: #9d152d;
+
+  @media #{$mq-small} {
+    padding-left: 15%;
   }
 
   @media #{$mq-medium} {
-    .event-header {
-      h2 {
-        font-size: 8rem;
-      }
+    padding-top: 65%;
+    min-height: 121rem;
 
-      p {
-        font-size: 6rem;
-      }
+    h1 {
+      margin-left: 0;
+      font-size: 5rem;
     }
 
-    .event-info {
-      //
-      h2 {
-        font-size: 6rem;
-      }
-
-      ol {
-        font-size: 3.5rem;
-        max-width: 75%;
-      }
-    }
-
-    .event-disclaimer {
-      font-size: 1.8em;
+    ol {
+      font-size: 3rem;
     }
   }
 }

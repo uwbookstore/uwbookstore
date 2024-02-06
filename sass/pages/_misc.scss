@@ -73,129 +73,119 @@
   text-align: center;
   border: 5px dashed #333;
   width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+
+  &__images {
+    display: none;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 
   &__header {
+    width: 100%;
     background-color: #333;
     color: $white;
     padding: 5px;
     text-transform: uppercase;
+    font-size: 2.5rem;
 
     h3 {
-      font-size: 6rem;
+      font-size: 7rem;
       text-align: center;
+      line-height: 100%;
     }
 
-    span {
-      font-size: 3.5rem;
+    p {
+      margin: 0;
       font-weight: 700;
-      line-height: 1.25;
     }
 
     @media #{$mq-medium} {
       padding: 5px 1.5rem;
 
       h3 {
-        font-size: 12rem;
-        text-align: left;
+        font-size: 13.5rem;
         letter-spacing: 2px;
       }
 
-      span {
-        font-size: 5rem;
-      }
-    }
-  }
-
-  &__body {
-    margin-top: 2rem;
-    h3 {
-      font-size: 10rem;
-    }
-
-    &-logo {
-      margin-bottom: 2rem;
-    }
-
-    &-bucky {
-      display: none;
-
-      @media #{$mq-medium} {
-        display: block;
+      p {
+        font-size: 4rem;
       }
     }
   }
 
   &__code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #333;
     padding: 5px;
-    height: 7rem;
-    width: 65%;
+    height: 6rem;
+    width: 22.5rem;
     margin: auto;
 
+    &-text,
+    &-id {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+      font-weight: 700;
+    }
+
     &-text {
-      display: inline-block;
+      text-align: center;
       background-color: #fff;
       color: #333;
-      padding: 0 1rem;
-      float: left;
-      margin-right: 1.5rem;
-      text-transform: uppercase;
-      font-weight: bold;
       font-size: 2.5rem;
-      height: 6rem;
-      line-height: 6rem;
+      text-transform: uppercase;
     }
 
     &-id {
       color: white;
-      font-weight: 700;
-      font-size: 5rem;
-      line-height: 6rem;
-    }
-
-    &-store {
-      color: $primary-color;
-      font-weight: 700;
-      margin-top: 1.5rem;
-      font-size: 3.5rem;
-      border-bottom: 1px solid gray;
-      padding-bottom: 1.5rem;
-
-      @media #{$mq-medium} {
-        border-bottom: 0;
-        padding-bottom: 0;
-      }
+      font-size: 4.5rem;
     }
   }
 
   &__stores {
     font-weight: 700;
     margin-top: 2rem;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   &__footer {
     margin-top: 2rem;
-    font-size: 1.1rem;
-    text-align: justify;
+    font-size: 1.2rem;
+    text-align: center;
     position: relative;
 
     p {
-      margin-bottom: 1rem;
-    }
-
-    &-id {
-      position: absolute;
-      right: 0;
-      bottom: -1.5rem;
-      font-weight: 700;
-      font-size: 1.6rem;
-      margin: 0;
+      margin-bottom: 0;
     }
   }
 
   @media #{$mq-medium} {
+    display: grid;
+    grid-template-columns: 14rem 1fr 14rem;
+    grid-template-rows: auto;
+    gap: 0;
     width: 100rem;
+
+    &__images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__body {
+      padding-inline: 1.5rem;
+    }
   }
 }
 

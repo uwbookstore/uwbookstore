@@ -20,6 +20,9 @@
     font-weight: 700;
 
     span {
+      &.hide-sm {
+        display: none;
+      }
       &.promo__code {
         padding: 5px 1rem;
         background-color: $white;
@@ -43,6 +46,9 @@
       font-size: 1.4rem;
 
       span {
+        &.hide-sm {
+          display: inline-block;
+        }
         &.promo__code {
           width: auto;
           padding: 2px 5px;

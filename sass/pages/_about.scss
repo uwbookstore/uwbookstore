@@ -1,0 +1,196 @@
+.hilight-qt {
+  background-color: rgba(197, 5, 12, 0.15);
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-left: 5px solid rgb(197, 5, 12);
+  margin-bottom: 2rem;
+
+  p {
+    font-weight: inherit;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.entry-content {
+  &.about {
+    padding-top: 4rem;
+  }
+}
+
+.timeline {
+  position: relative;
+  padding: 4.5rem 0;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    width: 0;
+    height: 100%;
+    border-left: 1px solid #808080;
+  }
+
+  &__wrapper {
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+    width: calc(100% - 4rem);
+    max-width: 117rem;
+
+    &::before {
+      content: '';
+      display: table;
+    }
+  }
+
+  &__container {
+    display: block;
+    margin-bottom: 8rem;
+    padding-left: 3rem;
+    position: relative;
+
+    a {
+      color: #00f;
+      text-decoration: underline;
+      transition: color 0.25s ease-in-out;
+
+      &:hover {
+        color: #c5050c;
+      }
+    }
+
+    .content p:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 1rem;
+      left: -1.3rem;
+      width: 2.6rem;
+      height: 2.6rem;
+      border-radius: 1.3rem;
+      border: 1px solid #808080;
+      background: #f7f7f7;
+      transform: scale(0);
+      transition: all 200ms cubic-bezier(0.345, 0.6, 0.87, 1.65);
+    }
+
+    &.active::before {
+      transform: scale(1);
+      background: #c5050c;
+    }
+
+    .image {
+      margin-bottom: 2rem;
+
+      &-auto {
+        position: relative;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        padding-bottom: 63%;
+
+        img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .content h2 {
+      margin-bottom: 1rem;
+      font-size: 3.5rem;
+    }
+  }
+}
+
+@media #{$mq-small} {
+  .entry-content {
+    &.about {
+      background-color: darkgray;
+      background-image: url(https://i.univbkstr.com/v3/img/pages/about/storefront.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+      background-attachment: fixed;
+      box-shadow: inset 0 0 0 2000px rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  .timeline {
+    &::before {
+      left: 50%;
+    }
+
+    &__wrapper {
+      width: calc(100% - 6rem);
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12rem;
+      padding-left: 0;
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      &::before {
+        left: calc(50% - 1.3rem);
+      }
+
+      > * {
+        flex-basis: 43%;
+      }
+
+      .content {
+        padding: 20px 30px;
+        background-color: #fff;
+        position: relative;
+        border-radius: 6px;
+        box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.25);
+        margin-bottom: auto;
+
+        &::before {
+          content: '';
+          top: 2.2rem;
+          position: absolute;
+          border: medium solid #fff;
+        }
+      }
+
+      &:nth-child(even) .content::before {
+        right: -1rem;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #fff;
+      }
+
+      &:nth-child(odd) .content::before {
+        left: -1rem;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #fff transparent transparent;
+      }
+
+      .image-auto img {
+        opacity: 0;
+        transition: all 2s cubic-bezier(0.345, 0.6, 0.87, 1.65);
+      }
+
+      &.active .image-auto img {
+        opacity: 1;
+      }
+    } // End of __container
+  }
+}

@@ -59,7 +59,7 @@
       transition: color 0.25s ease-in-out;
 
       &:hover {
-        color: #c5050c;
+        color: $primary-color;
       }
     }
 
@@ -84,7 +84,7 @@
 
     &.active::before {
       transform: scale(1);
-      background: #c5050c;
+      background: $primary-color;
     }
 
     .image {

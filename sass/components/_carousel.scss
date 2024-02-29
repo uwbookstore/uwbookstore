@@ -1,39 +1,12 @@
 .carousel {
   // margin-top: 1rem;
-  border: 1px solid lightslategray;
   // border-top: none;
-  text-align: center;
 
-  .img {
-    &-small {
-      @media #{$mq-small} {
-        display: none !important;
-      }
+  &-item {
+    img {
+      border: 1px solid lightslategray;
+      text-align: center;
     }
-
-    &-medium {
-      display: none !important;
-
-      // @media #{$mq-xsmall} {
-      //     display: block !important;
-      // }
-
-      // @media #{$mq-small} {
-      //     display: none !important;
-      // }
-    }
-
-    &-large {
-      display: none !important;
-
-      @media #{$mq-small} {
-        display: block !important;
-      }
-    }
-  }
-
-  @media #{$mq-small} {
-    // margin-top: 2rem;
   }
 }
 

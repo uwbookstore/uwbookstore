@@ -3,6 +3,53 @@
     data:image/svg + xml,
     %3csvgxmlns='http://www.w3.org/2000/svg'viewBox='0 0 30 30'%3e%3cpathstroke='rgba%28255, 255, 255, 0.55%29'stroke-linecap='round'stroke-miterlimit='10'stroke-width='2'd='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e
   );
+
+  // Colors
+  --clr-primary: #c5050c;
+  --clr-secondary: #777777;
+  --clr-tertiary: #6e6e6e;
+  --clr-success: #5cb85c;
+  --clr-alt-link: #0054ad;
+  --clr-warning: #fff3d9;
+  --clr-warning-em: #ffae00;
+  --clr-danger: #a94442;
+  --clr-danger-bg: #f2dede;
+  --clr-alert: #ec5840;
+  --clr-light-gray: #f1f1f1;
+  --clr-light-gray-2: #e1e1e1;
+  --clr-light-gray-3: #cacaca;
+  --clr-dark-gray: #818181;
+  --clr-black: #3e3e3e;
+  --clr-white: #fff;
+  --clr-off-white: #fefefe;
+  --clr-disabled: #727272;
+  --clr-info: #0dcaf0;
+
+  --clr-nav-hover: #ac040a;
+
+  // Font-family
+  // --ff-sans: 'Verlag A', 'Verlag B', Helvetica, Arial, sans-serif;
+  --ff-sans: 'Montserrat', 'Red Hat Text', Helvetica, Arial, sans-serif;
+  --ff-mono: 'Source Code Pro', monospace;
+  --ff-serif: Cambria, Cochin, Georgia, serif;
+
+  // Font-sizes
+  --fs-4xlarge: 6.104rem;
+  --fs-3xlarge: 4.8832rem;
+  --fs-2xlarge: 3.906rem;
+  --fs-xlarge: 3.125rem;
+  --fs-large: 2.5rem;
+  --fs-med: 2rem;
+  --fs-reg: 1.6rem;
+  --fs-small: 1.28rem;
+  --fs-xsmall: 1.024rem;
+
+  // Flexbox gap/columns
+  --gap: 2rem;
+  --columns: 2;
+
+  // Transition
+  --transition: all 0.25s ease-in-out;
 }
 
 // Breakpoints

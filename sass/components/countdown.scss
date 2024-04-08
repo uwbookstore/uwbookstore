@@ -1,0 +1,98 @@
+@use '../util' as *;
+
+.countdown {
+  background-color: #eeeeee;
+  /* background-image: url(./gradCaps.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%; */
+  color: black;
+  height: auto;
+  width: 100%;
+  margin-bottom: 2rem;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+
+  &__wrapper {
+    max-width: 127rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  &__image {
+    display: none;
+  }
+
+  &__timer {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+
+  @include breakpoint(medium) {
+    &__wrapper {
+      flex-direction: row;
+    }
+
+    &__image {
+      display: block;
+    }
+
+    &__wrapper img {
+      display: block;
+    }
+
+    &__timer {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.timer {
+  &__box {
+    background-color: hsl(209, 61%, 16%);
+    color: white;
+    width: 8rem;
+    height: 8rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    p:not(.expired) {
+      font-size: 4rem;
+      margin-bottom: 0.25rem;
+      letter-spacing: 0.25rem;
+      line-height: 1;
+    }
+  }
+
+  &__text {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(medium) {
+    &__box {
+      height: 7rem;
+      width: 7rem;
+    }
+
+    &__box p:not(.expired) {
+      font-size: 3rem;
+    }
+
+    &__text {
+      font-size: 3rem;
+      margin-left: 2rem;
+    }
+  }
+}

@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 .header {
   display: block;
 
@@ -311,7 +313,7 @@
 
     input {
       width: 100%;
-      border-color: darken(var(--clr-primary), 2%);
+      border-color: color-mix(in srgb, var(--clr-primary), #000 6%);
       text-align: center;
     }
 
@@ -368,8 +370,8 @@
     opacity: 1;
     width: 5rem;
     height: 5rem;
-    background: darken(var(--clr-primary), 10%);
-    border: 1px solid darken(var(--clr-primary), 12%);
+    background: color-mix(in srgb, var(--clr-primary), #000 15%);
+    border: 1px solid color-mix(in srgb, var(--clr-primary), #000 18%);
     border-radius: 0;
     outline: 0;
     position: absolute;

@@ -1,3 +1,4 @@
+@use '../util' as *;
 *,
 *::after,
 *::before {
@@ -28,4 +29,28 @@ body {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+@include breakpoint(medium) {
+  /* Set the width of the scroll bar */
+  ::-webkit-scrollbar {
+    width: 1.5rem;
+  }
+
+  /* Change the track to a pink color and give it a round border */
+  ::-webkit-scrollbar-track {
+    background-color: color-mix(in srgb, var(--clr-primary), #fff 65%);
+    border-radius: 1.5rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--clr-primary), #fff 15%);
+    border: 2px solid color-mix(in srgb, var(--clr-primary), #000 25%);
+    border-radius: 1.5rem;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--clr-primary);
+    border: 2px solid color-mix(in srgb, var(--clr-primary), #000 30%);
+  }
 }

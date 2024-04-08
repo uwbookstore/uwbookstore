@@ -16,7 +16,7 @@
 
   .sale-banner {
     background-color: #326cec;
-    color: $white;
+    color: var(--clr-white);
     font-size: 3rem;
     line-height: 1.5;
     padding: 1rem;
@@ -37,7 +37,7 @@
   .btn-xlrg.btn-blue {
     background-color: #326cec;
     display: inline-block;
-    color: $white;
+    color: var(--clr-white);
     text-transform: uppercase;
     font-size: 3rem;
     padding: 0 1.5rem;
@@ -88,7 +88,7 @@
   &__header {
     width: 100%;
     background-color: #333;
-    color: $white;
+    color: var(--clr-white);
     padding: 5px;
     text-transform: uppercase;
     font-size: 2.5rem;
@@ -195,7 +195,7 @@
     url('https://i.univbkstr.com/v3/img/pages/signing/bg-image.jpg') no-repeat
     left top;
   background-size: contain;
-  color: $white;
+  color: var(--clr-white);
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
@@ -206,7 +206,7 @@
     text-align: center;
 
     a {
-      color: $white;
+      color: var(--clr-white);
       text-decoration: underline;
     }
 
@@ -291,7 +291,7 @@
   }
 
   h3 {
-    color: $primary-color;
+    color: var(--clr-primary);
     font-size: 3rem;
   }
 
@@ -301,13 +301,13 @@
 
   &-body {
     &-box {
-      border: 5px solid $primary-color;
+      border: 5px solid var(--clr-primary);
       margin-bottom: 3rem;
       padding: 1rem;
       text-align: center;
 
       h3 {
-        color: $black;
+        color: var(--clr-black);
         font-weight: 700;
       }
     }
@@ -320,9 +320,9 @@
           padding: 1.5rem;
 
           div {
-            border-top: 3px solid $black;
-            border-bottom: 3px solid $black;
-            color: $primary-color;
+            border-top: 3px solid var(--clr-black);
+            border-bottom: 3px solid var(--clr-black);
+            color: var(--clr-primary);
             font-weight: 700;
           }
         }
@@ -367,10 +367,10 @@
     a {
       &.bordered {
         display: block;
-        color: $black;
+        color: var(--clr-black);
         font-size: 2.4rem;
         font-weight: 700;
-        border: 1px solid $primary-color;
+        border: 1px solid var(--clr-primary);
         padding: 1.5rem;
 
         &:hover {
@@ -383,17 +383,17 @@
   .text-stroke {
     font-size: 3rem;
     letter-spacing: 1.5px;
-    color: $white;
+    color: var(--clr-white);
     text-shadow:
-      -1px -1px 0 $primary-color,
-      1px -1px 0 $primary-color,
-      -1px 1px 0 $primary-color,
-      1px 1px 0 $primary-color;
+      -1px -1px 0 var(--clr-primary),
+      1px -1px 0 var(--clr-primary),
+      -1px 1px 0 var(--clr-primary),
+      1px 1px 0 var(--clr-primary);
   }
 }
 
 .code-img {
-  background-color: $black;
+  background-color: var(--clr-black);
   max-width: 23.3rem;
   padding: 1rem;
   margin: auto;

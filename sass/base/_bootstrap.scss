@@ -10,7 +10,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid $light-gray-3;
+  border-top: 1px solid var(--clr-light-gray-3);
   height: 0;
   opacity: 1;
 }
@@ -40,19 +40,19 @@ select.form-control {
   }
 
   &-warning {
-    background-color: $warning;
-    color: $black;
+    background-color: var(--clr-warning);
+    color: var(--clr-black);
 
     em {
-      color: $warning-em;
+      color: var(--clr-warning-em);
       font-weight: 700;
     }
   }
 
   &-default {
     text-align: center;
-    background-color: $light-gray;
-    border-color: darken($light-gray, 10%);
+    background-color: var(--clr-light-gray);
+    border-color: color-mix(in srgb, var(--clr-light-gray), #000 10%);
   }
 }
 

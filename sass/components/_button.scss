@@ -8,52 +8,53 @@
   font-size: $default-font-size;
 
   &-primary {
-    background-color: $primary-color;
-    border-color: $primary-color;
-    color: $white;
+    background-color: var(--clr-primary);
+    border-color: var(--clr-primary);
+    color: var(--clr-white);
     &:link,
     &:visited {
     }
 
     &:hover {
-      background-color: darken($primary-color, 8%);
-      border-color: darken($primary-color, 10%);
-      color: $white;
+      background-color: color-mix(in srgb, var(--clr-primary), #000 20%);
+      border-color: color-mix(in srgb, var(--clr-primary), #000 25%);
+      color: var(--clr-white);
     }
 
+    &:first-child:active,
     &:active,
     &:active:hover,
     &:focus,
     &:active:focus {
-      background-color: darken($primary-color, 4%);
-      border-color: darken($primary-color, 5%);
-      color: $white;
+      background-color: color-mix(in srgb, var(--clr-primary), #000 10%);
+      border-color: color-mix(in srgb, var(--clr-primary), #000 12%);
+      color: var(--clr-white);
     }
 
     &-outline {
       background-color: transparent;
-      border-color: $primary-color;
-      color: $primary-color;
+      border-color: var(--clr-primary);
+      color: var(--clr-primary);
 
       &:hover,
       &:active,
       &:active:hover,
       &:focus,
       &:active:focus {
-        background-color: $primary-color;
-        color: $white;
+        background-color: var(--clr-primary);
+        color: var(--clr-white);
       }
     }
   }
 
   &-success {
-    border-color: $success-color;
-    background-color: $success-color;
-    color: $white;
+    border-color: var(--clr-success);
+    background-color: var(--clr-success);
+    color: var(--clr-white);
 
     &:link,
     &:visited {
-      color: $white;
+      color: var(--clr-white);
     }
 
     &:hover,
@@ -62,20 +63,20 @@
     &:focus,
     &:active:focus,
     &-inverted {
-      background-color: darken($success-color, 8%);
-      border-color: darken($success-color, 10%);
-      color: $white;
+      background-color: color-mix(in srgb, var(--clr-success), #000 8%);
+      border-color: color-mix(in srgb, var(--clr-success), #000 10%);
+      color: var(--clr-white);
     }
   }
 
   &-special {
-    border-color: $alt-link;
-    background-color: $alt-link;
-    color: $white;
+    border-color: var(--clr-alt-link);
+    background-color: var(--clr-alt-link);
+    color: var(--clr-white);
 
     &:link,
     &:visited {
-      color: $white;
+      color: var(--clr-white);
     }
 
     &:hover,
@@ -84,15 +85,15 @@
     &:focus,
     &:active:focus,
     &-inverted {
-      background-color: darken($alt-link, 8%);
-      border-color: darken($alt-link, 10%);
-      color: $white;
+      background-color: color-mix(in srgb, var(--clr-alt-link), #000 8%);
+      border-color: color-mix(in srgb, var(--clr-alt-link), #000 10%);
+      color: var(--clr-white);
     }
   }
 
   &-default {
-    border-color: $secondary-color;
-    color: $secondary-color;
+    border-color: var(--clr-secondary);
+    color: var(--clr-secondary);
     opacity: 1;
 
     &:hover,
@@ -108,39 +109,39 @@
   &-disabled {
     cursor: not-allowed;
     //pointer-events: none;
-    background-color: $disabled;
-    border: 1px solid $secondary-color;
+    background-color: var(--clr-disabled);
+    border: 1px solid var(--clr-secondary);
     box-shadow: none;
-    color: $white;
+    color: var(--clr-white);
 
     &:hover,
     &:active,
     &:active:focus {
       cursor: not-allowed;
-      background-color: $disabled;
-      border: 1px solid $secondary-color;
+      background-color: var(--clr-disabled);
+      border: 1px solid var(--clr-secondary);
       box-shadow: none;
-      color: $white;
+      color: var(--clr-white);
       transform: none;
     }
   }
 
   &-secondary {
     background-color: transparent;
-    border-color: $secondary-color;
-    color: $secondary-color;
+    border-color: var(--clr-secondary);
+    color: var(--clr-secondary);
 
     &:link,
     &:visited {
-      color: $secondary-color;
+      color: var(--clr-secondary);
     }
 
     &:hover,
     &:active,
     &:active:focus {
-      color: $white;
-      border-color: $primary-color;
-      background-color: $primary-color;
+      color: var(--clr-white);
+      border-color: var(--clr-primary);
+      background-color: var(--clr-primary);
     }
   }
 
@@ -156,7 +157,7 @@
 
     &:hover,
     &:active {
-      color: $primary-color;
+      color: var(--clr-primary);
       text-decoration: underline;
       box-shadow: none;
       transform: none;
@@ -213,7 +214,7 @@
       padding-left: 0;
       padding-right: 0;
       display: inline-block;
-      color: $alt-link;
+      color: var(--clr-alt-link);
       font-size: inherit;
     }
   }
@@ -227,9 +228,9 @@
   }
 
   &-cta {
-    background-color: $white;
-    border-color: $primary-color;
-    color: $primary-color;
+    background-color: var(--clr-white);
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
     font-weight: 700;
     box-shadow:
       0 1.5px 4px rgba(0, 0, 0, 0.24),
@@ -240,9 +241,9 @@
     }
 
     &:hover {
-      background-color: $primary-color;
-      border-color: $primary-color;
-      color: $white;
+      background-color: var(--clr-primary);
+      border-color: var(--clr-primary);
+      color: var(--clr-white);
       transform: translateY(-3px);
     }
 
@@ -250,8 +251,8 @@
     &:active:hover,
     &:focus,
     &:active:focus {
-      background-color: darken($primary-color, 4%);
-      border-color: darken($primary-color, 5%);
+      background-color: color-mix(in srgb, var(--clr-primary), #000 4%);
+      border-color: color-mix(in srgb, var(--clr-primary), #000 5%);
     }
   }
 
@@ -259,15 +260,15 @@
     button {
       border: none;
       background-color: transparent;
-      color: $primary-color;
-      border-bottom: 1px solid $primary-color;
+      color: var(--clr-primary);
+      border-bottom: 1px solid var(--clr-primary);
       margin-bottom: 1rem;
     }
   }
 
   &-x-lg {
-    background-color: $primary-color;
-    color: $white;
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
     font-size: 2rem;
     display: block;
     text-align: center;
@@ -279,21 +280,25 @@
     transition: all 0.25s ease-in-out;
 
     &:hover {
-      background-color: darken($primary-color, 8%) !important;
-      border-color: darken($primary-color, 10%);
+      background-color: color-mix(
+        in srgb,
+        var(--clr-primary),
+        #000 8%
+      ) !important;
+      border-color: color-mix(in srgb, var(--clr-primary), #000 10%);
       text-decoration: none;
       transition: all 0.25s ease-in-out;
-      color: $white;
+      color: var(--clr-white);
     }
 
     &:active,
     &:active:hover,
     &:focus,
     &:active:focus {
-      background-color: darken($primary-color, 4%);
-      border-color: darken($primary-color, 5%);
+      background-color: color-mix(in srgb, var(--clr-primary), #000 4%);
+      border-color: color-mix(in srgb, var(--clr-primary), #000 5%);
       text-decoration: none;
-      color: $white;
+      color: var(--clr-white);
       transition: all 0.25s ease-in-out;
     }
 
@@ -313,26 +318,26 @@
     font-weight: 700;
 
     &:hover {
-      background-color: $primary-color;
-      border-color: $primary-color;
-      color: $white;
+      background-color: var(--clr-primary);
+      border-color: var(--clr-primary);
+      color: var(--clr-white);
       &:link,
       &:visited {
       }
 
       &:hover {
-        background-color: darken($primary-color, 8%);
-        border-color: darken($primary-color, 10%);
-        color: $white;
+        background-color: color-mix(in srgb, var(--clr-primary), #000 8%);
+        border-color: color-mix(in srgb, var(--clr-primary), #000 10%);
+        color: var(--clr-white);
       }
 
       &:active,
       &:active:hover,
       &:focus,
       &:active:focus {
-        background-color: darken($primary-color, 4%);
-        border-color: darken($primary-color, 5%);
-        color: $white;
+        background-color: color-mix(in srgb, var(--clr-primary), #000 4%);
+        border-color: color-mix(in srgb, var(--clr-primary), #000 5%);
+        color: var(--clr-white);
       }
     }
 
@@ -357,18 +362,18 @@
     width: auto;
     text-transform: uppercase;
     font-weight: 700;
-    color: $white;
+    color: var(--clr-white);
     text-decoration: none;
-    background-color: darken($black, 5%);
+    background-color: color-mix(in srgb, var(--clr-black), #000 5%);
     padding: 1rem;
     font-size: 3.8rem;
     transition: all 0.2s ease;
-    box-shadow: 0 0.5rem 0.5rem rgba($black, 0.6);
+    box-shadow: 0 0.5rem 0.5rem rgba(var(--clr-black), 0.6);
   }
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba($black, 0.4);
+    box-shadow: 0 1rem 2rem rgba(var(--clr-black), 0.4);
     transition: all 0.2s ease;
   }
 
@@ -376,17 +381,17 @@
   &:focus {
     outline: none;
     transform: translateY(-1px);
-    box-shadow: 0 0.5rem 1rem rgba($black, 0.6);
+    box-shadow: 0 0.5rem 1rem rgba(var(--clr-black), 0.6);
     transition: all 0.2s ease;
   }
 
   span {
     text-align: center;
     display: block;
-    color: $white;
+    color: var(--clr-white);
 
     @media #{$mq-ie} {
-      background-color: darken($black, 5%);
+      background-color: color-mix(in srgb, var(--clr-black), #000 5%);
     }
   }
 }

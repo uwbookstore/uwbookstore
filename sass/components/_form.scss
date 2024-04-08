@@ -26,7 +26,7 @@ select.form-control {
   background-position: right 0.5rem center;
   background-size: 0.9rem 0.6rem;
   background-repeat: no-repeat;
-  border: 2px solid $light-gray-3;
+  border: 2px solid var(--clr-light-gray-3);
   width: 100%;
 
   @media #{$mq-medium} {
@@ -36,7 +36,7 @@ select.form-control {
 
   &.dd-hidden {
     background-image: none;
-    background-color: $white;
+    background-color: var(--clr-white);
     color: currentColor;
     border: none;
     box-shadow: none;

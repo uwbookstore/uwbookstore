@@ -3,7 +3,7 @@
   margin: 1rem auto;
   text-align: center;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid $light-gray-2;
+  border-bottom: 1px solid var(--clr-light-gray-2);
 
   @media #{$mq-medium} {
     position: relative;
@@ -29,9 +29,9 @@ button.btn-default.typeCodeOption {
   &:hover,
   &.typeSelected {
     border-width: 1px !important;
-    border-color: $primary-color !important;
-    color: $white;
-    background-color: $primary-color;
+    border-color: var(--clr-primary) !important;
+    color: var(--clr-white);
+    background-color: var(--clr-primary);
   }
 
   &.disabled {
@@ -39,8 +39,8 @@ button.btn-default.typeCodeOption {
     background: url('https://i.univbkstr.com/v3/css/img/disabled-bg.png');
     background-size: 100% 100%;
     background-color: transparent;
-    color: darken($dark-gray, 5%);
-    border-color: darken($dark-gray, 5%);
+    color: color-mix(in srgb, var(--clr-dark-gray), #000 5%);
+    border-color: color-mix(in srgb, var(--clr-dark-gray), #000 5%);
   }
 
   @media #{$mq-medium} {
@@ -106,7 +106,7 @@ span.btn-default.typeSelected {
 }
 
 .rankImageWrapper span.ranking {
-  color: $white;
+  color: var(--clr-white);
 }
 
 // .merchDetailImage {
@@ -158,7 +158,7 @@ span.btn-default.typeSelected {
       .message_merch_promo {
         padding: 1rem;
         margin-bottom: 1.5rem;
-        border: 1px solid darken($success-color, 20%);
+        border: 1px solid color-mix(in srgb, var(--clr-success), #000 20%);
       }
     }
 
@@ -168,7 +168,7 @@ span.btn-default.typeSelected {
       font-style: italic;
       font-weight: 700;
       // text-transform: capitalize;
-      color: $primary-color;
+      color: var(--clr-primary);
 
       &-small {
         font-size: 2.4rem;
@@ -187,15 +187,15 @@ span.btn-default.typeSelected {
       }
 
       .sale {
-        color: $primary-color;
+        color: var(--clr-primary);
       }
     }
 
     &-description {
       margin: 1.5rem auto;
       padding: 1rem 0 2rem;
-      border-top: 1px solid $black;
-      border-bottom: 1px solid $black;
+      border-top: 1px solid var(--clr-black);
+      border-bottom: 1px solid var(--clr-black);
       position: relative;
       line-height: 1.6;
 
@@ -222,7 +222,7 @@ span.btn-default.typeSelected {
     &-size {
       margin: 1.5rem auto;
       padding: 0 0 1.5rem;
-      border-bottom: 1px solid $black;
+      border-bottom: 1px solid var(--clr-black);
       position: relative;
 
       &-link {
@@ -232,7 +232,7 @@ span.btn-default.typeSelected {
           font-size: 1.6rem;
           text-transform: lowercase;
           margin-left: 0.5rem;
-          color: $black;
+          color: var(--clr-black);
         }
       }
 
@@ -258,11 +258,11 @@ span.btn-default.typeSelected {
             display: none;
 
             &:checked + label {
-              background-color: $primary-color;
-              color: $white;
+              background-color: var(--clr-primary);
+              color: var(--clr-white);
               font-weight: 700;
               cursor: default;
-              border-color: $primary-color;
+              border-color: var(--clr-primary);
             }
           }
 
@@ -278,7 +278,7 @@ span.btn-default.typeSelected {
             line-height: 1.5;
             text-transform: uppercase;
             font-size: 1.2rem;
-            border: 1px solid $black;
+            border: 1px solid var(--clr-black);
             cursor: pointer;
             font-weight: 400;
             width: 100%;
@@ -487,7 +487,7 @@ span.btn-default.typeSelected {
 
   .suggestedName.merch__card-title {
     font-weight: 700;
-    color: $black;
+    color: var(--clr-black);
   }
 }
 
@@ -610,7 +610,7 @@ span.btn-default.typeSelected {
 
 p.sale-info {
   font-weight: bold;
-  color: $primary-color;
+  color: var(--clr-primary);
   margin: 5px 0;
   font-size: 1.4rem;
   letter-spacing: 1px;

@@ -5,7 +5,7 @@
   max-width: 120rem;
 
   &__ubs--logo {
-    background: $white;
+    background: var(--clr-white);
     padding: 2.5rem 1.5rem;
     margin: auto;
 
@@ -45,8 +45,8 @@
     justify-content: space-around;
     position: relative;
     padding: 1.5rem;
-    background-color: $primary-color;
-    color: $white;
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
     list-style: none;
     margin: 0;
 
@@ -235,7 +235,7 @@ span#cart-count {
         input {
           font-size: inherit;
           border: none;
-          border-bottom: 1px solid $black;
+          border-bottom: 1px solid var(--clr-black);
           border-radius: unset;
           width: 100%;
           display: inline;
@@ -292,8 +292,8 @@ span#cart-count {
     opacity: 1;
     width: 5rem;
     height: 5rem;
-    background: darken($primary-color, 10%);
-    border: 1px solid darken($primary-color, 12%);
+    background: color-mix(in srgb, var(--clr-primary), #000 10%);
+    border: 1px solid color-mix(in srgb, var(--clr-primary), #000 12%);
     border-radius: 0;
     outline: 0;
     position: absolute;
@@ -309,17 +309,17 @@ span#cart-count {
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 1px 2px rgba($black, 0.6);
+    box-shadow: 0 1px 2px rgba(var(--clr-black), 0.6);
   }
   &:active {
     transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba($black, 0.8);
+    box-shadow: 0 2px 4px rgba(var(--clr-black), 0.8);
   }
 }
 
 .backtotop em {
   @include absCenter;
-  color: $white;
+  color: var(--clr-white);
   font-size: 2rem;
 }
 

@@ -12,7 +12,7 @@
 
 .carousel-control.left,
 .carousel-control.right {
-  color: darken($light-gray-3, 10%);
+  color: color-mix(in srgb, var(--clr-light-gray-3), #000 10%);
   background-image: none;
   opacity: 1;
   width: 2.5%;
@@ -45,7 +45,7 @@
       cursor: pointer;
       background-color: #000 \9;
       background-color: rgba(0, 0, 0, 0);
-      border: 1px solid $black;
+      border: 1px solid var(--clr-black);
       border-radius: 10px;
     }
   }
@@ -72,10 +72,10 @@
 
   .carousel-indicators button {
     background-color: transparent;
-    border: 2px solid $black;
+    border: 2px solid var(--clr-black);
   }
 
   .carousel-indicators button.active {
-    background-color: $black;
+    background-color: var(--clr-black);
   }
 }

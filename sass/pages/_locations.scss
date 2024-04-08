@@ -39,8 +39,8 @@
         }
 
         &.active {
-          background-color: $primary-color;
-          color: $white;
+          background-color: var(--clr-primary);
+          color: var(--clr-white);
           box-shadow: none;
           text-decoration: none;
         }
@@ -53,7 +53,7 @@
     padding-bottom: 65%;
     height: 0;
     overflow: hidden;
-    border-bottom: 1px solid $light-gray-3;
+    border-bottom: 1px solid var(--clr-light-gray-3);
 
     @media #{$mq-medium} {
       padding-bottom: 35%;
@@ -71,8 +71,8 @@
 
   &__hours {
     flex: 1 1 100%;
-    background-color: $light-gray;
-    border: 1px solid darken($light-gray, 5%);
+    background-color: var(--clr-light-gray);
+    border: 1px solid color-mix(in srgb, var(--clr-light-gray), #000 5%);
     padding: 2rem 1rem;
 
     p {
@@ -92,7 +92,7 @@
   &__info {
     img {
       display: block;
-      border: 5px solid darken($light-gray, 5%);
+      border: 5px solid color-mix(in srgb, var(--clr-light-gray), #000 5%);
       border-radius: 100%;
       height: 15rem;
       width: 15rem;
@@ -128,15 +128,15 @@
     padding: 5px;
 
     & + li {
-      border-top: 1px solid $light-gray-3;
+      border-top: 1px solid var(--clr-light-gray-3);
     }
 
     &.closed {
-      color: lighten($primary-color, 5%);
+      color: color-mix(in srgb, var(--clr-primary), #fff 5%);
     }
 
     &.open {
-      color: darken($success-color, 15%);
+      color: color-mix(in srgb, var(--clr-success), #000 15%);
     }
   }
 

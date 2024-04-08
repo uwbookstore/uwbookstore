@@ -11,7 +11,7 @@
       width: 2.2rem;
       height: 2px;
       border-radius: 1px;
-      background-color: $black;
+      background-color: var(--clr-black);
       transition: all 0.25s ease-in-out;
 
       + .icon-bar {
@@ -60,9 +60,9 @@
     &__site {
       height: 7rem;
       position: relative;
-      border-bottom: 2px solid $primary-color;
+      border-bottom: 2px solid var(--clr-primary);
       padding: 1.5rem 0;
-      background-color: $white;
+      background-color: var(--clr-white);
       background-size: cover;
       @media #{$mq-menu} {
         height: auto;
@@ -81,7 +81,11 @@
           &:hover,
           &:active,
           &:focus {
-            background-color: darken($light-gray-2, 5%);
+            background-color: color-mix(
+              in srgb,
+              var(--clr-light-gray-2),
+              #000 5%
+            );
             transition: all 0.25s ease-in-out;
             text-decoration: none;
           }
@@ -90,12 +94,12 @@
         @media #{$mq-menu} {
           &.open {
             > a {
-              color: $white;
-              background-color: darken($primary-color, 5%);
+              color: var(--clr-white);
+              background-color: color-mix(in srgb, var(--clr-primary), #000 5%);
             }
           }
           > a {
-            color: $white;
+            color: var(--clr-white);
             font-size: 1.5rem;
             min-height: 100%;
             display: flex;
@@ -109,15 +113,15 @@
             &:hover,
             &:active,
             &:focus {
-              color: $white;
-              background-color: darken($primary-color, 5%);
+              color: var(--clr-white);
+              background-color: color-mix(in srgb, var(--clr-primary), #000 5%);
             }
           }
 
           &:hover,
           &:active,
           &:focus {
-            background-color: darken($primary-color, 5%);
+            background-color: color-mix(in srgb, var(--clr-primary), #000 5%);
           }
         }
       }
@@ -136,7 +140,7 @@
       padding-right: 0;
 
       @media #{$mq-menu} {
-        background-color: $primary-color;
+        background-color: var(--clr-primary);
         border-top: none;
       }
     }
@@ -279,17 +283,17 @@
 
 .megamenu {
   padding: 0;
-  border-bottom: 1px solid $light-gray-3;
+  border-bottom: 1px solid var(--clr-light-gray-3);
 
   h2 {
     font-size: 1.6rem;
     font-weight: 500;
-    border-bottom: 1px solid $light-gray-3;
+    border-bottom: 1px solid var(--clr-light-gray-3);
 
     a {
       display: block;
       padding: 1rem 1.5rem;
-      color: $black;
+      color: var(--clr-black);
 
       &:hover {
         text-decoration: none;
@@ -310,10 +314,10 @@
   a.nav-title {
     font-size: 1.6rem;
     font-weight: 500;
-    border-bottom: 1px solid $light-gray-3;
+    border-bottom: 1px solid var(--clr-light-gray-3);
     display: block;
     padding: 1rem 1.5rem;
-    color: $black;
+    color: var(--clr-black);
 
     &:hover {
       text-decoration: none;
@@ -344,7 +348,7 @@
 
       &:hover {
         text-decoration: none;
-        background-color: darken($light-gray-2, 5%);
+        background-color: color-mix(in srgb, var(--clr-light-gray-2), #000 5%);
       }
 
       @media #{$mq-menu} {
@@ -352,7 +356,7 @@
 
         &:hover {
           border-radius: 3px;
-          color: $black;
+          color: var(--clr-black);
           transition: all 0.25s ease-in-out;
         }
       }
@@ -361,7 +365,7 @@
 }
 
 .col-megamenu {
-  background-color: $white;
+  background-color: var(--clr-white);
 
   ul {
     display: none;
@@ -379,7 +383,7 @@
         &:visited {
           display: block;
           padding: 1rem 1.5rem;
-          color: $black;
+          color: var(--clr-black);
           font-size: 1.6rem;
         }
 
@@ -398,7 +402,7 @@
 
           &:hover {
             background-color: transparent;
-            color: $primary-color;
+            color: var(--clr-primary);
             transition: all 0.25s ease-in-out;
           }
         }
@@ -417,13 +421,13 @@
   }
 
   &-no-header li a {
-    background-color: $white;
+    background-color: var(--clr-white);
     font-size: 1.8rem;
     font-weight: 500;
-    border-bottom: 1px solid $light-gray-3;
+    border-bottom: 1px solid var(--clr-light-gray-3);
     display: block;
     padding: 1rem 1.5rem;
-    color: $black;
+    color: var(--clr-black);
 
     &:hover {
       text-decoration: none;
@@ -447,7 +451,7 @@
   a {
     &:link,
     &:visited {
-      color: $primary-color;
+      color: var(--clr-primary);
       font-weight: 700;
       padding: 1rem;
       border-bottom: 1px solid currentColor;
@@ -458,8 +462,8 @@
     &:active {
       text-decoration: none;
       // opacity: 0.65;
-      background-color: $primary-color;
-      color: $white;
+      background-color: var(--clr-primary);
+      color: var(--clr-white);
     }
   }
 }

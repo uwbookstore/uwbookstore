@@ -1,7 +1,7 @@
 .welcome {
   &__header {
     display: block;
-    background-color: $light-gray-3;
+    background-color: var(--clr-light-gray-3);
     padding: 3rem 1rem 5rem;
     text-align: center;
 
@@ -34,7 +34,7 @@
           margin-bottom: 2rem;
           font-size: 3rem;
           font-weight: 800;
-          color: $black;
+          color: var(--clr-black);
         }
 
         p {
@@ -97,7 +97,7 @@
   text-align: center;
 
   &__header {
-    color: $primary-color;
+    color: var(--clr-primary);
     font-family: 'Dancing Script';
     font-size: 7.5rem;
 
@@ -175,13 +175,13 @@
       }
 
       .twitterX {
-        fill: $primary-color;
+        fill: var(--clr-primary);
         height: 6rem;
       }
 
       .fa-brands {
         font-size: 6rem;
-        color: $primary-color;
+        color: var(--clr-primary);
       }
     }
 
@@ -190,14 +190,14 @@
       font-size: 3rem;
       margin-bottom: 0;
       font-weight: 700;
-      color: $black;
+      color: var(--clr-black);
     }
 
     &-name {
       display: block;
       font-size: 2rem;
       font-weight: 400;
-      color: $black;
+      color: var(--clr-black);
     }
   }
 }

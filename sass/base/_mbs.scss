@@ -82,7 +82,7 @@ input[class^='radio'] {
   &:checked {
     & + span {
       &::before {
-        background-color: $primary-color;
+        background-color: var(--clr-primary);
       }
     }
   }

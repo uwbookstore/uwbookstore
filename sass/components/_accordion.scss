@@ -1,7 +1,7 @@
 .Accordion {
   margin: 0 auto;
   padding: 0;
-  border: 1px solid $light-gray-2;
+  border: 1px solid var(--clr-light-gray-2);
   width: 100%;
 
   h3 {
@@ -13,17 +13,17 @@
     border-color: hsl(216, 94%, 73%);
 
     h3 {
-      background-color: $light-gray;
+      background-color: var(--clr-light-gray);
     }
   }
 
   > * + * {
-    border-top: 1px solid $light-gray-2;
+    border-top: 1px solid var(--clr-light-gray-2);
   }
 
   &-trigger {
-    background-color: $light-gray;
-    color: $black;
+    background-color: var(--clr-light-gray);
+    color: var(--clr-black);
     display: block;
     font-size: 1.6rem;
     font-weight: normal;
@@ -36,7 +36,7 @@
 
     &:focus,
     &:hover {
-      background-color: darken($light-gray, 3%);
+      background-color: color-mix(in srgb, var(--clr-light-gray), #000 3%);
     }
 
     &:focus .Accordion-title {

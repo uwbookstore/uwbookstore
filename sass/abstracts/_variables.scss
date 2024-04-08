@@ -74,27 +74,6 @@ $mq-xxlarge: 'screen and (min-width: #{$bp-xxlarge})';
 $mq-retina: '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)';
 $mq-ie: 'all and (-ms-high-contrast: none), (-ms-high-contrast: active)';
 
-// Colors
-$primary-color: #c5050c;
-$secondary-color: #777777;
-$tertiary-color: #6e6e6e;
-$success-color: #5cb85c;
-$alt-link: #0054ad;
-$warning: #fff3d9;
-$warning-em: #ffae00;
-$danger: #a94442;
-$danger-bg: #f2dede;
-$alert-color: #ec5840;
-$light-gray: #f1f1f1;
-$light-gray-2: #e1e1e1;
-$light-gray-3: #cacaca;
-$dark-gray: #818181;
-$black: #3e3e3e;
-$white: #fff;
-$off-white: #fefefe;
-$disabled: #727272;
-$info-color: #0dcaf0;
-
 $default-font-size: 1.6rem;
 $default-font-size-mobile: 1.9rem;
 $default-page-width: 100rem;

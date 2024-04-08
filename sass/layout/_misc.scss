@@ -1,7 +1,7 @@
 .table {
   &-heading {
-    background-color: $primary-color !important;
-    color: $white;
+    background-color: var(--clr-primary) !important;
+    color: var(--clr-white);
   }
 }
 
@@ -26,7 +26,7 @@
       text-align: center;
       margin: 0 0 2rem 0;
       background: transparent;
-      border: 2px dashed $light-gray-3;
+      border: 2px dashed var(--clr-light-gray-3);
       cursor: pointer;
 
       .check {
@@ -121,7 +121,7 @@
 
 .framing {
   img {
-    border: 2px solid $primary-color;
+    border: 2px solid var(--clr-primary);
     padding: 5px;
     margin-inline: auto;
   }

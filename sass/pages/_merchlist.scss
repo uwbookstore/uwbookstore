@@ -1,6 +1,6 @@
 a.merchLink {
   p.merchTitle {
-    color: $black;
+    color: var(--clr-black);
   }
 }
 
@@ -41,7 +41,7 @@ p.merchRegular {
 
 p.merchSalePrice.red,
 p.merchPrice.red {
-  color: $primary-color;
+  color: var(--clr-primary);
   font-style: italic;
   font-weight: normal;
   display: inline;
@@ -100,8 +100,8 @@ p.merchPrice.red {
 
     &-special {
       position: absolute;
-      background-color: $primary-color;
-      color: $white;
+      background-color: var(--clr-primary);
+      color: var(--clr-white);
       top: 0.5rem;
       left: 0.5rem;
       font-weight: 700;
@@ -111,8 +111,8 @@ p.merchPrice.red {
 
     &-new {
       position: absolute;
-      background-color: $dark-gray;
-      color: $white;
+      background-color: var(--clr-dark-gray);
+      color: var(--clr-white);
       top: 0.5rem;
       left: 0.5rem;
       font-weight: 700;
@@ -124,8 +124,8 @@ p.merchPrice.red {
 
     &-restock {
       position: absolute;
-      background-color: $warning-em;
-      color: $black;
+      background-color: var(--clr-warning-em);
+      color: var(--clr-black);
       top: 0.5rem;
       left: 0.5rem;
       font-weight: 700;
@@ -137,7 +137,7 @@ p.merchPrice.red {
 
     &-in-cart {
       @include absCenter;
-      background-color: rgba($white, 0.8);
+      background-color: rgba(var(--clr-white), 0.8);
       padding: 0.5rem 1.5rem;
       border: 1px solid currentColor;
       width: auto;
@@ -171,7 +171,7 @@ p.merchPrice.red {
       font-size: inherit;
       margin: 0 0 1rem;
       display: block;
-      color: $black;
+      color: var(--clr-black);
     }
 
     &-img {
@@ -227,7 +227,7 @@ p.merchPrice.red {
       width: 100%;
 
       label {
-        color: $tertiary-color;
+        color: var(--clr-tertiary);
         font-size: 1rem;
         font-weight: 500;
         line-height: 2;
@@ -311,7 +311,7 @@ p.merchPrice.red {
     padding: 1.5rem;
 
     a {
-      color: $black;
+      color: var(--clr-black);
       display: block;
       text-decoration: none;
     }
@@ -409,7 +409,7 @@ p.merchPrice.red {
       font-size: 2.4rem;
       font-style: italic;
       font-weight: 700;
-      color: $primary-color;
+      color: var(--clr-primary);
 
       @media #{$mq-medium} {
         font-size: 2rem;
@@ -443,7 +443,7 @@ p.merchPrice.red {
   .lcsSizeWrapper,
   .lcsLogoWrapper {
     padding-bottom: 1rem;
-    border-bottom: 1px solid $black;
+    border-bottom: 1px solid var(--clr-black);
   }
 
   .lcsSizeWrapper {
@@ -464,12 +464,12 @@ p.merchPrice.red {
 }
 
 .img-empty {
-  background-color: $light-gray;
-  border: 1px solid $light-gray-3;
+  background-color: var(--clr-light-gray);
+  border: 1px solid var(--clr-light-gray-3);
   width: 100%;
   height: 20rem;
   max-width: 60rem;
-  color: $black;
+  color: var(--clr-black);
   position: relative;
 
   @media #{$mq-medium} {
@@ -491,7 +491,7 @@ p.merchPrice.red {
   margin: 2rem 0;
 
   h1 {
-    color: $primary-color;
+    color: var(--clr-primary);
     font-weight: 700;
     font-size: 3rem;
     margin-bottom: 1.5rem;
@@ -511,7 +511,7 @@ p.merchPrice.red {
 li.attribute {
   a {
     cursor: default;
-    color: darken($dark-gray, 5%);
+    color: color-mix(in srgb, var(--clr-dark-gray), #000 5%);
 
     &:hover {
       text-decoration: none;
@@ -522,7 +522,7 @@ li.attribute {
 .saleBadge,
 .newBadge {
   // position: absolute;
-  // color: $white;
+  // color: var(--clr-white);
   top: -2rem;
   left: -2rem;
   font-weight: 700;
@@ -537,16 +537,16 @@ li.attribute {
 }
 
 // .newBadge {
-//     background-color: $dark-gray;
+//     background-color: var(--clr-dark-gray);
 // }
 
 // .saleBadge {
-//     background-color: $primary-color;
+//     background-color: var(--clr-primary);
 // }
 
 .pagination__box {
-  border: 1px solid $light-gray;
-  background-color: $white;
+  border: 1px solid var(--clr-light-gray);
+  background-color: var(--clr-white);
   padding: 0 2rem 2rem;
   z-index: 5000;
   position: fixed;
@@ -580,8 +580,8 @@ li.attribute {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color: $primary-color;
-  border-color: $primary-color;
+  background-color: var(--clr-primary);
+  border-color: var(--clr-primary);
 }
 
 // Previously Viewed Items
@@ -593,13 +593,13 @@ li.attribute {
   margin: 0 0 2.5rem;
   width: 100%;
   padding-bottom: 1rem;
-  border-bottom: 1px solid $black;
+  border-bottom: 1px solid var(--clr-black);
   display: block;
   text-align: center;
 
   span {
     display: inline-block;
-    background-color: $white;
+    background-color: var(--clr-white);
     padding: 1rem;
     background-color: inherit;
   }
@@ -624,7 +624,7 @@ li.attribute {
       content: '';
       height: 1px;
       display: block;
-      // background-color: $light-gray-2;
+      // background-color: var(--clr-light-gray-2);
       background-color: currentColor;
     }
   }

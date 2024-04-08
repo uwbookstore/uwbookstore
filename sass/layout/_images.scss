@@ -1,6 +1,6 @@
 .img {
   &__border {
-    border: 2px solid $primary-color;
+    border: 2px solid var(--clr-primary);
     padding: 2px;
 
     &-radius {

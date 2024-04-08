@@ -3,8 +3,8 @@
   height: 100%;
 
   &__gray {
-    background-color: $light-gray;
-    border: 1px solid darken($light-gray, 5%);
+    background-color: var(--clr-light-gray);
+    border: 1px solid color-mix(in srgb, var(--clr-light-gray), #000 5%);
     margin-bottom: 2rem;
     padding: 2rem;
 
@@ -15,20 +15,20 @@
     }
 
     hr {
-      border-top-color: $light-gray-3;
+      border-top-color: var(--clr-light-gray-3);
     }
   }
 
   &__blue {
     background-color: #2da9d7;
-    color: $white;
+    color: var(--clr-white);
     padding: 3rem;
     margin: 3rem auto;
   }
 
   &__black {
-    background-color: darken($black, 8%);
-    color: $white;
+    background-color: color-mix(in srgb, var(--clr-light-gray), #000 8%);
+    color: var(--clr-white);
     padding: 2rem;
   }
 
@@ -42,9 +42,9 @@
     font-weight: 700;
 
     &-ubs {
-      color: $white;
-      background-color: $primary-color;
-      border-color: darken($primary-color, 10%);
+      color: var(--clr-white);
+      background-color: var(--clr-primary);
+      border-color: color-mix(in srgb, var(--clr-primary), #000 10%);
       padding: 0.5rem 1.5rem;
       margin-bottom: 2rem;
       font-weight: normal;
@@ -52,7 +52,7 @@
       a {
         &:link,
         &:visited {
-          color: $white;
+          color: var(--clr-white);
           display: block;
           text-transform: uppercase;
           font-size: 2.4rem;

@@ -1,0 +1,138 @@
+@use '../util' as *;
+
+#page-nav,
+.page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+
+  li {
+    flex: 0 0 50%;
+    padding: 0 0.5rem;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(medium) {
+      flex: 0 0 auto;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+
+      @include breakpoint(medium) {
+        width: auto;
+      }
+    }
+  }
+}
+
+.size-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include breakpoint(medium) {
+    // justify-content: space-between;
+  }
+
+  a {
+    flex: 0 0 50%;
+    margin-bottom: 2.5rem;
+
+    @include breakpoint(medium) {
+      flex: 1;
+    }
+  }
+}
+
+.store {
+  ul {
+    margin-left: 3rem;
+  }
+}
+
+.header {
+  &__video {
+    height: 70vh;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    position: relative;
+    background-color: lightgray;
+    background-image: url('https://i.univbkstr.com/v3/css/img/no-video-bg.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h2 {
+      color: white;
+      font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.75);
+      color: #333;
+      padding: 4rem;
+    }
+
+    p {
+      color: white;
+      font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.75);
+      color: #333;
+      padding: 0 0 1.5rem;
+      margin-top: -2.5rem;
+    }
+
+    video,
+    button.playpause {
+      display: none;
+    }
+  }
+
+  &__video-message {
+    position: absolute;
+    top: 0;
+
+    height: auto;
+    left: 0;
+    right: 0;
+    /* padding: 3rem 0; */
+  }
+
+  @include breakpoint(medium) {
+    &__video {
+      height: 63vh;
+
+      video {
+        width: 100%;
+        margin: auto;
+        display: block;
+        height: auto;
+      }
+
+      button.playpause {
+        display: block;
+        position: absolute;
+        bottom: 1rem;
+        right: 2rem;
+        z-index: 100;
+        border: 0;
+        color: rgba(255, 255, 255, 0.5);
+        background: rgba(0, 0, 0, 0.5);
+        padding: 5px 1rem;
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    &__video {
+      height: 75vh;
+    }
+  }
+}
+
+.heading__line br {
+  display: block;
+
+  @include breakpoint(xsmall) {
+    display: none;
+  }
+}

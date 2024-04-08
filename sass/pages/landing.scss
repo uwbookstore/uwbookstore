@@ -1,0 +1,26 @@
+@use '../util' as *;
+
+.clearance {
+  height: 20rem;
+  width: 20rem;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.fa.clearance {
+  &__icon {
+    font-size: 18.5rem;
+    color: var(--clr-primary);
+  }
+}
+
+#shipping {
+  table {
+    width: 100%;
+
+    @include breakpoint(small) {
+      width: 75%;
+      margin: 1rem auto;
+    }
+  }
+}

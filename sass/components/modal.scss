@@ -1,0 +1,13 @@
+@use '../util' as *;
+
+#odu-global-substitute-card {
+  .question-wrapper {
+    p span.bold {
+      font-weight: normal;
+    }
+
+    p strong {
+      background: yellow;
+    }
+  }
+}

@@ -1,0 +1,395 @@
+@use '../util' as *;
+
+.btn {
+  border: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+  padding: 0 1.5rem;
+  height: 5rem;
+  line-height: 5rem;
+  text-decoration: none;
+  font-size: var(--fs-default);
+
+  &-primary {
+    background-color: var(--clr-primary);
+    border-color: var(--clr-primary);
+    color: var(--clr-white);
+    &:link,
+    &:visited {
+    }
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--clr-primary), #000 20%);
+      border-color: color-mix(in srgb, var(--clr-primary), #000 25%);
+      color: var(--clr-white);
+    }
+
+    &:first-child:active,
+    &:active,
+    &:active:hover,
+    &:focus,
+    &:active:focus {
+      background-color: color-mix(in srgb, var(--clr-primary), #000 10%);
+      border-color: color-mix(in srgb, var(--clr-primary), #000 12%);
+      color: var(--clr-white);
+    }
+
+    &-outline {
+      background-color: transparent;
+      border-color: var(--clr-primary);
+      color: var(--clr-primary);
+
+      &:hover,
+      &:active,
+      &:active:hover,
+      &:focus,
+      &:active:focus {
+        background-color: var(--clr-primary);
+        color: var(--clr-white);
+      }
+    }
+  }
+
+  &-success {
+    border-color: var(--clr-success);
+    background-color: var(--clr-success);
+    color: var(--clr-white);
+
+    &:link,
+    &:visited {
+      color: var(--clr-white);
+    }
+
+    &:hover,
+    &:active,
+    &:active:hover,
+    &:focus,
+    &:active:focus,
+    &-inverted {
+      background-color: color-mix(in srgb, var(--clr-success), #000 8%);
+      border-color: color-mix(in srgb, var(--clr-success), #000 10%);
+      color: var(--clr-white);
+    }
+  }
+
+  &-special {
+    border-color: var(--clr-alt-link);
+    background-color: var(--clr-alt-link);
+    color: var(--clr-white);
+
+    &:link,
+    &:visited {
+      color: var(--clr-white);
+    }
+
+    &:hover,
+    &:active,
+    &:active:hover,
+    &:focus,
+    &:active:focus,
+    &-inverted {
+      background-color: color-mix(in srgb, var(--clr-alt-link), #000 8%);
+      border-color: color-mix(in srgb, var(--clr-alt-link), #000 10%);
+      color: var(--clr-white);
+    }
+  }
+
+  &-default {
+    border-color: var(--clr-secondary);
+    color: var(--clr-secondary);
+    opacity: 1;
+
+    &:hover,
+    &:active,
+    &:active:hover,
+    &:focus,
+    &:active:focus,
+    &-inverted {
+      opacity: 0.9;
+    }
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+    //pointer-events: none;
+    background-color: var(--clr-disabled);
+    border: 1px solid var(--clr-secondary);
+    box-shadow: none;
+    color: var(--clr-white);
+
+    &:hover,
+    &:active,
+    &:active:focus {
+      cursor: not-allowed;
+      background-color: var(--clr-disabled);
+      border: 1px solid var(--clr-secondary);
+      box-shadow: none;
+      color: var(--clr-white);
+      transform: none;
+    }
+  }
+
+  &-secondary {
+    background-color: transparent;
+    border-color: var(--clr-secondary);
+    color: var(--clr-secondary);
+
+    &:link,
+    &:visited {
+      color: var(--clr-secondary);
+    }
+
+    &:hover,
+    &:active,
+    &:active:focus {
+      color: var(--clr-white);
+      border-color: var(--clr-primary);
+      background-color: var(--clr-primary);
+    }
+  }
+
+  &-link {
+    &:link,
+    &:visited {
+      font-weight: normal;
+      font-size: inherit;
+      margin-bottom: 1.5rem;
+      transition: all 0.2s ease-in-out;
+      text-transform: capitalize;
+    }
+
+    &:hover,
+    &:active {
+      color: var(--clr-primary);
+      text-decoration: underline;
+      box-shadow: none;
+      transform: none;
+    }
+
+    i,
+    em {
+      font-size: 1rem;
+    }
+  }
+
+  &-text {
+    text-decoration: underline;
+
+    &.active,
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    border-width: 1px;
+    height: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  &-rnd {
+    border-radius: 10rem;
+    padding: 0;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+
+    @include breakpoint(medium) {
+      width: 3rem;
+      height: 3rem;
+      line-height: 3rem;
+    }
+
+    i {
+      font-size: 3.5rem;
+      padding-top: 0.5rem;
+      font-size: 3.5rem;
+
+      @include breakpoint(medium) {
+        font-size: 1.9rem;
+      }
+    }
+  }
+
+  &-alt {
+    &:link,
+    &:visited {
+      padding-left: 0;
+      padding-right: 0;
+      display: inline-block;
+      color: var(--clr-alt-link);
+      font-size: inherit;
+    }
+  }
+
+  &-wishlist {
+    width: 100%;
+
+    @include breakpoint(medium) {
+      width: auto;
+    }
+  }
+
+  &-cta {
+    background-color: var(--clr-white);
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
+    font-weight: 700;
+    box-shadow:
+      0 1.5px 4px rgba(0, 0, 0, 0.24),
+      0 1.5px 6px rgba(0, 0, 0, 0.12);
+    border-width: 2px;
+    &:link,
+    &:visited {
+    }
+
+    &:hover {
+      background-color: var(--clr-primary);
+      border-color: var(--clr-primary);
+      color: var(--clr-white);
+      transform: translateY(-3px);
+    }
+
+    &:active,
+    &:active:hover,
+    &:focus,
+    &:active:focus {
+      background-color: color-mix(in srgb, var(--clr-primary), #000 4%);
+      border-color: color-mix(in srgb, var(--clr-primary), #000 5%);
+    }
+  }
+
+  &-container {
+    button {
+      border: none;
+      background-color: transparent;
+      color: var(--clr-primary);
+      border-bottom: 1px solid var(--clr-primary);
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-x-lg {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1.5rem;
+    height: auto;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      background-color: color-mix(
+        in srgb,
+        var(--clr-primary),
+        #000 8%
+      ) !important;
+      border-color: color-mix(in srgb, var(--clr-primary), #000 10%);
+      text-decoration: none;
+      transition: all 0.25s ease-in-out;
+      color: var(--clr-white);
+    }
+
+    &:active,
+    &:active:hover,
+    &:focus,
+    &:active:focus {
+      background-color: color-mix(in srgb, var(--clr-primary), #000 4%);
+      border-color: color-mix(in srgb, var(--clr-primary), #000 5%);
+      text-decoration: none;
+      color: var(--clr-white);
+      transition: all 0.25s ease-in-out;
+    }
+
+    @include breakpoint(medium) {
+      width: 50%;
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &-xlrg {
+    height: auto;
+    padding: 1rem 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &:hover {
+      background-color: var(--clr-primary);
+      border-color: var(--clr-primary);
+      color: var(--clr-white);
+      &:link,
+      &:visited {
+      }
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--clr-primary), #000 8%);
+        border-color: color-mix(in srgb, var(--clr-primary), #000 10%);
+        color: var(--clr-white);
+      }
+
+      &:active,
+      &:active:hover,
+      &:focus,
+      &:active:focus {
+        background-color: color-mix(in srgb, var(--clr-primary), #000 4%);
+        border-color: color-mix(in srgb, var(--clr-primary), #000 5%);
+        color: var(--clr-white);
+      }
+    }
+
+    @include breakpoint(medium) {
+      font-size: 2.5rem !important;
+    }
+
+    @include breakpoint(large) {
+      font-size: 3rem !important;
+    }
+
+    @include breakpoint(xlarge) {
+      font-size: 3.6rem !important;
+    }
+  }
+}
+
+.blk-hlt {
+  &:link,
+  &:active {
+    display: block;
+    width: auto;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--clr-white);
+    text-decoration: none;
+    background-color: color-mix(in srgb, var(--clr-black), #000 5%);
+    padding: 1rem;
+    font-size: 3.8rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 0.5rem 0.5rem rgba(var(--clr-black), 0.6);
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(var(--clr-black), 0.4);
+    transition: all 0.2s ease;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(var(--clr-black), 0.6);
+    transition: all 0.2s ease;
+  }
+
+  span {
+    text-align: center;
+    display: block;
+    color: var(--clr-white);
+  }
+}

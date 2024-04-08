@@ -1,0 +1,160 @@
+@use '../util' as *;
+
+// Create some space under the
+// iCM editor menu since we use
+// a negative top margin on the
+// hero images.
+#modMenu {
+  margin-bottom: 2rem;
+}
+
+.hide {
+  display: none;
+}
+
+header,
+footer {
+  display: none;
+}
+
+#ContainDiv {
+  background-color: transparent;
+  padding: 0;
+}
+
+.contain,
+.container {
+  max-width: 117rem;
+}
+
+#contentSection {
+  padding: 0px 5px;
+
+  @include breakpoint(medium) {
+    padding: 0;
+  }
+}
+
+// HIDE ALL UNNECESSARY MBS ELEMENTS
+#Cart,
+#h_nav,
+#div_privacy,
+.firstBackward,
+.lastForward,
+.help.textr,
+.prev_link,
+.loginDisclaimer,
+.custLogoutHelpWrapper,
+.lostPasswordHelp,
+#Server,
+#custBillMI,
+#custShipMiddle,
+.loyaltyRedeemLink,
+#loyaltyWrap,
+#needHelp,
+a#goToTop,
+.disco {
+  display: none !important;
+}
+
+.page_header {
+  display: none;
+}
+
+#custAddInfoWrap,
+#custEmailOptWrap,
+#custSMSOptWrap {
+  padding: 0;
+}
+
+// MBS apparently thinks folks will
+// only want to use the colors MBS
+// chooses.
+
+/*.radioButton,*/
+input[class^='radio'] {
+  & + span {
+    &::before {
+      width: 1.2rem;
+      height: 1.2rem;
+      vertical-align: 0;
+    }
+  }
+
+  &:checked {
+    & + span {
+      &::before {
+        background-color: var(--clr-primary);
+      }
+    }
+  }
+}
+
+// MBS script editor
+#hScript,
+#fScript {
+  font-family: Monaco, monospace;
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+.paymentBilling-wrapper p {
+  font-size: var(--fs-default);
+  margin-bottom: 1rem;
+}
+
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  font-size: 15px;
+  padding: 5px;
+}
+
+#promo-toggle-wrapper {
+  display: none;
+}
+
+#promo-content {
+  display: flex !important;
+}
+
+.rem1 {
+  font-size: var(--fs-default);
+}
+
+.req-astrisk {
+  float: left;
+  margin-right: 5px;
+}
+
+.coExistingAddressText p {
+  margin-bottom: 5px;
+}
+
+#cart-rightCard .sticky-top {
+  z-index: 0;
+}
+
+.rem1_2 {
+  font-size: 19.2px;
+}
+
+.rem1_5 {
+  font-size: 24px;
+}
+
+.rem2 {
+  font-size: 32px;
+}
+
+.rem3 {
+  font-size: 48px;
+}
+
+.rem4 {
+  font-size: 64px;
+}

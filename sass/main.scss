@@ -1,54 +1,13 @@
 /*
 Theme Name: University Book Store eCommerce Platform
 Theme URI: http://i.univbkstr.com/v3/
-Version: 3.0.0
+Version: 3.1.0
 Description:  
 Author: Clayton Dewey - University Book Store
 Author URI: https://www.uwbookstore.com
 */
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
-
-@import 'base/base';
-@import 'base/typography';
-@import 'base/mbs';
-@import 'base/utilities';
-@import 'base/bootstrap';
-
-@import 'layout/grid';
-@import 'layout/event';
-@import 'layout/footer';
-// @import 'layout/header';
-@import 'layout/images';
-@import 'layout/misc';
-@import 'layout/navigation';
-
-@import 'components/accordion';
-@import 'components/button';
-@import 'components/card';
-@import 'components/carousel';
-@import 'components/colorbox';
-@import 'components/form';
-@import 'components/header';
-@import 'components/messages';
-@import 'components/modal';
-@import 'components/navbar';
-@import 'components/pace';
-@import 'components/tabs';
-
-@import 'pages/404';
-@import 'pages/about';
-@import 'pages/account';
-@import 'pages/cart';
-@import 'pages/freshman';
-@import 'pages/help';
-@import 'pages/home';
-@import 'pages/landing';
-@import 'pages/locations';
-@import 'pages/login';
-@import 'pages/merchlist';
-@import 'pages/merchdetail';
-@import 'pages/misc';
-@import 'pages/store';
-@import 'pages/tech';
-@import 'pages/text-su';
+@use 'abstracts';
+@use 'base';
+@use 'layout';
+@use 'components';
+@use 'pages';

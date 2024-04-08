@@ -1,0 +1,245 @@
+@use '../util' as *;
+
+.meganav {
+  width: 100%;
+  margin: 0;
+  flex-direction: row;
+
+  &__tabs {
+    // background-color: var(--clr-off-white);
+    list-style-type: none;
+    flex: 0;
+    margin-bottom: 0;
+    padding: 0;
+
+    @include breakpoint(medium) {
+      flex: 0 0 30rem;
+    }
+
+    li {
+      background-color: var(--clr-light-gray-2);
+    }
+
+    a,
+    &--link {
+      display: block;
+      color: var(--clr-black);
+      // font-size: 1.3rem;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      line-height: 1.4rem;
+      text-shadow: 0 1px 0 var(--clr-white);
+      font-weight: 700;
+      transition: all 0.2s;
+      border-bottom: 1px solid var(--clr-light-gray-3);
+
+      &-active,
+      &:hover {
+        color: var(--clr-primary);
+        text-decoration: none;
+        background-color: var(--clr-white);
+        border-bottom-color: currentColor;
+      }
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+  }
+
+  &__wrap {
+    background-color: var(--clr-off-white);
+    flex: 1;
+    padding: 0;
+    &--item {
+      display: flex;
+    }
+  }
+
+  &__menu {
+    list-style-type: none;
+    justify-content: center;
+    flex: 1;
+
+    @include breakpoint(medium) {
+      flex: 0 0 100%;
+      margin-right: 2rem;
+      align-self: flex-start;
+    }
+
+    li {
+      flex: 1 1 100%;
+
+      @include breakpoint(medium) {
+        flex: 0 0 25%;
+      }
+      &.dup-dn {
+        display: none;
+      }
+    }
+
+    &.gift-items {
+      flex: 1 1 100%;
+
+      li {
+        @include breakpoint(medium) {
+          flex: 0 0 20%;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      height: 4rem;
+      line-height: 4rem;
+      font-size: 1.4rem;
+      text-align: center;
+      font-weight: 700;
+      text-decoration: none;
+      font-style: italic;
+      background: var(--clr-off-white);
+      color: var(--clr-black);
+      box-shadow: 0 0.4rem 0.7rem rgba(var(--clr-black), 0.15);
+      transition: all 0.25s ease-in-out;
+      overflow: hidden;
+
+      &:not(last-child) {
+        margin-bottom: 2.5rem;
+      }
+
+      &:hover {
+        text-decoration: none;
+        box-shadow: 0 0.6rem 1rem rgba(var(--clr-black), 0.15);
+        transform: translateY(-3px);
+      }
+
+      &:active,
+      &:focus {
+        box-shadow: 0 0.5rem 0.8rem rgba(var(--clr-black), 0.15);
+        transform: translateY(-1px);
+      }
+
+      @include breakpoint(medium) {
+        margin: 0.5rem;
+
+        &:not(last-child) {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+    &--img {
+      display: none;
+
+      @include breakpoint(medium) {
+        display: block;
+        flex: 1 1 30%;
+
+        img {
+          margin: 0 auto;
+          // height: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+.jumbotron.landing {
+  background: url('https://i.univbkstr.com/v3/css/img/jt-bg.jpg') no-repeat top
+    center;
+  background-size: cover;
+  height: 15rem;
+  // margin: -2rem 0 0 0;
+  padding: 4rem;
+  color: white;
+  border-radius: 0;
+
+  svg {
+    color: var(--clr-white);
+    fill: var(--clr-white);
+
+    &.ua-logo {
+      height: 13rem;
+      width: 22.2rem;
+    }
+  }
+
+  h1 {
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(medium) {
+      font-size: 6.3rem;
+    }
+  }
+
+  @include breakpoint(medium) {
+    height: 20rem;
+  }
+}
+
+.sidenav {
+  list-style: none;
+  border: 1px solid var(--clr-off-white);
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding: 1rem;
+    border-bottom: 1px solid var(--clr-light-gray-3);
+    transition: background-color 0.25s ease-in-out;
+
+    &:hover {
+      background-color: var(--clr-light-gray-3);
+    }
+
+    a {
+      &:link,
+      &:visited {
+        display: block;
+        padding: 5px 1rem;
+      }
+    }
+
+    h2 {
+      &.nav-title {
+        a {
+          display: block;
+          background-color: #000;
+          font-size: 1.6rem;
+          color: var(--clr-white);
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    border: none;
+    padding-left: 3rem;
+
+    li {
+      border: none;
+      padding: 0;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      a {
+        &:link,
+        &:visited {
+          display: inline-block;
+          padding: 5px;
+          color: color-mix(in srgb, var(--clr-black), #fff 10%);
+          transition: color 0.25s ease-in-out;
+
+          &:hover {
+            text-decoration: none;
+            color: var(--clr-primary);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,185 @@
+@use '../util' as *;
+
+.cart {
+  font-size: 1.6rem;
+
+  &__container {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 2rem;
+    padding: 3rem 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+  }
+
+  &__icon {
+    font-size: 5.8rem;
+  }
+
+  &__p {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 2.5rem auto;
+  }
+
+  &__btn {
+    margin-bottom: 2rem;
+  }
+
+  &__account {
+    padding: 1.5rem;
+    background-color: #f7f7f7;
+    border: 1px solid #efefef;
+    font-size: 1.8rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &_title {
+    margin: 0;
+    font-size: inherit;
+  }
+
+  .glyphicon {
+    color: var(--clr-primary);
+  }
+}
+.paymentBilling-wrapper br,
+p.paymentBilling-studentnumber {
+  display: none;
+}
+
+a#coShipAdd,
+a.paymentBilling-change {
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  border: 2px solid;
+  transition: all 0.2s ease-in-out;
+  height: 5rem;
+  line-height: 5rem;
+  padding: 0 2rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  background-color: var(--clr-info);
+  border-color: var(--clr-info);
+  color: var(--clr-black);
+  font-weight: 700;
+  text-align: center;
+  &:link,
+  &:visited {
+  }
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--clr-info), #000 10%);
+    border-color: color-mix(in srgb, var(--clr-info), #000 12%);
+    color: var(--clr-white);
+  }
+
+  &:active,
+  &:active:hover,
+  &:focus,
+  &:active:focus {
+    background-color: color-mix(in srgb, var(--clr-info), #000 8%);
+    border-color: color-mix(in srgb, var(--clr-info), #000 10%);
+    color: var(--clr-white);
+  }
+}
+
+a#coShipAdd {
+  @include breakpoint(medium) {
+    display: inline-block;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    border-width: 1px;
+  }
+}
+
+@include breakpoint(medium) {
+  a.paymentBilling-change {
+    display: inline-block;
+    width: auto;
+    height: 3.5rem;
+    line-height: 3.5rem;
+  }
+}
+
+h2.heading__billing {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--clr-light-gray-3);
+}
+
+#coShipStudentNumber-wrapper p {
+  margin-top: -1rem;
+  padding: 1rem;
+  font-weight: 700;
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.is-invalid-hide,
+.is-valid-hide {
+  border-color: #ced4da !important;
+  background-image: none !important;
+}
+
+.paymentBilling-wrapper p:last-child {
+  font-weight: 700;
+  margin-top: 1rem;
+  --bs-alert-padding-x: 1rem;
+  --bs-alert-padding-y: 1rem;
+  --bs-alert-margin-bottom: 1rem;
+  --bs-alert-color: #055160;
+  --bs-alert-bg: #cff4fc;
+  --bs-alert-border-color: #b6effb;
+  --bs-alert-border: 1px solid var(--bs-alert-border-color);
+  --bs-alert-border-radius: 0.375rem;
+  position: relative;
+  padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
+  margin-bottom: var(--bs-alert-margin-bottom);
+  color: var(--bs-alert-color);
+  background-color: var(--bs-alert-bg);
+  border: var(--bs-alert-border);
+  border-radius: var(--bs-alert-border-radius);
+}
+
+[class^='helpSection'] span.fa {
+  color: var(--clr-primary);
+}
+
+a#helpSection-email {
+  display: none;
+}
+
+// MBS fixes the Place Order button
+// to the bottom of the page.
+// Very confusing to the customer,
+// This will fix it.
+.coCheckoutBtnWrap {
+  position: initial;
+}
+
+span.shippingMethod-description-span {
+  margin-left: 0 !important;
+  margin-top: -1rem;
+
+  div.alert {
+    font-size: 1.6rem;
+  }
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  border-width: 3px;
+  background-size: 2.5rem;
+}
+
+.was-validated .form-control:invalid + label,
+.form-control.is-invalid + label {
+  color: #dc3545;
+}

@@ -65,8 +65,8 @@
     &:focus,
     &:active:focus,
     &-inverted {
-      background-color: color-mix(in srgb, var(--clr-success), #000 8%);
-      border-color: color-mix(in srgb, var(--clr-success), #000 10%);
+      background-color: color-mix(in srgb, var(--clr-success), #000 16%);
+      border-color: color-mix(in srgb, var(--clr-success), #000 20%);
       color: var(--clr-white);
     }
   }
@@ -87,8 +87,8 @@
     &:focus,
     &:active:focus,
     &-inverted {
-      background-color: color-mix(in srgb, var(--clr-alt-link), #000 8%);
-      border-color: color-mix(in srgb, var(--clr-alt-link), #000 10%);
+      background-color: color-mix(in srgb, var(--clr-alt-link), #000 16%);
+      border-color: color-mix(in srgb, var(--clr-alt-link), #000 20%);
       color: var(--clr-white);
     }
   }
@@ -104,7 +104,9 @@
     &:focus,
     &:active:focus,
     &-inverted {
-      opacity: 0.9;
+      border-color: var(--clr-secondary);
+      color: var(--clr-secondary);
+      opacity: 0.8;
     }
   }
 
@@ -285,9 +287,9 @@
       background-color: color-mix(
         in srgb,
         var(--clr-primary),
-        #000 8%
+        #000 20%
       ) !important;
-      border-color: color-mix(in srgb, var(--clr-primary), #000 10%);
+      border-color: color-mix(in srgb, var(--clr-primary), #000 25%);
       text-decoration: none;
       transition: all 0.25s ease-in-out;
       color: var(--clr-white);

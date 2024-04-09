@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  const searchBtn = document.getElementById('search-submit');
-  const searchForm = document.querySelector('.search');
+  const searchBtn = document.getElementById('search');
+  const searchForm = document.querySelector('li.search');
 
   searchBtn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -17,7 +17,7 @@ $(document).ready(function () {
   }
 
   // Search function
-  $('.search-submit-temp').on('click', function () {
+  $('.search-submit').on('click', function () {
     if ($('.search-field').val() !== '') {
       search();
       return false;
@@ -31,7 +31,7 @@ $(document).ready(function () {
         return false;
       }
     });
-    $('.search-submit-temp').on('click', function () {
+    $('.search-submit').on('click', function () {
       if ($('.search-field').val() !== '') {
         search();
         return false;
@@ -387,7 +387,7 @@ $(document).ready(function () {
     // login/account
     if ($('#myNavbar a:contains("Login")').length) {
       // console.log('Should show Login...');
-      $('#login-temp').html(
+      $('#login').html(
         `
             <a href="https://www.uwbookstore.com/login" class="navbar__account">
               <em class="fa fa-user" aria-hidden="true"></em>
@@ -397,7 +397,7 @@ $(document).ready(function () {
       );
     } else {
       // console.log('Should show Account...');
-      $('#login-temp').html(
+      $('#login').html(
         `
             <a href="https://www.uwbookstore.com/customeraccount?s=www.uwbookstore.com" class="navbar__account">
               <em class="fa fa-user" aria-hidden="true"></em>
@@ -410,7 +410,7 @@ $(document).ready(function () {
     // login/account
     if ($('#myNavbar a:contains("Login")').length) {
       // console.log('Should show Login...');
-      $('#login-temp').html(
+      $('#login').html(
         `
             <a href="https://med.uwbookstore.com/login" class="navbar__account">
               <em class="fa fa-user" aria-hidden="true"></em>
@@ -420,7 +420,7 @@ $(document).ready(function () {
       );
     } else {
       // console.log('Should show Account...');
-      $('#login-temp').html(
+      $('#login').html(
         `
             <a href="https://med.uwbookstore.com/customeraccount?s=med.uwbookstore.com" class="navbar__account">
               <em class="fa fa-user" aria-hidden="true"></em>

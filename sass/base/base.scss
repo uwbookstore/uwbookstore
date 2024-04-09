@@ -45,6 +45,14 @@ body {
 
   ::-webkit-scrollbar-thumb {
     background-color: color-mix(in srgb, var(--clr-primary), #fff 15%);
+    // background-image: linear-gradient(
+    //   180deg,
+    //   #b4090f 0%,
+    //   #ba3708 25%,
+    //   #c06f07 50%,
+    //   #c6ac07 75%,
+    //   #accc06 100%
+    // );
     border: 2px solid color-mix(in srgb, var(--clr-primary), #000 25%);
     border-radius: 1.5rem;
   }

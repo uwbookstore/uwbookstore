@@ -30,7 +30,7 @@ button.btn-default.typeCodeOption {
 
   &:hover,
   &.typeSelected {
-    border-width: 1px !important;
+    border-width: 3px !important;
     border-color: var(--clr-primary) !important;
     color: var(--clr-white);
     background-color: var(--clr-primary);
@@ -626,12 +626,12 @@ p.sale-info {
   }
 }
 
-.merch__detail-color-picker {
-  .btn.typeCodeOption {
-    width: auto;
-    padding-inline: 1rem;
-  }
-}
+// .merch__detail-color-picker {
+//   .btn.typeCodeOption {
+//     width: auto;
+//     padding-inline: 1rem;
+//   }
+// }
 
 .merch__detail-color-label {
   text-transform: capitalize;

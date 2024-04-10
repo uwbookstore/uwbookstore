@@ -41,10 +41,11 @@ $(document).ready(function () {
 
   // SHOPPING CART CODE
   if ($('div#contentSection').length) {
-    const cartCount = Number($('span#ItemCount').text());
+    const cartCount = $('span#ItemCount').text();
     let itemText;
-    cartCount === 1 ? (itemText = 'Item') : (itemText = 'Items');
-    $('#cart-count').text(`${cartCount} ${itemText}`);
+    cartCount === '1' ? (itemText = 'Item') : (itemText = 'Items');
+    $('span#ItemCount').appendTo('#cart-count');
+    $('#cart-text').text(itemText);
   }
 
   // function searchMobile() {
@@ -535,6 +536,30 @@ $(document).ready(function () {
     $(
       `<a href="https://www.uwbookstore.com/contact/?order_id=${orderNum}" class="list-group-item textc order_q">Question about this order?</a>`
     ).appendTo('.list-group');
+  }
+
+  if (baseUrl === 'https://www.uwbookstore.com/') {
+    if ($('#h_nav a:contains("Login")').length) {
+      $('#logoutPanelHeader').hide();
+      $(
+        '<h1 class="heading__line-center"><span>You are now logged out</span></h1>'
+      ).appendTo('#logoutPanel');
+      $('.logoutText').remove();
+      $(
+        '<div class="login__btns"><a href="https://www.uwbookstore.com/login" class="btn btn-secondary">Log Back In</a><a href="https://www.uwbookstore.com/home" class="btn btn-primary">UW Book Store</a></div>'
+      ).appendTo('#logoutPanel');
+    }
+  } else if (baseUrl === 'https://med.uwbookstore.com/') {
+    if ($('#h_nav a:contains("Login")').length) {
+      $('#logoutPanelHeader').hide();
+      $(
+        '<h1 class="heading__line-center"><span>You are now logged out</span></h1>'
+      ).appendTo('#logoutPanel');
+      $('.logoutText').remove();
+      $(
+        '<div class="login__btns"><a href="https://med.uwbookstore.com/login" class="btn btn-secondary">Log Back In</a><a href="https://med.uwbookstore.com/home" class="btn btn-primary">Home</a></div>'
+      ).appendTo('#logoutPanel');
+    }
   }
 
   if (

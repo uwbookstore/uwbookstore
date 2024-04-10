@@ -29,7 +29,7 @@
   </div>
 </div>
 
-<header class="header">
+<header class="header donotprint" data-role="header">
   <div class="header__ubs--logo">
     <h1>
       <a href="https://www.uwbookstore.com/home">
@@ -53,8 +53,7 @@
     </li>
 
     <li id="login" class="navbar__links--item">
-      <!-- <a href="https://www.uwbookstore.com/login" class="navbar__account"> -->
-      <a href="http://insitestore2.mbsbooks.com/uwmadison/" class="navbar__account">
+      <a href="https://www.uwbookstore.com/login" class="navbar__account">
         <em class="fa fa-user" aria-hidden="true"></em>
         <span>Login</span>
       </a>
@@ -63,7 +62,7 @@
     <li class="navbar__links--item">
       <a href="https://www.uwbookstore.com/shoppingcart" class="navbar__cart">
         <em class="fa fa-shopping-cart" aria-hidden="true"></em>
-        <span><span id="cart-count"></span></span>
+        <p class="cart-info"><span id="cart-count"></span><span id="cart-text"></span></p>
       </a>
     </li>
 

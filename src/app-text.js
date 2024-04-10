@@ -1,4 +1,53 @@
 $(document).ready(function () {
+  const searchBtn = document.getElementById('search');
+  const searchForm = document.querySelector('li.search');
+
+  searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    searchForm.classList.toggle('open');
+  });
+
+  function search() {
+    let searchInput = $('#search-term').val();
+
+    searchInput = searchInput.replace(/[^a-zA-Z 0-9]+/g, '');
+    document.location.href =
+      'https://text.uwbookstore.com/merchlist?searchtype=all&txtSearch=' +
+      searchInput;
+  }
+
+  // Search function
+  $('.search-submit').on('click', function () {
+    if ($('.search-field').val() !== '') {
+      search();
+      return false;
+    }
+  });
+
+  $(function () {
+    $('.search-field').bind('keyup', function (e) {
+      if ($(this).val() !== '' && e.keyCode === 13) {
+        search();
+        return false;
+      }
+    });
+    $('.search-submit').on('click', function () {
+      if ($('.search-field').val() !== '') {
+        search();
+        return false;
+      }
+    });
+  });
+
+  // SHOPPING CART CODE
+  if ($('div#contentSection').length) {
+    const cartCount = $('span#ItemCount').text();
+    let itemText;
+    cartCount === '1' ? (itemText = 'Item') : (itemText = 'Items');
+    $('span#ItemCount').appendTo('#cart-count');
+    $('#cart-text').text(itemText);
+  }
+
   // HANDLE LOGIN ERRORS
   if ($('.loginMessage').length) {
     $('.loginMessage')
@@ -26,15 +75,6 @@ $(document).ready(function () {
       $('.validation-summary-errors').hide();
     }
   }
-
-  // Set Holder.js theme for images
-  // Holder.addTheme("ubs", {
-  //     bg: "#c5050c",
-  //     fg: "#fff",
-  //     size: 11,
-  //     // font: "Monaco",
-  //     fontweight: "normal",
-  // });
 
   //Textbook Return policy
   $('.retPolicy').html(
@@ -219,15 +259,6 @@ $(document).ready(function () {
     }
   });
 
-  $('#search__toggle').click(function (e) {
-    e.preventDefault();
-    $(this).parent().toggleClass('search__open');
-    if (!$('.navbar-toggle').hasClass('collapsed')) {
-      $('.navbar-toggle').addClass('collapsed');
-      $('.navbar-collapse.collapse').removeClass('in');
-    }
-  });
-
   $('.navbar-toggle').click(function () {
     if ($('li.search').hasClass('search__open')) {
       $('li.search').removeClass('search__open');
@@ -238,181 +269,6 @@ $(document).ready(function () {
     $('#coming-soon').modal();
     e.stopPropagation();
   });
-
-  // Search function replacement
-  $('#search-term-mobile').keyup(function () {
-    $('#searchclear-mobile').toggle(Boolean($(this).val()));
-  });
-  $('#searchclear-mobile').toggle(Boolean($('#search-term-mobile').val()));
-  $('#searchclear-mobile').click(function () {
-    $('#search-term-mobile').val('').focus();
-    $(this).hide();
-  });
-
-  // Search function replacement
-  $('#search-term').keyup(function () {
-    $('#searchclear').toggle(Boolean($(this).val()));
-  });
-  $('#searchclear').toggle(Boolean($('#search-term').val()));
-  $('#searchclear').click(function () {
-    $('#search-term').val('').focus();
-    $(this).hide();
-  });
-
-  if (baseUrl === 'https://www.uwbookstore.com/') {
-    function search() {
-      let searchInput = $('#search-term').val();
-      searchInput = searchInput.replace(/[^a-zA-Z 0-9]+/g, '');
-
-      document.location.href =
-        baseUrl + 'merchlist?searchtype=all&txtSearch=' + searchInput;
-    }
-
-    function searchMobile() {
-      let searchInput = $('#search-term-mobile').val();
-      searchInput = searchInput.replace(/[^a-zA-Z 0-9]+/g, '');
-
-      document.location.href =
-        baseUrl + 'merchlist?searchtype=all&txtSearch=' + searchInput;
-    }
-
-    $(function () {
-      $('.search-field').bind('keyup', function (e) {
-        if ($(this).val() !== '' && e.keyCode === 13) {
-          search();
-          return false;
-        }
-      });
-      $('.search-submit').on('click', function () {
-        if ($('.search-field').val() !== '') {
-          search();
-          return false;
-        }
-      });
-
-      $('.search-field-mobile').bind('keyup', function (e) {
-        if ($(this).val() !== '' && e.keyCode === 13) {
-          searchMobile();
-          return false;
-        }
-      });
-      $('.search-submit-mobile').on('click', function () {
-        if ($('.search-field-mobile').val() !== '') {
-          searchMobile();
-          return false;
-        }
-      });
-    });
-  } else if (baseUrl === 'https://text.uwbookstore.com/') {
-    function search() {
-      let searchInput = $('#search-term').val();
-      searchInput = searchInput.replace(/[^a-zA-Z 0-9]+/g, '');
-
-      document.location.href =
-        baseUrl + 'merchlist?searchtype=all&txtSearch=' + searchInput;
-    }
-
-    function searchMobile() {
-      let searchInput = $('#search-term-mobile').val();
-      searchInput = searchInput.replace(/[^a-zA-Z 0-9]+/g, '');
-
-      document.location.href =
-        baseUrl + 'merchlist?searchtype=all&txtSearch=' + searchInput;
-    }
-
-    $(function () {
-      $('.search-field').bind('keyup', function (e) {
-        if ($(this).val() !== '' && e.keyCode === 13) {
-          search();
-          return false;
-        }
-      });
-      $('.search-submit').on('click', function () {
-        if ($('.search-field').val() !== '') {
-          search();
-          return false;
-        }
-      });
-
-      $('.search-field-mobile').bind('keyup', function (e) {
-        if ($(this).val() !== '' && e.keyCode === 13) {
-          searchMobile();
-          return false;
-        }
-      });
-      $('.search-submit-mobile').on('click', function () {
-        if ($('.search-field-mobile').val() !== '') {
-          searchMobile();
-          return false;
-        }
-      });
-    });
-    // function search() {
-    //     let searchInput = $("#search-term").val();
-    //     searchInput = searchInput.replace(/[^a-zA-Z 0-9]+/g, "");
-
-    //     // Set a session variable with the input value
-    //     sessionStorage.setItem("search-term", searchInput);
-    //     document.location.href = baseUrl + "CourseMaterials?search=" + searchInput;
-    // }
-
-    // function searchMobile() {
-    //     let searchInput = $("#search-term-mobile").val();
-    //     searchInput = searchInput.replace(/[^a-zA-Z 0-9]+/g, "");
-
-    //     document.location.href = baseUrl + "CourseMaterials?search=" + searchInput;
-    // }
-
-    // function noTextSearch() {
-    //     let searchInput = $("#merch-search-term").val();
-    //     searchInput = searchInput.replace(/[^a-zA-Z 0-9]+/g, "");
-
-    //     document.location.href = baseUrl + "merchlist?searchtype=all&txtSearch=" + searchInput;
-    // }
-
-    // $(function () {
-    //     $(".search-field").bind("keyup", function (e) {
-    //         if ($(this).val() !== "" && e.keyCode === 13) {
-    //             search();
-    //             return false;
-    //         }
-    //     });
-    //     $(".search-submit").on("click", function () {
-    //         if ($(".search-field").val() !== "") {
-    //             search();
-    //             return false;
-    //         }
-    //     });
-
-    //     $(".search-field-mobile").bind("keyup", function (e) {
-    //         if ($(this).val() !== "" && e.keyCode === 13) {
-    //             searchMobile();
-    //             return false;
-    //         }
-    //     });
-    //     $(".search-submit-mobile").on("click", function () {
-    //         if ($(".search-field-mobile").val() !== "") {
-    //             searchMobile();
-    //             return false;
-    //         }
-    //     });
-
-    //     $(".merch-search-field").bind("keyup", function (e) {
-    //         if ($(this).val() !== "" && e.keyCode === 13) {
-    //             noTextSearch();
-    //             sessionStorage.removeItem("search-term");
-    //             return false;
-    //         }
-    //     });
-    //     $(".merch-search-submit").on("click", function () {
-    //         if ($(".merch-search-field").val() !== "") {
-    //             noTextSearch();
-    //             sessionStorage.removeItem("search-term");
-    //             return false;
-    //         }
-    //     });
-    // });
-  }
 
   if (window.location.href.toLowerCase().indexOf('noresult=1') > -1) {
     $('<div id="merch-search"></div>').insertBefore('h1#SelectTermDeptHeader');
@@ -494,23 +350,6 @@ $(document).ready(function () {
   $('img.One_Dynamic_Image').removeAttr('width');
   $('img.One_Dynamic_Image').addClass('merch__card-img');
 
-  // Monthly Coupons
-  $('#couponbook .coupons li').click(function () {
-    $(this).toggleClass('print');
-  });
-  $('.select').click(function (e) {
-    $('#couponbook .coupons li').removeClass('print');
-    $('#couponbook .coupons li').addClass('print');
-    e.preventDefault();
-  });
-  $('.deselect').click(function (e) {
-    $('#couponbook .coupons li').removeClass('print');
-    e.preventDefault();
-  });
-  $('#couponbook .print').click(function () {
-    window.print();
-  });
-
   /* Back to Top Button */
   $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
@@ -538,50 +377,27 @@ $(document).ready(function () {
   })(jQuery);
 
   /* Account Options */
-  if (baseUrl === 'https://www.uwbookstore.com/') {
-    if ($('#h_nav a:contains("Log Out")').length) {
-      // console.log("You can view your acount or logout!");
-      $('#login').html(
-        [
-          '<a href="https://www.uwbookstore.com/customeraccount?s=' +
-            subUrl +
-            '"><span>My Account</span> <em class="fa fa-user"></em></a> <span class="logout"> / <a href="' +
-            baseUrl +
-            'logout">logout</a></span>',
-        ].join('\n')
-      );
-    } else {
-      // console.log("You can log in...");
-      $('#login').html(
-        [
-          '<a href="' +
-            baseUrl +
-            'login"><span>login</span> <em class="fa fa-user"></em></a>',
-        ].join('\n')
-      );
-    }
-  } else if (baseUrl === 'https://text.uwbookstore.com/') {
-    if ($('#h_nav a:contains("Log Out")').length) {
-      // console.log("You can view your acount or logout!");
-      $('#login').html(
-        [
-          '<a href="https://text.uwbookstore.com/customeraccount?s=' +
-            subUrl +
-            '"><span>My Account</span> <em class="fa fa-user"></em></a> <span class="logout"> / <a href="' +
-            baseUrl +
-            'logout">logout</a></span>',
-        ].join('\n')
-      );
-    } else {
-      // console.log("You can log in...");
-      $('#login').html(
-        [
-          '<a href="' +
-            baseUrl +
-            'login"><span>login</span> <em class="fa fa-user"></em></a>',
-        ].join('\n')
-      );
-    }
+  // login/account
+  if ($('#myNavbar a:contains("Login")').length) {
+    // console.log('Should show Login...');
+    $('#login').html(
+      `
+            <a href="https://text.uwbookstore.com/login" class="navbar__account">
+              <em class="fa fa-user" aria-hidden="true"></em>
+              <span>Login</span>
+            </a>
+          `
+    );
+  } else {
+    // console.log('Should show Account...');
+    $('#login').html(
+      `
+            <a href="https://text.uwbookstore.com/customeraccount?s=text.uwbookstore.com" class="navbar__account">
+              <em class="fa fa-user" aria-hidden="true"></em>
+              <span>Account</span>
+            </a>
+          `
+    );
   }
 
   // LOGIN
@@ -739,21 +555,6 @@ $(document).ready(function () {
     ).appendTo('#logoutPanel');
   }
 
-  // SHOPPING CART CODE
-  // const itemCount = $("span#ItemCount").text();
-  // let total = $("span#SubTotal").text();
-  // Blue 84 Long Sleeve Shirt "Wisconsin" T-Shirt (Red)
-
-  // Thanks to Joe Ward at isubookstore.com
-  //this removes the old cart and moves the hidden cart to the old cart spot.
-  // if($('div#contentSection').length) {
-  //     $('span#ItemCount').addClass('nav__cart--count').appendTo('.nav__cart--link');
-  // }
-  if ($('div#contentSection').length) {
-    // $(".cart-count").text(itemCount);
-    $('span#ItemCount').appendTo('.cart-count');
-  }
-
   if (
     window.location.href.search(/ShoppingCart/) !== -1 ||
     window.location.href.search(/shoppingcart/) !== -1 ||
@@ -778,59 +579,22 @@ $(document).ready(function () {
       $('.Payment_btn').is(':visible') ||
       $('button.Continue_Checkout_btn').is(':visible')
     ) {
-      if (baseUrl === 'https://www.uwbookstore.com/') {
-        $(
-          '<div class="clearfix"></div><div class="row"><div class="col-md-6"><div class="alert alert-success" style="width: 100%; margin: 2rem auto;"><div class="center"><em>NOTE:</em></div><div class="center">Promotional Discounts applied to items on your cart will not be viewable until the end of the checkout process.</div></div></div><div class="col-md-6"><div class="clearfix"></div><div class="alert alert-info" style="width: 100%; margin: 2rem auto;"><div class="center"><em>Do you have a Promo Code?</em></div><div class="center">You will be prompted for your Promo Code at checkout before entering your credit card information.</div></div></div></div>'
-        ).appendTo('#contentSection');
-
-        // $(
-        //   '<div class="clearfix"></div><div class="alert alert-info" style="width: 100%; max-width: 60rem; margin: 2rem auto;"><div class="center"><em>Do you have a Promo Code?</em></div><div class="center">You will be prompted for your Promo Code at checkout before entering your credit card information.</div></div>'
-        // ).appendTo("#contentSection");
-      } else if (baseUrl === 'https://text.uwbookstore.com/') {
-        $(
-          '<p><strong>Pricing Disclaimer</strong><br/>Pricing is subject to change without notice. All totals are calculated using new prices, as we cannot guarantee the availability of used books. Pricing changes often occur daily.<br/> We make every effort to ensure the accuracy of the pricing on this web site.</p><div class="center"><strong>We screen diligently for credit card fraud.</strong></div>'
-        ).appendTo('#contentSection');
-      }
+      $(
+        '<p><strong>Pricing Disclaimer</strong><br/>Pricing is subject to change without notice. All totals are calculated using new prices, as we cannot guarantee the availability of used books. Pricing changes often occur daily.<br/> We make every effort to ensure the accuracy of the pricing on this web site.</p><div class="center"><strong>We screen diligently for credit card fraud.</strong></div>'
+      ).appendTo('#contentSection');
 
       $('input#PaymentBtn').val('Checkout');
     } else {
       // console.log("No items in cart");
       $('.validation-summary-errors').hide();
-      if (baseUrl === 'https://www.uwbookstore.com/') {
-        $(
-          '<div class="cart__container"><i class="cart__icon fa fa-shopping-cart" aria-hidden="true"></i><p class="cart__p">Your shopping cart is empty.</p><a class="btn btn-primary cart__btn" href="' +
-            baseUrl +
-            '" title="Shop Clothing &amp; Gifts">Shop Clothing &amp; Gifts</a><div class="cart__account"><p><a class="btn btn-text" href="' +
-            baseUrl +
-            'Customer-Help" title="Customer Help">Customer Help</a></p><span class="phone">(608) 257-3784</span> or <span class="phone">(800) 993-2665</span></div></div></div>'
-        ).insertBefore('.Continue_Shopping');
-        $('.Continue_Shopping').hide();
-      } else if (baseUrl === 'https://text.uwbookstore.com/') {
-        $(
-          '<div class="cart__container"><i class="cart__icon fa fa-shopping-cart" aria-hidden="true"></i><p class="cart__p">Your shopping cart is empty.</p><a class="btn btn-primary cart__btn" href="' +
-            baseUrl +
-            '" title="Shop Clothing &amp; Gifts">Shop Clothing &amp; Gifts</a><div class="cart__account"><p><a class="btn btn-text" href="' +
-            baseUrl +
-            'SiteText?id=63210" title="Customer Help">Customer Help</a></p><span class="phone">(608) 257-3784</span> or <span class="phone">(800) 993-2665</span></div></div></div>'
-        ).insertBefore('.Continue_Shopping');
-        $('.Continue_Shopping').hide();
-      } else if (baseUrl === 'http://med.uwbookstore.com/') {
-        $(
-          '<div class="cart__container"><i class="cart__icon fa fa-shopping-cart" aria-hidden="true"></i><p class="cart__p">Your shopping cart is empty.</p><a class="btn btn-primary cart__btn" href="' +
-            baseUrl +
-            '" title="Shop Clothing &amp; Gifts">Shop Clothing &amp; Gifts</a><div class="cart__account"><p><a class="btn btn-text" href="' +
-            baseUrl +
-            'SiteText?id=62781" title="Customer Help">Customer Help</a></p><span class="phone">(608) 257-3784</span> or <span class="phone">(800) 993-2665</span></div></div></div>'
-        ).insertBefore('.Continue_Shopping');
-      } else if (baseUrl === 'http://waa.uwbookstore.com/') {
-        $(
-          '<div class="cart__container"><i class="cart__icon fa fa-shopping-cart" aria-hidden="true"></i><p class="cart__p">Your shopping cart is empty.</p><a class="btn btn-primary cart__btn" href="' +
-            baseUrl +
-            '" title="Shop Clothing &amp; Gifts">Shop Clothing &amp; Gifts</a><div class="cart__account"><p><a class="btn btn-text" href="' +
-            baseUrl +
-            'SiteText?id=63210" title="Customer Help">Customer Help</a></p><span class="phone">(608) 257-3784</span> or <span class="phone">(800) 993-2665</span></div></div></div>'
-        ).insertBefore('.Continue_Shopping');
-      }
+      $(
+        '<div class="cart__container"><i class="cart__icon fa fa-shopping-cart" aria-hidden="true"></i><p class="cart__p">Your shopping cart is empty.</p><a class="btn btn-primary cart__btn" href="' +
+          baseUrl +
+          '" title="Shop Clothing &amp; Gifts">Shop Clothing &amp; Gifts</a><div class="cart__account"><p><a class="btn btn-text" href="' +
+          baseUrl +
+          'SiteText?id=63210" title="Customer Help">Customer Help</a></p><span class="phone">(608) 257-3784</span> or <span class="phone">(800) 993-2665</span></div></div></div>'
+      ).insertBefore('.Continue_Shopping');
+      $('.Continue_Shopping').hide();
       // $(".Continue_Shopping, h1.page_header").hide();
     }
   }
@@ -839,164 +603,4 @@ $(document).ready(function () {
   $('div#registerAccount h3#registerTitle').text(
     'Register Your Account (optional)'
   );
-
-  // START OF LOYALTY ACCOUNT INFORMATION PAGE
-  if (
-    window.location.href.search(/customerloyalty/) !== -1 ||
-    window.location.href.search(/CustomerLoyalty/) !== -1
-  ) {
-    $('div.LocationBar')
-      .first()
-      .removeClass('LocationBar')
-      .addClass('breadCrumbs');
-    $('div.main_content br').first().remove();
-    const pointsTotal = $('.loyaltyPoint').text();
-    let totalPointsAvail = $('span[id*=totalPointsAvail]').text();
-    const ltdPoints = $('span[id*=ltdPoints]').text();
-    const ltdRedeemed = $('span[id*=ltdRedeemed]').text();
-
-    $('div.main_content').addClass('group');
-    $('<div class="content-left group" id="content-left">\n</div>').insertAfter(
-      'div#ctl00_ctl00_Content_Content_pnlSummary'
-    );
-
-    // Point Progress Bar
-    $(
-      '<div class="progress-wrapper"><div class="rewards group"><div id="reward-base" class="left"></div><div id="reward-max" class="right"></div></div><div class="progress-bar-wrapper"><div class="progress-bar"><span id="progress-percent" class="progress-percent"></span></div></div><div class="points group"><span id="point-base" class="left"></span><span id="point-max" class="right"></span></div></div>'
-    ).appendTo('div#content-left');
-    // Point Progress Bar
-
-    // Point Summary Table
-    $(
-      '<table id="loyaltyPoints">\n<thead>\n</thead>\n<tbody>\n</tbody>\n</table>'
-    ).appendTo('div#content-left');
-    $(
-      '<tr>\n<th>Total Points:</th>\n<th>Total Points Available:</th>\n<th>Total Points earned life-to-date:</th>\n<th>Total Points redeemed life-to-date:</th>\n</tr>'
-    ).appendTo('table#loyaltyPoints thead');
-    $(
-      '<tr>\n<td>' +
-        pointsTotal +
-        '</td>\n<td>' +
-        totalPointsAvail +
-        '</td>\n<td>' +
-        ltdPoints +
-        '</td>\n<td>' +
-        ltdRedeemed +
-        '</td>\n</tr>'
-    ).appendTo('table#loyaltyPoints tbody');
-    $('div#ctl00_ctl00_Content_Content_pnlSummary').hide();
-    // Point Summary Table
-
-    $('<div id="redeem-link" class="group"></div>').appendTo(
-      'div#content-left'
-    );
-    if (totalPointsAvail < 351) {
-      $('span#point-base').text('0');
-      $('span#point-max').text('350');
-      $('div#reward-base').text(' ');
-      $('div#reward-max').text('Next reward ');
-      $('<span>$5</span>').prependTo('div#reward-max');
-      const percent = ((totalPointsAvail / 350) * 100).toFixed(5);
-      $('span#progress-percent').css('width', percent + '%');
-      $(
-        '<span class="loyalty-msg">Uh Oh! Looks like you haven\'t reached a reward yet.  You can view your progress toward the next reward above.</span>'
-      ).appendTo('div#redeem-link');
-      //$('a[id$=Content_redeemLink]').addClass('no-button').removeAttr('href').appendTo('div#redeem-link');
-      $('a[id$=Content_redeemLink]').hide();
-    } else if (totalPointsAvail < 551) {
-      $('span#point-base').text('350');
-      $('span#point-max').text('550');
-      $('div#reward-base').text('Current reward ');
-      $('<span>$5</span>').prependTo('div#reward-base');
-      $('div#reward-max').text('Next reward ');
-      $('<span>$10</span>').prependTo('div#reward-max');
-
-      totalPointsAvail += totalPointsAvail - 350;
-      const percent = ((totalPointsAvail / 200) * 100).toFixed(5);
-      $('span#progress-percent').css('width', percent + '%');
-      $('a[id$=Content_redeemLink]')
-        .addClass('button')
-        .appendTo('div#redeem-link');
-    } else if (totalPointsAvail < 801) {
-      $('span#point-base').text('550');
-      $('span#point-max').text('800');
-      $('div#reward-base span').text('$10');
-      $('div#reward-max span').text('$15');
-      $('div#reward-base').text('Current reward ');
-      $('<span>$10</span>').prependTo('div#reward-base');
-      $('div#reward-max').text('Next reward ');
-      $('<span>$15</span>').prependTo('div#reward-max');
-      totalPointsAvail += totalPointsAvail - 550;
-      const percent = ((totalPointsAvail / 250) * 100).toFixed(5);
-      $('span#progress-percent').css('width', percent + '%');
-      $('a[id$=Content_redeemLink]')
-        .addClass('button')
-        .appendTo('div#redeem-link');
-    } else if (totalPointsAvail < 1051) {
-      $('span#point-base').text('800');
-      $('span#point-max').text('1050');
-      $('div#reward-base span').text('$15');
-      $('div#reward-max span').text('$20');
-      $('div#reward-base').text('Current reward ');
-      $('<span>$15</span>').prependTo('div#reward-base');
-      $('div#reward-max').text('Next reward ');
-      $('<span>$20</span>').prependTo('div#reward-max');
-      totalPointsAvail += totalPointsAvail - 800;
-      const percent = ((totalPointsAvail / 250) * 100).toFixed(5);
-      $('span#progress-percent').css('width', percent + '%');
-      $('a[id$=Content_redeemLink]')
-        .addClass('button')
-        .appendTo('div#redeem-link');
-    } else if (totalPointsAvail < 2001) {
-      $('span#point-base').text('1050');
-      $('span#point-max').text('2000');
-      $('div#reward-base span').text('$20');
-      $('div#reward-max span').text('$40');
-      $('div#reward-base').text('Current reward ');
-      $('<span>$20</span>').prependTo('div#reward-base');
-      $('div#reward-max').text('Next reward ');
-      $('<span>$40</span>').prependTo('div#reward-max');
-      totalPointsAvail += totalPointsAvail - 1050;
-      const percent = ((totalPointsAvail / 950) * 100).toFixed(5);
-      $('span#progress-percent').css('width', percent + '%');
-      $('a[id$=Content_redeemLink]')
-        .addClass('button')
-        .appendTo('div#redeem-link');
-    } else {
-      $('span#point-base').text('1050');
-      $('span#point-max').text('2000');
-      $('div#reward-base span').text('$20');
-      $('div#reward-max span').text('$40');
-      $('div#reward-base').html('&nbsp;');
-      $('<span>$20</span>').prependTo('div#reward-base');
-      $('div#reward-max').html('&nbsp;');
-      $('<span>$40</span>').prependTo('div#reward-max');
-      $('div.progress-bar').addClass('meter');
-      $('span#progress-percent').addClass('animate');
-      $('span#progress-percent').text('GREAT JOB!');
-      $('a[id$=Content_redeemLink]')
-        .addClass('button')
-        .appendTo('div#redeem-link');
-    }
-
-    //$('a[id$=Content_redeemLink]').addClass('button').appendTo('div#redeem-link');
-
-    $('<div id="history-link" class="group"></div>').appendTo(
-      'div#content-left'
-    );
-
-    $('a[id$=lnkViewHistory]')
-      .css({ 'margin-top': '20px', display: 'inline-block' })
-      .appendTo('div#history-link');
-
-    $('table#ctl00_ctl00_Content_Content_dgLoyalty').removeAttr(
-      'style border cellspacing class rules'
-    );
-
-    $(
-      '<div class="content-right group">\n<table id="loyalty" class="loyalty"><thead><tr><th>Points Earned</th><th>Gift Card</th><tbody><tr><td>350</td><td>$5</td></tr><tr><td>550</td><td>$10</td></tr><tr><td>800</td><td>$15</td></tr><tr><td>1050</td><td>$20</td></tr><tr><td>2000</td><td>$40</td></tr></tbody></tr></thead></table></div>'
-    ).insertAfter('div#content-left');
-
-    //<div id="notice_container"><ul><li>Reward points are redeemed during checkout in-store and online.</li><li>Only Points listed as Available below can be used. Points become available 30 days after purchase.</li><li>Points expire 90 days after the earned date.</li><li>When checking out in the store, the cashier will be prompted to apply your reward point discount to your total, getting your permission first.</li><li>When checking out online, you will be prompted to apply points in the payment options step, just before entering your payment information.</li></ul></div>
-  } // END OF LOYALTY ACCOUNT INFORMATION PAGE
 });

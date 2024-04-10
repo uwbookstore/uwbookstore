@@ -39,6 +39,19 @@
   }
 }
 
+.cart {
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+}
+
+#cart-count {
+  margin-right: 5px;
+}
+
 // Mobile Navbar & Toggle
 .navbar {
   &__links {

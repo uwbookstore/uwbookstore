@@ -190,6 +190,7 @@ $(document).ready(function () {
   const select = $('select.merchDropdown option');
   const logos = $('.lcsLogoWrapper');
   const sizes = $('.lcsSizeWrapper');
+  const colors = $('.lcsColorWrapper');
   const merchLogoTitle = $('.merchLogoTitle');
   const merchSizeTitle = $('.merchSizeTitle');
 
@@ -344,6 +345,18 @@ $(document).ready(function () {
     $('<label class="merch__detail-size-label">Size |</label>').prependTo(
       'div#sizes'
     );
+  } else if (colors.length > 0) {
+    const colorArray = colors.html();
+    const colorTitle = $('.merchColorTitle').text().toLowerCase();
+    $(
+      '<div id="colors" class="merch__detail-color"><div class="grid merch__detail-color-picker">' +
+        colorArray +
+        '</div></div>'
+    ).appendTo('div#merch-info');
+    $(
+      `<label id="color-label" class="merch__detail-color-label">${colorTitle} </label>`
+    ).prependTo('div#colors');
+    $('.selectedColor').appendTo('#color-label');
   }
 
   const sizeOptions = $('button.typeCodeOption span.sizeName');
@@ -936,3 +949,4 @@ $(document).ready(function () {
 
   $('div.merchItem').hide();
 });
+// lcsColorWrapper

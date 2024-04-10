@@ -18,8 +18,13 @@ p.merchTitle {
 }
 
 span.regularPriceTitle,
-span.salePriceTitle {
+span.salePriceTitle,
+.colorSwatchList {
   display: none;
+}
+
+.selectedColor {
+  text-transform: capitalize;
 }
 
 span.merchPriceRegular {

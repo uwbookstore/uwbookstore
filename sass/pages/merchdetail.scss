@@ -221,7 +221,8 @@ span.btn-default.typeSelected {
       font-weight: 700;
     }
 
-    &-size {
+    &-size,
+    &-color {
       margin: 1.5rem auto;
       padding: 0 0 1.5rem;
       border-bottom: 1px solid var(--clr-black);
@@ -387,7 +388,8 @@ span.btn-default.typeSelected {
       &-description {
       }
 
-      &-size {
+      &-size,
+      &-color {
         &-link {
           &:link,
           &:visited {
@@ -622,4 +624,15 @@ p.sale-info {
   .btn.typeCodeOption {
     width: auto;
   }
+}
+
+.merch__detail-color-picker {
+  .btn.typeCodeOption {
+    width: auto;
+    padding-inline: 1rem;
+  }
+}
+
+.merch__detail-color-label {
+  text-transform: capitalize;
 }

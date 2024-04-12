@@ -24,9 +24,7 @@ $(document).ready(function () {
           i +
           '"><img id="fullsize_' +
           i +
-          '" alt="' +
-          prodName +
-          ' image" class="merch__detail-img lazyload"></li>'
+          '" alt="" role="presentation" class="merch__detail-img"></li>'
       ).appendTo('ul.slides');
       $.each(detail, function (j) {
         $('li#thumbnail_' + j).attr('data-thumb', $(this).attr('data-full'));
@@ -40,15 +38,13 @@ $(document).ready(function () {
     if ($('img.merchDetailImage').attr('src') === '/images/notavail.gif') {
       // No image available
       $(
-        '<img src="https://i.univbkstr.com/v3/img/misc/no-image.jpg" data-src="holder.js/600x600?auto=yes&text=Image not available" class="merch__detail-img" alt="Image not available">'
+        '<img src="https://i.univbkstr.com/v3/img/misc/no-image.jpg" class="merch__detail-img" alt="Image not available">'
       ).appendTo('div#merch-imgs');
     } else {
       $(
         '<img src="' +
           $('img.merchDetailImage').attr('data-high') +
-          '" alt="' +
-          prodName +
-          '" class="merch__detail-img">'
+          '" alt="" role="presentation" class="merch__detail-img">'
       ).appendTo('div#merch-imgs');
     }
   } // END of imgArray if
@@ -737,8 +733,8 @@ $(document).ready(function () {
       '<div id="shipping">',
       '<h2 class="tabs__header">Shipping &amp; Handling</h2>',
       '<div class="text-center">',
-      '<img src="https://i.univbkstr.com/v3/img/misc/usps.png" alt="USPS Logo" class="lazyload">',
-      '<img src="https://i.univbkstr.com/v3/img/misc/ups.png" alt="UPS Logo" class="lazyload">',
+      '<img src="https://i.univbkstr.com/v3/img/misc/usps.png" alt="USPS Logo">',
+      '<img src="https://i.univbkstr.com/v3/img/misc/ups.png" alt="UPS Logo">',
       '</div>',
       '<p><strong>Methods for shipping are:</strong></p>',
       '<table class="table table-striped">',

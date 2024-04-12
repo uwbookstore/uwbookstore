@@ -106,7 +106,11 @@
     &-inverted {
       border-color: var(--clr-secondary);
       color: var(--clr-secondary);
-      opacity: 0.8;
+      // opacity: 0.8;
+    }
+
+    &.colorOption {
+      //
     }
   }
 

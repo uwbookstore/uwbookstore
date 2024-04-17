@@ -1,41 +1,43 @@
 @use '../util' as *;
 
 .header {
-  display: block;
-  position: relative;
-  margin: 0 auto;
-  max-width: 120rem;
+  &__ubs {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 120rem;
 
-  &__ubs--logo {
-    background: var(--clr-white);
-    padding: 2.5rem 1.5rem;
-    margin: auto;
-
-    h1 {
-      margin-bottom: 0;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
+    &--logo {
+      background: var(--clr-white);
+      padding: 2.5rem 1.5rem;
       margin: auto;
+
+      h1 {
+        margin-bottom: 0;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: auto;
+      }
     }
-  }
 
-  @include breakpoint(menu) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-inline: 3rem;
+    @include breakpoint(menu) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-inline: 3rem;
 
-    &__ubs--logo {
-      margin: 0;
+      &__ubs--logo {
+        margin: 0;
+      }
     }
-  }
 
-  @include breakpoint(large) {
-    padding-inline: 0;
+    @include breakpoint(large) {
+      padding-inline: 0;
+    }
   }
 }
 

@@ -321,15 +321,14 @@
   .email-submit {
     &.btn.btn-primary {
       width: 100%;
-      border-radius: 0 0 4px 4px;
+      border-radius: 4px;
       border: 2px solid color-mix(in srgb, var(--clr-black), #fff 30%);
-      border-top: none;
-
+      color: var(--clr-white);
+      font-weight: 700;
+      // border-top: none;
       @include breakpoint(medium) {
         width: auto;
-        border-left: none;
-        border-top: 2px solid color-mix(in srgb, var(--clr-black), #fff 30%);
-        border-radius: 0 4px 4px 0;
+        font-weight: normal;
       }
     }
   }
@@ -338,8 +337,8 @@
     background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png);
     background-image: linear-gradient(
         to top,
-        rgba(241, 241, 241, 0.5),
-        rgba(241, 241, 241, 0.8)
+        rgba(241, 241, 241, 0.1),
+        rgba(241, 241, 241, 0.3)
       ),
       url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png);
     padding: 2.5rem;

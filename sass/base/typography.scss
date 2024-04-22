@@ -9,7 +9,8 @@ html {
 
 body {
   font-size: var(--fs-default-mobile);
-  font-family: 'Verlag A', 'Verlag B', Helvetica, Arial, sans-serif;
+  // font-family: 'Verlag A', 'Verlag B', Helvetica, Arial, sans-serif;
+  font-family: 'Red Hat Text', Helvetica, Arial, sans-serif;
   font-weight: 400;
 
   @include breakpoint(medium) {
@@ -52,10 +53,10 @@ h6 {
   font-size: 1.2rem;
 }
 
-.num-lg {
-  font-size: 120%;
-  font-style: normal;
-}
+// .num-lg {
+//   font-size: 120%;
+//   font-style: normal;
+// }
 
 em,
 i {

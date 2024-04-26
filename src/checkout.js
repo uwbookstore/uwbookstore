@@ -17,7 +17,7 @@ $(document).ajaxComplete(function (_, __, options) {
       $(this).text(replacementMessage);
   });
   $('.paymentBilling-change').text('Update Billing Address');
-  $('<h2 class="heading__line-center mb-1">Billing Addres</h2>').prependTo(
+  $('<h2 class="heading__line-center mb-1">Billing Address</h2>').prependTo(
     '.paymentBilling-wrapper'
   );
 });
@@ -35,61 +35,31 @@ $('#shippingMethod-select option:contains("GC Next Day est. $30.00")').text(
   'Gift Card Next Day est. $30.00'
 );
 
-$(document).on('ajaxComplete', function (_, options) {
-  // Shipping Address is displayed
-  if (
-    options.responseJSON.showAddress != undefined &&
-    options.responseJSON.showAddress === true
-  ) {
-    $('label[for="coShipStudentNumber"]').text(
+$(document).on('ajaxComplete', function (e, t) {
+  null != t.responseJSON.showAddress &&
+    !0 === t.responseJSON.showAddress &&
+    ($('label[for="coShipStudentNumber"]').text(
       'Student ID or 10 digit phone number*'
-    );
-
-    // Restrict Zip Code length
-    $('#coShipZip').attr('maxlength', '5');
-
-    /**
-     * Update phone number label text, and add
-     * Bootstrap validation message.
-     */
+    ),
+    $('#coShipZip').attr('maxlength', '5'),
     $('label[for="coShipPhone"]').text(
       'Phone Number (no spaces or special characters)*'
-    );
-    $(`
-    <div class="invalid-feedback">
-      Enter numbers only, eg: 6082573784
-    </div>
-    `).insertAfter('label[for="coShipPhone"]');
-
-    /**
-     * If customer has no shipping address on file
-     * and selects pick up at store, the shipping address
-     * field will still display. Show message to avoid
-     * confusion until MBS fixes error.
-     */
-    if (
-      $('#shippingMethod-h2').text().substring(0, 7) === 'Pick up' ||
-      $('#shippingMethod-h2').text().substring(0, 6) === 'Pickup'
-    ) {
-      console.log('needs to enter an address...');
-      $(`
-      <div class="alert alert-danger center bold">
-        Please enter a shipping address to continue.<br>
-        This is required even for Pick Up at Store orders.
-      </div>
-      `).insertAfter('#coShipAdd');
-    }
-  }
-
-  if (
-    options.responseJSON.showPayment != undefined &&
-    options.responseJSON.showPayment == true
-  ) {
-    $('html, body').animate(
-      {
-        scrollTop: $('.coPaymentCard').offset().top - 10,
-      },
-      200
-    );
-  }
+    ),
+    $(
+      '\n    <div class="invalid-feedback">\n      Please enter phone number (no spaces or special characters)\n    </div>\n    '
+    ).insertAfter('label[for="coShipPhone"]'),
+    ('Pick up' !== $('#shippingMethod-h2').text().substring(0, 7) &&
+      'Pickup' !== $('#shippingMethod-h2').text().substring(0, 6)) ||
+      (console.log('needs to enter an address...'),
+      $(
+        '\n      <div class="alert alert-danger center bold">\n        Please enter a shipping address to continue.<br />\n        This is required even for Pick Up at Store orders.\n      </div>\n      '
+      ).insertAfter('#coShipAdd'))),
+    null != t.responseJSON.showPayment &&
+      1 == t.responseJSON.showPayment &&
+      $('html, body').animate(
+        {
+          scrollTop: $('.coPaymentCard').offset().top - 10,
+        },
+        200
+      );
 });

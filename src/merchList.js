@@ -135,6 +135,7 @@ $(document).ready(function () {
     $('select.merchSortBy').removeClass('wauto bottom10').appendTo('#sort-by');
 
     $('.merchColumn').addClass('grid merch__card').appendTo('#merch__card');
+    $('.merchRank').hide();
 
     $('.logoOption').removeClass('btn-default').addClass('btn-primary');
   } else {

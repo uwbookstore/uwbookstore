@@ -90,9 +90,6 @@
     speak: never;
   }
 }
-.DoNotPrint {
-  display: none;
-}
 
 @media print {
   #couponbook .coupons {
@@ -112,7 +109,6 @@
   #couponbook .coupons ul li .coupon {
     position: relative;
   }
-  .donotprint,
   #ubsHead,
   [id*='div_bottom_sec'],
   [id*='div_top_sec'],

@@ -274,14 +274,10 @@
 }
 
 .mail-list {
-  background-color: var(--clr-light-gray-3);
-  background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png);
-  background-image: linear-gradient(
-      to top,
-      rgba(var(--clr-light-gray-3), 0.5),
-      rgba(var(--clr-light-gray-3), 0.8)
-    ),
-    url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png);
+  // background-color: var(--clr-light-gray-3);
+  // background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png);
+  background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png),
+    linear-gradient(to top, rgba(202, 202, 202, 0.5), rgba(202, 202, 202, 0.8));
   border-top: 1px solid color-mix(in srgb, var(--clr-light-gray-3), #000 10%);
   padding: 3rem;
   margin-bottom: 3.5rem;

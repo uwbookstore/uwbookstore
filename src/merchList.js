@@ -304,7 +304,7 @@ $(document).ready(function () {
         <h1 class="red">This is an EXCLUSIVE IN-STORE offer you don't want to miss!</h1>
         <p>No need to keep track of those touchdowns, we've got you covered.<br>Sign up now and be the first to get the inside scoop on new products and exciting updates.</p>
         <!-- <i class="fa-solid fa-arrow-down"></i> -->
-        <a href="https://i.univbkstr.com/email/" class="btn btn-primary mb-2" style="font-size: 2rem; padding-inline: 4rem; height: 5rem; line-height: 5rem;">Sign Up Now!</a>
+        <a href="https://www.uwbookstore.com/Email-Signup" class="btn btn-primary mb-2" style="font-size: 2rem; padding-inline: 4rem; height: 5rem; line-height: 5rem;">Sign Up Now!</a>
       </section>
       `
     ).insertBefore('.merch__filter');

@@ -371,18 +371,6 @@ $(document).ready(function () {
     return false;
   });
 
-  // Email signup form
-  (function ($) {
-    $('.email-submit').click(function () {
-      const email = $('#user_attributes_email_address').val();
-      let newUrl = 'https://i.univbkstr.com/email/?email=' + email;
-      if ($(this).attr('name') === 'signup') {
-        newUrl += '&signup=true';
-      }
-      window.location.assign(newUrl);
-    });
-  })(jQuery);
-
   /* Account Options */
   if (baseUrl === 'https://www.uwbookstore.com/') {
     // login/account

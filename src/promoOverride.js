@@ -10,18 +10,17 @@ const updatePromo = (el) => {
 
       if (promoTxt === 'Buy 1 Get 20 Percent Off') {
         x.innerHTML = `<strong>Get 20% Off this item when purchased with the ABSN bundle.</strong><br>Promotional Discounts applied to items on your cart may not be viewable until the end of the checkout process.`;
-      } else if (promoTxt === 'Buy 1 Get 1 Free') {
+      } else if (promoTxt === 'Buy 1 Get $119.00 Off') {
         x.innerHTML = `<strong>iPad Back-to-School Promo</strong>
-        <p>Get Apple Pencil 2nd-Gen free with eligible iPad Air or iPad Pro purchase.<br>
-        Valid for UW student, staff, faculty and UW Health personal purchases, NOT for department purchases.
-        Qualified purchasers may only receive one promo with iPad purchase.</p>
-        <p>Discount will not reflect until related items are added to your cart and/or after shipping/delivery method is chosen during checkout.</p>`;
+        <p>Get free Apple Pencil Pro with eligible iPad Air or iPad Pro purchase.
+Valid for UW student, staff, faculty and UW Health personal purchases, NOT for department purchases. Qualified purchasers may only receive one promo with Mac purchase.
+Discount will not reflect until related items are added to your cart and/or after shipping/delivery method is chosen during checkout.
+</p>`;
       } else if (promoTxt === 'Buy 1 Get $169.00 Off') {
         x.innerHTML = `<strong>Mac Back-to-School Promo</strong>
-        <p>Get free AirPods 3rd-Gen with Lightning case or $169 off AirPods 3rd-Gen with MagSafe or AirPods Pro 2nd-Gen with eligible Mac purchase.<br>
-        Valid for UW student, staff, faculty and UW Health personal purchases, NOT for department purchases.
-        Qualified purchasers may only receive one promo with Mac purchase.</p>
-        <p>Discount will not reflect until related items are added to your cart and/or after shipping/delivery method is chosen during checkout.</p>`;
+        <p>Get free AirPods 3rd-Gen with Lightning case or $169 off AirPods 3rd-Gen with MagSafe or AirPods Pro 2nd-Gen or AirPods Max with eligible Mac purchase.
+Valid for UW student, staff, faculty and UW Health personal purchases, NOT for department purchases. Qualified purchasers may only receive one promo with Mac purchase.
+Discount will not reflect until related items are added to your cart and/or after shipping/delivery method is chosen during checkout.</p>`;
       }
     });
   }

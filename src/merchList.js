@@ -260,16 +260,15 @@ $(document).ready(function () {
       <img class="img-fluid mx-auto mb-4 dt-hide"
         src="https://i.univbkstr.com/v3/img/pages/tech/apple/backToSchool-sm.jpg"
         alt="Save on Mac or iPad, get AirPods. Save on an iPad for college. Get Apple Pencil." /> -->
-        <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li></ul>`
+        <!-- <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li></ul> -->`
       ).insertAfter('.merch__filter');
     } else {
-      $(
-        // <a href="https://text.uwbookstore.com/MerchList?ID=28519">
-        //         <img src="https://i.univbkstr.com/v3/img/pages/tech/appleTech.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-fluid mobi-hide mb-2">
-        //         <img src="https://i.univbkstr.com/v3/img/pages/tech/appleTech-sm.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-fluid dt-hide mb-2">
-        //         </a>
-        `<ul class="page-nav"><li><a href="https://text.uwbookstore.com/MerchList?ID=28367" class="btn btn-primary">MacBooks</a></li><li><a href="https://text.uwbookstore.com/MerchList?ID=28374" class="btn btn-primary">Dell Laptops</a></li></ul>`
-      ).insertAfter('.merch__filter');
+      $().insertAfter('.merch__filter');
+      // <a href="https://text.uwbookstore.com/MerchList?ID=28519">
+      //         <img src="https://i.univbkstr.com/v3/img/pages/tech/appleTech.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-fluid mobi-hide mb-2">
+      //         <img src="https://i.univbkstr.com/v3/img/pages/tech/appleTech-sm.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-fluid dt-hide mb-2">
+      //         </a>
+      // `<ul class="page-nav"><li><a href="https://text.uwbookstore.com/MerchList?ID=28367" class="btn btn-primary">MacBooks</a></li><li><a href="https://text.uwbookstore.com/MerchList?ID=28374" class="btn btn-primary">Dell Laptops</a></li></ul>`
     }
   }
 
@@ -347,17 +346,15 @@ $(document).ready(function () {
       //   alt="Save on Mac or iPad, get AirPods. Save on an iPad for college. Get Apple Pencil." /> -->
       //   <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li></ul>`
       // ).insertAfter('.merch__filter');
-
       // $('<div class="merch__card-special">UW Discount</div>').prependTo('div.merchItem');;
     } else {
-      $(
-        // `<a href="https://text.uwbookstore.com/MerchList?ID=28519">
-        //         <img src="https://i.univbkstr.com/v3/img/pages/tech/appleTech.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-fluid mobi-hide mb-2">
-        //         <img src="https://i.univbkstr.com/v3/img/pages/tech/appleTech-sm.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-fluid dt-hide mb-2">
-        //         </a>
-        //         `
-        `<ul class="page-nav"><li><a href="https://text.uwbookstore.com/MerchList?ID=28367" class="btn btn-primary">MacBooks</a></li><li><a href="https://text.uwbookstore.com/MerchList?ID=28374" class="btn btn-primary">Dell Laptops</a></li></ul>`
-      ).insertAfter('.merch__filter');
+      $().insertAfter('.merch__filter');
+      // `<a href="https://text.uwbookstore.com/MerchList?ID=28519">
+      //         <img src="https://i.univbkstr.com/v3/img/pages/tech/appleTech.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-fluid mobi-hide mb-2">
+      //         <img src="https://i.univbkstr.com/v3/img/pages/tech/appleTech-sm.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-fluid dt-hide mb-2">
+      //         </a>
+      //         `
+      // `<ul class="page-nav"><li><a href="https://text.uwbookstore.com/MerchList?ID=28367" class="btn btn-primary">MacBooks</a></li><li><a href="https://text.uwbookstore.com/MerchList?ID=28374" class="btn btn-primary">Dell Laptops</a></li></ul>`
     }
   }
 

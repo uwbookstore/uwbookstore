@@ -260,7 +260,7 @@ $(document).ready(function () {
       <img class="img-fluid mx-auto mb-4 dt-hide"
         src="https://i.univbkstr.com/v3/img/pages/tech/apple/backToSchool-sm.jpg"
         alt="Save on Mac or iPad, get AirPods. Save on an iPad for college. Get Apple Pencil." /> -->
-        <!-- <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li></ul> -->`
+        <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li></ul>`
       ).insertAfter('.merch__filter');
     } else {
       $().insertAfter('.merch__filter');
@@ -322,9 +322,9 @@ $(document).ready(function () {
       // $(
       //     '<a href="https://i.univbkstr.com/downloads/4746_Dell_BTS_POP_Kit_2022_RETAIL_POSTCARD_EDITABLE.pdf" target="_blank"><img src="https://i.univbkstr.com/v3/img/banners/Dell-Rebate-2021.jpg" class="mobi-hide img-fluid img__center" alt="Student Rebate"><img src="https://i.univbkstr.com/v3/img/banners/Dell-Rebate-2021-sm.jpg" class="dt-hide img-fluid img__center" alt="Student Rebate"><div class="visually-hidden">STUDENT OFFER. $100 Rebate - WITH THE PURCHASE OF A DELL PC $499+. Offer valid 05/01/2022 - 10/31/2022</div></a>'
       // ).insertBefore(".merch__filter");
-      // $(
-      //   '<ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li></ul>'
-      // ).insertAfter('.merch__filter');
+      $(
+        '<ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li></ul>'
+      ).insertAfter('.merch__filter');
     } else {
       // $(
       //     '<a href="https://i.univbkstr.com/downloads/4746_Dell_BTS_POP_Kit_2022_RETAIL_POSTCARD_EDITABLE.pdf" target="_blank"><img src="https://i.univbkstr.com/v3/img/banners/Dell-Rebate-2021.jpg" class="mobi-hide img-fluid img__center" alt="Student Rebate"><img src="https://i.univbkstr.com/v3/img/banners/Dell-Rebate-2021-sm.jpg" class="dt-hide img-fluid img__center" alt="Student Rebate"><div class="visually-hidden">STUDENT OFFER. $100 Rebate - OF A DELL PC $499+ OF A DELL PC $499+. Offer valid 05/01/2022 - 10/31/2022</div></a>'
@@ -337,16 +337,16 @@ $(document).ready(function () {
 
   if (categoryTitle.toLowerCase().substring(0, 7) === 'macbook') {
     if (window.location.host === 'www.uwbookstore.com') {
-      // $(
-      //   `<!-- <img class="img-fluid mx-auto mb-4 mobi-hide"
-      //   src="https://i.univbkstr.com/v3/img/pages/tech/apple/backToSchool.jpg"
-      //   alt="Save on Mac or iPad, get AirPods. Save on an iPad for college. Get Apple Pencil." />
-      // <img class="img-fluid mx-auto mb-4 dt-hide"
-      //   src="https://i.univbkstr.com/v3/img/pages/tech/apple/backToSchool-sm.jpg"
-      //   alt="Save on Mac or iPad, get AirPods. Save on an iPad for college. Get Apple Pencil." /> -->
-      //   <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li></ul>`
-      // ).insertAfter('.merch__filter');
-      // $('<div class="merch__card-special">UW Discount</div>').prependTo('div.merchItem');;
+      $(
+        `<!-- <img class="img-fluid mx-auto mb-4 mobi-hide"
+        src="https://i.univbkstr.com/v3/img/pages/tech/apple/backToSchool.jpg"
+        alt="Save on Mac or iPad, get AirPods. Save on an iPad for college. Get Apple Pencil." />
+      <img class="img-fluid mx-auto mb-4 dt-hide"
+        src="https://i.univbkstr.com/v3/img/pages/tech/apple/backToSchool-sm.jpg"
+        alt="Save on Mac or iPad, get AirPods. Save on an iPad for college. Get Apple Pencil." /> -->
+        <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li></ul>`
+      ).insertAfter('.merch__filter');
+      // $('<div class="merch__card-special">UW Discount</div>').prependTo('div.merchItem');
     } else {
       $().insertAfter('.merch__filter');
       // `<a href="https://text.uwbookstore.com/MerchList?ID=28519">
@@ -358,24 +358,24 @@ $(document).ready(function () {
     }
   }
 
-  if (categoryTitle.toLowerCase().substring(0, 11) === 'dell laptop') {
-    if (window.location.host === 'www.uwbookstore.com') {
-      $(
-        `<a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook">
-                <img src="https://i.univbkstr.com/v3/img/pages/tech/dellBanner.png" alt="Dell Education Rebate Offers" class="img-fluid mobi-hide mb-2">
-                <img src="https://i.univbkstr.com/v3/img/pages/tech/dellBanner-sm.png" alt="Dell Education Rebate Offers" class="img-fluid dt-hide mb-2">
-                </a>`
-      ).insertAfter('.merch__filter');
-      // $('<div class="merch__card-special">UW Discount</div>').prependTo('div.merchItem');;
-    } else {
-      $(
-        `<a href="https://text.uwbookstore.com/MerchList?ID=28519">
-                <img src="https://i.univbkstr.com/v3/img/pages/tech/dellBanner.png" alt="Dell Education Rebate Offers" class="img-fluid mobi-hide mb-2">
-                <img src="https://i.univbkstr.com/v3/img/pages/tech/dellBanner-sm.png" alt="Dell Education Rebate Offers" class="img-fluid dt-hide mb-2">
-                </a>`
-      ).insertAfter('.merch__filter');
-    }
-  }
+  // if (categoryTitle.toLowerCase().substring(0, 11) === 'dell laptop') {
+  //   if (window.location.host === 'www.uwbookstore.com') {
+  //     $(
+  //       `<a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook">
+  //               <img src="https://i.univbkstr.com/v3/img/pages/tech/dellBanner.png" alt="Dell Education Rebate Offers" class="img-fluid mobi-hide mb-2">
+  //               <img src="https://i.univbkstr.com/v3/img/pages/tech/dellBanner-sm.png" alt="Dell Education Rebate Offers" class="img-fluid dt-hide mb-2">
+  //               </a>`
+  //     ).insertAfter('.merch__filter');
+  //     // $('<div class="merch__card-special">UW Discount</div>').prependTo('div.merchItem');;
+  //   } else {
+  //     $(
+  //       `<a href="https://text.uwbookstore.com/MerchList?ID=28519">
+  //               <img src="https://i.univbkstr.com/v3/img/pages/tech/dellBanner.png" alt="Dell Education Rebate Offers" class="img-fluid mobi-hide mb-2">
+  //               <img src="https://i.univbkstr.com/v3/img/pages/tech/dellBanner-sm.png" alt="Dell Education Rebate Offers" class="img-fluid dt-hide mb-2">
+  //               </a>`
+  //     ).insertAfter('.merch__filter');
+  //   }
+  // }
 
   // if (categoryTitle.toLowerCase().substring(0, 5) === 'ipads') {
   //   if (window.location.host === 'www.uwbookstore.com') {
@@ -409,7 +409,7 @@ $(document).ready(function () {
     categoryTitle.toLowerCase().substring(0, 6) === 'laptop'
   ) {
     $(
-      '<div class="alert alert-info center"><p><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p></div>'
+      '<div class="alert alert-info center"><p class="mb-0"><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p></div>'
     ).insertBefore('#merch__card');
   }
 

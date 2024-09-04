@@ -146,11 +146,6 @@ $(document).ready(function () {
     }
   }
 
-  //Textbook Return policy
-  $('.retPolicy').html(
-    'You may return your textbooks with a receipt for a full refund through Wednesday, September 13<sup>th</sup> (2023 Fall Semester), and through Tuesday, January 30<sup>th</sup> (2024 Spring Semester).'
-  );
-
   $('.inline').colorbox({ inline: true, width: '50%' });
 
   $('#shipsubmit').removeClass('btn-default').addClass('btn-primary');

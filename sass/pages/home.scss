@@ -285,12 +285,13 @@ a.hiring__now {
 
   &__header {
     color: var(--clr-primary);
-    font-size: 9rem;
+    font-size: 7.5rem;
     font-weight: 700;
     text-align: center;
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     line-height: 1.25;
+    margin-bottom: 3rem;
 
     span {
       display: block;
@@ -308,19 +309,13 @@ a.hiring__now {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10rem;
+      gap: 4rem;
     }
 
     &__item {
-      &--img,
-      &--text {
-        width: 50%;
-      }
-
       &--img {
         flex: 0 0 37.5rem;
         margin-bottom: 0;
-        max-width: 37.5rem;
         padding: 0;
       }
 
@@ -328,14 +323,21 @@ a.hiring__now {
         align-items: flex-start;
 
         .fine-print {
-          font-size: 1.4rem;
-          text-align: left;
+          font-size: 1.1rem;
+          width: 100%;
         }
       }
     }
 
     &__header {
-      text-align: left;
+      font-size: 6rem;
+
+      span {
+        &.sub-header {
+          text-align: center;
+          font-size: 4rem;
+        }
+      }
     }
   }
 }

@@ -201,6 +201,7 @@ $(document).ready(function () {
         $(this).text().toLowerCase() === 'large/x-large' ||
         $(this).text().toLowerCase() === 'large/xlarge'
       ) {
+        console.log($(this).text());
         $(this).text('L/XL');
       } else if ($(this).text().toLowerCase() === 'xx-small') {
         $(this).text('2XS');
@@ -320,6 +321,10 @@ $(document).ready(function () {
     } else if (singleItem === 'newborn 3 month') {
       $(
         '<div id="sizes" class="merch__detail-size"><div class="grid merch__detail-size-picker"><span class="btn btn-default typeSelected">NB/3M</span></div></div>'
+      ).appendTo('div#merch-info');
+    } else if (singleItem === 'large/x-large') {
+      $(
+        '<div id="sizes" class="merch__detail-size"><div class="grid merch__detail-size-picker"><span class="btn btn-default typeSelected">L/XL</span></div></div>'
       ).appendTo('div#merch-info');
     } else {
       $(

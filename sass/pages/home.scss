@@ -207,12 +207,16 @@ a.hiring__now {
         text-transform: uppercase;
       }
 
+      a {
+        display: block;
+      }
+
       img {
-        transform: scale(1);
+        transform: scale(0.95);
         transition: all 0.25s ease-in-out;
 
         &:hover {
-          transform: scale(1.05);
+          transform: scale(1);
           transition: all 0.25s ease-in-out;
         }
       }

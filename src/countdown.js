@@ -27,6 +27,7 @@ const items = document.querySelectorAll('.timer__box p');
 
 // months are ZERO index based;
 const futureDate = new Date(Date.UTC(2024, 9, 26, 23, 30, 0));
+// const futureDate = new Date(Date.UTC(2024, 10, 2, 16, 0, 0));
 
 const year = futureDate.getFullYear();
 const hours = futureDate.getHours();

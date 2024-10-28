@@ -2,10 +2,6 @@
 
 .countdown {
   background-color: #eeeeee;
-  /* background-image: url(./gradCaps.jpeg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 50% 50%; */
   color: black;
   height: auto;
   width: 100%;
@@ -21,7 +17,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    // height: 100%;
     padding: 1rem;
   }
 
@@ -57,15 +52,11 @@
   &__box {
     background-color: hsl(209, 61%, 16%);
     color: white;
-    width: 8rem;
+    width: 7rem;
     height: 8rem;
     display: grid;
     place-items: center;
     text-align: center;
-
-    &:not(:last-child) {
-      margin-right: 1rem;
-    }
 
     p:not(.expired) {
       font-size: 4rem;

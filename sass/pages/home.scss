@@ -1,268 +1,48 @@
 @use '../util' as *;
 
-.price-match {
-  padding-top: 2.5rem;
-  margin: 2.5rem auto;
-
-  h2 {
-    margin-bottom: 1rem;
-    font-weight: 700;
-    font-size: 3rem;
-    border-bottom: 2px solid var(--clr-black);
-    line-height: 2;
-  }
-
-  p {
-    font-weight: 600;
-    margin-top: 1rem;
-    font-size: 1.6rem;
-    line-height: 2.5;
-
-    &.lg {
-      font-size: 3rem;
-      line-height: 1;
-      margin: 0;
-      margin-top: 2rem;
-    }
-  }
-
-  ul {
-    list-style: disc outside;
-    margin-left: 3rem;
-  }
-
-  @include breakpoint(medium) {
-    [class^='col-'] {
-      padding: 0;
-
-      &:first-child {
-        border-right: 2px solid var(--clr-black);
-      }
-    }
-  }
-}
-
-.grid__banner {
-  justify-content: center;
-  margin-left: -1rem;
-  margin-right: -1rem;
-  margin-top: 2rem;
-
-  .grid__item-33 {
-    padding: 0 1rem;
-
-    @supports (display: flex) {
-      display: flex;
-      align-items: flex-start;
-
-      &:not(:first-child) {
-        margin-top: 2rem;
-      }
-
-      @include breakpoint(small) {
-        &:not(:first-child) {
-          margin-top: 0;
-        }
-
-        &:last-child {
-          margin-top: 2rem;
-        }
-      }
-
-      @include breakpoint(medium) {
-        &:last-child {
-          margin-top: 0;
-        }
-      }
-    }
-  }
-}
-
-.egiftCard {
-  width: 100%;
-  position: relative;
-  border: 1px solid #000;
-
-  &__header,
-  &__footer {
-    height: 50%;
-    text-align: center;
-
-    @include breakpoint(medium) {
-      text-align: right;
-    }
-  }
-
-  &__header {
-    background-color: #000;
-    color: #fff;
-    font-weight: 700;
-    font-size: 3.5rem;
-    padding-right: 1rem;
-  }
-
-  &__footer {
-    position: relative;
-  }
-
-  a.btn-rounded {
-    &:link,
-    &:visited {
-      position: absolute;
-      right: 50%;
-      top: 50%;
-      transform: translate(50%, -50%);
-      background-color: color-mix(in srgb, var(--clr-light-gray-3), #000 10%);
-      color: var(--clr-black);
-      font-size: 3rem;
-      text-align: center;
-      display: inline-block;
-      border-radius: 10rem;
-      font-weight: bold;
-      padding: 3px 2rem;
-      width: 90%;
-    }
-
-    &:hover {
-      text-decoration: none;
-    }
-
-    @include breakpoint(medium) {
-      &:link,
-      &:visited {
-        right: 1rem;
-        transform: translate(0, -50%);
-        font-size: 1.8rem;
-        width: auto;
-      }
-    }
-  }
-
-  &__link {
-    display: none;
-
-    @include breakpoint(medium) {
-      display: block;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 1rem;
-      z-index: 100;
-    }
-  }
-
-  @include breakpoint(small) {
-    margin-left: 2rem;
-  }
-
-  @include breakpoint(medium) {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-}
-
-.hiring__now,
-a.hiring__now {
-  display: block;
-  width: 100%;
-  background-color: transparent;
-  margin-top: -2rem;
-  text-align: center;
-  font-size: 1.8rem;
-  padding: 1rem;
-  color: var(--clr-primary);
-  text-decoration: none;
-  font-weight: 700;
-  // border-bottom: 1px solid lighten(var(--clr-black), 30%);
-}
-
-.homepage__wrapper {
-  background-color: var(--clr-white);
-}
-
-.grid {
-  &__wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    justify-content: space-around;
-    max-width: 117rem;
-    margin-top: 4rem;
-    gap: 2rem;
-
-    @include breakpoint(small) {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    &-item {
-      text-align: center;
-      margin-bottom: 2rem;
-      max-width: 40%;
-
-      p {
-        margin-top: 2rem;
-        margin-bottom: 0;
-        font-weight: 700;
-        text-transform: uppercase;
-      }
-
-      a {
-        display: block;
-      }
-
-      img {
-        transform: scale(0.95);
-        transition: all 0.25s ease-in-out;
-
-        &:hover {
-          transform: scale(1);
-          transition: all 0.25s ease-in-out;
-        }
-      }
-    }
-
-    &-single {
-      padding: 0 1rem;
-      margin-bottom: 2rem;
-      flex: 1 1 100%;
-
-      img {
-        border-radius: 2rem;
-      }
-    }
-  }
-}
-
 .hero__image {
   background-color: var(--clr-white);
   padding-bottom: 4rem;
-  // margin-top: 2rem;
+}
 
-  .img {
-    &-small {
-      @include breakpoint(small) {
-        display: none;
+.featured {
+  &__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 117rem;
+    margin-bottom: 9rem;
+    gap: 2rem;
+  }
+
+  &__item {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    a {
+      display: block;
+    }
+
+    img {
+      transform: scale(1);
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
       }
     }
 
-    &-medium {
-      display: none;
-    }
-
-    &-large {
-      display: none;
-
-      @include breakpoint(small) {
-        display: block;
-      }
+    p {
+      margin: 2rem 0 0;
+      font-weight: 700;
+      text-transform: uppercase;
     }
   }
 }
 
 .wiscard {
   &__wrapper {
-    margin: 9rem auto 10rem;
+    margin-bottom: 10rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -289,7 +69,7 @@ a.hiring__now {
 
   &__header {
     color: var(--clr-primary);
-    font-size: 7.5rem;
+    font-size: 7rem;
     font-weight: 700;
     text-align: center;
     font-family: 'Oswald', sans-serif;
@@ -346,31 +126,8 @@ a.hiring__now {
   }
 }
 
-.featured__items-block {
-  width: 100%;
-  background-color: white;
-  padding: 2rem 1rem;
-}
-
-.featured__items-block {
-  .card {
-    &.featuredDynamic {
-      border-radius: 2rem;
-      max-width: 115rem;
-    }
-
-    &-header {
-      border-radius: 2rem 2rem 0 0;
-      text-align: center;
-      font-weight: 700;
-      color: var(--clr-black);
-      font-size: 2rem;
-    }
-  }
-}
-
-.featuredWrap {
-  border: none;
+.wrapper {
+  margin-bottom: 3rem;
 }
 
 .giftcard {
@@ -382,7 +139,7 @@ a.hiring__now {
       justify-content: center;
       text-align: center;
       padding: 3rem 1rem;
-      margin: 1rem;
+      margin-bottom: 3rem;
 
       h2 {
         color: var(--clr-primary);
@@ -403,7 +160,7 @@ a.hiring__now {
         margin-bottom: 3rem;
       }
 
-      @include breakpoint(medium) {
+      @include breakpoint(small) {
         background-color: transparent;
         padding: 0;
         margin-left: 0;
@@ -411,46 +168,23 @@ a.hiring__now {
       }
     }
   }
+
+  &__banner {
+    display: none;
+
+    @include breakpoint(small) {
+      display: block;
+    }
+  }
 }
 
-.cta-btn-lg {
-  display: block;
-  width: 80%;
-  margin: auto;
-  text-align: center;
-  background-color: transparent;
-  border: 2px solid var(--clr-primary);
-  color: var(--clr-primary);
-  padding: 1.5rem;
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  transition: all 0.25s ease-in-out;
-  border-radius: 5px;
+.container__stacked-sm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  &:link,
-  &:visited {
-  }
-
-  &:hover {
-    background-color: var(--clr-primary);
-    border-color: var(--clr-primary);
-    text-decoration: none;
-    color: var(--clr-white);
-  }
-
-  &:active,
-  &:active:hover,
-  &:focus,
-  &:active:focus {
-    background-color: color-mix(in srgb, var(--clr-primary), #000 4%);
-    border-color: color-mix(in srgb, var(--clr-primary), #000 5%);
-    text-decoration: none;
-    color: var(--clr-white);
-  }
-
-  @include breakpoint(medium) {
-    width: 100%;
+  @include breakpoint(small) {
+    display: none;
   }
 }
 
@@ -547,6 +281,48 @@ a.hiring__now {
 
 /* TEXTBOOK HOMEPAGE */
 /* ***************** */
+.price-match {
+  padding-top: 2.5rem;
+  margin: 2.5rem auto;
+
+  h2 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 3rem;
+    border-bottom: 2px solid var(--clr-black);
+    line-height: 2;
+  }
+
+  p {
+    font-weight: 600;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    line-height: 2.5;
+
+    &.lg {
+      font-size: 3rem;
+      line-height: 1;
+      margin: 0;
+      margin-top: 2rem;
+    }
+  }
+
+  ul {
+    list-style: disc outside;
+    margin-left: 3rem;
+  }
+
+  @include breakpoint(medium) {
+    [class^='col-'] {
+      padding: 0;
+
+      &:first-child {
+        border-right: 2px solid var(--clr-black);
+      }
+    }
+  }
+}
+
 .text-home {
   &__grid {
     display: flex;
@@ -672,3 +448,189 @@ a.hiring__now {
     }
   }
 }
+
+.cta-btn-lg {
+  display: block;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid var(--clr-primary);
+  color: var(--clr-primary);
+  padding: 1.5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.25s ease-in-out;
+  border-radius: 5px;
+
+  &:link,
+  &:visited {
+  }
+
+  &:hover {
+    background-color: var(--clr-primary);
+    border-color: var(--clr-primary);
+    text-decoration: none;
+    color: var(--clr-white);
+  }
+
+  &:active,
+  &:active:hover,
+  &:focus,
+  &:active:focus {
+    background-color: color-mix(in srgb, var(--clr-primary), #000 4%);
+    border-color: color-mix(in srgb, var(--clr-primary), #000 5%);
+    text-decoration: none;
+    color: var(--clr-white);
+  }
+
+  @include breakpoint(medium) {
+    width: 100%;
+  }
+}
+// .featured__items-block {
+//   width: 100%;
+//   background-color: white;
+//   padding: 2rem 1rem;
+// }
+
+// .featured__items-block {
+//   .card {
+//     &.featuredDynamic {
+//       border-radius: 2rem;
+//       max-width: 115rem;
+//     }
+
+//     &-header {
+//       border-radius: 2rem 2rem 0 0;
+//       text-align: center;
+//       font-weight: 700;
+//       color: var(--clr-black);
+//       font-size: 2rem;
+//     }
+//   }
+// }
+
+// .featuredWrap {
+//   border: none;
+// }
+
+// .grid__banner {
+//   justify-content: center;
+//   margin-left: -1rem;
+//   margin-right: -1rem;
+//   margin-top: 2rem;
+
+//   .grid__item-33 {
+//     padding: 0 1rem;
+
+//     @supports (display: flex) {
+//       display: flex;
+//       align-items: flex-start;
+
+//       &:not(:first-child) {
+//         margin-top: 2rem;
+//       }
+
+//       @include breakpoint(small) {
+//         &:not(:first-child) {
+//           margin-top: 0;
+//         }
+
+//         &:last-child {
+//           margin-top: 2rem;
+//         }
+//       }
+
+//       @include breakpoint(medium) {
+//         &:last-child {
+//           margin-top: 0;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .egiftCard {
+//   width: 100%;
+//   position: relative;
+//   border: 1px solid #000;
+
+//   &__header,
+//   &__footer {
+//     height: 50%;
+//     text-align: center;
+
+//     @include breakpoint(medium) {
+//       text-align: right;
+//     }
+//   }
+
+//   &__header {
+//     background-color: #000;
+//     color: #fff;
+//     font-weight: 700;
+//     font-size: 3.5rem;
+//     padding-right: 1rem;
+//   }
+
+//   &__footer {
+//     position: relative;
+//   }
+
+//   a.btn-rounded {
+//     &:link,
+//     &:visited {
+//       position: absolute;
+//       right: 50%;
+//       top: 50%;
+//       transform: translate(50%, -50%);
+//       background-color: color-mix(in srgb, var(--clr-light-gray-3), #000 10%);
+//       color: var(--clr-black);
+//       font-size: 3rem;
+//       text-align: center;
+//       display: inline-block;
+//       border-radius: 10rem;
+//       font-weight: bold;
+//       padding: 3px 2rem;
+//       width: 90%;
+//     }
+
+//     &:hover {
+//       text-decoration: none;
+//     }
+
+//     @include breakpoint(medium) {
+//       &:link,
+//       &:visited {
+//         right: 1rem;
+//         transform: translate(0, -50%);
+//         font-size: 1.8rem;
+//         width: auto;
+//       }
+//     }
+//   }
+
+//   &__link {
+//     display: none;
+
+//     @include breakpoint(medium) {
+//       display: block;
+//       position: absolute;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       left: 1rem;
+//       z-index: 100;
+//     }
+//   }
+
+//   @include breakpoint(small) {
+//     margin-left: 2rem;
+//   }
+
+//   @include breakpoint(medium) {
+//     margin-left: 1rem;
+//     margin-right: 1rem;
+//   }
+// }

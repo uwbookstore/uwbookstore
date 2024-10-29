@@ -121,27 +121,25 @@ $(document).ready(function () {
   // });
 
   // HANDLE LOGIN ERRORS
-  if ($('.loginMessage').length) {
-    $('.loginMessage')
+  if ($('.lgMessage').length) {
+    $('.lgMessage')
       .removeClass('red')
       .addClass('alert alert-danger wi-50 mx-auto');
     $('<em class="fa fa-exclamation-triangle mr-2"></em>').prependTo(
-      '.loginMessage'
+      '.lgMessage'
     );
 
     if (
-      $('.loginMessage').text() ===
+      $('.lgMessage').text() ===
       "Please use your school's single sign-on process to login."
     ) {
-      $('.loginMessage').html(
+      $('.lgMessage').html(
         '<em class="fa fa-exclamation-triangle"></em> &mdash; Please use your <a href="https://www.uwbookstore.com/login">UW Student Sign In</a>'
       );
     }
 
     if ($('.validation-summary-errors').length) {
-      $('.validation-summary-errors ul')
-        .addClass('ul')
-        .appendTo('.loginMessage');
+      $('.validation-summary-errors ul').addClass('ul').appendTo('.lgMessage');
       $('.validation-summary-errors').hide();
     }
   }

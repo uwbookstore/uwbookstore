@@ -1,10 +1,12 @@
+@use '../util' as *;
+
 .img {
   &__border {
-    border: 2px solid var(--clr-primary);
-    padding: 2px;
+    border: rem(2) solid var(--clr-primary);
+    padding: rem(2);
 
     &-radius {
-      border-radius: 2.5rem;
+      border-radius: rem(25);
     }
   }
 

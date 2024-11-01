@@ -3,25 +3,25 @@
 .event {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2.5rem;
+  margin-bottom: rem(25);
 
   @include breakpoint(medium) {
     flex-direction: row;
     align-items: flex-start;
 
     &:not(:last-child) {
-      border-bottom: 1px solid var(--clr-light-gray);
+      border-bottom: rem(1) solid var(--clr-light-gray);
     }
   }
 
   &__date {
     flex: 1 1 100%;
-    margin-bottom: 1.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 1.6rem;
+    margin-bottom: rem(15);
+    padding: rem(5) rem(10);
+    font-size: rem(16);
     background-color: var(--clr-primary);
     color: var(--clr-white);
-    text-shadow: 0 1px 0 color-mix(in srgb, var(--clr-black), #000 5%);
+    text-shadow: 0 rem(1) 0 color-mix(in srgb, var(--clr-black), #000 5%);
     font-weight: 700;
     text-transform: uppercase;
 
@@ -32,15 +32,15 @@
 
   &__content {
     flex: 1 1 100%;
-    margin-bottom: 2rem;
+    margin-bottom: rem(20);
 
     &--title {
-      font-size: 1.8rem;
+      font-size: rem(18);
       font-weight: 700;
     }
 
     &--info {
-      margin-top: 1rem;
+      margin-top: rem(10);
 
       a:not(.btn) {
         color: blue;
@@ -56,7 +56,7 @@
 
     @include breakpoint(medium) {
       flex: 0 0 75%;
-      padding: 0 1rem 0 3rem;
+      padding: 0 rem(10) 0 rem(30);
     }
   }
 }

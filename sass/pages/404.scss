@@ -1,23 +1,23 @@
 .pg-404 {
   h2 {
-    font-size: 2.4rem;
+    font-size: rem(24);
   }
 
   p {
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
+    margin-bottom: rem(5);
 
     &:first-child {
       font-weight: 700;
     }
 
     &:not(:first-child) {
-      font-size: 1.4rem;
+      font-size: rem(14);
     }
   }
 
   img {
-    margin-top: 3rem;
-    max-height: 50rem;
+    margin-top: rem(30);
+    max-height: rem(500);
   }
 }

@@ -3,54 +3,53 @@
 .welcome {
   &__header {
     display: block;
-    // background-color: var(--clr-light-gray-3);
-    padding: 3rem 1rem 5rem;
+    padding: rem(30) rem(10) rem(50);
     text-align: center;
 
     hr {
       display: block;
-      margin: 4rem auto;
-      border-top: 3px solid #000;
-      height: 1px;
+      margin: rem(40) auto;
+      border-top: rem(3) solid #000;
+      height: rem(1);
     }
 
     h1 {
       color: #a11d2f;
       font-weight: 700;
-      font-size: 3.5rem;
+      font-size: rem(35);
     }
 
     &-grid {
       display: flex;
-      padding: 2rem 0;
+      padding: rem(20) 0;
       flex-direction: column;
 
       &-item {
         img {
           border-radius: 50%;
-          height: 17.5rem;
-          width: 17.5rem;
+          height: rem(175);
+          width: rem(175);
         }
 
         h2 {
-          margin-bottom: 2rem;
-          font-size: 3rem;
+          margin-bottom: rem(20);
+          font-size: rem(30);
           font-weight: 800;
           color: var(--clr-black);
         }
 
         p {
           font-weight: 800;
-          font-size: 1.6rem;
+          font-size: rem(16);
           text-align: justify;
         }
 
         .btn {
-          border-radius: 1rem;
+          border-radius: rem(10);
           text-transform: uppercase;
           font-weight: 800;
-          font-size: 2.5rem;
-          padding: 1rem 2rem;
+          font-size: rem(25);
+          padding: rem(10) rem(20);
           height: auto;
         }
       }
@@ -65,28 +64,28 @@
       }
 
       h1 {
-        font-size: 7rem;
+        font-size: rem(70);
       }
 
       &-grid {
-        padding: 2rem 10.5rem;
+        padding: rem(20) rem(105);
         align-items: center;
         justify-content: space-around;
         flex-direction: row;
 
         &-item {
           img {
-            margin-right: 5rem;
-            height: 30rem;
-            width: 30rem;
+            margin-right: rem(50);
+            height: rem(300);
+            width: rem(300);
           }
 
           h2 {
-            font-size: 3.5rem;
+            font-size: rem(35);
           }
 
           p {
-            font-size: 3rem;
+            font-size: rem(30);
           }
         }
       }
@@ -95,53 +94,53 @@
 }
 
 .contest {
-  margin: 3rem 0;
+  margin: rem(30) 0;
   text-align: center;
 
   &__header {
     color: var(--clr-primary);
     font-family: 'Dancing Script';
-    font-size: 7.5rem;
+    font-size: rem(75);
 
     @include breakpoint(medium) {
-      font-size: 15rem;
+      font-size: rem(150);
     }
   }
 
   &__subhead {
     text-transform: uppercase;
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-size: rem(30);
+    margin-bottom: rem(20);
 
     @include breakpoint(medium) {
-      font-size: 6rem;
+      font-size: rem(60);
     }
   }
 
   p {
     text-transform: uppercase;
-    font-size: 1.6rem;
+    font-size: rem(16);
 
     @include breakpoint(medium) {
-      font-size: 3rem;
+      font-size: rem(30);
     }
   }
 
   .btn {
-    border-radius: 1rem;
+    border-radius: rem(10);
     text-transform: uppercase;
     font-weight: 800;
-    font-size: 2.5rem;
-    padding: 1rem 2rem;
+    font-size: rem(25);
+    padding: rem(10) rem(20);
     height: auto;
   }
 
   hr {
     display: block;
-    margin: 4rem auto;
-    border-top: 3px solid #000;
+    margin: rem(40) auto;
+    border-top: rem(3) solid #000;
     width: 60%;
-    height: 1px;
+    height: rem(1);
   }
 }
 
@@ -156,13 +155,13 @@
 
     &-item {
       flex: 0 0 50%;
-      margin-bottom: 10rem;
+      margin-bottom: rem(100);
       transform: scale(1);
       transition: all 0.25s ease-in-out;
 
       @include breakpoint(small) {
         flex: 0 0 25%;
-        margin-bottom: 3rem;
+        margin-bottom: rem(30);
       }
 
       a {
@@ -178,18 +177,18 @@
 
       .twitterX {
         fill: var(--clr-primary);
-        height: 6rem;
+        height: rem(60);
       }
 
       .fa-brands {
-        font-size: 6rem;
+        font-size: rem(60);
         color: var(--clr-primary);
       }
     }
 
     &-title {
       display: block;
-      font-size: 3rem;
+      font-size: rem(30);
       margin-bottom: 0;
       font-weight: 700;
       color: var(--clr-black);
@@ -197,7 +196,7 @@
 
     &-name {
       display: block;
-      font-size: 2rem;
+      font-size: rem(20);
       font-weight: 400;
       color: var(--clr-black);
     }
@@ -205,7 +204,7 @@
 }
 
 .soar {
-  padding: 5rem 1.5rem;
+  padding: rem(50) rem(15);
 
   &__grid {
     display: flex;
@@ -213,13 +212,13 @@
 
     &-item {
       flex: 0 1 100%;
-      padding: 2rem;
-      margin-bottom: 4rem;
+      padding: rem(20);
+      margin-bottom: rem(40);
       display: flex;
       flex-direction: column;
 
       ul {
-        padding-left: 3rem;
+        padding-left: rem(30);
       }
 
       @include breakpoint(medium) {
@@ -232,13 +231,13 @@
       margin-top: auto;
 
       a {
-        margin-top: 2rem;
+        margin-top: rem(20);
         width: 100%;
-        font-size: 2rem;
+        font-size: rem(20);
 
         @include breakpoint(medium) {
           width: auto;
-          font-size: 1.7rem;
+          font-size: rem(17);
         }
       }
     }

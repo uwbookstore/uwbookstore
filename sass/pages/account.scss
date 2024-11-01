@@ -1,12 +1,12 @@
 .giftInquiryBalance {
   --bs-alert-bg: #cff4fc;
-  --bs-alert-padding-x: 1rem;
-  --bs-alert-padding-y: 1rem;
-  --bs-alert-margin-bottom: 1rem;
+  --bs-alert-padding-x: rem(10);
+  --bs-alert-padding-y: rem(10);
+  --bs-alert-margin-bottom: rem(10);
   --bs-alert-color: #055160;
   --bs-alert-border-color: #b6effb;
-  --bs-alert-border: 1px solid var(--bs-alert-border-color);
-  --bs-alert-border-radius: 0.375rem;
+  --bs-alert-border: rem(1) solid var(--bs-alert-border-color);
+  --bs-alert-border-radius: rem(0.0375);
   font-weight: 700;
   position: relative;
   padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);

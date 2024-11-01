@@ -9,16 +9,16 @@
 }
 
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: rem(20);
+  margin-bottom: rem(20);
   border: 0;
-  border-top: 1px solid var(--clr-light-gray-3);
+  border-top: rem(1) solid var(--clr-light-gray-3);
   height: 0;
   opacity: 1;
 }
 
 select.form-control {
-  padding-right: 2rem;
+  padding-right: rem(20);
 }
 
 .form {
@@ -36,8 +36,8 @@ select.form-control {
   &-narrow {
     @include breakpoint(medium) {
       width: 50%;
-      padding: 3rem;
-      margin: 2rem auto;
+      padding: rem(30);
+      margin: rem(20) auto;
     }
   }
 

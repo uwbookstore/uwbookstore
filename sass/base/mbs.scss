@@ -5,7 +5,7 @@
 // a negative top margin on the
 // hero images.
 #modMenu {
-  margin-bottom: 2rem;
+  margin-bottom: rem(20);
 }
 
 .hide {
@@ -24,11 +24,11 @@ footer {
 
 .contain,
 .container {
-  max-width: 117rem;
+  max-width: rem(1170);
 }
 
 #contentSection {
-  padding: 0px 5px;
+  padding: 0 rem(5);
 
   @include breakpoint(medium) {
     padding: 0;
@@ -75,8 +75,8 @@ a#goToTop,
 input[class^='radio'] {
   & + span {
     &::before {
-      width: 1.2rem;
-      height: 1.2rem;
+      width: rem(12);
+      height: rem(12);
       vertical-align: 0;
     }
   }
@@ -94,24 +94,24 @@ input[class^='radio'] {
 #hScript,
 #fScript {
   font-family: Monaco, monospace;
-  font-size: 1.4rem;
+  font-size: rem(14);
   width: 100%;
 }
 
 .paymentBilling-wrapper p {
   font-size: var(--fs-default);
-  margin-bottom: 1rem;
+  margin-bottom: rem(10);
 }
 
 .skip {
   position: absolute;
-  left: -10000px;
+  left: rem(-10000);
   top: auto;
-  width: 1px;
-  height: 1px;
+  width: rem(1);
+  height: rem(1);
   overflow: hidden;
-  font-size: 15px;
-  padding: 5px;
+  font-size: rem(15);
+  padding: rem(5);
 }
 
 #promo-toggle-wrapper {
@@ -128,11 +128,11 @@ input[class^='radio'] {
 
 .req-astrisk {
   float: left;
-  margin-right: 5px;
+  margin-right: rem(5);
 }
 
 .coExistingAddressText p {
-  margin-bottom: 5px;
+  margin-bottom: rem(5);
 }
 
 #cart-rightCard .sticky-top {
@@ -140,21 +140,21 @@ input[class^='radio'] {
 }
 
 .rem1_2 {
-  font-size: 19.2px;
+  font-size: rem(19.2);
 }
 
 .rem1_5 {
-  font-size: 24px;
+  font-size: rem(24);
 }
 
 .rem2 {
-  font-size: 32px;
+  font-size: rem(32);
 }
 
 .rem3 {
-  font-size: 48px;
+  font-size: rem(48);
 }
 
 .rem4 {
-  font-size: 64px;
+  font-size: rem(64);
 }

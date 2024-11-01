@@ -24,33 +24,33 @@ body {
 .sr-only {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  height: 1px;
+  height: rem(1);
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  width: 1px;
+  width: rem(1);
 }
 
 // @include breakpoint(medium) {
 //   /* Set the width of the scroll bar */
 //   ::-webkit-scrollbar {
-//     width: 1.5rem;
+//     width: rem(15);
 //   }
 
 //   /* Change the track to a pink color and give it a round border */
 //   ::-webkit-scrollbar-track {
 //     background-color: color-mix(in srgb, var(--clr-primary), #fff 65%);
-//     border-radius: 1.5rem;
+//     border-radius: rem(15);
 //   }
 
 //   ::-webkit-scrollbar-thumb {
 //     background-color: color-mix(in srgb, var(--clr-primary), #fff 15%);
-//     border: 2px solid color-mix(in srgb, var(--clr-primary), #000 25%);
-//     border-radius: 1.5rem;
+//     border: rem(2) solid color-mix(in srgb, var(--clr-primary), #000 25%);
+//     border-radius: rem(15);
 //   }
 
 //   ::-webkit-scrollbar-thumb:hover {
 //     background-color: var(--clr-primary);
-//     border: 2px solid color-mix(in srgb, var(--clr-primary), #000 30%);
+//     border: rem(2) solid color-mix(in srgb, var(--clr-primary), #000 30%);
 //   }
 // }

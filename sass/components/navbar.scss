@@ -4,20 +4,20 @@
 .navbar {
   &-toggler {
     display: block;
-    padding: 1rem;
+    padding: rem(10);
     background: transparent;
     border: none;
 
     .icon-bar {
       display: block;
-      width: 2.2rem;
-      height: 2px;
-      border-radius: 1px;
+      width: rem(22);
+      height: rem(2);
+      border-radius: rem(1);
       background-color: var(--clr-black);
       transition: all 0.25s ease-in-out;
 
       + .icon-bar {
-        margin-top: 4px;
+        margin-top: rem(4);
       }
     }
 
@@ -56,14 +56,13 @@
   &bar {
     margin: 0;
     padding: 0;
-    // z-index: 1;
-    margin-bottom: 2rem;
+    margin-bottom: rem(20);
 
     &__site {
-      height: 7rem;
+      height: rem(70);
       position: relative;
-      border-bottom: 2px solid var(--clr-primary);
-      padding: 1.5rem 0;
+      border-bottom: rem(2) solid var(--clr-primary);
+      padding: rem(15) 0;
       background-color: var(--clr-white);
       background-size: cover;
       @include breakpoint(menu) {
@@ -75,9 +74,9 @@
     &-nav {
       > li {
         > a {
-          padding: 1rem 1.5rem !important;
+          padding: rem(10) rem(15) !important;
           display: block;
-          font-size: 1.8rem;
+          font-size: rem(18);
           color: #0054ad;
 
           &:hover,
@@ -102,15 +101,15 @@
           }
           > a {
             color: var(--clr-white);
-            font-size: 1.5rem;
+            font-size: rem(15);
             min-height: 100%;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: rem(5);
             text-transform: uppercase;
             text-shadow:
-              0px 0px 1px rgba(0, 0, 0, 0.5),
-              1px 1px 3px rgba(0, 0, 0, 0.5);
+              0 0 rem(1) rgba(0, 0, 0, 0.5),
+              rem(1) rem(1) rem(3) rgba(0, 0, 0, 0.5);
 
             &:hover,
             &:active,
@@ -135,8 +134,8 @@
     }
 
     &-collapse {
-      border-top: 1px solid transparent;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      border-top: rem(1) solid transparent;
+      box-shadow: inset 0 rem(1) 0 rgba(255, 255, 255, 0.1);
       background-color: #f1f1f1;
       padding-left: 0;
       padding-right: 0;
@@ -148,16 +147,12 @@
     }
 
     a {
-      font-size: 1.8rem;
+      font-size: rem(18);
 
       @include breakpoint(menu) {
-        font-size: 1.5rem;
+        font-size: rem(15);
       }
     }
-
-    // @include breakpoint(menu) {
-    //   margin-bottom: 2rem;
-    // }
   }
 }
 
@@ -179,7 +174,7 @@
     right: 0;
     width: 100%;
     margin-top: 0;
-    padding: 2rem;
+    padding: rem(20);
   }
 
   .navbar-expand-lg .navbar-collapse {
@@ -188,29 +183,29 @@
   }
 
   .dropdown-menu {
-    border: 1px solid #fff;
+    border: rem(1) solid #fff;
     top: 100%;
     left: 0;
     z-index: 1000;
     display: none;
     float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    font-size: 14px;
+    min-width: rem(160);
+    padding: rem(5) 0;
+    margin: rem(2) 0 0;
+    font-size: rem(14);
     text-align: left;
     list-style: none;
     background-color: #fff;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    border-radius: rem(4);
+    -webkit-box-shadow: 0 rem(6) rem(12) rgba(0, 0, 0, 0.175);
+    box-shadow: 0 rem(6) rem(12) rgba(0, 0, 0, 0.175);
   }
 
   .dropdown-menu.show:not(.megamenu) li > a {
     display: block;
-    padding: 3px 20px;
+    padding: rem(3) rem(20);
     clear: both;
     font-weight: normal;
     line-height: 1.42857143;
@@ -224,7 +219,7 @@
     }
   }
   .dropdown-menu.show.megamenu {
-    padding: 2rem;
+    padding: rem(20);
   }
 }
 /* ============ desktop view .end// ============ */
@@ -235,7 +230,7 @@
   .navbar.sticky-top .navbar-collapse {
     overflow-y: auto;
     max-height: 90vh;
-    margin-top: 10px;
+    margin-top: rem(10);
   }
 
   .navbar-expand-lg .navbar-nav {
@@ -272,7 +267,7 @@
 
   .dropdown-menu.show li > a {
     display: block;
-    padding: 1rem 2rem;
+    padding: rem(10) rem(20);
   }
 }
 /* ============ mobile view .end// ============ */
@@ -285,16 +280,16 @@
 
 .megamenu {
   padding: 0;
-  border-bottom: 1px solid var(--clr-light-gray-3);
+  border-bottom: rem(1) solid var(--clr-light-gray-3);
 
   h2 {
-    font-size: 1.6rem;
+    font-size: rem(16);
     font-weight: 500;
-    border-bottom: 1px solid var(--clr-light-gray-3);
+    border-bottom: rem(1) solid var(--clr-light-gray-3);
 
     a {
       display: block;
-      padding: 1rem 1.5rem;
+      padding: rem(10) rem(15);
       color: var(--clr-black);
 
       &:hover {
@@ -303,22 +298,22 @@
     }
 
     @include breakpoint(menu) {
-      margin-bottom: 5px;
+      margin-bottom: rem(5);
       font-weight: 700;
-      padding-bottom: 5px;
+      padding-bottom: rem(5);
 
       a {
-        padding: 2px 5px;
+        padding: rem(2) rem(5);
       }
     }
   }
 
   a.nav-title {
-    font-size: 1.6rem;
+    font-size: rem(16);
     font-weight: 500;
-    border-bottom: 1px solid var(--clr-light-gray-3);
+    border-bottom: rem(1) solid var(--clr-light-gray-3);
     display: block;
-    padding: 1rem 1.5rem;
+    padding: rem(10) rem(15);
     color: var(--clr-black);
 
     &:hover {
@@ -326,9 +321,9 @@
     }
 
     @include breakpoint(menu) {
-      margin-bottom: 5px;
+      margin-bottom: rem(5);
       font-weight: 700;
-      padding: 2px 5px;
+      padding: rem(2) rem(5);
     }
   }
 
@@ -337,14 +332,14 @@
     margin-top: 0;
 
     @include breakpoint(menu) {
-      padding-left: 5px;
-      padding-right: 5px;
+      padding-left: rem(5);
+      padding-right: rem(5);
     }
   }
 
   li {
     a {
-      padding: 1rem 2.5rem;
+      padding: rem(10) rem(25);
       display: block;
       transition: all 0.25s ease-in-out;
 
@@ -354,10 +349,10 @@
       }
 
       @include breakpoint(menu) {
-        padding: 2px 5px;
+        padding: rem(2) rem(5);
 
         &:hover {
-          border-radius: 3px;
+          border-radius: rem(3);
           color: var(--clr-black);
           transition: all 0.25s ease-in-out;
         }
@@ -374,7 +369,7 @@
 
     @include breakpoint(menu) {
       display: block;
-      margin-bottom: 1.5rem;
+      margin-bottom: rem(15);
     }
   }
 
@@ -384,9 +379,9 @@
         &:link,
         &:visited {
           display: block;
-          padding: 1rem 1.5rem;
+          padding: rem(10) rem(15);
           color: var(--clr-black);
-          font-size: 1.6rem;
+          font-size: rem(16);
         }
 
         &:hover {
@@ -396,8 +391,8 @@
         @include breakpoint(menu) {
           &:link,
           &:visited {
-            font-size: 1.5rem;
-            padding: 1rem 1.5rem;
+            font-size: rem(15);
+            padding: rem(10) rem(15);
             display: inline-block;
             color: #0054ad;
           }
@@ -412,23 +407,23 @@
         @include breakpoint(menu) {
           &:link,
           &:visited {
-            padding: 2px 5px;
+            padding: rem(2) rem(5);
           }
         }
       }
     }
     @include breakpoint(small) {
-      margin-top: -1rem;
+      margin-top: rem(-1);
     }
   }
 
   &-no-header li a {
     background-color: var(--clr-white);
-    font-size: 1.8rem;
+    font-size: rem(18);
     font-weight: 500;
-    border-bottom: 1px solid var(--clr-light-gray-3);
+    border-bottom: rem(1) solid var(--clr-light-gray-3);
     display: block;
-    padding: 1rem 1.5rem;
+    padding: rem(10) rem(15);
     color: var(--clr-black);
 
     &:hover {
@@ -436,11 +431,10 @@
     }
 
     @include breakpoint(menu) {
-      // margin-bottom: 5px;
       font-weight: 400;
-      padding: 2px 5px;
+      padding: rem(2) rem(5);
       border-bottom: none;
-      font-size: 1.5rem;
+      font-size: rem(15);
       color: #337ab7;
     }
   }
@@ -448,22 +442,21 @@
 
 .view-all {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: rem(15);
 
   a {
     &:link,
     &:visited {
       color: var(--clr-primary);
       font-weight: 700;
-      padding: 1rem;
-      border-bottom: 1px solid currentColor;
+      padding: rem(10);
+      border-bottom: rem(1) solid currentColor;
       transition: all 0.25s ease-in-out;
     }
 
     &:hover,
     &:active {
       text-decoration: none;
-      // opacity: 0.65;
       background-color: var(--clr-primary);
       color: var(--clr-white);
     }

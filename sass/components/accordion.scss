@@ -3,7 +3,7 @@
 .Accordion {
   margin: 0 auto;
   padding: 0;
-  border: 1px solid var(--clr-light-gray-2);
+  border: rem(1) solid var(--clr-light-gray-2);
   width: 100%;
 
   h3 {
@@ -20,17 +20,17 @@
   }
 
   > * + * {
-    border-top: 1px solid var(--clr-light-gray-2);
+    border-top: rem(1) solid var(--clr-light-gray-2);
   }
 
   &-trigger {
     background-color: var(--clr-light-gray);
     color: var(--clr-black);
     display: block;
-    font-size: 1.6rem;
+    font-size: rem(16);
     font-weight: normal;
     margin: 0;
-    padding: 1rem;
+    padding: rem(10);
     position: relative;
     text-align: left;
     width: 100%;
@@ -58,14 +58,14 @@
 
   &-icon {
     border: solid hsl(0, 0%, 62%);
-    border-width: 0 2px 2px 0;
-    height: 8px;
+    border-width: 0 rem(2) rem(2) 0;
+    height: rem(8);
     pointer-events: none;
     position: absolute;
-    right: 3.2rem;
+    right: rem(32);
     top: 50%;
     transform: translateY(-60%) rotate(45deg);
-    width: 8px;
+    width: rem(8);
     transition: all 0.25s ease-in-out;
   }
 
@@ -80,13 +80,13 @@
   &-title {
     display: block;
     pointer-events: none;
-    border: transparent 1px solid;
+    border: transparent rem(1) solid;
     outline: none;
   }
 
   &-panel {
     margin: 0;
-    padding: 1.5rem;
+    padding: rem(15);
 
     /* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
     &[hidden] {
@@ -95,8 +95,8 @@
 
     ul {
       list-style: circle;
-      margin-left: 2rem;
-      padding-bottom: 1.5rem;
+      margin-left: rem(20);
+      padding-bottom: rem(15);
     }
   }
 }

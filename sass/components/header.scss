@@ -5,11 +5,11 @@
     display: block;
     position: relative;
     margin: 0 auto;
-    max-width: 120rem;
+    max-width: rem(1200);
 
     &--logo {
       background: var(--clr-white);
-      padding: 2.5rem 1.5rem;
+      padding: rem(25) rem(15);
       margin: auto;
 
       h1 {
@@ -28,7 +28,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-inline: 3rem;
+      padding-inline: rem(30);
 
       &__ubs--logo {
         margin: 0;
@@ -51,7 +51,7 @@
 }
 
 #cart-count {
-  margin-right: 5px;
+  margin-right: rem(5);
 }
 
 // Mobile Navbar & Toggle
@@ -61,7 +61,7 @@
     align-items: center;
     justify-content: space-around;
     position: relative;
-    padding: 1.5rem;
+    padding: rem(15);
     background-color: var(--clr-primary);
     color: var(--clr-white);
     list-style: none;
@@ -72,18 +72,18 @@
       justify-content: center;
       margin: 0;
       padding: 0;
-      height: 6.5rem;
-      width: 7rem;
+      height: rem(65);
+      width: rem(70);
       text-align: center;
 
       i,
       em {
-        font-size: 3.5rem;
+        font-size: rem(35);
       }
 
       span {
         text-transform: uppercase;
-        font-size: 1.2rem;
+        font-size: rem(12);
         font-weight: 600;
       }
 
@@ -115,7 +115,7 @@
     display: block;
     background: transparent;
     line-height: 1;
-    padding-inline: 1.5rem;
+    padding-inline: rem(15);
     transition: var(--transition);
     border: none;
     color: inherit;
@@ -134,15 +134,15 @@
       background-color: var(--clr-white);
       color: var(--clr-black);
       width: 50%;
-      gap: 2rem;
+      gap: rem(20);
 
       &--item {
         height: auto;
-        gap: 5px;
+        gap: rem(5);
 
         i,
         em {
-          font-size: 2.4rem;
+          font-size: rem(24);
         }
 
         a {
@@ -184,24 +184,24 @@
       display: block;
       gap: 0;
       position: absolute;
-      padding: 3rem 1.5rem;
+      padding: rem(30) rem(15);
       background-color: var(--clr-light-gray);
       left: 0;
       right: 0;
-      top: 9.5rem;
+      top: rem(95);
       width: 100%;
       height: auto;
       z-index: 200;
-      box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+      box-shadow: rem(2) rem(5) rem(10) rgba(0, 0, 0, 0.5);
 
       &--input {
         position: relative;
         width: 100%;
 
         input {
-          height: 5rem;
-          padding-inline: 1.5rem;
-          border: 1px solid var(--clr-light-gray-3);
+          height: rem(50);
+          padding-inline: rem(15);
+          border: rem(1) solid var(--clr-light-gray-3);
           border-bottom-left-radius: 0;
           border-bottom-right-radius: 0;
           border-bottom: none;
@@ -215,9 +215,9 @@
           border-top-left-radius: 0;
           border-top-right-radius: 0;
           justify-content: center;
-          font-size: 2.5rem;
+          font-size: rem(25);
           width: 100%;
-          height: 5rem;
+          height: rem(50);
 
           em {
             font-style: normal;
@@ -229,7 +229,7 @@
 
   @include breakpoint(menu) {
     width: 100%;
-    max-width: 50rem;
+    max-width: rem(500);
 
     #search {
       display: none;
@@ -248,13 +248,13 @@
         input {
           font-size: inherit;
           border: none;
-          border-bottom: 1px solid var(--clr-black);
+          border-bottom: rem(1) solid var(--clr-black);
           border-radius: unset;
           width: 100%;
           display: inline;
           box-shadow: none;
-          padding-left: 1rem;
-          height: 3.5rem;
+          padding-left: rem(10);
+          height: rem(35);
         }
       }
 
@@ -267,7 +267,7 @@
           color: var(--clr-black);
 
           em.fa {
-            font-size: 2.4rem;
+            font-size: rem(24);
           }
 
           &:hover,
@@ -285,17 +285,17 @@
   font-weight: 700;
   background-color: #000;
   color: #fff;
-  padding: 2px 5px;
+  padding: rem(2) rem(5);
 }
 
 .backtotop {
   display: none;
   position: fixed;
   z-index: 9999999999999;
-  bottom: 4rem;
-  right: 4rem;
-  width: 5rem;
-  height: 5rem;
+  bottom: rem(40);
+  right: rem(40);
+  width: rem(50);
+  height: rem(50);
 }
 
 .backtotop a {
@@ -303,10 +303,10 @@
   &:visited {
     display: block;
     opacity: 1;
-    width: 5rem;
-    height: 5rem;
+    width: rem(50);
+    height: rem(50);
     background: color-mix(in srgb, var(--clr-primary), #000 10%);
-    border: 1px solid color-mix(in srgb, var(--clr-primary), #000 12%);
+    border: rem(1) solid color-mix(in srgb, var(--clr-primary), #000 12%);
     border-radius: 0;
     outline: 0;
     position: absolute;
@@ -314,29 +314,29 @@
     opacity: 0.7;
 
     @include breakpoint(medium) {
-      // border-radius: 0;
-      height: 4rem;
-      width: 4rem;
+      height: rem(40);
+      width: rem(40);
     }
   }
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 1px 2px rgba(var(--clr-black), 0.6);
+    transform: translateY(rem(-3));
+    box-shadow: 0 rem(1) rem(2) rgba(var(--clr-black), 0.6);
   }
   &:active {
-    transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(var(--clr-black), 0.8);
+    transform: translateY(rem(-1));
+    box-shadow: 0 rem(2) rem(4) rgba(var(--clr-black), 0.8);
   }
 }
 
 .backtotop em {
   @include absCenter;
   color: var(--clr-white);
-  font-size: 2rem;
+  font-size: rem(20);
 }
 
-@media (min-width: 768px) {
+// @media (min-width: 768px)
+@media (min-width: rem(768)) {
   .dropdown:hover > .dropdown-menu {
     display: none;
   }

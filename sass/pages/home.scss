@@ -2,7 +2,7 @@
 
 .hero__image {
   background-color: var(--clr-white);
-  padding-bottom: 4rem;
+  padding-bottom: rem(40);
 }
 
 .featured {
@@ -10,14 +10,14 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    max-width: 117rem;
-    margin-bottom: 9rem;
-    gap: 2rem;
+    max-width: rem(1170);
+    margin-bottom: rem(90);
+    gap: rem(20);
   }
 
   &__item {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: rem(20);
 
     a {
       display: block;
@@ -33,7 +33,7 @@
     }
 
     p {
-      margin: 2rem 0 0;
+      margin: rem(20) 0 0;
       font-weight: 700;
       text-transform: uppercase;
     }
@@ -42,15 +42,15 @@
 
 .wiscard {
   &__wrapper {
-    margin-bottom: 10rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    margin-bottom: rem(100);
+    padding-left: rem(10);
+    padding-right: rem(10);
   }
 
   &__item {
     &--img {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: rem(30);
     }
 
     &--text {
@@ -60,7 +60,7 @@
       flex-direction: column;
 
       .fine-print {
-        font-size: 1.4rem;
+        font-size: rem(14);
         text-align: center;
         width: 85%;
       }
@@ -69,20 +69,20 @@
 
   &__header {
     color: var(--clr-primary);
-    font-size: 7rem;
+    font-size: rem(70);
     font-weight: 700;
     text-align: center;
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     line-height: 1.25;
-    margin-bottom: 3rem;
+    margin-bottom: rem(30);
 
     span {
       display: block;
-      font-size: 8rem;
+      font-size: rem(80);
 
       &.sub-header {
-        font-size: 3.5rem;
+        font-size: rem(35);
         color: var(--clr-secondary);
       }
     }
@@ -93,12 +93,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 4rem;
+      gap: rem(40);
     }
 
     &__item {
       &--img {
-        flex: 0 0 37.5rem;
+        flex: 0 0 rem(375);
         margin-bottom: 0;
         padding: 0;
       }
@@ -107,19 +107,19 @@
         align-items: flex-start;
 
         .fine-print {
-          font-size: 1.1rem;
+          font-size: rem(11);
           width: 100%;
         }
       }
     }
 
     &__header {
-      font-size: 6rem;
+      font-size: rem(60);
 
       span {
         &.sub-header {
           text-align: center;
-          font-size: 4rem;
+          font-size: rem(40);
         }
       }
     }
@@ -127,7 +127,7 @@
 }
 
 .wrapper {
-  margin-bottom: 3rem;
+  margin-bottom: rem(30);
 }
 
 .giftcard {
@@ -138,26 +138,26 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 3rem 1rem;
-      margin-bottom: 3rem;
+      padding: rem(30) rem(10);
+      margin-bottom: rem(30);
 
       h2 {
         color: var(--clr-primary);
         font-weight: 700;
-        font-size: 7rem;
-        margin-bottom: 2rem;
+        font-size: rem(70);
+        margin-bottom: rem(20);
       }
 
       p {
-        font-size: 2.5rem;
+        font-size: rem(25);
         font-weight: 300;
       }
 
       .btn {
-        border-radius: 1rem;
+        border-radius: rem(10);
         text-transform: uppercase;
-        font-size: 2.5rem;
-        margin-bottom: 3rem;
+        font-size: rem(25);
+        margin-bottom: rem(30);
       }
 
       @include breakpoint(small) {
@@ -188,11 +188,11 @@
   }
 }
 
-.holiday-banner {
-  margin: 0 0 2rem;
-  padding: 1rem;
+.holiday__shipping h2 {
+  margin: 0 0 rem(20);
+  padding: rem(10);
   background: var(--clr-light-gray-2);
-  font-size: 3rem;
+  font-size: rem(30);
   font-weight: 700;
   color: var(--clr-primary);
   text-transform: uppercase;
@@ -200,50 +200,45 @@
   text-align: center;
 }
 
-.holiday-deadline {
+.holiday__shipping-deadlines {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   text-align: center;
 
-  .grid-item {
-    margin-top: 2rem;
-    font-size: 2.5rem;
+  .flex__item {
+    margin-top: rem(20);
+    font-size: rem(25);
     font-weight: 700;
     display: block;
     color: var(--clr-primary);
-    border-bottom: 2px solid var(--clr-black);
+    border-bottom: rem(2) solid var(--clr-black);
     flex: 1 1 100%;
     text-transform: uppercase;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
+    padding-bottom: rem(20);
+    margin-bottom: rem(20);
     font-style: italic;
 
     span {
       font-weight: normal;
-      font-size: 2rem;
+      font-size: rem(20);
       color: var(--clr-black);
       display: block;
-
-      &.numbers {
-        padding-bottom: 0;
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--clr-primary);
-        display: inline;
-      }
     }
 
     &:last-child {
       border-bottom: none;
-      margin-bottom: 3rem;
+      margin-bottom: rem(30);
       padding-bottom: 0;
     }
   }
 
   @include breakpoint(small) {
-    .grid-item {
+    .flex__item {
       flex: 1 1 33.333%;
       border-bottom: none;
-      padding-top: 1rem;
-      border-right: 2px solid var(--clr-black);
+      padding-top: rem(10);
+      border-right: rem(2) solid var(--clr-black);
 
       &:last-child {
         border-right: none;
@@ -251,14 +246,13 @@
       }
 
       span {
-        font-size: 1.6rem;
+        font-size: rem(16);
         font-weight: normal;
-        // padding-bottom: 2rem;
         margin-bottom: 0;
         color: var(--clr-black);
 
         &.numbers {
-          font-size: 3rem;
+          font-size: rem(30);
           font-weight: 700;
           color: var(--clr-primary);
           display: inline;
@@ -270,8 +264,8 @@
 
 .uw-info {
   display: block;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: rem(10);
+  margin-right: rem(10);
 
   @include breakpoint(medium) {
     margin-left: 0;
@@ -282,34 +276,34 @@
 /* TEXTBOOK HOMEPAGE */
 /* ***************** */
 .price-match {
-  padding-top: 2.5rem;
-  margin: 2.5rem auto;
+  padding-top: rem(25);
+  margin: rem(25) auto;
 
   h2 {
-    margin-bottom: 1rem;
+    margin-bottom: rem(10);
     font-weight: 700;
-    font-size: 3rem;
-    border-bottom: 2px solid var(--clr-black);
+    font-size: rem(30);
+    border-bottom: rem(2) solid var(--clr-black);
     line-height: 2;
   }
 
   p {
     font-weight: 600;
-    margin-top: 1rem;
-    font-size: 1.6rem;
+    margin-top: rem(10);
+    font-size: rem(16);
     line-height: 2.5;
 
     &.lg {
-      font-size: 3rem;
+      font-size: rem(30);
       line-height: 1;
       margin: 0;
-      margin-top: 2rem;
+      margin-top: rem(20);
     }
   }
 
   ul {
     list-style: disc outside;
-    margin-left: 3rem;
+    margin-left: rem(30);
   }
 
   @include breakpoint(medium) {
@@ -317,7 +311,7 @@
       padding: 0;
 
       &:first-child {
-        border-right: 2px solid var(--clr-black);
+        border-right: rem(2) solid var(--clr-black);
       }
     }
   }
@@ -327,7 +321,7 @@
   &__grid {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    margin-top: rem(20);
     justify-content: center;
     align-items: center;
 
@@ -344,9 +338,9 @@
 
       .wiscard {
         .header {
-          margin-bottom: 1rem;
+          margin-bottom: rem(10);
           line-height: 1.1;
-          font-size: 2.7rem;
+          font-size: rem(27);
           font-weight: 300;
 
           .discount {
@@ -356,16 +350,16 @@
 
         .subhead {
           color: var(--clr-primary);
-          font-size: 1.5rem;
+          font-size: rem(15);
           font-weight: 300;
         }
 
         img {
-          margin-bottom: 2rem;
+          margin-bottom: rem(20);
         }
 
         .fine-print {
-          font-size: 1.2rem;
+          font-size: rem(12);
         }
       }
     }
@@ -374,27 +368,27 @@
 
 .buy-now-hdr {
   text-align: center;
-  margin: 5rem auto;
+  margin: rem(50) auto;
   color: var(--clr-primary);
 
   h2 {
-    font-size: 4.2rem;
-    margin-bottom: 1.5rem;
+    font-size: rem(42);
+    margin-bottom: rem(15);
     font-weight: 700;
   }
 
   .btn-xlrg {
     text-transform: uppercase;
-    font-size: 3.6rem;
+    font-size: rem(36);
     font-weight: 700;
-    height: 7rem;
-    line-height: 7rem;
+    height: rem(70);
+    line-height: rem(70);
 
     @include breakpoint(medium) {
-      height: 9rem;
-      font-size: 4.8rem;
-      line-height: 9rem;
-      padding: 0px 4rem;
+      height: rem(90);
+      font-size: rem(48);
+      line-height: rem(90);
+      padding: 0 rem(40);
     }
   }
 }
@@ -408,11 +402,11 @@
     &-item {
       flex: 1 1 100%;
       display: flex;
-      margin-bottom: 4rem;
+      margin-bottom: rem(40);
 
       @include breakpoint(medium) {
         flex: 0 0 33.3333%;
-        padding: 0 2rem;
+        padding: 0 rem(20);
       }
     }
 
@@ -421,17 +415,17 @@
       flex: 0 0 20%;
       display: block;
       text-align: center;
-      padding: 0 1rem;
-      font-size: 6rem;
+      padding: 0 rem(10);
+      font-size: rem(60);
 
       @include breakpoint(medium) {
-        font-size: 7.5rem;
+        font-size: rem(75);
       }
     }
 
     .item-text {
       flex: 0 0 80%;
-      padding: 0 1rem;
+      padding: 0 rem(10);
 
       a.btn {
         width: 100%;
@@ -444,7 +438,7 @@
     }
 
     @include breakpoint(medium) {
-      padding: 4rem 0;
+      padding: rem(40) 0;
     }
   }
 }
@@ -455,14 +449,14 @@
   margin: auto;
   text-align: center;
   background-color: transparent;
-  border: 2px solid var(--clr-primary);
+  border: rem(2) solid var(--clr-primary);
   color: var(--clr-primary);
-  padding: 1.5rem;
-  font-size: 2rem;
+  padding: rem(15);
+  font-size: rem(20);
   text-transform: uppercase;
   font-weight: 700;
   transition: all 0.25s ease-in-out;
-  border-radius: 5px;
+  border-radius: rem(5);
 
   &:link,
   &:visited {
@@ -489,148 +483,3 @@
     width: 100%;
   }
 }
-// .featured__items-block {
-//   width: 100%;
-//   background-color: white;
-//   padding: 2rem 1rem;
-// }
-
-// .featured__items-block {
-//   .card {
-//     &.featuredDynamic {
-//       border-radius: 2rem;
-//       max-width: 115rem;
-//     }
-
-//     &-header {
-//       border-radius: 2rem 2rem 0 0;
-//       text-align: center;
-//       font-weight: 700;
-//       color: var(--clr-black);
-//       font-size: 2rem;
-//     }
-//   }
-// }
-
-// .featuredWrap {
-//   border: none;
-// }
-
-// .grid__banner {
-//   justify-content: center;
-//   margin-left: -1rem;
-//   margin-right: -1rem;
-//   margin-top: 2rem;
-
-//   .grid__item-33 {
-//     padding: 0 1rem;
-
-//     @supports (display: flex) {
-//       display: flex;
-//       align-items: flex-start;
-
-//       &:not(:first-child) {
-//         margin-top: 2rem;
-//       }
-
-//       @include breakpoint(small) {
-//         &:not(:first-child) {
-//           margin-top: 0;
-//         }
-
-//         &:last-child {
-//           margin-top: 2rem;
-//         }
-//       }
-
-//       @include breakpoint(medium) {
-//         &:last-child {
-//           margin-top: 0;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// .egiftCard {
-//   width: 100%;
-//   position: relative;
-//   border: 1px solid #000;
-
-//   &__header,
-//   &__footer {
-//     height: 50%;
-//     text-align: center;
-
-//     @include breakpoint(medium) {
-//       text-align: right;
-//     }
-//   }
-
-//   &__header {
-//     background-color: #000;
-//     color: #fff;
-//     font-weight: 700;
-//     font-size: 3.5rem;
-//     padding-right: 1rem;
-//   }
-
-//   &__footer {
-//     position: relative;
-//   }
-
-//   a.btn-rounded {
-//     &:link,
-//     &:visited {
-//       position: absolute;
-//       right: 50%;
-//       top: 50%;
-//       transform: translate(50%, -50%);
-//       background-color: color-mix(in srgb, var(--clr-light-gray-3), #000 10%);
-//       color: var(--clr-black);
-//       font-size: 3rem;
-//       text-align: center;
-//       display: inline-block;
-//       border-radius: 10rem;
-//       font-weight: bold;
-//       padding: 3px 2rem;
-//       width: 90%;
-//     }
-
-//     &:hover {
-//       text-decoration: none;
-//     }
-
-//     @include breakpoint(medium) {
-//       &:link,
-//       &:visited {
-//         right: 1rem;
-//         transform: translate(0, -50%);
-//         font-size: 1.8rem;
-//         width: auto;
-//       }
-//     }
-//   }
-
-//   &__link {
-//     display: none;
-
-//     @include breakpoint(medium) {
-//       display: block;
-//       position: absolute;
-//       top: 50%;
-//       transform: translateY(-50%);
-//       left: 1rem;
-//       z-index: 100;
-//     }
-//   }
-
-//   @include breakpoint(small) {
-//     margin-left: 2rem;
-//   }
-
-//   @include breakpoint(medium) {
-//     margin-left: 1rem;
-//     margin-right: 1rem;
-//   }
-// }

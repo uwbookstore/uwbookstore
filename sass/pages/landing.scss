@@ -1,15 +1,15 @@
 @use '../util' as *;
 
 .clearance {
-  height: 20rem;
-  width: 20rem;
+  height: rem(200);
+  width: rem(200);
   margin: auto;
   vertical-align: middle;
 }
 
 .fa.clearance {
   &__icon {
-    font-size: 18.5rem;
+    font-size: rem(185);
     color: var(--clr-primary);
   }
 }
@@ -20,7 +20,7 @@
 
     @include breakpoint(small) {
       width: 75%;
-      margin: 1rem auto;
+      margin: rem(10) auto;
     }
   }
 }

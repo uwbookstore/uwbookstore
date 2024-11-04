@@ -2,7 +2,7 @@
 
 #shipping-banner {
   text-align: center;
-  padding: 0 1.5rem;
+  padding: 0 rem(15);
 
   & > * {
     font-weight: 700;
@@ -19,20 +19,20 @@
   .sale-banner {
     background-color: #326cec;
     color: var(--clr-white);
-    font-size: 3rem;
+    font-size: rem(30);
     line-height: 1.5;
-    padding: 1rem;
+    padding: rem(10);
 
     @include breakpoint(medium) {
-      font-size: 4rem;
+      font-size: rem(40);
     }
   }
 
   .lg-text {
-    font-size: 1.8rem;
+    font-size: rem(18);
 
     @include breakpoint(medium) {
-      font-size: 2rem;
+      font-size: rem(20);
     }
   }
 
@@ -41,27 +41,27 @@
     display: inline-block;
     color: var(--clr-white);
     text-transform: uppercase;
-    font-size: 3rem;
-    padding: 0 1.5rem;
-    margin-bottom: 2rem;
+    font-size: rem(30);
+    padding: 0 rem(15);
+    margin-bottom: rem(20);
     transition: all 0.2s ease;
-    box-shadow: 0 0.5rem 0.5rem rgba(77, 77, 77, 0.6);
+    box-shadow: 0 rem(5) rem(5) rgba(77, 77, 77, 0.6);
 
     &:hover {
       text-decoration: none;
-      -webkit-transform: translateY(-3px);
-      transform: translateY(-3px);
-      box-shadow: 0 1rem 2rem rgba(77, 77, 77, 0.4);
+      -webkit-transform: translateY(rem(-3));
+      transform: translateY(rem(-3));
+      box-shadow: 0 rem(10) rem(20) rgba(77, 77, 77, 0.4);
       transition: all 0.2s ease;
     }
 
     @include breakpoint(medium) {
-      font-size: 4rem;
+      font-size: rem(40);
     }
   }
 
   .small-disclaimer {
-    font-size: 1.2rem;
+    font-size: rem(12);
   }
 
   p {
@@ -70,10 +70,10 @@
 }
 
 .coupon {
-  margin: 3rem auto;
-  padding: 1rem;
+  margin: rem(30) auto;
+  padding: rem(10);
   text-align: center;
-  border: 5px dashed #333;
+  border: rem(5) dashed #333;
   width: 100%;
   font-family: Helvetica, Arial, sans-serif;
 
@@ -91,12 +91,12 @@
     width: 100%;
     background-color: #333;
     color: var(--clr-white);
-    padding: 5px;
+    padding: rem(5);
     text-transform: uppercase;
-    font-size: 2.5rem;
+    font-size: rem(25);
 
     h3 {
-      font-size: 7rem;
+      font-size: rem(70);
       text-align: center;
       line-height: 100%;
     }
@@ -107,15 +107,15 @@
     }
 
     @include breakpoint(medium) {
-      padding: 5px 1.5rem;
+      padding: rem(5) rem(15);
 
       h3 {
-        font-size: 13.5rem;
-        letter-spacing: 2px;
+        font-size: rem(135);
+        letter-spacing: rem(2);
       }
 
       p {
-        font-size: 4rem;
+        font-size: rem(40);
       }
     }
   }
@@ -125,9 +125,9 @@
     justify-content: center;
     align-items: center;
     background-color: #333;
-    padding: 5px;
-    height: 6rem;
-    width: 22.5rem;
+    padding: rem(5);
+    height: rem(60);
+    width: rem(225);
     margin: auto;
 
     &-text,
@@ -144,25 +144,25 @@
       text-align: center;
       background-color: #fff;
       color: #333;
-      font-size: 2.5rem;
+      font-size: rem(25);
       text-transform: uppercase;
     }
 
     &-id {
       color: white;
-      font-size: 4.5rem;
+      font-size: rem(45);
     }
   }
 
   &__stores {
     font-weight: 700;
-    margin-top: 2rem;
-    font-size: 2rem;
+    margin-top: rem(20);
+    font-size: rem(20);
   }
 
   &__footer {
-    margin-top: 2rem;
-    font-size: 1.2rem;
+    margin-top: rem(20);
+    font-size: rem(12);
     text-align: center;
     position: relative;
 
@@ -173,10 +173,10 @@
 
   @include breakpoint(medium) {
     display: grid;
-    grid-template-columns: 14rem 1fr 14rem;
+    grid-template-columns: rem(140) 1fr rem(140);
     grid-template-rows: auto;
     gap: 0;
-    width: 100rem;
+    width: rem(1000);
 
     &__images {
       display: flex;
@@ -186,7 +186,7 @@
     }
 
     &__body {
-      padding-inline: 1.5rem;
+      padding-inline: rem(15);
     }
   }
 }
@@ -201,8 +201,8 @@
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
-  max-width: 117rem;
-  padding: 75% 4rem 2rem;
+  max-width: rem(1170);
+  padding: 75% rem(40) rem(20);
 
   &__body {
     text-align: center;
@@ -213,15 +213,15 @@
     }
 
     h1 {
-      margin-left: 1.5rem;
-      margin-bottom: 3rem;
+      margin-left: rem(15);
+      margin-bottom: rem(30);
     }
 
     ol {
       list-style-type: none;
 
       li {
-        margin-bottom: 3rem;
+        margin-bottom: rem(30);
       }
     }
   }
@@ -232,26 +232,26 @@
 
   @include breakpoint(medium) {
     padding-top: 65%;
-    min-height: 121rem;
+    min-height: rem(1210);
 
     h1 {
       margin-left: 0;
-      font-size: 5rem;
+      font-size: rem(50);
     }
 
     ol {
-      font-size: 3rem;
+      font-size: rem(30);
     }
   }
 }
 
 .validation-summary-errors:not(:empty) {
   --bs-alert-bg: transparent;
-  --bs-alert-padding-x: 1rem;
-  --bs-alert-padding-y: 1rem;
-  --bs-alert-margin-bottom: 1rem;
-  --bs-alert-border: 1px solid var(--bs-alert-border-color);
-  --bs-alert-border-radius: 0.375rem;
+  --bs-alert-padding-x: rem(10);
+  --bs-alert-padding-y: rem(10);
+  --bs-alert-margin-bottom: rem(10);
+  --bs-alert-border: rem(1) solid var(--bs-alert-border-color);
+  --bs-alert-border-radius: rem(0.0375);
   position: relative;
   padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
   margin-bottom: var(--bs-alert-margin-bottom);
@@ -259,7 +259,7 @@
   background-color: var(--bs-alert-bg);
   border: var(--bs-alert-border);
   border-radius: var(--bs-alert-border-radius);
-  padding-left: 5.5rem;
+  padding-left: rem(55);
   --bs-alert-color: #842029;
   --bs-alert-bg: #f8d7da;
   --bs-alert-border-color: #f5c2c7;
@@ -268,9 +268,9 @@
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     content: '\f071';
-    font-size: 2rem;
+    font-size: rem(20);
     position: absolute;
-    left: 2rem;
+    left: rem(20);
     top: 50%;
     transform: translateY(-50%);
   }
@@ -287,25 +287,24 @@
 
 .page {
   margin: auto;
-  // max-width: 90rem;
   &-header {
     text-align: center;
   }
 
   h3 {
     color: var(--clr-primary);
-    font-size: 3rem;
+    font-size: rem(30);
   }
 
   p {
-    font-size: 2rem;
+    font-size: rem(20);
   }
 
   &-body {
     &-box {
-      border: 5px solid var(--clr-primary);
-      margin-bottom: 3rem;
-      padding: 1rem;
+      border: rem(5) solid var(--clr-primary);
+      margin-bottom: rem(30);
+      padding: rem(10);
       text-align: center;
 
       h3 {
@@ -315,21 +314,21 @@
     }
 
     .row {
-      margin-bottom: 3rem;
+      margin-bottom: rem(30);
       .col-sm-4 {
         &:first-child {
           text-align: center;
-          padding: 1.5rem;
+          padding: rem(15);
 
           div {
-            border-top: 3px solid var(--clr-black);
-            border-bottom: 3px solid var(--clr-black);
+            border-top: rem(3) solid var(--clr-black);
+            border-bottom: rem(3) solid var(--clr-black);
             color: var(--clr-primary);
             font-weight: 700;
           }
         }
         &:not(:last-child) {
-          margin-bottom: 4rem;
+          margin-bottom: rem(40);
         }
       }
 
@@ -341,8 +340,8 @@
             justify-content: flex-start;
             div {
               width: 80%;
-              padding: 2rem;
-              font-size: 2.5rem;
+              padding: rem(20);
+              font-size: rem(25);
             }
           }
         }
@@ -357,12 +356,12 @@
       text-align: left;
     }
     p {
-      font-size: 2.4rem;
+      font-size: rem(24);
       font-weight: 700;
 
       &.small {
-        margin-top: 1rem;
-        font-size: 1.3rem;
+        margin-top: rem(10);
+        font-size: rem(13);
       }
     }
 
@@ -370,10 +369,10 @@
       &.bordered {
         display: block;
         color: var(--clr-black);
-        font-size: 2.4rem;
+        font-size: rem(24);
         font-weight: 700;
-        border: 1px solid var(--clr-primary);
-        padding: 1.5rem;
+        border: rem(1) solid var(--clr-primary);
+        padding: rem(15);
 
         &:hover {
           text-decoration: none;
@@ -383,21 +382,21 @@
   }
 
   .text-stroke {
-    font-size: 3rem;
-    letter-spacing: 1.5px;
+    font-size: rem(30);
+    letter-spacing: rem(1.5);
     color: var(--clr-white);
     text-shadow:
-      -1px -1px 0 var(--clr-primary),
-      1px -1px 0 var(--clr-primary),
-      -1px 1px 0 var(--clr-primary),
-      1px 1px 0 var(--clr-primary);
+      rem(-1) rem(-1) 0 var(--clr-primary),
+      rem(1) rem(-1) 0 var(--clr-primary),
+      rem(-1) rem(1) 0 var(--clr-primary),
+      rem(1) rem(1) 0 var(--clr-primary);
   }
 }
 
 .code-img {
   background-color: var(--clr-black);
-  max-width: 23.3rem;
-  padding: 1rem;
+  max-width: rem(233);
+  padding: rem(10);
   margin: auto;
 
   @include breakpoint(medium) {
@@ -409,8 +408,8 @@
 // Bag On Break
 .bag-on-break {
   font-family: 'Pompiere', sans-serif;
-  border: 1px solid var(--clr-primary);
-  margin-bottom: 2rem;
+  border: rem(1) solid var(--clr-primary);
+  margin-bottom: rem(20);
 
   &__header {
     display: block;
@@ -419,13 +418,13 @@
   h2,
   h3 {
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 3rem;
+    letter-spacing: rem(2);
+    margin-bottom: rem(30);
   }
 
   h2 {
-    margin-top: 1rem;
-    font-size: 6rem;
+    margin-top: rem(10);
+    font-size: rem(60);
     font-weight: 700;
     span {
       color: var(--clr-primary);
@@ -435,21 +434,21 @@
 
   h3 {
     color: var(--clr-primary);
-    font-size: 4rem;
+    font-size: rem(40);
     font-weight: 700;
     text-align: center;
   }
 
   &__body {
-    padding: 0 4rem;
+    padding: 0 rem(40);
 
     ol {
       font-weight: 600;
-      font-size: 3rem;
-      margin-bottom: 4rem;
+      font-size: rem(30);
+      margin-bottom: rem(40);
 
       li {
-        margin-bottom: 2rem;
+        margin-bottom: rem(20);
 
         span {
           color: var(--clr-primary);
@@ -463,29 +462,29 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
-    margin-bottom: 3rem;
+    gap: rem(30);
+    margin-bottom: rem(30);
   }
 
   &__rules {
     text-align: center;
     font-weight: 700;
-    font-size: 1.8rem;
-    letter-spacing: 1.5px;
+    font-size: rem(18);
+    letter-spacing: rem(1.5);
   }
 
   @include breakpoint(xsmall) {
     h2 {
-      font-size: 9rem;
+      font-size: rem(90);
     }
 
     h3 {
-      font-size: 7rem;
+      font-size: rem(70);
     }
 
     &__body {
       ol {
-        font-size: 5rem;
+        font-size: rem(50);
       }
     }
 
@@ -496,7 +495,7 @@
     }
 
     &__rules {
-      font-size: 3rem;
+      font-size: rem(30);
     }
   }
 

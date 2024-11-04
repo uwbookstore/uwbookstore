@@ -1,15 +1,17 @@
+@use '../util' as *;
+
 .tech-block {
   // margin-top: -2rem;
 }
 
 .tech-block,
 .graphite {
-  padding: 0 0 3rem 0;
+  padding: 0 0 rem(30) 0;
 }
 
 .tech-signup,
 .graphite {
-  padding: 6rem 0;
+  padding: rem(60) 0;
 }
 
 .tech-block {
@@ -20,20 +22,20 @@
   );
 
   .col-md-3 {
-    box-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.3);
-    padding: 2rem;
+    box-shadow: rem(1) rem(1) rem(10) rgba(0, 0, 0, 0.3);
+    padding: rem(20);
     background-color: var(--clr-off-white);
   }
 
   .col-md-9 {
-    padding: 0 0 0 1.5rem;
+    padding: 0 0 0 rem(15);
   }
 }
 
 .graphite {
   .mainP {
     font-weight: 700;
-    font-size: 2.4rem;
-    margin-top: 2rem;
+    font-size: rem(24);
+    margin-top: rem(20);
   }
 }

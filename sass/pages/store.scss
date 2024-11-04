@@ -9,8 +9,8 @@
 
   li {
     flex: 0 0 50%;
-    padding: 0 0.5rem;
-    margin-bottom: 1.5rem;
+    padding: 0 rem(5);
+    margin-bottom: rem(15);
 
     @include breakpoint(medium) {
       flex: 0 0 auto;
@@ -38,7 +38,7 @@
 
   a {
     flex: 0 0 50%;
-    margin-bottom: 2.5rem;
+    margin-bottom: rem(25);
 
     @include breakpoint(medium) {
       flex: 1;
@@ -48,14 +48,14 @@
 
 .store {
   ul {
-    margin-left: 3rem;
+    margin-left: rem(30);
   }
 }
 
 .header {
   &__video {
     height: 70vh;
-    margin-bottom: 2rem;
+    margin-bottom: rem(20);
     overflow: hidden;
     position: relative;
     background-color: lightgray;
@@ -69,7 +69,7 @@
       font-weight: bold;
       background-color: rgba(255, 255, 255, 0.75);
       color: #333;
-      padding: 4rem;
+      padding: rem(40);
     }
 
     p {
@@ -77,8 +77,8 @@
       font-weight: bold;
       background-color: rgba(255, 255, 255, 0.75);
       color: #333;
-      padding: 0 0 1.5rem;
-      margin-top: -2.5rem;
+      padding: 0 0 rem(15);
+      margin-top: rem(-25);
     }
 
     video,
@@ -94,7 +94,6 @@
     height: auto;
     left: 0;
     right: 0;
-    /* padding: 3rem 0; */
   }
 
   @include breakpoint(medium) {
@@ -111,13 +110,13 @@
       button.playpause {
         display: block;
         position: absolute;
-        bottom: 1rem;
-        right: 2rem;
+        bottom: rem(10);
+        right: rem(20);
         z-index: 100;
         border: 0;
         color: rgba(255, 255, 255, 0.5);
         background: rgba(0, 0, 0, 0.5);
-        padding: 5px 1rem;
+        padding: rem(5) rem(10);
       }
     }
   }
@@ -135,4 +134,25 @@
   @include breakpoint(xsmall) {
     display: none;
   }
+}
+
+section.welcome {
+  padding: rem(50) rem(15);
+}
+
+section.welcome:first-of-type {
+  padding-top: rem(10);
+}
+
+section.welcome [class^='col-'] {
+  padding: 0 rem(20);
+}
+
+section.welcome ul {
+  padding-left: rem(30);
+}
+
+.apple-acs {
+  width: rem(275);
+  height: rem(29);
 }

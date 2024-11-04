@@ -1,6 +1,8 @@
+@use '../util' as *;
+
 /*
-        * ST Signup Forms styles
-        */
+ * ST Signup Forms styles
+ */
 /* Fonts and helpers */
 .st-title {
   font-size: 1.25em;
@@ -47,7 +49,7 @@
 /* Sign-Up form */
 .st-signupform {
   max-width: 392px;
-  margin: 4rem auto;
+  margin: rem(40) auto;
   border-radius: 4px;
   box-sizing: border-box;
   padding: 24px;
@@ -97,7 +99,6 @@
   color: #f44336;
   font-size: 32px;
   text-align: right;
-  /*background: white;*/
   position: absolute;
   right: 9px;
   top: 25px;
@@ -105,24 +106,10 @@
   height: 20px;
 }
 
-// .st-signupform input[type="text"],
-// .st-signupform input[type="date"],
-// textarea {
-//     margin-bottom: 2rem;
-// }
-
-// .st-signupform input[type="text"]:focus,
-// textarea:focus {
-//     border-color: #2399f1;
-//     box-shadow: 0 0 4px rgba(35, 153, 241, 0.5);
-//     -webkit-transition: 0.3s all;
-//     transition: 0.3s all;
-// }
-
 .st-signupform input[type='submit'],
 .st-signupform button[type='submit'] {
   display: block;
-  margin: 2rem auto 0;
+  margin: rem(20) auto 0;
 }
 
 .st-signupform input.st-signupform-validation-error,
@@ -132,13 +119,6 @@ textarea.st-signupform-validation-error:focus {
   border-color: #f44336;
 }
 
-// .st-signupform textarea {
-//     padding-right: 24px;
-//     resize: vertical;
-//     min-height: 80px;
-//     max-height: 200px;
-// }
-
 .step2-confirmationText {
-  font-size: 2rem;
+  font-size: rem(20);
 }

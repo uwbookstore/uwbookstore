@@ -513,3 +513,27 @@
     }
   }
 }
+
+// Special Signing Events
+.heading__title {
+  position: relative;
+  padding-bottom: rem(32);
+  margin-bottom: rem(32);
+  color: var(--clr-primary);
+  text-align: left;
+  font-family: var(--ff-serif);
+  font-weight: bold;
+  font-style: italic;
+  font-size: rem(42);
+  line-height: rem(52);
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: rem(8);
+    width: calc(3.778rem);
+    background-color: var(--clr-primary);
+  }
+}

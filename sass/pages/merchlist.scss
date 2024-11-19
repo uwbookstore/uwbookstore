@@ -317,7 +317,7 @@ p.merchPrice.red {
     img {
       max-width: rem(150);
       display: block;
-      margin: rem(10) auto 2rem;
+      margin: rem(10) auto rem(20);
     }
 
     h2 {
@@ -365,11 +365,11 @@ p.merchPrice.red {
 }
 
 .merchItem {
-  margin-bottom: 3.5rem;
+  margin-bottom: rem(35);
 }
 
 .merchItem.col-xs-12 {
-  margin: 2rem auto;
+  margin: rem(20) auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -391,30 +391,30 @@ p.merchPrice.red {
 
   .merchInfo.col-sm-10.col-xs-12 {
     flex: 1 100%;
-    font-size: 1.6rem;
+    font-size: rem(16);
 
     @include breakpoint(medium) {
       flex: 1 40%;
-      padding-left: 2rem;
+      padding-left: rem(20);
     }
 
     .merchTitle {
-      margin: 1.5rem auto;
-      font-size: 2.4rem;
+      margin: rem(15) auto;
+      font-size: rem(24);
       font-style: italic;
       font-weight: 700;
       color: var(--clr-primary);
 
       @include breakpoint(medium) {
-        font-size: 2rem;
+        font-size: rem(20);
       }
     }
 
     .merchDesc {
-      margin: 1.5rem auto;
-      padding: 1rem 0 2rem;
-      border-top: 1px solid #4d4d4d;
-      border-bottom: 1px solid #4d4d4d;
+      margin: rem(15) auto;
+      padding: rem(10) 0 rem(20);
+      border-top: rem(1) solid #4d4d4d;
+      border-bottom: rem(1) solid #4d4d4d;
       position: relative;
       line-height: 1.6;
     }
@@ -422,7 +422,7 @@ p.merchPrice.red {
 
   p.merchItem,
   p.merchPrice {
-    margin-bottom: 1rem;
+    margin-bottom: rem(10);
   }
 
   p.merchPrice {
@@ -436,20 +436,20 @@ p.merchPrice.red {
 
   .lcsSizeWrapper,
   .lcsLogoWrapper {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--clr-black);
+    padding-bottom: rem(10);
+    border-bottom: rem(1) solid var(--clr-black);
   }
 
   .lcsSizeWrapper {
-    margin-bottom: 1rem;
+    margin-bottom: rem(10);
   }
 
   .lcsLogoWrapper {
-    margin-bottom: 2rem;
+    margin-bottom: rem(20);
   }
 
   .addToCartButton {
-    margin-bottom: 2rem;
+    margin-bottom: rem(20);
   }
 
   .addToCartTypes {
@@ -459,36 +459,36 @@ p.merchPrice.red {
 
 .img-empty {
   background-color: var(--clr-light-gray);
-  border: 1px solid var(--clr-light-gray-3);
+  border: rem(1) solid var(--clr-light-gray-3);
   width: 100%;
-  height: 20rem;
-  max-width: 60rem;
+  height: rem(200);
+  max-width: rem(600);
   color: var(--clr-black);
   position: relative;
 
   @include breakpoint(medium) {
-    height: 60rem;
+    height: rem(600);
   }
 
   p {
     @include absCenter;
-    font-size: 4.5rem;
+    font-size: rem(45);
     text-align: center;
 
     @include breakpoint(medium) {
-      font-size: 10rem;
+      font-size: rem(100);
     }
   }
 }
 
 .empty-results {
-  margin: 2rem 0;
+  margin: rem(20) 0;
 
   h1 {
     color: var(--clr-primary);
     font-weight: 700;
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    font-size: rem(30);
+    margin-bottom: rem(15);
   }
 }
 
@@ -499,7 +499,7 @@ p.merchPrice.red {
 }
 
 .breadcrumb li a.small {
-  font-size: 1.2rem;
+  font-size: rem(12);
 }
 
 li.attribute {
@@ -517,11 +517,11 @@ li.attribute {
 .newBadge {
   // position: absolute;
   // color: var(--clr-white);
-  top: -2rem;
-  left: -2rem;
+  top: rem(-20);
+  left: rem(-20);
   font-weight: 700;
-  padding: 0.5rem 1rem;
-  font-size: 1.4rem;
+  padding: rem(5) rem(10);
+  font-size: rem(14);
   text-transform: uppercase;
   // z-index: 20;
 
@@ -539,12 +539,12 @@ li.attribute {
 // }
 
 .pagination__box {
-  border: 1px solid var(--clr-light-gray);
+  border: rem(1) solid var(--clr-light-gray);
   background-color: var(--clr-white);
-  padding: 0 2rem 2rem;
+  padding: 0 rem(20) rem(20);
   z-index: 5000;
   position: fixed;
-  bottom: 2rem;
+  bottom: rem(20);
   left: 50%;
   transform: translateX(-50%);
   width: 95%;
@@ -552,19 +552,19 @@ li.attribute {
 
   @include breakpoint(medium) {
     width: auto;
-    left: 2rem;
+    left: rem(20);
     transform: translateX(0);
   }
 }
 
 .pagination > li > a,
 .pagination > li > span {
-  font-size: 2.5rem;
-  padding: 2rem;
+  font-size: rem(25);
+  padding: rem(20);
 
   @include breakpoint(medium) {
-    font-size: 1.8rem;
-    padding: 4px 8px;
+    font-size: rem(18);
+    padding: rem(4) rem(8);
   }
 }
 
@@ -583,25 +583,25 @@ li.attribute {
 .card.previousDynamic .card-header,
 .card.featuredDynamic .card-header,
 .card.checkoutDynamic .card-header {
-  font-size: 2.5rem;
-  margin: 0 0 2.5rem;
+  font-size: rem(25);
+  margin: 0 0 rem(25);
   width: 100%;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--clr-black);
+  padding-bottom: rem(10);
+  border-bottom: rem(1) solid var(--clr-black);
   display: block;
   text-align: center;
 
   span {
     display: inline-block;
     background-color: var(--clr-white);
-    padding: 1rem;
+    padding: rem(10);
     background-color: inherit;
   }
 
   @supports (display: grid) {
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
-    grid-column-gap: 1rem;
+    grid-column-gap: rem(10);
     align-items: center;
     border-bottom: none;
     padding-bottom: 0;
@@ -616,7 +616,7 @@ li.attribute {
     &::before,
     &::after {
       content: '';
-      height: 1px;
+      height: rem(1);
       display: block;
       // background-color: var(--clr-light-gray-2);
       background-color: currentColor;
@@ -627,8 +627,8 @@ li.attribute {
 .card.previousDynamic,
 .card.featuredDynamic,
 .card.checkoutDynamic {
-  max-width: 117rem;
-  margin: 2rem auto 0;
+  max-width: rem(1170);
+  margin: rem(20) auto 0;
   border: none;
 }
 
@@ -642,7 +642,7 @@ li.attribute {
   left: 0;
 
   @include breakpoint(medium) {
-    left: 2rem;
+    left: rem(20);
   }
 }
 
@@ -650,6 +650,6 @@ li.attribute {
   right: 0;
 
   @include breakpoint(medium) {
-    right: 2rem;
+    right: rem(20);
   }
 }

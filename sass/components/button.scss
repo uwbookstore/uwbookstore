@@ -399,3 +399,31 @@
     color: var(--clr-white);
   }
 }
+
+.menu.btn-xlrg {
+  height: auto;
+  font-size: rem(36) !important;
+  padding: rem(10) rem(40);
+}
+
+.bubble-link {
+  text-align: center;
+  display: block;
+  padding: rem(50);
+  border: rem(1) solid rgba(0, 0, 0, 0.3);
+  border-radius: rem(10);
+  font-weight: 700;
+  font-size: rem(18);
+  box-shadow: 0 rem(2) rem(5) rgba(0, 0, 0, 0.3);
+  margin-bottom: rem(20);
+}
+
+.img__border-radius {
+  border-radius: rem(25);
+}
+
+.button-header {
+  padding: rem(75) 0 rem(100);
+  border-bottom: rem(1) solid lightgray;
+  margin-bottom: rem(100);
+}

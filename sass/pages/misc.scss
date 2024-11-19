@@ -525,7 +525,7 @@
     font-family: var(--ff-serif);
     font-weight: bold;
     font-style: italic;
-    font-size: rem(42);
+    font-size: rem(38);
     line-height: rem(52);
 
     &::after {
@@ -536,6 +536,10 @@
       height: rem(8);
       width: calc(3.778rem);
       background-color: var(--clr-primary);
+    }
+
+    @include breakpoint(small) {
+      font-size: rem(42);
     }
   }
 
@@ -550,7 +554,8 @@
   padding: 0;
 
   figcaption {
-    font-weight: 500;
+    font-weight: bold;
+    letter-spacing: rem(1);
     font-kerning: normal;
   }
 
@@ -585,6 +590,12 @@
 
   &__info--main {
     order: 1;
+
+    img {
+      margin: rem(20) auto;
+      max-width: 50%;
+      display: block;
+    }
   }
 
   &__info--sidebar {
@@ -605,6 +616,11 @@
 
     &__info--main {
       order: 0;
+
+      img {
+        max-width: 35%;
+        display: initial;
+      }
     }
 
     &__info--sidebar {
@@ -623,7 +639,7 @@ div.subHeader {
   margin-bottom: rem(8);
   font-size: rem(14);
   line-height: rem(16);
-  text-transform: uppercase;
+  text-transform: capitalize;
   border-bottom: rem(2) solid rgb(204, 204, 204);
 
   &:first-child {

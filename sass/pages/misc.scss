@@ -515,25 +515,132 @@
 }
 
 // Special Signing Events
-.heading__title {
-  position: relative;
-  padding-bottom: rem(32);
-  margin-bottom: rem(32);
-  color: var(--clr-primary);
-  text-align: left;
-  font-family: var(--ff-serif);
-  font-weight: bold;
-  font-style: italic;
-  font-size: rem(42);
-  line-height: rem(52);
+.heading {
+  &__title {
+    position: relative;
+    padding: rem(5) rem(10) rem(32);
+    margin-bottom: rem(32);
+    color: var(--clr-primary);
+    text-align: left;
+    font-family: var(--ff-serif);
+    font-weight: bold;
+    font-style: italic;
+    font-size: rem(42);
+    line-height: rem(52);
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: rem(8);
-    width: calc(3.778rem);
-    background-color: var(--clr-primary);
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: rem(10);
+      height: rem(8);
+      width: calc(3.778rem);
+      background-color: var(--clr-primary);
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: rem(20);
+    font-size: rem(20);
+  }
+}
+
+.schedule {
+  margin: 0 0 rem(24);
+  padding: 0;
+
+  figcaption {
+    font-weight: 500;
+    font-kerning: normal;
+  }
+
+  table {
+    margin: 0 0 rem(24);
+    border-collapse: collapse;
+    font-size: rem(16);
+    line-height: rem(24);
+    padding: 0;
+    width: 100%;
+
+    td {
+      padding-left: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      padding: rem(11) rem(15);
+      text-align: left;
+    }
+
+    @include breakpoint(small) {
+      max-width: rem(650);
+    }
+  }
+}
+
+.event {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: rem(40) rem(10);
+    gap: rem(10);
+  }
+
+  &__info--main {
+    order: 1;
+  }
+
+  &__info--sidebar {
+    order: 0;
+    min-width: rem(300);
+    width: 100%;
+    padding: 0 0 rem(32);
+    margin: 0 auto rem(32);
+    border-bottom: rem(18) solid rgb(243, 243, 243);
+  }
+
+  @include breakpoint(small) {
+    &__wrapper {
+      flex-direction: row;
+      gap: rem(40);
+      padding-top: 0;
+    }
+
+    &__info--main {
+      order: 0;
+    }
+
+    &__info--sidebar {
+      order: 1;
+      max-width: rem(252);
+      border-bottom: none;
+    }
+  }
+}
+
+div.subHeader {
+  position: relative;
+  font-weight: 800;
+  margin-top: rem(32);
+  padding-bottom: rem(10);
+  margin-bottom: rem(8);
+  font-size: rem(14);
+  line-height: rem(16);
+  text-transform: uppercase;
+  border-bottom: rem(2) solid rgb(204, 204, 204);
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @include breakpoint(small) {
+    border-bottom: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: rem(-2);
+      left: 0;
+      width: rem(34);
+      height: rem(4);
+      background-color: rgb(204, 204, 204);
+    }
   }
 }

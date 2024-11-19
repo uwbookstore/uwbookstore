@@ -1,7 +1,9 @@
 @use '../util' as *;
 
 .tech-block {
-  // margin-top: -2rem;
+  .apple-acs {
+    width: rem(275);
+  }
 }
 
 .tech-block,

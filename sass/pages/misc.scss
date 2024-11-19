@@ -514,6 +514,11 @@
   }
 }
 
+.margin-block-negative {
+  margin-top: rem(-20);
+  margin-bottom: rem(-20);
+}
+
 // Special Signing Events
 .heading {
   &__title {
@@ -525,7 +530,7 @@
     font-family: var(--ff-serif);
     font-weight: bold;
     font-style: italic;
-    font-size: rem(38);
+    font-size: rem(24);
     line-height: rem(52);
 
     &::after {
@@ -534,12 +539,16 @@
       bottom: 0;
       left: rem(10);
       height: rem(8);
-      width: calc(3.778rem);
+      width: calc(rem(60));
       background-color: var(--clr-primary);
     }
 
     @include breakpoint(small) {
-      font-size: rem(42);
+      padding: rem(5) 0 rem(16);
+
+      &::after {
+        left: 0;
+      }
     }
   }
 
@@ -584,7 +593,7 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    padding: rem(40) rem(10);
+    padding: 0 rem(10) rem(40);
     gap: rem(10);
   }
 
@@ -611,15 +620,13 @@
     &__wrapper {
       flex-direction: row;
       gap: rem(40);
-      padding-top: 0;
     }
 
     &__info--main {
       order: 0;
 
       img {
-        max-width: 35%;
-        display: initial;
+        width: 100%;
       }
     }
 
@@ -658,5 +665,13 @@ div.subHeader {
       height: rem(4);
       background-color: rgb(204, 204, 204);
     }
+  }
+}
+
+@include breakpoint(medium) {
+  .grid__event {
+    display: grid;
+    grid-template-columns: 1fr rem(550);
+    align-items: center;
   }
 }

@@ -523,7 +523,7 @@
 .heading {
   &__title {
     position: relative;
-    padding: rem(5) rem(10) rem(32);
+    padding: 0 rem(10) rem(32);
     margin-bottom: rem(32);
     color: var(--clr-primary);
     text-align: left;
@@ -544,7 +544,8 @@
     }
 
     @include breakpoint(small) {
-      padding: rem(5) 0 rem(16);
+      padding-inline: 0;
+      padding-bottom: rem(16);
 
       &::after {
         left: 0;

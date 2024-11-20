@@ -55,3 +55,11 @@ select.form-control {
   padding-top: rem(25);
   padding-bottom: rem(10);
 }
+
+#mc_embed_signup {
+  input.birthday {
+    width: rem(50);
+    display: inline-block;
+    padding-inline: rem(4);
+  }
+}

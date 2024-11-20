@@ -391,6 +391,11 @@
       rem(-1) rem(1) 0 var(--clr-primary),
       rem(1) rem(1) 0 var(--clr-primary);
   }
+
+  &__wrapper {
+    max-width: rem(1170);
+    margin: auto;
+  }
 }
 
 .code-img {
@@ -553,6 +558,19 @@
     }
   }
 
+  &__sans {
+    position: relative;
+    padding: 0 rem(10) rem(16);
+    margin-bottom: rem(16);
+    color: var(--clr-primary);
+    text-align: left;
+    font-family: var(--ff-serif);
+    font-weight: bold;
+    font-style: italic;
+    font-size: rem(24);
+    line-height: rem(40);
+  }
+
   &__subtitle {
     margin-bottom: rem(20);
     font-size: rem(20);
@@ -675,4 +693,19 @@ div.subHeader {
     grid-template-columns: 1fr rem(550);
     align-items: center;
   }
+}
+
+// Shortstack
+.bg-gray {
+  background-color: var(--clr-light-gray-3);
+}
+
+.sst-iframe {
+  border: none;
+  min-width: 100%;
+  height: rem(2106);
+}
+
+.border-lt-gray {
+  border: rem(1) solid var(--clr-light-gray-2);
 }

@@ -60,3 +60,15 @@
 .bootstrapv5-hide {
   display: none;
 }
+
+.no-border {
+  border: none;
+}
+
+.img-round-border {
+  display: block;
+  border: rem(5) solid var(--clr-light-gray-2);
+  border-radius: 100%;
+  height: rem(150);
+  width: rem(150);
+}

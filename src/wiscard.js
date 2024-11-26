@@ -1,6 +1,6 @@
 // Auto apply promocode when Wiscard option is selected
 // Optional: auto remove promo code if Wiscard is deselected and applied promo code is Wiscard promo code
-const uwWiscardPromo = 'WISCARD3';
+const uwWiscardPromo = 'WISCARD4';
 
 // We need to hook into ajaxComplete function since payment section is not present on page load
 $(document).on('ajaxComplete', function (event, xhr, settings) {

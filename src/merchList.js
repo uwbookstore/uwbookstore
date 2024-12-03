@@ -427,14 +427,14 @@ $(document).ready(function () {
   //     $('<div class="merch__card-restock hide">Restock!</div>').prependTo("div.merchItem");
   // }
 
-  // productName.each(function () {
-  //   const name = $(this).text();
-  //   if (name.includes('^')) {
-  //     $('<div class="merch__card-restock">Back in Stock!</div>').prependTo(
-  //       $(this).parent().parent().parent()
-  //     );
-  //   }
-  // });
+  productName.each(function () {
+    const name = $(this).text();
+    if (name.includes('^')) {
+      $('<div class="merch__card-restock">Back in Stock!</div>').prependTo(
+        $(this).parent().parent().parent()
+      );
+    }
+  });
 
   // if ($("span.gc-promo").length > 0) {
   //     console.log('Eligible MacBook')

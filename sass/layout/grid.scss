@@ -1,4 +1,7 @@
-.grid {
+@use '../util' as *;
+
+.grid,
+.flex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -7,4 +10,24 @@
 
 .row {
   margin: 0;
+}
+
+.css-grid {
+  display: grid;
+  width: 100%;
+  max-width: rem(1550);
+  margin: 0 auto;
+
+  @include breakpoint(small) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(30);
+  }
+
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include breakpoint(large) {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }

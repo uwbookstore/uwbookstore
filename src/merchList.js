@@ -134,7 +134,7 @@ $(document).ready(function () {
     ).appendTo('#merch__filter');
     $('select.merchSortBy').removeClass('wauto bottom10').appendTo('#sort-by');
 
-    $('.merchColumn').addClass('grid merch__card').appendTo('#merch__card');
+    $('.merchColumn').addClass('flex merch__card').appendTo('#merch__card');
     $('.merchRank').hide();
 
     $('.logoOption').removeClass('btn-default').addClass('btn-primary');
@@ -219,7 +219,7 @@ $(document).ready(function () {
     if (pageItems.length === 1) {
       $('ul.pagination, select.merchResultsSelect').hide();
     }
-    $('.merchColumn').addClass('grid merch__card').appendTo('#merch__card');
+    $('.merchColumn').addClass('flex merch__card').appendTo('#merch__card');
     // $(
     //     '<div class="text-center"><a href="' +
     //         baseUrl +

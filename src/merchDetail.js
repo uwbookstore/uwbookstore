@@ -2,7 +2,7 @@ $(document).ready(function () {
   $('#contentSection ul.breadcrumb, a.pageHelp, h1.page_header').hide();
 
   $(
-    '<div id="merch-main" class="merch"><div class="grid merch__detail"><div id="merch-imgs" class="merch__detail-images"></div><div id="merch-info" class="merch__detail-info"></div></div></div>'
+    '<div id="merch-main" class="merch"><div class="flex merch__detail"><div id="merch-imgs" class="merch__detail-images"></div><div id="merch-info" class="merch__detail-info"></div></div></div>'
   ).prependTo('div#ContainDiv');
 
   const prodName = $('h2.merchTitle').text();
@@ -300,7 +300,7 @@ $(document).ready(function () {
   if (sizes.length > 0) {
     const sizeArray = sizes.html();
     $(
-      '<div id="sizes" class="merch__detail-size"><div class="grid merch__detail-size-picker">' +
+      '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker">' +
         sizeArray +
         '</div></div>'
     ).appendTo('div#merch-info');
@@ -316,19 +316,19 @@ $(document).ready(function () {
 
     if (singleItem === 'xxx-large') {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="grid merch__detail-size-picker"><span class="btn btn-default typeSelected">3XL</span></div></div>'
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">3XL</span></div></div>'
       ).appendTo('div#merch-info');
     } else if (singleItem === 'newborn 3 month') {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="grid merch__detail-size-picker"><span class="btn btn-default typeSelected">NB/3M</span></div></div>'
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">NB/3M</span></div></div>'
       ).appendTo('div#merch-info');
     } else if (singleItem === 'large/x-large') {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="grid merch__detail-size-picker"><span class="btn btn-default typeSelected">L/XL</span></div></div>'
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">L/XL</span></div></div>'
       ).appendTo('div#merch-info');
     } else {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="grid merch__detail-size-picker"><span class="btn btn-default typeSelected">' +
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">' +
           singleItem +
           '</span></div></div>'
       ).appendTo('div#merch-info');
@@ -340,7 +340,7 @@ $(document).ready(function () {
   } else if (logos.length > 0) {
     const logoArray = logos.html();
     $(
-      '<div id="sizes" class="merch__detail-size"><div class="grid merch__detail-size-picker">' +
+      '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker">' +
         logoArray +
         '</div></div>'
     ).appendTo('div#merch-info');
@@ -351,7 +351,7 @@ $(document).ready(function () {
     const colorArray = colors.html();
     const colorTitle = $('.merchColorTitle').text().toLowerCase();
     $(
-      '<div id="colors" class="merch__detail-color"><div class="grid merch__detail-color-picker">' +
+      '<div id="colors" class="merch__detail-color"><div class="flex merch__detail-color-picker">' +
         colorArray +
         '</div></div>'
     ).appendTo('div#merch-info');
@@ -384,14 +384,14 @@ $(document).ready(function () {
     //   'div#sizes'
     // );
     $('select.merchDropdown').appendTo('div#sizes').addClass('form-control');
-    $('<div class="grid merch__detail-size-picker"></div>').appendTo(
+    $('<div class="flex merch__detail-size-picker"></div>').appendTo(
       'div#sizes'
     );
 
     // $.each(select, function (i) {
     //   $(
     //     '<div id="size_' + i + '" data-name="' + $(this).text() + '"></div>'
-    //   ).appendTo('.grid.merch__detail-size-picker');
+    //   ).appendTo('.flex.merch__detail-size-picker');
 
     //   $('<input type="radio" id="size-option_' + i + '" name="r">')
     //     .attr('value', $(this).val())
@@ -667,7 +667,7 @@ $(document).ready(function () {
 
   // Append Quantity & Add to Cart button
   const qty = $('input#merchQTY');
-  $('<div class="grid merch__detail-add"></div>').appendTo('div#merch-info');
+  $('<div class="flex merch__detail-add"></div>').appendTo('div#merch-info');
   $(
     '<div class="merch__detail-qty"><label for="merchQTY">Quantity: </label></div>'
   ).appendTo('.merch__detail-add');
@@ -872,7 +872,7 @@ $(document).ready(function () {
 
   if ($('.merchSuggested').length) {
     $(
-      '<h2 class="heading__line-center"><span>Other Suggested Items</span></h2><div id="suggested-grid" class="grid merch__card"></div>'
+      '<h2 class="heading__line-center"><span>Other Suggested Items</span></h2><div id="suggested-grid" class="flex merch__card"></div>'
     ).insertBefore('#tabs-header');
     $('.suggestedItem ').each(function (i) {
       $(this)

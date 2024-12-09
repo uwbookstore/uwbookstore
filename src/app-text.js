@@ -333,7 +333,7 @@ $(document).ready(function () {
   $('.panel.panel-info.Dynamic_Items')
     .addClass('container')
     .appendTo('.featured__items-block');
-  $('.panel.panel-info.Dynamic_Items .panel-body').addClass('merch__card grid');
+  $('.panel.panel-info.Dynamic_Items .panel-body').addClass('merch__card flex');
   $('div.One_Dynamic')
     .removeClass(
       'col-lg-2 col-md-2 col-sm-3 col-xs-6 textc dynamicMerchSix dynamicMerchTwo dynamicMerchFour'
@@ -401,10 +401,10 @@ $(document).ready(function () {
     '#login_Password'
   );
 
-  $('<div class="grid form__actions"></div>').appendTo('#loginPanel');
+  $('<div class="flex form__actions"></div>').appendTo('#loginPanel');
   $('input.loginSubmit')
     .removeClass('bottom10')
-    .appendTo('.grid.form__actions');
+    .appendTo('.flex.form__actions');
 
   $(
     '<div class="alert alert-danger">If checking out as a guest, please enter an email address (for transactional emails), and click "Login" to continue.</div>'
@@ -415,7 +415,7 @@ $(document).ready(function () {
   // }
   $('a.forgotPasswordLink')
     .attr('class', 'forgotPasswordLink btn btn-text')
-    .appendTo('.grid.form__actions');
+    .appendTo('.flex.form__actions');
   $(
     '<div class="alert alert-default"><p>Don\'t have a University Book Store account?</p></div>'
   ).appendTo('#loginPanel');

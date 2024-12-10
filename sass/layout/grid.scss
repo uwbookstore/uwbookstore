@@ -1,6 +1,5 @@
 @use '../util' as *;
 
-.grid,
 .flex {
   display: flex;
   flex-direction: row;
@@ -12,7 +11,7 @@
   margin: 0;
 }
 
-.css-grid {
+.grid {
   display: grid;
   width: 100%;
   max-width: rem(1550);

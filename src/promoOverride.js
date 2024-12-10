@@ -21,6 +21,9 @@ Discount will not reflect until related items are added to your cart and/or afte
         <p>Get free AirPods 3rd-Gen with Lightning case or $169 off AirPods 3rd-Gen with MagSafe or AirPods Pro 2nd-Gen or AirPods Max with eligible Mac purchase.
 Valid for UW student, staff, faculty and UW Health personal purchases, NOT for department purchases. Qualified purchasers may only receive one promo with Mac purchase.
 Discount will not reflect until related items are added to your cart and/or after shipping/delivery method is chosen during checkout.</p>`;
+      } else if (promoTxt === 'Buy 1 Get 1 Free') {
+        x.innerHTML = `<strong>Buy 1 Get 1 Free</strong>
+        <p>Promotional Discount will be applied at the end of the checkout process.</p>`;
       }
     });
   }

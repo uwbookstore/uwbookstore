@@ -21,7 +21,7 @@ $(document).ready(function () {
             <p>Please make sure to include your dorm or apartment, and room number in your address. You may edit your <a href="https://secure2.mbsbooks.com/AddressBook?s=www.uwbookstore.com">address here</a>.</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -109,7 +109,7 @@ $(document).ready(function () {
   //         '<p class="alert alert-warning" role="alert"><em class="fa fa-exclamation-triangle"></em> Incomplete orders will not be shipped until the week of January 18<sup>th</sup> to avoid multiple shipments.</p>',
   //         "</div>",
   //         '<div class="modal-footer">',
-  //         '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>',
+  //         '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>',
   //         "</div>",
   //         "</div>",
   //         "</div>",

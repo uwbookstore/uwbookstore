@@ -449,12 +449,12 @@ $(document).ready(function () {
     .attr('class', 'forgotPasswordLink btn btn-text')
     .appendTo('.flex.form__actions');
   $(
-    '<div class="alert alert-default"><p>Don\'t have a University Book Store account?</p></div>'
+    '<div class="alert alert-light text-center"><p>Don\'t have a University Book Store account?</p></div>'
   ).appendTo('#loginPanel');
   $('a.registerHereLink')
     .removeClass('bottom10')
     .addClass('btn btn-text')
-    .appendTo('.alert.alert-default');
+    .appendTo('.alert.alert-light text-center');
   $('a.registerHereLink').attr(
     'href',
     'https://secure2.mbsbooks.com//CustomerRegister?s=www.uwbookstore.com&ReturnUrl=customeraccount'

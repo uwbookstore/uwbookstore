@@ -1,74 +1,33 @@
 @use '../util' as *;
 
 .btn {
-  border: rem(2) solid transparent;
-  transition: all 0.2s ease-in-out;
-  padding: 0 rem(15);
-  height: rem(50);
-  line-height: rem(50);
+  --bs-btn-border-width: #{rem(2)};
+  --bs-btn-font-size: var(--fs-default);
+  --bs-btn-font-weight: 400;
+  --bs-btn-border-radius: #{rem(4)};
   text-decoration: none;
-  font-size: var(--fs-default);
 
   &-primary {
-    background-color: var(--clr-primary);
-    border-color: var(--clr-primary);
-    color: var(--clr-white);
-    &:link,
-    &:visited {
-    }
-
-    &:hover {
-      background-color: color-mix(in srgb, var(--clr-primary), #000 20%);
-      border-color: color-mix(in srgb, var(--clr-primary), #000 25%);
-      color: var(--clr-white);
-    }
-
-    &:first-child:active,
-    &:active,
-    &:active:hover,
-    &:focus,
-    &:active:focus {
-      background-color: color-mix(in srgb, var(--clr-primary), #000 10%);
-      border-color: color-mix(in srgb, var(--clr-primary), #000 12%);
-      color: var(--clr-white);
-    }
-
-    &-outline {
-      background-color: transparent;
-      border-color: var(--clr-primary);
-      color: var(--clr-primary);
-
-      &:hover,
-      &:active,
-      &:active:hover,
-      &:focus,
-      &:active:focus {
-        background-color: var(--clr-primary);
-        color: var(--clr-white);
-      }
-    }
+    --bs-btn-bg: #c5050c;
+    --bs-btn-border-color: #c5050c;
+    --bs-btn-hover-bg: #9e040a;
+    --bs-btn-hover-border-color: #940409;
+    --bs-btn-active-bg: #b1050b;
+    --bs-btn-active-border-color: #ad040b;
+    --bs-btn-disabled-bg: #bb050b;
+    --bs-btn-disabled-border-color: #c1050c;
   }
 
-  &-success {
-    border-color: var(--clr-success);
-    background-color: var(--clr-success);
-    color: var(--clr-white);
-
-    &:link,
-    &:visited {
-      color: var(--clr-white);
-    }
-
-    &:hover,
-    &:active,
-    &:active:hover,
-    &:focus,
-    &:active:focus,
-    &-inverted {
-      background-color: color-mix(in srgb, var(--clr-success), #000 16%);
-      border-color: color-mix(in srgb, var(--clr-success), #000 20%);
-      color: var(--clr-white);
-    }
+  &-outline-primary {
+    --bs-btn-color: #c5050c;
+    --bs-btn-border-color: #c5050c;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #c5050c;
+    --bs-btn-hover-border-color: #c5050c;
+    --bs-btn-active-bg: #c5050c;
+    --bs-btn-active-border-color: #ad040b;
+    --bs-btn-disabled-color: #c1050c;
+    --bs-btn-disabled-bg: transparent;
   }
 
   &-special {
@@ -93,30 +52,8 @@
     }
   }
 
-  &-default {
-    border-color: var(--clr-secondary);
-    color: var(--clr-secondary);
-    opacity: 1;
-
-    &:hover,
-    &:active,
-    &:active:hover,
-    &:focus,
-    &:active:focus,
-    &-inverted {
-      border-color: var(--clr-secondary);
-      color: var(--clr-secondary);
-      // opacity: 0.8;
-    }
-
-    &.colorOption {
-      //
-    }
-  }
-
   &-disabled {
     cursor: not-allowed;
-    //pointer-events: none;
     background-color: var(--clr-disabled);
     border: rem(1) solid var(--clr-secondary);
     box-shadow: none;
@@ -134,25 +71,6 @@
     }
   }
 
-  &-secondary {
-    background-color: transparent;
-    border-color: var(--clr-secondary);
-    color: var(--clr-secondary);
-
-    &:link,
-    &:visited {
-      color: var(--clr-secondary);
-    }
-
-    &:hover,
-    &:active,
-    &:active:focus {
-      color: var(--clr-white);
-      border-color: var(--clr-primary);
-      background-color: var(--clr-primary);
-    }
-  }
-
   &-link {
     &:link,
     &:visited {
@@ -161,12 +79,13 @@
       margin-bottom: rem(15);
       transition: all 0.2s ease-in-out;
       text-transform: capitalize;
+      text-decoration: none;
     }
 
     &:hover,
     &:active {
       color: var(--clr-primary);
-      text-decoration: underline;
+      text-decoration: underline !important;
       box-shadow: none;
       transform: none;
     }
@@ -187,9 +106,7 @@
   }
 
   @include breakpoint(medium) {
-    border-width: rem(1);
-    height: rem(35);
-    line-height: rem(35);
+    // --bs-btn-border-width: #{rem(1)};
   }
 
   &-rnd {

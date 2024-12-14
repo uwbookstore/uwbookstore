@@ -710,12 +710,6 @@ div.subHeader {
   border: rem(1) solid var(--clr-light-gray-2);
 }
 
-// Faculty Sale
-:root {
-  --clr-gradient-end: #7a1314;
-  --clr-gradient-start: #bb2026;
-}
-
 .sale {
   padding-top: rem(10);
   background: var(--clr-gradient-start);

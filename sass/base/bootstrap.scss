@@ -41,18 +41,7 @@ select.form-control {
     }
   }
 
-  &-warning {
-    background-color: var(--clr-warning);
-    color: var(--clr-black);
-
-    em {
-      color: var(--clr-warning-em);
-      font-weight: 700;
-    }
-  }
-
-  &-default {
-    text-align: center;
+  &-light {
     background-color: var(--clr-light-gray);
     border-color: color-mix(in srgb, var(--clr-light-gray), #000 10%);
   }

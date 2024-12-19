@@ -23,10 +23,10 @@ p.merchDiscount {
   display: none;
 }
 
-span.btn-default,
-button.btn-default.typeCodeOption {
+span.btn-outline-secondary,
+button.btn-outline-secondary.typeCodeOption {
   width: 47%;
-  margin: 0 rem(5) rem(30);
+  margin: 0 0 rem(30);
 
   &:hover,
   &.typeSelected {
@@ -47,6 +47,7 @@ button.btn-default.typeCodeOption {
 
   @include breakpoint(medium) {
     width: rem(60);
+    // border-width: rem(1);
 
     &.btn-w-auto {
       width: auto;
@@ -55,7 +56,7 @@ button.btn-default.typeCodeOption {
   }
 }
 
-span.btn-default.typeSelected {
+span.btn-outline-secondary.typeSelected {
   &:hover {
     cursor: default;
   }
@@ -294,6 +295,7 @@ span.btn-default.typeSelected {
 
         @include breakpoint(medium) {
           justify-content: initial;
+          gap: rem(10);
         }
       }
     }
@@ -609,13 +611,6 @@ p.sale-info {
     width: auto;
   }
 }
-
-// .merch__detail-color-picker {
-//   .btn.typeCodeOption {
-//     width: auto;
-//     padding-inline: rem(10);
-//   }
-// }
 
 .merch__detail-color-label {
   text-transform: capitalize;

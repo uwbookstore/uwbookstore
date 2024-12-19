@@ -93,7 +93,7 @@ input[class^='radio'] {
 // MBS script editor
 #hScript,
 #fScript {
-  font-family: Monaco, monospace;
+  font-family: var(--ff-mono);
   font-size: rem(14);
   width: 100%;
 }

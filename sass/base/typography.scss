@@ -1,16 +1,13 @@
 @use '../util' as *;
 
 html {
-  /* This defines what 1rem is. */
-  // font-size: 62.5%; // 1rem = 10px
   font-style: normal;
   font-weight: normal;
 }
 
 body {
   font-size: var(--fs-default-mobile);
-  // font-family: 'Verlag A', 'Verlag B', Helvetica, Arial, sans-serif;
-  font-family: 'Red Hat Text', Helvetica, Arial, sans-serif;
+  font-family: var(--ff-sans);
   font-weight: 400;
 
   @include breakpoint(medium) {
@@ -405,12 +402,6 @@ ol.alpha {
 
 .bold {
   font-weight: 700;
-}
-
-.dancing-script {
-  color: var(--clr-primary);
-  font-family: 'Dancing Script';
-  text-align: center;
 }
 
 // BOOTSTRAP PADDING/MARGIN UTILITIES

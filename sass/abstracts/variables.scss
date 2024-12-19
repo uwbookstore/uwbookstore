@@ -10,11 +10,11 @@
   --clr-primary: #c5050c;
   --clr-secondary: #777777;
   --clr-tertiary: #6e6e6e;
-  --clr-success: #5cb85c;
+  --clr-success: #198754;
   --clr-alt-link: #0054ad;
   --clr-warning: #fff3d9;
-  --clr-warning-em: #ffae00;
-  --clr-danger: #a94442;
+  --clr-warning-em: #ffc107;
+  --clr-danger: ##dc3545;
   --clr-danger-bg: #f2dede;
   --clr-alert: #ec5840;
   --clr-light-gray: #f1f1f1;
@@ -39,9 +39,10 @@
   --clr-gradient-start: #971c20;
 
   // Font-family
-  --ff-sans: 'Montserrat', 'Red Hat Text', Helvetica, Arial, sans-serif;
-  --ff-mono: 'Source Code Pro', monospace;
-  --ff-serif: 'Merriweather', Cambria, Cochin, Georgia, serif;
+  --ff-sans: 'Red Hat Text', Helvetica, Arial, sans-serif;
+  --ff-sans-display: 'Red Hat Display', Helvetica, Arial, sans-serif;
+  --ff-mono: 'Red Hat Mono', Monaco, monospace;
+  --ff-serif: 'Libre Baskerville', Cambria, Cochin, Georgia, serif;
 
   // Font-sizes
   --fs-4xlarge: #{rem(61.04)};

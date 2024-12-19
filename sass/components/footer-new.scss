@@ -45,16 +45,22 @@
   &-submit {
     display: block;
     margin: 0 auto;
-    color: var(--clr-white);
+    color: var(--clr-primary);
     font-weight: 700;
     font-size: rem(16);
     padding: rem(5);
-    background-image: none;
     border-radius: 0;
     box-shadow: none;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: var(--clr-white);
     border: 2px solid var(--clr-white);
     width: 100%;
+    transition: var(--transition);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: var(--clr-white);
+      border: 2px solid var(--clr-white);
+    }
 
     @include breakpoint(small) {
       max-width: rem(200);
@@ -111,10 +117,6 @@
         flex-basis: 50%;
         max-width: 50%;
         padding-bottom: rem(20);
-
-        &:last-child {
-          align-self: center;
-        }
       }
 
       @include breakpoint(medium) {
@@ -142,40 +144,85 @@
 
     a,
     a:link {
+      position: relative;
       color: var(--clr-light-gray-3);
       display: inline-block;
       font-size: rem(18);
       font-weight: 400;
       line-height: inherit;
       text-decoration: none;
+      letter-spacing: rem(1);
 
       em.fa {
         margin-left: rem(10);
       }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        border-bottom: rem(1) solid var(--clr-primary);
+        width: 0;
+        transition: var(--transition);
+      }
+
+      &::before {
+        right: 50%;
+      }
+
+      &::after {
+        left: 50%;
+      }
+
+      &:hover::before,
+      &:hover::after {
+        width: 50%;
+      }
+
+      &:hover {
+        color: var(--clr-white);
+      }
     }
 
     a[href^='tel:'] {
-      color: var(--clr-white);
+      color: var(--clr-light-gray-3);
+      margin: rem(10) auto;
+      max-width: rem(300);
+      font-weight: 700;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: var(--clr-light-gray-3);
+        text-decoration: none;
+      }
+
+      @include breakpoint(small) {
+        font-weight: normal;
+      }
 
       @include breakpoint(medium) {
-        text-align: left;
         margin: 0;
+        text-align: left;
+      }
+
+      &::before,
+      &::after {
+        border: none;
+      }
+
+      &:hover::before,
+      &:hover::after {
+        width: 0;
       }
     }
 
     address {
+      color: var(--clr-light-gray-3);
+      font-size: rem(18);
+      line-height: rem(36);
       margin-bottom: 0;
-    }
-
-    .shop-local {
-      width: rem(100);
-      height: rem(100);
-      margin-top: rem(10);
-
-      @include breakpoint(medium) {
-        width: rem(140);
-        height: rem(140);
-      }
     }
   }
 
@@ -183,7 +230,7 @@
     padding: rem(20) 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: rem(15);
 
@@ -198,10 +245,11 @@
       }
     }
 
-    @include breakpoint(medium) {
-      margin-top: rem(40);
+    @include breakpoint(small) {
+      margin-top: rem(15);
       flex-direction: row;
       gap: rem(100);
+      justify-content: center;
 
       .apple-acs {
         width: rem(275);
@@ -209,9 +257,29 @@
         margin: 0;
       }
     }
+
+    .shop-local {
+      width: rem(100);
+      height: auto;
+      margin: 0;
+    }
+
+    &-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+
+      @include breakpoint(small) {
+        gap: rem(10);
+        line-height: 1.5;
+      }
+    }
   }
 
   &-copyright {
+    font-size: var(--fs-small);
     background-color: rgba(19, 19, 19, 0.5);
     background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png),
       linear-gradient(
@@ -226,6 +294,10 @@
     a {
       color: var(--clr-light-gray-3);
     }
+
+    @include breakpoint(small) {
+      font-size: var(--fs-reg);
+    }
   }
 }
 
@@ -235,23 +307,20 @@
   padding: 0;
   display: flex;
   justify-content: center;
+  margin-bottom: rem(8);
+  gap: rem(8);
   width: 100%;
 
   @include breakpoint(medium) {
     width: auto;
+    margin-bottom: 0;
   }
 
   li {
     display: inline-block;
-    margin: 0 rem(4) rem(10);
     color: var(--clr-light-gray-3);
     font-size: 1em;
-    // line-height: rem(36);
     padding: 0;
-
-    @include breakpoint(medium) {
-      margin: 0 rem(10);
-    }
   }
 
   a {

@@ -1,0 +1,381 @@
+@use '../util' as *;
+
+#BottomSection {
+  margin-bottom: 0;
+}
+
+.footer {
+  display: block;
+  margin-top: rem(20);
+  padding: 0 0 rem(25);
+  background-color: var(--clr-light-gray);
+  color: var(--clr-black);
+
+  svg {
+    fill: var(--clr-black);
+  }
+
+  dt {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: rem(25);
+    border-bottom: rem(1) solid;
+    text-align: center;
+    padding-bottom: rem(5);
+    margin-bottom: rem(5);
+
+    @include breakpoint(medium) {
+      text-align: left;
+      font-size: rem(16);
+    }
+  }
+
+  dd {
+    a {
+      color: var(--clr-black);
+      line-height: 2.5;
+      height: rem(50);
+      display: block;
+      text-decoration: none;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        color: var(--clr-primary);
+        text-decoration: underline;
+        transition: all 0.25s ease-in-out;
+      }
+
+      @include breakpoint(medium) {
+        height: auto;
+        line-height: 2;
+      }
+    }
+  }
+
+  address {
+    margin-bottom: 0;
+    a {
+      font-size: 1em;
+      font-weight: 700;
+      background: #29943d;
+      border-radius: 0;
+      color: var(--clr-white);
+      display: block;
+      line-height: 1.5;
+      padding: rem(10) rem(15);
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+      margin: rem(10) auto;
+
+      &:hover {
+        text-decoration: none;
+        color: var(--clr-white);
+      }
+
+      &:before {
+        font-family: 'FontAwesome';
+        content: '\f095';
+        padding: 0 rem(5) 0 0;
+      }
+
+      @include breakpoint(small) {
+        cursor: text;
+        line-height: 1.5;
+        background-color: transparent;
+        color: var(--clr-black);
+        font-weight: normal;
+        padding: 0;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+
+        &:before {
+          content: '';
+          padding: 0;
+        }
+
+        &:hover {
+          color: var(--clr-black);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .footer-row-2 {
+    margin: rem(20) 0;
+  }
+
+  .social-footer {
+    font-size: rem(24);
+    text-align: center;
+    margin-bottom: rem(30);
+
+    .local-business {
+      height: rem(150);
+      width: rem(150);
+      margin-top: rem(20);
+    }
+
+    a {
+      display: inline-block;
+      height: rem(32);
+      width: rem(32);
+      opacity: 1;
+      transition: all 0.25s ease-in-out;
+
+      &.facebook,
+      &.twitter,
+      &.instagram,
+      &.tiktok {
+        background-image: url('https://i.univbkstr.com/v3/css/img/social_sprite.png');
+      }
+
+      &.facebook {
+        background-position: 0 rem(32);
+      }
+
+      &.twitter {
+        background-position: rem(96) rem(32);
+      }
+
+      &.instagram {
+        background-position: rem(64) rem(32);
+      }
+
+      &.tiktok {
+        background-position: rem(32) rem(32);
+      }
+
+      &:link,
+      &:visited {
+        margin-right: rem(10);
+        transition: all 0.25s ease-in-out;
+      }
+
+      &:hover,
+      &:focus {
+        transform: translateY(-2px);
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @include breakpoint(medium) {
+      text-align: left;
+      font-size: rem(18);
+      margin-bottom: 0;
+    }
+  }
+
+  .payment-options {
+    text-align: center;
+    color: var(--clr-black);
+
+    span {
+      margin-bottom: rem(5);
+      display: block;
+    }
+
+    em {
+      &.fa-cc-visa {
+        color: #182168;
+      }
+
+      &.fa-cc-mastercard {
+        color: #5b6770;
+      }
+
+      &.fa-cc-discover {
+        color: #c35a00;
+      }
+
+      &.fa-cc-amex {
+        color: #0078a9;
+      }
+    }
+
+    @include breakpoint(medium) {
+      text-align: right;
+
+      span {
+        display: inline;
+        margin-bottom: 0;
+        margin-right: rem(5);
+      }
+    }
+  }
+
+  .copyright {
+    margin: rem(10) 0 0;
+    font-size: var(--fs-default);
+
+    a,
+    a:hover,
+    a:visited {
+      text-decoration: underline;
+      color: var(--clr-white);
+      display: inline-block;
+      margin: rem(15) auto;
+    }
+
+    @include breakpoint(small) {
+      font-size: rem(12);
+
+      a,
+      a:hover,
+      a:visited {
+        margin: rem(5) auto;
+      }
+    }
+  }
+
+  a,
+  a:hover,
+  a:visited {
+    color: var(--clr-black);
+  }
+
+  em.fa.fa-envelope-o {
+    margin-left: rem(10);
+  }
+
+  a.privacy {
+    color: var(--clr-black);
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      color: var(--clr-primary);
+      transition: all 0.25s ease-in-out;
+    }
+
+    &:visited {
+      color: rebeccapurple;
+    }
+  }
+}
+
+.center-link {
+  font-size: rem(20);
+  display: block;
+  margin: rem(10) auto;
+  text-align: center;
+
+  @include breakpoint(medium) {
+    display: inline;
+    font-size: rem(15);
+    margin: 0;
+    text-align: left;
+  }
+}
+
+.mail-list {
+  background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png),
+    linear-gradient(to top, rgba(202, 202, 202, 0.5), rgba(202, 202, 202, 0.8));
+  border-top: rem(1) solid color-mix(in srgb, var(--clr-light-gray-3), #000 10%);
+  padding: rem(30);
+  margin-bottom: rem(35);
+
+  h2 {
+    color: var(--clr-black);
+    margin-bottom: rem(15);
+    font-size: rem(18);
+    font-weight: 700;
+  }
+
+  .form-inline {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  .form-inline .form-control {
+    margin-bottom: 0;
+    width: 100%;
+    border: rem(2) solid color-mix(in srgb, var(--clr-black), #fff 30%);
+    border-bottom: none;
+    border-radius: rem(4) rem(4) 0 0;
+
+    @include breakpoint(medium) {
+      display: inline-block;
+      vertical-align: middle;
+      width: rem(250);
+      border-right: none;
+      border-bottom: rem(2) solid color-mix(in srgb, var(--clr-black), #fff 30%);
+      border-radius: rem(4) 0 0 rem(4);
+    }
+  }
+
+  .email-submit {
+    &.btn.btn-primary {
+      width: 100%;
+      border-radius: rem(4);
+      border: rem(2) solid color-mix(in srgb, var(--clr-black), #fff 30%);
+      color: var(--clr-white);
+      font-weight: 700;
+
+      @include breakpoint(medium) {
+        width: auto;
+        font-weight: normal;
+      }
+    }
+  }
+
+  &-small {
+    background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png);
+    background-image: linear-gradient(
+        to top,
+        rgba(241, 241, 241, 0.1),
+        rgba(241, 241, 241, 0.3)
+      ),
+      url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png);
+    padding: rem(25);
+    width: 100%;
+    // margin: 1.5rem 0;
+
+    p {
+      font-size: rem(16);
+      //   font-weight: bold;
+      margin-bottom: rem(5);
+    }
+
+    h2 {
+      font-size: rem(30);
+      font-weight: bold;
+      margin-bottom: rem(5);
+    }
+
+    button {
+      width: 100%;
+    }
+
+    .form-group {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(medium) {
+      p {
+        font-size: rem(14);
+      }
+
+      h2 {
+        font-size: rem(20);
+        margin-bottom: rem(25);
+      }
+    }
+  }
+}
+
+.shop-local {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  height: rem(150);
+  width: rem(150);
+  margin-top: rem(20);
+}

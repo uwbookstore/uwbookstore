@@ -1,381 +1,364 @@
 @use '../util' as *;
 
-#BottomSection {
-  margin-bottom: 0;
+.email {
+  &-signup {
+    max-width: 100%;
+    display: block;
+    position: relative;
+    margin-top: 0;
+    padding: rem(15) 0;
+    background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png),
+      linear-gradient(
+        45deg,
+        var(--clr-gradient-start) 0%,
+        var(--clr-gradient-end) 100%
+      );
+    color: var(--clr-white);
+
+    @include breakpoint(small) {
+      padding: rem(32) 0;
+    }
+  }
+
+  &-container {
+    position: relative;
+    z-index: 5;
+  }
+
+  &-row {
+    display: flex;
+    flex-flow: row wrap;
+    margin-inline: auto;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &-title {
+    margin-bottom: rem(16);
+    text-align: center;
+    font-size: rem(18);
+    font-weight: 700;
+    color: #fefefe;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.47);
+  }
+
+  &-submit {
+    display: block;
+    margin: 0 auto;
+    color: var(--clr-primary);
+    font-weight: 700;
+    font-size: rem(16);
+    padding: rem(5);
+    border-radius: 0;
+    box-shadow: none;
+    background-color: var(--clr-white);
+    border: 2px solid var(--clr-white);
+    width: 100%;
+    transition: var(--transition);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: var(--clr-white);
+      border: 2px solid var(--clr-white);
+    }
+
+    @include breakpoint(small) {
+      max-width: rem(200);
+    }
+  }
+
+  &-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-inline: rem(15);
+  }
 }
 
 .footer {
   display: block;
-  margin-top: rem(20);
-  padding: 0 0 rem(25);
-  background-color: var(--clr-light-gray);
-  color: var(--clr-black);
+  background-color: var(--clr-black);
+  color: var(--clr-white);
 
-  svg {
-    fill: var(--clr-black);
+  &__body {
+    padding: rem(36) rem(20) rem(28);
   }
 
-  dt {
-    font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
-    font-weight: 700;
-    font-size: rem(25);
-    border-bottom: rem(1) solid;
-    text-align: center;
-    padding-bottom: rem(5);
-    margin-bottom: rem(5);
+  &__links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: rem(1550);
+    margin-inline: auto;
 
-    @include breakpoint(medium) {
-      text-align: left;
-      font-size: rem(16);
+    &-title {
+      margin-top: rem(28);
+      margin-bottom: rem(8);
+      font-size: rem(20);
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--clr-light-gray);
+      letter-spacing: 0.025rem;
+      font-family: var(--ff-serif);
     }
-  }
 
-  dd {
-    a {
-      color: var(--clr-black);
-      line-height: 2.5;
-      height: rem(50);
-      display: block;
-      text-decoration: none;
-      transition: all 0.25s ease-in-out;
+    > div {
+      padding-bottom: rem(20);
+      text-align: center;
+      flex-basis: 100%;
+      max-width: 100%;
 
-      &:hover {
-        color: var(--clr-primary);
-        text-decoration: underline;
-        transition: all 0.25s ease-in-out;
+      @include breakpoint(small) {
+        flex-basis: 50%;
+        max-width: 50%;
+        padding-bottom: rem(20);
       }
 
       @include breakpoint(medium) {
-        height: auto;
-        line-height: 2;
+        text-align: left;
+        flex-basis: 20%;
+        max-width: 20%;
       }
     }
-  }
 
-  address {
-    margin-bottom: 0;
-    a {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    li {
+      color: var(--clr-light-gray-3);
       font-size: 1em;
-      font-weight: 700;
-      background: #29943d;
-      border-radius: 0;
-      color: var(--clr-white);
+      line-height: rem(36);
+      margin: 0;
+      padding: 0;
       display: block;
-      line-height: 1.5;
-      padding: rem(10) rem(15);
-      text-align: center;
-      text-decoration: none;
-      width: 100%;
-      margin: rem(10) auto;
+    }
 
-      &:hover {
-        text-decoration: none;
-        color: var(--clr-white);
+    &-link,
+    &-link:link {
+      position: relative;
+      color: var(--clr-light-gray-3);
+      display: inline-block;
+      font-size: rem(18);
+      font-weight: 400;
+      line-height: inherit;
+      text-decoration: none;
+      letter-spacing: rem(1);
+
+      em.fa {
+        margin-left: rem(10);
       }
 
-      &:before {
-        font-family: 'FontAwesome';
-        content: '\f095';
-        padding: 0 rem(5) 0 0;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        border-bottom: rem(1) solid var(--clr-primary);
+        width: 0;
+        transition: var(--transition);
+      }
+
+      &::before {
+        right: 50%;
+      }
+
+      &::after {
+        left: 50%;
+      }
+
+      &:hover::before,
+      &:hover::after {
+        width: 50%;
+      }
+
+      &:hover {
+        color: var(--clr-white);
+      }
+    }
+
+    a[href^='tel:'] {
+      color: var(--clr-light-gray-3);
+      margin: rem(10) auto;
+      max-width: rem(300);
+      font-weight: 700;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: var(--clr-light-gray-3);
+        text-decoration: none;
       }
 
       @include breakpoint(small) {
-        cursor: text;
-        line-height: 1.5;
-        background-color: transparent;
-        color: var(--clr-black);
         font-weight: normal;
-        padding: 0;
-        text-align: left;
+      }
+
+      @include breakpoint(medium) {
         margin: 0;
-        padding: 0;
-
-        &:before {
-          content: '';
-          padding: 0;
-        }
-
-        &:hover {
-          color: var(--clr-black);
-          text-decoration: none;
-        }
-      }
-    }
-  }
-
-  .footer-row-2 {
-    margin: rem(20) 0;
-  }
-
-  .social-footer {
-    font-size: rem(24);
-    text-align: center;
-    margin-bottom: rem(30);
-
-    .local-business {
-      height: rem(150);
-      width: rem(150);
-      margin-top: rem(20);
-    }
-
-    a {
-      display: inline-block;
-      height: rem(32);
-      width: rem(32);
-      opacity: 1;
-      transition: all 0.25s ease-in-out;
-
-      &.facebook,
-      &.twitter,
-      &.instagram,
-      &.tiktok {
-        background-image: url('https://i.univbkstr.com/v3/css/img/social_sprite.png');
+        text-align: left;
       }
 
-      &.facebook {
-        background-position: 0 rem(32);
+      &::before,
+      &::after {
+        border: none;
       }
 
-      &.twitter {
-        background-position: rem(96) rem(32);
-      }
-
-      &.instagram {
-        background-position: rem(64) rem(32);
-      }
-
-      &.tiktok {
-        background-position: rem(32) rem(32);
-      }
-
-      &:link,
-      &:visited {
-        margin-right: rem(10);
-        transition: all 0.25s ease-in-out;
-      }
-
-      &:hover,
-      &:focus {
-        transform: translateY(-2px);
-      }
-
-      &:last-child {
-        margin-right: 0;
+      &:hover::before,
+      &:hover::after {
+        width: 0;
       }
     }
 
-    @include breakpoint(medium) {
-      text-align: left;
+    address {
+      color: var(--clr-light-gray-3);
       font-size: rem(18);
+      line-height: rem(36);
       margin-bottom: 0;
     }
   }
 
-  .payment-options {
-    text-align: center;
-    color: var(--clr-black);
+  &__info {
+    padding: rem(20) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(15);
 
-    span {
-      margin-bottom: rem(5);
-      display: block;
-    }
+    .apple-acs {
+      margin: 0 auto rem(10);
+      width: 100%;
+      max-width: rem(275);
+      height: auto;
 
-    em {
-      &.fa-cc-visa {
-        color: #182168;
+      svg {
+        fill: var(--clr-light-gray-3);
       }
-
-      &.fa-cc-mastercard {
-        color: #5b6770;
-      }
-
-      &.fa-cc-discover {
-        color: #c35a00;
-      }
-
-      &.fa-cc-amex {
-        color: #0078a9;
-      }
-    }
-
-    @include breakpoint(medium) {
-      text-align: right;
-
-      span {
-        display: inline;
-        margin-bottom: 0;
-        margin-right: rem(5);
-      }
-    }
-  }
-
-  .copyright {
-    margin: rem(10) 0 0;
-    font-size: var(--fs-default);
-
-    a,
-    a:hover,
-    a:visited {
-      text-decoration: underline;
-      color: var(--clr-white);
-      display: inline-block;
-      margin: rem(15) auto;
     }
 
     @include breakpoint(small) {
-      font-size: rem(12);
+      margin-top: rem(15);
+      flex-direction: row;
+      gap: rem(100);
+      justify-content: center;
 
-      a,
-      a:hover,
-      a:visited {
-        margin: rem(5) auto;
+      .apple-acs {
+        width: rem(275);
+        height: auto;
+        margin: 0;
+      }
+    }
+
+    .shop-local {
+      width: rem(100);
+      height: auto;
+      margin: 0;
+    }
+
+    &-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+
+      @include breakpoint(small) {
+        gap: rem(10);
+        line-height: 1.5;
       }
     }
   }
 
-  a,
-  a:hover,
-  a:visited {
-    color: var(--clr-black);
-  }
+  &__copyright {
+    font-size: var(--fs-small);
+    background-color: rgba(19, 19, 19, 0.5);
+    background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png),
+      linear-gradient(
+        45deg,
+        rgba(19, 19, 19, 0.1) 0%,
+        rgba(19, 19, 19, 0.5) 100%
+      );
 
-  em.fa.fa-envelope-o {
-    margin-left: rem(10);
-  }
+    color: var(--clr-light-gray-3);
+    padding: rem(35) 0;
 
-  a.privacy {
-    color: var(--clr-black);
-    transition: all 0.25s ease-in-out;
-
-    &:hover {
-      color: var(--clr-primary);
-      transition: all 0.25s ease-in-out;
+    a {
+      color: var(--clr-light-gray-3);
     }
 
-    &:visited {
-      color: rebeccapurple;
+    @include breakpoint(small) {
+      font-size: var(--fs-reg);
     }
   }
 }
 
-.center-link {
-  font-size: rem(20);
-  display: block;
-  margin: rem(10) auto;
-  text-align: center;
+#ubs-social-icons {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: rem(8);
+  gap: rem(8);
+  width: 100%;
 
   @include breakpoint(medium) {
-    display: inline;
-    font-size: rem(15);
-    margin: 0;
-    text-align: left;
-  }
-}
-
-.mail-list {
-  background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png),
-    linear-gradient(to top, rgba(202, 202, 202, 0.5), rgba(202, 202, 202, 0.8));
-  border-top: rem(1) solid color-mix(in srgb, var(--clr-light-gray-3), #000 10%);
-  padding: rem(30);
-  margin-bottom: rem(35);
-
-  h2 {
-    color: var(--clr-black);
-    margin-bottom: rem(15);
-    font-size: rem(18);
-    font-weight: 700;
+    width: auto;
+    margin-bottom: 0;
   }
 
-  .form-inline {
+  li {
     display: inline-block;
-    margin-bottom: 0;
-    vertical-align: middle;
-    width: 100%;
+    color: var(--clr-light-gray-3);
+    font-size: 1em;
+    padding: 0;
   }
 
-  .form-inline .form-control {
-    margin-bottom: 0;
-    width: 100%;
-    border: rem(2) solid color-mix(in srgb, var(--clr-black), #fff 30%);
-    border-bottom: none;
-    border-radius: rem(4) rem(4) 0 0;
+  a {
+    display: inline-block;
+    background-color: var(--clr-light-gray-3);
+    padding: rem(6.4);
+    font-size: rem(20.8);
+    line-height: rem(20.8);
+    border-radius: 50%;
+    width: rem(32);
+    height: rem(32);
+    text-decoration: none;
 
-    @include breakpoint(medium) {
+    svg {
+      fill: var(--clr-light-gray-3);
+      color: var(--clr-light-gray-3);
       display: inline-block;
-      vertical-align: middle;
-      width: rem(250);
-      border-right: none;
-      border-bottom: rem(2) solid color-mix(in srgb, var(--clr-black), #fff 30%);
-      border-radius: rem(4) 0 0 rem(4);
-    }
-  }
-
-  .email-submit {
-    &.btn.btn-primary {
-      width: 100%;
-      border-radius: rem(4);
-      border: rem(2) solid color-mix(in srgb, var(--clr-black), #fff 30%);
-      color: var(--clr-white);
-      font-weight: 700;
-
-      @include breakpoint(medium) {
-        width: auto;
-        font-weight: normal;
-      }
-    }
-  }
-
-  &-small {
-    background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png);
-    background-image: linear-gradient(
-        to top,
-        rgba(241, 241, 241, 0.1),
-        rgba(241, 241, 241, 0.3)
-      ),
-      url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png);
-    padding: rem(25);
-    width: 100%;
-    // margin: 1.5rem 0;
-
-    p {
-      font-size: rem(16);
-      //   font-weight: bold;
-      margin-bottom: rem(5);
-    }
-
-    h2 {
-      font-size: rem(30);
-      font-weight: bold;
-      margin-bottom: rem(5);
-    }
-
-    button {
-      width: 100%;
-    }
-
-    .form-group {
-      margin-bottom: 0;
-    }
-
-    @include breakpoint(medium) {
-      p {
-        font-size: rem(14);
-      }
-
-      h2 {
-        font-size: rem(20);
-        margin-bottom: rem(25);
-      }
+      vertical-align: top;
+      width: rem(20.8);
+      height: rem(20.8);
+      margin: 0;
+      padding: 0;
     }
   }
 }
 
-.shop-local {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 100%;
-  height: rem(150);
-  width: rem(150);
-  margin-top: rem(20);
+.payment-options {
+  text-align: center;
+  color: var(--clr-light-gray-3);
+
+  span {
+    margin-bottom: rem(5);
+    display: block;
+  }
+
+  @include breakpoint(medium) {
+    display: flex;
+    align-items: center;
+    gap: rem(15);
+
+    span {
+      margin-bottom: 0;
+      margin-right: rem(1);
+    }
+  }
 }

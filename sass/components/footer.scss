@@ -303,7 +303,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: rem(8);
-  gap: rem(8);
+  gap: rem(12);
   width: 100%;
 
   @include breakpoint(medium) {
@@ -319,25 +319,30 @@
   }
 
   a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--clr-light-gray-3);
-    padding: rem(6.4);
-    font-size: rem(20.8);
-    line-height: rem(20.8);
     border-radius: 50%;
-    width: rem(32);
-    height: rem(32);
+    width: rem(40);
+    height: rem(40);
     text-decoration: none;
+    transition: var(--transition);
 
     svg {
       fill: var(--clr-light-gray-3);
       color: var(--clr-light-gray-3);
       display: inline-block;
       vertical-align: top;
-      width: rem(20.8);
-      height: rem(20.8);
+      width: rem(22);
+      height: rem(22);
       margin: 0;
       padding: 0;
+    }
+
+    &:hover,
+    &:active {
+      background-color: var(--clr-white);
     }
   }
 }

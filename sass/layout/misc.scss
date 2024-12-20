@@ -1,9 +1,11 @@
 @use '../util' as *;
 
 .table {
-  &-heading {
-    background-color: var(--clr-primary) !important;
-    color: var(--clr-white);
+  .table {
+    &-heading {
+      background-color: var(--clr-primary);
+      color: var(--clr-white);
+    }
   }
 }
 

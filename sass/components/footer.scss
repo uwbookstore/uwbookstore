@@ -2,11 +2,7 @@
 
 .email {
   &-signup {
-    max-width: 100%;
-    display: block;
-    position: relative;
-    margin-top: 0;
-    padding: rem(15) 0;
+    padding: rem(15);
     background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png),
       linear-gradient(
         45deg,
@@ -25,32 +21,18 @@
     z-index: 5;
   }
 
-  &-row {
-    display: flex;
-    flex-flow: row wrap;
-    margin-inline: auto;
-    justify-content: space-around;
-    align-items: center;
-  }
-
   &-title {
     margin-bottom: rem(16);
     text-align: center;
     font-size: rem(18);
-    font-weight: 700;
-    color: #fefefe;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.47);
   }
 
   &-submit {
-    display: block;
-    margin: 0 auto;
     color: var(--clr-primary);
     font-weight: 700;
-    font-size: rem(16);
-    padding: rem(5);
+    font-size: rem(18);
     border-radius: 0;
-    box-shadow: none;
     background-color: var(--clr-white);
     border: 2px solid var(--clr-white);
     width: 100%;
@@ -63,14 +45,11 @@
     }
 
     @include breakpoint(small) {
+      display: flex;
+      font-size: rem(16);
+      margin: 0 auto;
       max-width: rem(200);
     }
-  }
-
-  &-col {
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding-inline: rem(15);
   }
 }
 
@@ -92,14 +71,13 @@
     margin-inline: auto;
 
     &-title {
+      color: var(--clr-light-gray);
       margin-top: rem(28);
       margin-bottom: rem(8);
-      font-size: rem(20);
-      font-weight: 600;
-      line-height: 1.35;
-      color: var(--clr-light-gray);
-      letter-spacing: 0.025rem;
       font-family: var(--ff-serif);
+      font-size: rem(20);
+      line-height: 1.35;
+      letter-spacing: 0.025rem;
     }
 
     > div {
@@ -125,16 +103,6 @@
       list-style-type: none;
       padding: 0;
       margin: 0;
-      line-height: 1.6;
-    }
-
-    li {
-      color: var(--clr-light-gray-3);
-      font-size: 1em;
-      line-height: rem(36);
-      margin: 0;
-      padding: 0;
-      display: block;
     }
 
     &-link,
@@ -144,8 +112,7 @@
       display: inline-block;
       font-size: rem(18);
       font-weight: 400;
-      line-height: inherit;
-      text-decoration: none;
+      line-height: rem(36);
       letter-spacing: rem(1);
 
       em.fa {
@@ -177,29 +144,33 @@
 
       &:hover {
         color: var(--clr-white);
+        text-decoration: none;
       }
     }
 
     a[href^='tel:'] {
-      color: var(--clr-light-gray-3);
-      margin: rem(10) auto;
-      max-width: rem(300);
       font-weight: 700;
 
-      &:hover,
-      &:active,
-      &:focus {
-        color: var(--clr-light-gray-3);
-        text-decoration: none;
+      @include breakpoint(xsmall) {
+        margin: rem(10) auto;
+        max-width: rem(300);
       }
 
       @include breakpoint(small) {
+        color: var(--clr-light-gray-3);
         font-weight: normal;
       }
 
       @include breakpoint(medium) {
         margin: 0;
         text-align: left;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: var(--clr-light-gray-3);
+        text-decoration: none;
       }
 
       &::before,

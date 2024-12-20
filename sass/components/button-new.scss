@@ -1,189 +1,56 @@
 @use '../util' as *;
 
 .btn {
-  --bs-btn-border-width: #{rem(2)};
-  --bs-btn-font-size: var(--fs-default);
-  --bs-btn-font-weight: 400;
-  --bs-btn-border-radius: #{rem(4)};
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: rem(2) solid transparent;
+  background-image: none;
+  padding: 0 rem(15);
+  height: rem(50);
   text-decoration: none;
-
-  &-primary {
-    --bs-btn-bg: #c5050c;
-    --bs-btn-border-color: #c5050c;
-    --bs-btn-hover-bg: #9e040a;
-    --bs-btn-hover-border-color: #940409;
-    --bs-btn-active-bg: #b1050b;
-    --bs-btn-active-border-color: #ad040b;
-    --bs-btn-disabled-bg: #bb050b;
-    --bs-btn-disabled-border-color: #c1050c;
-  }
-
-  &-outline-primary {
-    --bs-btn-color: #c5050c;
-    --bs-btn-border-color: #c5050c;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #c5050c;
-    --bs-btn-hover-border-color: #c5050c;
-    --bs-btn-active-bg: #c5050c;
-    --bs-btn-active-border-color: #ad040b;
-    --bs-btn-disabled-color: #c1050c;
-    --bs-btn-disabled-bg: transparent;
-  }
-
-  &-special {
-    border-color: var(--clr-alt-link);
-    background-color: var(--clr-alt-link);
-    color: var(--clr-white);
-
-    &:link,
-    &:visited {
-      color: var(--clr-white);
-    }
-
-    &:hover,
-    &:active,
-    &:active:hover,
-    &:focus,
-    &:active:focus,
-    &-inverted {
-      background-color: color-mix(in srgb, var(--clr-alt-link), #000 16%);
-      border-color: color-mix(in srgb, var(--clr-alt-link), #000 20%);
-      color: var(--clr-white);
-    }
-  }
-
-  &-disabled {
-    cursor: not-allowed;
-    background-color: var(--clr-disabled);
-    border: rem(1) solid var(--clr-secondary);
-    box-shadow: none;
-    color: var(--clr-white);
-
-    &:hover,
-    &:active,
-    &:active:focus {
-      cursor: not-allowed;
-      background-color: var(--clr-disabled);
-      border: rem(1) solid var(--clr-secondary);
-      box-shadow: none;
-      color: var(--clr-white);
-      transform: none;
-    }
-  }
-
-  &-link {
-    &:link,
-    &:visited {
-      font-weight: normal;
-      font-size: inherit;
-      margin-bottom: rem(15);
-      transition: all 0.2s ease-in-out;
-      text-transform: capitalize;
-      text-decoration: none;
-    }
-
-    &:hover,
-    &:active {
-      color: var(--clr-primary);
-      text-decoration: underline !important;
-      box-shadow: none;
-      transform: none;
-    }
-
-    i,
-    em {
-      font-size: rem(10);
-    }
-  }
-
-  &-text {
-    text-decoration: underline;
-
-    &.active,
-    &:active {
-      box-shadow: none;
-    }
-  }
+  font-size: inherit;
+  transition: all 0.2s ease-in-out;
+  border-radius: rem(4);
 
   @include breakpoint(medium) {
-    // --bs-btn-border-width: #{rem(1)};
+    height: rem(35);
   }
 
-  &-rnd {
-    border-radius: rem(100);
-    padding: 0;
-    width: rem(50);
-    height: rem(50);
-    line-height: rem(50);
+  &-primary {
+    background-color: var(--clr-primary);
+    border-color: var(--clr-primary);
+    color: var(--clr-white);
 
-    @include breakpoint(medium) {
-      width: rem(30);
-      height: rem(30);
-      line-height: rem(30);
+    &:hover {
+      background-color: #9e040a;
+      border-color: #940409;
     }
 
-    i {
-      font-size: rem(35);
-      padding-top: rem(5);
-      font-size: rem(35);
+    &:active,
+    &:focus {
+      background-color: #b1050b;
+      border-color: #ad040b;
+    }
 
-      @include breakpoint(medium) {
-        font-size: rem(19);
+    &-outline {
+      background-color: transparent;
+      border-color: var(--clr-primary);
+      color: var(--clr-primary);
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: var(--clr-primary);
+        color: var(--clr-white);
+        border-color: var(--clr-primary);
       }
     }
   }
 
-  &-alt {
-    &:link,
-    &:visited {
-      padding-left: 0;
-      padding-right: 0;
-      display: inline-block;
-      color: var(--clr-alt-link);
-      font-size: inherit;
-    }
-  }
-
-  &-wishlist {
-    width: 100%;
-
-    @include breakpoint(medium) {
-      width: auto;
-    }
-  }
-
-  &-cta {
-    background-color: var(--clr-white);
-    border-color: var(--clr-primary);
-    color: var(--clr-primary);
-    font-weight: 700;
-    box-shadow:
-      0 rem(1.5) rem(4) rgba(0, 0, 0, 0.24),
-      0 rem(1.5) rem(6) rgba(0, 0, 0, 0.12);
-    border-width: rem(2);
-    &:link,
-    &:visited {
-    }
-
-    &:hover {
-      background-color: var(--clr-primary);
-      border-color: var(--clr-primary);
-      color: var(--clr-white);
-      transform: translateY(rem(-3));
-    }
-
-    &:active,
-    &:active:hover,
-    &:focus,
-    &:active:focus {
-      background-color: color-mix(in srgb, var(--clr-primary), #000 4%);
-      border-color: color-mix(in srgb, var(--clr-primary), #000 5%);
-    }
-  }
-
-  &-container {
-    button {
-      border: none;
+  &-outline {
+    &-primary {
       background-color: transparent;
       border-color: var(--clr-primary);
       color: var(--clr-primary);

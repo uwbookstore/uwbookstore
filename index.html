@@ -28,11 +28,25 @@
 
   <style>
     html {
-      scroll-padding-top: 12.6875rem;
+      scroll-padding-top: 15.9375rem;
     }
 
     body {
-      padding-top: 12.6875rem;
+      padding-top: 15.9375rem;
+    }
+
+    @media (min-width: 73.0625em) {
+      html {
+        scroll-padding-top: 11.4375rem;
+      }
+
+      body {
+        padding-top: 11.4375rem;
+      }
+    }
+
+    .header__main {
+      display: block;
     }
 
     .header__ubs--logo {
@@ -40,17 +54,19 @@
     }
 
     #ContainDiv {
+      padding: 1.25rem 0;
       /* max-width: 100%; */
     }
   </style>
 </head>
 
 <body>
-  <div class="backtotop">
-    <a href="#" title="Back to top"><em class="fa fa-chevron-up" aria-hidden="true"></em></a>
-  </div>
 
-  <div class="fixed-top">
+  <header class="fixed-top header__main">
+
+    <div class="backtotop">
+      <a href="#" title="Back to top"><em class="fa fa-chevron-up" aria-hidden="true"></em></a>
+    </div>
 
     <div id="deadlines" class="banner">
       <div id="toggle-exlusions" class="banner__message banner__info">
@@ -85,7 +101,7 @@
       </div>
     </div>
 
-    <header class="header header__ubs donotprint bg-white" data-role="header">
+    <div class="header header__ubs donotprint bg-white" data-role="header">
       <div class="header__ubs--logo">
         <h1>
           <a href="https://www.uwbookstore.com/home">
@@ -147,7 +163,7 @@
           </div>
         </li>
       </ul>
-    </header>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-ubs">
       <div class="collapse navbar-collapse" id="ubs-nav">
@@ -1270,7 +1286,7 @@
       </div>
       <!-- navbar-collapse.// -->
     </nav>
-  </div>
+  </header>
 
 
   <main id="ContainDiv" class="contain container clear">

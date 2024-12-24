@@ -12,7 +12,7 @@
   text-align: center;
   padding-bottom: rem(15);
 
-  @include breakpoint(medium) {
+  @include breakpoint(small) {
     position: relative;
     display: flex;
     margin: 0;
@@ -48,14 +48,26 @@
   }
 
   @include breakpoint(small) {
-    //
+    &-nav {
+      margin-top: 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: rem(20);
+      order: -1;
+      flex: 1 20%;
+
+      li {
+        align-self: flex-start;
+      }
+    }
   }
 
   @include breakpoint(medium) {
     &-nav {
-      flex-direction: column;
-      justify-content: flex-start;
-      order: -1;
+      li {
+        width: rem(80);
+        height: rem(80);
+      }
     }
   }
 }
@@ -71,6 +83,8 @@
 
     &-images {
       img {
+        display: block;
+        margin: auto;
         max-width: 100%;
         height: auto;
       }
@@ -91,11 +105,20 @@
       font-size: rem(20);
       font-weight: 700;
       margin-bottom: rem(10);
+
+      .original {
+        text-decoration: line-through;
+        margin-right: rem(10);
+      }
+
+      .sale {
+        color: var(--clr-primary);
+      }
     }
 
     &-description {
       margin: rem(15) auto;
-      padding: rem(10) 0 rem(15);
+      padding: rem(10) 0;
       border-top: rem(1) solid var(--clr-black);
       border-bottom: rem(1) solid var(--clr-black);
       position: relative;
@@ -124,6 +147,7 @@
           text-decoration: underline;
           text-transform: lowercase;
           margin-left: rem(5);
+          color: var(--clr-black);
         }
       }
 
@@ -167,6 +191,7 @@
       input {
         width: 100%;
         text-align: center;
+        border-radius: rem(4) !important;
       }
     }
 
@@ -180,6 +205,10 @@
 
   @include breakpoint(small) {
     &__detail {
+      &-slides {
+        flex: 1 80%;
+      }
+
       &-add {
         flex-direction: row;
         align-items: flex-end;
@@ -190,6 +219,7 @@
           flex-basis: 84%;
 
           .btn {
+            font-size: rem(15);
             width: 50%;
           }
         }
@@ -205,6 +235,7 @@
     &__detail {
       flex-flow: row nowrap;
       gap: rem(20);
+      margin: 0 auto rem(20);
 
       &-images {
         width: auto;
@@ -216,13 +247,46 @@
         flex-basis: 40%;
       }
 
+      &-title {
+        font-size: rem(20);
+        margin-top: 0;
+      }
+
+      &-price,
+      &-title-small {
+        font-size: rem(14);
+      }
+
       &-size {
+        padding-bottom: rem(15);
+
         &-picker {
           gap: rem(15);
 
           .btn {
             width: rem(60);
+            margin-bottom: 0;
           }
+        }
+
+        &-label {
+          margin-bottom: rem(15);
+        }
+
+        &-link {
+          font-size: rem(12);
+        }
+      }
+
+      &-qty {
+        label {
+          clip: rect(0 0 0 0);
+          clip-path: inset(50%);
+          height: rem(1);
+          overflow: hidden;
+          position: absolute;
+          white-space: nowrap;
+          width: rem(1);
         }
       }
     }

@@ -18,8 +18,12 @@ footer {
 }
 
 #ContainDiv {
-  padding: rem(20) rem(8) 0;
+  padding: rem(30) rem(8) 0;
   background-color: transparent;
+
+  @include breakpoint(medium) {
+    padding-inline: 0;
+  }
 }
 
 .contain,

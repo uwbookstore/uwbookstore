@@ -165,7 +165,7 @@
 }
 
 /* ============ desktop view ============ */
-@media all and (min-width: rem(70.5625)) {
+@media all and (min-width: 70.5625em) {
   .navbar .has-megamenu {
     position: static !important;
   }
@@ -225,7 +225,7 @@
 /* ============ desktop view .end// ============ */
 
 /* ============ mobile view ============ */
-@media (max-width: rem(70.5)) {
+@media (max-width: 70.5em) {
   .navbar.fixed-top .navbar-collapse,
   .navbar.sticky-top .navbar-collapse {
     overflow-y: auto;

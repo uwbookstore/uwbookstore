@@ -824,6 +824,7 @@ $(document).ready(function () {
       '<strong>This item has a handling charge of $15.00. Will not apply to In-Store Pickups.</strong>';
   }
 
-  $('div.merchItem').hide();
+  // $('div.merchItem').hide();
+  $('div.mainItem').hide();
 });
 // lcsColorWrapper

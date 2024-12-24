@@ -30,7 +30,6 @@ button.btn-outline-secondary.typeCodeOption {
 
   &:hover,
   &.typeSelected {
-    border-width: rem(1) !important;
     border-color: var(--clr-primary) !important;
     color: var(--clr-white);
     background-color: var(--clr-primary);

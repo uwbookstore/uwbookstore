@@ -25,7 +25,7 @@
     margin-bottom: rem(16);
     text-align: center;
     font-size: rem(18);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.47);
+    text-shadow: rem(1) rem(1) rem(3) rgba(0, 0, 0, 0.47);
   }
 
   &-submit {
@@ -34,14 +34,14 @@
     font-size: rem(18);
     border-radius: 0;
     background-color: var(--clr-white);
-    border: 2px solid var(--clr-white);
+    border: rem(2) solid var(--clr-white);
     width: 100%;
     transition: var(--transition);
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.15);
       color: var(--clr-white);
-      border: 2px solid var(--clr-white);
+      border: rem(2) solid var(--clr-white);
     }
 
     @include breakpoint(small) {

@@ -146,7 +146,7 @@
       @include breakpoint(small) {
         flex-direction: row;
         align-items: flex-end;
-        gap: 10px;
+        gap: rem(10);
       }
     }
 

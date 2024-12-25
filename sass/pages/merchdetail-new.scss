@@ -162,11 +162,19 @@
       }
 
       .btn.typeSelected,
+      .btn:active,
+      .btn:focus,
       .btn:hover {
         border-color: var(--clr-primary) !important;
-        border-width: rem;
+        border-width: rem(2);
         background-color: var(--clr-primary);
         color: var(--clr-white);
+      }
+
+      .btn:focus-visible {
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        background-color: transparent;
+        color: #6c757d;
       }
     }
 

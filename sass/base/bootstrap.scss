@@ -21,17 +21,6 @@ select.form-control {
   padding-right: rem(20);
 }
 
-.form {
-  &-control,
-  &-select {
-    font-size: var(--fs-default-mobile);
-
-    @include breakpoint(medium) {
-      font-size: var(--fs-default);
-    }
-  }
-}
-
 .alert {
   &-narrow {
     @include breakpoint(medium) {

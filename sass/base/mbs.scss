@@ -21,7 +21,7 @@ footer {
   padding: rem(30) rem(8) 0;
   background-color: transparent;
 
-  @include breakpoint(medium) {
+  @include breakpoint(menu) {
     padding-inline: 0;
   }
 }
@@ -29,10 +29,12 @@ footer {
 .contain,
 .container {
   max-width: rem(1170);
+  padding: 0;
+  margin: 0 auto;
 }
 
 #contentSection {
-  padding: 0 rem(5);
+  padding: 0 rem(8);
 
   @include breakpoint(medium) {
     padding: 0;
@@ -75,22 +77,46 @@ a#goToTop,
 // only want to use the colors MBS
 // chooses.
 
-/*.radioButton,*/
-input[class^='radio'] {
-  & + span {
-    &::before {
-      width: rem(12);
-      height: rem(12);
-      vertical-align: 0;
-    }
+#custAddressWrap {
+  margin: 0;
+  padding: 0;
+}
+
+#studentIDText {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: rem(-15);
+}
+
+.card {
+  &-header p {
+    font-size: rem(20);
   }
 
-  &:checked {
-    & + span {
-      &::before {
-        background-color: var(--clr-primary);
+  &-body {
+    padding-inline: rem(8);
+
+    [class^='col'] {
+      padding-inline: 0;
+
+      @include breakpoint(xsmall) {
+        + [class^='col'] {
+          padding-left: rem(15);
+        }
       }
     }
+  }
+}
+
+.res_question {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  margin-bottom: rem(20);
+
+  p {
+    margin: 0;
+    padding: 0;
   }
 }
 

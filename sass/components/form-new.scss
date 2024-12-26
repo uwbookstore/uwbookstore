@@ -1,0 +1,74 @@
+@use '../util' as *;
+
+.form {
+  &-control,
+  &-select {
+    border-color: var(--clr-light-gray-3);
+  }
+
+  &-control {
+    display: flex;
+    align-items: center;
+    height: rem(60);
+
+    @include breakpoint(medium) {
+      height: rem(40);
+    }
+  }
+}
+
+.form-floating > .form-control-plaintext:focus,
+.form-floating > .form-control-plaintext:not(:placeholder-shown),
+.form-floating > .form-control:focus,
+.form-floating > .form-control:not(:placeholder-shown) {
+  padding: rem(20) rem(10) 0;
+}
+
+.form-floating {
+  > .form {
+    &-control,
+    &-select {
+      border-color: var(--clr-light-gray-3);
+    }
+
+    &-control {
+      display: flex;
+      align-items: center;
+      height: rem(60);
+
+      @include breakpoint(medium) {
+        height: rem(40);
+      }
+    }
+  }
+}
+
+/*.radioButton,*/
+input[class^='radio'] {
+  & + span {
+    &::before {
+      width: rem(20);
+      height: rem(20);
+      vertical-align: 0;
+      margin-left: rem(20);
+    }
+  }
+
+  &:checked {
+    & + span {
+      &::before {
+        background-color: var(--clr-primary);
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    & + span {
+      &::before {
+        width: rem(12);
+        height: rem(12);
+        margin-left: rem(10);
+      }
+    }
+  }
+}

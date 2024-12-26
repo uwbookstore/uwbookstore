@@ -133,6 +133,18 @@
   }
 }
 
+.btn:disabled,
+.btn.disabled,
+fieldset:disabled .btn {
+  --bs-btn-disabled-bg: #808080;
+  --bs-btn-disabled-border-color: #a9a9a9;
+  color: var(--bs-btn-disabled-color);
+  pointer-events: none;
+  background-color: var(--bs-btn-disabled-bg);
+  border-color: var(--bs-btn-disabled-border-color);
+  opacity: var(--bs-btn-disabled-opacity);
+}
+
 // .btn {
 //   border: rem(2) solid transparent;
 //   transition: all 0.2s ease-in-out;

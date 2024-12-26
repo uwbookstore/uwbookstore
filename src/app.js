@@ -153,11 +153,7 @@ $(document).ready(function () {
   );
   $('p.studentNumberText').addClass('mt-1');
   $('p#studentIDText').parent().removeClass('left5');
-  $('p#studentIDText').css('margin-top', '-1.5rem');
 
-  // if (baseUrl === "https://www.uwbookstore.com/") {
-  //     $("#custStudID").attr("placeholder", "10 digit phone number or UW Student ID *");
-  // }
   $('#custStudID').attr(
     'placeholder',
     '10 digit phone number or UW Student ID *'

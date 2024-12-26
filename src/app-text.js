@@ -80,7 +80,6 @@ $(document).ready(function () {
 
   $('p#studentIDText, p.studentNumberText').addClass('alert alert-info');
   $('p#studentIDText').parent().removeClass('left5');
-  $('p#studentIDText').css('margin-top', '-1.5rem');
 
   if (baseUrl === 'https://www.uwbookstore.com/') {
     $('#custStudID').attr(

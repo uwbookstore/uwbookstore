@@ -69,17 +69,15 @@ a#goToTop,
 
 #custAddInfoWrap,
 #custEmailOptWrap,
-#custSMSOptWrap {
-  padding: 0;
-}
-
-// MBS apparently thinks folks will
-// only want to use the colors MBS
-// chooses.
-
+#custSMSOptWrap,
 #custAddressWrap {
   margin: 0;
   padding: 0;
+}
+
+.coTotal,
+.tyTotal {
+  font-size: rem(20);
 }
 
 #studentIDText {
@@ -169,22 +167,8 @@ a#goToTop,
   z-index: 0;
 }
 
-.rem1_2 {
-  font-size: rem(19.2);
-}
-
-.rem1_5 {
-  font-size: rem(24);
-}
-
-.rem2 {
-  font-size: rem(32);
-}
-
-.rem3 {
-  font-size: rem(48);
-}
-
-.rem4 {
-  font-size: rem(64);
+p {
+  &:empty {
+    display: none;
+  }
 }

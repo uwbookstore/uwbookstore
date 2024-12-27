@@ -9,7 +9,7 @@
   &-control {
     display: flex;
     align-items: center;
-    height: rem(60);
+    height: rem(50);
 
     @include breakpoint(medium) {
       height: rem(40);

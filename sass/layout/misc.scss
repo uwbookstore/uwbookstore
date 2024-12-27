@@ -162,14 +162,30 @@
 }
 
 // email signup
-.asterisk {
-  font-weight: normal;
-  position: relative;
-  top: rem(5);
-}
+#mc_embed_signup {
+  .asterisk {
+    font-size: 150%;
+    font-weight: normal;
+    position: relative;
+    top: rem(5);
+    color: var(--clr-primary);
+  }
 
-#emailHelp {
-  font-size: rem(14);
+  ul {
+    margin: 0;
+    padding: 5px 0;
+    list-style: none;
+
+    li {
+      display: block;
+      padding: 3px 0;
+      margin: 0;
+    }
+  }
+
+  #emailHelp {
+    font-size: rem(14);
+  }
 }
 
 p.merch-gm.bold.red {

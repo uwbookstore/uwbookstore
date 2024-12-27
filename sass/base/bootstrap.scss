@@ -39,3 +39,11 @@ select.form-control {
 .card-header p {
   margin-bottom: 0;
 }
+
+.input-group-text {
+  height: rem(50);
+
+  @include breakpoint(medium) {
+    height: rem(40);
+  }
+}

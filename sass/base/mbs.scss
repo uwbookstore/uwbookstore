@@ -169,6 +169,9 @@ a#goToTop,
 
 p {
   &:empty {
-    display: none;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
   }
 }

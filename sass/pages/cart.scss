@@ -148,12 +148,31 @@ h2.heading__billing {
   border-radius: var(--bs-alert-border-radius);
 }
 
-[class^='helpSection'] span.fa {
-  color: var(--clr-primary);
+[class^='helpSection'] {
+  display: flex;
+  align-items: center;
+  padding-inline: rem(10);
+  gap: rem(5);
+
+  p,
+  a {
+    font-size: rem(16);
+    margin: 0;
+  }
+
+  span.fa {
+    color: var(--clr-primary);
+    font-size: rem(20);
+  }
 }
 
 a#helpSection-email {
   display: none;
+}
+
+.coHeader {
+  font-size: rem(30);
+  margin-bottom: rem(20);
 }
 
 // MBS fixes the Place Order button

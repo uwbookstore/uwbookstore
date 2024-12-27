@@ -483,9 +483,6 @@ $(document).ready(function () {
   );
   $('div.logoutLink').hide();
 
-  //   $('ul.breadcrumb').removeClass('background_none');
-  $('ul.breadcrumb').hide();
-
   $(
     '<div id="order-info" class="row"><div id="list-container" class="col-md-4"></div><div class="col-md-8"></div></div>'
   ).insertAfter('h1#ordersHeader');

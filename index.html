@@ -80,6 +80,9 @@
   </style>
 </head>
 
+
+<!--There may be some differences in available payment options based on the selection for how to receive your order.-->
+
 <body>
 
   <header class="header__main">
@@ -1194,7 +1197,17 @@
   </header>
 
 
-  <main id="ContainDiv" class="contain container clear">
+  <main id="ContainDiv" class="container">
+    <div class="alert alert-danger">
+      <div class="container text-center">
+        <em class="fa fa-exclamation-triangle"></em> — Our order processing time is 5-7 business days (Monday thru
+        Friday)
+        for ground shipping, 1-2 business days for expedited orders. The processing time for <em>most</em> pickup at
+        store
+        orders is 1 to 2 days. Your order will be shipped via UPS®, FedEx®, or USPS® which will take 1-3 business days
+        (dependent on location and shipping method chosen) to reach you.
+      </div>
+    </div>
 
     <!-- <div class="container">
       <h1 class="mb-2">Bootstrap Reformatting</h1>
@@ -1391,11 +1404,6 @@
       </div>
     </div> -->
 
-
-
-
-
-
     <input type="hidden" id="ga4-cartItemsValue" value="80">
     <script>
       const ga4_items = [];
@@ -1556,9 +1564,6 @@
             <div class="card-body coSelectShippingMethodBody">
               <div class="row bottom10">
                 <div class="col-12">
-                  <p class="ltGrey">
-                    <!--There may be some differences in available payment options based on the selection for how to receive your order.-->
-                  </p>
                   <a id="shippingPolicy" class="blue-nonlink hover_pointer top5" tabindex="0" role="button">View
                     Shipping
                     Policy</a>

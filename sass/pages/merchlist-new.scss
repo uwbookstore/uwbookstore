@@ -1,1 +1,53 @@
 @use '../util' as *;
+
+// reset MBS defaults
+a.merchLink {
+  p.merchTitle {
+    color: var(--clr-black);
+  }
+}
+
+p.merchTitle {
+  font-weight: 700;
+  font-size: inherit;
+  margin: 0 0 rem(10);
+  font-style: italic;
+}
+
+span.regularPriceTitle,
+span.salePriceTitle,
+.colorSwatchList {
+  display: none;
+}
+
+.selectedColor {
+  text-transform: capitalize;
+}
+
+span.merchPriceRegular {
+  text-decoration: line-through;
+}
+
+p.merchRegular,
+p.merchPrice {
+  display: inline;
+  font-weight: normal;
+}
+
+p.merchNumber {
+  margin-bottom: rem(5);
+  font-style: italic;
+}
+
+p.merchRegular {
+  margin-right: rem(10);
+}
+
+p.merchSalePrice.red,
+p.merchPrice.red {
+  color: var(--clr-primary);
+  font-style: italic;
+  font-weight: normal;
+  display: inline;
+  margin-left: rem(10);
+}

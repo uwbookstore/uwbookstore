@@ -1,5 +1,69 @@
 @use '../util' as *;
 
+.card-body > .row {
+  .merchLinkWrap {
+    padding: 0 rem(8);
+
+    .merchLink {
+      background: #f8d7da;
+      display: flex;
+      margin-bottom: rem(20);
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: rem(60);
+      border-radius: rem(4);
+      color: #58151c;
+      border: rem(1) solid #f1aeb5;
+      text-decoration: none;
+      transition: var(--transition);
+      font-size: rem(18);
+
+      p {
+        margin: 0;
+      }
+
+      &:hover,
+      &:active {
+        background-color: #e0c5c7;
+        border-color: #ca8f96;
+      }
+
+      @include breakpoint(medium) {
+        height: rem(40);
+        font-size: rem(16);
+
+        // p {
+        //   &::before {
+        //     font-family: FontAwesome;
+        //     content: '\f005';
+        //     margin-right: rem(10);
+        //   }
+        // }
+      }
+    }
+  }
+}
+
+.card.merch_panel {
+  .card-header {
+    display: flex;
+    align-items: center;
+    padding: 0 rem(15);
+    height: rem(45);
+    border-bottom: rem(4) solid #f1aeb5;
+    color: #58151c;
+
+    p {
+      font-size: rem(18);
+    }
+  }
+}
+
+.card-body:has(.merchLinkWrap) {
+  padding-bottom: 0;
+}
+
 // reset MBS defaults
 a.merchLink {
   p.merchTitle {

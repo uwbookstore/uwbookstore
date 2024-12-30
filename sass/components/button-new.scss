@@ -30,7 +30,9 @@
     }
 
     &:active,
-    &:focus {
+    &:focus,
+    &:focus-visible {
+      color: var(--clr-white);
       background-color: #b1050b;
       border-color: #ad040b;
     }

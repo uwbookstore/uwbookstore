@@ -1,10 +1,15 @@
 $(document).ready(() => {
-  const parentDiv = $('.panel-body');
+  const parentDiv = $('.card');
   $.each(parentDiv, function () {
     if (!$(this).children().length > 0) {
       $(this).parent().hide();
     }
   });
+
+  $(".category-name:contains('SPECIAL')").parent().parent().hide();
+  $(".category-name:contains('PACKAGE')").parent().parent().hide();
+  $(".category-name:contains('Study Aids')").parent().parent().hide();
+  $('.category-name:contains("WOMEN\'S HATS")').parent().parent().hide();
 
   const isUpperCase = (str) => str === str.toUpperCase();
 
@@ -28,6 +33,4 @@ $(document).ready(() => {
       $(this).html('Tokyodachi&reg;');
     }
   });
-
-  $("div.panel-heading:contains('SPECIAL')").parent().hide();
 });

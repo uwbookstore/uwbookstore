@@ -144,39 +144,6 @@
   }
 }
 
-.jumbotron.landing {
-  background: url('https://i.univbkstr.com/v3/css/img/jt-bg.jpg') no-repeat top
-    center;
-  background-size: cover;
-  height: rem(150);
-  padding: rem(40);
-  color: white;
-  border-radius: 0;
-  margin-top: rem(-30);
-
-  svg {
-    color: var(--clr-white);
-    fill: var(--clr-white);
-
-    &.ua-logo {
-      height: rem(130);
-      width: rem(222);
-    }
-  }
-
-  h1 {
-    margin-bottom: rem(15);
-
-    @include breakpoint(medium) {
-      font-size: rem(63);
-    }
-  }
-
-  @include breakpoint(medium) {
-    height: rem(200);
-  }
-}
-
 .sidenav {
   list-style: none;
   border: rem(1) solid var(--clr-off-white);

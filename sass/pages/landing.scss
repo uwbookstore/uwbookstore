@@ -25,15 +25,52 @@
   }
 }
 
+#dropdown-trigger {
+  cursor: pointer;
+
+  @include breakpoint(medium) {
+    display: none;
+  }
+}
+
+#dropdown-item {
+  max-height: 0;
+  transition: var(--transition);
+  overflow: hidden;
+
+  &.show {
+    max-height: rem(800);
+    transition: var(--transition);
+  }
+
+  @include breakpoint(medium) {
+    max-height: initial;
+    height: auto;
+  }
+}
+
 .jumbotron.landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: rem(20);
+  clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%);
   background: url('https://i.univbkstr.com/v3/css/img/jt-bg.jpg') no-repeat top
     center;
   background-size: cover;
-  height: rem(150);
-  padding: rem(40);
+  height: auto;
+  padding: rem(30);
   color: white;
   border-radius: 0;
   margin-inline: rem(-10);
+  margin-bottom: rem(15);
+
+  h2,
+  p {
+    margin: 0;
+  }
 
   svg {
     color: var(--clr-white);
@@ -46,8 +83,6 @@
   }
 
   h2 {
-    margin-bottom: rem(15);
-
     @include breakpoint(medium) {
       font-size: rem(63);
     }
@@ -96,65 +131,92 @@
   }
 
   &__sidebar {
-    display: none;
+    display: block;
+    flex: 1 1 100%;
+    order: 1;
+    text-align: center;
+
+    h2 {
+      display: none;
+    }
 
     @include breakpoint(medium) {
-      display: block;
+      order: initial;
       flex: 1 1 20%;
+      text-align: left;
 
       h2 {
+        display: grid;
         margin-bottom: 0;
       }
+    }
 
-      &-nav {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+    .btn.btn-expand {
+      text-transform: uppercase;
+      letter-spacing: rem(1);
+      font-weight: 700;
+      opacity: 0.75;
 
-        a {
-          position: relative;
-          color: var(--clr-black);
-          display: block;
+      &:hover,
+      &:focus,
+      &:active {
+        opacity: 1;
+      }
+    }
 
-          display: inline-block;
+    &-nav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      a {
+        position: relative;
+        color: var(--clr-black);
+        display: block;
+
+        display: inline-block;
+        padding-block: rem(15);
+        font-size: rem(18);
+        line-height: 1;
+        opacity: 0.75;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          border-bottom: rem(1) solid var(--clr-primary);
+          width: 0;
+          transition: var(--transition);
+        }
+
+        &::before {
+          right: 50%;
+        }
+
+        &::after {
+          left: 50%;
+        }
+
+        &:hover::before,
+        &:hover::after {
+          width: 50%;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          text-decoration: none;
+          opacity: 1;
+        }
+
+        &:focus-visible {
+          text-decoration: underline;
+        }
+
+        @include breakpoint(medium) {
           padding-block: rem(10);
           font-size: rem(16);
-          line-height: 1;
-          opacity: 0.75;
-
-          &::before,
-          &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            border-bottom: rem(1) solid var(--clr-primary);
-            width: 0;
-            transition: var(--transition);
-          }
-
-          &::before {
-            right: 50%;
-          }
-
-          &::after {
-            left: 50%;
-          }
-
-          &:hover::before,
-          &:hover::after {
-            width: 50%;
-          }
-
-          &:hover,
-          &:active,
-          &:focus {
-            text-decoration: none;
-            opacity: 1;
-          }
-
-          &:focus-visible {
-            text-decoration: underline;
-          }
         }
       }
     }
@@ -180,9 +242,28 @@
         margin-bottom: rem(20);
       }
 
-      .category__img {
-        display: block;
-        margin-bottom: rem(30);
+      .category__link {
+        color: var(--clr-black);
+        font-weight: 700;
+
+        img {
+          display: block;
+          margin-bottom: rem(30);
+        }
+
+        span {
+          opacity: 0.75;
+          transition: var(--transition);
+        }
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+
+          span {
+            opacity: 1;
+          }
+        }
       }
 
       .btn {
@@ -191,6 +272,7 @@
     }
 
     @include breakpoint(medium) {
+      gap: rem(15);
       &-item {
         flex: 1 1 30%;
       }

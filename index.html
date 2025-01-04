@@ -1665,12 +1665,21 @@
   <!-- <script src="./src/popup.js"></script> -->
 
   <script>
-    const dropdownTrigger = document.getElementById('dropdown-trigger');
-    const dropdownItem = document.getElementById('dropdown-item');
+    function addEventListenerIfExists(elementId, eventType, callback) {
+      const element = document.getElementById(elementId);
 
-    dropdownTrigger.addEventListener('click', () => {
+      if (element) {
+        element.addEventListener(eventType, callback);
+      }
+    }
+
+
+    // Example usage:
+    addEventListenerIfExists('dropdown-trigger', 'click', function () {
+      const dropdownItem = document.getElementById('dropdown-item');
       dropdownItem.classList.toggle('show');
-    })
+    });
+
   </script>
 </body>
 

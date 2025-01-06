@@ -165,7 +165,7 @@
 }
 
 /* ============ desktop view ============ */
-@media all and (min-width: 70.5625em) {
+@media all and (min-width: 73.0625em) {
   .navbar .has-megamenu {
     position: static !important;
   }
@@ -177,10 +177,10 @@
     padding: rem(20);
   }
 
-  .navbar-expand-lg .navbar-collapse {
-    display: flex;
-    flex-basis: auto;
-  }
+  // .navbar-expand-lg .navbar-collapse {
+  //   display: flex;
+  //   flex-basis: auto;
+  // }
 
   .dropdown-menu {
     border: rem(1) solid #fff;
@@ -225,7 +225,7 @@
 /* ============ desktop view .end// ============ */
 
 /* ============ mobile view ============ */
-@media (max-width: 70.5em) {
+@media (max-width: 73em) {
   .navbar.fixed-top .navbar-collapse,
   .navbar.sticky-top .navbar-collapse {
     overflow-y: auto;

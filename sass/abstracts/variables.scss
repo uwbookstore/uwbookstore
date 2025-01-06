@@ -57,7 +57,8 @@
   --fs-default: var(--fs-reg);
   --fs-default-mobile: var(--fs-med);
 
-  --page-max-width: #{rem(1400)};
+  --page-max-width: #{rem(1170)};
+  --page-max-width-large: #{rem(1400)};
 
   // Flexbox gap/columns
   --gap: 2rem;

@@ -11,7 +11,7 @@
   <!-- add favicon and shortcut icon for IE -->
   <link rel="shortcut icon" type="image/ico" href="https://i.univbkstr.com/favicon.ico?v=2" />
   <meta name="format-detection" content="telephone=no" />
-  <meta property="og:image" content="https://i.univbkstr.com/v3/img/logos/ubsLogo-holiday.png">
+  <meta property="og:image" content="https://i.univbkstr.com/v3/img/misc/og-img.jpg">
   <link rel="stylesheet" href="./css/test files/bootstrap_v5_2_custom.css">
   <link rel="stylesheet" href="./css/test files/MasterCSS.css">
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
@@ -66,10 +66,6 @@
       padding: 0.625rem;
     }
 
-    #ContainDiv {
-      max-width: 100%;
-    }
-
     .mb-3::after {
       content: '';
       display: block;
@@ -120,12 +116,13 @@
     <div class="header header__ubs donotprint bg-white" data-role="header">
       <div class="header__ubs--logo">
         <h1>
-          <a href="https://www.uwbookstore.com/home">
-            <img loading="lazy" src="https://i.univbkstr.com/v3/img/logos/ubsLogo-holiday.png"
-              alt="University Book Store" class="img-fluid">
+          <a href="https://insitestore2.mbsbooks.com/uwmadison/home">
+            <img loading="lazy" src="https://i.univbkstr.com/v3/img/logos/ubsLogo.png" alt="University Book Store"
+              class="img-fluid">
           </a>
         </h1>
-        <div class="visually-hidden"><a href="https://www.uwbookstore.com/home">University Book Store</a>
+        <div class="visually-hidden"><a href="https://insitestore2.mbsbooks.com/uwmadison/home">University Book
+            Store</a>
         </div>
       </div>
 
@@ -169,11 +166,11 @@
 
             <div class="search__form--submit">
               <button id="search-submit" type="submit" class="search-submit btn btn-primary" value="Go!">
-                <span class="mobi-hide">
+                <span class="search__form--icon">
                   <em class="fa fa-search" aria-hidden="true"></em>
                   <em class="visually-hidden">Submit</em>
                 </span>
-                <span class="dt-hide">Submit</span>
+                <span class="search__form--text">Submit</span>
               </button>
             </div>
           </div>
@@ -1225,65 +1222,170 @@
 
   <main id="ContainDiv" class="container">
 
-    <nav aria-label="breadcrumb" class="category__breadcrumb-nav">
-      <ol class="breadcrumb category__breadcrumb">
-        <li class="breadcrumb-item"><a href="https://www.uwbookstore.com/home">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Shop by Sport</li>
-      </ol>
-    </nav>
-
-    <div class="category__container flex">
-
-      <div class="category__sidebar">
-        <button class="btn btn-expand" id="dropdown-trigger">more</button>
-        <h2 class="heading__line-center">Shop by Sport</h2>
-
-        <div id="dropdown-item">
-          <ul id="menu-sports" class="category__sidebar-nav">
-            <!-- Menu items will be here -->
-          </ul>
+    <div class="max-width-wrapper">
+      <div class="hero__image">
+        <div id="ubs-carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#ubs-carousel" data-bs-slide-to="0" class="active" aria-current="true"
+              aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#ubs-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#ubs-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <!-- <button type="button" data-bs-target="#ubs-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button> -->
+            <!-- <button type="button" data-bs-target="#ubs-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button> -->
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="https://www.uwbookstore.com/Clearance-Items">
+                <picture>
+                  <source media="(min-width: 48em)"
+                    srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/clearanceSale.avif">
+                  <source media="(min-width: 28.125em)"
+                    srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/clearanceSale-md.avif">
+                  <img alt="" src="https://i.univbkstr.com/v3/img/pages/home/rotator/clearanceSale-sm.avif"
+                    class="img-fluid">
+                </picture>
+                <span class="sr-only">LAST CHANCE SALE! Limited Options Available. Going FAST!</span>
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Winter-Wear">
+                <picture>
+                  <source media="(min-width: 48em)"
+                    srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/coldGear.avif">
+                  <source media="(min-width: 28.125em)"
+                    srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/coldGear-md.avif">
+                  <img alt="" src="https://i.univbkstr.com/v3/img/pages/home/rotator/coldGear-sm.avif"
+                    class="img-fluid">
+                </picture>
+                <span class="sr-only">Keep warm this winter! Survive the cold with your favorite gear from the
+                  University
+                  Book
+                  Store.</span>
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="https://www.uwbookstore.com/Tech">
+                <picture>
+                  <source media="(min-width: 48em)"
+                    srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/appleSoar.avif">
+                  <source media="(min-width: 28.125em)"
+                    srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/appleSoar-md.avif">
+                  <img alt="" src="https://i.univbkstr.com/v3/img/pages/home/rotator/appleSoar-sm.avif"
+                    class="img-fluid">
+                </picture>
+                <span class="sr-only">WELCOME BACK, BADGERS. Start 2025 off right! Low education pricing, now and
+                  forever,
+                  for
+                  students and alumni.</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="category__main">
-        <div class="jumbotron landing">
-          <h2>Shop by Sport</h2>
-        </div>
-
-        <div class="category__main-item">
-          <div class="text-center">
-            <a class="category__link" href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Volleyball">
-              <img src="https://www.uwbookstore.com/storeimages/177-1841380-1.png" alt="Volleyball"
-                class=" img-fluid mx-auto d-block">
-              <span class="text-center">Volleyball</span>
+      <div class="text-center mb-4">
+        <a href="https://www.cityofmadison.com/parking/garages-lots/current-hourly-parking-availability" target="_blank"
+          class="d-block">
+          <picture>
+            <source media="(min-width: 48em)" srcset="https://i.univbkstr.com/v3/img/pages/home/stateStParking.jpg">
+            <img src="https://i.univbkstr.com/v3/img/pages/home/stateStParking-sm.jpg"
+              alt="Hey Freshman! From Technology to Textbooks, we've got you covered." loading="lazy"
+              class="border-lt-gray img-fluid">
+          </picture>
+        </a>
+      </div>
+      <section class="content__wrapper">
+        <div class="featured__wrapper">
+          <div class="featured__item">
+            <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/New-Items">
+              <img loading="lazy" src="https://i.univbkstr.com/v3/img/pages/home/newArrivals.webp" class="img-fluid"
+                alt="New Arrivals" width="210" height="210"> </a>
+            <p>New Arrivals</p>
+          </div>
+          <div class="featured__item">
+            <a href="https://www.uwbookstore.com/Tech">
+              <img loading="lazy" src="https://i.univbkstr.com/v3/img/pages/home/tech.webp" class="img-fluid"
+                alt="Apple" width="210" height="210"> </a>
+            <p>Apple</p>
+          </div>
+          <div class="featured__item">
+            <a href="https://www.uwbookstore.com/School-Supplies">
+              <img loading="lazy" src="https://i.univbkstr.com/v3/img/pages/home/schoolSupplies.webp" class="img-fluid"
+                alt="School Supplies" width="210" height="210"> </a>
+            <p>School Supplies</p>
+          </div>
+          <div class="featured__item">
+            <a href="https://www.uwbookstore.com/Headwear">
+              <img loading="lazy" src="https://i.univbkstr.com/v3/img/pages/home/hats.webp" class="img-fluid" alt="Hats"
+                width="210" height="210">
             </a>
+            <p>Hats</p>
           </div>
         </div>
 
-        <div class="category__main-item">
-          <div class="text-center">
-            <a class="category__link" href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Basketball">
-              <img src="https://www.uwbookstore.com/storeimages/177-1204075-2.jpg" alt="Basketball"
-                class=" img-fluid mx-auto d-block">
-              <span class="text-center">
-                Basketball
+        <div class="wiscard__wrapper">
+          <div class="wiscard__item--img">
+            <img alt="" class="img-fluid center-block" src="https://i.univbkstr.com/v3/img/pages/home/bookyWiscard.webp"
+              loading="lazy" width="400" height="252">
+          </div>
+          <div class="wiscard__item--text">
+            <div class="wiscard__header">
+              5% OFF. ALL&nbsp;DAY. EVERY&nbsp;DAY.
+              <span class="sub-header">
+                When you pay with WISCARD.
               </span>
-            </a>
+            </div>
+            <p class="fine-print">* Excludes sale items, gift cards, The Red Shirt, custom orders, and technology
+              products. Exclusions subject to change. Cannot be combined with other offers. Valid at State St, HSLC,
+              and uwbookstore.com.</p>
           </div>
         </div>
 
-        <div class="category__main-item">
-          <div class="text-center">
-            <a class="category__link" href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Hockey">
-              <img src="https://www.uwbookstore.com/storeimages/177-1204083-3.jpg" alt="Hockey"
-                class=" img-fluid mx-auto d-block">
-              <span class="text-center">Hockey</span>
-            </a>
+        <div class="wrapper">
+          <a href="https://www.uwbookstore.com/New-Students" class="d-block">
+            <picture>
+              <source media="(min-width: 48em)" srcset="https://i.univbkstr.com/v3/img/pages/home/freshmanBanner.avif">
+              <img src="https://i.univbkstr.com/v3/img/pages/home/freshmanBanner-sm.avif"
+                alt="Hey Freshman! From Technology to Textbooks, we've got you covered." class="img-fluid"
+                loading="lazy">
+            </picture>
+          </a>
+        </div>
+
+        <div class="giftcard__container-fluid">
+          <a class="giftcard__banner" href="https://www.uwbookstore.com/Gift-Cards">
+            <img src="https://i.univbkstr.com/v3/img/pages/home/giftCardBanner.avif"
+              alt="Gift Cards - The perfect gift for any occasion!" class="mb-3 img-fluid center-block" loading="lazy"
+              width="1170" height="200">
+          </a>
+          <div class="container__stacked-sm">
+            <h2>Gift Cards</h2>
+            <p>The perfect gift for any occasion!</p>
+            <a href="https://www.uwbookstore.com/Gift-Cards" class="btn btn-primary">Buy Now</a>
+            <img src="https://i.univbkstr.com/v3/img/pages/home/giftcard-large.webp" alt="gftcard"
+              class="img-fluid center-block" loading="lazy" width="600" height="368">
           </div>
         </div>
 
-      </div>
+        <div class="wrapper">
+          <a href="https://www.wisc.edu/" target="_blank" class="uw-info">
+            <picture>
+              <source media="(min-width: 48em)" srcset="https://i.univbkstr.com/v3/img/pages/home/uwBanner.avif">
+              <img src="https://i.univbkstr.com/v3/img/pages/home/uwBanner-sm.avif" alt="UW Banner"
+                class="mb-2 img-fluid" loading="lazy">
+            </picture>
+          </a>
+        </div>
 
+        <div class="wrapper text-center">
+          <a href="https://i.univbkstr.com/downloads/24-25_Campus_Calendar.pdf" class="d-block" target="_blank">
+            <picture>
+              <source media="(min-width: 48em)" srcset="https://i.univbkstr.com/v3/img/pages/home/calendar-banner.jpg">
+              <img src="https://i.univbkstr.com/v3/img/pages/home/calendar-banner-sm.jpg"
+                alt="Download the 2024-2025 Campus Events Calendar" class="img-fluid" loading="lazy">
+            </picture>
+          </a>
+        </div>
+      </section>
     </div>
 
 
@@ -1628,7 +1730,7 @@
           </ul>
 
           <div class="apple-acs">
-            <img src="https://www.uwbookstore.com/v3/img/svg/apple-store-light.svg" alt="">
+            <img src="https://i.univbkstr.com/v3/img/svg/apple-store-light.svg" alt="">
           </div>
 
           <div class="payment-options">
@@ -1657,12 +1759,32 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="./js/jquery.flexslider-min.js"></script>
+  <!-- <script src="./js/jquery.flexslider-min.js"></script>
   <script src="https://i.univbkstr.com/v3/js/jquery.colorbox-min.js"></script>
   <script type="text/javascript" src="https://i.univbkstr.com/v3/js/merch-variables.js"></script>
   <script src="./src/app.js"></script>
-  <script src="./js/menu.min.js"></script>
-  <!-- <script src="./src/popup.js"></script> -->
+  <script src="./js/menu.min.js"></script> -->
+
+  <script type="text/javascript" src="https://i.univbkstr.com/v3/js/merch-variables.js"></script>
+  <script type="text/javascript" src="https://i.univbkstr.com/v3/js/app.min.js?v=1"></script>
+  <script type="text/javascript" src="https://i.univbkstr.com/v3/js/text-return.min.js"></script>
+  <script type="text/javascript" src="https://i.univbkstr.com/v3/js/menu.min.js"></script>
+  <script type="text/javascript" src="https://i.univbkstr.com/v3/js/jquery.colorbox-min.js"></script>
+  <script type="text/javascript" src="https://i.univbkstr.com/v3/js/smooth-scroll.min.js"></script>
+  <script type="text/javascript" src="https://i.univbkstr.com/v3/js/pace.min.js"></script>
+  <script type="text/javascript" src="https://i.univbkstr.com/v3/js/accordion.min.js"></script>
+
+  <!-- <script type="text/javascript" src="https://i.univbkstr.com/v3/js/holder.min.js"></script>
+  <script type="text/javascript" src="https://i.univbkstr.com/v3/js/lazysizes.min.js"></script> -->
+  <script>
+    $(document).ready(function () {
+      if ($(window).width() >= 73.0625) {
+        $('.dropdown-toggle').unbind('focus');
+        $('.dropdown-toggle').unbind('click');
+      }
+    });
+  </script>
+
 
   <script>
     function addEventListenerIfExists(elementId, eventType, callback) {

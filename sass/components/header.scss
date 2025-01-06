@@ -1,6 +1,9 @@
 @use '../util' as *;
 
 .header {
+  &__main {
+    display: block;
+  }
   &__ubs {
     display: block;
     position: relative;
@@ -227,6 +230,10 @@
           }
         }
       }
+
+      &--icon {
+        display: none;
+      }
     }
   }
 
@@ -279,6 +286,10 @@
             color: var(--clr-primary);
           }
         }
+      }
+
+      &--text {
+        display: none;
       }
     }
   }

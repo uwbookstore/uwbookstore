@@ -18,8 +18,12 @@ footer {
 }
 
 #ContainDiv {
-  padding: rem(30) rem(8) 0;
+  padding: rem(30) rem(8);
   background-color: transparent;
+
+  &.container {
+    max-width: 100%;
+  }
 
   @include breakpoint(menu) {
     padding-inline: 0;

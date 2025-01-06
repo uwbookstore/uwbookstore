@@ -31,6 +31,16 @@ body {
   width: rem(1);
 }
 
+.max-width-wrapper {
+  max-width: var(--page-max-width);
+  margin: auto;
+
+  &-large {
+    max-width: var(--page-max-width-large);
+    margin: auto;
+  }
+}
+
 // @include breakpoint(medium) {
 //   /* Set the width of the scroll bar */
 //   ::-webkit-scrollbar {

@@ -111,7 +111,6 @@
         padding-inline: rem(15);
         width: 100%;
         margin: auto;
-        max-width: var(--page-max-width);
         font-size: rem(18);
       }
 
@@ -128,7 +127,6 @@
   &__container {
     padding-inline: rem(5);
     margin: 0 auto;
-    max-width: var(--page-max-width);
 
     @include breakpoint(medium) {
       flex-direction: row;

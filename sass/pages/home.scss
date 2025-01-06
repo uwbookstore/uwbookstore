@@ -129,6 +129,10 @@
 
 .wrapper {
   margin-bottom: rem(30);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .giftcard {

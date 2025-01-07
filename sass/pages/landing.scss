@@ -96,6 +96,13 @@
     }
   }
 
+  &.no-clip {
+    clip-path: none;
+    background: url('https://i.univbkstr.com/v3/css/img/jt-bg.jpg') no-repeat
+      top center;
+    background-size: cover;
+  }
+
   @include breakpoint(medium) {
     margin-inline: 0;
     height: rem(200);

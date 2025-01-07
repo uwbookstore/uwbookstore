@@ -219,7 +219,7 @@ $(document).ready(function () {
   });
 
   // Additional Information Tabs
-  $('ul.meganav__tabs').each(function () {
+  $('ul.meganav__tabs-list').each(function () {
     // For each set of tabs, we want to keep track of
     // which tab is active and its associated content
     let $active;

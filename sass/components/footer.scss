@@ -65,7 +65,7 @@
   color: var(--clr-white);
 
   &__body {
-    padding: rem(36) rem(20) rem(28);
+    padding: rem(25) rem(20);
   }
 
   &__links {
@@ -78,8 +78,8 @@
 
     &-title {
       color: var(--clr-light-gray);
-      margin-top: rem(28);
-      margin-bottom: rem(8);
+      margin-top: rem(15);
+      margin-bottom: rem(5);
       font-family: var(--ff-serif);
       font-size: rem(20);
       line-height: 1.35;
@@ -231,7 +231,6 @@
 
       .apple-acs {
         width: rem(275);
-        height: auto;
         margin: 0;
       }
     }
@@ -313,8 +312,7 @@
     transition: var(--transition);
 
     svg {
-      fill: var(--clr-light-gray-3);
-      color: var(--clr-light-gray-3);
+      fill: var(--clr-black);
       display: inline-block;
       vertical-align: top;
       width: rem(22);
@@ -324,8 +322,21 @@
     }
 
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
       background-color: var(--clr-white);
+    }
+
+    &:focus,
+    &:focus-visible {
+      color: var(--clr-primary);
+      box-shadow: 0 0 rem(3) rem(4) rgba(197, 5, 12, 0.75);
+      outline: 1px rgba(197, 5, 12, 0.75);
+
+      svg {
+        fill: var(--clr-primary);
+        color: var(--clr-primary);
+      }
     }
   }
 }

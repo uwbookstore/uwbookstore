@@ -1222,181 +1222,1310 @@
 
   <main id="ContainDiv" class="container">
 
-    <div class="hero__image">
+    <div class="row">
 
-      <div id="ubs-carousel" class="carousel slide" data-bs-ride="carousel">
+      <div id="contentSection" class="col-lg-12 col-md-12 col-sm-12 col-12 padding0" role="main">
 
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#ubs-carousel" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#ubs-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#ubs-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <!-- <button type="button" data-bs-target="#ubs-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button> -->
-          <!-- <button type="button" data-bs-target="#ubs-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button> -->
-        </div>
 
-        <div class="carousel-inner">
 
-          <div class="carousel-item active">
-            <a href="https://www.uwbookstore.com/Clearance-Items">
-              <picture>
-                <source media="(min-width: 48em)"
-                  srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/clearanceSale.avif">
-                <source media="(min-width: 28.125em)"
-                  srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/clearanceSale-md.avif">
-                <img alt="" src="https://i.univbkstr.com/v3/img/pages/home/rotator/clearanceSale-sm.avif"
-                  class="img-fluid">
-              </picture>
-              <span class="sr-only">LAST CHANCE SALE! Limited Options Available. Going FAST!</span>
-            </a>
+
+
+
+        <ul class="breadcrumb background_none">
+          <li> <a class="small" href="https://insitestore2.mbsbooks.com/uwmadison/merchandise"> Merchandise
+              Categories</a>
+          </li>
+          <li> <a class="small"> Men's Long Sleeve Tees</a></li>
+
+        </ul>
+
+
+        <a class="floatr right15 top-50 pageHelp"
+          href="https://insitestore2.mbsbooks.com/uwmadison/help/MerchandiseBrowse.htm">Help</a>
+        <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+        <input type="hidden" class="ga4-itemlistid" value="10318">
+        <input type="hidden" class="ga4-itemlistname" value="Men's Long Sleeve Tees">
+
+
+
+
+        <form action="/uwmadison/MerchList?ID=10318" method="post"><input name="__RequestVerificationToken"
+            type="hidden"
+            value="iNLB1lXQE2D-d7eKVPYcNmXA6Av5Tda2q7vSkbjQHVAUnYp0RSqoKuqL6ItwCQYydPPbD7HzN2pm6nC8QAa89V-QGG41">
+          <style>
+            /*.btn {
+                 border-radius: 0px;
+             }*/
+
+            .imageLeft {
+              position: absolute;
+              top: 48%;
+              left: 20px;
+              width: 50px;
+              height: 65px;
+            }
+
+            .imageRight {
+              position: absolute;
+              top: 48%;
+              right: 20px;
+              width: 50px;
+              height: 65px;
+            }
+
+            .imageLeft:hover,
+            .imageRight:hover {
+              cursor: pointer;
+            }
+          </style>
+          <input id="hiddenShowResults1" name="showResults1" type="hidden" value="1"><input id="hiddenShowResults2"
+            name="showResults2" type="hidden" value="15"><input id="hiddenShowPerPage" name="showPerPage" type="hidden"
+            value="60"><input id="hiddenID" name="mclID" type="hidden" value="10318"><input id="hiddenType"
+            name="itemType" type="hidden" value=""><input id="hiddenSearchString" name="searchString" type="hidden"
+            value=""><input id="hiddenSearchType" name="searchType" type="hidden" value="All"><input id="hiddenNum"
+            name="num" type="hidden" value=""><input id="hiddenSearchIn" name="searchin" type="hidden" value=""><input
+            id="hiddenSearchMCL" name="searchMCL" type="hidden" value=""><input id="hiddenCatID" name="CatID"
+            type="hidden" value=""><input id="hiddenOriginal" name="originalSearchType" type="hidden" value=""><input
+            id="hiddenStore" name="StoreID" type="hidden" value="171"><input id="hiddenSort" name="sortOrderEnum"
+            type="hidden" value="8"><input id="hiddenCatSearch" name="catSearch" type="hidden" value=""><input
+            id="useRouting" name="useRouting" type="hidden" value="False"><input id="isMerchList" name="isMerchList"
+            type="hidden" value="True"><input id="hiddenLargeSwitch" name="largeSwitch" type="hidden"
+            value="False"><input id="hiddenLowPrice" name="lowPrice" type="hidden" value="0"><input id="hiddenHighPrice"
+            name="highPrice" type="hidden" value="1000000"><input id="GiftReload" name="GiftReload" type="hidden"
+            value="False"><input id="fc" name="fc" type="hidden" value=""><input id="fv" name="fv" type="hidden"
+            value=""><input id="listView" name="listView" type="hidden" value="">
+
+
+          <input type="submit" id="showPerPageSubmit" value="showPerPage" name="submitButton" class="displayn">
+          <input type="submit" id="firstSubmit" value="firstSubmit" name="submitButton" class="displayn">
+          <input type="submit" id="prevSubmit" value="prevSubmit" name="submitButton" class="displayn">
+          <input type="submit" id="nextSubmit" value="nextSubmit" name="submitButton" class="displayn">
+          <input type="submit" id="lastSubmit" value="lastSubmit" name="submitButton" class="displayn">
+          <input type="submit" id="sortSubmit" value="sortSubmit" name="submitButton" class="displayn">
+          <input type="submit" id="searchSubmit" value="searchSubmit" name="submitButton" class="displayn">
+          <input type="submit" id="filterSubmit" value="filterSubmit" name="submitButton" class="displayn">
+          <div id="scrollPositionIgnore"></div>
+          <a id="goToTop" class="btn btn-default displayn" title="Go to top" tabindex="0" style="display: inline;"><span
+              class="glyphicon glyphicon-chevron-up"></span></a>
+          <div class="center">
+            <h1 class="page_header">Men's Long Sleeve Tees</h1>
+          </div>
+          <!--Search and Sort Dropdown Row-->
+          <div class="row">
+            <!--Search Bar-->
+            <div class="searchCatWrap col-sm-4 col-12 padding0 padding-right10 bottom10">
+              <div class="input-group">
+                <input type="text" class="form-control searchCat" placeholder="Search Men's Long Sleeve Tees"
+                  aria-label="Search Men's Long Sleeve Tees">
+                <button class="btn btn-default searchCatButton" type="button" aria-label="Search Men's Long Sleeve Tees"
+                  tabindex="0"><span class="glyphicon glyphicon-search"></span></button>
+              </div>
+            </div>
+
+            <!--Sort Dropdowns-->
+            <div class="sortCatWrap col-sm-8 col-12 padding0 bottom10">
+              <div class="row" style="width: 100%; justify-content: flex-end;">
+                <div class="col-md-5 col-sm-0 col-0 padding0 no_show_small">
+                  <div class="input-group">
+                    <label class="input-group-text" for="merchResultsSelectID">Show:</label>
+                    <select aria-label="Show number of items per page" id="merchResultsSelectID"
+                      class="merchResultsSelect form-control form-select wauto right5">
+                      <option value="12" class="subject-option">12 Items Per Page</option>
+                      <option value="24" class="subject-option">24 Items Per Page</option>
+                      <option value="36" class="subject-option">36 Items Per Page</option>
+                      <option value="48" class="subject-option">48 Items Per Page</option>
+                      <option selected="" value="60" class="subject-option">60 Items Per Page</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-5 col-sm-12 col-12 padding0">
+                  <div class="input-group">
+                    <label class="input-group-text" for="merchSortBySelectID">Sort By:</label>
+                    <select aria-label="Sort By" id="merchSortBySelectID"
+                      class="merchSortBy form-control form-select wauto">
+                      <option value="0" class="subject-option"> Description(A - Z)</option>
+                      <option value="1" class="subject-option"> Description(Z - A)</option>
+                      <option value="2" class="subject-option"> Price(Low - High)</option>
+                      <option value="3" class="subject-option"> Price(High - Low)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-2 col-sm-0 col-0 padding0 no_show_small">
+                  <div class="displayib largeSwitch listSwitch" data-class="" tabindex="0" aria-label="Display Large"
+                    role="button"><span class="fa fa-2x fa-th-large switchIcon"></span></div>
+                  <div class="displayib smallSwitch listSwitch listSwitchSelected" tabindex="0"
+                    aria-label="Display Small" role="button"><span class="fa fa-2x fa-th switchIcon"></span></div>
+                </div>
+
+
+              </div>
+            </div>
+
+
+          </div>
+          <!--Filter and Merch Row-->
+          <div class="row">
+            <div class="viewFiltersDiv col-12 bottom10">
+              <div class="filterButtonWrapper">
+                <div tabindex="0" role="button" aria-label="Open Filters Dialog" class="viewFiltersButton displayn">
+                  <span class="filterText">FILTERS</span>
+                </div>
+              </div>
+            </div>
+
+            <!--Filter Section-->
+            <div role="dialog" class="filterColumn col-md-3 col-sm-3 col-12 displayn">
+              <div class="row">
+                <div class="col-12 padding0">
+                  <p class="filterTitle font20"><strong>FILTER BY:</strong></p>
+                  <p class="closeFilterX floatr hover_pointer filterDisplay"><span
+                      class="glyphicon glyphicon-remove"></span></p>
+                  <input type="button" id="filterButton1"
+                    class="btn btn-primary top5 wauto filterButton filterButtonDisplay" value="Apply" tabindex="0">
+                </div>
+              </div>
+              <div class="filterOption top10 filterPriceOption row">
+
+                <div class="col-12 padding0">
+                  <p class="filterOptionTitle padding5 bottom_border bottom5"><strong>Price</strong><span
+                      class="fa fa-minus-square floatr hover_pointer filterCollapse" data-id="filterPriceOption"
+                      data-filtername="Price" tabindex="0" aria-label="Collapse Price Filter" role="button"></span></p>
+                </div>
+                <div class="col-12 padding0">
+                  <div class="filterValueWrapper bottom10 " data-filterid="filterPriceOption">
+                    <div class="filterPrice top10 bottom10 input-group">
+                      <input aria-label="Minimum Price Filter Input" class="filterMin form-control" id="filterMinInput"
+                        max="100000" min="0" name="filterMin" placeholder="Min" type="number" value="0">
+                      <span class="input-group-text">to</span>
+                      <input aria-label="Maximum Price Filter Input" class="filterMin form-control" id="filterMaxInput"
+                        max="100000" min="0" name="filterMax" placeholder="Max" type="number" value="1000000">
+                    </div>
+                    <div class="filterOption top10 filterSaleOption">
+                      <div class="form-floating">
+                        <input aria-label="On Sale" class="filterCheck newCheckbox" data-category="filteronsale"
+                          data-value="filteronsale" id="merchFilterOnSale" name="merchFilterOnSale" type="checkbox"
+                          value="true"><input name="merchFilterOnSale" type="hidden" value="false">
+                        <span class="newCheckboxText"> On Sale</span>
+                      </div>
+                    </div>
+                    <p id="priceError" role="alert" class="red top10"></p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+            <!--MerchList Section-->
+            <div class="merchColumn col-12" style="visibility: visible;">
+              <div class="row">
+                <div class="filterSelections col-12 padding0 bottom10">
+                  <a class="hover_pointer clearIndPriceFilter bottom10 displayn filterSelection" tabindex="0">
+                    <span class="priceFilterOptionText"></span>
+                    <span class="fa fa-times"></span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 padding0">
+                  <div class="row">
+                    <!--
+  This is the container for all merch list / grid items.
+  This is where we determine if we need to display merch list / grid, and iterate through our merch items.
+-->
+
+
+
+                    <!---->
+
+
+
+                    <!--One Item-->
+                    <div data-count="1" data-merid="621693"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name"
+                        value="Blue 84 Long Sleeve &quot;Bucky&quot; T-Shirt (White)">
+                      <input type="hidden" class="ga4-price" value="34.99">
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0">
+                      <input type="hidden" class="ga4-sku" value="2046925           ">
+                      <input type="hidden" class="ga4-discount">
+                      <input type="hidden" class="ga4-affiliation" value="UW Sandbox">
+                      <input type="hidden" class="ga4-items-identifier" value="-1">
+                      <input type="hidden" class="ga4-isGeneral" value="False">
+                      <input type="hidden" class="ga4-author">
+                      <input type="hidden" class="ga4-isNonMerch" value="False">
+                      <input type="hidden" class="ga4-isWebSku" value="false">
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=621693&amp;CategoryName=Men's Long Sleeve Tees&amp;CatID=10318&amp;Name=Men's Long Sleeve Tees"
+                            class="merchLink displayb bottom10">
+                            <div class="imageWrapper">
+                              <div class="bottom10 merchImageWrapper merchlist">
+                                <!--Merch Image-->
+                                <img width="200" class="merchImage img-responsive"
+                                  src="https://insitestore2.mbsbooks.com/storeimages/171-621693-2.png"
+                                  alt="Blue 84 Long Sleeve &quot;Bucky&quot; T-Shirt (White)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p class="merchTitle top0 textc lead" data-id="621693">Blue 84 Long Sleeve "Bucky" T-Shirt
+                              (White)</p>
+                          </a>
+                          <div class="merchCol1 textc bottom10">
+
+                            <div class="merchRank">
+                              <span class="ranking red fa fa-star"></span>
+                              <span class="ranking red fa fa-star"></span>
+                              <span class="ranking red fa fa-star"></span>
+                              <span class="ranking red fa fa-star"></span>
+                              <span class="ranking red fa fa-star"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p class="merchNumber"><span class="merchSKU">2046925 </span></p>
+
+                            <p class="merchPrice top5 bold"><span
+                                class="merchPriceCurrent currentPrice621693">$34.99</span></p>
+
+                            <p class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="2" data-merid="621837" class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name" value="Blue 84 Long Sleeve Bucky Badger T-Shirt (Red)">
+                      <input type="hidden" class="ga4-price" value="29.99">
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0">
+                      <input type="hidden" class="ga4-sku" value="2046625           ">
+                      <input type="hidden" class="ga4-discount">
+                      <input type="hidden" class="ga4-affiliation" value="UW Sandbox">
+                      <input type="hidden" class="ga4-items-identifier" value="-1">
+                      <input type="hidden" class="ga4-isGeneral" value="False">
+                      <input type="hidden" class="ga4-author">
+                      <input type="hidden" class="ga4-isNonMerch" value="False">
+                      <input type="hidden" class="ga4-isWebSku" value="false">
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=621837&amp;CategoryName=Men's Long Sleeve Tees&amp;CatID=10318&amp;Name=Men's Long Sleeve Tees"
+                            class="merchLink displayb bottom10">
+                            <div class="imageWrapper">
+                              <div class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" class="merchImage img-responsive"
+                                  src="https://insitestore2.mbsbooks.com/storeimages/171-621837-1.jpg"
+                                  alt="Blue 84 Long Sleeve Bucky Badger T-Shirt (Red)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p class="merchTitle top0 textc lead" data-id="621837">Blue 84 Long Sleeve Bucky Badger
+                              T-Shirt (Red)</p>
+                          </a>
+                          <div class="merchCol1 textc bottom10">
+
+                            <div class="merchRank">
+                              <span class="ranking red fa fa-star"></span>
+                              <span class="ranking red fa fa-star"></span>
+                              <span class="ranking red fa fa-star"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p class="merchNumber"><span class="merchSKU">2046625 </span></p>
+
+                            <p class="merchPrice top5 bold"><span
+                                class="merchPriceCurrent currentPrice621837">$29.99</span></p>
+
+                            <p class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="3" data-merid="621690"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name"
+                        value="Blue 84 Long Sleeve Shirt &quot;Wisconsin&quot; T-Shirt (Red)">
+                      <input type="hidden" class="ga4-price" value="29.99">
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0">
+                      <input type="hidden" class="ga4-sku" value="2046922           ">
+                      <input type="hidden" class="ga4-discount">
+                      <input type="hidden" class="ga4-affiliation" value="UW Sandbox">
+                      <input type="hidden" class="ga4-items-identifier" value="-1">
+                      <input type="hidden" class="ga4-isGeneral" value="False">
+                      <input type="hidden" class="ga4-author">
+                      <input type="hidden" class="ga4-isNonMerch" value="False">
+                      <input type="hidden" class="ga4-isWebSku" value="false">
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=621690&amp;CategoryName=Men's Long Sleeve Tees&amp;CatID=10318&amp;Name=Men's Long Sleeve Tees"
+                            class="merchLink displayb bottom10">
+                            <div class="imageWrapper">
+                              <div class="bottom10 merchImageWrapper merchlist">
+                                <!--Merch Image-->
+                                <img width="200" class="merchImage img-responsive"
+                                  src="https://insitestore2.mbsbooks.com/storeimages/171-621690-1.png"
+                                  alt="Blue 84 Long Sleeve Shirt &quot;Wisconsin&quot; T-Shirt (Red)"
+                                  aria-hidden="true">
+                              </div>
+                            </div>
+                            <p class="merchTitle top0 textc lead" data-id="621690">Blue 84 Long Sleeve Shirt "Wisconsin"
+                              T-Shirt (Red)</p>
+                          </a>
+                          <div class="merchCol1 textc bottom10">
+
+                            <div class="merchRank">
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p class="merchNumber"><span class="merchSKU">2046922 </span></p>
+
+                            <p class="merchPrice top5 bold"><span
+                                class="merchPriceCurrent currentPrice621690">$29.99</span></p>
+
+                            <p class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="4" data-merid="622235" class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name" value="Blue 84 Wisconsin Dad T-Shirt (Gray) 3X*">
+                      <input type="hidden" class="ga4-price" value="29.99">
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0">
+                      <input type="hidden" class="ga4-sku" value="2051180           ">
+                      <input type="hidden" class="ga4-discount">
+                      <input type="hidden" class="ga4-affiliation" value="UW Sandbox">
+                      <input type="hidden" class="ga4-items-identifier" value="-1">
+                      <input type="hidden" class="ga4-isGeneral" value="False">
+                      <input type="hidden" class="ga4-author">
+                      <input type="hidden" class="ga4-isNonMerch" value="False">
+                      <input type="hidden" class="ga4-isWebSku" value="false">
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=622235&amp;CategoryName=Men's Long Sleeve Tees&amp;CatID=10318&amp;Name=Men's Long Sleeve Tees"
+                            class="merchLink displayb bottom10">
+                            <div class="imageWrapper">
+                              <div class="bottom10 merchImageWrapper merchlist">
+                                <!--Merch Image-->
+                                <img width="200" class="merchImage img-responsive"
+                                  src="https://insitestore2.mbsbooks.com/storeimages/171-622235-1.png"
+                                  alt="Blue 84 Wisconsin Dad T-Shirt (Gray) 3X*" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p class="merchTitle top0 textc lead" data-id="622235">Blue 84 Wisconsin Dad T-Shirt (Gray)
+                              3X*</p>
+                          </a>
+                          <div class="merchCol1 textc bottom10">
+
+                            <div class="merchRank">
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p class="merchNumber"><span class="merchSKU">2051180 </span></p>
+
+                            <p class="merchPrice top5 bold"><span
+                                class="merchPriceCurrent currentPrice622235">$29.99</span></p>
+
+                            <p class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="5" data-merid="1597514"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name" value="Blue 84 Wisconsin Hockey T-Shirt (Red) 3X">
+                      <input type="hidden" class="ga4-price" value="21.99">
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0">
+                      <input type="hidden" class="ga4-sku" value="2072935           ">
+                      <input type="hidden" class="ga4-discount">
+                      <input type="hidden" class="ga4-affiliation" value="UW Sandbox">
+                      <input type="hidden" class="ga4-items-identifier" value="-1">
+                      <input type="hidden" class="ga4-isGeneral" value="False">
+                      <input type="hidden" class="ga4-author">
+                      <input type="hidden" class="ga4-isNonMerch" value="False">
+                      <input type="hidden" class="ga4-isWebSku" value="false">
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=1597514&amp;CategoryName=Men's Long Sleeve Tees&amp;CatID=10318&amp;Name=Men's Long Sleeve Tees"
+                            class="merchLink displayb bottom10">
+                            <div class="imageWrapper">
+                              <div class="bottom10 merchImageWrapper merchlist">
+                                <!--Merch Image-->
+                                <img width="200" class="merchImage img-responsive"
+                                  src="https://insitestore2.mbsbooks.com/storeimages/171-1597514-1.png"
+                                  alt="Blue 84 Wisconsin Hockey T-Shirt (Red) 3X" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p class="merchTitle top0 textc lead" data-id="1597514">Blue 84 Wisconsin Hockey T-Shirt
+                              (Red)
+                              3X</p>
+                          </a>
+                          <div class="merchCol1 textc bottom10">
+
+                            <div class="merchRank">
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p class="merchNumber"><span class="merchSKU">2072935 </span></p>
+
+                            <p class="merchPrice top5 bold"><span
+                                class="merchPriceCurrent currentPrice1597514">$21.99</span></p>
+
+                            <p class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="6" data-merid="621838" class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name" value="Blue 84 Wisconsin Long Sleeve T-Shirt (Gray)">
+                      <input type="hidden" class="ga4-price" value="29.99">
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0">
+                      <input type="hidden" class="ga4-sku" value="2046627           ">
+                      <input type="hidden" class="ga4-discount">
+                      <input type="hidden" class="ga4-affiliation" value="UW Sandbox">
+                      <input type="hidden" class="ga4-items-identifier" value="-1">
+                      <input type="hidden" class="ga4-isGeneral" value="False">
+                      <input type="hidden" class="ga4-author">
+                      <input type="hidden" class="ga4-isNonMerch" value="False">
+                      <input type="hidden" class="ga4-isWebSku" value="false">
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=621838&amp;CategoryName=Men's Long Sleeve Tees&amp;CatID=10318&amp;Name=Men's Long Sleeve Tees"
+                            class="merchLink displayb bottom10">
+                            <div class="imageWrapper">
+                              <div class="bottom10 merchImageWrapper merchlist">
+                                <!--Merch Image-->
+                                <img width="200" class="merchImage img-responsive"
+                                  src="https://insitestore2.mbsbooks.com/storeimages/171-621838-1.png"
+                                  alt="Blue 84 Wisconsin Long Sleeve T-Shirt (Gray)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p class="merchTitle top0 textc lead" data-id="621838">Blue 84 Wisconsin Long Sleeve T-Shirt
+                              (Gray)</p>
+                          </a>
+                          <div class="merchCol1 textc bottom10">
+
+                            <div class="merchRank">
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p class="merchNumber"><span class="merchSKU">2046627 </span></p>
+
+                            <p class="merchPrice top5 bold"><span
+                                class="merchPriceCurrent currentPrice621838">$29.99</span></p>
+
+                            <p class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="7" data-merid="1346529"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name"
+                        value="Champion &quot;Bucky&quot; Long Sleeve T-Shirt (White)">
+                      <input type="hidden" class="ga4-price" value="34.99">
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0">
+                      <input type="hidden" class="ga4-sku" value="2046574           ">
+                      <input type="hidden" class="ga4-discount">
+                      <input type="hidden" class="ga4-affiliation" value="UW Sandbox">
+                      <input type="hidden" class="ga4-items-identifier" value="-1">
+                      <input type="hidden" class="ga4-isGeneral" value="False">
+                      <input type="hidden" class="ga4-author">
+                      <input type="hidden" class="ga4-isNonMerch" value="False">
+                      <input type="hidden" class="ga4-isWebSku" value="false">
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=1346529&amp;CategoryName=Men's Long Sleeve Tees&amp;CatID=10318&amp;Name=Men's Long Sleeve Tees"
+                            class="merchLink displayb bottom10">
+                            <div class="imageWrapper">
+                              <div class="bottom10 merchImageWrapper merchlist">
+                                <div class="saleBadge" style="background-color: #c5050c;">SALE!</div>
+                                <!--Merch Image-->
+                                <img width="200" class="merchImage img-responsive"
+                                  src="https://insitestore2.mbsbooks.com/storeimages/171-1346529-1.png"
+                                  alt="Champion &quot;Bucky&quot; Long Sleeve T-Shirt (White)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p class="merchTitle top0 textc lead" data-id="1346529">Champion "Bucky" Long Sleeve T-Shirt
+                              (White)</p>
+                          </a>
+                          <div class="merchCol1 textc bottom10">
+
+                            <div class="merchRank">
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p class="merchNumber"><span class="merchSKU">2046574 </span></p>
+
+                            <p class="merchPrice top5 bold"><span
+                                class="merchPriceCurrent currentPrice1346529">$34.99</span></p>
+
+                            <p class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="8" data-merid="621611" class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name" value="Champion Long Sleeve Bucky T-Shirt (Red) ^">
+                      <input type="hidden" class="ga4-price" value="34.99">
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0">
+                      <input type="hidden" class="ga4-sku" value="2046573           ">
+                      <input type="hidden" class="ga4-discount">
+                      <input type="hidden" class="ga4-affiliation" value="UW Sandbox">
+                      <input type="hidden" class="ga4-items-identifier" value="-1">
+                      <input type="hidden" class="ga4-isGeneral" value="False">
+                      <input type="hidden" class="ga4-author">
+                      <input type="hidden" class="ga4-isNonMerch" value="False">
+                      <input type="hidden" class="ga4-isWebSku" value="false">
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=621611&amp;CategoryName=Men's Long Sleeve Tees&amp;CatID=10318&amp;Name=Men's Long Sleeve Tees"
+                            class="merchLink displayb bottom10">
+                            <div class="imageWrapper">
+                              <div class="bottom10 merchImageWrapper merchlist">
+                                <!--Merch Image-->
+                                <img width="200" class="merchImage img-responsive"
+                                  src="https://insitestore2.mbsbooks.com/storeimages/171-621611-1.png"
+                                  alt="Champion Long Sleeve Bucky T-Shirt (Red) ^" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p class="merchTitle top0 textc lead" data-id="621611">Champion Long Sleeve Bucky T-Shirt
+                              (Red) ^</p>
+                          </a>
+                          <div class="merchCol1 textc bottom10">
+
+                            <div class="merchRank">
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p class="merchNumber"><span class="merchSKU">2046573 </span></p>
+
+                            <p class="merchPrice top5 bold"><span
+                                class="merchPriceCurrent currentPrice621611">$34.99</span></p>
+
+                            <p class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="9" data-merid="1349184"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name"
+                        value="Champion University of Wisconsin Long Sleeve (Black)">
+                      <input type="hidden" class="ga4-price" value="34.99">
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0">
+                      <input type="hidden" class="ga4-sku" value="2066584           ">
+                      <input type="hidden" class="ga4-discount">
+                      <input type="hidden" class="ga4-affiliation" value="UW Sandbox">
+                      <input type="hidden" class="ga4-items-identifier" value="-1">
+                      <input type="hidden" class="ga4-isGeneral" value="False">
+                      <input type="hidden" class="ga4-author">
+                      <input type="hidden" class="ga4-isNonMerch" value="False">
+                      <input type="hidden" class="ga4-isWebSku" value="false">
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=1349184&amp;CategoryName=Men's Long Sleeve Tees&amp;CatID=10318&amp;Name=Men's Long Sleeve Tees"
+                            class="merchLink displayb bottom10">
+                            <div class="imageWrapper">
+                              <div class="bottom10 merchImageWrapper merchlist">
+                                <!--Merch Image-->
+                                <img width="200" class="merchImage img-responsive"
+                                  src="https://insitestore2.mbsbooks.com/storeimages/171-1349184-2.png"
+                                  alt="Champion University of Wisconsin Long Sleeve (Black)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p class="merchTitle top0 textc lead" data-id="1349184">Champion University of Wisconsin
+                              Long
+                              Sleeve (Black)</p>
+                          </a>
+                          <div class="merchCol1 textc bottom10">
+
+                            <div class="merchRank">
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p class="merchNumber"><span class="merchSKU">2066584 </span></p>
+
+                            <p class="merchPrice top5 bold"><span
+                                class="merchPriceCurrent currentPrice1349184">$34.99</span></p>
+
+                            <p class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="10" data-merid="1349190"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name"
+                        value="Champion University of Wisconsin Long Sleeve T-Shirt (White)">
+                      <input type="hidden" class="ga4-price" value="34.99">
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0">
+                      <input type="hidden" class="ga4-sku" value="2066586           ">
+                      <input type="hidden" class="ga4-discount">
+                      <input type="hidden" class="ga4-affiliation" value="UW Sandbox">
+                      <input type="hidden" class="ga4-items-identifier" value="-1">
+                      <input type="hidden" class="ga4-isGeneral" value="False">
+                      <input type="hidden" class="ga4-author">
+                      <input type="hidden" class="ga4-isNonMerch" value="False">
+                      <input type="hidden" class="ga4-isWebSku" value="false">
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=1349190&amp;CategoryName=Men's Long Sleeve Tees&amp;CatID=10318&amp;Name=Men's Long Sleeve Tees"
+                            class="merchLink displayb bottom10">
+                            <div class="imageWrapper">
+                              <div class="bottom10 merchImageWrapper merchlist">
+                                <!--Merch Image-->
+                                <img width="200" class="merchImage img-responsive"
+                                  src="https://insitestore2.mbsbooks.com/storeimages/171-1349190-2.png"
+                                  alt="Champion University of Wisconsin Long Sleeve T-Shirt (White)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p class="merchTitle top0 textc lead" data-id="1349190">Champion University of Wisconsin
+                              Long
+                              Sleeve T-Shirt (White)</p>
+                          </a>
+                          <div class="merchCol1 textc bottom10">
+
+                            <div class="merchRank">
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p class="merchNumber"><span class="merchSKU">2066586 </span></p>
+
+                            <p class="merchPrice top5 bold"><span
+                                class="merchPriceCurrent currentPrice1349190">$34.99</span></p>
+
+                            <p class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="11" data-merid="1550354"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name"
+                        value="Cutter &amp; Buck American Family Insurance Long Sleeve (Char) *">
+                      <input type="hidden" class="ga4-price" value="29.99">
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0">
+                      <input type="hidden" class="ga4-sku" value="2070133           ">
+                      <input type="hidden" class="ga4-discount">
+                      <input type="hidden" class="ga4-affiliation" value="UW Sandbox">
+                      <input type="hidden" class="ga4-items-identifier" value="-1">
+                      <input type="hidden" class="ga4-isGeneral" value="False">
+                      <input type="hidden" class="ga4-author">
+                      <input type="hidden" class="ga4-isNonMerch" value="False">
+                      <input type="hidden" class="ga4-isWebSku" value="false">
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=1550354&amp;CategoryName=Men's Long Sleeve Tees&amp;CatID=10318&amp;Name=Men's Long Sleeve Tees"
+                            class="merchLink displayb bottom10">
+                            <div class="imageWrapper">
+                              <div class="bottom10 merchImageWrapper merchlist">
+                                <!--Merch Image-->
+                                <img width="200" class="merchImage img-responsive"
+                                  src="https://insitestore2.mbsbooks.com/storeimages/171-1550354-1.png"
+                                  alt="Cutter &amp; Buck American Family Insurance Long Sleeve (Char) *"
+                                  aria-hidden="true">
+                              </div>
+                            </div>
+                            <p class="merchTitle top0 textc lead" data-id="1550354">Cutter &amp; Buck American Family
+                              Insurance Long Sleeve (Char) *</p>
+                          </a>
+                          <div class="merchCol1 textc bottom10">
+
+                            <div class="merchRank">
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p class="merchNumber"><span class="merchSKU">2070133 </span></p>
+
+                            <p class="merchPrice top5 bold"><span
+                                class="merchPriceCurrent currentPrice1550354">$29.99</span></p>
+
+                            <p class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="12" data-merid="890864" class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name" value="JanSport Wisconsinopoly Game">
+                      <input type="hidden" class="ga4-price" value="89.95">
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0">
+                      <input type="hidden" class="ga4-sku" value="099127660         ">
+                      <input type="hidden" class="ga4-discount">
+                      <input type="hidden" class="ga4-affiliation" value="UW Sandbox">
+                      <input type="hidden" class="ga4-items-identifier" value="-1">
+                      <input type="hidden" class="ga4-isGeneral" value="True">
+                      <input type="hidden" class="ga4-author">
+                      <input type="hidden" class="ga4-isNonMerch" value="False">
+                      <input type="hidden" class="ga4-isWebSku" value="false">
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=890864&amp;CategoryName=Men's Long Sleeve Tees&amp;CatID=10318&amp;Name=Men's Long Sleeve Tees"
+                            class="merchLink displayb bottom10">
+                            <div class="imageWrapper">
+                              <div class="bottom10 merchImageWrapper merchlist">
+                                <!--Merch Image-->
+                                <img width="200" class="merchImage img-responsive"
+                                  src="https://insitestore2.mbsbooks.com/storeimages/171-890864-2.png"
+                                  alt="JanSport Wisconsinopoly Game" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p class="merchTitle top0 textc lead" data-id="890864">JanSport Wisconsinopoly Game</p>
+                          </a>
+                          <div class="merchCol1 textc bottom10">
+
+                            <div class="merchRank">
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p class="merchNumber"><span class="merchSKU">099127660 </span></p>
+
+                            <p class="merchPrice top5 bold"><span
+                                class="merchPriceCurrent currentPrice890864">$89.95</span></p>
+
+                            <p class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="13" data-merid="1566716"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name"
+                        value="League University of Wisconsin Long Sleeve (Heathered Gray)*">
+                      <input type="hidden" class="ga4-price" value="34.99">
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0">
+                      <input type="hidden" class="ga4-sku" value="2069858           ">
+                      <input type="hidden" class="ga4-discount">
+                      <input type="hidden" class="ga4-affiliation" value="UW Sandbox">
+                      <input type="hidden" class="ga4-items-identifier" value="-1">
+                      <input type="hidden" class="ga4-isGeneral" value="False">
+                      <input type="hidden" class="ga4-author">
+                      <input type="hidden" class="ga4-isNonMerch" value="False">
+                      <input type="hidden" class="ga4-isWebSku" value="false">
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=1566716&amp;CategoryName=Men's Long Sleeve Tees&amp;CatID=10318&amp;Name=Men's Long Sleeve Tees"
+                            class="merchLink displayb bottom10">
+                            <div class="imageWrapper">
+                              <div class="bottom10 merchImageWrapper merchlist">
+                                <!--Merch Image-->
+                                <img width="200" class="merchImage img-responsive"
+                                  src="https://insitestore2.mbsbooks.com/storeimages/171-1566716-1.png"
+                                  alt="League University of Wisconsin Long Sleeve (Heathered Gray)*" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p class="merchTitle top0 textc lead" data-id="1566716">League University of Wisconsin Long
+                              Sleeve (Heathered Gray)*</p>
+                          </a>
+                          <div class="merchCol1 textc bottom10">
+
+                            <div class="merchRank">
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p class="merchNumber"><span class="merchSKU">2069858 </span></p>
+
+                            <p class="merchPrice top5 bold"><span
+                                class="merchPriceCurrent currentPrice1566716">$34.99</span></p>
+
+                            <p class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="14" data-merid="1580797"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name"
+                        value="League Wisconsin Raglan Long Sleeve T-Shirt (Red/White)">
+                      <input type="hidden" class="ga4-price" value="39.99">
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0">
+                      <input type="hidden" class="ga4-sku" value="2071915           ">
+                      <input type="hidden" class="ga4-discount">
+                      <input type="hidden" class="ga4-affiliation" value="UW Sandbox">
+                      <input type="hidden" class="ga4-items-identifier" value="-1">
+                      <input type="hidden" class="ga4-isGeneral" value="False">
+                      <input type="hidden" class="ga4-author">
+                      <input type="hidden" class="ga4-isNonMerch" value="False">
+                      <input type="hidden" class="ga4-isWebSku" value="false">
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=1580797&amp;CategoryName=Men's Long Sleeve Tees&amp;CatID=10318&amp;Name=Men's Long Sleeve Tees"
+                            class="merchLink displayb bottom10">
+                            <div class="imageWrapper">
+                              <div class="bottom10 merchImageWrapper merchlist">
+                                <!--Merch Image-->
+                                <img width="200" class="merchImage img-responsive"
+                                  src="https://insitestore2.mbsbooks.com/storeimages/171-1580797-1.png"
+                                  alt="League Wisconsin Raglan Long Sleeve T-Shirt (Red/White)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p class="merchTitle top0 textc lead" data-id="1580797">League Wisconsin Raglan Long Sleeve
+                              T-Shirt (Red/White)</p>
+                          </a>
+                          <div class="merchCol1 textc bottom10">
+
+                            <div class="merchRank">
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p class="merchNumber"><span class="merchSKU">2071915 </span></p>
+
+                            <p class="merchPrice top5 bold"><span
+                                class="merchPriceCurrent currentPrice1580797">$39.99</span></p>
+
+                            <p class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="15" data-merid="1523526"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name"
+                        value="Under Armour Vault Bucky Badger Long Sleeve Tee (Gray) *">
+                      <input type="hidden" class="ga4-price" value="44.99">
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0">
+                      <input type="hidden" class="ga4-sku" value="2068023           ">
+                      <input type="hidden" class="ga4-discount">
+                      <input type="hidden" class="ga4-affiliation" value="UW Sandbox">
+                      <input type="hidden" class="ga4-items-identifier" value="-1">
+                      <input type="hidden" class="ga4-isGeneral" value="False">
+                      <input type="hidden" class="ga4-author">
+                      <input type="hidden" class="ga4-isNonMerch" value="False">
+                      <input type="hidden" class="ga4-isWebSku" value="false">
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=1523526&amp;CategoryName=Men's Long Sleeve Tees&amp;CatID=10318&amp;Name=Men's Long Sleeve Tees"
+                            class="merchLink displayb bottom10">
+                            <div class="imageWrapper">
+                              <div class="bottom10 merchImageWrapper merchlist">
+                                <!--Merch Image-->
+                                <img width="200" class="merchImage img-responsive"
+                                  src="https://insitestore2.mbsbooks.com/storeimages/171-1523526-1.png"
+                                  alt="Under Armour Vault Bucky Badger Long Sleeve Tee (Gray) *" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p class="merchTitle top0 textc lead" data-id="1523526">Under Armour Vault Bucky Badger Long
+                              Sleeve Tee (Gray) *</p>
+                          </a>
+                          <div class="merchCol1 textc bottom10">
+
+                            <div class="merchRank">
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                              <span class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p class="merchNumber"><span class="merchSKU">2068023 </span></p>
+
+                            <p class="merchPrice top5 bold"><span
+                                class="merchPriceCurrent currentPrice1523526">$44.99</span></p>
+
+                            <p class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+                  </div>
+                  <div class="row">
+                    <div class="textc">
+                      <ul class="pagination" style="visibility: visible;">
+
+                        <li class="active"><a tabindex="0" class="hover_pointer pageNumber" data-buttoncount="1"
+                            data-pagecount="1">1</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="carousel-item">
-            <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Winter-Wear">
-              <picture>
-                <source media="(min-width: 48em)"
-                  srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/coldGear.avif">
-                <source media="(min-width: 28.125em)"
-                  srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/coldGear-md.avif">
-                <img alt="" src="https://i.univbkstr.com/v3/img/pages/home/rotator/coldGear-sm.avif" class="img-fluid">
-              </picture>
-              <span class="sr-only">Keep warm this winter! Survive the cold with your favorite gear from the University
-                Book
-                Store.</span>
-            </a>
-          </div>
 
-          <div class="carousel-item">
-            <a href="https://www.uwbookstore.com/Tech">
-              <picture>
-                <source media="(min-width: 48em)"
-                  srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/appleSoar.avif">
-                <source media="(min-width: 28.125em)"
-                  srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/appleSoar-md.avif">
-                <img alt="" src="https://i.univbkstr.com/v3/img/pages/home/rotator/appleSoar-sm.avif" class="img-fluid">
-              </picture>
-              <span class="sr-only">WELCOME BACK, BADGERS. Start 2025 off right! Low education pricing, now and forever,
-                for
-                students and alumni.</span>
-            </a>
+          <div id="itemFormModal" class="modal fade" role="dialog" tabindex="0">
+            <input type="hidden" value="" id="itemFormButton">
+            <input type="hidden" value="" id="itemFormType">
+            <input type="hidden" value="" id="itemFormQty">
+            <input type="hidden" value="" id="itemFormcolorDesc">
+            <input type="hidden" value="" id="itemFormcolorValue">
+            <input type="hidden" value="" id="itemFormlogoDesc">
+            <input type="hidden" value="" id="itemFormlogoValue">
+            <input type="hidden" value="" id="itemFormsizeDesc">
+            <input type="hidden" value="" id="itemFormsizeValue">
+            <input type="hidden" value="" id="itemFormTypeCode">
+            <input type="hidden" value="" id="itemFormCurrentPrice">
+            <input type="hidden" value="" id="itemFormOldType">
+            <input type="hidden" value="" id="itemFormOldTypeValue">
+            <input type="hidden" value="" id="itemFormQuick">
+            <input type="hidden" value="" id="itemFormSKU">
+            <input type="hidden" value="" id="itemFormMerchImage">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content itemFormModalContent"></div>
+            </div>
           </div>
-        </div>
+          <div id="cartType" class="modal fade" role="dialog" tabindex="0">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-body cartTypeBody"></div>
+              </div>
+            </div>
+          </div>
+          <div id="quickViewModal" class="modal fade" role="dialog" tabindex="0">
+            <div class="modal-dialog modal-lg">
+              <!-- Modal content-->
+              <div class="modal-content quickViewContent">
+              </div>
+            </div>
+          </div>
+          <div id="overlay">
+            <i id="merchSpinner" class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+          </div>
+          <div id="imageLightBox" class="modal fade" role="dialog" tabindex="0">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="row bottom10">
+                    <div class="col-md-1 col-sm-2 col-2 textl">
+                      <a class="imageLightBoxLeft" style="display: inline-block;"><img class="imageLeft"
+                          src="/uwmadison/RWD-IMG/chevLeft.png" alt="Left Arrow For Light Box"></a>
+                    </div>
+                    <div class="modalDetailImage textc col-md-10 col-sm-8 col-8" data-count="0">
+                      <img data-id="1" class="imageLightBoxBig img-responsive margin_auto" alt="">
+                    </div>
+                    <div class="col-md-1 col-sm-2 col-2 textr">
+                      <a class="imageLightBoxRight" style="display: inline-block;"><img class="imageRight"
+                          src="/uwmadison/RWD-IMG/chevRight.png" alt="Right Arrow For Light Box"></a>
+                    </div>
+                  </div>
+                  <div class="modalDetailThumbnail textc">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-bs-dismiss="modal" tabindex="0">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
       </div>
     </div>
 
-    <div class="text-center mb-4">
-      <a href="https://www.cityofmadison.com/parking/garages-lots/current-hourly-parking-availability" target="_blank"
-        class="d-block">
-        <picture>
-          <source media="(min-width: 48em)" srcset="https://i.univbkstr.com/v3/img/pages/home/stateStParking.jpg">
-          <img src="https://i.univbkstr.com/v3/img/pages/home/stateStParking-sm.jpg"
-            alt="Hey Freshman! From Technology to Textbooks, we've got you covered." loading="lazy"
-            class="border-lt-gray img-fluid">
-        </picture>
-      </a>
+
+
+    <div class="card previousDynamic dynamicCard bottom10" style="display: flex">
+      <div class="card-header">
+        Previously Viewed Items
+      </div>
+      <div class="card-body row">
+        <div class="col-1 dynamicLeft previousArrow displayn" style="height: 223px;"><img tabindex="0"
+            src="/uwmadison/RWD-IMG/chevLeft.png" class="previousLeft dynamicLeftArrow" data-start="1"></div>
+        <div class="col-12 row">
+          <div class="dynamicItem previousItem col-lg-2 col-md-3 col-sm-4 col-6 textc top15" data-id="621837">
+
+            <div
+              class="previousWrap border top-5 right-5 left-5 bottom-5 padding-top5 padding-right5 padding-bottom5 padding-left5 displayn"
+              data-count="1" style="display: block; height: 215px;">
+              <a href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=621837">
+                <img src="//insitestore2.mbsbooks.com/uwmadison/storeimages/171-621837-1_th.jpg" class="dynamicImage"
+                  alt="Blue 84 Long Sleeve Bucky Badger T-Shirt (Red) Image">
+                <p class="dynamicLink small">Blue 84 Long Sleeve Bucky Badger T-Shirt (Red)</p>
+              </a>
+              <p class="dynamicPrice small">$29.99</p>
+            </div>
+          </div>
+          <div class="dynamicItem previousItem col-lg-2 col-md-3 col-sm-4 col-6 textc top15" data-id="621693">
+
+            <div
+              class="previousWrap border top-5 right-5 left-5 bottom-5 padding-top5 padding-right5 padding-bottom5 padding-left5 displayn"
+              data-count="2" style="display: block; height: 215px;">
+              <a href="//insitestore2.mbsbooks.com/uwmadison/MerchDetail?MerchID=621693">
+                <img src="//insitestore2.mbsbooks.com/uwmadison/storeimages/171-621693-2_th.png" class="dynamicImage"
+                  alt="Blue 84 Long Sleeve &quot;Bucky&quot; T-Shirt (White) Image">
+                <p class="dynamicLink small">Blue 84 Long Sleeve "Bucky" T-Shirt (White)</p>
+              </a>
+              <p class="dynamicPrice small">$34.99</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-1 dynamicRight previousArrow displayn" style="height: 223px;"><img tabindex="0"
+            src="/uwmadison/RWD-IMG/chevRight.png" class="previousRight dynamicRightArrow" data-start="7"></div>
+        <div class="clear"></div>
+      </div>
     </div>
 
-    <section class="content__wrapper">
-
-      <div class="featured__wrapper">
-
-        <div class="featured__item">
-          <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/New-Items">
-            <img loading="lazy" src="https://i.univbkstr.com/v3/img/pages/home/newArrivals.webp" class="img-fluid"
-              alt="New Arrivals" width="210" height="210"> </a>
-          <p>New Arrivals</p>
-        </div>
-
-        <div class="featured__item">
-          <a href="https://www.uwbookstore.com/Tech">
-            <img loading="lazy" src="https://i.univbkstr.com/v3/img/pages/home/tech.webp" class="img-fluid" alt="Apple"
-              width="210" height="210"> </a>
-          <p>Apple</p>
-        </div>
-
-        <div class="featured__item">
-          <a href="https://www.uwbookstore.com/School-Supplies">
-            <img loading="lazy" src="https://i.univbkstr.com/v3/img/pages/home/schoolSupplies.webp" class="img-fluid"
-              alt="School Supplies" width="210" height="210"> </a>
-          <p>School Supplies</p>
-        </div>
-
-        <div class="featured__item">
-          <a href="https://www.uwbookstore.com/Headwear">
-            <img loading="lazy" src="https://i.univbkstr.com/v3/img/pages/home/hats.webp" class="img-fluid" alt="Hats"
-              width="210" height="210">
-          </a>
-          <p>Hats</p>
-        </div>
-      </div>
-
-      <div class="wiscard__wrapper">
-
-        <div class="wiscard__item--img">
-          <img alt="" class="img-fluid center-block" src="https://i.univbkstr.com/v3/img/pages/home/bookyWiscard.webp"
-            loading="lazy" width="400" height="252">
-        </div>
-
-        <div class="wiscard__item--text">
-          <div class="wiscard__header">
-            5% OFF. ALL&nbsp;DAY. EVERY&nbsp;DAY.
-            <span class="sub-header">
-              When you pay with WISCARD.
-            </span>
-          </div>
-          <p class="fine-print">* Excludes sale items, gift cards, The Red Shirt, custom orders, and technology
-            products. Exclusions subject to change. Cannot be combined with other offers. Valid at State St, HSLC,
-            and uwbookstore.com.</p>
-        </div>
-      </div>
-
-      <div class="wrapper">
-        <a href="https://www.uwbookstore.com/New-Students" class="d-block">
-          <picture>
-            <source media="(min-width: 48em)" srcset="https://i.univbkstr.com/v3/img/pages/home/freshmanBanner.avif">
-            <img src="https://i.univbkstr.com/v3/img/pages/home/freshmanBanner-sm.avif"
-              alt="Hey Freshman! From Technology to Textbooks, we've got you covered." class="img-fluid" loading="lazy">
-          </picture>
-        </a>
-      </div>
-
-      <div class="giftcard__container-fluid">
-
-        <a class="giftcard__banner" href="https://www.uwbookstore.com/Gift-Cards">
-          <img src="https://i.univbkstr.com/v3/img/pages/home/giftCardBanner.avif"
-            alt="Gift Cards - The perfect gift for any occasion!" class="mb-3 img-fluid center-block" loading="lazy"
-            width="1170" height="200">
-        </a>
-
-        <div class="container__stacked-sm">
-          <h2>Gift Cards</h2>
-          <p>The perfect gift for any occasion!</p>
-          <a href="https://www.uwbookstore.com/Gift-Cards" class="btn btn-primary">Buy Now</a>
-          <img src="https://i.univbkstr.com/v3/img/pages/home/giftcard-large.webp" alt="gftcard"
-            class="img-fluid center-block" loading="lazy" width="600" height="368">
-        </div>
-      </div>
-
-      <div class="wrapper">
-        <a href="https://www.wisc.edu/" target="_blank" class="uw-info">
-          <picture>
-            <source media="(min-width: 48em)" srcset="https://i.univbkstr.com/v3/img/pages/home/uwBanner.avif">
-            <img src="https://i.univbkstr.com/v3/img/pages/home/uwBanner-sm.avif" alt="UW Banner" class="mb-2 img-fluid"
-              loading="lazy">
-          </picture>
-        </a>
-      </div>
-
-      <div class="wrapper text-center">
-        <a href="https://i.univbkstr.com/downloads/24-25_Campus_Calendar.pdf" class="d-block" target="_blank">
-          <picture>
-            <source media="(min-width: 48em)" srcset="https://i.univbkstr.com/v3/img/pages/home/calendar-banner.jpg">
-            <img src="https://i.univbkstr.com/v3/img/pages/home/calendar-banner-sm.jpg"
-              alt="Download the 2024-2025 Campus Events Calendar" class="img-fluid" loading="lazy">
-          </picture>
-        </a>
-      </div>
-    </section>
 
 
     <!-- <h1 class="mb-2">Bootstrap Reformatting</h1>

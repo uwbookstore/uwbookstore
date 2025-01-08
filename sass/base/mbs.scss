@@ -21,12 +21,12 @@ footer {
   padding: rem(30) rem(8);
   background-color: transparent;
 
-  &.container {
-    max-width: 100%;
-  }
-
   @include breakpoint(menu) {
     padding-inline: 0;
+  }
+
+  &:has(.container-full) {
+    max-width: 100%;
   }
 }
 

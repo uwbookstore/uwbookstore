@@ -1,73 +1,27 @@
 @use '../util' as *;
 
-.card-body > .row {
-  .merchLinkWrap {
-    padding: 0 rem(8);
+.newBadge,
+.saleBadge {
+  font-weight: 700;
+  padding: rem(5) rem(10);
+  font-size: rem(14);
+  text-transform: uppercase;
 
-    .merchLink {
-      background: #f8d7da;
-      display: flex;
-      margin-bottom: rem(20);
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      height: rem(60);
-      border-radius: rem(4);
-      color: #58151c;
-      border: rem(1) solid #f1aeb5;
-      text-decoration: none;
-      transition: var(--transition);
-      font-size: rem(18);
-
-      p {
-        margin: 0;
-      }
-
-      &:hover,
-      &:active {
-        background-color: #e0c5c7;
-        border-color: #ca8f96;
-      }
-
-      @include breakpoint(medium) {
-        height: rem(40);
-        font-size: rem(16);
-
-        // p {
-        //   &::before {
-        //     font-family: FontAwesome;
-        //     content: '\f005';
-        //     margin-right: rem(10);
-        //   }
-        // }
-      }
-    }
+  &::after {
+    display: none;
   }
 }
 
-.card.merch_panel {
-  .card-header {
-    display: flex;
-    align-items: center;
-    padding: 0 rem(15);
-    height: rem(45);
-    border-bottom: rem(4) solid #f1aeb5;
-    color: #58151c;
-
-    p {
-      font-size: rem(18);
-    }
-  }
+.merchRank {
+  display: none;
 }
 
-.card-body:has(.merchLinkWrap) {
-  padding-bottom: 0;
-}
+p.merchLink,
+p.merchTitle {
+  color: var(--clr-black);
 
-// reset MBS defaults
-a.merchLink {
-  p.merchTitle {
-    color: var(--clr-black);
+  &:hover {
+    text-decoration: none;
   }
 }
 
@@ -78,127 +32,118 @@ p.merchTitle {
   font-style: italic;
 }
 
-span.regularPriceTitle,
-span.salePriceTitle,
-.colorSwatchList {
-  display: none;
-}
-
-.selectedColor {
-  text-transform: capitalize;
-}
-
-span.merchPriceRegular {
-  text-decoration: line-through;
-}
-
-p.merchRegular,
-p.merchPrice {
-  display: inline;
-  font-weight: normal;
-}
-
-p.merchNumber {
-  margin-bottom: rem(5);
-  font-style: italic;
-}
-
-p.merchRegular {
-  margin-right: rem(10);
-}
-
-p.merchSalePrice.red,
-p.merchPrice.red {
-  color: var(--clr-primary);
-  font-style: italic;
-  font-weight: normal;
-  display: inline;
-  margin-left: rem(10);
-}
-
-.row:has(.sortCatWrap) {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: rem(10);
-  margin-bottom: rem(10);
-
-  > * {
-    margin: 0;
-    padding: 0;
-  }
+.pagination__box {
+  border: rem(1) solid var(--clr-light-gray);
+  background-color: var(--clr-white);
+  padding: 0 rem(20) rem(20);
+  z-index: 5000;
+  position: fixed;
+  bottom: rem(20);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  text-align: center;
 
   @include breakpoint(medium) {
-    flex-wrap: nowrap;
-    gap: rem(5);
+    width: auto;
+    left: rem(20);
+    transform: translateX(0);
   }
 }
 
-.row:has(.filterColumn) {
-  // background-color: lightblue;
+.pagination > li > a,
+.pagination > li > span {
+  font-size: rem(25);
+  padding: rem(20);
+
+  @include breakpoint(medium) {
+    font-size: rem(18);
+    padding: rem(4) rem(8);
+  }
 }
 
-.viewFiltersButton {
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
   background-color: var(--clr-primary);
+  border-color: var(--clr-primary);
 }
 
-.merch {
-  &__card {
-    position: relative;
-    z-index: 0;
-    margin-bottom: rem(20);
-    justify-content: center;
+// Previously Viewed Items
+// Featured Items
+.card.previousDynamic .card-header,
+.card.featuredDynamic .card-header,
+.card.checkoutDynamic .card-header {
+  font-size: rem(25);
+  margin: 0 0 rem(25);
+  width: 100%;
+  padding-bottom: rem(10);
+  border-bottom: rem(1) solid var(--clr-black);
+  display: block;
+  text-align: center;
 
-    &-item {
-      padding: rem(25);
-      text-align: center;
-      font-style: italic;
-      position: relative;
-      margin: rem(10) 0;
-      flex: 0 0 100%;
+  span {
+    display: inline-block;
+    background-color: var(--clr-white);
+    padding: rem(10);
+    background-color: inherit;
+  }
 
-      a,
-      h2 {
-        text-align: center;
-      }
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: rem(10);
+    align-items: center;
+    border-bottom: none;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    background: none;
+
+    span {
+      padding: 0;
     }
 
-    &-link {
-      text-decoration: none;
-      transition: var(--transition);
-      &:link,
-      &:visited {
-        display: block;
-      }
-
-      &:hover {
-        opacity: 0.7;
-        text-decoration: none;
-      }
-    }
-
-    &-img {
-      margin-bottom: rem(20);
-    }
-
-    &-title {
-      font-weight: 700;
-      font-size: inherit;
-      margin: 0 0 rem(10);
+    &::before,
+    &::after {
+      content: '';
+      height: rem(1);
       display: block;
-      color: var(--clr-black);
+      // background-color: var(--clr-light-gray-2);
+      background-color: currentColor;
     }
+  }
+}
 
-    @include breakpoint(small) {
-      &-item {
-        flex: 0 0 50%;
-      }
-    }
+.card.previousDynamic,
+.card.featuredDynamic,
+.card.checkoutDynamic {
+  max-width: rem(1170);
+  margin: rem(20) auto 0;
+  border: none;
+}
 
-    @include breakpoint(medium) {
-      &-item {
-        flex: 0 0 25%;
-      }
-    }
+.dynamicCard .card-body .row.col-12 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.dynamicLeftArrow {
+  left: 0;
+
+  @include breakpoint(medium) {
+    left: rem(20);
+  }
+}
+
+.dynamicRightArrow {
+  right: 0;
+
+  @include breakpoint(medium) {
+    right: rem(20);
   }
 }

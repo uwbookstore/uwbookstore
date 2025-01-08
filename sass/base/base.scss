@@ -32,6 +32,9 @@ body {
 }
 
 .max-width-wrapper {
+  max-width: var(--page-max-width);
+  margin: auto;
+
   &-large {
     max-width: var(--page-max-width-large);
     margin: auto;

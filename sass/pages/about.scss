@@ -15,9 +15,13 @@
   }
 }
 
-.entry-content {
+.container-full {
   &.about {
     padding-top: rem(40);
+
+    p {
+      font-weight: 500;
+    }
   }
 }
 
@@ -127,7 +131,7 @@
 }
 
 @include breakpoint(small) {
-  .entry-content {
+  .container-full {
     &.about {
       background-color: darkgray;
       background-image: url(https://i.univbkstr.com/v3/img/pages/about/storefront.jpg);

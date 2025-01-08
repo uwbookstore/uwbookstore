@@ -55,7 +55,7 @@
     }
 
     @include breakpoint(medium) {
-      flex: 0 0 75%;
+      flex: 1 1 75%;
       padding: 0 rem(10) 0 rem(30);
     }
   }

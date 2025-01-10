@@ -5,7 +5,8 @@ $(document).ready(function () {
     '<div id="merch-main" class="merch"><div class="flex merch__detail"><div id="merch-imgs" class="merch__detail-images"></div><div id="merch-info" class="merch__detail-info"></div></div></div>'
   ).prependTo('div#ContainDiv');
 
-  const prodName = $('h2.merchTitle').text();
+  // const prodName = $('h2.merchTitle').text();
+  const prodName = $('h1.merchTitle').text();
   const prodSku = $('p.merchItem span').text();
   const description = $('div.merchDesc').html();
   const itemDisclaimer = $('input.merchDisclaimer');

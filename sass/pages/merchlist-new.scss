@@ -29,12 +29,24 @@
   display: none;
 }
 
-p.merchLink,
-p.merchTitle {
+.merchLink,
+.merchTitle {
   color: var(--clr-black);
 
-  &:hover {
+  img,
+  p.merchTitle {
+    transition: var(--transition);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
     text-decoration: none;
+    img,
+    p.merchTitle {
+      opacity: 0.75;
+    }
+    pacity: 1;
   }
 }
 

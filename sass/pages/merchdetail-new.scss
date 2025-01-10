@@ -1,5 +1,64 @@
 @use '../util' as *;
 
+h1.merchTitle {
+  margin: rem(15) 0;
+  font-size: rem(24);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--clr-primary);
+
+  @include breakpoint(medium) {
+    font-size: rem(20);
+  }
+}
+
+.merchPrice {
+  font-size: rem(20);
+  font-weight: 700;
+  margin: 0 0 rem(10);
+
+  @include breakpoint(medium) {
+    font-size: rem(14);
+  }
+}
+
+.merchSizeTitle {
+  margin-bottom: rem(30);
+  font-size: rem(16);
+  font-weight: 400;
+
+  @include breakpoint(medium) {
+    margin-bottom: rem(15);
+  }
+}
+
+.lcsSizeWrapper {
+  display: flex;
+  align-items: center;
+  gap: rem(15);
+
+  .btn.btn-default {
+    background-color: transparent;
+    border-color: var(--clr-primary) !important;
+    color: var(--clr-primary);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--clr-primary);
+      border-color: var(--clr-primary) !important;
+      color: var(--clr-white);
+    }
+
+    &.typeSelected {
+      background-color: var(--clr-primary);
+      border-color: var(--clr-gradient-end) !important;
+      border-width: rem(3);
+      color: var(--clr-white);
+    }
+  }
+}
+
 .regLink:not(:empty) {
   margin: rem(20) 0;
 }
@@ -161,11 +220,10 @@
         }
       }
 
-      .btn.typeSelected,
       .btn:active,
       .btn:focus,
       .btn:hover {
-        border-color: var(--clr-primary) !important;
+        border-color: var(--clr-primary);
         border-width: rem(2);
         background-color: var(--clr-primary);
         color: var(--clr-white);
@@ -176,6 +234,14 @@
         background-color: transparent;
         color: #6c757d;
       }
+    }
+
+    .btn.typeSelected {
+      background-color: var(--clr-primary);
+      border-color: var(--clr-gradient-end) !important;
+      border-width: rem(3) !important;
+      color: var(--clr-white);
+      font-weight: 500;
     }
 
     &-add {

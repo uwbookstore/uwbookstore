@@ -39,7 +39,7 @@
   overflow: hidden;
 
   &.show {
-    max-height: rem(800);
+    max-height: rem(2600);
     transition: var(--transition);
   }
 
@@ -56,6 +56,7 @@
   flex-direction: column;
   text-align: center;
   gap: rem(20);
+  // https://bennettfeely.com/clippy/
   clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%);
   // background: url('https://i.univbkstr.com/v3/css/img/jt-bg.jpg') no-repeat top
   //   center;
@@ -170,10 +171,53 @@
       }
     }
 
+    &-toggle {
+      position: relative;
+      border: none;
+      background-color: transparent;
+      color: var(--clr-black);
+      font-weight: 500;
+      font-size: rem(18);
+      width: 100%;
+      text-align: left;
+      opacity: 0.75;
+      padding-block: rem(8);
+      transition: var(--transition);
+
+      &::after {
+        font-family: 'FontAwesome';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: rem(10);
+        content: '\f078';
+        display: block;
+      }
+
+      &.open {
+        &::after {
+          top: 0;
+          transform: rotate(180deg);
+        }
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: 1;
+      }
+    }
+
     &-nav {
       list-style-type: none;
       margin: 0;
       padding: 0;
+
+      ul {
+        display: none;
+        margin: 0;
+        padding: 0;
+      }
 
       a {
         position: relative;

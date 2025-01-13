@@ -138,6 +138,7 @@
     @include breakpoint(medium) {
       flex-direction: row;
       flex-wrap: nowrap;
+      align-items: flex-start;
       gap: rem(30);
       padding-inline: rem(15);
     }

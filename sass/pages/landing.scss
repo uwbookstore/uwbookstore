@@ -284,7 +284,7 @@
     }
 
     &-item {
-      flex: 0 0 45%;
+      flex: 1 1 100%;
       padding-block: rem(20);
 
       h3 {
@@ -330,8 +330,16 @@
       }
     }
 
-    @include breakpoint(medium) {
-      gap: rem(15);
+    @include breakpoint(xsmall) {
+      gap: rem(5);
+      &-item {
+        flex: 1 1 48%;
+      }
+    }
+
+    @include breakpoint(small) {
+      gap: 0;
+
       &-item {
         flex: 0 0 30%;
       }

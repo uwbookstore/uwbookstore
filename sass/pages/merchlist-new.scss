@@ -13,15 +13,46 @@
   z-index: 20;
 }
 
+.merchItem {
+  position: relative;
+  margin-bottom: rem(35);
+}
+
 .newBadge,
 .saleBadge {
-  font-weight: 700;
-  padding: rem(5) rem(10);
-  font-size: rem(14);
-  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  padding-top: rem(20);
+  height: rem(50);
+  width: rem(100);
+  top: rem(-10);
+  left: rem(-25);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  color: var(--clr-white);
+  font-size: rem(12);
+  font-weight: 600;
+  font-style: italic;
+  transform: rotate(-45deg);
 
   &::after {
     display: none;
+  }
+
+  @include breakpoint(small) {
+    font-size: rem(14);
+    padding-top: rem(22);
+    height: rem(53);
+    width: rem(106);
+  }
+
+  @include breakpoint(medium) {
+    padding-top: rem(25);
+    height: rem(57.5);
+    width: rem(115);
+    top: rem(-15);
+    left: rem(-20);
+    font-size: rem(14);
   }
 }
 
@@ -55,6 +86,26 @@ p.merchTitle {
   font-size: inherit;
   margin: 0 0 rem(10);
   font-style: italic;
+}
+
+p.merchPrice,
+p.merchSalePrice {
+  display: inline-block;
+  font-size: rem(16);
+  font-weight: normal;
+}
+
+p.merchPrice {
+  margin-right: rem(10);
+}
+
+p.merchSalePrice,
+p.merchNumber {
+  font-style: italic;
+}
+
+p.merchNumber {
+  margin-bottom: rem(5);
 }
 
 .pagination__box {

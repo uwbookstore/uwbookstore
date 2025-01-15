@@ -1,25 +1,13 @@
 @use '../util' as *;
 
-.merch__card-restock {
-  position: absolute;
-  background-color: var(--clr-warning-em);
-  color: var(--clr-black);
-  top: rem(5);
-  left: rem(5);
-  font-weight: 700;
-  padding: rem(5) rem(10);
-  font-size: rem(14);
-  width: auto;
-  z-index: 20;
-}
-
 .merchItem {
   position: relative;
   margin-bottom: rem(35);
 }
 
 .newBadge,
-.saleBadge {
+.saleBadge,
+.restockBadge {
   display: flex;
   justify-content: center;
   position: absolute;
@@ -34,6 +22,7 @@
   font-weight: 600;
   font-style: italic;
   transform: rotate(-45deg);
+  z-index: 20;
 
   &::after {
     display: none;
@@ -54,6 +43,14 @@
     left: rem(-20);
     font-size: rem(14);
   }
+}
+
+.restockBadge {
+  background-color: var(--clr-warning-em);
+  color: var(--clr-black);
+  text-align: center;
+  line-height: 1.2;
+  padding-top: rem(17.5);
 }
 
 .merchRank {

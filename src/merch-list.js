@@ -182,7 +182,7 @@ $(document).ready(function () {
     const name = $(this).text();
     const prevSibling = $(this).prev();
     if (name.includes('^')) {
-      $('<div class="merch__card-restock">Back in Stock!</div>').prependTo(
+      $('<div class="restockBadge">Back<br>in Stock!</div>').prependTo(
         prevSibling
       );
     }

@@ -8,15 +8,6 @@
   margin-bottom: rem(20);
 }
 
-.hide {
-  display: none;
-}
-
-header,
-footer {
-  display: none;
-}
-
 #ContainDiv {
   padding: rem(30) rem(8);
   background-color: transparent;
@@ -64,7 +55,11 @@ footer {
 #needHelp,
 a#goToTop,
 .breadcrumb,
-.disco {
+.disco,
+.hide,
+h1.visually-hidden,
+header:has(div[data-role='header']:not(.header.header__ubs)),
+footer[role='contentinfo'] {
   display: none !important;
 }
 

@@ -10,6 +10,17 @@
   font-size: rem(12);
 }
 
+.inventory-display-wrapper.short svg {
+  height: rem(15);
+  width: rem(15);
+}
+
+.inventory-display-wrapper.short svg circle {
+  r: 6;
+  cx: 7;
+  cy: 7;
+}
+
 .newBadge,
 .saleBadge,
 .restockBadge {
@@ -95,6 +106,8 @@ p.merchSalePrice {
   display: inline-block;
   font-size: rem(16);
   font-weight: normal;
+  margin-bottom: rem(10);
+  margin-top: 0;
 }
 
 p.merchPrice {

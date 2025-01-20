@@ -12,15 +12,15 @@ h1.merchTitle {
   }
 }
 
-.merchPrice {
-  font-size: rem(20);
-  font-weight: 700;
-  margin: 0 0 rem(10);
+// .merchPrice {
+//   font-size: rem(20);
+//   font-weight: 700;
+//   margin: 0 0 rem(10);
 
-  @include breakpoint(medium) {
-    font-size: rem(14);
-  }
-}
+//   @include breakpoint(medium) {
+//     font-size: rem(14);
+//   }
+// }
 
 .merchSizeTitle {
   margin-bottom: rem(30);

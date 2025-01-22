@@ -127,17 +127,6 @@ $(document).ready(function () {
     );
     $('div#kyleCavan').hide();
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
-  } else if (itemDisclaimer.length > 0 && $('div#landsEnd').length > 0) {
-    $(
-      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
-    ).appendTo('div#merch-info');
-    $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
-    $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
-    $('.normal').html(
-      '<strong>PLEASE READ BEFORE PURCHASE! — Custom orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>'
-    );
-    $('div#landsEnd').hide();
-    $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
   } else if (itemDisclaimer.length > 0 && $('div#cdiDrop').length > 0) {
     $(
       '<div id="cdiDrop"></div><div id="item-disclaimer" class="alert alert-warning"><label></label></div>'

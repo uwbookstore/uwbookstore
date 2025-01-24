@@ -44,7 +44,7 @@ $(document).ready(function () {
       window.location.replace('https://www.uwbookstore.com/Contact');
     } else if (
       window.location.href.toLowerCase().indexOf('red%20shirt') > -1 ||
-      window.location.href.indexOf('13th') > -1
+      window.location.href.indexOf('17th') > -1
     ) {
       $(
         '<div class="m-2 text-center">Looking for The Red Shirt&trade;, 17<sup>th</sup> Edition? Find it here:<br><a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/The-Red-Shirt-17th-Edition" class="btn btn-primary m-2">The Red Shirt&trade;</a></div>'
@@ -69,24 +69,10 @@ $(document).ready(function () {
     $(document).prop('title', 'Department of Medical Physics');
   }
 
-  if (
-    categoryTitle.toLowerCase().substring(0, 22) === '20 celebration gowns-p'
-  ) {
-    categoryTitle = '2020 Celebration Gowns (Previously Rented)';
-    $(document).prop('title', '2020 Celebration Gowns (Previously Rented)');
-  }
-
-  // $.each(mItem, function (i) {
-  //     if ($(this).has("span.salePriceTitle").length) {
-  //         $('<div class="merch__card-special">SALE!</div>').appendTo($(this));
-  //     }
-  // });
-
   $.each(itemImage, function () {
     if ($(this).attr('src') === '/images/notavail.gif') {
       $(this)
         .attr('src', 'https://i.univbkstr.com/v3/img/misc/no-image-sm.jpg')
-        .attr('data-src', 'holder.js/200x200?auto=yes&text=Image not available')
         .attr('alt', 'Image not available');
     }
   });
@@ -227,12 +213,6 @@ $(document).ready(function () {
     // ).insertAfter("#promo-alert");
   }
 
-  if (window.location.href.search(/search-red/) !== -1) {
-    $(
-      '<div class="m-2 text-center">Looking for previous years? Find them here:<br><a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/The-Red-Shirt" class="btn btn-primary m-2">The Red Shirt&trade;</a></div>'
-    ).insertAfter('#merch__card');
-  }
-
   if (categoryTitle.toLowerCase().substring(0, 12) === 'scandinavian') {
     $(
       '<div class="alert alert-warning"><p style="text-align: center; margin: 0; font-size: 20px;"><em>Note</em> - All books sold in packs of five &mdash; price listed is for five books.</p></div>'
@@ -244,12 +224,6 @@ $(document).ready(function () {
       '<img src="https://i.univbkstr.com/v3/img/landing/merch/AmFamGolf.png" class="img-fluid img__center" alt="AmFam Championship. Official Merchandise Partner of the American Family Insurance Championship.">'
     ).insertBefore('.merch__filter');
   }
-
-  // if (categoryTitle.toLowerCase().substring(0, 15) === 'cap & gown pack') {
-  //   $(
-  //     `<div class="alert alert-danger text-center">Online rentals are now closed. You may rent in store or over the telephone (1-800-993-2665 ext.5907 - add $10.00 for service fee).</div>`
-  //   ).insertAfter('.merch__filter');
-  // }
 
   if (categoryTitle.toLowerCase().substring(0, 6) === 'laptop') {
     if (window.location.host === 'www.uwbookstore.com') {
@@ -277,18 +251,6 @@ $(document).ready(function () {
       '<img alt="Julia Gash" src="https://i.univbkstr.com/v3/img/banners/JuliaGash.png" class="img-fluid">'
     ).insertBefore('.merch__filter');
   }
-
-  // if (categoryTitle.toLowerCase().substring(0, 10) === 'cap & gown') {
-  //   $(
-  //     `
-  //       <div class="alert alert-danger">
-  //         <p class="text-center bold mt-2">
-  //           If you need a cap and gown for the December Ceremony please visit the Lower Level of The University Book Store.
-  //         </p>
-  //       </div>
-  //     `
-  //   ).insertBefore('.merch__filter');
-  // }
 
   if (categoryTitle.toLowerCase().substring(0, 16) === 'touchdown monday') {
     $(
@@ -319,16 +281,16 @@ $(document).ready(function () {
 
   if (categoryTitle.toLowerCase().substring(0, 16) === 'dell laptop') {
     if (window.location.host === 'www.uwbookstore.com') {
-      // $(
-      //     '<a href="https://i.univbkstr.com/downloads/4746_Dell_BTS_POP_Kit_2022_RETAIL_POSTCARD_EDITABLE.pdf" target="_blank"><img src="https://i.univbkstr.com/v3/img/banners/Dell-Rebate-2021.jpg" class="mobi-hide img-fluid img__center" alt="Student Rebate"><img src="https://i.univbkstr.com/v3/img/banners/Dell-Rebate-2021-sm.jpg" class="dt-hide img-fluid img__center" alt="Student Rebate"><div class="visually-hidden">STUDENT OFFER. $100 Rebate - WITH THE PURCHASE OF A DELL PC $499+. Offer valid 05/01/2022 - 10/31/2022</div></a>'
-      // ).insertBefore(".merch__filter");
+      /* $(
+          '<a href="https://i.univbkstr.com/downloads/4746_Dell_BTS_POP_Kit_2022_RETAIL_POSTCARD_EDITABLE.pdf" target="_blank"><img src="https://i.univbkstr.com/v3/img/banners/Dell-Rebate-2021.jpg" class="mobi-hide img-fluid img__center" alt="Student Rebate"><img src="https://i.univbkstr.com/v3/img/banners/Dell-Rebate-2021-sm.jpg" class="dt-hide img-fluid img__center" alt="Student Rebate"><div class="visually-hidden">STUDENT OFFER. $100 Rebate - WITH THE PURCHASE OF A DELL PC $499+. Offer valid 05/01/2022 - 10/31/2022</div></a>'
+      ).insertBefore(".merch__filter"); */
       $(
         '<ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li></ul>'
       ).insertAfter('.merch__filter');
     } else {
-      // $(
-      //     '<a href="https://i.univbkstr.com/downloads/4746_Dell_BTS_POP_Kit_2022_RETAIL_POSTCARD_EDITABLE.pdf" target="_blank"><img src="https://i.univbkstr.com/v3/img/banners/Dell-Rebate-2021.jpg" class="mobi-hide img-fluid img__center" alt="Student Rebate"><img src="https://i.univbkstr.com/v3/img/banners/Dell-Rebate-2021-sm.jpg" class="dt-hide img-fluid img__center" alt="Student Rebate"><div class="visually-hidden">STUDENT OFFER. $100 Rebate - OF A DELL PC $499+ OF A DELL PC $499+. Offer valid 05/01/2022 - 10/31/2022</div></a>'
-      // ).insertBefore(".merch__filter");
+      /* $(
+          '<a href="https://i.univbkstr.com/downloads/4746_Dell_BTS_POP_Kit_2022_RETAIL_POSTCARD_EDITABLE.pdf" target="_blank"><img src="https://i.univbkstr.com/v3/img/banners/Dell-Rebate-2021.jpg" class="mobi-hide img-fluid img__center" alt="Student Rebate"><img src="https://i.univbkstr.com/v3/img/banners/Dell-Rebate-2021-sm.jpg" class="dt-hide img-fluid img__center" alt="Student Rebate"><div class="visually-hidden">STUDENT OFFER. $100 Rebate - OF A DELL PC $499+ OF A DELL PC $499+. Offer valid 05/01/2022 - 10/31/2022</div></a>'
+      ).insertBefore(".merch__filter"); */
       $(
         '<ul class="page-nav"><li><a href="https://text.uwbookstore.com/MerchList?ID=28462" class="btn btn-primary">All Laptops</a></li><li><a href="https://text.uwbookstore.com/MerchList?ID=28367" class="btn btn-primary">MacBooks</a></li></ul>'
       ).insertAfter('.merch__filter');
@@ -349,57 +311,13 @@ $(document).ready(function () {
       // $('<div class="merch__card-special">UW Discount</div>').prependTo('div.merchItem');
     } else {
       $().insertAfter('.merch__filter');
-      // `<a href="https://text.uwbookstore.com/MerchList?ID=28519">
-      //         <img src="https://i.univbkstr.com/v3/img/pages/tech/appleTech.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-fluid mobi-hide mb-2">
-      //         <img src="https://i.univbkstr.com/v3/img/pages/tech/appleTech-sm.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-fluid dt-hide mb-2">
-      //         </a>
-      //         `
-      // `<ul class="page-nav"><li><a href="https://text.uwbookstore.com/MerchList?ID=28367" class="btn btn-primary">MacBooks</a></li><li><a href="https://text.uwbookstore.com/MerchList?ID=28374" class="btn btn-primary">Dell Laptops</a></li></ul>`
+      /* `<a href="https://text.uwbookstore.com/MerchList?ID=28519">
+              <img src="https://i.univbkstr.com/v3/img/pages/tech/appleTech.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-fluid mobi-hide mb-2">
+              <img src="https://i.univbkstr.com/v3/img/pages/tech/appleTech-sm.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-fluid dt-hide mb-2">
+              </a>
+              `
+      `<ul class="page-nav"><li><a href="https://text.uwbookstore.com/MerchList?ID=28367" class="btn btn-primary">MacBooks</a></li><li><a href="https://text.uwbookstore.com/MerchList?ID=28374" class="btn btn-primary">Dell Laptops</a></li></ul>` */
     }
-  }
-
-  // if (categoryTitle.toLowerCase().substring(0, 11) === 'dell laptop') {
-  //   if (window.location.host === 'www.uwbookstore.com') {
-  //     $(
-  //       `<a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook">
-  //               <img src="https://i.univbkstr.com/v3/img/pages/tech/dellBanner.png" alt="Dell Education Rebate Offers" class="img-fluid mobi-hide mb-2">
-  //               <img src="https://i.univbkstr.com/v3/img/pages/tech/dellBanner-sm.png" alt="Dell Education Rebate Offers" class="img-fluid dt-hide mb-2">
-  //               </a>`
-  //     ).insertAfter('.merch__filter');
-  //     // $('<div class="merch__card-special">UW Discount</div>').prependTo('div.merchItem');;
-  //   } else {
-  //     $(
-  //       `<a href="https://text.uwbookstore.com/MerchList?ID=28519">
-  //               <img src="https://i.univbkstr.com/v3/img/pages/tech/dellBanner.png" alt="Dell Education Rebate Offers" class="img-fluid mobi-hide mb-2">
-  //               <img src="https://i.univbkstr.com/v3/img/pages/tech/dellBanner-sm.png" alt="Dell Education Rebate Offers" class="img-fluid dt-hide mb-2">
-  //               </a>`
-  //     ).insertAfter('.merch__filter');
-  //   }
-  // }
-
-  // if (categoryTitle.toLowerCase().substring(0, 5) === 'ipads') {
-  //   if (window.location.host === 'www.uwbookstore.com') {
-  //     $(
-  //       `<a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook">
-  //               <img src="https://i.univbkstr.com/v3/img/pages/tech/appleTech.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-fluid mobi-hide mb-2">
-  //               <img src="https://i.univbkstr.com/v3/img/pages/tech/appleTech-sm.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-fluid dt-hide mb-2">
-  //               </a>`
-  //     ).insertAfter('.merch__filter');
-  //     // $('<div class="merch__card-special">UW Discount</div>').prependTo('div.merchItem');;
-  //   } else {
-  //     $(
-  //       `<a href="https://text.uwbookstore.com/MerchList?ID=28519">
-  //               <img src="https://i.univbkstr.com/v3/img/pages/tech/appleTech.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-fluid mobi-hide mb-2">
-  //               <img src="https://i.univbkstr.com/v3/img/pages/tech/appleTech-sm.jpg" alt="Buy a Mac or iPad for college. Get AirPods." class="img-fluid dt-hide mb-2">
-  //               </a>`
-  //     ).insertAfter('.merch__filter');
-  //   }
-  // }
-
-  if (categoryTitle.toLowerCase().substring(0, 9) === 'higher ed') {
-    $(
-      '<img class="img-fluid mobi-hide mx-auto mb-4" src="https://i.univbkstr.com/v3/img/banners/higherEducation.jpg" alt="Free Tote and Cheet Sheet&reg; with any $35+ Purchase. Available for a limited time. One per purchase. While supplies last." /><img class="img-fluid dt-hide mx-auto" src="https://i.univbkstr.com/v3/img/banners/higherEducation-sm.jpg" alt="Free Tote and Cheet Sheet&reg; with any $35+ Purchase. Available for a limited time. One per purchase. While supplies last." />'
-    ).insertBefore('.merch__filter');
   }
 
   if (
@@ -413,20 +331,6 @@ $(document).ready(function () {
     ).insertBefore('#merch__card');
   }
 
-  // if (categoryTitle.toLowerCase().substring(0, 19) === "cap & gown packages") {
-  //     $(
-  //         '<div class="text-center alert alert-warning"><p><strong>To avoid long lines, please promptly pick up your order once you receive notice that your order is ready.<br>Orders not picked up at the Book Store may incur a transit fee to the ceremony.</strong></p></div>'
-  //     ).insertBefore("#merch__card");
-  // }
-
-  // if (categoryTitle.toLowerCase().substring(0, 12) === "new arrivals") {
-  //     $('<div class="merch__card-new hide">Restock!</div>').prependTo("div.merchItem");
-  // }
-
-  // if (categoryTitle.toLowerCase().substring(0, 12) === "new arrivals") {
-  //     $('<div class="merch__card-restock hide">Restock!</div>').prependTo("div.merchItem");
-  // }
-
   productName.each(function () {
     const name = $(this).text();
     if (name.includes('^')) {
@@ -435,8 +339,4 @@ $(document).ready(function () {
       );
     }
   });
-
-  // if ($("span.gc-promo").length > 0) {
-  //     console.log('Eligible MacBook')
-  // }
 });

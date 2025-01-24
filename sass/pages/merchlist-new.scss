@@ -1,21 +1,49 @@
 @use '../util' as *;
 
+.viewFiltersDiv {
+  margin-bottom: 0;
+}
+
+#merchResultsSelectID {
+  margin: 0;
+}
+
+.merchlist {
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+
+    .page_header,
+    .merchlist__inputs {
+      flex: 0 0 100%;
+    }
+
+    .input-group:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+}
+
 .merchItem {
   position: relative;
   margin-bottom: rem(35);
 }
 
-.inventory-display-wrapper.short .inventory-display-text {
+.inventory-display-wrapper {
+  margin-block: rem(8);
+}
+
+.inventory-display-wrapper .inventory-display-text {
   margin-bottom: 0;
   font-size: rem(12);
 }
 
-.inventory-display-wrapper.short svg {
+.inventory-display-wrapper svg {
   height: rem(15);
   width: rem(15);
 }
 
-.inventory-display-wrapper.short svg circle {
+.inventory-display-wrapper svg circle {
   r: 6;
   cx: 7;
   cy: 7;

@@ -1234,375 +1234,68 @@
 
   <main id="ContainDiv" class="container">
     <div class="row">
-      <style>
-        .merchPriceCurrent {
-          font-weight: bold;
-          font-size: 18px;
-        }
-
-        .merchPrice strong {
-          display: none;
-        }
-
-        .merchPriceCurrent {
-          font-weight: bold;
-          font-size: 18px;
-        }
-
-        .gmPromo {
-          color: #c10000;
-        }
-
-        .max_height350 {
-          max-height: 350px;
-        }
-
-        #merchQTY {
-          border-radius: 0px;
-        }
-
-        .imageLeft {
-          position: absolute;
-          top: 48%;
-          left: 20px;
-          width: 50px;
-          height: 65px;
-        }
-
-        .imageRight {
-          position: absolute;
-          top: 48%;
-          right: 20px;
-          width: 50px;
-          height: 65px;
-        }
-
-        .imageLeft:hover,
-        .imageRight:hover {
-          cursor: pointer;
-        }
-
-        .circleActive {
-          color: black;
-        }
-
-        .circleNotActive {
-          color: #757575;
-        }
-
-        .opacity5 {
-          opacity: .5;
-        }
-      </style>
       <div id="contentSection" class="col-lg-12 col-md-12 col-sm-12 col-12 padding0" role="main">
+        <div class="row">
 
-        <ul class="breadcrumb background_none">
-          <li> <a class="small" href="https://insitestore2.mbsbooks.com/uwmadison/merchandise"> Merchandise
-              Categories</a>
-          </li>
-          <li> <a class="small"> Champion "Bucky" Long Sleeve T-Shirt (White)</a></li>
+          <div id="merchlist-header" class="merchlist__header">
+            <h1 class="page_header">Men's Long Sleeve Tees</h1>
 
-        </ul>
-
-        <a class="floatr right15 top-50 pageHelp"
-          href="https://insitestore2.mbsbooks.com/uwmadison/help/MerchandiseDetail.htm">Help</a>
-        <form action="/uwmadison/MerchDetail?MerchID=1346529" method="post"><input name="__RequestVerificationToken"
-            type="hidden"
-            value="tPCysz7BWnKiI0Ey6lUFChyweb5AxfCzX_hC_9mzUw0alKRJefMCMYn6KNoExyBof725WfLouqMYCVxqZCSKGRRrW1Y1"><input
-            id="hiddenType" name="itemType" type="hidden" value=""><input id="customerLoyaltyRWD_totalPointsAvail"
-            name="customerLoyaltyRWD.totalPointsAvail" type="hidden" value="0"><input id="hiddenSKU" name="SKU"
-            type="hidden" value="2046574           "><input id="hiddenImg" name="merchDefaultFull" type="hidden"
-            value="/storeimages/171-1346529-1.png">
-          <div class="center">
-            <h2 class="page_header bottom10 displayn">Product Detail</h2>
-          </div>
-
-          <div class="mainItem">
-
-            <div class="center no_show_large">
-              <h1 class="page_header bottom10">Champion "Bucky" Long Sleeve T-Shirt (White)</h1>
-
-              <div class="merchRank bottom10">
-                <span class="ranking red fa fa-star-o"></span>
-                <span class="ranking red fa fa-star-o"></span>
-                <span class="ranking red fa fa-star-o"></span>
-                <span class="ranking red fa fa-star-o"></span>
-                <span class="ranking red fa fa-star-o"></span>
-                <a tabindex="0" class="merchRankLink" href="#itemRanking">
-                  <span class="rankCount">(0)</span>
-                  <span class="rankComment">Be the first to Comment</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-sm-6 col-12 padding0 bottom10">
-                <img class="merchDetailImage margin_auto img-responsive max_height350" data-id="1"
-                  src="https://insitestore2.mbsbooks.com/uwmadison/storeimages/171-1346529-1.png"
-                  data-high="https://insitestore2.mbsbooks.com/uwmadison/storeimages/171-1346529-1_hi.png"
-                  data-thumb="https://insitestore2.mbsbooks.com/uwmadison/storeimages/171-1346529-1_th.png"
-                  alt="Cover Image For Champion &quot;Bucky&quot; Long Sleeve T-Shirt (White)" aria-hidden="true">
-                <div id="imageLightBox" class="modal fade" role="dialog" tabindex="0">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-body">
-                        <div class="row">
-                          <div class="col-md-1 col-sm-2 col-2 textl">
-                            <a class="imageLightBoxLeft btn-lg" style="display: inline-block; margin-top: 0px;">
-                              <img tabindex="0" class="imageLeft" src="../RWD-IMG/chevLeft.png" alt="Previous Image"
-                                role="button">
-                            </a>
-
-                          </div>
-                          <div class="modalDetailImage textc col-md-10 col-sm-8 col-8" data-count="0">
-                            <img data-id="1" class="imageLightBoxBig img-responsive margin_auto" alt="">
-                          </div>
-                          <div class="col-md-1 col-sm-2 col-2 textr">
-                            <a class="imageLightBoxRight btn-lg" style="display: inline-block; margin-top: 0px;">
-                              <img tabindex="0" class="imageRight" src="../RWD-IMG/chevRight.png" alt="Next Image"
-                                role="button">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="modalDetailThumbnail textc"></div>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                          tabindex="0">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <style>
-                  .merchDetailImage {
-                    cursor: zoom-in;
-                  }
-                </style>
+            <div class="merchlist__inputs">
+              <!--Search Bar-->
+              <div class="input-group">
+                <input type="text" class="form-control searchCat" placeholder="Search Men's Long Sleeve Tees"
+                  aria-label="Search Men's Long Sleeve Tees">
+                <button class="btn btn-default searchCatButton" type="button" aria-label="Search Men's Long Sleeve Tees"
+                  tabindex="0"><span class="glyphicon glyphicon-search"></span></button>
               </div>
 
-              <div class="col-sm-6 col-12 padding0 bottom10">
-                <input type="hidden" class="ga4-name" value="Champion &quot;Bucky&quot; Long Sleeve T-Shirt (White)">
-                <input type="hidden" class="ga4-price" value="34.99">
-
-
-
-                <input type="hidden" class="ga4-salePrice" value="17.5">
-                <input type="hidden" class="ga4-sku" value="2046574           ">
-                <input type="hidden" class="ga4-discount" value="">
-                <input type="hidden" class="ga4-affiliation" value="UW Sandbox">
-                <input type="hidden" class="ga4-class">
-                <input type="hidden" class="ga4-isNonMerch" value="False">
-                <input type="hidden" class="ga4-isWebSku" value="false">
-                <div class="no_show_small bottom10">
-                  <h1 tabindex="0" class="merchTitle" data-id="1346529">Champion "Bucky" Long Sleeve T-Shirt (White)
-                  </h1>
-                  <!--Merch Ranking-->
-                  <div class="merchRank">
-                    <span class="ranking red fa fa-star-o"></span>
-                    <span class="ranking red fa fa-star-o"></span>
-                    <span class="ranking red fa fa-star-o"></span>
-                    <span class="ranking red fa fa-star-o"></span>
-                    <span class="ranking red fa fa-star-o"></span>
-                    <a tabindex="0" class="merchRankLink" href="#itemRanking">
-                      <span class="rankCount">(0)</span>
-                      <span class="rankComment">Be the first to Comment</span>
-                    </a>
-                  </div>
-
-                </div>
-
-                <p class="merchRegPrice top5 lineThrough"><strong>Reg. Price: </strong>$34.99</p>
-                <p class="merchSavePrice"><strong>You Save: </strong>$17.49</p>
-                <p class="salePrice red"><strong>Sale Price: </strong><span class="merchPriceCurrent">$17.50</span></p>
-                <input type="hidden" id="hiddenPriceVal" value="34.99">
-
-
-
-                <p class="merchSizeTitle bold"><span class="merchSizeDesc">1 ADULT SIZES:</span> <span
-                    class="selectedSize"></span></p>
-                <div class="lcsSizeWrapper">
-                  <button class="btn btn-default sizeOption typeCodeOption" tabindex="0" data-size="SMALL"
-                    data-merid="1346529" data-value="101"><span class="sizeName">SMALL</span></button>
-                  <button class="btn btn-default sizeOption typeCodeOption" tabindex="0" data-size="MEDIUM"
-                    data-merid="1346529" data-value="102"><span class="sizeName">MEDIUM</span></button>
-                  <button class="btn btn-default sizeOption typeCodeOption" tabindex="0" data-size="LARGE"
-                    data-merid="1346529" data-value="103"><span class="sizeName">LARGE</span></button>
-                  <button class="btn btn-default sizeOption typeCodeOption" tabindex="0" data-size="X-LARGE"
-                    data-merid="1346529" data-value="104"><span class="sizeName">X-LARGE</span></button>
-                  <button class="btn btn-default sizeOption typeCodeOption" tabindex="0" data-size="XX-LARGE"
-                    data-merid="1346529" data-value="105"><span class="sizeName">XX-LARGE</span></button>
-                </div>
-                <input id="colorSelected" name="colorSelected" type="hidden" value=""><input id="colorCodeSelected"
-                  name="colorCodeSelected" type="hidden" value=""><input id="sizeSelected" name="sizeSelected"
-                  type="hidden" value=""><input id="sizeCodeSelected" name="sizeCodeSelected" type="hidden"
-                  value=""><input id="logoSelected" name="logoSelected" type="hidden" value=""><input
-                  id="logoCodeSelected" name="logoCodeSelected" type="hidden" value=""><input id="allThree"
-                  name="allThree" type="hidden" value="False"><input id="noColor" name="noColor" type="hidden"
-                  value="True"><input id="noSize" name="noSize" type="hidden" value="False"><input id="noLogo"
-                  name="noLogo" type="hidden" value="True"><input id="firstSelected" name="firstSelected" type="hidden"
-                  value="0"><input id="showHex" name="showHex" type="hidden" value="True"><input id="colorOne"
-                  name="colorOne" type="hidden" value="False"><input id="sizeOne" name="sizeOne" type="hidden"
-                  value="False"><input id="logoOne" name="logoOne" type="hidden" value="False"><input id="typeselected"
-                  name="typeselected" type="hidden" value="0">
-                <p class="merchSelectError red displayn" role="alert" data-selecterror="1346529">Please select option
-                  for
-                  Champion "Bucky" Long Sleeve T-Shirt (White)&nbsp;.</p>
-
-                <!--Add to Cart Button-->
-                <div class="addToCartButton top5">
-                  <div class="bottom5">
-                    <span class="fa fa-minus qtyMinus hover_pointer no_show_largeib right5" tabindex="0"></span>
-                    <span class="fa fa-plus qtyPlus hover_pointer no_show_largeib left5" tabindex="0"></span>
-                    <div class="input-group maxW-250-all">
-                      <span class="input-group-text qtyTitle">QTY</span>
-                      <input type="number" id="merchQTY" data-qtyid="1346529" class="form-control merchDetailQTY QTY1"
-                        value="1" maxlength="3" min="1" max="999" aria-label="Quantity">
-                      <a tabindex="0" class="addToCartTypes btn btn-primary"
-                        data-name="Champion &quot;Bucky&quot; Long Sleeve T-Shirt (White)" data-id="1346529"
-                        data-istypeless="False" data-regularprice="34.99" data-isloyalty="False" data-formid="-1"
-                        data-isonsale="True" data-egiftcard="False" data-nonmerch="False" data-classid="0" data-csid="0"
-                        data-storeid="171" data-pricepoint="false" data-disclaimer="False" data-reload="False">Add To
-                        Cart</a>
-                    </div>
-
-                    <div class="lcs-inventory-display-data force-hidden">
-                      <input type="hidden" class="lcs-inventory-display" data-id="629819" data-message="Out of Stock"
-                        data-textcolor="#C10000" data-orbcolor="#C10000" data-class="out-of-stock">
-                      <input type="hidden" class="lcs-inventory-display" data-id="629820" data-message="Out of Stock"
-                        data-textcolor="#C10000" data-orbcolor="#C10000" data-class="out-of-stock">
-                      <input type="hidden" class="lcs-inventory-display" data-id="629821" data-message="Out of Stock"
-                        data-textcolor="#C10000" data-orbcolor="#C10000" data-class="out-of-stock">
-                      <input type="hidden" class="lcs-inventory-display" data-id="629822" data-message="Out of Stock"
-                        data-textcolor="#C10000" data-orbcolor="#C10000" data-class="out-of-stock">
-                      <input type="hidden" class="lcs-inventory-display" data-id="629823" data-message="Out of Stock"
-                        data-textcolor="#C10000" data-orbcolor="#C10000" data-class="out-of-stock">
-                    </div>
-                    <div class="inventory-display-wrapper long force-hidden">
-                      <svg class="inventory-display-orb" height="15" width="15" xmlns="http://www.w3.org/2000/svg">
-                        <circle r="6" cx="7" cy="7" fill="" fill-opacity="0.5 " stroke=""></circle>
-                      </svg>
-                      <p class="inventory-display-text" style=""></p>
-                    </div>
-
-                  </div>
-                  <script>
-                    $(document).ready(function () {
-                      $('.qtyMinus').click(function () {
-                        var value = parseInt($('.merchDetailQTY').val());
-                        if (value <= 1) {
-                          value = 1
-                          $('.merchDetailQTY').val(value);
-                        } else {
-                          value = value - 1;
-                          $('.merchDetailQTY').val(value);
-                        }
-                      });
-                      $('.qtyPlus').click(function () {
-                        var value = parseInt($('.merchDetailQTY').val());
-                        if (value >= 999) {
-                          value = 999
-                          $('.merchDetailQTY').val(value);
-                        } else {
-                          value = value + 1;
-                          $('.merchDetailQTY').val(value);
-                        }
-                      });
-                    });
-                  </script>
-
-                  <p class="addedToCart displayn" data-addedtocart="1346529"><span
-                      class="glyphicon glyphicon-ok Gift_Checkmark faa-shake Checkmark_Color padding0"></span> This item
-                    has
-                    been added to your Cart.</p>
-                </div>
+              <div class="input-group">
+                <label class="input-group-text" for="merchResultsSelectID">Show:</label>
+                <select aria-label="Show number of items per page" id="merchResultsSelectID"
+                  class="merchResultsSelect form-control form-select wauto right5">
+                  <option selected="" value="12" class="subject-option">12 Items Per Page</option>
+                  <option value="24" class="subject-option">24 Items Per Page</option>
+                  <option value="36" class="subject-option">36 Items Per Page</option>
+                  <option value="48" class="subject-option">48 Items Per Page</option>
+                  <option value="60" class="subject-option">60 Items Per Page</option>
+                </select>
               </div>
 
-              <div class="col-12 border_top merchDescription padding0 bottom10">
-                <h2 class="descTitle bold">Product Description</h2>
-
-                <p class="merchItem"><strong>Item: </strong><span class="itemSKU">2046574 </span></p>
-
-                <div class="merchDesc">
-                  Everyone loves Bucky Badger and this is a great way to represent Wisconsin. White long sleeve t-shirt
-                  with
-                  "Bucky" printed across the chest. <br>Imported<br>100% Cotton <span class="hide xxlg"></span>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-          <div id="itemRanking" class="itemRanking top10">
-            <a class="pleaseLogin bottom10 displayb"
-              href="https://insitestore2.mbsbooks.com/uwmadison/LoginOptions?returnurl=/merchdetail?merchid=1346529#itemRanking">Please
-              Login to leave a ranking.</a>
-
-            <!--Start One Approved Comment-->
-          </div>
-          <div id="itemFormModal" class="modal fade" role="dialog" tabindex="0">
-            <input type="hidden" value="" id="itemFormButton">
-            <input type="hidden" value="" id="itemFormType">
-            <input type="hidden" value="" id="itemFormQty">
-            <input type="hidden" value="" id="itemFormcolorDesc">
-            <input type="hidden" value="" id="itemFormcolorValue">
-            <input type="hidden" value="" id="itemFormlogoDesc">
-            <input type="hidden" value="" id="itemFormlogoValue">
-            <input type="hidden" value="" id="itemFormsizeDesc">
-            <input type="hidden" value="" id="itemFormsizeValue">
-            <input type="hidden" value="" id="itemFormTypeCode">
-            <input type="hidden" value="" id="itemFormOldType">
-            <input type="hidden" value="" id="itemFormOldTypeValue">
-            <input type="hidden" value="" id="itemFormQuick">
-            <input type="hidden" value="" id="itemFormSKU">
-            <input type="hidden" value="" id="itemFormMerchImage">
-            <input type="hidden" value="" id="itemFormCurrentPrice">
-            <div class="modal-dialog">
-              <!-- Modal content-->
-              <div class="modal-content itemFormModalContent"></div>
-            </div>
-          </div>
-          <div id="cartType" class="modal fade" role="dialog" tabindex="0">
-            <div class="modal-dialog">
-              <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-body cartTypeBody"></div>
+              <div class="input-group">
+                <label class="input-group-text" for="merchSortBySelectID">Sort By:</label>
+                <select aria-label="Sort By" id="merchSortBySelectID"
+                  class="merchSortBy form-control form-select wauto">
+                  <option value="0" class="subject-option"> Description(A - Z)</option>
+                  <option value="1" class="subject-option"> Description(Z - A)</option>
+                  <option value="2" class="subject-option"> Price(Low - High)</option>
+                  <option value="3" class="subject-option"> Price(High - Low)</option>
+                </select>
               </div>
             </div>
           </div>
-          <div id="reportPostModal" class="modal fade" role="dialog" tabindex="0">
-            <div class="modal-dialog">
-              <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h3 class="modal-title">Report Comment</h3>
-                </div>
-                <div class="modal-body">
-                  <p>Are you sure you want to report this comment for inappropriate content?</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary reportCommentYes" tabindex="0">Yes</button>
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" tabindex="0">Close</button>
-                </div>
-              </div>
+
+          <div id="merchlist-body" class="merchlist__body">
+
+            <div class="merchItem" data-count="1">
+
+            </div>
+
+            <div class="merchItem" data-count="2">
+
+            </div>
+
+            <div class="merchItem" data-count="3">
+
+            </div>
+
+            <div class="merchItem" data-count="4">
+
             </div>
           </div>
-          <div id="notEnough" class="modal fade" role="dialog" tabindex="0">
-            <div class="modal-dialog">
-              <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-header"></div>
-                <div class="modal-body">
-                  <p>This item requires more points than you have available.</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-bs-dismiss="modal" tabindex="0">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
+
 
     <!-- <div class="container-full max-width-wrapper-large">
       <nav aria-label="breadcrumb" class="category__breadcrumb-nav">
@@ -1904,197 +1597,6 @@
         </div>
 
       </div>
-    </div> -->
-
-
-
-
-    <!-- <h1 class="mb-2">Bootstrap Reformatting</h1>
-
-    <div class="mb-3">
-      <h3>Standard Form</h3>
-      <div>
-        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-      </div>
-
-      <div>
-        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>
-    </div>
-
-    <div class="mb-3">
-      <h3>Standard Dropdown</h3>
-      <select class="form-select" aria-label="Default select example">
-        <option selected>Open this select menu</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
-    </div>
-
-    <div class="mb-3">
-      <h3>Checkbox</h3>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Default checkbox
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-        <label class="form-check-label" for="flexCheckChecked">
-          Checked checkbox
-        </label>
-      </div>
-    </div>
-
-    <div class="mb-3">
-      <h3>Radio Button</h3>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Default radio
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-        <label class="form-check-label" for="flexRadioDefault2">
-          Default checked radio
-        </label>
-      </div>
-    </div>
-
-    <div class="mb-3">
-      <h3>Input Group</h3>
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1">@</span>
-        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-          aria-describedby="basic-addon1">
-      </div>
-
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
-          aria-describedby="basic-addon2">
-        <span class="input-group-text" id="basic-addon2">@example.com</span>
-      </div>
-
-      <label for="basic-url" class="form-label">Your vanity URL</label>
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-      </div>
-
-      <div class="input-group mb-3">
-        <span class="input-group-text">$</span>
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-        <span class="input-group-text">.00</span>
-      </div>
-
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-        <span class="input-group-text">@</span>
-        <input type="text" class="form-control" placeholder="Server" aria-label="Server">
-      </div>
-
-      <div class="input-group">
-        <span class="input-group-text">With textarea</span>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
-      </div>
-    </div>
-
-    <div class="mb-3">
-      <h3>Floating Labels</h3>
-      <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Email address</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Password</label>
-      </div>
-    </div>
-
-    <div class="mb-3">
-      <h3>Form Grid</h3>
-      <div class="row">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <h3>Form Validation</h3>
-      <form class="row g-3 needs-validation" novalidate>
-        <div class="category__main-item">
-          <label for="validationCustom01" class="form-label">First name</label>
-          <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-          <div class="valid-feedback">
-            Looks good!
-          </div>
-        </div>
-        <div class="category__main-item">
-          <label for="validationCustom02" class="form-label">Last name</label>
-          <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-          <div class="valid-feedback">
-            Looks good!
-          </div>
-        </div>
-        <div class="category__main-item">
-          <label for="validationCustomUsername" class="form-label">Username</label>
-          <div class="input-group has-validation">
-            <span class="input-group-text" id="inputGroupPrepend">@</span>
-            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
-              required>
-            <div class="invalid-feedback">
-              Please choose a username.
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <label for="validationCustom03" class="form-label">City</label>
-          <input type="text" class="form-control" id="validationCustom03" required>
-          <div class="invalid-feedback">
-            Please provide a valid city.
-          </div>
-        </div>
-        <div class="col-md-3">
-          <label for="validationCustom04" class="form-label">State</label>
-          <select class="form-select" id="validationCustom04" required>
-            <option selected disabled value="">Choose...</option>
-            <option>...</option>
-          </select>
-          <div class="invalid-feedback">
-            Please select a valid state.
-          </div>
-        </div>
-        <div class="col-md-3">
-          <label for="validationCustom05" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="validationCustom05" required>
-          <div class="invalid-feedback">
-            Please provide a valid zip.
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-            <label class="form-check-label" for="invalidCheck">
-              Agree to terms and conditions
-            </label>
-            <div class="invalid-feedback">
-              You must agree before submitting.
-            </div>
-          </div>
-        </div>
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit">Submit form</button>
-        </div>
-      </form>
     </div> -->
 
   </main>

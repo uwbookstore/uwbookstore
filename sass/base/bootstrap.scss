@@ -1,11 +1,11 @@
 @use '../util' as *;
+// TODO: Look at .container max-width on homepage. Might need to rethink homepage
 
 .contain,
 .container {
-  @include breakpoint(medium) {
-    margin: 0 auto;
-    padding: 0;
-  }
+  // max-width: rem(1170);
+  padding: 0;
+  margin: 0 auto;
 }
 
 hr {

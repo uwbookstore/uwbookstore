@@ -1,5 +1,4 @@
 @use '../util' as *;
-
 // Create some space under the
 // iCM editor menu since we use
 // a negative top margin on the
@@ -19,13 +18,6 @@
   &:has(.container-full) {
     max-width: 100%;
   }
-}
-
-.contain,
-.container {
-  max-width: rem(1170);
-  padding: 0;
-  margin: 0 auto;
 }
 
 #contentSection {

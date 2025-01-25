@@ -1,4 +1,20 @@
 @use '../util' as *;
+.merch__header {
+  margin-bottom: rem(30);
+
+  &-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: rem(10);
+    width: 100%;
+
+    @include breakpoint(medium) {
+      flex-wrap: nowrap;
+    }
+  }
+}
 
 .viewFiltersDiv {
   margin-bottom: 0;
@@ -6,22 +22,6 @@
 
 #merchResultsSelectID {
   margin: 0;
-}
-
-.merchlist {
-  &__header {
-    display: flex;
-    flex-wrap: wrap;
-
-    .page_header,
-    .merchlist__inputs {
-      flex: 0 0 100%;
-    }
-
-    .input-group:not(:last-child) {
-      margin-bottom: rem(15);
-    }
-  }
 }
 
 .merchItem {
@@ -114,11 +114,18 @@
   &:focus,
   &:active {
     text-decoration: none;
+
     img,
     p.merchTitle {
       opacity: 0.75;
     }
-    pacity: 1;
+    opacity: 1;
+  }
+
+  &:focus,
+  &:focus-visible {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.4);
+    outline-offset: rem(2);
   }
 }
 
@@ -172,8 +179,17 @@ p.merchNumber {
 
 .pagination > li > a,
 .pagination > li > span {
-  font-size: rem(25);
-  padding: rem(20);
+  color: var(--clr-black);
+  min-width: rem(44);
+  min-height: rem(44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.4);
+    outline-offset: rem(2);
+  }
 
   @include breakpoint(medium) {
     font-size: rem(18);
@@ -271,6 +287,7 @@ p.merchNumber {
 .card-body > .row .merchLinkWrap {
   padding: 0 0.5rem;
 }
+
 .card-body > .row .merchLinkWrap .merchLink {
   background: #f8d7da;
   display: flex;
@@ -280,7 +297,7 @@ p.merchNumber {
   text-align: center;
   height: 3.75rem;
   border-radius: 0.25rem;
-  color: #58151c;
+  color: #441118;
   border: 0.0625rem solid #f1aeb5;
   text-decoration: none;
   transition: var(--transition);
@@ -293,6 +310,8 @@ p.merchNumber {
 .card-body > .row .merchLinkWrap .merchLink:hover {
   background-color: #e0c5c7;
   border-color: #ca8f96;
+  outline: rem(2) solid #441118;
+  outline-offset: rem(2);
 }
 @media (min-width: 64em) {
   .card-body > .row .merchLinkWrap .merchLink {

@@ -590,7 +590,7 @@ li.attribute {
 .card.previousDynamic,
 .card.featuredDynamic,
 .card.checkoutDynamic {
-  max-width: rem(1170);
+  max-width: var(--page-max-width);
   margin: rem(20) auto 0;
   border: none;
 }

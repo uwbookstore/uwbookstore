@@ -263,6 +263,7 @@ p.merchPrice.red {
 }
 
 .merchResultsSelect {
+  width: auto;
   margin: 0;
 }
 
@@ -616,9 +617,22 @@ li.attribute {
   }
 }
 
+// TODO: Remove these lines from js file if CSS works
+// ul.breadcrumb,
+// .searchCatWrap,
+// .merchTop.Buttons,
+// .pageHelp,
+// .bottomButtons,
+.sortCatWrap,
+h1.page_header,
+.merchRank {
+  display: none;
+}
+
 // NEW MBS STUFF UPCOMING
 .inventory-display-wrapper {
-  margin-block: rem(8);
+  display: none;
+  // margin-block: rem(8);
 }
 
 .inventory-display-wrapper .inventory-display-text {
@@ -685,8 +699,4 @@ li.attribute {
   text-align: center;
   line-height: 1.2;
   padding-top: rem(17.5);
-}
-
-.merchRank {
-  display: none;
 }

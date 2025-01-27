@@ -30,6 +30,7 @@ button.btn-outline-secondary.typeCodeOption {
 
   &:hover,
   &.typeSelected {
+    border-width: rem(1) !important;
     border-color: var(--clr-primary) !important;
     color: var(--clr-white);
     background-color: var(--clr-primary);
@@ -239,6 +240,7 @@ span.btn-outline-secondary.typeSelected {
         margin-bottom: 0;
         flex-direction: row;
         flex-wrap: wrap;
+        margin: 0 rem(-5);
 
         div {
           width: 47%;

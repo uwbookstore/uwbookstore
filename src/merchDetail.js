@@ -2,7 +2,9 @@ $(document).ready(function () {
   $('#contentSection ul.breadcrumb, a.pageHelp, h1.page_header').hide();
 
   $(
-    '<div id="merch-main" class="merch"><div class="flex merch__detail"><div id="merch-imgs" class="merch__detail-images"></div><div id="merch-info" class="merch__detail-info"></div></div></div>'
+    `
+    <div id="merch-main" class="merch"><div class="flex merch__detail"><div id="merch-imgs" class="merch__detail-images"></div><div id="merch-info" class="merch__detail-info"></div></div></div>
+    `
   ).prependTo('div#ContainDiv');
 
   // const prodName = $('h2.merchTitle').text();
@@ -39,26 +41,30 @@ $(document).ready(function () {
     if ($('img.merchDetailImage').attr('src') === '/images/notavail.gif') {
       // No image available
       $(
-        '<img src="https://i.univbkstr.com/v3/img/misc/no-image.jpg" class="merch__detail-img" alt="Image not available">'
+        `<img src="https://i.univbkstr.com/v3/img/misc/no-image.jpg" class="merch__detail-img" alt="Image not available">`
       ).appendTo('div#merch-imgs');
     } else {
       $(
-        '<img src="' +
-          $('img.merchDetailImage').attr('data-high') +
-          '" alt="" role="presentation" class="merch__detail-img">'
+        // '<img src="' +
+        //   $('img.merchDetailImage').attr('data-high') +
+        //   '" alt="" role="presentation" class="merch__detail-img">'
+
+        `
+        <img src="${$('img.merchDetailImage').attr('data-high')}" alt="" role="presentation" class="merch__detail-img">
+        `
       ).appendTo('div#merch-imgs');
     }
   } // END of imgArray if
 
   // Start Product Details layout
-  $('<h2 class="merch__detail-title">' + prodName + '</h2>').appendTo(
+  $(`<h2 class="merch__detail-title">${prodName}</h2>`).appendTo(
     'div#merch-info'
   );
 
-  // Price blockk
+  // Price block
   const prodPrice = $('span.merchPriceCurrent').text();
   let salePrice = $('span.merchPriceCurrent').text();
-  $('<div id="priceBlock" class="merch__detail-price"></div>').appendTo(
+  $(`<div id="priceBlock" class="merch__detail-price"></div>`).appendTo(
     'div#merch-info'
   );
 
@@ -73,15 +79,11 @@ $(document).ready(function () {
     // pctOff *= 100;
     // pctOff = Math.round(pctOff);
 
-    $('<span class="original">$' + origPrice + '</span>').appendTo(
-      'div#priceBlock'
-    );
-    // $('<span class="sale">$' + salePrice + ' - ' + pctOff + '% Off!</span>').appendTo('div#priceBlock');
-    $('<span class="sale">$' + salePrice + '</span>').appendTo(
-      'div#priceBlock'
-    );
+    $(`<span class="original">$${origPrice}</span>`).appendTo('div#priceBlock');
+
+    $(`<span class="sale">$${salePrice}</span>`).appendTo('div#priceBlock');
   } else {
-    $('<span>' + prodPrice + '</span>').appendTo('div#priceBlock');
+    $(`<span>${prodPrice}</span>`).appendTo('div#priceBlock');
   } // END of price-block if
 
   // if (
@@ -96,19 +98,17 @@ $(document).ready(function () {
   // }
 
   $(
-    '<div id="description-block" class="merch__detail-description"><h3 class="merch__detail-title-small">The Details</h3>'
+    `<div id="description-block" class="merch__detail-description"><h3 class="merch__detail-title-small">The Details</h3>`
   ).appendTo('div#merch-info');
 
   $(
-    '<div class="merch__detail-description-open ">' + description + '</div>'
+    `<div class="merch__detail-description-open ">${description}</div>`
   ).appendTo('div#description-block');
   $(noAddCart)
-    .addClass('alert alert-warning text-center m5')
+    .addClass('alert alert-warning text-center')
     .appendTo('#description-block');
   $(
-    '<div class="merch__detail-sku"><strong>Item:</strong> ' +
-      prodSku +
-      '</div>'
+    `<div class="merch__detail-sku"><strong>Item:</strong>${prodSku}</div>`
   ).appendTo('div#description-block');
   $('p.gmPromo').appendTo('div#description-block');
 
@@ -119,41 +119,44 @@ $(document).ready(function () {
 
   if (itemDisclaimer.length > 0 && $('div#kyleCavan').length > 0) {
     $(
-      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
+      `<div id="item-disclaimer" class="alert alert-warning"><label></label></div>`
     ).appendTo('div#merch-info');
     $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
     $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
     $('.normal').html(
-      '<strong>PLEASE READ BEFORE PURCHASE!</strong> Shipping time takes 10-15 business days (M-F).  This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for store pick-up, promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>'
+      `
+      <strong>PLEASE READ BEFORE PURCHASE!</strong> Shipping time takes 10-15 business days (M-F).  This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for store pick-up, promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>
+      `
     );
     $('div#kyleCavan').hide();
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
   } else if (itemDisclaimer.length > 0 && $('div#landsEnd').length > 0) {
     $(
-      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
+      `<div id="item-disclaimer" class="alert alert-warning"><label></label></div>`
     ).appendTo('div#merch-info');
     $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
     $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
     $('.normal').html(
-      '<strong>PLEASE READ BEFORE PURCHASE!  Store pick-up orders will incur a $7.50 drop ship charge.</strong> This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>'
+      `
+      <strong>PLEASE READ BEFORE PURCHASE!  Store pick-up orders will incur a $7.50 drop ship charge.</strong> This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>
+      `
     );
     $('div#landsEnd').hide();
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
   } else if (itemDisclaimer.length > 0 && $('div#landsEndReally').length > 0) {
     $(
-      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
+      `<div id="item-disclaimer" class="alert alert-warning"><label></label></div>`
     ).appendTo('div#merch-info');
     $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
     $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
     $('.normal').html(
-      // `<strong>PLEASE READ BEFORE PURCHASE! — Lands' End may take 10-15 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge.</strong>This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>`
       `<strong>PLEASE READ BEFORE PURCHASE! — Lands' End may take 10-15 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>`
     );
     $('div#landsEnd').hide();
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
   } else if (itemDisclaimer.length > 0 && $('div#smphLe').length > 0) {
     $(
-      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
+      `<div id="item-disclaimer" class="alert alert-warning"><label></label></div>`
     ).appendTo('div#merch-info');
     $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
     $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
@@ -164,7 +167,7 @@ $(document).ready(function () {
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
   } else if (itemDisclaimer.length > 0 && $('div#jardine').length > 0) {
     $(
-      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
+      `<div id="item-disclaimer" class="alert alert-warning"><label></label></div>`
     ).appendTo('div#merch-info');
     $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
     $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
@@ -175,7 +178,7 @@ $(document).ready(function () {
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
   } else if (itemDisclaimer.length > 0) {
     $(
-      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
+      `<div id="item-disclaimer" class="alert alert-warning"><label></label></div>`
     ).appendTo('div#merch-info');
     $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
     $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
@@ -208,45 +211,24 @@ $(document).ready(function () {
         $(this).text('2XS');
       } else if ($(this).text().toLowerCase() === 'x-small') {
         $(this).text('XS');
-        if ($('span.xsmall').length) {
-          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
-        }
       } else if ($(this).text().toLowerCase() === 'small') {
         $(this).text('S');
-        if ($('span.sml').length) {
-          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
-        }
       } else if ($(this).text().toLowerCase() === 'medium') {
         $(this).text('M');
-        if ($('span.medium').length) {
-          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
-        }
       } else if ($(this).text().toLowerCase() === 'large') {
         $(this).text('L');
-        if ($('span.large').length) {
-          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
-        }
       } else if ($(this).text().toLowerCase() === 'x-large') {
         $(this).text('XL');
-        if ($('span.xlg').length) {
-          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
-        }
       } else if (
         $(this).text().toLowerCase() === 'xx-large' ||
         $(this).text().toLowerCase() === '2x-large'
       ) {
         $(this).text('2XL');
-        if ($('span.xxlg').length) {
-          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
-        }
       } else if (
         $(this).text().toLowerCase() === 'xxx-large' ||
         $(this).text().toLowerCase() === '3x-large'
       ) {
         $(this).text('3XL');
-        if ($('span.xxxlg').length) {
-          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
-        }
       } else if (
         $(this).text().toLowerCase() === 'XXXX-LARGE' ||
         $(this).text().toLowerCase() === '4X'
@@ -301,11 +283,15 @@ $(document).ready(function () {
   if (sizes.length > 0) {
     const sizeArray = sizes.html();
     $(
-      '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker">' +
-        sizeArray +
-        '</div></div>'
+      `
+        <div id="sizes" class="merch__detail-size">
+          <div class="flex merch__detail-size-picker">
+            ${sizeArray}
+          </div>
+        </div>
+      `
     ).appendTo('div#merch-info');
-    $('<label class="merch__detail-size-label">Size |</label>').prependTo(
+    $(`<label class="merch__detail-size-label">Size |</label>`).prependTo(
       'div#sizes'
     );
   } else if (
@@ -317,44 +303,70 @@ $(document).ready(function () {
 
     if (singleItem === 'xxx-large') {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-outline-secondary typeSelected">3XL</span></div></div>'
+        `
+          <div id="sizes" class="merch__detail-size">
+            <div class="flex merch__detail-size-picker">
+              <span class="btn btn-outline-secondary typeSelected">3XL</span>
+            </div>
+          </div>
+        `
       ).appendTo('div#merch-info');
     } else if (singleItem === 'newborn 3 month') {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-outline-secondary typeSelected">NB/3M</span></div></div>'
+        `
+          <div id="sizes" class="merch__detail-size">
+            <div class="flex merch__detail-size-picker">
+              <span class="btn btn-outline-secondary typeSelected">NB/3M</span>
+            </div>
+          </div>
+        `
       ).appendTo('div#merch-info');
     } else if (singleItem === 'large/x-large') {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-outline-secondary typeSelected">L/XL</span></div></div>'
+        `
+          <div id="sizes" class="merch__detail-size">
+            <div class="flex merch__detail-size-picker">
+              <span class="btn btn-outline-secondary typeSelected">L/XL</span>
+            </div>
+          </div>
+        `
       ).appendTo('div#merch-info');
     } else {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-outline-secondary typeSelected">' +
-          singleItem +
-          '</span></div></div>'
+        `
+          <div id="sizes" class="merch__detail-size">
+            <div class="flex merch__detail-size-picker">
+              <span class="btn btn-outline-secondary typeSelected">${singleItem}</span>
+            </div>
+          </div>
+        `
       ).appendTo('div#merch-info');
     }
 
-    $('<label class="merch__detail-size-label">Size |</label>').prependTo(
+    $(`<label class="merch__detail-size-label">Size |</label>`).prependTo(
       'div#sizes'
     );
   } else if (logos.length > 0) {
     const logoArray = logos.html();
     $(
-      '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker">' +
-        logoArray +
-        '</div></div>'
+      `
+        <div id="sizes" class="merch__detail-size">
+          <div class="flex merch__detail-size-picker">${logoArray}</div>
+        </div>
+      `
     ).appendTo('div#merch-info');
-    $('<label class="merch__detail-size-label">Size |</label>').prependTo(
+    $(`<label class="merch__detail-size-label">Size |</label>`).prependTo(
       'div#sizes'
     );
   } else if (colors.length > 0) {
     const colorArray = colors.html();
     const colorTitle = $('.merchColorTitle').text().toLowerCase();
     $(
-      '<div id="colors" class="merch__detail-color"><div class="flex merch__detail-color-picker">' +
-        colorArray +
-        '</div></div>'
+      `
+        <div id="colors" class="merch__detail-color">
+        <div class="flex merch__detail-color-picker">${colorArray}</div>
+        </div>
+      `
     ).appendTo('div#merch-info');
     $(
       `<label id="color-label" class="merch__detail-color-label">${colorTitle} </label>`
@@ -375,17 +387,17 @@ $(document).ready(function () {
   if (select.length > 0) {
     // Select dropdown...
 
-    $('<div id="sizes" class="merch__detail-size "></div>').appendTo(
+    $(`<div id="sizes" class="merch__detail-size "></div>`).appendTo(
       'div#merch-info'
     );
     $(
-      '<label class="merch__detail-size-label">Make Selection:</label>'
+      `<label class="merch__detail-size-label">Make Selection:</label>`
     ).appendTo('div#sizes');
     // $('<label class="merch__detail-size-label">Amount:</label>').appendTo(
     //   'div#sizes'
     // );
     $('select.merchDropdown').appendTo('div#sizes').addClass('form-control');
-    $('<div class="flex merch__detail-size-picker"></div>').appendTo(
+    $(`<div class="flex merch__detail-size-picker"></div>`).appendTo(
       'div#sizes'
     );
 
@@ -543,12 +555,12 @@ $(document).ready(function () {
 
   // Append Quantity & Add to Cart button
   const qty = $('input#merchQTY');
-  $('<div class="flex merch__detail-add"></div>').appendTo('div#merch-info');
+  $(`<div class="flex merch__detail-add"></div>`).appendTo('div#merch-info');
   $(
-    '<div class="merch__detail-qty"><label for="merchQTY">Quantity: </label></div>'
+    `<div class="merch__detail-qty"><label for="merchQTY">Quantity: </label></div>`
   ).appendTo('.merch__detail-add');
   $(qty).appendTo('.merch__detail-qty');
-  $('<div class="merch__detail-add-btn"></div>').appendTo('.merch__detail-add');
+  $(`<div class="merch__detail-add-btn"></div>`).appendTo('.merch__detail-add');
   $('a.addToCart.btn.btn-primary').appendTo('.merch__detail-add-btn');
   $('a.addToCartTypes.btn.btn-primary').appendTo('.merch__detail-add-btn');
 
@@ -573,10 +585,24 @@ $(document).ready(function () {
   $('<div class="regLink"></div>').insertAfter('.merch__detail-add');
 
   $(
-    '<h2 class="heading__line-center" id="tabs-header"><span>Additional Information</span></h2><div class="tabs"><ul class="tabs__nav"><li class="tabs__item"><a href="#returns" class="tabs__link"><i class="fa fa-exchange" aria-hidden="true"></i> Returns &amp; Exchanges</li><li class="tabs__item"><a href="#shipping" class="tabs__link"><i class="fa fa-truck" aria-hidden="true"></i> Shipping &amp; Handling</li></ul></div>'
+    `
+      <h2 class="heading__line-center" id="tabs-header">Additional Information</h2>
+      <div class="tabs">
+        <ul class="tabs__nav">
+          <li class="tabs__item">
+            <a href="#returns" class="tabs__link">
+            <i class="fa fa-exchange" aria-hidden="true"></i> Returns &amp; Exchanges
+          </li>
+          <li class="tabs__item">
+            <a href="#shipping" class="tabs__link">
+            <i class="fa fa-truck" aria-hidden="true"></i> Shipping &amp; Handling
+          </li>
+        </ul>
+      </div>
+    `
   ).insertAfter('#merch-main');
 
-  $('<div id="tabs__container" class="tabs__container group"></div>').appendTo(
+  $(`<div id="tabs__container" class="tabs__container"></div>`).appendTo(
     'div.tabs'
   );
 

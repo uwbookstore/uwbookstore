@@ -107,7 +107,7 @@ $(document).ready(function () {
     const pageItems = $('.pagination li');
 
     if (pageItems.length === 1) {
-      $('ul.pagination, select.merchResultsSelect').hide();
+      $('ul.pagination').hide();
     }
     $('ul.pagination').appendTo('#pagination-btm');
     $('select.merchResultsSelect')

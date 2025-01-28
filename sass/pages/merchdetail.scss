@@ -23,10 +23,10 @@ p.merchDiscount {
   display: none;
 }
 
-span.btn-outline-secondary,
-button.btn-outline-secondary.typeCodeOption {
+span.btn-default,
+button.btn-default.typeCodeOption {
   width: 47%;
-  margin: 0 0 rem(30);
+  margin: 0 rem(5) rem(30);
 
   &:hover,
   &.typeSelected {
@@ -36,18 +36,8 @@ button.btn-outline-secondary.typeCodeOption {
     background-color: var(--clr-primary);
   }
 
-  &.disabled {
-    cursor: not-allowed;
-    background: url('https://i.univbkstr.com/v3/css/img/disabled-bg.png');
-    background-size: 100% 100%;
-    background-color: transparent;
-    color: color-mix(in srgb, var(--clr-dark-gray), #000 5%);
-    border-color: color-mix(in srgb, var(--clr-dark-gray), #000 5%);
-  }
-
   @include breakpoint(medium) {
     width: rem(60);
-    // border-width: rem(1);
 
     &.btn-w-auto {
       width: auto;
@@ -56,7 +46,7 @@ button.btn-outline-secondary.typeCodeOption {
   }
 }
 
-span.btn-outline-secondary.typeSelected {
+span.btn-default.typeSelected {
   &:hover {
     cursor: default;
   }
@@ -124,12 +114,8 @@ span.btn-outline-secondary.typeSelected {
     }
 
     &-images {
-      width: 100%;
-
-      @supports (display: flex) {
-        width: auto;
-        flex: 1 100%;
-      }
+      width: auto;
+      flex: 1 100%;
     }
 
     &-img {
@@ -141,15 +127,11 @@ span.btn-outline-secondary.typeSelected {
     }
 
     &-info {
-      width: 100%;
+      width: auto;
+      flex: 1 100%;
       font-size: rem(16);
       word-wrap: break-word;
       overflow: hidden;
-
-      @supports (display: flex) {
-        width: auto;
-        flex: 1 100%;
-      }
 
       .message_merch_promo {
         padding: rem(10);
@@ -280,17 +262,6 @@ span.btn-outline-secondary.typeSelected {
             width: 100%;
             transition: all 0.25s ease;
           }
-
-          &.disabled {
-            label {
-              cursor: not-allowed;
-              background: url('https://i.univbkstr.com/v3/css/img/disabled-bg.png');
-              background-size: 100% 100%;
-              background-color: transparent;
-              color: rgba(100, 100, 100, 0.5);
-              border-color: rgba(100, 100, 100, 0.5);
-            }
-          }
         }
 
         @include breakpoint(medium) {
@@ -325,8 +296,6 @@ span.btn-outline-secondary.typeSelected {
         width: 100%;
         text-align: center;
         font-size: rem(20);
-        line-height: rem(50);
-        height: rem(50);
       }
     }
 
@@ -341,22 +310,14 @@ span.btn-outline-secondary.typeSelected {
       }
 
       &-images {
-        width: 60%;
-
-        @supports (display: flex) {
-          width: auto;
-          flex: 1 60%;
-        }
+        width: auto;
+        flex: 1 60%;
       }
 
       &-info {
-        width: 40%;
+        width: auto;
+        flex: 1 40%;
         padding-left: rem(20);
-
-        @supports (display: flex) {
-          width: auto;
-          flex: 1 40%;
-        }
       }
 
       &-title {
@@ -369,9 +330,6 @@ span.btn-outline-secondary.typeSelected {
 
       &-price {
         font-size: rem(14);
-      }
-
-      &-description {
       }
 
       &-size,
@@ -538,8 +496,7 @@ span.btn-outline-secondary.typeSelected {
 }
 
 .suggestedImg {
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 .heatgear,
@@ -568,27 +525,27 @@ span.btn-outline-secondary.typeSelected {
     no-repeat;
 }
 
-.regLink {
-  margin: rem(20) 0;
-}
+// .regLink {
+//   margin: rem(20) 0;
+// }
 
-.giftRegDropdown {
-  margin-bottom: rem(10);
-}
+// .giftRegDropdown {
+//   margin-bottom: rem(10);
+// }
 
-.addGiftRegButton,
-.addSingleReg,
-.btn-wishlist {
-  i {
-    margin-right: rem(5);
-  }
-}
+// .addGiftRegButton,
+// .addSingleReg,
+// .btn-wishlist {
+//   i {
+//     margin-right: rem(5);
+//   }
+// }
 
-.addSingleReg {
-  &.pulse {
-    animation-iteration-count: infinite;
-  }
-}
+// .addSingleReg {
+//   &.pulse {
+//     animation-iteration-count: infinite;
+//   }
+// }
 
 p.sale-info {
   font-weight: bold;

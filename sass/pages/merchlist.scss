@@ -629,6 +629,57 @@ h1.page_header,
   display: none;
 }
 
+// Merchandise Categories
+.card-body > .row .merchLinkWrap {
+  padding: 0 0.5rem;
+}
+
+.card-body > .row .merchLinkWrap .merchLink {
+  background: #f8d7da;
+  display: flex;
+  margin-bottom: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 3.75rem;
+  border-radius: 0.25rem;
+  color: #441118;
+  border: 0.0625rem solid #f1aeb5;
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 1.125rem;
+}
+.card-body > .row .merchLinkWrap .merchLink p {
+  margin: 0;
+}
+.card-body > .row .merchLinkWrap .merchLink:active,
+.card-body > .row .merchLinkWrap .merchLink:hover {
+  background-color: #e0c5c7;
+  border-color: #ca8f96;
+  outline: rem(2) solid #441118;
+  outline-offset: rem(2);
+}
+@media (min-width: 64em) {
+  .card-body > .row .merchLinkWrap .merchLink {
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+}
+.card.merch_panel .card-header {
+  display: flex;
+  align-items: center;
+  padding: 0 0.9375rem;
+  height: 2.8125rem;
+  border-bottom: 0.25rem solid #f1aeb5;
+  color: #58151c;
+}
+.card.merch_panel .card-header p {
+  font-size: 1.125rem;
+}
+.card-body:has(.merchLinkWrap) {
+  padding-bottom: 0;
+}
+
 // NEW MBS STUFF UPCOMING
 .inventory-display-wrapper {
   display: none;

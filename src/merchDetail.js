@@ -591,11 +591,13 @@ $(document).ready(function () {
         <ul class="tabs__nav">
           <li class="tabs__item">
             <a href="#returns" class="tabs__link">
-            <i class="fa fa-exchange" aria-hidden="true"></i> Returns &amp; Exchanges
+              <i class="fa fa-exchange" aria-hidden="true"></i> Returns &amp; Exchanges
+            </a>
           </li>
           <li class="tabs__item">
             <a href="#shipping" class="tabs__link">
-            <i class="fa fa-truck" aria-hidden="true"></i> Shipping &amp; Handling
+              <i class="fa fa-truck" aria-hidden="true"></i> Shipping &amp; Handling
+            </a>
           </li>
         </ul>
       </div>
@@ -607,103 +609,125 @@ $(document).ready(function () {
   );
 
   $('div#tabs__container').html(
-    [
-      '<div id="returns">',
-      '<h2 class="tabs__header">Returns &amp; Exchanges</h2><br>',
-      '<div class="row">',
-      '<div class="col-md-6">',
-      '<h2 class="tabs__header">Non-Tech Returns &amp; Exchanges</h2>',
-      '<p>If you are not completely satisfied with any product, we will gladly replace it or refund the purchase price of the item. A non-text item may be returned any time as long as it was purchased from a University Book Store location or website and is in saleable condition. Returns without a receipt will be refunded at the lowest price ever sold and credited to a University Book Store gift card. See associate for details.<br>Please do the following:</p>',
-      '<ol>',
-      '<li>Items must be in new condition w/original packaging &amp; accessories.</li>',
-      '<li>Circle the item(s) on the packing list and note whether you want an EXCHANGE or CREDIT.</li>',
-      '<li>If an exchange, please make note as to what Size and/or Color you want.</li>',
-      '</ol>',
-      '</div>',
-      '<div class="col-md-6">',
-      '<h2 class="tabs__header">Tech Return Policy</h2>',
-      '<p>Tech items may be returned within 15 days, with receipt and in new condition, complete with all packaging and pieces. Unopened product may be refunded in full and opened product will be subject to a 15% restocking fee, with the following exceptions:</p>',
-      '<ol>',
-      '<li>Open Batteries, graphing calculators, in-ear headphones, ink/toner, printers, and storage devices are not returnable.</li>',
-      '<li>Special Order and sale items are generally not returnable- ask for details before purchasing please.</li>',
-      '<li>Defective items may require warranty processing or may be exchanged for the same item after verified defective, per manufacturer and store policies.</li>',
-      '</ol>',
-      '</div>',
-      '</div>',
-      '<br>',
-      '<p>Purchases may be returned to any of our stores with the packing list or send returns to:</p>',
-      '<address class="returns">The University Book Store<br>',
-      'ATTN: Online Sales Returns Department<br>',
-      '4509 West Beltline Hwy<br>',
-      'Madison, WI 53711</address>',
-      '<p>Credit card purchases will be credited to the charge card used for the initial purchase. If the purchase was made with a personal check, we will issue a check.</p>',
-      '</div>',
-      '<div id="shipping">',
-      '<h2 class="tabs__header">Shipping &amp; Handling</h2>',
-      '<div class="text-center">',
-      '<img src="https://i.univbkstr.com/v3/img/misc/usps.png" alt="USPS Logo">',
-      '<img src="https://i.univbkstr.com/v3/img/misc/ups.png" alt="UPS Logo">',
-      '</div>',
-      '<p><strong>Methods for shipping are:</strong></p>',
-      '<table class="table table-striped">',
-      '<tbody>',
-      '<tr>',
-      '<td>Ground Shipping (5-7 days)</td>',
-      '<td>$7.00 + $0.50 for each item</td>',
-      '</tr>',
-      '<tr>',
-      '<td>2nd Day Air</td>',
-      '<td>$21.00 + $1.00 for each item</td>',
-      '</tr>',
-      '<tr>',
-      '<td>Next Day Air</td>',
-      '<td>$45.00 + $2.00 for each item</td>',
-      '</tr>',
-      '</tbody>',
-      '</table>',
-      '<p>Order processing time is 5-7 business days (for ground shipping) or 1-2 business days (for expedited and pick up at store orders).</p>',
-      '<p><strong>Methods for shipping Gift Cards ONLY are:</strong></p>',
-      '<table class="table table-striped">',
-      '<tbody>',
-      '<tr>',
-      '<td>Gift Card (Ground)</td>',
-      '<td>$3.50</td>',
-      '</tr>',
-      '<tr>',
-      '<td>Gift Card (2nd Day Air)</td>',
-      '<td>$20.00</td>',
-      '</tr>',
-      '<tr>',
-      '<td>Gift Card (Next Day Air)</td>',
-      '<td>$30.00</td>',
-      '</tr>',
-      '</tbody>',
-      '</table>',
-      '<p>From the Delivery Methods section select your shipping method and then click "Continue".</p>',
-      '<p>Handling charges are applied to products that have special shipping requirements. Items that require handling charges are noted as such in the description field of that item.</p>',
-      '<p>Out of country orders are usually sent USPS International Priority Mail and will arrive in 6-10 business days. These orders are not shipped or charged until we can weigh the order and check with USPS for options / prices. We will then e-mail that information to the customer for approval.</p>',
-      '<p>Items are shipped Monday through Friday between the hours of 8 AM and 3 PM.</p>',
-      '<p>We offer the option to "Pick Up At Store" at the following locations:<br>',
-      'Library Mall (711 State Street)<br>',
-      'Health Sciences Learning Center (750 N. Highland Ave)<br>',
-      'Hilldale Mall (454 N. Midvale Blvd)<br>',
-      'Please allow for our normal processing time of 3 – 4 business days. You will receive notification once the order has been delivered to the store of your choice.</p>',
-      '<p>Brookfield (95 North Moorland Road, Suite E2 - Brookfield)<br>',
-      'Please allow for a processing time of 4-8 business days. You will receive notification once the order has been delivered to the store of choice.</p>',
-      '<p>We are happy to work with customers who have particular shipping needs. Please feel free to <a href="https://www.uwbookstore.com/Contact">email</a> us, or call us toll free at 800-993-2665 ext. 5997.</p>',
-      '</div>',
-    ].join('\n')
+    `
+      <div id="returns">
+        <h2 class="tabs__header">Returns &amp; Exchanges</h2><br>
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="tabs__header">Non-Tech Returns &amp; Exchanges</h2>
+            <p>If you are not completely satisfied with any product, we will gladly replace it or refund the purchase price
+              of the item. A non-text item may be returned any time as long as it was purchased from a University Book Store
+              location or website and is in saleable condition. Returns without a receipt will be refunded at the lowest
+              price
+              ever sold and credited to a University Book Store gift card. See associate for details.<br>Please do the
+              following:</p>
+            <ol>
+              <li>Items must be in new condition w/original packaging &amp; accessories.</li>
+              <li>Circle the item(s) on the packing list and note whether you want an EXCHANGE or CREDIT.</li>
+              <li>If an exchange, please make note as to what Size and/or Color you want.</li>
+            </ol>
+          </div>
+          <div class="col-md-6">
+            <h2 class="tabs__header">Tech Return Policy</h2>
+            <p>Tech items may be returned within 15 days, with receipt and in new condition, complete with all packaging and
+              pieces. Unopened product may be refunded in full and opened product will be subject to a 15% restocking fee,
+              with the following exceptions:</p>
+            <ol>
+              <li>Open Batteries, graphing calculators, in-ear headphones, ink/toner, printers, and storage devices are not
+                returnable.</li>
+              <li>Special Order and sale items are generally not returnable- ask for details before purchasing please.</li>
+              <li>Defective items may require warranty processing or may be exchanged for the same item after verified
+                defective, per manufacturer and store policies.</li>
+            </ol>
+          </div>
+        </div>
+        <br>
+        <p>Purchases may be returned to any of our stores with the packing list or send returns to:</p>
+        <address class="returns">The University Book Store<br>
+          ATTN: Online Sales Returns Department<br>
+          4509 West Beltline Hwy<br>
+          Madison, WI 53711</address>
+        <p>Credit card purchases will be credited to the charge card used for the initial purchase. If the purchase was made
+          with a personal check, we will issue a check.</p>
+      </div>
+      <div id="shipping">
+        <h2 class="tabs__header">Shipping &amp; Handling</h2>
+        <div class="text-center">
+          <img src="https://i.univbkstr.com/v3/img/misc/usps.png" alt="USPS Logo">
+          <img src="https://i.univbkstr.com/v3/img/misc/ups.png" alt="UPS Logo">
+        </div>
+        <p><strong>Methods for shipping are:</strong></p>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <td>Ground Shipping (5-7 days)</td>
+              <td>$7.00 + $0.50 for each item</td>
+            </tr>
+            <tr>
+              <td>2nd Day Air</td>
+              <td>$21.00 + $1.00 for each item</td>
+            </tr>
+            <tr>
+              <td>Next Day Air</td>
+              <td>$45.00 + $2.00 for each item</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Order processing time is 5-7 business days (for ground shipping) or 1-2 business days (for expedited and pick up
+          at store orders).</p>
+        <p><strong>Methods for shipping Gift Cards ONLY are:</strong></p>
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <td>Gift Card (Ground)</td>
+              <td>$3.50</td>
+            </tr>
+            <tr>
+              <td>Gift Card (2nd Day Air)</td>
+              <td>$20.00</td>
+            </tr>
+            <tr>
+              <td>Gift Card (Next Day Air)</td>
+              <td>$30.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>From the Delivery Methods section select your shipping method and then click "Continue".</p>
+        <p>Handling charges are applied to products that have special shipping requirements. Items that require handling
+          charges are noted as such in the description field of that item.</p>
+        <p>Out of country orders are usually sent USPS International Priority Mail and will arrive in 6-10 business days.
+          These orders are not shipped or charged until we can weigh the order and check with USPS for options / prices. We
+          will then e-mail that information to the customer for approval.</p>
+        <p>Items are shipped Monday through Friday between the hours of 8 AM and 3 PM.</p>
+        <p>We offer the option to "Pick Up At Store" at the following locations:<br>
+          Library Mall (711 State Street)<br>
+          Health Sciences Learning Center (750 N. Highland Ave)<br>
+          Hilldale Mall (454 N. Midvale Blvd)<br>
+          Please allow for our normal processing time of 3 – 4 business days. You will receive notification once the order
+          has been delivered to the store of your choice.</p>
+        <p>Brookfield (95 North Moorland Road, Suite E2 - Brookfield)<br>
+          Please allow for a processing time of 4-8 business days. You will receive notification once the order has been
+          delivered to the store of choice.</p>
+        <p>We are happy to work with customers who have particular shipping needs. Please feel free to <a
+            href="https://www.uwbookstore.com/Contact">email</a> us, or call us toll free at 800-993-2665 ext. 5997.</p>
+      </div>
+    `
   );
 
   const rating = $('div.merchRank');
   if ($(rating).length > 0) {
     const rankCount = $('span.rankCount').text();
+    console.log(rankCount);
     $(
-      '<li class="tabs__item"><a href="#ratings" class="tabs__link"><i class="fa fa-star" aria-hidden="true"></i> Reviews ' +
-        rankCount +
-        '</a>'
+      `
+        <li class="tabs__item">
+          <a href="#ratings" class="tabs__link">
+            <i class="fa fa-star" aria-hidden="true"></i> Reviews ${rankCount}
+          </a>
+        </li>
+      `
     ).appendTo('ul.tabs__nav');
-    $('<div id="ratings"></div>').appendTo('.tabs__container');
+    $(`<div id="ratings"></div>`).appendTo('.tabs__container');
     $('div#itemRanking').appendTo('#ratings');
 
     $('#itemRanking a.pleaseLogin').removeClass('displayb');
@@ -711,20 +735,34 @@ $(document).ready(function () {
 
   if ($('span.disco').length > 0) {
     $(
-      '<li class="tabs__item"><a href="#disco" class="tabs__link"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Discontinued Item Policy</a></li>'
+      `
+        <li class="tabs__item">
+          <a href="#disco" class="tabs__link">
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Discontinued Item Policy
+          </a>
+        </li>
+      `
     ).prependTo('ul.tabs__nav');
-    $('<div id="disco"></div>').appendTo('div#tabs__container');
+    $(`<div id="disco"></div>`).appendTo('div#tabs__container');
 
     $('div#disco').html(
-      [
-        '<p>You will not be charged for your order until the order ships.<br />',
-        'We search for discontinued items at each of our 5 locations so it may take longer for those items to be pulled. <span>If you are placing a Next Day Air or 2nd Day Air order the order processing time will be delayed while we check all of our locations for the discontinued item.</span></p>',
-        "<p>If we don't find the item, your order packing slip will show it as &quot;Discontinued&quot; and you will not receive that item.</p>",
-      ].join('\n')
+      `
+        <p>You will not be charged for your order until the order ships.<br />
+          We search for discontinued items at each of our 5 locations so it may take longer for those items to be pulled.
+          <span>
+            If you are placing a Next Day Air or 2nd Day Air order the order processing time will be delayed while we check
+            all of our locations for the discontinued item.
+          </span>
+        </p>
+        <p>
+          If we don't find the item, your order packing slip will show it as &quot;Discontinued&quot; and you will not receive
+          that item.
+        </p>
+      `
     );
   }
 
-  $('<i class="close-p fa fa-times"></i>').appendTo(
+  $(`<i class="close-p fa fa-times"></i>`).appendTo(
     'p.merchDisclaimerError, p.merchSelectError, p.addGiftErrorLCS, p.addGiftError'
   );
   $('.close-p').on('click', function () {
@@ -774,7 +812,7 @@ $(document).ready(function () {
 
   if ($('.merchSuggested').length) {
     $(
-      '<h2 class="heading__line-center"><span>Other Suggested Items</span></h2><div id="suggested-grid" class="flex merch__card"></div>'
+      `<h2 class="heading__line-center"><span>Other Suggested Items</span></h2><div id="suggested-grid" class="flex merch__card"></div>`
     ).insertBefore('#tabs-header');
     $('.suggestedItem ').each(function (i) {
       $(this)
@@ -847,8 +885,9 @@ $(document).ready(function () {
 
   const pickupMsg = document.getElementById('puo');
   if (pickupMsg) {
-    pickupMsg.innerHTML =
-      '<strong>This item has a handling charge of $15.00. Will not apply to In-Store Pickups.</strong>';
+    pickupMsg.innerHTML = `
+        <strong>This item has a handling charge of $15.00. Will not apply to In-Store Pickups.</strong>
+      `;
   }
 
   // $('div.merchItem').hide();

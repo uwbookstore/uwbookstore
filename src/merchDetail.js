@@ -2,16 +2,13 @@ $(document).ready(function () {
   $('#contentSection ul.breadcrumb, a.pageHelp, h1.page_header').hide();
 
   $(
-    `
-    <div id="merch-main" class="merch"><div class="flex merch__detail"><div id="merch-imgs" class="merch__detail-images"></div><div id="merch-info" class="merch__detail-info"></div></div></div>
-    `
+    '<div id="merch-main" class="merch"><div class="flex merch__detail"><div id="merch-imgs" class="merch__detail-images"></div><div id="merch-info" class="merch__detail-info"></div></div></div>'
   ).prependTo('div#ContainDiv');
 
-  // const prodName = $('h2.merchTitle').text();
-  const prodName = $('h1.merchTitle').text();
+  const prodName = $('h2.merchTitle').text();
   const prodSku = $('p.merchItem span').text();
   const description = $('div.merchDesc').html();
-  const itemDisclaimer = $('input.merchDisclaimer');
+  const merchDisclaimer = $('input.merchDisclaimer');
   const noAddCart = $('div.hiddenCartText');
   const imgArray = $('a.merchThumbnail').length;
   const detail = $('a.merchThumbnail img');
@@ -41,30 +38,26 @@ $(document).ready(function () {
     if ($('img.merchDetailImage').attr('src') === '/images/notavail.gif') {
       // No image available
       $(
-        `<img src="https://i.univbkstr.com/v3/img/misc/no-image.jpg" class="merch__detail-img" alt="Image not available">`
+        '<img src="https://i.univbkstr.com/v3/img/misc/no-image.jpg" class="merch__detail-img" alt="Image not available">'
       ).appendTo('div#merch-imgs');
     } else {
       $(
-        // '<img src="' +
-        //   $('img.merchDetailImage').attr('data-high') +
-        //   '" alt="" role="presentation" class="merch__detail-img">'
-
-        `
-        <img src="${$('img.merchDetailImage').attr('data-high')}" alt="" role="presentation" class="merch__detail-img">
-        `
+        '<img src="' +
+          $('img.merchDetailImage').attr('data-high') +
+          '" alt="" role="presentation" class="merch__detail-img">'
       ).appendTo('div#merch-imgs');
     }
   } // END of imgArray if
 
   // Start Product Details layout
-  $(`<h2 class="merch__detail-title">${prodName}</h2>`).appendTo(
+  $('<h2 class="merch__detail-title">' + prodName + '</h2>').appendTo(
     'div#merch-info'
   );
 
-  // Price block
+  // Price blockk
   const prodPrice = $('span.merchPriceCurrent').text();
   let salePrice = $('span.merchPriceCurrent').text();
-  $(`<div id="priceBlock" class="merch__detail-price"></div>`).appendTo(
+  $('<div id="priceBlock" class="merch__detail-price"></div>').appendTo(
     'div#merch-info'
   );
 
@@ -79,11 +72,15 @@ $(document).ready(function () {
     // pctOff *= 100;
     // pctOff = Math.round(pctOff);
 
-    $(`<span class="original">$${origPrice}</span>`).appendTo('div#priceBlock');
-
-    $(`<span class="sale">$${salePrice}</span>`).appendTo('div#priceBlock');
+    $('<span class="original">$' + origPrice + '</span>').appendTo(
+      'div#priceBlock'
+    );
+    // $('<span class="sale">$' + salePrice + ' - ' + pctOff + '% Off!</span>').appendTo('div#priceBlock');
+    $('<span class="sale">$' + salePrice + '</span>').appendTo(
+      'div#priceBlock'
+    );
   } else {
-    $(`<span>${prodPrice}</span>`).appendTo('div#priceBlock');
+    $('<span>' + prodPrice + '</span>').appendTo('div#priceBlock');
   } // END of price-block if
 
   // if (
@@ -98,17 +95,19 @@ $(document).ready(function () {
   // }
 
   $(
-    `<div id="description-block" class="merch__detail-description"><h3 class="merch__detail-title-small">The Details</h3>`
+    '<div id="description-block" class="merch__detail-description"><h3 class="merch__detail-title-small">The Details</h3>'
   ).appendTo('div#merch-info');
 
   $(
-    `<div class="merch__detail-description-open ">${description}</div>`
+    '<div class="merch__detail-description-open ">' + description + '</div>'
   ).appendTo('div#description-block');
   $(noAddCart)
-    .addClass('alert alert-warning text-center')
+    .addClass('alert alert-warning text-center m5')
     .appendTo('#description-block');
   $(
-    `<div class="merch__detail-sku"><strong>Item:</strong>${prodSku}</div>`
+    '<div class="merch__detail-sku"><strong>Item:</strong> ' +
+      prodSku +
+      '</div>'
   ).appendTo('div#description-block');
   $('p.gmPromo').appendTo('div#description-block');
 
@@ -117,71 +116,68 @@ $(document).ready(function () {
     console.log('qualifying ipad');
   }
 
-  if (itemDisclaimer.length > 0 && $('div#kyleCavan').length > 0) {
+  if (merchDisclaimer.length > 0 && $('div#kyleCavan').length > 0) {
     $(
-      `<div id="item-disclaimer" class="alert alert-warning"><label></label></div>`
+      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
     ).appendTo('div#merch-info');
-    $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
-    $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
+    $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
+    $(merchDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
     $('.normal').html(
-      `
-      <strong>PLEASE READ BEFORE PURCHASE!</strong> Shipping time takes 10-15 business days (M-F).  This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for store pick-up, promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>
-      `
+      '<strong>PLEASE READ BEFORE PURCHASE!</strong> Shipping time takes 10-15 business days (M-F).  This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for store pick-up, promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>'
     );
     $('div#kyleCavan').hide();
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
-  } else if (itemDisclaimer.length > 0 && $('div#landsEnd').length > 0) {
+  } else if (merchDisclaimer.length > 0 && $('div#cdiDrop').length > 0) {
     $(
-      `<div id="item-disclaimer" class="alert alert-warning"><label></label></div>`
+      '<div id="cdiDrop"></div><div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
     ).appendTo('div#merch-info');
-    $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
-    $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
+    $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
+    $(merchDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
     $('.normal').html(
-      `
-      <strong>PLEASE READ BEFORE PURCHASE!  Store pick-up orders will incur a $7.50 drop ship charge.</strong> This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>
-      `
+      '<strong>PLEASE READ BEFORE PURCHASE! — Custom orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>'
+    );
+    $('div#cdiDrop').hide();
+    $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
+  } else if (merchDisclaimer.length > 0 && $('div#landsEndReally').length > 0) {
+    $(
+      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
+    ).appendTo('div#merch-info');
+    $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
+    $(merchDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
+    $('.normal').html(
+      // `<strong>PLEASE READ BEFORE PURCHASE! — Lands' End may take 10-15 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge.</strong>This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>`
+      `<strong>PLEASE READ BEFORE PURCHASE! — Lands&apos; End may take 10-15 business days (M-F) to ship. Lands&rsquo; End orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>`
     );
     $('div#landsEnd').hide();
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
-  } else if (itemDisclaimer.length > 0 && $('div#landsEndReally').length > 0) {
+  } else if (merchDisclaimer.length > 0 && $('div#smphLe').length > 0) {
     $(
-      `<div id="item-disclaimer" class="alert alert-warning"><label></label></div>`
+      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
     ).appendTo('div#merch-info');
-    $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
-    $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
-    $('.normal').html(
-      `<strong>PLEASE READ BEFORE PURCHASE! — Lands' End may take 10-15 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>`
-    );
-    $('div#landsEnd').hide();
-    $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
-  } else if (itemDisclaimer.length > 0 && $('div#smphLe').length > 0) {
-    $(
-      `<div id="item-disclaimer" class="alert alert-warning"><label></label></div>`
-    ).appendTo('div#merch-info');
-    $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
-    $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
+    $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
+    $(merchDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
     $('.normal').html(
       `<strong>PLEASE READ BEFORE PURCHASE! — Lands&rsquo; End items will be charged when order is placed. Your order will be placed with Lands&rsquo; End at the end of the sale. Lands&rsquo; End may take 10-15 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge. By clicking this box, you are agreeing to these terms.</strong>`
     );
     $('div#smphLe').hide();
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
-  } else if (itemDisclaimer.length > 0 && $('div#jardine').length > 0) {
+  } else if (merchDisclaimer.length > 0 && $('div#jardine').length > 0) {
     $(
-      `<div id="item-disclaimer" class="alert alert-warning"><label></label></div>`
+      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
     ).appendTo('div#merch-info');
-    $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
-    $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
+    $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
+    $(merchDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
     $('.normal').html(
       `<strong>PLEASE READ BEFORE PURCHASE! — This is a manufacturer direct item. This item ships separately. Please allow 10 business days (M-F) for delivery</strong>. This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms</strong>.`
     );
     $('div#jardine').hide();
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
-  } else if (itemDisclaimer.length > 0) {
+  } else if (merchDisclaimer.length > 0) {
     $(
-      `<div id="item-disclaimer" class="alert alert-warning"><label></label></div>`
+      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
     ).appendTo('div#merch-info');
-    $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
-    $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
+    $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
+    $(merchDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
     // $("<em>*</em>").prependTo("#item-disclaimer span.normal");
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
   }
@@ -211,24 +207,45 @@ $(document).ready(function () {
         $(this).text('2XS');
       } else if ($(this).text().toLowerCase() === 'x-small') {
         $(this).text('XS');
+        if ($('span.xsmall').length) {
+          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
+        }
       } else if ($(this).text().toLowerCase() === 'small') {
         $(this).text('S');
+        if ($('span.sml').length) {
+          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
+        }
       } else if ($(this).text().toLowerCase() === 'medium') {
         $(this).text('M');
+        if ($('span.medium').length) {
+          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
+        }
       } else if ($(this).text().toLowerCase() === 'large') {
         $(this).text('L');
+        if ($('span.large').length) {
+          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
+        }
       } else if ($(this).text().toLowerCase() === 'x-large') {
         $(this).text('XL');
+        if ($('span.xlg').length) {
+          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
+        }
       } else if (
         $(this).text().toLowerCase() === 'xx-large' ||
         $(this).text().toLowerCase() === '2x-large'
       ) {
         $(this).text('2XL');
+        if ($('span.xxlg').length) {
+          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
+        }
       } else if (
         $(this).text().toLowerCase() === 'xxx-large' ||
         $(this).text().toLowerCase() === '3x-large'
       ) {
         $(this).text('3XL');
+        if ($('span.xxxlg').length) {
+          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
+        }
       } else if (
         $(this).text().toLowerCase() === 'XXXX-LARGE' ||
         $(this).text().toLowerCase() === '4X'
@@ -283,15 +300,11 @@ $(document).ready(function () {
   if (sizes.length > 0) {
     const sizeArray = sizes.html();
     $(
-      `
-        <div id="sizes" class="merch__detail-size">
-          <div class="flex merch__detail-size-picker">
-            ${sizeArray}
-          </div>
-        </div>
-      `
+      '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker">' +
+        sizeArray +
+        '</div></div>'
     ).appendTo('div#merch-info');
-    $(`<label class="merch__detail-size-label">Size |</label>`).prependTo(
+    $('<label class="merch__detail-size-label">Size |</label>').prependTo(
       'div#sizes'
     );
   } else if (
@@ -303,70 +316,44 @@ $(document).ready(function () {
 
     if (singleItem === 'xxx-large') {
       $(
-        `
-          <div id="sizes" class="merch__detail-size">
-            <div class="flex merch__detail-size-picker">
-              <span class="btn btn-outline-secondary typeSelected">3XL</span>
-            </div>
-          </div>
-        `
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-secondary typeSelected">3XL</span></div></div>'
       ).appendTo('div#merch-info');
     } else if (singleItem === 'newborn 3 month') {
       $(
-        `
-          <div id="sizes" class="merch__detail-size">
-            <div class="flex merch__detail-size-picker">
-              <span class="btn btn-outline-secondary typeSelected">NB/3M</span>
-            </div>
-          </div>
-        `
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-secondary typeSelected">NB/3M</span></div></div>'
       ).appendTo('div#merch-info');
     } else if (singleItem === 'large/x-large') {
       $(
-        `
-          <div id="sizes" class="merch__detail-size">
-            <div class="flex merch__detail-size-picker">
-              <span class="btn btn-outline-secondary typeSelected">L/XL</span>
-            </div>
-          </div>
-        `
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-secondary typeSelected">L/XL</span></div></div>'
       ).appendTo('div#merch-info');
     } else {
       $(
-        `
-          <div id="sizes" class="merch__detail-size">
-            <div class="flex merch__detail-size-picker">
-              <span class="btn btn-outline-secondary typeSelected">${singleItem}</span>
-            </div>
-          </div>
-        `
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-secondary typeSelected">' +
+          singleItem +
+          '</span></div></div>'
       ).appendTo('div#merch-info');
     }
 
-    $(`<label class="merch__detail-size-label">Size |</label>`).prependTo(
+    $('<label class="merch__detail-size-label">Size |</label>').prependTo(
       'div#sizes'
     );
   } else if (logos.length > 0) {
     const logoArray = logos.html();
     $(
-      `
-        <div id="sizes" class="merch__detail-size">
-          <div class="flex merch__detail-size-picker">${logoArray}</div>
-        </div>
-      `
+      '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker">' +
+        logoArray +
+        '</div></div>'
     ).appendTo('div#merch-info');
-    $(`<label class="merch__detail-size-label">Size |</label>`).prependTo(
+    $('<label class="merch__detail-size-label">Size |</label>').prependTo(
       'div#sizes'
     );
   } else if (colors.length > 0) {
     const colorArray = colors.html();
     const colorTitle = $('.merchColorTitle').text().toLowerCase();
     $(
-      `
-        <div id="colors" class="merch__detail-color">
-        <div class="flex merch__detail-color-picker">${colorArray}</div>
-        </div>
-      `
+      '<div id="colors" class="merch__detail-color"><div class="flex merch__detail-color-picker">' +
+        colorArray +
+        '</div></div>'
     ).appendTo('div#merch-info');
     $(
       `<label id="color-label" class="merch__detail-color-label">${colorTitle} </label>`
@@ -387,19 +374,144 @@ $(document).ready(function () {
   if (select.length > 0) {
     // Select dropdown...
 
-    $(`<div id="sizes" class="merch__detail-size "></div>`).appendTo(
+    $('<div id="sizes" class="merch__detail-size "></div>').appendTo(
       'div#merch-info'
     );
     $(
-      `<label class="merch__detail-size-label">Make Selection:</label>`
+      '<label class="merch__detail-size-label">Make Selection:</label>'
     ).appendTo('div#sizes');
     // $('<label class="merch__detail-size-label">Amount:</label>').appendTo(
     //   'div#sizes'
     // );
     $('select.merchDropdown').appendTo('div#sizes').addClass('form-control');
-    $(`<div class="flex merch__detail-size-picker"></div>`).appendTo(
+    $('<div class="flex merch__detail-size-picker"></div>').appendTo(
       'div#sizes'
     );
+
+    // $.each(select, function (i) {
+    //   $(
+    //     '<div id="size_' + i + '" data-name="' + $(this).text() + '"></div>'
+    //   ).appendTo('.flex.merch__detail-size-picker');
+
+    //   $('<input type="radio" id="size-option_' + i + '" name="r">')
+    //     .attr('value', $(this).val())
+    //     .attr('checked', i === 0)
+    //     .click(function () {
+    //       $('select.merchDropdown').val($(this).val());
+    //       $('.addGiftRegButton').attr('data-dropdownValue', $(this).val());
+    //       $('.addSingleReg').attr('data-dropdownValue', $(this).val());
+    //     })
+    //     .appendTo('#size_' + i);
+
+    //   if (
+    //     $(this).text() === '$5 ($5.00)' ||
+    //     $(this).text() === '$5.00 ($5.00)'
+    //   ) {
+    //     $(this).text('$5');
+    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
+    //       .appendTo('#size_' + i)
+    //       .parent()
+    //       .addClass('picker');
+    //   } else if (
+    //     $(this).text() === '$10 ($10.00)' ||
+    //     $(this).text() === '$10.00 ($10.00)'
+    //   ) {
+    //     $(this).text('$10');
+    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
+    //       .appendTo('#size_' + i)
+    //       .parent()
+    //       .addClass('picker');
+    //   } else if (
+    //     $(this).text() === '$20 ($20.00)' ||
+    //     $(this).text() === '$20.00 ($20.00)'
+    //   ) {
+    //     $(this).text('$20');
+    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
+    //       .appendTo('#size_' + i)
+    //       .parent()
+    //       .addClass('picker');
+    //   } else if (
+    //     $(this).text() === '$25 ($25.00)' ||
+    //     $(this).text() === '$25.00 ($25.00)'
+    //   ) {
+    //     $(this).text('$25');
+    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
+    //       .appendTo('#size_' + i)
+    //       .parent()
+    //       .addClass('picker');
+    //   } else if ($(this).text() === '$30 ($30.00)') {
+    //     $(this).text('$30');
+    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
+    //       .appendTo('#size_' + i)
+    //       .parent()
+    //       .addClass('picker');
+    //   } else if ($(this).text() === '$40 ($40.00)') {
+    //     $(this).text('$40');
+    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
+    //       .appendTo('#size_' + i)
+    //       .parent()
+    //       .addClass('picker');
+    //   } else if (
+    //     $(this).text() === '$50 ($50.00)' ||
+    //     $(this).text() === '$50.00 ($50.00)'
+    //   ) {
+    //     $(this).text('$50');
+    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
+    //       .appendTo('#size_' + i)
+    //       .parent()
+    //       .addClass('picker');
+    //   } else if ($(this).text() === '$60 ($60.00)') {
+    //     $(this).text('$60');
+    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
+    //       .appendTo('#size_' + i)
+    //       .parent()
+    //       .addClass('picker');
+    //   } else if ($(this).text() === '$70 ($70.00)') {
+    //     $(this).text('$70');
+    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
+    //       .appendTo('#size_' + i)
+    //       .parent()
+    //       .addClass('picker');
+    //   } else if (
+    //     $(this).text() === '$75 ($75.00)' ||
+    //     $(this).text() === '$75.00 ($75.00)'
+    //   ) {
+    //     $(this).text('$75');
+    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
+    //       .appendTo('#size_' + i)
+    //       .parent()
+    //       .addClass('picker');
+    //   } else if ($(this).text() === '$80 ($80.00)') {
+    //     $(this).text('$80');
+    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
+    //       .appendTo('#size_' + i)
+    //       .parent()
+    //       .addClass('picker');
+    //   } else if ($(this).text() === '$90 ($90.00)') {
+    //     $(this).text('$90');
+    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
+    //       .appendTo('#size_' + i)
+    //       .parent()
+    //       .addClass('picker');
+    //   } else if (
+    //     $(this).text() === '$100 ($100.00)' ||
+    //     $(this).text() === '$100.00 ($100.00)'
+    //   ) {
+    //     $(this).text('$100');
+    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
+    //       .appendTo('#size_' + i)
+    //       .parent()
+    //       .addClass('picker');
+    //   } else {
+    //     $(
+    //       '<label for="size-option_' + i + '">' + $(this).text() + '</label>'
+    //     ).appendTo('#size_' + i);
+    //   }
+
+    //   if ($('#size_0').attr('data-name') === 'Please Select') {
+    //     $('#size_0').hide();
+    //   }
+    // });
 
     // $('select.merchDropdown').hide();
     $('select.merchDropdown').appendTo('div#sizes');
@@ -555,12 +667,12 @@ $(document).ready(function () {
 
   // Append Quantity & Add to Cart button
   const qty = $('input#merchQTY');
-  $(`<div class="flex merch__detail-add"></div>`).appendTo('div#merch-info');
+  $('<div class="flex merch__detail-add"></div>').appendTo('div#merch-info');
   $(
-    `<div class="merch__detail-qty"><label for="merchQTY">Quantity: </label></div>`
+    '<div class="merch__detail-qty"><label for="merchQTY">Quantity: </label></div>'
   ).appendTo('.merch__detail-add');
   $(qty).appendTo('.merch__detail-qty');
-  $(`<div class="merch__detail-add-btn"></div>`).appendTo('.merch__detail-add');
+  $('<div class="merch__detail-add-btn"></div>').appendTo('.merch__detail-add');
   $('a.addToCart.btn.btn-primary').appendTo('.merch__detail-add-btn');
   $('a.addToCartTypes.btn.btn-primary').appendTo('.merch__detail-add-btn');
 
@@ -585,149 +697,111 @@ $(document).ready(function () {
   $('<div class="regLink"></div>').insertAfter('.merch__detail-add');
 
   $(
-    `
-      <h2 class="heading__line-center" id="tabs-header">Additional Information</h2>
-      <div class="tabs">
-        <ul class="tabs__nav">
-          <li class="tabs__item">
-            <a href="#returns" class="tabs__link">
-              <i class="fa fa-exchange" aria-hidden="true"></i> Returns &amp; Exchanges
-            </a>
-          </li>
-          <li class="tabs__item">
-            <a href="#shipping" class="tabs__link">
-              <i class="fa fa-truck" aria-hidden="true"></i> Shipping &amp; Handling
-            </a>
-          </li>
-        </ul>
-      </div>
-    `
+    '<h2 class="heading__line-center" id="tabs-header"><span>Additional Information</span></h2><div class="tabs"><ul class="tabs__nav"><li class="tabs__item"><a href="#returns" class="tabs__link"><i class="fa fa-exchange" aria-hidden="true"></i> Returns &amp; Exchanges</li><li class="tabs__item"><a href="#shipping" class="tabs__link"><i class="fa fa-truck" aria-hidden="true"></i> Shipping &amp; Handling</li></ul></div>'
   ).insertAfter('#merch-main');
 
-  $(`<div id="tabs__container" class="tabs__container"></div>`).appendTo(
+  $('<div id="tabs__container" class="tabs__container group"></div>').appendTo(
     'div.tabs'
   );
 
   $('div#tabs__container').html(
-    `
-      <div id="returns">
-        <h2 class="tabs__header">Returns &amp; Exchanges</h2><br>
-        <div class="row">
-          <div class="col-md-6">
-            <h2 class="tabs__header">Non-Tech Returns &amp; Exchanges</h2>
-            <p>If you are not completely satisfied with any product, we will gladly replace it or refund the purchase price
-              of the item. A non-text item may be returned any time as long as it was purchased from a University Book Store
-              location or website and is in saleable condition. Returns without a receipt will be refunded at the lowest
-              price
-              ever sold and credited to a University Book Store gift card. See associate for details.<br>Please do the
-              following:</p>
-            <ol>
-              <li>Items must be in new condition w/original packaging &amp; accessories.</li>
-              <li>Circle the item(s) on the packing list and note whether you want an EXCHANGE or CREDIT.</li>
-              <li>If an exchange, please make note as to what Size and/or Color you want.</li>
-            </ol>
-          </div>
-          <div class="col-md-6">
-            <h2 class="tabs__header">Tech Return Policy</h2>
-            <p>Tech items may be returned within 15 days, with receipt and in new condition, complete with all packaging and
-              pieces. Unopened product may be refunded in full and opened product will be subject to a 15% restocking fee,
-              with the following exceptions:</p>
-            <ol>
-              <li>Open Batteries, graphing calculators, in-ear headphones, ink/toner, printers, and storage devices are not
-                returnable.</li>
-              <li>Special Order and sale items are generally not returnable- ask for details before purchasing please.</li>
-              <li>Defective items may require warranty processing or may be exchanged for the same item after verified
-                defective, per manufacturer and store policies.</li>
-            </ol>
-          </div>
-        </div>
-        <br>
-        <p>Purchases may be returned to any of our stores with the packing list or send returns to:</p>
-        <address class="returns">The University Book Store<br>
-          ATTN: Online Sales Returns Department<br>
-          4509 West Beltline Hwy<br>
-          Madison, WI 53711</address>
-        <p>Credit card purchases will be credited to the charge card used for the initial purchase. If the purchase was made
-          with a personal check, we will issue a check.</p>
-      </div>
-      <div id="shipping">
-        <h2 class="tabs__header">Shipping &amp; Handling</h2>
-        <div class="text-center">
-          <img src="https://i.univbkstr.com/v3/img/misc/usps.png" alt="USPS Logo">
-          <img src="https://i.univbkstr.com/v3/img/misc/ups.png" alt="UPS Logo">
-        </div>
-        <p><strong>Methods for shipping are:</strong></p>
-        <table class="table table-striped">
-          <tbody>
-            <tr>
-              <td>Ground Shipping (5-7 days)</td>
-              <td>$7.00 + $0.50 for each item</td>
-            </tr>
-            <tr>
-              <td>2nd Day Air</td>
-              <td>$21.00 + $1.00 for each item</td>
-            </tr>
-            <tr>
-              <td>Next Day Air</td>
-              <td>$45.00 + $2.00 for each item</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>Order processing time is 5-7 business days (for ground shipping) or 1-2 business days (for expedited and pick up
-          at store orders).</p>
-        <p><strong>Methods for shipping Gift Cards ONLY are:</strong></p>
-        <table class="table table-striped">
-          <tbody>
-            <tr>
-              <td>Gift Card (Ground)</td>
-              <td>$3.50</td>
-            </tr>
-            <tr>
-              <td>Gift Card (2nd Day Air)</td>
-              <td>$20.00</td>
-            </tr>
-            <tr>
-              <td>Gift Card (Next Day Air)</td>
-              <td>$30.00</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>From the Delivery Methods section select your shipping method and then click "Continue".</p>
-        <p>Handling charges are applied to products that have special shipping requirements. Items that require handling
-          charges are noted as such in the description field of that item.</p>
-        <p>Out of country orders are usually sent USPS International Priority Mail and will arrive in 6-10 business days.
-          These orders are not shipped or charged until we can weigh the order and check with USPS for options / prices. We
-          will then e-mail that information to the customer for approval.</p>
-        <p>Items are shipped Monday through Friday between the hours of 8 AM and 3 PM.</p>
-        <p>We offer the option to "Pick Up At Store" at the following locations:<br>
-          Library Mall (711 State Street)<br>
-          Health Sciences Learning Center (750 N. Highland Ave)<br>
-          Hilldale Mall (454 N. Midvale Blvd)<br>
-          Please allow for our normal processing time of 3 – 4 business days. You will receive notification once the order
-          has been delivered to the store of your choice.</p>
-        <p>Brookfield (95 North Moorland Road, Suite E2 - Brookfield)<br>
-          Please allow for a processing time of 4-8 business days. You will receive notification once the order has been
-          delivered to the store of choice.</p>
-        <p>We are happy to work with customers who have particular shipping needs. Please feel free to <a
-            href="https://www.uwbookstore.com/Contact">email</a> us, or call us toll free at 800-993-2665 ext. 5997.</p>
-      </div>
-    `
+    [
+      '<div id="returns">',
+      '<h2 class="tabs__header">Returns &amp; Exchanges</h2><br>',
+      '<div class="row">',
+      '<div class="col-md-6">',
+      '<h2 class="tabs__header">Non-Tech Returns &amp; Exchanges</h2>',
+      '<p>If you are not completely satisfied with any product, we will gladly replace it or refund the purchase price of the item. A non-text item may be returned any time as long as it was purchased from a University Book Store location or website and is in saleable condition. Returns without a receipt will be refunded at the lowest price ever sold and credited to a University Book Store gift card. See associate for details.<br>Please do the following:</p>',
+      '<ol>',
+      '<li>Items must be in new condition w/original packaging &amp; accessories.</li>',
+      '<li>Circle the item(s) on the packing list and note whether you want an EXCHANGE or CREDIT.</li>',
+      '<li>If an exchange, please make note as to what Size and/or Color you want.</li>',
+      '</ol>',
+      '</div>',
+      '<div class="col-md-6">',
+      '<h2 class="tabs__header">Tech Return Policy</h2>',
+      '<p>Tech items may be returned within 15 days, with receipt and in new condition, complete with all packaging and pieces. Unopened product may be refunded in full and opened product will be subject to a 15% restocking fee, with the following exceptions:</p>',
+      '<ol>',
+      '<li>Open Batteries, graphing calculators, in-ear headphones, ink/toner, printers, and storage devices are not returnable.</li>',
+      '<li>Special Order and sale items are generally not returnable- ask for details before purchasing please.</li>',
+      '<li>Defective items may require warranty processing or may be exchanged for the same item after verified defective, per manufacturer and store policies.</li>',
+      '</ol>',
+      '</div>',
+      '</div>',
+      '<br>',
+      '<p>Purchases may be returned to any of our stores with the packing list or send returns to:</p>',
+      '<address class="returns">The University Book Store<br>',
+      'ATTN: Online Sales Returns Department<br>',
+      '4509 West Beltline Hwy<br>',
+      'Madison, WI 53711</address>',
+      '<p>Credit card purchases will be credited to the charge card used for the initial purchase. If the purchase was made with a personal check, we will issue a check.</p>',
+      '</div>',
+      '<div id="shipping">',
+      '<h2 class="tabs__header">Shipping &amp; Handling</h2>',
+      '<div class="text-center">',
+      '<img src="https://i.univbkstr.com/v3/img/misc/usps.png" alt="USPS Logo">',
+      '<img src="https://i.univbkstr.com/v3/img/misc/ups.png" alt="UPS Logo">',
+      '</div>',
+      '<p><strong>Methods for shipping are:</strong></p>',
+      '<table class="table table-striped">',
+      '<tbody>',
+      '<tr>',
+      '<td>Ground Shipping (5-7 days)</td>',
+      '<td>$7.00 + $0.50 for each item</td>',
+      '</tr>',
+      '<tr>',
+      '<td>2nd Day Air</td>',
+      '<td>$21.00 + $1.00 for each item</td>',
+      '</tr>',
+      '<tr>',
+      '<td>Next Day Air</td>',
+      '<td>$45.00 + $2.00 for each item</td>',
+      '</tr>',
+      '</tbody>',
+      '</table>',
+      '<p>Order processing time is 5-7 business days (for ground shipping) or 1-2 business days (for expedited and pick up at store orders).</p>',
+      '<p><strong>Methods for shipping Gift Cards ONLY are:</strong></p>',
+      '<table class="table table-striped">',
+      '<tbody>',
+      '<tr>',
+      '<td>Gift Card (Ground)</td>',
+      '<td>$3.50</td>',
+      '</tr>',
+      '<tr>',
+      '<td>Gift Card (2nd Day Air)</td>',
+      '<td>$20.00</td>',
+      '</tr>',
+      '<tr>',
+      '<td>Gift Card (Next Day Air)</td>',
+      '<td>$30.00</td>',
+      '</tr>',
+      '</tbody>',
+      '</table>',
+      '<p>From the Delivery Methods section select your shipping method and then click "Continue".</p>',
+      '<p>Handling charges are applied to products that have special shipping requirements. Items that require handling charges are noted as such in the description field of that item.</p>',
+      '<p>Out of country orders are usually sent USPS International Priority Mail and will arrive in 6-10 business days. These orders are not shipped or charged until we can weigh the order and check with USPS for options / prices. We will then e-mail that information to the customer for approval.</p>',
+      '<p>Items are shipped Monday through Friday between the hours of 8 AM and 3 PM.</p>',
+      '<p>We offer the option to "Pick Up At Store" at the following locations:<br>',
+      'Library Mall (711 State Street)<br>',
+      'Health Sciences Learning Center (750 N. Highland Ave)<br>',
+      'Hilldale Mall (454 N. Midvale Blvd)<br>',
+      'Please allow for our normal processing time of 3 – 4 business days. You will receive notification once the order has been delivered to the store of your choice.</p>',
+      '<p>Brookfield (95 North Moorland Road, Suite E2 - Brookfield)<br>',
+      'Please allow for a processing time of 4-8 business days. You will receive notification once the order has been delivered to the store of choice.</p>',
+      '<p>We are happy to work with customers who have particular shipping needs. Please feel free to <a href="https://www.uwbookstore.com/Contact">email</a> us, or call us toll free at 800-993-2665 ext. 5997.</p>',
+      '</div>',
+    ].join('\n')
   );
 
   const rating = $('div.merchRank');
   if ($(rating).length > 0) {
     const rankCount = $('span.rankCount').text();
-    console.log(rankCount);
     $(
-      `
-        <li class="tabs__item">
-          <a href="#ratings" class="tabs__link">
-            <i class="fa fa-star" aria-hidden="true"></i> Reviews ${rankCount}
-          </a>
-        </li>
-      `
+      '<li class="tabs__item"><a href="#ratings" class="tabs__link"><i class="fa fa-star" aria-hidden="true"></i> Reviews ' +
+        rankCount +
+        '</a>'
     ).appendTo('ul.tabs__nav');
-    $(`<div id="ratings"></div>`).appendTo('.tabs__container');
+    $('<div id="ratings"></div>').appendTo('.tabs__container');
     $('div#itemRanking').appendTo('#ratings');
 
     $('#itemRanking a.pleaseLogin').removeClass('displayb');
@@ -735,34 +809,20 @@ $(document).ready(function () {
 
   if ($('span.disco').length > 0) {
     $(
-      `
-        <li class="tabs__item">
-          <a href="#disco" class="tabs__link">
-            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Discontinued Item Policy
-          </a>
-        </li>
-      `
+      '<li class="tabs__item"><a href="#disco" class="tabs__link"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Discontinued Item Policy</a></li>'
     ).prependTo('ul.tabs__nav');
-    $(`<div id="disco"></div>`).appendTo('div#tabs__container');
+    $('<div id="disco"></div>').appendTo('div#tabs__container');
 
     $('div#disco').html(
-      `
-        <p>You will not be charged for your order until the order ships.<br />
-          We search for discontinued items at each of our 5 locations so it may take longer for those items to be pulled.
-          <span>
-            If you are placing a Next Day Air or 2nd Day Air order the order processing time will be delayed while we check
-            all of our locations for the discontinued item.
-          </span>
-        </p>
-        <p>
-          If we don't find the item, your order packing slip will show it as &quot;Discontinued&quot; and you will not receive
-          that item.
-        </p>
-      `
+      [
+        '<p>You will not be charged for your order until the order ships.<br />',
+        'We search for discontinued items at each of our 5 locations so it may take longer for those items to be pulled. <span>If you are placing a Next Day Air or 2nd Day Air order the order processing time will be delayed while we check all of our locations for the discontinued item.</span></p>',
+        "<p>If we don't find the item, your order packing slip will show it as &quot;Discontinued&quot; and you will not receive that item.</p>",
+      ].join('\n')
     );
   }
 
-  $(`<i class="close-p fa fa-times"></i>`).appendTo(
+  $('<i class="close-p fa fa-times"></i>').appendTo(
     'p.merchDisclaimerError, p.merchSelectError, p.addGiftErrorLCS, p.addGiftError'
   );
   $('.close-p').on('click', function () {
@@ -812,7 +872,7 @@ $(document).ready(function () {
 
   if ($('.merchSuggested').length) {
     $(
-      `<h2 class="heading__line-center"><span>Other Suggested Items</span></h2><div id="suggested-grid" class="flex merch__card"></div>`
+      '<h2 class="heading__line-center"><span>Other Suggested Items</span></h2><div id="suggested-grid" class="flex merch__card"></div>'
     ).insertBefore('#tabs-header');
     $('.suggestedItem ').each(function (i) {
       $(this)
@@ -885,12 +945,10 @@ $(document).ready(function () {
 
   const pickupMsg = document.getElementById('puo');
   if (pickupMsg) {
-    pickupMsg.innerHTML = `
-        <strong>This item has a handling charge of $15.00. Will not apply to In-Store Pickups.</strong>
-      `;
+    pickupMsg.innerHTML =
+      '<strong>This item has a handling charge of $15.00. Will not apply to In-Store Pickups.</strong>';
   }
 
-  // $('div.merchItem').hide();
-  $('div.mainItem').hide();
+  $('div.merchItem').hide();
 });
 // lcsColorWrapper

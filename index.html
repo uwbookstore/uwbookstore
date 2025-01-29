@@ -1242,95 +1242,36 @@
       </nav>
 
       <div class="category__container flex">
-
         <div class="category__sidebar">
           <button class="btn btn-expand" id="dropdown-trigger">more</button>
 
           <div id="dropdown-item">
-            <div id="gift-items" class="category__sidebar-nav">
+
+            <div class="category__sidebar-nav">
+
+
               <button class="category__sidebar-toggle">Bags &amp; Wallets</button>
-              <ul>
-                <li>
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Backpacks">Backpacks</a>
-                </li>
-                <li>
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Totes-and-Purses">Totes
-                    &amp; Purses</a>
-                </li>
-                <li>
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Wallets-and-ID-Holders">Wallets
-                    &amp; ID Holders</a>
-                </li>
-              </ul>
+              <ul id="gift-bags"></ul>
 
               <button class="category__sidebar-toggle">Drinkware</button>
-              <ul>
-                <li>
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Barware">Barware</a>
-                </li>
-                <li>
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Mugs">Mugs</a>
-                </li>
-                <li>
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Travel-Mugs-and-Water-Bottles">Travel
-                    Mugs/Water Bottles</a>
-                </li>
-              </ul>
+              <ul id="gift-drinkware"></ul>
 
               <button class="category__sidebar-toggle">Home</button>
-              <ul>
-                <li>
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Banners-and-Flags">Banners
-                    &amp; Flags</a>
-                </li>
-                <li>
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Bed-and-Bath">Bed
-                    &amp;
-                    Bath</a>
-                </li>
-                <li>
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Blankets-and-Rugs">Blankets
-                    &amp; Rugs</a>
-                </li>
-                <li>
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/For-the-Wall">For
-                    The
-                    Wall</a>
-                </li>
-                <li>
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Kitchen-and-Dining">Kitchen
-                    &amp; Dining</a>
-                </li>
-                <li>
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Patio-and-Outdoor">Patio
-                    &amp; Outdoor</a>
-                </li>
-              </ul>
+              <ul id="gift-home"></ul>
 
               <button class="category__sidebar-toggle">Tailgate</button>
-              <ul>
-                <li>
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Balls-Pucks-Helmets">Balls,
-                    Pucks, &amp; Helmets</a>
-                </li>
-                <li class="submenu__item dup-dn">
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Banners-and-Flags">Banners
-                    &amp; Flags</a>
-                </li>
-                <li>
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Hair-Accessories">Hair
-                    Accessories</a>
-                </li>
-                <li>
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Rain-Gear">Rain
-                    Gear</a>
-                </li>
-                <li>
-                  <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Tailgate-Gear">Tailgate
-                    Gear</a>
-                </li>
-              </ul>
+              <ul id="gift-tailgate"></ul>
+
+              <button class="category__sidebar-toggle">Kid's Gifts</button>
+              <ul id="gift-kids"></ul>
+
+              <button class="category__sidebar-toggle">Fine Gifts by M.LaHart &amp; Co</button>
+              <ul id="gift-fine"></ul>
+
+              <button class="category__sidebar-toggle">Miscellaneous Gifts</button>
+              <ul id="gift-miscellaneous"></ul>
             </div>
+
           </div>
         </div>
 
@@ -1352,7 +1293,7 @@
           <div class="category__main-item">
             <div class="text-center">
               <a class="category__link"
-                href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Walles-and-ID-Holders">
+                href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Wallets-and-ID-Holders">
                 <img src="https://www.uwbookstore.com/storeimages/177-457769-1.jpg" alt="" role="presentation"
                   class="img-fluid d-block img__center">
                 <span class="text-center">
@@ -1368,6 +1309,27 @@
                 <img src="https://www.uwbookstore.com/storeimages/177-1852154-1.png" alt="" role="presentation"
                   class="img-fluid d-block img__center">
                 <span class="text-center">Diploma Frames</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="category__main-item">
+            <div class="text-center">
+              <a class="category__link"
+                href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Banners-and-Flags">
+                <img class="img-fluid d-block img__center"
+                  src="https://www.uwbookstore.com/storeimages/177-259638-1.png" role="presentation" alt="" />
+                <span class="text-center">Banners &amp; Flags</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="category__main-item">
+            <div class="text-center">
+              <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Mugs" class="category__link">
+                <img src="https://www.uwbookstore.com/storeimages/177-1340399-1.jpg" role="presentation" alt=""
+                  class="img-fluid d-block img__center">
+                <span class="text-center">Mugs</span>
               </a>
             </div>
           </div>

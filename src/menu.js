@@ -25,6 +25,17 @@ $(document).ready(function () {
   $('#hat-nav li').clone().appendTo('.meganav__menu.uw-hats');
 
   // Gifts
+  $('#bag-nav li').clone().appendTo('#gift-bags');
+  $('#drink-nav li').clone().appendTo('#gift-drinkware');
+  $('#home-nav li').clone().appendTo('#gift-home');
+  $('#tailgate-nav li').clone().appendTo('#gift-tailgate');
+  $('#kidsGift-nav li').clone().appendTo('#gift-kids');
+  $('#fineGift-nav li').clone().appendTo('#gift-fine');
+  $('#gift1-nav li').clone().appendTo('#gift-miscellaneous');
+  $('#gift2-nav li').clone().appendTo('#gift-miscellaneous');
+
+  // TODO: Delete once new gift page is live
+  // Gifts
   $('#bag-nav li').clone().appendTo('.meganav__menu.gift-items');
   $('#drink-nav li').clone().appendTo('.meganav__menu.gift-items');
   $('#fineGift-nav li').clone().appendTo('.meganav__menu.gift-items');

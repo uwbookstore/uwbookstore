@@ -1511,8 +1511,11 @@
 
     function fillInnerContent(el, text, type) {
       const element = document.getElementById(el);
-
-      type === 'text' && element !== null ? element.innerText = text : element.innerHTML = text;
+      if (type === 'text') {
+        element !== null ? element.innerText = text : null
+      } else if (type === 'html') {
+        element.innerHTML = text
+      }
       return null;
     }
 

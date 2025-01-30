@@ -1242,10 +1242,7 @@
         <img src="https://i.univbkstr.com/v3/img/coupons/bucky.png" alt="" role="presentation">
       </div>
       <div class="coupon__body">
-        <div class="coupon__header">
-          <h3>10% OFF</h3>
-          <p>Your Entire Purchase!</p>
-        </div>
+        <div id="coupon-header" class="coupon__header"></div>
 
         <img src="https://i.univbkstr.com/v3/img/logos/ubsLogo.png" alt="The University Book Store"
           class="mt-2 mx-auto">
@@ -1508,13 +1505,20 @@
       dropdownItem.classList.toggle('show');
     });
 
-    const fillInnerText = (el, text) => {
+
+    function fillInnerContent(el, text, type) {
       const element = document.getElementById(el);
-      element !== null ? element.innerText = text : null;
+      if (type === 'text') {
+        element !== null ? element.innerText = text : null;
+      } else {
+        element !== null ? element.innerHTML = text : null;
+      }
     }
 
-    fillInnerText('coupon-code', '434');
-    fillInnerText('coupon-expiration', '6.30.25');
+    fillInnerContent('coupon-header', `<h3>10% OFF</h3> <p>Your Entire Purchase!</p>`, 'html')
+    fillInnerContent('coupon-code', '434', 'text');
+    fillInnerContent('coupon-expiration', '6.30.25', 'text')
+
 
   </script>
 </body>

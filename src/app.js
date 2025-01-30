@@ -1,13 +1,20 @@
-// Dynamically add innerText to elements
-const fillInnerText = (el, text) => {
+// Dynamically add innerText/HTML to elements
+function fillInnerContent(el, text, type) {
   const element = document.getElementById(el);
-  element !== null ? (element.innerText = text) : null;
-};
+  if (type === 'text') {
+    element !== null ? (element.innerText = text) : null;
+  } else if (type === 'html') {
+    element.innerHTML = text;
+  }
+  return null;
+}
 
 // Update coupon code/expiration
 // Across all current coupons
-fillInnerText('coupon-code', '434');
-fillInnerText('coupon-expiration', '6.30.25');
+fillInnerContent('coupon-header', '10% OFF', 'text');
+fillInnerContent('coupon-subhead', 'Your Entire Purchase!', 'text');
+fillInnerContent('coupon-code', '434', 'text');
+fillInnerContent('coupon-expiration', '6.30.25', 'text');
 
 $(document).ready(function () {
   const searchBtn = document.getElementById('search');

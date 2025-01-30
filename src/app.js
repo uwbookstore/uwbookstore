@@ -1,3 +1,14 @@
+// Dynamically add innerText to elements
+const fillInnerText = (el, text) => {
+  const element = document.getElementById(el);
+  element !== null ? (element.innerText = text) : null;
+};
+
+// Update coupon code/expiration
+// Across all current coupons
+fillInnerText('coupon-code', '434');
+fillInnerText('coupon-expiration', '6.30.25');
+
 $(document).ready(function () {
   const searchBtn = document.getElementById('search');
   const searchForm = document.querySelector('li.search');

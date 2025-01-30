@@ -1242,10 +1242,13 @@
         <img src="https://i.univbkstr.com/v3/img/coupons/bucky.png" alt="" role="presentation">
       </div>
       <div class="coupon__body">
-        <div id="coupon-header" class="coupon__header"></div>
+        <div class="coupon__header">
+          <h3 id="coupon-header"></h3>
+          <p id="coupon-subhead"></p>
+        </div>
 
         <img src="https://i.univbkstr.com/v3/img/logos/ubsLogo.png" alt="The University Book Store"
-          class="mt-2 mx-auto">
+          class="my-2 mx-auto">
 
         <div class="coupon__code">
           <span class="coupon__code-text">Code:</span><span id="coupon-code" class="coupon__code-id"></span>
@@ -1508,14 +1511,13 @@
 
     function fillInnerContent(el, text, type) {
       const element = document.getElementById(el);
-      if (type === 'text') {
-        element !== null ? element.innerText = text : null;
-      } else {
-        element !== null ? element.innerHTML = text : null;
-      }
+
+      type === 'text' && element !== null ? element.innerText = text : element.innerHTML = text;
+      return null;
     }
 
-    fillInnerContent('coupon-header', `<h3>10% OFF</h3> <p>Your Entire Purchase!</p>`, 'html')
+    fillInnerContent('coupon-header', '10% OFF', 'text')
+    fillInnerContent('coupon-subhead', 'Your Entire Purchase!', 'text')
     fillInnerContent('coupon-code', '434', 'text');
     fillInnerContent('coupon-expiration', '6.30.25', 'text')
 

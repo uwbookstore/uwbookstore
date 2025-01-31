@@ -395,10 +395,8 @@ span.btn-default.typeSelected {
         }
 
         input {
-          height: rem(35);
           width: 100%;
           font-size: rem(14);
-          line-height: rem(35);
           padding: 0 rem(5) 0;
         }
       }
@@ -525,28 +523,6 @@ span.btn-default.typeSelected {
     no-repeat;
 }
 
-// .regLink {
-//   margin: rem(20) 0;
-// }
-
-// .giftRegDropdown {
-//   margin-bottom: rem(10);
-// }
-
-// .addGiftRegButton,
-// .addSingleReg,
-// .btn-wishlist {
-//   i {
-//     margin-right: rem(5);
-//   }
-// }
-
-// .addSingleReg {
-//   &.pulse {
-//     animation-iteration-count: infinite;
-//   }
-// }
-
 p.sale-info {
   font-weight: bold;
   color: var(--clr-primary);
@@ -571,4 +547,8 @@ p.sale-info {
 
 .merch__detail-color-label {
   text-transform: capitalize;
+}
+
+.merch__detail-add .merch__detail-qty #merchQTY {
+  border-radius: rem(4);
 }

@@ -6,6 +6,9 @@ $(document).ready(function () {
   if (categoryTitle.toLowerCase() === 'search all') {
     const searched = window.location.search.split('=');
     const searchTerm = searched[2].replace(/%20/g, ' ');
+    let newArrivals = window.location.pathname.split('/');
+    newArrivals = newArrivals[newArrivals.length - 1];
+    console.log(newArrivals);
 
     // HANDLE NO SEARCH RESULTS RETURNED
     if (
@@ -13,7 +16,7 @@ $(document).ready(function () {
       baseUrl === 'https://www.uwbookstore.com/' ||
       baseUrl === 'https://www.uwalumnistore.com/'
     ) {
-      if ($('.noListItems').length) {
+      if ($('.noListItems').length && newArrivals.length === -1) {
         $('.noListItems').hide();
         $(
           `<div class="empty-results"><h2>Sorry, we couldn't find any products.</h2><p>We were unable to find results for <strong>${searchTerm}</strong>. Please check your spelling or try searching for similar terms.</p></div>`
@@ -43,6 +46,29 @@ $(document).ready(function () {
       $(
         `<div class="m-2 text-center">Looking for The Red Shirt&trade;, 17<sup>th</sup> Edition? Finde it here:<br><a href=https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/The-Red-Shirt-17th-Edition" class="btn btn-primary m-2">The Red Shirt&trade;</a></div>`
       ).prependTo('#contentSection');
+    }
+  } else if (categoryTitle.toLowerCase() === 'new arrivals') {
+    if (
+      baseUrl === 'https://insitestore2.mbsbooks.com/uwmadison/home' ||
+      baseUrl === 'https://www.uwbookstore.com/' ||
+      baseUrl === 'https://www.uwalumnistore.com/'
+    ) {
+      if ($('.noListItems').length) {
+        $('.noListItems').hide();
+        $(
+          `
+            <div class="max-width-wrapper pg-404">
+              <h2 class="heading__line-center">404 Page Not Found</h2>
+              <div class="text-center">
+                <p>The page you were looking for doesn't exist.</p>
+                <p>You may have mistyped the address or the page may have moved.</p>
+                <!-- <img role="presentation" src="https://i.univbkstr.com/v3/img/404/tb_sign1.png" alt="OMG 404 not found" class="img-fluid"> -->
+                <img role="presentation" src="https://i.univbkstr.com/v3/img/404/nothing_to_see.gif" alt="Nothing To See" class="img-fluid">
+              </div>
+            </div>          
+          `
+        ).insertAfter('.searchCatWrap');
+      }
     }
   }
 

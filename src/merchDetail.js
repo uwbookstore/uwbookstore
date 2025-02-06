@@ -241,45 +241,24 @@ $(document).ready(function () {
         $(this).text('2XS');
       } else if ($(this).text().toLowerCase() === 'x-small') {
         $(this).text('XS');
-        if ($('span.xsmall').length) {
-          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
-        }
       } else if ($(this).text().toLowerCase() === 'small') {
         $(this).text('S');
-        if ($('span.sml').length) {
-          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
-        }
       } else if ($(this).text().toLowerCase() === 'medium') {
         $(this).text('M');
-        if ($('span.medium').length) {
-          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
-        }
       } else if ($(this).text().toLowerCase() === 'large') {
         $(this).text('L');
-        if ($('span.large').length) {
-          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
-        }
       } else if ($(this).text().toLowerCase() === 'x-large') {
         $(this).text('XL');
-        if ($('span.xlg').length) {
-          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
-        }
       } else if (
         $(this).text().toLowerCase() === 'xx-large' ||
         $(this).text().toLowerCase() === '2x-large'
       ) {
         $(this).text('2XL');
-        if ($('span.xxlg').length) {
-          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
-        }
       } else if (
         $(this).text().toLowerCase() === 'xxx-large' ||
         $(this).text().toLowerCase() === '3x-large'
       ) {
         $(this).text('3XL');
-        if ($('span.xxxlg').length) {
-          $(this).parent().addClass('disabled').attr('disabled', 'disabled');
-        }
       } else if (
         $(this).text().toLowerCase() === 'XXXX-LARGE' ||
         $(this).text().toLowerCase() === '4X'
@@ -334,9 +313,11 @@ $(document).ready(function () {
   if (sizes.length > 0) {
     const sizeArray = sizes.html();
     $(
-      '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker">' +
-        sizeArray +
-        '</div></div>'
+      `
+        <div id="sizes" class="merch__detail-size">
+          <div class="flex merch__detail-size-picker">${sizeArray}</div>
+        </div>
+      `
     ).appendTo('div#merch-info');
     $('<label class="merch__detail-size-label">Size |</label>').prependTo(
       'div#sizes'
@@ -350,19 +331,19 @@ $(document).ready(function () {
 
     if (singleItem === 'xxx-large') {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-secondary typeSelected">3XL</span></div></div>'
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">3XL</span></div></div>'
       ).appendTo('div#merch-info');
     } else if (singleItem === 'newborn 3 month') {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-secondary typeSelected">NB/3M</span></div></div>'
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">NB/3M</span></div></div>'
       ).appendTo('div#merch-info');
     } else if (singleItem === 'large/x-large') {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-secondary typeSelected">L/XL</span></div></div>'
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">L/XL</span></div></div>'
       ).appendTo('div#merch-info');
     } else {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-secondary typeSelected">' +
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">' +
           singleItem +
           '</span></div></div>'
       ).appendTo('div#merch-info');
@@ -408,144 +389,17 @@ $(document).ready(function () {
   if (select.length > 0) {
     // Select dropdown...
 
-    $('<div id="sizes" class="merch__detail-size "></div>').appendTo(
+    $(`<div id="sizes" class="merch__detail-size "></div>`).appendTo(
       'div#merch-info'
     );
     $(
-      '<label class="merch__detail-size-label">Make Selection:</label>'
+      `<label class="merch__detail-size-label">Make Selection:</label>`
     ).appendTo('div#sizes');
-    // $('<label class="merch__detail-size-label">Amount:</label>').appendTo(
-    //   'div#sizes'
-    // );
+
     $('select.merchDropdown').appendTo('div#sizes').addClass('form-control');
-    $('<div class="flex merch__detail-size-picker"></div>').appendTo(
+    $(`<div class="flex merch__detail-size-picker"></div>`).appendTo(
       'div#sizes'
     );
-
-    // $.each(select, function (i) {
-    //   $(
-    //     '<div id="size_' + i + '" data-name="' + $(this).text() + '"></div>'
-    //   ).appendTo('.flex.merch__detail-size-picker');
-
-    //   $('<input type="radio" id="size-option_' + i + '" name="r">')
-    //     .attr('value', $(this).val())
-    //     .attr('checked', i === 0)
-    //     .click(function () {
-    //       $('select.merchDropdown').val($(this).val());
-    //       $('.addGiftRegButton').attr('data-dropdownValue', $(this).val());
-    //       $('.addSingleReg').attr('data-dropdownValue', $(this).val());
-    //     })
-    //     .appendTo('#size_' + i);
-
-    //   if (
-    //     $(this).text() === '$5 ($5.00)' ||
-    //     $(this).text() === '$5.00 ($5.00)'
-    //   ) {
-    //     $(this).text('$5');
-    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
-    //       .appendTo('#size_' + i)
-    //       .parent()
-    //       .addClass('picker');
-    //   } else if (
-    //     $(this).text() === '$10 ($10.00)' ||
-    //     $(this).text() === '$10.00 ($10.00)'
-    //   ) {
-    //     $(this).text('$10');
-    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
-    //       .appendTo('#size_' + i)
-    //       .parent()
-    //       .addClass('picker');
-    //   } else if (
-    //     $(this).text() === '$20 ($20.00)' ||
-    //     $(this).text() === '$20.00 ($20.00)'
-    //   ) {
-    //     $(this).text('$20');
-    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
-    //       .appendTo('#size_' + i)
-    //       .parent()
-    //       .addClass('picker');
-    //   } else if (
-    //     $(this).text() === '$25 ($25.00)' ||
-    //     $(this).text() === '$25.00 ($25.00)'
-    //   ) {
-    //     $(this).text('$25');
-    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
-    //       .appendTo('#size_' + i)
-    //       .parent()
-    //       .addClass('picker');
-    //   } else if ($(this).text() === '$30 ($30.00)') {
-    //     $(this).text('$30');
-    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
-    //       .appendTo('#size_' + i)
-    //       .parent()
-    //       .addClass('picker');
-    //   } else if ($(this).text() === '$40 ($40.00)') {
-    //     $(this).text('$40');
-    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
-    //       .appendTo('#size_' + i)
-    //       .parent()
-    //       .addClass('picker');
-    //   } else if (
-    //     $(this).text() === '$50 ($50.00)' ||
-    //     $(this).text() === '$50.00 ($50.00)'
-    //   ) {
-    //     $(this).text('$50');
-    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
-    //       .appendTo('#size_' + i)
-    //       .parent()
-    //       .addClass('picker');
-    //   } else if ($(this).text() === '$60 ($60.00)') {
-    //     $(this).text('$60');
-    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
-    //       .appendTo('#size_' + i)
-    //       .parent()
-    //       .addClass('picker');
-    //   } else if ($(this).text() === '$70 ($70.00)') {
-    //     $(this).text('$70');
-    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
-    //       .appendTo('#size_' + i)
-    //       .parent()
-    //       .addClass('picker');
-    //   } else if (
-    //     $(this).text() === '$75 ($75.00)' ||
-    //     $(this).text() === '$75.00 ($75.00)'
-    //   ) {
-    //     $(this).text('$75');
-    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
-    //       .appendTo('#size_' + i)
-    //       .parent()
-    //       .addClass('picker');
-    //   } else if ($(this).text() === '$80 ($80.00)') {
-    //     $(this).text('$80');
-    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
-    //       .appendTo('#size_' + i)
-    //       .parent()
-    //       .addClass('picker');
-    //   } else if ($(this).text() === '$90 ($90.00)') {
-    //     $(this).text('$90');
-    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
-    //       .appendTo('#size_' + i)
-    //       .parent()
-    //       .addClass('picker');
-    //   } else if (
-    //     $(this).text() === '$100 ($100.00)' ||
-    //     $(this).text() === '$100.00 ($100.00)'
-    //   ) {
-    //     $(this).text('$100');
-    //     $('<label for="size-option_' + i + '">' + $(this).text() + '</label>')
-    //       .appendTo('#size_' + i)
-    //       .parent()
-    //       .addClass('picker');
-    //   } else {
-    //     $(
-    //       '<label for="size-option_' + i + '">' + $(this).text() + '</label>'
-    //     ).appendTo('#size_' + i);
-    //   }
-
-    //   if ($('#size_0').attr('data-name') === 'Please Select') {
-    //     $('#size_0').hide();
-    //   }
-    // });
 
     // $('select.merchDropdown').hide();
     $('select.merchDropdown').appendTo('div#sizes');

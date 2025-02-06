@@ -36,7 +36,7 @@ button.btn-default.typeCodeOption {
   }
 
   @include breakpoint(medium) {
-    width: auto;
+    width: rem(60);
     padding: 0 rem(10);
   }
 }

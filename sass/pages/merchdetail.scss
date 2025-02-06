@@ -26,7 +26,6 @@ p.merchDiscount {
 span.btn-default,
 button.btn-default.typeCodeOption {
   width: 47%;
-  margin: 0 rem(5) rem(30);
 
   &:hover,
   &.typeSelected {
@@ -37,12 +36,8 @@ button.btn-default.typeCodeOption {
   }
 
   @include breakpoint(medium) {
-    width: rem(60);
-
-    &.btn-w-auto {
-      width: auto;
-      padding: 0 rem(10);
-    }
+    width: auto;
+    padding: 0 rem(10);
   }
 }
 
@@ -359,10 +354,6 @@ span.btn-default.typeSelected {
             &.picker {
               width: rem(60);
             }
-          }
-
-          .btn {
-            padding: 0;
           }
         }
       }

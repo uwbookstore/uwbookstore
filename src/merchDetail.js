@@ -2,7 +2,14 @@ $(document).ready(function () {
   $('#contentSection ul.breadcrumb, a.pageHelp, h1.page_header').hide();
 
   $(
-    '<div id="merch-main" class="merch"><div class="flex merch__detail"><div id="merch-imgs" class="merch__detail-images"></div><div id="merch-info" class="merch__detail-info"></div></div></div>'
+    `
+      <div id="merch-main" class="merch">
+        <div class="flex merch__detail">
+          <div id="merch-imgs" class="merch__detail-images"></div>
+          <div id="merch-info" class="merch__detail-info"></div>
+        </div>
+      </div>
+    `
   ).prependTo('div#ContainDiv');
 
   const prodName = $('h2.merchTitle').text();
@@ -16,15 +23,19 @@ $(document).ready(function () {
   // Check to see if there is more than one image
   if (imgArray > 0) {
     $(
-      '<div class="flexslider"><ul class="slides merch__detail-slides"></ul></div>'
+      `
+        <div class="flexslider">
+          <ul class="slides merch__detail-slides"></ul>
+        </div>
+      `
     ).appendTo('div#merch-imgs');
     for (let i = 0; i < imgArray; i += 1) {
       $(
-        '<li id="thumbnail_' +
-          i +
-          '"><img id="fullsize_' +
-          i +
-          '" alt="" role="presentation" class="merch__detail-img"></li>'
+        `
+          <li id="thumbnail_${i}">
+            <img id="fullsize_${i}" alt="" role="presentation" class="merch__detail-img">
+          </li>
+        `
       ).appendTo('ul.slides');
       $.each(detail, function (j) {
         $('li#thumbnail_' + j).attr('data-thumb', $(this).attr('data-full'));
@@ -38,49 +49,52 @@ $(document).ready(function () {
     if ($('img.merchDetailImage').attr('src') === '/images/notavail.gif') {
       // No image available
       $(
-        '<img src="https://i.univbkstr.com/v3/img/misc/no-image.jpg" class="merch__detail-img" alt="Image not available">'
+        `
+          <img src="https://i.univbkstr.com/v3/img/misc/no-image.jpg" class="merch__detail-img" alt="Image not available">
+        `
       ).appendTo('div#merch-imgs');
     } else {
       $(
-        '<img src="' +
-          $('img.merchDetailImage').attr('data-high') +
-          '" alt="" role="presentation" class="merch__detail-img">'
+        `
+          <img src="${$('img.merchDetailImage').attr('data-high')}" alt="" role="presentation" class="merch__detail-img">
+        `
       ).appendTo('div#merch-imgs');
     }
   } // END of imgArray if
 
   // Start Product Details layout
-  $('<h2 class="merch__detail-title">' + prodName + '</h2>').appendTo(
+  $(`<h2 class="merch__detail-title">${prodName}</h2>`).appendTo(
     'div#merch-info'
   );
 
   // Price blockk
   const prodPrice = $('span.merchPriceCurrent').text();
   let salePrice = $('span.merchPriceCurrent').text();
-  $('<div id="priceBlock" class="merch__detail-price"></div>').appendTo(
+  $(`<div id="priceBlock" class="merch__detail-price"></div>`).appendTo(
     'div#merch-info'
   );
 
-  // Check for sale price. If item is on sale
-  // figure percent off and add savings text.
-  // Otherwise, add the regular price
   if ($('p.salePrice').length > 0) {
     const origPrice = $('p.merchRegPrice').html().split('$').pop();
     salePrice = salePrice.replace(/\$/g, '');
-    // let pctOff = origPrice - salePrice;
-    // pctOff /= origPrice;
-    // pctOff *= 100;
-    // pctOff = Math.round(pctOff);
 
-    $('<span class="original">$' + origPrice + '</span>').appendTo(
-      'div#priceBlock'
-    );
+    $(
+      `
+        <span class="original">$${origPrice}</span>
+      `
+    ).appendTo('div#priceBlock');
     // $('<span class="sale">$' + salePrice + ' - ' + pctOff + '% Off!</span>').appendTo('div#priceBlock');
-    $('<span class="sale">$' + salePrice + '</span>').appendTo(
-      'div#priceBlock'
-    );
+    $(
+      `
+        <span class="original">$${salePrice}</span>
+      `
+    ).appendTo('div#priceBlock');
   } else {
-    $('<span>' + prodPrice + '</span>').appendTo('div#priceBlock');
+    $(
+      `
+        <span> ${prodPrice}  </span>
+      `
+    ).appendTo('div#priceBlock');
   } // END of price-block if
 
   // if (
@@ -95,19 +109,27 @@ $(document).ready(function () {
   // }
 
   $(
-    '<div id="description-block" class="merch__detail-description"><h3 class="merch__detail-title-small">The Details</h3>'
+    `
+      <div id="description-block" class="merch__detail-description">
+        <h3 class="merch__detail-title-small">The Details</h3>
+      </div>
+    `
   ).appendTo('div#merch-info');
 
   $(
-    '<div class="merch__detail-description-open ">' + description + '</div>'
+    `
+      <div class="merch__detail-description-open">${description}</div>
+    `
   ).appendTo('div#description-block');
   $(noAddCart)
     .addClass('alert alert-warning text-center m5')
     .appendTo('#description-block');
   $(
-    '<div class="merch__detail-sku"><strong>Item:</strong> ' +
-      prodSku +
-      '</div>'
+    `
+      <div class="merch__detail-sku">
+        <strong>Item:</strong> ${prodSku}
+      </div>
+    `
   ).appendTo('div#description-block');
   $('p.gmPromo').appendTo('div#description-block');
 

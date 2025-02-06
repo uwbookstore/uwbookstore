@@ -138,70 +138,82 @@ $(document).ready(function () {
     console.log('qualifying ipad');
   }
 
-  if (merchDisclaimer.length > 0 && $('div#kyleCavan').length > 0) {
+  if (merchDisclaimer.length > 0) {
     $(
-      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
+      `
+        <div id="item-disclaimer" class="alert alert-warning">
+          <label></label>
+        </div>
+      `
     ).appendTo('div#merch-info');
-    $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
-    $(merchDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
-    $('.normal').html(
-      '<strong>PLEASE READ BEFORE PURCHASE!</strong> Shipping time takes 10-15 business days (M-F).  This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for store pick-up, promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>'
-    );
-    $('div#kyleCavan').hide();
-    $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
-  } else if (merchDisclaimer.length > 0 && $('div#cdiDrop').length > 0) {
-    $(
-      '<div id="cdiDrop"></div><div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
-    ).appendTo('div#merch-info');
-    $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
-    $(merchDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
-    $('.normal').html(
-      '<strong>PLEASE READ BEFORE PURCHASE! — Custom orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>'
-    );
-    $('div#cdiDrop').hide();
-    $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
-  } else if (merchDisclaimer.length > 0 && $('div#landsEndReally').length > 0) {
-    $(
-      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
-    ).appendTo('div#merch-info');
-    $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
-    $(merchDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
-    $('.normal').html(
-      // `<strong>PLEASE READ BEFORE PURCHASE! — Lands' End may take 10-15 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge.</strong>This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>`
-      `<strong>PLEASE READ BEFORE PURCHASE! — Lands&apos; End may take 10-15 business days (M-F) to ship. Lands&rsquo; End orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>`
-    );
-    $('div#landsEnd').hide();
-    $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
-  } else if (merchDisclaimer.length > 0 && $('div#smphLe').length > 0) {
-    $(
-      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
-    ).appendTo('div#merch-info');
-    $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
-    $(merchDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
-    $('.normal').html(
-      `<strong>PLEASE READ BEFORE PURCHASE! — Lands&rsquo; End items will be charged when order is placed. Your order will be placed with Lands&rsquo; End at the end of the sale. Lands&rsquo; End may take 10-15 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge. By clicking this box, you are agreeing to these terms.</strong>`
-    );
-    $('div#smphLe').hide();
-    $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
-  } else if (merchDisclaimer.length > 0 && $('div#jardine').length > 0) {
-    $(
-      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
-    ).appendTo('div#merch-info');
-    $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
-    $(merchDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
-    $('.normal').html(
-      `<strong>PLEASE READ BEFORE PURCHASE! — This is a manufacturer direct item. This item ships separately. Please allow 10 business days (M-F) for delivery</strong>. This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms</strong>.`
-    );
-    $('div#jardine').hide();
-    $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
-  } else if (merchDisclaimer.length > 0) {
-    $(
-      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
-    ).appendTo('div#merch-info');
-    $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
-    $(merchDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
-    // $("<em>*</em>").prependTo("#item-disclaimer span.normal");
-    $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
+
+    if ($('div#kyleCavan').length > 0) {
+      $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
+      $(merchDisclaimer)
+        .removeClass('top4')
+        .prependTo('#item-disclaimer label');
+      $('.normal').html(
+        `
+          <strong>PLEASE READ BEFORE PURCHASE!</strong> Shipping time takes 10-15 business days (M-F). This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for store pick-up, promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>
+        `
+      );
+      $('div#kyleCavan').hide();
+      $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
+    } else if ($('div#cdiDrop').length > 0) {
+      $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
+      $(merchDisclaimer)
+        .removeClass('top4')
+        .prependTo('#item-disclaimer label');
+      $('.normal').html(
+        `
+          <strong>PLEASE READ BEFORE PURCHASE! — Custom orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>
+        `
+      );
+      $('div#cdiDrop').hide();
+      $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
+    } else if ($('div#landsEndReally').length > 0) {
+      $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
+      $(merchDisclaimer)
+        .removeClass('top4')
+        .prependTo('#item-disclaimer label');
+      $('.normal').html(
+        `
+          <strong>PLEASE READ BEFORE PURCHASE! — Lands&apos; End may take 10-15 business days (M-F) to ship. Lands&rsquo; End orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>
+        `
+      );
+      $('div#landsEndReally').hide();
+      $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
+    } else if ($('div#smphLe').length > 0) {
+      $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
+      $(merchDisclaimer)
+        .removeClass('top4')
+        .prependTo('#item-disclaimer label');
+      $('.normal').html(
+        `
+          <strong>PLEASE READ BEFORE PURCHASE! — Lands&rsquo; End items will be charged when order is placed. Your order will be placed with Lands&rsquo; End at the end of the sale. Lands&rsquo; End may take 10-15 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge. By clicking this box, you are agreeing to these terms.</strong>
+        `
+      );
+      $('div#smphLe').hide();
+      $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
+    } else if ($('div#jardine').length > 0) {
+      $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
+      $(merchDisclaimer)
+        .removeClass('top4')
+        .prependTo('#item-disclaimer label');
+      $('.normal').html(
+        `
+          <strong>PLEASE READ BEFORE PURCHASE! — This is a manufacturer direct item. This item ships separately. Please allow 10 business days (M-F) for delivery</strong>. This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms</strong>.
+        `
+      );
+      $('div#jardine').hide();
+      $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
+    } else {
+      $(merchDisclaimer).next('.normal').appendTo('#item-disclaimer label');
+      $(merchDisclaimer)
+        .removeClass('top4')
+        .prependTo('#item-disclaimer label');
+      $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
+    }
   }
 
   // Change the dropdown select to buttons,

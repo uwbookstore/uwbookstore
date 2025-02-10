@@ -133,6 +133,17 @@
       color: var(--clr-white);
     }
   }
+
+  &-container {
+    button {
+      border: none;
+      background-color: transparent;
+      color: var(--clr-primary);
+      border-bottom: rem(1) solid var(--clr-primary);
+      margin-bottom: rem(10);
+    }
+  }
+
   &-x-lg {
     background-color: var(--clr-primary);
     color: var(--clr-white);

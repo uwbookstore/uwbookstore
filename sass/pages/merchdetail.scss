@@ -306,13 +306,13 @@ span.btn-default.typeSelected {
 
       &-images {
         width: auto;
-        flex: 1 60%;
+        flex: 0 50%;
       }
 
       &-info {
         width: auto;
-        flex: 1 40%;
-        padding-left: rem(20);
+        flex: 0 50%;
+        // padding-left: rem(20);
       }
 
       &-title {
@@ -397,6 +397,8 @@ span.btn-default.typeSelected {
       padding: 0;
       position: relative;
       z-index: 0;
+      gap: rem(20);
+      flex-wrap: nowrap;
     }
   }
 }

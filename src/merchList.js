@@ -321,6 +321,24 @@ $(document).ready(function () {
   }
 
   if (
+    categoryTitle.toLowerCase().substring(0, 12) === 'new arrivals' &&
+    categoryTitle.length === 12
+  ) {
+    if (window.location.host === 'www.uwbookstore.com') {
+      $(
+        `
+          <ul class="page-nav">
+            <li>
+              <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/New-Items" class="btn btn-primary">Back in Stock Items</a>
+            </li>
+          </ul>
+        `
+      ).insertAfter('.merch__filter');
+      // $('<div class="merch__card-special">UW Discount</div>').prependTo('div.merchItem');
+    }
+  }
+
+  if (
     categoryTitle.toLowerCase().substring(0, 7) === 'macbook' ||
     categoryTitle.toLowerCase().substring(0, 11) === 'dell laptop' ||
     categoryTitle.toLowerCase().substring(0, 4) === 'ipad' ||

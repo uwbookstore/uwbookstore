@@ -50,7 +50,22 @@ $(document).ready(function () {
         '<div class="m-2 text-center">Looking for The Red Shirt&trade;, 17<sup>th</sup> Edition? Find it here:<br><a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/The-Red-Shirt-17th-Edition" class="btn btn-primary m-2">The Red Shirt&trade;</a></div>'
       ).prependTo('#contentSection');
     }
-  }
+  } else
+    'new arrivals' === categoryTitle.toLowerCase() &&
+      (('https://insitestore2.mbsbooks.com/uwmadison/home' !== baseUrl &&
+        'https://www.uwbookstore.com/' !== baseUrl &&
+        'https://www.uwalumnistore.com/' !== baseUrl) ||
+        ($('.noListItems').length &&
+          ($('.noListItems').hide(),
+          $(
+            `
+              <div class="empty-results text-center">
+                <h1>Sorry, nothing new right now.</h1>
+                <p>Please check back later.</p>
+                <img role="presentation" src="https://i.univbkstr.com/v3/img/404/nothing_to_see.gif" alt="Nothing To See" class="img-fluid">
+              </div>
+            `
+          ).insertAfter('.searchCatWrap'))));
 
   if (categoryTitle.toLowerCase().substring(0, 14) === 'dept. of comp.') {
     categoryTitle = 'Department of Computer Science';

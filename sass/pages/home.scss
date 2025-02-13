@@ -452,18 +452,18 @@
     font-weight: 700;
   }
 
-  .btn-xlrg {
-    text-transform: uppercase;
-    font-size: rem(36);
-    font-weight: 700;
-    height: rem(70);
-    line-height: rem(70);
+  &:has(.btn.btn-xlrg) {
+    a {
+      height: rem(70);
+      padding-inline: rem(40);
+      font-size: rem(36) !important;
+    }
 
-    @include breakpoint(medium) {
-      height: rem(90);
-      font-size: rem(48);
-      line-height: rem(90);
-      padding: 0 rem(40);
+    @include breakpoint(small) {
+      a {
+        height: rem(90);
+        font-size: rem(48) !important;
+      }
     }
   }
 }

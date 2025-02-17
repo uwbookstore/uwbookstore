@@ -542,7 +542,7 @@ $(document).ready(function () {
     window.location.href.search(/shoppingCart/) !== -1
   ) {
     $('h1.page_header').hide();
-    $('#contentSection').addClass('entry-content');
+
     $('<h1 class="heading__line">Your Shopping Cart</h1>').insertBefore(
       '.Continue_Shopping'
     );

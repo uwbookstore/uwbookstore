@@ -542,7 +542,7 @@ $(document).ready(function () {
   ) {
     // $("select.Merchandise_Type_Code").prop("disabled", "disabled");
     $('h1.page_header').hide();
-    $('#contentSection').addClass('entry-content');
+
     $('<h1 class="heading__line">Your Shopping Cart</h1>').insertBefore(
       '.Continue_Shopping'
     );

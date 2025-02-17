@@ -35,10 +35,6 @@
       display: flex;
       align-items: center;
       height: rem(60);
-
-      @include breakpoint(medium) {
-        height: rem(40);
-      }
     }
   }
 }

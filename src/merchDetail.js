@@ -653,7 +653,7 @@ $(document).ready(function () {
       </div>
       <br>
       <p>Purchases may be returned to any of our stores with the packing list or send returns to:</p>
-      <address class="returns">The University Book Store<br>
+      <address class="returns">University Book Store<br>
         ATTN: Online Sales Returns Department<br>
         4509 West Beltline Hwy<br>
         Madison, WI 53711</address>

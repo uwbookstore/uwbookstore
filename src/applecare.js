@@ -476,7 +476,7 @@ $(document).ready(function () {
             '</div>',
             '<div class="modal-body">',
             '<p>Every MacBook, iPad and Mac comes with a one-year limited hardware warranty and 90 days of complimentary tech support. AppleCare+ extends your coverage to two or three years (depending on device) from the purchase date and adds unlimited accidental protection, each claim subject to a service fee plus applicable tax. You will also get 24/7 priority access to Apple experts by chat or phone.</p>',
-            '<p>The University Book Store provides in-store service at 711 State St., via Apple Premium Service Provider Graphite.</p>',
+            '<p>University Book Store provides in-store service at 711 State St., via Apple Premium Service Provider Graphite.</p>',
             '<p>AppleCare+ is a best-in-class service contract from Apple- not insurance. Terms and conditions apply as detailed in each AppleCare+ listing.</p>',
             '<a href="' +
               skuArr[i][1] +

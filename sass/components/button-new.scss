@@ -29,6 +29,10 @@
       border-color: #940409;
     }
 
+    &.whitebtn:hover {
+      color: var(--clr-white);
+    }
+
     &:active,
     &:focus,
     &:focus-visible {

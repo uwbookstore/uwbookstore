@@ -165,7 +165,7 @@ $(document).ready(function () {
   $('.footer .copyright').html(
     '&copy; Copyright ' +
       year +
-      ' University Book Store<br><a href="/Privacy" class="privacy" tabindex="0">Privacy Policy</a>'
+      ' University Book Store | <a href="/Privacy" class="privacy" tabindex="0">Privacy Policy</a>'
   );
 
   $.urlParam = function (name) {

@@ -1,21 +1,3 @@
-// Dynamically add innerText/HTML to elements
-function fillInnerContent(el, text, type) {
-  const element = document.getElementById(el);
-  if (type === 'text') {
-    element !== null ? (element.innerText = text) : null;
-  } else if (type === 'html') {
-    element.innerHTML = text;
-  }
-  return null;
-}
-
-// Update coupon code/expiration
-// Across all current coupons
-fillInnerContent('coupon-header', '10% OFF', 'text');
-fillInnerContent('coupon-subhead', 'Your Entire Purchase!', 'text');
-fillInnerContent('coupon-code', '434', 'text');
-fillInnerContent('coupon-expiration', '6.30.25', 'text');
-
 $(document).ready(function () {
   const searchBtn = document.getElementById('search');
   const searchForm = document.querySelector('li.search');
@@ -171,11 +153,7 @@ $(document).ready(function () {
   );
   $('p.studentNumberText').addClass('mt-1');
   $('p#studentIDText').parent().removeClass('left5');
-  $('p#studentIDText').css('margin-top', '-1.5rem');
 
-  // if (baseUrl === "https://www.uwbookstore.com/") {
-  //     $("#custStudID").attr("placeholder", "10 digit phone number or UW Student ID *");
-  // }
   $('#custStudID').attr(
     'placeholder',
     '10 digit phone number or UW Student ID *'
@@ -187,7 +165,7 @@ $(document).ready(function () {
   $('.footer .copyright').html(
     '&copy; Copyright ' +
       year +
-      ' University Book Store<br><a href="/Privacy" class="privacy" tabindex="0">Privacy Policy</a>'
+      ' University Book Store | <a href="/Privacy" class="privacy" tabindex="0">Privacy Policy</a>'
   );
 
   $.urlParam = function (name) {
@@ -241,7 +219,7 @@ $(document).ready(function () {
   });
 
   // Additional Information Tabs
-  $('ul.meganav__tabs').each(function () {
+  $('ul.meganav__tabs-list').each(function () {
     // For each set of tabs, we want to keep track of
     // which tab is active and its associated content
     let $active;
@@ -505,9 +483,6 @@ $(document).ready(function () {
   );
   $('div.logoutLink').hide();
 
-  //   $('ul.breadcrumb').removeClass('background_none');
-  $('ul.breadcrumb').hide();
-
   $(
     '<div id="order-info" class="row"><div id="list-container" class="col-md-4"></div><div class="col-md-8"></div></div>'
   ).insertAfter('h1#ordersHeader');
@@ -567,7 +542,7 @@ $(document).ready(function () {
     window.location.href.search(/shoppingCart/) !== -1
   ) {
     $('h1.page_header').hide();
-    $('#contentSection').addClass('entry-content');
+
     $('<h1 class="heading__line">Your Shopping Cart</h1>').insertBefore(
       '.Continue_Shopping'
     );

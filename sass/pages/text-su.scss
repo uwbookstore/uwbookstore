@@ -9,14 +9,14 @@
   font-weight: bold;
   line-height: 1.5em;
   color: rgba(0, 0, 0, 0.87);
-  margin-bottom: 8px;
+  margin-bottom: rem(8);
 }
 
 .st-general-error {
   font-size: 1.25em;
   line-height: 1.5em;
   color: #f44336;
-  margin-bottom: 8px;
+  margin-bottom: rem(8);
   text-align: center;
 }
 
@@ -28,9 +28,9 @@
 }
 
 .st-font-caption {
-  font-size: 12px;
+  font-size: rem(12);
   color: rgba(0, 0, 0, 0.54);
-  line-height: 14px;
+  line-height: rem(14);
   font-weight: 400;
 }
 
@@ -48,41 +48,40 @@
 
 /* Sign-Up form */
 .st-signupform {
-  max-width: 392px;
+  max-width: rem(392);
   margin: rem(40) auto;
-  border-radius: 4px;
+  border-radius: rem(4);
   box-sizing: border-box;
-  padding: 24px;
+  padding: rem(24);
   font-family: sans-serif;
-  font-size: 14px;
+  font-size: rem(14);
   color: rgba(0, 0, 0, 0.87);
   line-height: 1.5;
   background: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);
+  box-shadow: 0 rem(4) rem(8) 0 rgba(0, 0, 0, 0.14);
 }
 
 .st-signupform__label {
   color: gray;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 2em;
+  font-size: rem(12);
   text-transform: uppercase;
 }
 
 .st-signupform .st-error-message {
-  -moz-transform: translateY(-16px);
-  -webkit-transform: translateY(-16px);
-  -o-transform: translateY(-16px);
-  -ms-transform: translateY(-16px);
-  transform: translateY(-16px);
+  -moz-transform: translateY(rem(-16));
+  -webkit-transform: translateY(rem(-16));
+  -o-transform: translateY(rem(-16));
+  -ms-transform: translateY(rem(-16));
+  transform: translateY(rem(-16));
   color: red;
 }
 
 .st-signupform footer {
-  font-size: 12px;
+  font-size: rem(12);
   color: rgba(0, 0, 0, 0.54);
   text-align: center;
-  margin-top: 8px;
+  margin-top: rem(8);
 }
 
 .st-signupform footer a {
@@ -97,13 +96,13 @@
   display: block;
   content: '*';
   color: #f44336;
-  font-size: 32px;
+  font-size: rem(32);
   text-align: right;
   position: absolute;
-  right: 9px;
-  top: 25px;
-  width: 10px;
-  height: 20px;
+  right: rem(9);
+  top: rem(25);
+  width: rem(10);
+  height: rem(20);
 }
 
 .st-signupform input[type='submit'],

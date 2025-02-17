@@ -8,9 +8,12 @@
 @forward 'landing';
 @forward 'locations';
 @forward 'login';
-@forward 'merchdetail';
-@forward 'merchlist';
 @forward 'misc';
 @forward 'store';
 @forward 'tech';
 @forward 'text-su';
+
+@forward 'merchdetail';
+// @forward 'merchdetail-new';
+@forward 'merchlist';
+// @forward 'merchlist-new';

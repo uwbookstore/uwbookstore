@@ -1,11 +1,11 @@
 @use '../util' as *;
+// TODO: Look at .container max-width on homepage. Might need to rethink homepage
 
 .contain,
 .container {
-  @include breakpoint(medium) {
-    margin: 0 auto;
-    padding: 0;
-  }
+  // max-width: rem(1170);
+  padding: 0;
+  margin: 0 auto;
 }
 
 hr {
@@ -18,18 +18,7 @@ hr {
 }
 
 select.form-control {
-  padding-right: rem(20);
-}
-
-.form {
-  &-control,
-  &-select {
-    font-size: var(--fs-default-mobile);
-
-    @include breakpoint(medium) {
-      font-size: var(--fs-default);
-    }
-  }
+  padding-right: rem(32);
 }
 
 .alert {
@@ -49,4 +38,12 @@ select.form-control {
 
 .card-header p {
   margin-bottom: 0;
+}
+
+.input-group-text {
+  height: rem(50);
+
+  @include breakpoint(medium) {
+    height: rem(40);
+  }
 }

@@ -1,6 +1,9 @@
 @use '../util' as *;
 
 .header {
+  &__main {
+    display: block;
+  }
   &__ubs {
     display: block;
     position: relative;
@@ -8,8 +11,7 @@
     max-width: rem(1200);
 
     &--logo {
-      background: var(--clr-white);
-      padding: rem(25) rem(15);
+      padding: rem(10);
       margin: auto;
 
       h1 {
@@ -215,14 +217,22 @@
           border-top-left-radius: 0;
           border-top-right-radius: 0;
           justify-content: center;
-          font-size: rem(25);
+          font-size: rem(18);
           width: 100%;
           height: rem(50);
 
           em {
             font-style: normal;
           }
+
+          span {
+            font-size: rem(18);
+          }
         }
+      }
+
+      &--icon {
+        display: none;
       }
     }
   }
@@ -276,6 +286,10 @@
             color: var(--clr-primary);
           }
         }
+      }
+
+      &--text {
+        display: none;
       }
     }
   }

@@ -159,8 +159,12 @@ address.returns {
 }
 
 .page_header {
-  margin-bottom: rem(20);
-  font-size: rem(25);
+  display: block;
+  margin-bottom: rem(10);
+  font-size: rem(24);
+  font-weight: 500;
+  letter-spacing: rem(0.5);
+  text-align: center;
 }
 
 .page-title {
@@ -402,6 +406,12 @@ ol.alpha {
 
 .bold {
   font-weight: 700;
+}
+
+.dancing-script {
+  color: var(--clr-primary);
+  font-family: var(--ff-script);
+  text-align: center;
 }
 
 // BOOTSTRAP PADDING/MARGIN UTILITIES

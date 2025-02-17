@@ -24,9 +24,6 @@ Discount will not reflect until related items are added to your cart and/or afte
       } else if (promoTxt === 'Buy 1 Get 1 Free') {
         x.innerHTML = `<strong>Buy 1 Get 1 Free</strong>
         <p>Promotional Discount will be applied at the end of the checkout process.</p>`;
-      } else if (promoTxt === '25 Percent Off') {
-        x.innerHTML = `<strong>25% Off</strong>
-        <p>Promotional Discount will be applied at the end of the checkout process.</p>`;
       }
     });
   }

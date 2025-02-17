@@ -14,7 +14,8 @@ $(document).ajaxComplete(function (_, __, options) {
       $(this).text() ==
       'The billing address must match the billing address on the card.'
     )
-      $(this).text(replacementMessage);
+      $(this).addClass('alert alert-info');
+    $(this).text(replacementMessage);
   });
   $('.paymentBilling-change').text('Update Billing Address');
   $('<h2 class="heading__line-center mb-1">Billing Address</h2>').prependTo(

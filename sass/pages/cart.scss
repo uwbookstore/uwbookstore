@@ -131,29 +131,40 @@ h2.heading__billing {
 .paymentBilling-wrapper p:last-child {
   font-weight: 700;
   margin-top: rem(10);
-  --bs-alert-padding-x: rem(10);
-  --bs-alert-padding-y: rem(10);
-  --bs-alert-margin-bottom: rem(10);
-  --bs-alert-color: #055160;
-  --bs-alert-bg: #cff4fc;
-  --bs-alert-border-color: #b6effb;
-  --bs-alert-border: rem(1) solid var(--bs-alert-border-color);
-  --bs-alert-border-radius: rem(0.0375);
   position: relative;
-  padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
-  margin-bottom: var(--bs-alert-margin-bottom);
-  color: var(--bs-alert-color);
+  padding: rem(10) !important;
+  margin-bottom: rem(10) !important;
+  color: #055160;
   background-color: var(--bs-alert-bg);
   border: var(--bs-alert-border);
   border-radius: var(--bs-alert-border-radius);
 }
 
-[class^='helpSection'] span.fa {
-  color: var(--clr-primary);
+[class^='helpSection'] {
+  display: flex;
+  align-items: center;
+  padding-inline: rem(10);
+  gap: rem(5);
+
+  p,
+  a {
+    font-size: rem(16);
+    margin: 0;
+  }
+
+  span.fa {
+    color: var(--clr-primary);
+    font-size: rem(20);
+  }
 }
 
 a#helpSection-email {
   display: none;
+}
+
+.coHeader {
+  font-size: rem(30);
+  margin-bottom: rem(20);
 }
 
 // MBS fixes the Place Order button

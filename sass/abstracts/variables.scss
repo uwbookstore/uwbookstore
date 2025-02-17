@@ -35,14 +35,14 @@
   --clr-nav-hover: #ac040a;
 
   // Footer gradient
-  --clr-gradient-end: #7a1314;
-  --clr-gradient-start: #971c20;
+  --clr-gradient-end: #9a060a;
+  --clr-gradient-start: #ae0309;
 
   // Font-family
   --ff-sans: 'Red Hat Text', Helvetica, Arial, sans-serif;
-  --ff-sans-display: 'Red Hat Display', Helvetica, Arial, sans-serif;
   --ff-mono: 'Red Hat Mono', Monaco, monospace;
   --ff-serif: 'Libre Baskerville', Cambria, Cochin, Georgia, serif;
+  --ff-script: 'Dancing Script', cursive, serif;
 
   // Font-sizes
   --fs-4xlarge: #{rem(61.04)};
@@ -57,7 +57,8 @@
   --fs-default: var(--fs-reg);
   --fs-default-mobile: var(--fs-med);
 
-  --page-width: 100rem;
+  --page-max-width: #{rem(1320)};
+  --page-max-width-large: #{rem(1400)};
 
   // Flexbox gap/columns
   --gap: 2rem;
@@ -65,4 +66,7 @@
 
   // Transition
   --transition: all 0.25s ease-in-out;
+
+  // Landing page header clip-path
+  --clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%);
 }

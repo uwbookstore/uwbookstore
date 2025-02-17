@@ -520,8 +520,7 @@
 }
 
 .margin-block-negative {
-  margin-top: rem(-20);
-  margin-bottom: rem(-20);
+  margin-block: rem(-30);
 }
 
 // Special Signing Events
@@ -887,5 +886,29 @@ div.subHeader {
 
   @include breakpoint(medium) {
     grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.ubs-gift-card {
+  .box__gray {
+    display: flex;
+    flex-direction: column;
+
+    * {
+      align-self: center;
+    }
+  }
+  img {
+    width: rem(150);
+  }
+
+  p {
+    font-size: rem(20);
+    font-weight: 700;
+
+    &.sml {
+      font-size: rem(11);
+      font-weight: normal;
+    }
   }
 }

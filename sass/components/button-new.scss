@@ -102,6 +102,39 @@
         --bs-btn-active-shadow: inset 0 rem(3) rem(5) rgba(0, 0, 0, 0.125);
       }
     }
+
+    &-warning {
+      border-color: #ffc107;
+    }
+
+    &-info {
+      border-color: #0dcaf0;
+    }
+
+    &-dark {
+      border-color: #212529;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: #fff;
+      }
+
+      &:active,
+      &:focus {
+        --bs-btn-active-shadow: inset 0 rem(3) rem(5) rgba(0, 0, 0, 0.125);
+      }
+    }
+
+    &-light {
+      border-color: #f8f9fa;
+      color: #f8f9fa;
+
+      &:active,
+      &:focus {
+        --bs-btn-active-shadow: inset 0 rem(3) rem(5) rgba(0, 0, 0, 0.125);
+      }
+    }
   }
 
   &-default {
@@ -184,6 +217,20 @@
       width: 50%;
     }
   }
+
+  &-xlrg {
+    height: auto;
+    font-size: rem(32) !important;
+    padding: rem(10) rem(30);
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 100%;
+    line-height: 1;
+
+    @include breakpoint(small) {
+      width: auto;
+    }
+  }
 }
 
 .btn:disabled,
@@ -196,4 +243,41 @@ fieldset:disabled .btn {
   background-color: var(--bs-btn-disabled-bg);
   border-color: var(--bs-btn-disabled-border-color);
   opacity: var(--bs-btn-disabled-opacity);
+}
+
+.blk-hlt {
+  &:link,
+  &:active {
+    display: block;
+    width: auto;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--clr-white);
+    text-decoration: none;
+    background-color: color-mix(in srgb, var(--clr-black), #000 5%);
+    padding: rem(10);
+    font-size: rem(38);
+    transition: all 0.2s ease;
+    box-shadow: 0 rem(5) rem(5) rgba(var(--clr-black), 0.6);
+  }
+
+  &:hover {
+    transform: translateY(rem(-3));
+    box-shadow: 0 rem(10) rem(20) rgba(var(--clr-black), 0.4);
+    transition: all 0.2s ease;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(rem(-1));
+    box-shadow: 0 rem(5) rem(10) rgba(var(--clr-black), 0.6);
+    transition: all 0.2s ease;
+  }
+
+  span {
+    text-align: center;
+    display: block;
+    color: var(--clr-white);
+  }
 }

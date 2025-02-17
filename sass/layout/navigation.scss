@@ -6,38 +6,41 @@
   flex-direction: row;
 
   &__tabs {
-    // background-color: var(--clr-off-white);
-    list-style-type: none;
+    background-color: var(--clr-light-gray-2);
     flex: 0;
-    margin-bottom: 0;
-    padding: 0;
 
     @include breakpoint(medium) {
       flex: 0 0 rem(300);
     }
 
-    li {
-      background-color: var(--clr-light-gray-2);
-    }
+    &-list {
+      list-style-type: none;
+      margin-bottom: 0;
+      padding: 0;
 
-    a,
-    &--link {
-      display: block;
-      color: var(--clr-black);
-      padding: rem(10) rem(20);
-      text-decoration: none;
-      line-height: rem(14);
-      text-shadow: 0 rem(1) 0 var(--clr-white);
-      font-weight: 700;
-      transition: all 0.2s;
-      border-bottom: rem(1) solid var(--clr-light-gray-3);
+      li {
+        background-color: var(--clr-light-gray-2);
+      }
 
-      &-active,
-      &:hover {
-        color: var(--clr-primary);
+      a,
+      .meganav__tabs--link {
+        display: block;
+        color: var(--clr-black);
+        padding: rem(10) rem(20);
         text-decoration: none;
-        background-color: var(--clr-white);
-        border-bottom-color: currentColor;
+        line-height: rem(14);
+        text-shadow: 0 rem(1) 0 var(--clr-white);
+        font-weight: 700;
+        transition: all 0.2s;
+        border-bottom: rem(1) solid var(--clr-light-gray-3);
+
+        &-active,
+        &:hover {
+          color: var(--clr-primary);
+          text-decoration: none;
+          background-color: var(--clr-white);
+          border-bottom-color: currentColor;
+        }
       }
     }
   }
@@ -70,6 +73,7 @@
 
     li {
       flex: 1 1 100%;
+      text-align: center;
 
       @include breakpoint(medium) {
         flex: 0 0 25%;
@@ -90,42 +94,54 @@
     }
 
     a {
-      display: block;
-      height: rem(40);
-      line-height: rem(40);
-      font-size: rem(14);
-      text-align: center;
-      font-weight: 700;
-      text-decoration: none;
-      font-style: italic;
-      background: var(--clr-off-white);
+      position: relative;
       color: var(--clr-black);
-      box-shadow: 0 rem(4) rem(7) rgba(var(--clr-black), 0.15);
-      transition: all 0.25s ease-in-out;
-      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-block: rem(15);
+      font-size: rem(18);
+      line-height: 1;
+      opacity: 0.75;
+      margin-bottom: rem(15);
 
-      &:not(last-child) {
-        margin-bottom: rem(25);
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        border-bottom: rem(1) solid var(--clr-primary);
+        width: 0;
+        transition: var(--transition);
       }
 
-      &:hover {
-        text-decoration: none;
-        box-shadow: 0 rem(6) rem(10) rgba(var(--clr-black), 0.15);
-        transform: translateY(rem(-3));
+      &::before {
+        right: 50%;
       }
 
+      &::after {
+        left: 50%;
+      }
+
+      &:hover::before,
+      &:hover::after {
+        width: 50%;
+      }
+
+      &:hover,
       &:active,
       &:focus {
-        box-shadow: 0 rem(5) rem(8) rgba(var(--clr-black), 0.15);
-        transform: translateY(rem(-1));
+        text-decoration: none;
+        opacity: 1;
+      }
+
+      &:focus-visible {
+        text-decoration: underline;
       }
 
       @include breakpoint(medium) {
-        margin: rem(5);
-
-        &:not(last-child) {
-          margin-bottom: rem(15);
-        }
+        padding-block: rem(10);
       }
     }
 
@@ -141,39 +157,6 @@
         }
       }
     }
-  }
-}
-
-.jumbotron.landing {
-  background: url('https://i.univbkstr.com/v3/css/img/jt-bg.jpg') no-repeat top
-    center;
-  background-size: cover;
-  height: rem(150);
-  padding: rem(40);
-  color: white;
-  border-radius: 0;
-  margin-top: rem(-20);
-
-  svg {
-    color: var(--clr-white);
-    fill: var(--clr-white);
-
-    &.ua-logo {
-      height: rem(130);
-      width: rem(222);
-    }
-  }
-
-  h1 {
-    margin-bottom: rem(15);
-
-    @include breakpoint(medium) {
-      font-size: rem(63);
-    }
-  }
-
-  @include breakpoint(medium) {
-    height: rem(200);
   }
 }
 

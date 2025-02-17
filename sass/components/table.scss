@@ -1,0 +1,53 @@
+@use '../util' as *;
+
+.compare {
+  width: 100%;
+  font-size: rem(14);
+  margin-bottom: rem(20);
+
+  thead {
+    th {
+      color: var(--clr-white);
+      font-weight: 700;
+      &:nth-child(1) {
+        color: var(--clr-primary);
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        text-align: center;
+      }
+
+      &:nth-child(2) {
+        background-color: var(--clr-dark-gray);
+      }
+
+      &:nth-child(3) {
+        background-color: var(--clr-primary);
+      }
+    }
+  }
+
+  td,
+  th {
+    border: rem(3) solid var(--clr-white);
+    padding: rem(6);
+  }
+
+  td,
+  tfoot th {
+    font-weight: 500;
+    background-color: var(--clr-light-gray-3);
+  }
+
+  tbody td:nth-of-type(1),
+  tfoot th:nth-of-type(1) {
+    font-weight: 700;
+  }
+
+  tfoot th:last-of-type {
+    font-weight: 700;
+    background-color: var(--clr-success);
+    color: var(--clr-white);
+  }
+}

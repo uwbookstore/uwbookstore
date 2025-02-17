@@ -1,5 +1,4 @@
 @use '../util' as *;
-
 // Create some space under the
 // iCM editor menu since we use
 // a negative top margin on the
@@ -8,27 +7,21 @@
   margin-bottom: rem(20);
 }
 
-.hide {
-  display: none;
-}
-
-header,
-footer {
-  display: none;
-}
-
 #ContainDiv {
+  padding: rem(30) rem(8);
   background-color: transparent;
-  padding: 0;
-}
 
-.contain,
-.container {
-  max-width: rem(1170);
+  @include breakpoint(menu) {
+    padding-inline: 0;
+  }
+
+  &:has(.container-full) {
+    max-width: 100%;
+  }
 }
 
 #contentSection {
-  padding: 0 rem(5);
+  padding: 0 rem(8);
 
   @include breakpoint(medium) {
     padding: 0;
@@ -53,40 +46,63 @@ footer {
 #loyaltyWrap,
 #needHelp,
 a#goToTop,
-.disco {
+.breadcrumb,
+.disco,
+.hide,
+h1.visually-hidden,
+header:has(div[data-role='header']:not(.header.header__ubs)),
+footer[role='contentinfo'] {
   display: none !important;
-}
-
-.page_header {
-  display: none;
 }
 
 #custAddInfoWrap,
 #custEmailOptWrap,
-#custSMSOptWrap {
+#custSMSOptWrap,
+#custAddressWrap {
+  margin: 0;
   padding: 0;
 }
 
-// MBS apparently thinks folks will
-// only want to use the colors MBS
-// chooses.
+.coTotal,
+.tyTotal {
+  font-size: rem(20);
+}
 
-/*.radioButton,*/
-input[class^='radio'] {
-  & + span {
-    &::before {
-      width: rem(12);
-      height: rem(12);
-      vertical-align: 0;
-    }
+#studentIDText {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: rem(-15);
+}
+
+.card {
+  &-header p {
+    font-size: rem(20);
   }
 
-  &:checked {
-    & + span {
-      &::before {
-        background-color: var(--clr-primary);
+  &-body {
+    padding-inline: rem(8);
+
+    [class^='col'] {
+      padding-inline: 0;
+
+      @include breakpoint(xsmall) {
+        + [class^='col'] {
+          padding-left: rem(15);
+        }
       }
     }
+  }
+}
+
+.res_question {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  margin-bottom: rem(20);
+
+  p {
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -139,22 +155,21 @@ input[class^='radio'] {
   z-index: 0;
 }
 
-.rem1_2 {
-  font-size: rem(19.2);
+p {
+  &:empty {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+  }
 }
 
-.rem1_5 {
-  font-size: rem(24);
+.btn.searchCatButton {
+  border-width: rem(1);
+  border-color: var(--clr-light-gray-3);
+  background-color: var(--bs-tertiary-bg);
 }
 
-.rem2 {
-  font-size: rem(32);
-}
-
-.rem3 {
-  font-size: rem(48);
-}
-
-.rem4 {
-  font-size: rem(64);
+.pageHelp {
+  display: none;
 }

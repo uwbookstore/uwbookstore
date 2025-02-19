@@ -17,6 +17,21 @@ fillInnerContent('coupon-code', '434', 'text');
 fillInnerContent('coupon-expiration', '6.30.25', 'text');
 
 $(document).ready(function () {
+  /* Back to Top Button */
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 200) {
+      $('.backtotop').fadeIn(200);
+    } else {
+      $('.backtotop').fadeOut(200);
+    }
+  });
+
+  $('.backtotop').on('click', function () {
+    $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
+    return false;
+  });
+
+  // START OF SEARCH ELEMENT (NAVBAR)
   const searchBtn = document.getElementById('search');
   const searchForm = document.querySelector('li.search');
 
@@ -25,16 +40,13 @@ $(document).ready(function () {
     searchForm.classList.toggle('open');
   });
 
+  // Search function
   function search() {
     let searchInput = $('#search-term').val();
-
     searchInput = searchInput.replace(/[^a-zA-Z 0-9]+/g, '');
-    document.location.href =
-      'https://www.uwbookstore.com/merchlist?searchtype=all&txtSearch=' +
-      searchInput;
+    document.location.href = `${baseUrl}merchlist?searchtype=all&txtSearch=${searchInput}`;
   }
 
-  // Search function
   $('.search-submit').on('click', function () {
     if ($('.search-field').val() !== '') {
       search();
@@ -66,84 +78,12 @@ $(document).ready(function () {
     $('#cart-text').text(itemText);
   }
 
-  // function searchMobile() {
-  //   let searchInput = $('#search-term-mobile').val();
-  //   searchInput = searchInput.replace(/[^a-zA-Z 0-9]+/g, '');
-
-  //   document.location.href =
-  //     'https://www.uwbookstore.com/merchlist?searchtype=all&txtSearch=' +
-  //     searchInput;
-  // }
-
-  // $(function () {
-  //   $('.search-field').bind('keyup', function (e) {
-  //     if ($(this).val() !== '' && e.keyCode === 13) {
-  //       search();
-  //       return false;
-  //     }
-  //   });
-  //   $('.search-submit').on('click', function () {
-  //     if ($('.search-field').val() !== '') {
-  //       search();
-  //       return false;
-  //     }
-  //   });
-
-  //   $('.search-field-mobile').bind('keyup', function (e) {
-  //     if ($(this).val() !== '' && e.keyCode === 13) {
-  //       searchMobile();
-  //       return false;
-  //     }
-  //   });
-  //   $('.search-submit-mobile').on('click', function () {
-  //     if ($('.search-field-mobile').val() !== '') {
-  //       searchMobile();
-  //       return false;
-  //     }
-  //   });
-  // });
-
-  // // Search function replacement
-  // $('#search-term-mobile').keyup(function () {
-  //   $('#searchclear-mobile').toggle(Boolean($(this).val()));
-  // });
-  // $('#searchclear-mobile').toggle(Boolean($('#search-term-mobile').val()));
-  // $('#searchclear-mobile').click(function () {
-  //   $('#search-term-mobile').val('').focus();
-  //   $(this).hide();
-  // });
-
-  // // Search function replacement
-  // $('#search-term').keyup(function () {
-  //   $('#searchclear').toggle(Boolean($(this).val()));
-  // });
-  // $('#searchclear').toggle(Boolean($('#search-term').val()));
-  // $('#searchclear').click(function () {
-  //   $('#search-term').val('').focus();
-  //   $(this).hide();
-  // });
-
-  // $('.navbar-toggle').click(function () {
-  //   if ($('li.search').hasClass('search__open')) {
-  //     $('li.search').removeClass('search__open');
-  //   }
-  // });
-
-  // $('#search__toggle').click(function (e) {
-  //   e.preventDefault();
-  //   $(this).parent().toggleClass('search__open');
-  //   if (!$('.navbar-toggle').hasClass('collapsed')) {
-  //     $('.navbar-toggle').addClass('collapsed');
-  //     $('.navbar-collapse.collapse').removeClass('in');
-  //   }
-  // });
-
   // HANDLE LOGIN ERRORS
   if ($('.lgMessage').length) {
     $('.lgMessage')
       .removeClass('red')
       .addClass('alert alert-danger wi-50 mx-auto');
-    $('<em class="fa fa-exclamation-triangle mr-2"></em>').prependTo(
+    $(`<em class="fa fa-exclamation-triangle mr-2"></em>`).prependTo(
       '.lgMessage'
     );
 
@@ -152,7 +92,9 @@ $(document).ready(function () {
       "Please use your school's single sign-on process to login."
     ) {
       $('.lgMessage').html(
-        '<em class="fa fa-exclamation-triangle"></em> &mdash; Please use your <a href="https://www.uwbookstore.com/login">UW Student Sign In</a>'
+        `
+          <em class="fa fa-exclamation-triangle"></em> &mdash; Please use your <a href="https://www.uwbookstore.com/login">UW Student Sign In</a>
+        `
       );
     }
 
@@ -177,15 +119,6 @@ $(document).ready(function () {
     '10 digit phone number or UW Student ID *'
   );
 
-  // Add Copyright date to footer
-  const d = new Date();
-  const year = d.getFullYear();
-  $('.footer .copyright').html(
-    '&copy; Copyright ' +
-      year +
-      ' University Book Store | <a href="/Privacy" class="privacy" tabindex="0">Privacy Policy</a>'
-  );
-
   $.urlParam = function (name) {
     const results = new RegExp('[?&]' + name + '=([^&#]*)').exec(
       window.location.href
@@ -200,10 +133,6 @@ $(document).ready(function () {
   if (window.location.href.search(/SiteText/)) {
     $('#contentSection').addClass('padding0');
   }
-
-  $(
-    '<div class="modal fade" id="content-modal" tabindex="-1" role="dialog" aria-labelledby="content-modal" aria-hidden="true"><div class="vertical-alignment-helper"><div class="modal-dialog vertical-align-center"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><h3 class="modal-title" id="content-modal-title" style="display: inline-block;"></h3></div><div id="content-modal-body" class="modal-body"></div></div></div></div></div>'
-  ).appendTo('body');
 
   $('.banner__message').click(function () {
     $('#exclusions').slideToggle(500);
@@ -321,36 +250,17 @@ $(document).ready(function () {
   $('.nav-title').on('click', function (e) {
     const width = $(window).width();
 
-    if (width < 955) {
+    if (width < 1169) {
       $(this).next().slideToggle(500);
       e.preventDefault();
     }
   });
 
-  $('.modal-open').click(function (e) {
-    $('#coming-soon').modal();
-    e.stopPropagation();
-  });
-
-  // Dynamic merch modules...
-  /* if (!$(".panel.panel-info.Dynamic_Items").has("div.One_Dynamic").length) {
-        $(".panel.panel-info.Dynamic_Items").hide();
-    }
-
-    $('<div class="featured__items-block"></div>').insertAfter(".wiscard__wrapper");
-    $(".card.featuredDynamic").addClass("container").appendTo(".featured__items-block");
-    $(".panel.panel-info.Dynamic_Items .panel-body").addClass("merch__card flex");
-    $("div.One_Dynamic")
-        .removeClass("col-lg-2 col-md-2 col-sm-3 col-xs-6 textc dynamicMerchSix dynamicMerchTwo dynamicMerchFour")
-        .addClass("merch__card-item merch__card-item-small");
-    $("div.One_Dynamic a").addClass("merch__card-link");
-    $("img.One_Dynamic_Image").removeAttr("width");
-    $("img.One_Dynamic_Image").addClass("merch__card-img"); */
-
   // Monthly Coupons
   $('#couponbook .coupons li').click(function () {
     $(this).toggleClass('print');
   });
+
   $('.select').click(function (e) {
     $('#couponbook .coupons li').removeClass('print');
     $('#couponbook .coupons li').addClass('print');
@@ -364,25 +274,10 @@ $(document).ready(function () {
     window.print();
   });
 
-  /* Back to Top Button */
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 200) {
-      $('.backtotop').fadeIn(200);
-    } else {
-      $('.backtotop').fadeOut(200);
-    }
-  });
-
-  $('.backtotop').on('click', function () {
-    $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
-    return false;
-  });
-
   /* Account Options */
   if (baseUrl === 'https://www.uwbookstore.com/') {
     // login/account
     if ($('#myNavbar a:contains("Login")').length) {
-      // console.log('Should show Login...');
       $('#login').html(
         `
             <a href="https://www.uwbookstore.com/login" class="navbar__account">
@@ -392,7 +287,6 @@ $(document).ready(function () {
           `
       );
     } else {
-      // console.log('Should show Account...');
       $('#login').html(
         `
             <a href="https://www.uwbookstore.com/customeraccount?s=www.uwbookstore.com" class="navbar__account">
@@ -428,37 +322,6 @@ $(document).ready(function () {
   }
 
   // LOGIN
-  // $("h1.page_header").hide();
-  $('#loginPanelHeader, #lostPasswordPanelHeader').hide();
-  $(
-    '<h1 class="heading__line-center">Log In</h1><!--<div class="alert alert-danger"><em>Attention</em> - Guest checkout is temporarily unavailable.</div>-->'
-  ).prependTo('#loginPanel');
-
-  $('#login_UserName, #login_Password').removeClass('max_width300');
-  $('<label for="login_UserName">Email/Username</label>').insertBefore(
-    '#login_UserName'
-  );
-  $('#login_UserName').attr('type', 'email').attr('autofocus', 'autofocus');
-  // $("label.radioGuest span").html(
-  //     'I am a Guest User.<span class="normal">(Please Note: Loyalty points are not accrued when signed in as a Guest User)</span>'
-  // );
-  // $('input#login_guestLogin').attr('disabled', 'disabled');
-  $('<label for="login_Password">Password</label>').insertBefore(
-    '#login_Password'
-  );
-
-  $('<div class="flex form__actions"></div>').appendTo('#loginPanel');
-  $('input.loginSubmit')
-    .removeClass('bottom10')
-    .appendTo('.flex.form__actions');
-
-  $(
-    '<div class="alert alert-danger">If checking out as a guest, please enter an email address (for transactional emails), and click "Login" to continue.</div>'
-  ).insertAfter('label.radioGuest');
-  // if ($("label.radioGuest span").length) {
-  //   $("input.loginSubmit").attr("value", "Continue");
-  //   console.log("Guest user...");
-  // }
   $('a.forgotPasswordLink')
     .attr('class', 'forgotPasswordLink btn btn-text')
     .appendTo('.flex.form__actions');
@@ -478,12 +341,13 @@ $(document).ready(function () {
 
   // Lost Password
   $(
-    '<h1 id="lost-heading" class="heading__line-center"><span>Lost Password</span></h1>'
+    `<h1 id="lost-heading" class="heading__line-center">Lost Password</h1>`
   ).prependTo('#lostPasswordPanel');
-  $(
-    '<a href="javascript:history.go(-1)" class="btn btn-text"><i class="fa fa-chevron-left"></i> Return to Previous Page</a>'
-  ).insertAfter('#lost-heading');
-  $('#lostPasswordPanelBody a.previousLink').hide();
+  $('#lostPasswordPanelHeader.card-header').hide();
+  $('#lostPasswordPanelBody a.previousLink').addClass(
+    'btn btn-outline-primary mb-2'
+  );
+  $('#lostPasswordPanelBody').addClass('text-center');
   $('#lostPasswordPanelBody [class^="col"]').removeAttr('class');
 
   // Customer account
@@ -598,4 +462,37 @@ $(document).ready(function () {
   $('<br><small class="red">Limit one promo code per order</small>').appendTo(
     'label#promoLabel'
   );
+
+  // THINGS THAT SHOULD BE IN THE FOOTER OF THE PAGE
+  // Add Copyright date to footer
+  const d = new Date();
+  const year = d.getFullYear();
+  $('.footer .copyright').html(
+    `
+      &copy; Copyright ${year} University Book Store | <a href="/Privacy" class="privacy" tabindex="0">Privacy Policy</a>
+    `
+  );
+
+  $(
+    `
+      <div class="modal fade" id="content-modal" tabindex="-1" role="dialog" aria-labelledby="content-modal"
+        aria-hidden="true">
+        <div class="vertical-alignment-helper">
+          <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                  <span aria-hidden="true">&times;</span>
+                  <span class="sr-only">Close</span>
+                </button>
+                <h3 class="modal-title" id="content-modal-title" style="display: inline-block;"></h3>
+              </div>
+              <div id="content-modal-body" class="modal-body">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
+  ).appendTo('body');
 });

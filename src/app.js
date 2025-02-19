@@ -82,7 +82,7 @@ $(document).ready(function () {
   if ($('.lgMessage').length) {
     $('.lgMessage')
       .removeClass('red')
-      .addClass('alert alert-danger wi-50 mx-auto');
+      .addClass('alert alert-danger wi-50 mx-auto px-1');
     $(`<em class="fa fa-exclamation-triangle mr-2"></em>`).prependTo(
       '.lgMessage'
     );

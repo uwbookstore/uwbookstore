@@ -83,10 +83,9 @@ $(document).ready(function () {
         <span class="original">$${origPrice}</span>
       `
     ).appendTo('div#priceBlock');
-    // $('<span class="sale">$' + salePrice + ' - ' + pctOff + '% Off!</span>').appendTo('div#priceBlock');
     $(
       `
-        <span class="original">$${salePrice}</span>
+        <span class="sale">$${salePrice}</span>
       `
     ).appendTo('div#priceBlock');
   } else {

@@ -9,10 +9,10 @@
   margin-top: rem(20);
   padding: 0 0 rem(25);
   background-color: var(--clr-light-gray);
-  color: var(--clr-black);
+  color: var(--bs-gray-dark);
 
   svg {
-    fill: var(--clr-black);
+    fill: var(--bs-gray-dark);
   }
 
   dt {
@@ -32,7 +32,7 @@
 
   dd {
     a {
-      color: var(--clr-black);
+      color: var(--bs-gray-dark);
       line-height: 2.5;
       height: rem(50);
       display: block;
@@ -40,7 +40,7 @@
       transition: all 0.25s ease-in-out;
 
       &:hover {
-        color: var(--clr-primary);
+        color: var(--bs-primary);
         text-decoration: underline;
         transition: all 0.25s ease-in-out;
       }
@@ -59,7 +59,7 @@
       font-weight: 700;
       background: #29943d;
       border-radius: 0;
-      color: var(--clr-white);
+      color: var(--bs-white);
       display: block;
       line-height: 1.5;
       padding: rem(10) rem(15);
@@ -70,7 +70,7 @@
 
       &:hover {
         text-decoration: none;
-        color: var(--clr-white);
+        color: var(--bs-white);
       }
 
       &:before {
@@ -83,7 +83,7 @@
         cursor: text;
         line-height: 1.5;
         background-color: transparent;
-        color: var(--clr-black);
+        color: var(--bs-gray-dark);
         font-weight: normal;
         padding: 0;
         text-align: left;
@@ -96,7 +96,7 @@
         }
 
         &:hover {
-          color: var(--clr-black);
+          color: var(--bs-gray-dark);
           text-decoration: none;
         }
       }
@@ -173,7 +173,7 @@
 
   .payment-options {
     text-align: center;
-    color: var(--clr-black);
+    color: var(--bs-gray-dark);
 
     span {
       margin-bottom: rem(5);
@@ -217,7 +217,7 @@
     a:hover,
     a:visited {
       text-decoration: underline;
-      color: var(--clr-white);
+      color: var(--bs-white);
       display: inline-block;
       margin: rem(15) auto;
     }
@@ -236,7 +236,7 @@
   a,
   a:hover,
   a:visited {
-    color: var(--clr-black);
+    color: var(--bs-gray-dark);
   }
 
   em.fa.fa-envelope-o {
@@ -244,11 +244,11 @@
   }
 
   a.privacy {
-    color: var(--clr-black);
+    color: var(--bs-gray-dark);
     transition: all 0.25s ease-in-out;
 
     &:hover {
-      color: var(--clr-primary);
+      color: var(--bs-primary);
       transition: all 0.25s ease-in-out;
     }
 
@@ -280,7 +280,7 @@
   margin-bottom: rem(35);
 
   h2 {
-    color: var(--clr-black);
+    color: var(--bs-gray-dark);
     margin-bottom: rem(15);
     font-size: rem(18);
     font-weight: 700;
@@ -296,7 +296,7 @@
   .form-inline .form-control {
     margin-bottom: 0;
     width: 100%;
-    border: rem(2) solid color-mix(in srgb, var(--clr-black), #fff 30%);
+    border: rem(2) solid color-mix(in srgb, var(--bs-gray-dark), #fff 30%);
     border-bottom: none;
     border-radius: rem(4) rem(4) 0 0;
 
@@ -305,7 +305,8 @@
       vertical-align: middle;
       width: rem(250);
       border-right: none;
-      border-bottom: rem(2) solid color-mix(in srgb, var(--clr-black), #fff 30%);
+      border-bottom: rem(2) solid
+        color-mix(in srgb, var(--bs-gray-dark), #fff 30%);
       border-radius: rem(4) 0 0 rem(4);
     }
   }
@@ -314,8 +315,8 @@
     &.btn.btn-primary {
       width: 100%;
       border-radius: rem(4);
-      border: rem(2) solid color-mix(in srgb, var(--clr-black), #fff 30%);
-      color: var(--clr-white);
+      border: rem(2) solid color-mix(in srgb, var(--bs-gray-dark), #fff 30%);
+      color: var(--bs-white);
       font-weight: 700;
 
       @include breakpoint(medium) {

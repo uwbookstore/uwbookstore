@@ -6,8 +6,8 @@
   width: 100%;
 
   &__info {
-    background-color: var(--clr-black);
-    color: var(--clr-white);
+    background-color: var(--bs-gray-dark);
+    color: var(--bs-white);
   }
 
   &__message {
@@ -27,8 +27,8 @@
       }
       &.promo__code {
         padding: rem(5) rem(10);
-        background-color: var(--clr-white);
-        color: var(--clr-black);
+        background-color: var(--bs-white);
+        color: var(--bs-gray-dark);
         text-transform: uppercase;
         width: rem(300);
         margin: auto;
@@ -79,7 +79,7 @@
 
 .msg {
   &__highlight {
-    color: var(--clr-success);
+    color: var(--bs-success);
     text-align: center;
     font-weight: 700;
     font-size: 125%;

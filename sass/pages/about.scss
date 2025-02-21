@@ -29,7 +29,7 @@
   text-align: center;
   font-size: rem(24);
   margin-bottom: rem(20);
-  color: var(--clr-primary);
+  color: var(--bs-primary);
 }
 
 .timeline {
@@ -72,7 +72,7 @@
       transition: color 0.25s ease-in-out;
 
       &:hover {
-        color: var(--clr-primary);
+        color: var(--bs-primary);
       }
     }
 
@@ -97,7 +97,7 @@
 
     &.active::before {
       transform: scale(1);
-      background: var(--clr-primary);
+      background: var(--bs-primary);
     }
 
     .image {

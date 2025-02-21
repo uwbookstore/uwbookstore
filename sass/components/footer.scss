@@ -9,7 +9,7 @@
         var(--clr-gradient-start) 0%,
         var(--clr-gradient-end) 100%
       );
-    color: var(--clr-white);
+    color: var(--bs-white);
 
     @include breakpoint(small) {
       padding: rem(32) 0;
@@ -29,12 +29,12 @@
   }
 
   &-submit {
-    color: var(--clr-primary);
+    color: var(--bs-primary);
     font-weight: 700;
     font-size: rem(18);
     border-radius: 0;
-    background-color: var(--clr-white);
-    border: rem(2) solid var(--clr-white);
+    background-color: var(--bs-white);
+    border: rem(2) solid var(--bs-white);
     width: 100%;
     transition: var(--transition);
 
@@ -42,8 +42,8 @@
     &:focus,
     &:focus-visible {
       background-color: rgba(255, 255, 255, 0.15);
-      color: var(--clr-white);
-      border: rem(2) solid var(--clr-white);
+      color: var(--bs-white);
+      border: rem(2) solid var(--bs-white);
     }
 
     &:focus-visible {
@@ -61,8 +61,8 @@
 
 .footer {
   display: block;
-  background-color: var(--clr-black);
-  color: var(--clr-white);
+  background-color: var(--bs-gray-dark);
+  color: var(--bs-white);
 
   &__body {
     padding: rem(25) rem(20);
@@ -130,7 +130,7 @@
         content: '';
         position: absolute;
         bottom: 0;
-        border-bottom: rem(1) solid var(--clr-primary);
+        border-bottom: rem(1) solid var(--bs-primary);
         width: 0;
         transition: var(--transition);
       }
@@ -151,7 +151,7 @@
       &:hover,
       &:active,
       &:focus {
-        color: var(--clr-white);
+        color: var(--bs-white);
         text-decoration: none;
       }
 
@@ -312,7 +312,7 @@
     transition: var(--transition);
 
     svg {
-      fill: var(--clr-black);
+      fill: var(--bs-gray-dark);
       display: inline-block;
       vertical-align: top;
       width: rem(22);
@@ -324,18 +324,18 @@
     &:hover,
     &:active,
     &:focus {
-      background-color: var(--clr-white);
+      background-color: var(--bs-white);
     }
 
     &:focus,
     &:focus-visible {
-      color: var(--clr-primary);
+      color: var(--bs-primary);
       box-shadow: 0 0 rem(3) rem(4) rgba(197, 5, 12, 0.75);
       outline: 1px rgba(197, 5, 12, 0.75);
 
       svg {
-        fill: var(--clr-primary);
-        color: var(--clr-primary);
+        fill: var(--bs-primary);
+        color: var(--bs-primary);
       }
     }
   }

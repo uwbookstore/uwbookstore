@@ -7,10 +7,10 @@
 
   thead {
     th {
-      color: var(--clr-white);
+      color: var(--bs-white);
       font-weight: 700;
       &:nth-child(1) {
-        color: var(--clr-primary);
+        color: var(--bs-primary);
       }
 
       &:nth-child(2),
@@ -23,14 +23,14 @@
       }
 
       &:nth-child(3) {
-        background-color: var(--clr-primary);
+        background-color: var(--bs-primary);
       }
     }
   }
 
   td,
   th {
-    border: rem(3) solid var(--clr-white);
+    border: rem(3) solid var(--bs-white);
     padding: rem(6);
   }
 
@@ -47,7 +47,7 @@
 
   tfoot th:last-of-type {
     font-weight: 700;
-    background-color: var(--clr-success);
-    color: var(--clr-white);
+    background-color: var(--bs-success);
+    color: var(--bs-white);
   }
 }

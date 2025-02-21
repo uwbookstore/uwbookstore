@@ -1,7 +1,7 @@
 @use '../util' as *;
 
 .hero__image {
-  background-color: var(--clr-white);
+  background-color: var(--bs-white);
   padding-bottom: rem(40);
   margin-bottom: rem(24);
 }
@@ -69,7 +69,7 @@
   }
 
   &__header {
-    color: var(--clr-primary);
+    color: var(--bs-primary);
     font-size: rem(70);
     font-weight: 700;
     text-align: center;
@@ -84,7 +84,7 @@
 
       &.sub-header {
         font-size: rem(35);
-        color: var(--clr-secondary);
+        color: var(--bs-secondary);
       }
     }
   }
@@ -147,7 +147,7 @@
       margin-bottom: rem(30);
 
       h2 {
-        color: var(--clr-primary);
+        color: var(--bs-primary);
         font-weight: 700;
         font-size: rem(70);
         margin-bottom: rem(20);
@@ -199,7 +199,7 @@
   margin-bottom: rem(10);
 
   h2 {
-    color: var(--clr-primary);
+    color: var(--bs-primary);
     margin: 0;
     margin-bottom: rem(10);
     padding: 0;
@@ -229,7 +229,7 @@
       span {
         font-weight: normal;
         font-size: rem(20);
-        color: var(--clr-black);
+        color: var(--bs-gray-dark);
         display: block;
       }
 
@@ -276,7 +276,7 @@
   background: var(--clr-light-gray-2);
   font-size: rem(30);
   font-weight: 700;
-  color: var(--clr-primary);
+  color: var(--bs-primary);
   text-transform: uppercase;
   font-style: italic;
   text-align: center;
@@ -293,8 +293,8 @@
     font-size: rem(25);
     font-weight: 700;
     display: block;
-    color: var(--clr-primary);
-    border-bottom: rem(2) solid var(--clr-black);
+    color: var(--bs-primary);
+    border-bottom: rem(2) solid var(--bs-gray-dark);
     flex: 1 1 100%;
     text-transform: uppercase;
     padding-bottom: rem(20);
@@ -304,7 +304,7 @@
     span {
       font-weight: normal;
       font-size: rem(20);
-      color: var(--clr-black);
+      color: var(--bs-gray-dark);
       display: block;
     }
 
@@ -320,7 +320,7 @@
       flex: 1 1 33.333%;
       border-bottom: none;
       padding-top: rem(10);
-      border-right: rem(2) solid var(--clr-black);
+      border-right: rem(2) solid var(--bs-gray-dark);
 
       &:last-child {
         border-right: none;
@@ -331,7 +331,7 @@
         font-size: rem(16);
         font-weight: normal;
         margin-bottom: 0;
-        color: var(--clr-black);
+        color: var(--bs-gray-dark);
       }
     }
   }
@@ -358,7 +358,7 @@
     margin-bottom: rem(10);
     font-weight: 700;
     font-size: rem(30);
-    border-bottom: rem(2) solid var(--clr-black);
+    border-bottom: rem(2) solid var(--bs-gray-dark);
     line-height: 2;
   }
 
@@ -386,7 +386,7 @@
       padding: 0;
 
       &:first-child {
-        border-right: rem(2) solid var(--clr-black);
+        border-right: rem(2) solid var(--bs-gray-dark);
       }
     }
   }
@@ -419,12 +419,12 @@
           font-weight: 300;
 
           .discount {
-            color: var(--clr-primary);
+            color: var(--bs-primary);
           }
         }
 
         .subhead {
-          color: var(--clr-primary);
+          color: var(--bs-primary);
           font-size: rem(15);
           font-weight: 300;
         }
@@ -444,7 +444,7 @@
 .buy-now-hdr {
   text-align: center;
   margin: rem(50) auto;
-  color: var(--clr-primary);
+  color: var(--bs-primary);
 
   h2 {
     font-size: rem(42);
@@ -486,7 +486,7 @@
     }
 
     .item-icon {
-      color: var(--clr-primary);
+      color: var(--bs-primary);
       flex: 0 0 20%;
       display: block;
       text-align: center;
@@ -524,8 +524,8 @@
   margin: auto;
   text-align: center;
   background-color: transparent;
-  border: rem(2) solid var(--clr-primary);
-  color: var(--clr-primary);
+  border: rem(2) solid var(--bs-primary);
+  color: var(--bs-primary);
   padding: rem(15);
   font-size: rem(20);
   text-transform: uppercase;
@@ -538,20 +538,20 @@
   }
 
   &:hover {
-    background-color: var(--clr-primary);
-    border-color: var(--clr-primary);
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
     text-decoration: none;
-    color: var(--clr-white);
+    color: var(--bs-white);
   }
 
   &:active,
   &:active:hover,
   &:focus,
   &:active:focus {
-    background-color: color-mix(in srgb, var(--clr-primary), #000 4%);
-    border-color: color-mix(in srgb, var(--clr-primary), #000 5%);
+    background-color: color-mix(in srgb, var(--bs-primary), #000 4%);
+    border-color: color-mix(in srgb, var(--bs-primary), #000 5%);
     text-decoration: none;
-    color: var(--clr-white);
+    color: var(--bs-white);
   }
 
   @include breakpoint(medium) {

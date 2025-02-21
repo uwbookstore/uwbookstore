@@ -10,7 +10,7 @@
 .fa.clearance {
   &__icon {
     font-size: rem(185);
-    color: var(--clr-primary);
+    color: var(--bs-primary);
   }
 }
 
@@ -64,8 +64,8 @@
   background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png),
     linear-gradient(
       0deg,
-      var(--clr-primary) 0%,
-      color-mix(in srgb, var(--clr-primary), #000 20%) 100%
+      var(--bs-primary) 0%,
+      color-mix(in srgb, var(--bs-primary), #000 20%) 100%
     );
   height: auto;
   padding: rem(30);
@@ -80,8 +80,8 @@
   }
 
   svg {
-    color: var(--clr-white);
-    fill: var(--clr-white);
+    color: var(--bs-white);
+    fill: var(--bs-white);
 
     &.ua-logo {
       height: rem(130);
@@ -175,7 +175,7 @@
       position: relative;
       border: none;
       background-color: transparent;
-      color: var(--clr-black);
+      color: var(--bs-gray-dark);
       font-weight: 500;
       font-size: rem(18);
       width: 100%;
@@ -221,7 +221,7 @@
 
       a {
         position: relative;
-        color: var(--clr-black);
+        color: var(--bs-gray-dark);
         display: block;
 
         display: inline-block;
@@ -235,7 +235,7 @@
           content: '';
           position: absolute;
           bottom: 0;
-          border-bottom: rem(1) solid var(--clr-primary);
+          border-bottom: rem(1) solid var(--bs-primary);
           width: 0;
           transition: var(--transition);
         }
@@ -293,7 +293,7 @@
       }
 
       .category__link {
-        color: var(--clr-black);
+        color: var(--bs-gray-dark);
         font-weight: 700;
 
         img,
@@ -312,7 +312,7 @@
         &:hover,
         &:focus {
           text-decoration: none;
-          color: var(--clr-primary);
+          color: var(--bs-primary);
 
           img,
           em.fa {

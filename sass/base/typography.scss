@@ -16,8 +16,8 @@ body {
 }
 
 *::selection {
-  background: var(--clr-alt-link);
-  color: var(--clr-white);
+  background: var(--bs-blue);
+  color: var(--bs-white);
 }
 
 // prettier-ignore
@@ -187,7 +187,7 @@ address.returns {
   width: 100%;
   padding-bottom: rem(10);
   display: block;
-  border-bottom: rem(1) solid var(--clr-black);
+  border-bottom: rem(1) solid var(--bs-gray-dark);
   text-align: center;
 
   @supports (display: grid) {
@@ -221,11 +221,11 @@ address.returns {
     width: 100%;
     padding-bottom: rem(10);
     display: block;
-    border-bottom: rem(1) solid var(--clr-black);
+    border-bottom: rem(1) solid var(--bs-gray-dark);
 
     span {
       display: inline-block;
-      background-color: var(--clr-white);
+      background-color: var(--bs-white);
       padding: rem(10);
       background-color: inherit;
     }
@@ -258,13 +258,13 @@ address.returns {
       margin: 0 0 rem(25);
       width: 100%;
       padding-bottom: rem(10);
-      border-bottom: rem(1) solid var(--clr-black);
+      border-bottom: rem(1) solid var(--bs-gray-dark);
       display: block;
       text-align: center;
 
       span {
         display: inline-block;
-        background-color: var(--clr-white);
+        background-color: var(--bs-white);
         padding: rem(10);
         background-color: inherit;
       }
@@ -317,7 +317,7 @@ address.returns {
       position: absolute;
       left: 0;
       content: '';
-      background-color: var(--clr-primary);
+      background-color: var(--bs-primary);
       right: 0;
       margin: 0 auto;
       height: rem(6);
@@ -340,7 +340,7 @@ a[href^='tel:'] {
   font-weight: 700;
   background: #29943d;
   border-radius: 0;
-  color: var(--clr-white);
+  color: var(--bs-white);
   display: block;
   line-height: 1em;
   padding: rem(10) rem(15);
@@ -358,7 +358,7 @@ a[href^='tel:'] {
   @include breakpoint(small) {
     cursor: text;
     background-color: transparent;
-    color: var(--clr-black);
+    color: var(--bs-gray-dark);
     display: inline;
     font-weight: normal;
     padding: 0;
@@ -376,7 +376,7 @@ a[href^='tel:'] {
 }
 
 .red {
-  color: var(--clr-primary);
+  color: var(--bs-primary);
 }
 
 ol.alpha {
@@ -409,7 +409,7 @@ ol.alpha {
 }
 
 .dancing-script {
-  color: var(--clr-primary);
+  color: var(--bs-primary);
   font-family: var(--ff-script);
   text-align: center;
 }

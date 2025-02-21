@@ -34,11 +34,11 @@
         width: 100%;
 
         &.active {
-          background-color: var(--clr-primary);
-          color: var(--clr-white);
+          background-color: var(--bs-primary);
+          color: var(--bs-white);
           box-shadow: none;
           text-decoration: none;
-          border-color: var(--clr-primary);
+          border-color: var(--bs-primary);
         }
       }
     }
@@ -129,11 +129,11 @@
     }
 
     &.closed {
-      color: color-mix(in srgb, var(--clr-primary), #fff 5%);
+      color: color-mix(in srgb, var(--bs-primary), #fff 5%);
     }
 
     &.open {
-      color: color-mix(in srgb, var(--clr-success), #000 15%);
+      color: color-mix(in srgb, var(--bs-success), #000 15%);
     }
   }
 

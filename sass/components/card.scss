@@ -23,14 +23,14 @@
 
   &__blue {
     background-color: #2da9d7;
-    color: var(--clr-white);
+    color: var(--bs-white);
     padding: rem(30);
     margin: rem(30) auto;
   }
 
   &__black {
     background-color: color-mix(in srgb, var(--clr-light-gray), #000 8%);
-    color: var(--clr-white);
+    color: var(--bs-white);
     padding: rem(20);
   }
 
@@ -44,9 +44,9 @@
     font-weight: 700;
 
     &-ubs {
-      color: var(--clr-white);
-      background-color: var(--clr-primary);
-      border-color: color-mix(in srgb, var(--clr-primary), #000 10%);
+      color: var(--bs-white);
+      background-color: var(--bs-primary);
+      border-color: color-mix(in srgb, var(--bs-primary), #000 10%);
       padding: rem(5) rem(1.5);
       margin-bottom: rem(20);
       font-weight: normal;
@@ -54,7 +54,7 @@
       a {
         &:link,
         &:visited {
-          color: var(--clr-white);
+          color: var(--bs-white);
           display: block;
           text-transform: uppercase;
           font-size: rem(24);

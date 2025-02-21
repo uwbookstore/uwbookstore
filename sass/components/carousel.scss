@@ -46,7 +46,7 @@
       cursor: pointer;
       background-color: #000 \9;
       background-color: rgba(0, 0, 0, 0);
-      border: rem(1) solid var(--clr-black);
+      border: rem(1) solid var(--bs-gray-dark);
       border-radius: rem(10);
     }
   }
@@ -70,10 +70,10 @@
 
   .carousel-indicators button {
     background-color: transparent;
-    border: rem(2) solid var(--clr-black);
+    border: rem(2) solid var(--bs-gray-dark);
   }
 
   .carousel-indicators button.active {
-    background-color: var(--clr-black);
+    background-color: var(--bs-gray-dark);
   }
 }

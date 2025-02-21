@@ -3,8 +3,8 @@
 .table {
   .table {
     &-heading {
-      background-color: var(--clr-primary);
-      color: var(--clr-white);
+      background-color: var(--bs-primary);
+      color: var(--bs-white);
     }
   }
 }
@@ -121,7 +121,7 @@
 
 .framing {
   img {
-    border: rem(2) solid var(--clr-primary);
+    border: rem(2) solid var(--bs-primary);
     padding: rem(5);
     margin-inline: auto;
   }
@@ -168,7 +168,7 @@
     font-weight: normal;
     position: relative;
     top: rem(5);
-    color: var(--clr-primary);
+    color: var(--bs-primary);
   }
 
   ul {

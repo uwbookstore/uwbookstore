@@ -43,7 +43,7 @@
   }
 
   .glyphicon {
-    color: var(--clr-primary);
+    color: var(--bs-primary);
   }
 }
 .paymentBilling-wrapper br,
@@ -65,7 +65,7 @@ a.paymentBilling-change {
   font-size: rem(16);
   background-color: var(--clr-info);
   border-color: var(--clr-info);
-  color: var(--clr-black);
+  color: var(--bs-gray-dark);
   font-weight: 700;
   text-align: center;
   &:link,
@@ -75,7 +75,7 @@ a.paymentBilling-change {
   &:hover {
     background-color: color-mix(in srgb, var(--clr-info), #000 10%);
     border-color: color-mix(in srgb, var(--clr-info), #000 12%);
-    color: var(--clr-white);
+    color: var(--bs-white);
   }
 
   &:active,
@@ -84,7 +84,7 @@ a.paymentBilling-change {
   &:active:focus {
     background-color: color-mix(in srgb, var(--clr-info), #000 8%);
     border-color: color-mix(in srgb, var(--clr-info), #000 10%);
-    color: var(--clr-white);
+    color: var(--bs-white);
   }
 }
 
@@ -153,7 +153,7 @@ h2.heading__billing {
   }
 
   span.fa {
-    color: var(--clr-primary);
+    color: var(--bs-primary);
     font-size: rem(20);
   }
 }

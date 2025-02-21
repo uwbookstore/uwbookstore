@@ -64,8 +64,8 @@
     justify-content: space-around;
     position: relative;
     padding: rem(15);
-    background-color: var(--clr-primary);
-    color: var(--clr-white);
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
     list-style: none;
     margin: 0;
 
@@ -133,8 +133,8 @@
   @include breakpoint(menu) {
     &__links {
       justify-content: flex-end;
-      background-color: var(--clr-white);
-      color: var(--clr-black);
+      background-color: var(--bs-white);
+      color: var(--bs-gray-dark);
       width: 50%;
       gap: rem(20);
 
@@ -155,7 +155,7 @@
           }
           &:hover span,
           &:focus span {
-            color: var(--clr-primary);
+            color: var(--bs-primary);
           }
         }
       }
@@ -258,7 +258,7 @@
         input {
           font-size: inherit;
           border: none;
-          border-bottom: rem(1) solid var(--clr-black);
+          border-bottom: rem(1) solid var(--bs-gray-dark);
           border-radius: unset;
           width: 100%;
           display: inline;
@@ -274,7 +274,7 @@
           font-size: inherit;
           background-color: transparent;
           border: none;
-          color: var(--clr-black);
+          color: var(--bs-gray-dark);
 
           em.fa {
             font-size: rem(24);
@@ -283,7 +283,7 @@
           &:hover,
           &:focus {
             background-color: transparent;
-            color: var(--clr-primary);
+            color: var(--bs-primary);
           }
         }
       }
@@ -319,8 +319,8 @@
     opacity: 1;
     width: rem(50);
     height: rem(50);
-    background: color-mix(in srgb, var(--clr-primary), #000 10%);
-    border: rem(1) solid color-mix(in srgb, var(--clr-primary), #000 12%);
+    background: color-mix(in srgb, var(--bs-primary), #000 10%);
+    border: rem(1) solid color-mix(in srgb, var(--bs-primary), #000 12%);
     border-radius: 0;
     outline: 0;
     position: absolute;
@@ -335,17 +335,17 @@
 
   &:hover {
     transform: translateY(rem(-3));
-    box-shadow: 0 rem(1) rem(2) rgba(var(--clr-black), 0.6);
+    box-shadow: 0 rem(1) rem(2) rgba(var(--bs-gray-dark), 0.6);
   }
   &:active {
     transform: translateY(rem(-1));
-    box-shadow: 0 rem(2) rem(4) rgba(var(--clr-black), 0.8);
+    box-shadow: 0 rem(2) rem(4) rgba(var(--bs-gray-dark), 0.8);
   }
 }
 
 .backtotop em {
   @include absCenter;
-  color: var(--clr-white);
+  color: var(--bs-white);
   font-size: rem(20);
 }
 

@@ -18,7 +18,7 @@
 
   .sale-banner {
     background-color: #326cec;
-    color: var(--clr-white);
+    color: var(--bs-white);
     font-size: rem(30);
     line-height: 1.5;
     padding: rem(10);
@@ -39,7 +39,7 @@
   .btn-xlrg.btn-blue {
     background-color: #326cec;
     display: inline-block;
-    color: var(--clr-white);
+    color: var(--bs-white);
     text-transform: uppercase;
     font-size: rem(30);
     padding: 0 rem(15);
@@ -90,7 +90,7 @@
   &__header {
     width: 100%;
     background-color: #333;
-    color: var(--clr-white);
+    color: var(--bs-white);
     padding: rem(5);
     text-transform: uppercase;
     font-size: rem(25);
@@ -197,7 +197,7 @@
     url('https://i.univbkstr.com/v3/img/pages/signing/bg-image.jpg') no-repeat
     left top;
   background-size: contain;
-  color: var(--clr-white);
+  color: var(--bs-white);
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
@@ -208,7 +208,7 @@
     text-align: center;
 
     a {
-      color: var(--clr-white);
+      color: var(--bs-white);
       text-decoration: underline;
     }
 
@@ -292,7 +292,7 @@
   }
 
   h3 {
-    color: var(--clr-primary);
+    color: var(--bs-primary);
     font-size: rem(30);
   }
 
@@ -302,13 +302,13 @@
 
   &-body {
     &-box {
-      border: rem(5) solid var(--clr-primary);
+      border: rem(5) solid var(--bs-primary);
       margin-bottom: rem(30);
       padding: rem(10);
       text-align: center;
 
       h3 {
-        color: var(--clr-black);
+        color: var(--bs-gray-dark);
         font-weight: 700;
       }
     }
@@ -321,9 +321,9 @@
           padding: rem(15);
 
           div {
-            border-top: rem(3) solid var(--clr-black);
-            border-bottom: rem(3) solid var(--clr-black);
-            color: var(--clr-primary);
+            border-top: rem(3) solid var(--bs-gray-dark);
+            border-bottom: rem(3) solid var(--bs-gray-dark);
+            color: var(--bs-primary);
             font-weight: 700;
           }
         }
@@ -368,10 +368,10 @@
     a {
       &.bordered {
         display: block;
-        color: var(--clr-black);
+        color: var(--bs-gray-dark);
         font-size: rem(24);
         font-weight: 700;
-        border: rem(1) solid var(--clr-primary);
+        border: rem(1) solid var(--bs-primary);
         padding: rem(15);
 
         &:hover {
@@ -384,12 +384,12 @@
   .text-stroke {
     font-size: rem(30);
     letter-spacing: rem(1.5);
-    color: var(--clr-white);
+    color: var(--bs-white);
     text-shadow:
-      rem(-1) rem(-1) 0 var(--clr-primary),
-      rem(1) rem(-1) 0 var(--clr-primary),
-      rem(-1) rem(1) 0 var(--clr-primary),
-      rem(1) rem(1) 0 var(--clr-primary);
+      rem(-1) rem(-1) 0 var(--bs-primary),
+      rem(1) rem(-1) 0 var(--bs-primary),
+      rem(-1) rem(1) 0 var(--bs-primary),
+      rem(1) rem(1) 0 var(--bs-primary);
   }
 
   &__wrapper {
@@ -399,7 +399,7 @@
 }
 
 .code-img {
-  background-color: var(--clr-black);
+  background-color: var(--bs-gray-dark);
   max-width: rem(233);
   padding: rem(10);
   margin: auto;
@@ -413,7 +413,7 @@
 // Bag On Break
 .bag-on-break {
   font-family: 'Pompiere', sans-serif;
-  border: rem(1) solid var(--clr-primary);
+  border: rem(1) solid var(--bs-primary);
   margin-bottom: rem(20);
 
   &__header {
@@ -432,13 +432,13 @@
     font-size: rem(60);
     font-weight: 700;
     span {
-      color: var(--clr-primary);
+      color: var(--bs-primary);
       letter-spacing: initial;
     }
   }
 
   h3 {
-    color: var(--clr-primary);
+    color: var(--bs-primary);
     font-size: rem(40);
     font-weight: 700;
     text-align: center;
@@ -456,7 +456,7 @@
         margin-bottom: rem(20);
 
         span {
-          color: var(--clr-primary);
+          color: var(--bs-primary);
         }
       }
     }
@@ -529,7 +529,7 @@
     position: relative;
     padding: 0 rem(10) rem(32);
     margin-bottom: rem(32);
-    color: var(--clr-primary);
+    color: var(--bs-primary);
     text-align: left;
     font-family: var(--ff-serif);
     font-weight: bold;
@@ -544,7 +544,7 @@
       left: rem(10);
       height: rem(8);
       width: calc(rem(60));
-      background-color: var(--clr-primary);
+      background-color: var(--bs-primary);
     }
 
     @include breakpoint(small) {
@@ -561,7 +561,7 @@
     position: relative;
     padding: 0 rem(10) rem(16);
     margin-bottom: rem(16);
-    color: var(--clr-primary);
+    color: var(--bs-primary);
     text-align: left;
     font-family: var(--ff-serif);
     font-weight: bold;
@@ -717,7 +717,7 @@ div.subHeader {
 //     var(--clr-gradient-start) 0%,
 //     var(--clr-gradient-end) 100%
 //   );
-//   color: var(--clr-white);
+//   color: var(--bs-white);
 //   width: 100%;
 //   overflow: hidden;
 //   margin-top: rem(-20);
@@ -860,8 +860,8 @@ div.subHeader {
 //   }
 
 //   &__disclaimer {
-//     background-color: var(--clr-white);
-//     color: var(--clr-black);
+//     background-color: var(--bs-white);
+//     color: var(--bs-gray-dark);
 //     padding: rem(40);
 //     text-align: center;
 //     font-size: rem(12);

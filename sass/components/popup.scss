@@ -39,7 +39,7 @@
     }
 
     h1 {
-      color: var(--clr-primary);
+      color: var(--bs-primary);
       font-size: rem(40);
     }
 
@@ -57,7 +57,7 @@
   }
 
   span.red {
-    color: var(--clr-primary);
+    color: var(--bs-primary);
   }
 
   .popup-close {
@@ -67,7 +67,7 @@
     line-height: 1;
 
     button {
-      color: var(--clr-black);
+      color: var(--bs-gray-dark);
       font-weight: 500;
       border: 0;
       background-color: rgba(0, 0, 0, 0.2);

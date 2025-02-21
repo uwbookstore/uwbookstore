@@ -19,9 +19,9 @@
     margin-bottom: rem(15);
     padding: rem(5) rem(10);
     font-size: rem(16);
-    background-color: var(--clr-primary);
-    color: var(--clr-white);
-    text-shadow: 0 rem(1) 0 color-mix(in srgb, var(--clr-black), #000 5%);
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
+    text-shadow: 0 rem(1) 0 color-mix(in srgb, var(--bs-gray-dark), #000 5%);
     font-weight: 700;
     text-transform: uppercase;
 
@@ -48,7 +48,7 @@
         transition: color 0.2s ease-in-out;
 
         &:hover {
-          color: var(--clr-primary);
+          color: var(--bs-primary);
           transition: color 0.2s ease-in-out;
         }
       }

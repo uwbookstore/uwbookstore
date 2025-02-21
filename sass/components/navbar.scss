@@ -13,7 +13,7 @@
       width: rem(22);
       height: rem(2);
       border-radius: rem(1);
-      background-color: var(--clr-black);
+      background-color: var(--bs-gray-dark);
       transition: all 0.25s ease-in-out;
 
       + .icon-bar {
@@ -61,9 +61,9 @@
     &__site {
       height: rem(70);
       position: relative;
-      border-bottom: rem(2) solid var(--clr-primary);
+      border-bottom: rem(2) solid var(--bs-primary);
       padding: rem(15) 0;
-      background-color: var(--clr-white);
+      background-color: var(--bs-white);
       background-size: cover;
       @include breakpoint(menu) {
         height: auto;
@@ -95,12 +95,12 @@
         @include breakpoint(menu) {
           &.open {
             > a {
-              color: var(--clr-white);
-              background-color: color-mix(in srgb, var(--clr-primary), #000 5%);
+              color: var(--bs-white);
+              background-color: color-mix(in srgb, var(--bs-primary), #000 5%);
             }
           }
           > a {
-            color: var(--clr-white);
+            color: var(--bs-white);
             font-size: rem(15);
             min-height: 100%;
             display: flex;
@@ -114,15 +114,15 @@
             &:hover,
             &:active,
             &:focus {
-              color: var(--clr-white);
-              background-color: color-mix(in srgb, var(--clr-primary), #000 5%);
+              color: var(--bs-white);
+              background-color: color-mix(in srgb, var(--bs-primary), #000 5%);
             }
           }
 
           &:hover,
           &:active,
           &:focus {
-            background-color: color-mix(in srgb, var(--clr-primary), #000 5%);
+            background-color: color-mix(in srgb, var(--bs-primary), #000 5%);
           }
         }
       }
@@ -141,7 +141,7 @@
       padding-right: 0;
 
       @include breakpoint(menu) {
-        background-color: var(--clr-primary);
+        background-color: var(--bs-primary);
         border-top: none;
       }
     }
@@ -290,7 +290,7 @@
     a {
       display: block;
       padding: rem(10) rem(15);
-      color: var(--clr-black);
+      color: var(--bs-gray-dark);
 
       &:hover {
         text-decoration: none;
@@ -314,7 +314,7 @@
     border-bottom: rem(1) solid var(--clr-light-gray-3);
     display: block;
     padding: rem(10) rem(15);
-    color: var(--clr-black);
+    color: var(--bs-gray-dark);
 
     &:hover {
       text-decoration: none;
@@ -353,7 +353,7 @@
 
         &:hover {
           border-radius: rem(3);
-          color: var(--clr-black);
+          color: var(--bs-gray-dark);
           transition: all 0.25s ease-in-out;
         }
       }
@@ -362,7 +362,7 @@
 }
 
 .col-megamenu {
-  background-color: var(--clr-white);
+  background-color: var(--bs-white);
 
   ul {
     display: none;
@@ -380,7 +380,7 @@
         &:visited {
           display: block;
           padding: rem(10) rem(15);
-          color: var(--clr-black);
+          color: var(--bs-gray-dark);
           font-size: rem(16);
         }
 
@@ -399,7 +399,7 @@
 
           &:hover {
             background-color: transparent;
-            color: var(--clr-primary);
+            color: var(--bs-primary);
             transition: all 0.25s ease-in-out;
           }
         }
@@ -418,13 +418,13 @@
   }
 
   &-no-header li a {
-    background-color: var(--clr-white);
+    background-color: var(--bs-white);
     font-size: rem(18);
     font-weight: 500;
     border-bottom: rem(1) solid var(--clr-light-gray-3);
     display: block;
     padding: rem(10) rem(15);
-    color: var(--clr-black);
+    color: var(--bs-gray-dark);
 
     &:hover {
       text-decoration: none;
@@ -447,7 +447,7 @@
   a {
     &:link,
     &:visited {
-      color: var(--clr-primary);
+      color: var(--bs-primary);
       font-weight: 700;
       padding: rem(10);
       border-bottom: rem(1) solid currentColor;
@@ -457,8 +457,8 @@
     &:hover,
     &:active {
       text-decoration: none;
-      background-color: var(--clr-primary);
-      color: var(--clr-white);
+      background-color: var(--bs-primary);
+      color: var(--bs-white);
     }
   }
 }

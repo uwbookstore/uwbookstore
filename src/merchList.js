@@ -59,11 +59,38 @@ $(document).ready(function () {
           ($('.noListItems').hide(),
           $(
             `
-              <div class="empty-results text-center">
-                <h1>Sorry, nothing new right now.</h1>
-                <p>Please check back later.</p>
-                <img role="presentation" src="https://i.univbkstr.com/v3/img/404/nothing_to_see.gif" alt="Nothing To See" class="img-fluid">
-              </div>
+              <section class="empty-results text-center">
+                <h1>
+                  Badger fans, stay tuned&mdash;new gear is coming!
+                </h1>
+                <p class="bold">
+                  Until then, explore our best-selling favorites and show your Wisconsin pride!
+                </p>
+                <div class="row">
+                  <div class="col-sm-12 col-md-6">
+                    <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Mens/Best-Sellers">
+                      <img src="https://i.univbkstr.com/v3/img/pages/newArrivals/letsGo.jpg" alt=""
+                        class="img-fluid d-block mb-2">
+                    </a>
+                    <div class="text-center">
+                      <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Mens/Best-Sellers" class="btn btn-primary">Shop Men's
+                        Best
+                        Sellers</a>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Womens/Best-Sellers">
+                      <img src="https://i.univbkstr.com/v3/img/pages/newArrivals/badgers.jpg" alt=""
+                        class="img-fluid d-block mb-2">
+                    </a>
+                    <div class="text-center">
+                      <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Womens/Best-Sellers" class="btn btn-primary">Shop
+                        Women's
+                        Best Sellers</a>
+                    </div>
+                  </div>
+                </div>
+              </section>
             `
           ).insertAfter('.searchCatWrap'))));
 

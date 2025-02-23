@@ -67,7 +67,7 @@ $(document).ready(function () {
                   Until then, explore our best-selling favorites and show your Wisconsin pride!
                 </p>
                 <div class="row">
-                  <div class="col-sm-12 col-md-6">
+                  <div class="col-sm-12 col-md-6 mb-2">
                     <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Mens/Best-Sellers">
                       <img src="https://i.univbkstr.com/v3/img/pages/newArrivals/letsGo.jpg" alt=""
                         class="img-fluid d-block mb-2">
@@ -78,7 +78,7 @@ $(document).ready(function () {
                         Sellers</a>
                     </div>
                   </div>
-                  <div class="col-sm-12 col-md-6">
+                  <div class="col-sm-12 col-md-6 mb-2">
                     <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Womens/Best-Sellers">
                       <img src="https://i.univbkstr.com/v3/img/pages/newArrivals/badgers.jpg" alt=""
                         class="img-fluid d-block mb-2">

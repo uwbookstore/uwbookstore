@@ -302,17 +302,18 @@
   padding: rem(2) rem(5);
 }
 
-.backtotop {
-  display: none;
+#backtotop {
+  opacity: 0;
   position: fixed;
   z-index: 9999999999999;
   bottom: rem(40);
   right: rem(40);
   width: rem(50);
   height: rem(50);
+  transition: var(--transition);
 }
 
-.backtotop a {
+#backtotop a {
   &:link,
   &:visited {
     display: block;
@@ -343,7 +344,7 @@
   }
 }
 
-.backtotop em {
+#backtotop em {
   @include absCenter;
   color: var(--bs-white);
   font-size: rem(20);

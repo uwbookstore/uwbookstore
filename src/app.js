@@ -1,9 +1,20 @@
 // DEFINE SITE VARIABLES
 const backToTopBtn = document.getElementById('backtotop');
 
-// DEFINE ALL FUNCTIONS
+// Search bar variables
+const searchBtn = document.getElementById('search');
+const searchForm = document.querySelector('li.search');
+const searchSubmit = document.querySelector('.search-submit');
+const searchField = document.querySelector('.search-field');
 
-// Smooth scroll to top
+// header cart variables
+const cart = document.getElementById('Cart');
+const itemCount = document.getElementById('ItemCount').textContent;
+const cartCount = document.getElementById('cart-count');
+const cartText = document.getElementById('cart-text');
+
+// DEFINE ALL FUNCTIONS
+// Smooth scroll back to top
 function scrollToTop(e) {
   e.preventDefault();
   window.scrollTo({
@@ -21,6 +32,13 @@ window.onscroll = function () {
   }
 };
 
+// Call custom search - Not MBS search
+function search() {
+  let searchInput = document.getElementById('search-term').value;
+  searchInput = searchInput.replace(/[^a-zA-Z 0-9]+/g, '');
+  document.location.href = `${baseUrl}merchlist?searchtype=all&txtSearch=${searchInput}`;
+}
+
 /**
  * Select an element by id and update innerText or innerHTML
  * @param {string} el - the element to be updated (id not class)
@@ -36,10 +54,56 @@ function fillInnerContent(el, text, type) {
   }
   return null;
 }
+// END FUNCTION DEFINITIONS
 
 // CALL FUNCTIONS
-// Call scrolltotop
-backToTopBtn.addEventListener('click', scrollToTop);
+/**
+ * Check if back to top button exists
+ * if so, run scrollToTop function
+ */
+if (backToTopBtn) {
+  backToTopBtn.addEventListener('click', scrollToTop);
+}
+
+/**
+ * Check if search button exists
+ * if so, toggle search form opened/closed
+ */
+if (searchBtn) {
+  searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    searchForm.classList.toggle('open');
+  });
+}
+
+/**
+ * Check if search submit button exists
+ * if so, run custom search function
+ */
+if (searchSubmit && searchField) {
+  searchField.addEventListener('keyup', (e) => {
+    if (searchField.value !== '' && e.keyCode === 13) {
+      e.preventDefault();
+      search();
+    }
+  });
+
+  searchSubmit.addEventListener('click', () => {
+    searchField.value !== '' ? search() : false;
+  });
+}
+
+/**
+ * Check that Cart element exists
+ * if so append cart info to custom cart
+ */
+console.log(typeof cartCount);
+if (Cart) {
+  let itemText;
+  itemCount === '1' ? (itemText = 'Item') : (itemText = 'Items');
+  cartCount.appendChild(itemCount);
+  cartText.innerText = itemText;
+}
 
 /**
  * Update the coupon code & expiration date
@@ -53,3 +117,4 @@ fillInnerContent('coupon-header', '10% OFF', 'text');
 fillInnerContent('coupon-subhead', 'Your Entire Purchase!', 'text');
 fillInnerContent('coupon-code', '434', 'text');
 fillInnerContent('coupon-expiration', '6.30.25', 'text');
+// END FUNCTION CALLS

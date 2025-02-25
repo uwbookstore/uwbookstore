@@ -9,7 +9,7 @@ const searchField = document.querySelector('.search-field');
 
 // header cart variables
 const cart = document.getElementById('Cart');
-const itemCount = document.getElementById('ItemCount').textContent;
+const itemCount = document.getElementById('ItemCount');
 const cartCount = document.getElementById('cart-count');
 const cartText = document.getElementById('cart-text');
 
@@ -97,10 +97,9 @@ if (searchSubmit && searchField) {
  * Check that Cart element exists
  * if so append cart info to custom cart
  */
-console.log(typeof cartCount);
-if (Cart) {
+if (cart) {
   let itemText;
-  itemCount === '1' ? (itemText = 'Item') : (itemText = 'Items');
+  itemCount.textContent === '1' ? (itemText = 'Item') : (itemText = 'Items');
   cartCount.appendChild(itemCount);
   cartText.innerText = itemText;
 }

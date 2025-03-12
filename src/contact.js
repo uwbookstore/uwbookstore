@@ -179,7 +179,7 @@ $(document).ready(() => {
         `
         )
         .show();
-    } else if (selOpt === 1184 || selOpt === 195) {
+    } else if (selOpt === 1091 || selOpt === 195) {
       if ($('#h_nav a:contains("Log Out")').length) {
         $('#msg-text')
           .html(

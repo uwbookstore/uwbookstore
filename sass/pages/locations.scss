@@ -49,7 +49,7 @@
     padding-bottom: 65%;
     height: 0;
     overflow: hidden;
-    border-bottom: rem(1) solid var(--clr-light-gray-3);
+    border-bottom: rem(1) solid var(--bs-gray-400);
 
     @include breakpoint(medium) {
       padding-bottom: 35%;
@@ -67,8 +67,8 @@
 
   &__hours {
     flex: 1 1 100%;
-    background-color: var(--clr-light-gray);
-    border: rem(1) solid color-mix(in srgb, var(--clr-light-gray), #000 5%);
+    background-color: var(--bs-gray-100);
+    border: rem(1) solid color-mix(in srgb, var(--bs-gray-100), #000 5%);
     padding: rem(20) rem(10);
 
     p {
@@ -89,7 +89,7 @@
   &__info {
     img {
       display: block;
-      border: rem(5) solid color-mix(in srgb, var(--clr-light-gray), #000 5%);
+      border: rem(5) solid color-mix(in srgb, var(--bs-gray-100), #000 5%);
       border-radius: 100%;
       height: rem(150);
       width: rem(150);
@@ -125,7 +125,7 @@
     padding: rem(5);
 
     & + li {
-      border-top: rem(1) solid var(--clr-light-gray-3);
+      border-top: rem(1) solid var(--bs-gray-400);
     }
 
     &.closed {

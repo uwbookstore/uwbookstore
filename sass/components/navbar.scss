@@ -82,11 +82,7 @@
           &:hover,
           &:active,
           &:focus {
-            background-color: color-mix(
-              in srgb,
-              var(--clr-light-gray-2),
-              #000 5%
-            );
+            background-color: color-mix(in srgb, var(--bs-gray-300), #000 5%);
             transition: all 0.25s ease-in-out;
             text-decoration: none;
           }
@@ -280,12 +276,12 @@
 
 .megamenu {
   padding: 0;
-  border-bottom: rem(1) solid var(--clr-light-gray-3);
+  border-bottom: rem(1) solid var(--bs-gray-400);
 
   h2 {
     font-size: rem(16);
     font-weight: 500;
-    border-bottom: rem(1) solid var(--clr-light-gray-3);
+    border-bottom: rem(1) solid var(--bs-gray-400);
 
     a {
       display: block;
@@ -311,7 +307,7 @@
   a.nav-title {
     font-size: rem(16);
     font-weight: 500;
-    border-bottom: rem(1) solid var(--clr-light-gray-3);
+    border-bottom: rem(1) solid var(--bs-gray-400);
     display: block;
     padding: rem(10) rem(15);
     color: var(--bs-gray-dark);
@@ -345,7 +341,7 @@
 
       &:hover {
         text-decoration: none;
-        background-color: color-mix(in srgb, var(--clr-light-gray-2), #000 5%);
+        background-color: color-mix(in srgb, var(--bs-gray-300), #000 5%);
       }
 
       @include breakpoint(menu) {
@@ -421,7 +417,7 @@
     background-color: var(--bs-white);
     font-size: rem(18);
     font-weight: 500;
-    border-bottom: rem(1) solid var(--clr-light-gray-3);
+    border-bottom: rem(1) solid var(--bs-gray-400);
     display: block;
     padding: rem(10) rem(15);
     color: var(--bs-gray-dark);

@@ -3,7 +3,7 @@
 .Accordion {
   margin: 0 auto;
   padding: 0;
-  border: rem(1) solid var(--clr-light-gray-2);
+  border: rem(1) solid var(--bs-gray-300);
   width: 100%;
 
   h3 {
@@ -15,16 +15,16 @@
     border-color: hsl(216, 94%, 73%);
 
     h3 {
-      background-color: var(--clr-light-gray);
+      background-color: var(--bs-gray-100);
     }
   }
 
   > * + * {
-    border-top: rem(1) solid var(--clr-light-gray-2);
+    border-top: rem(1) solid var(--bs-gray-300);
   }
 
   &-trigger {
-    background-color: var(--clr-light-gray);
+    background-color: var(--bs-gray-100);
     color: var(--bs-gray-dark);
     display: block;
     font-size: rem(16);
@@ -38,7 +38,7 @@
 
     &:focus,
     &:hover {
-      background-color: color-mix(in srgb, var(--clr-light-gray), #000 3%);
+      background-color: color-mix(in srgb, var(--bs-gray-100), #000 3%);
     }
 
     &:focus .Accordion-title {

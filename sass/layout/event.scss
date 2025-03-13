@@ -10,7 +10,7 @@
     align-items: flex-start;
 
     &:not(:last-child) {
-      border-bottom: rem(1) solid var(--clr-light-gray);
+      border-bottom: rem(1) solid var(--bs-gray-100);
     }
   }
 

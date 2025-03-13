@@ -34,7 +34,7 @@
       display: block;
       width: 100%;
       font-size: rem(12);
-      background: var(--clr-light-gray);
+      background: var(--bs-gray-100);
       border-bottom: rem(4) solid transparent;
       font-weight: 700;
       text-transform: uppercase;
@@ -52,7 +52,7 @@
       &:visited {
         border-bottom: rem(4) solid var(--bs-primary);
         cursor: default;
-        background-color: var(--clr-light-gray-3);
+        background-color: var(--bs-gray-400);
       }
     }
 

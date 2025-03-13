@@ -1,49 +1,29 @@
 @use '../util' as *;
 
 :root {
-  --bs-navbar-toggler-icon-bg: url(
-    data:image/svg + xml,
-    %3csvgxmlns='http://www.w3.org/2000/svg'viewBox='0 0 30 30'%3e%3cpathstroke='rgba%28255, 255, 255, 0.55%29'stroke-linecap='round'stroke-miterlimit='10'stroke-width='2'd='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e
-  );
-
   // Colors
   --bs-primary: #c5050c;
   --bs-secondary: #777777;
-
-  // --clr-light-gray: #e8e8e8;
-  --clr-light-gray: #f1f1f1;
-  --clr-light-gray-2: #e1e1e1;
-  --clr-light-gray-3: #cacaca;
-  --clr-dark-gray: #818181;
-
-  --clr-off-white: #fefefe;
-  --clr-disabled: #727272;
-  --clr-info: #0dcaf0;
-
-  // --clr-apl-space-gray: #707070; // Apple Space Gray
-  // --clr-apl-silver: #c0c0c0; // Apple Silver
-  // --clr-apl-starlight: #faf7f2; // Apple Starlight
-  // --clr-apl-midnight: #343b43; // Apple Midnight
-
+  --bs-primary-rgb: 197, 5, 12;
+  --bs-secondary-rgb: 119, 119, 119;
   --clr-nav-hover: #ac040a;
 
   // Footer gradient
   --clr-gradient-end: #9a060a;
   --clr-gradient-start: #ae0309;
 
+  // --clr-apl-space-gray: #707070; // Apple Space Gray
+  // --clr-apl-silver: #c0c0c0; // Apple Silver
+  // --clr-apl-starlight: #faf7f2; // Apple Starlight
+  // --clr-apl-midnight: #343b43; // Apple Midnight
+
   // Font-family
-  --ff-sans: 'Red Hat Text', Helvetica, Arial, sans-serif;
-  --ff-mono: 'Red Hat Mono', Monaco, monospace;
+  --bs-font-sans-serif: 'Red Hat Text', Helvetica, Arial, sans-serif;
+  --bs-font-monospace: 'Red Hat Mono', Monaco, monospace;
   --ff-serif: 'Libre Baskerville', Cambria, Cochin, Georgia, serif;
   --ff-script: 'Dancing Script', cursive, serif;
 
   // Font-sizes
-  --fs-4xlarge: #{rem(61.04)};
-  --fs-3xlarge: #{rem(48.832)};
-  --fs-2xlarge: #{rem(39.06)};
-  --fs-xlarge: #{rem(31.25)};
-  --fs-large: #{rem(25)};
-  --fs-med: #{rem(19)};
   --fs-reg: #{rem(16)};
   --fs-small: #{rem(12.8)};
   --fs-xsmall: #{rem(10.24)};

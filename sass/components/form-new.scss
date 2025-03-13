@@ -3,7 +3,7 @@
 .form {
   &-control,
   &-select {
-    border-color: var(--clr-light-gray-3);
+    border-color: var(--bs-gray-400);
   }
 
   &-control {
@@ -28,7 +28,7 @@
   > .form {
     &-control,
     &-select {
-      border-color: var(--clr-light-gray-3);
+      border-color: var(--bs-gray-400);
     }
 
     &-control {

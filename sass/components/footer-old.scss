@@ -8,7 +8,7 @@
   display: block;
   margin-top: rem(20);
   padding: 0 0 rem(25);
-  background-color: var(--clr-light-gray);
+  background-color: var(--bs-gray-100);
   color: var(--bs-gray-dark);
 
   svg {
@@ -275,7 +275,7 @@
 .mail-list {
   background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png),
     linear-gradient(to top, rgba(202, 202, 202, 0.5), rgba(202, 202, 202, 0.8));
-  border-top: rem(1) solid color-mix(in srgb, var(--clr-light-gray-3), #000 10%);
+  border-top: rem(1) solid color-mix(in srgb, var(--bs-gray-400), #000 10%);
   padding: rem(30);
   margin-bottom: rem(35);
 

@@ -19,7 +19,7 @@
       }
 
       &:nth-child(2) {
-        background-color: var(--clr-dark-gray);
+        background-color: var(--bs-gray-600);
       }
 
       &:nth-child(3) {
@@ -37,7 +37,7 @@
   td,
   tfoot th {
     font-weight: 500;
-    background-color: var(--clr-light-gray-3);
+    background-color: var(--bs-gray-400);
   }
 
   tbody td:nth-of-type(1),

@@ -77,7 +77,7 @@
     margin-inline: auto;
 
     &-title {
-      color: var(--clr-light-gray);
+      color: var(--bs-gray-100);
       margin-top: rem(15);
       margin-bottom: rem(5);
       font-family: var(--ff-serif);
@@ -114,7 +114,7 @@
     &-link,
     &-link:link {
       position: relative;
-      color: var(--clr-light-gray-3);
+      color: var(--bs-gray-400);
       display: inline-block;
       font-size: rem(18);
       font-weight: 400;
@@ -169,7 +169,7 @@
       }
 
       @include breakpoint(small) {
-        color: var(--clr-light-gray-3);
+        color: var(--bs-gray-400);
         font-weight: normal;
       }
 
@@ -181,7 +181,7 @@
       &:hover,
       &:active,
       &:focus {
-        color: var(--clr-light-gray-3);
+        color: var(--bs-gray-400);
         text-decoration: none;
       }
 
@@ -197,7 +197,7 @@
     }
 
     address {
-      color: var(--clr-light-gray-3);
+      color: var(--bs-gray-400);
       font-size: rem(18);
       line-height: rem(36);
       margin-bottom: 0;
@@ -219,7 +219,7 @@
       height: auto;
 
       svg {
-        fill: var(--clr-light-gray-3);
+        fill: var(--bs-gray-400);
       }
     }
 
@@ -265,11 +265,11 @@
         rgba(19, 19, 19, 0.5) 100%
       );
 
-    color: var(--clr-light-gray-3);
+    color: var(--bs-gray-400);
     padding: rem(35) 0;
 
     a {
-      color: var(--clr-light-gray-3);
+      color: var(--bs-gray-400);
     }
 
     @include breakpoint(small) {
@@ -295,7 +295,7 @@
 
   li {
     display: inline-block;
-    color: var(--clr-light-gray-3);
+    color: var(--bs-gray-400);
     font-size: 1em;
     padding: 0;
   }
@@ -304,7 +304,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--clr-light-gray-3);
+    background-color: var(--bs-gray-400);
     border-radius: 50%;
     width: rem(40);
     height: rem(40);
@@ -343,7 +343,7 @@
 
 .payment-options {
   text-align: center;
-  color: var(--clr-light-gray-3);
+  color: var(--bs-gray-400);
 
   span {
     margin-bottom: rem(5);

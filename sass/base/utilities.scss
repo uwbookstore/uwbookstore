@@ -23,7 +23,7 @@
 }
 
 .b-l {
-  border-left: rem(1) solid var(--clr-light-gray-3);
+  border-left: rem(1) solid var(--bs-gray-400);
 }
 
 .external {
@@ -67,7 +67,7 @@
 
 .img-round-border {
   display: block;
-  border: rem(5) solid var(--clr-light-gray-2);
+  border: rem(5) solid var(--bs-gray-300);
   border-radius: 100%;
   height: rem(150);
   width: rem(150);

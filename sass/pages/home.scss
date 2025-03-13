@@ -138,7 +138,7 @@
 .giftcard {
   &__container {
     &-fluid {
-      background-color: var(--clr-light-gray-3);
+      background-color: var(--bs-gray-400);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -218,8 +218,8 @@
     .flex__item {
       font-size: rem(18);
       font-weight: 700;
-      color: var(--clr-dark-gray);
-      border-bottom: rem(2) solid var(--clr-dark-gray);
+      color: var(--bs-gray-600);
+      border-bottom: rem(2) solid var(--bs-gray-600);
       flex: 1 1 100%;
       text-transform: uppercase;
       padding-bottom: rem(20);
@@ -247,7 +247,7 @@
         padding-top: rem(5);
         padding-bottom: rem(5);
         margin-bottom: rem(5);
-        border-right: rem(2) solid var(--clr-dark-gray);
+        border-right: rem(2) solid var(--bs-gray-600);
         font-size: rem(14);
 
         &:last-child {
@@ -259,7 +259,7 @@
           font-size: rem(14);
           font-weight: normal;
           margin-bottom: 0;
-          color: var(--clr-dark-gray);
+          color: var(--bs-gray-600);
         }
       }
     }
@@ -273,7 +273,7 @@
 .holiday__shipping h2 {
   margin: 0 0 rem(20);
   padding: rem(10);
-  background: var(--clr-light-gray-2);
+  background: var(--bs-gray-300);
   font-size: rem(30);
   font-weight: 700;
   color: var(--bs-primary);

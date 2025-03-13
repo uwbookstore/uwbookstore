@@ -7,7 +7,7 @@ html {
 
 body {
   font-size: var(--fs-default-mobile);
-  font-family: var(--ff-sans);
+  font-family: var(--bs-font-sans-serif);
   font-weight: 400;
 
   @include breakpoint(medium) {
@@ -126,7 +126,7 @@ sub {
 
 blockquote,
 address.returns {
-  border-left: rem(5) solid var(--clr-light-gray-3);
+  border-left: rem(5) solid var(--bs-gray-400);
   padding: rem(5) rem(5) rem(5) rem(10);
   font-size: inherit;
   margin-left: rem(15);

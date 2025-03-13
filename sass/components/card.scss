@@ -5,8 +5,8 @@
   height: 100%;
 
   &__gray {
-    background-color: var(--clr-light-gray);
-    border: rem(1) solid color-mix(in srgb, var(--clr-light-gray), #000 5%);
+    background-color: var(--bs-gray-100);
+    border: rem(1) solid color-mix(in srgb, var(--bs-gray-100), #000 5%);
     margin-bottom: rem(20);
     padding: rem(20);
 
@@ -17,7 +17,7 @@
     }
 
     hr {
-      border-top-color: var(--clr-light-gray-3);
+      border-top-color: var(--bs-gray-400);
     }
   }
 
@@ -29,7 +29,7 @@
   }
 
   &__black {
-    background-color: color-mix(in srgb, var(--clr-light-gray), #000 8%);
+    background-color: color-mix(in srgb, var(--bs-gray-100), #000 8%);
     color: var(--bs-white);
     padding: rem(20);
   }

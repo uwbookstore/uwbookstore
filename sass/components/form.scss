@@ -28,7 +28,7 @@ select.form-control {
   background-position: right rem(5) center;
   background-size: rem(9) rem(6);
   background-repeat: no-repeat;
-  border: rem(2) solid var(--clr-light-gray-3);
+  border: rem(2) solid var(--bs-gray-400);
   width: 100%;
 
   @include breakpoint(medium) {

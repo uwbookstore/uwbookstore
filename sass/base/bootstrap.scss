@@ -12,7 +12,7 @@ hr {
   margin-top: rem(20);
   margin-bottom: rem(20);
   border: 0;
-  border-top: rem(1) solid var(--clr-light-gray-3);
+  border-top: rem(1) solid var(--bs-gray-400);
   height: 0;
   opacity: 1;
 }
@@ -31,8 +31,8 @@ select.form-control {
   }
 
   &-light {
-    background-color: var(--clr-light-gray);
-    border-color: color-mix(in srgb, var(--clr-light-gray), #000 10%);
+    background-color: var(--bs-gray-100);
+    border-color: color-mix(in srgb, var(--bs-gray-100), #000 10%);
   }
 }
 

@@ -5,7 +5,7 @@
   margin: rem(10) auto;
   text-align: center;
   padding-bottom: rem(15);
-  border-bottom: rem(1) solid var(--clr-light-gray-2);
+  border-bottom: rem(1) solid var(--bs-gray-300);
 
   @include breakpoint(medium) {
     position: relative;

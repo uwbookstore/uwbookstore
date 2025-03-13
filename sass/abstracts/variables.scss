@@ -9,16 +9,10 @@
   // Colors
   --bs-primary: #c5050c;
   --bs-secondary: #777777;
-
-  // --clr-light-gray: #e8e8e8;
-  --clr-light-gray: #f1f1f1;
-  --clr-light-gray-2: #e1e1e1;
-  --clr-light-gray-3: #cacaca;
-  --clr-dark-gray: #818181;
-
   --clr-off-white: #fefefe;
   --clr-disabled: #727272;
-  --clr-info: #0dcaf0;
+  --bs-primary-rgb: 197, 5, 12;
+  --bs-secondary-rgb: 119, 119, 119;
 
   // --clr-apl-space-gray: #707070; // Apple Space Gray
   // --clr-apl-silver: #c0c0c0; // Apple Silver
@@ -32,8 +26,8 @@
   --clr-gradient-start: #ae0309;
 
   // Font-family
-  --ff-sans: 'Red Hat Text', Helvetica, Arial, sans-serif;
-  --ff-mono: 'Red Hat Mono', Monaco, monospace;
+  --bs-font-sans-serif: 'Red Hat Text', Helvetica, Arial, sans-serif;
+  --bs-font-monospace: 'Red Hat Mono', Monaco, monospace;
   --ff-serif: 'Libre Baskerville', Cambria, Cochin, Georgia, serif;
   --ff-script: 'Dancing Script', cursive, serif;
 

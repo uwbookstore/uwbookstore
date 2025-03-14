@@ -6,12 +6,11 @@ html {
 }
 
 body {
-  font-size: var(--fs-default-mobile);
   font-family: var(--bs-font-sans-serif);
   font-weight: 400;
 
   @include breakpoint(medium) {
-    font-size: var(--fs-default);
+    font-size: var(--bs-body-font-size);
   }
 }
 

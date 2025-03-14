@@ -23,19 +23,9 @@
   --ff-serif: 'Libre Baskerville', Cambria, Cochin, Georgia, serif;
   --ff-script: 'Dancing Script', cursive, serif;
 
-  // Font-sizes
-  --fs-reg: #{rem(16)};
-  --fs-small: #{rem(12.8)};
-  --fs-xsmall: #{rem(10.24)};
-  --fs-default: var(--fs-reg);
-  --fs-default-mobile: var(--fs-med);
-
+  // Page width variables
   --page-max-width: #{rem(1320)};
   --page-max-width-large: #{rem(1400)};
-
-  // Flexbox gap/columns
-  --gap: 2rem;
-  --columns: 2;
 
   // Transition
   --transition: all 0.25s ease-in-out;

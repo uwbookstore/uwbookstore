@@ -1,5 +1,5 @@
 // SETUP BACK TO TOP BTN/FUNCTION
-const backToTopBtn = document.getElementById('backtotop');
+const backToTopBtn = document.querySelector('.backtotop');
 
 // Smooth scroll back to top
 function scrollToTop(e) {
@@ -13,9 +13,9 @@ function scrollToTop(e) {
 // Show/Hide Scroll to Top button
 window.onscroll = function () {
   if (scrollY >= 200) {
-    backToTopBtn.style.opacity = 1;
+    backToTopBtn.style.display = 'block';
   } else {
-    backToTopBtn.style.opacity = 0;
+    backToTopBtn.style.display = 'none';
   }
 };
 

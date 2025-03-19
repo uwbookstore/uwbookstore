@@ -120,6 +120,7 @@
     }
   }
 }
+
 // New Accessible Tabs
 .tabs {
   &-container {
@@ -149,6 +150,21 @@
 
       [aria-selected='true'] {
         //
+      }
+    }
+
+    &.locations {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: rem(10);
+        list-style: none;
+
+        li {
+          flex: 0 0 50%;
+          margin-bottom: rem(15);
+        }
       }
     }
   }

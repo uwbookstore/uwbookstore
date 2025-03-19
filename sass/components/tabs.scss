@@ -120,3 +120,36 @@
     }
   }
 }
+// New Accessible Tabs
+.tabs {
+  &-container {
+    font-size: rem(16);
+    // MERCH DETAIL
+    // ADDITIONAL INFO SECTION
+    &.additional-info {
+      // UL
+      ul,
+      [role='tablist'] {
+        display: table;
+        text-align: center;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+
+        a {
+          &:link,
+          &:visited {
+            display: block;
+            width: 100%;
+            font-size: rem(12);
+            background: var(--clr-light-gray);
+          }
+        }
+      }
+
+      [aria-selected='true'] {
+        //
+      }
+    }
+  }
+}

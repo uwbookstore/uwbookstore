@@ -1423,30 +1423,28 @@
 
       <div class="tabs-container locations">
 
-        <nav aria-labelledby="tabs-title">
-          <ul>
-            <li>
-              <a id="tab-1" class="btn btn-primary-outline" href="#711State">711 State Street</a>
-            </li>
-            <li>
-              <a id="tab-2" class="btn btn-primary-outline" href="#hilldale">Hilldale</a>
-            </li>
-            <li>
-              <a id="tab-3" class="btn btn-primary-outline" href="#hslc">Health Sciences</a>
-            </li>
-            <li>
-              <a id="tab-4" class="btn btn-primary-outline" href="#brookfield">Brookfield
-                Square</a>
-            </li>
-            <li>
-              <a id="tab-5" class="btn btn-primary-outline" href="#warehouse">Warehouse</a>
-            </li>
-          </ul>
-        </nav>
+        <ul class="tabs-nav" aria-labelledby="tabs-title">
+          <li>
+            <a id="tab-1" class="btn btn-primary-outline" href="#stateSt">711 State Street</a>
+          </li>
+          <li>
+            <a id="tab-2" class="btn btn-primary-outline" href="#hilldale">Hilldale</a>
+          </li>
+          <li>
+            <a id="tab-3" class="btn btn-primary-outline" href="#hslc">Health Sciences</a>
+          </li>
+          <li>
+            <a id="tab-4" class="btn btn-primary-outline" href="#brookfield">Brookfield
+              Square</a>
+          </li>
+          <li>
+            <a id="tab-5" class="btn btn-primary-outline" href="#warehouse">Warehouse</a>
+          </li>
+        </ul>
 
         <div class="tabs__panels">
 
-          <div id="711State" aria-labelledby="tab-1">
+          <div id="stateSt" aria-labelledby="tab-1">
             <div class="flex locations">
               <div class="locations__hours">
                 <h2>University Book Store</h2>
@@ -1956,7 +1954,7 @@
     <div class="tabs-container additional-info">
       <ul aria-labelledby="tabs-title">
         <li>
-          <a id="tab-1" href="#disco" aria-selected="true">
+          <a id="tab-1" href="#disco">
             <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Discontinued Item Policy
           </a>
         </li>
@@ -2112,6 +2110,7 @@
               href="https://www.uwbookstore.com/Contact">email</a> us, or call us toll free at 800-993-2665 ext. 5997.
           </p>
         </div>
+
 
         <div id="ratings" aria-labelledby="tab-4">
           <div id="itemRanking" class="itemRanking top10 col-12">
@@ -2347,9 +2346,7 @@
     </div>
 
     <div class="footer__copyright text-center">
-      <span class="copyright">
-        &copy; Copyright 2025 University Book Store | <a href="/Privacy" class="privacy" tabindex="0">Privacy Policy</a>
-      </span>
+      <span class="copyright"></span>
     </div>
   </footer>
 
@@ -2388,24 +2385,6 @@
       const dropdownItem = document.getElementById('dropdown-item');
       dropdownItem.classList.toggle('show');
     });
-
-
-    function fillInnerContent(el, text, type) {
-      const element = document.getElementById(el);
-      if (type === 'text') {
-        element !== null ? element.innerText = text : null
-      } else if (type === 'html') {
-        element.innerHTML = text
-      }
-      return null;
-    }
-
-    fillInnerContent('coupon-header', '10% OFF', 'text')
-    fillInnerContent('coupon-subhead', 'Your Entire Purchase!', 'text')
-    fillInnerContent('coupon-code', '434', 'text');
-    fillInnerContent('coupon-expiration', '6.30.25', 'text')
-
-
   </script>
 </body>
 

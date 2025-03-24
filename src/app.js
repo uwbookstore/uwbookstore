@@ -88,6 +88,30 @@ if (cart) {
 }
 // End of shopping cart button
 
+/*
+ * Handle login errors
+ * remove MBS default classes
+ * wrap in alert-danger
+ * if there is an SSO error,
+ * display custom message.
+ **/
+const loginMsg = document.querySelector('.lgMessage');
+if (loginMsg) {
+  loginMsg.classList.remove('red');
+  loginMsg.classList.add('alert', 'alert-danger', 'wi-50', 'mx-auto', 'px-1');
+  if (
+    loginMsg.innerText
+      .toLowerCase()
+      .includes("please use your school's single sign-on process to login.")
+  ) {
+    loginMsg.innerHTML = `
+          <em class="fa fa-exclamation-triangle"></em> &mdash; 
+          Please use your <a href="https://www.uwbookstore.com/login">UW Student Sign In</a>
+        `;
+  }
+}
+// End of login error handling
+
 /**
  * Update the coupon code & expiration date
  * for the various pages that use it
@@ -215,4 +239,42 @@ if (tabsContainer) {
     newTab.setAttribute('tabindex', '0');
     newTab.focus();
   }
+}
+// END ACCESSIBLE TABS
+
+/*
+ * fix various MBS classes
+ **/
+const shipsubmitBtn = document.getElementById('shipsubmit');
+if (shipsubmitBtn) {
+  shipsubmitBtn.classList.remove('btn-default');
+  shipsubmitBtn.classList.add('btn-primary');
+}
+
+const studentIDText = document.getElementById('studentIDText');
+const billingstudentNumberWrapper = document.getElementById(
+  'billingstudentNumberWrapper'
+);
+if (studentIDText) {
+  studentIDText.classList.add('alert', 'alert-danger', 'bold');
+
+  // find studentIDText parent element
+  const studentIDTextParent = studentIDText.parentElement;
+  studentIDTextParent.classList.remove('left5');
+}
+if (billingstudentNumberWrapper) {
+  billingstudentNumberWrapper.classList.add('alert', 'alert-danger', 'bold');
+}
+
+const studentNumberText = document.querySelector('.studentNumberText');
+if (studentNumberText) {
+  studentNumberText.classList.add('mt-1');
+}
+
+const custStudID = document.getElementById('custStudentID');
+if (custStudID) {
+  custStudID.setAttribute(
+    'placeholder',
+    '10 digit phone number or UW Student ID *'
+  );
 }

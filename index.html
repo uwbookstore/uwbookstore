@@ -5,35 +5,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>University Book Store</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="./css/bootstrap_v5_2.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/test files/bootstrap_v5_2_custom.css">
+  <link rel="stylesheet" href="./css/test files/MasterCSS.css">
+
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/jquery-ui.js"></script>
+  <script src="./js/jquery-migrate-1.4.1.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/tippy-bundle.umd.min.js"></script>
+  <script src="./js/bootstrap_v5_2.js"></script>
+  <script src="./js/Confirm.js"></script>
+  <script src="./js/MasterJS.js"></script>
+  <script src="./js/session-store.js"></script>
+
+  <meta name="theme-color" content="#c5050c">
+  <meta property="og:title" content="University Book Store" />
+  <meta property="og:site_name" content="University Book Store" />
+  <meta property="og:url" content="http://www.uwbookstore.com/" />
+  <meta property="og:image" content="https://i.univbkstr.com/v3/img/misc/og-img.jpg?v=121924" />
+  <meta property="og:type" content="ecommerce" />
+
   <link rel="icon" type="image/ico" href="https://i.univbkstr.com/favicon.ico?v=2" />
   <!-- add favicon and shortcut icon for IE -->
   <link rel="shortcut icon" type="image/ico" href="https://i.univbkstr.com/favicon.ico?v=2" />
   <meta name="format-detection" content="telephone=no" />
-  <meta property="og:image" content="https://i.univbkstr.com/v3/img/misc/og-img.jpg">
-  <link rel="stylesheet" href="./css/test files/bootstrap_v5_2_custom.css">
-  <link rel="stylesheet" href="./css/test files/MasterCSS.css">
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
   <link rel="stylesheet" type="text/css" href="https://i.univbkstr.com/v3/css/print.css" media="print">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
     rel="stylesheet">
-
-  <script src="./js/jquery.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"
-    integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"
-    type="text/javascript"></script>
-  <script src="./js/popper.min.js"></script>
-  <script src="./js/bootstrap_v5_2.js"></script>
 
   <style>
     section {
@@ -75,6 +84,12 @@
     .header__ubs--logo {
       padding: 0.625rem;
     }
+
+    @media print {
+      .donotprint {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 
@@ -91,10 +106,27 @@
     </div>
   </header>
 
+  <nav id="h_nav" Class="navbar navbar-expand-md bg-light" role="navigation">
+    <div Class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar"
+        aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle Navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a class="dropdown-item" href="https://www.uwbookstore.com/Login">Login</a></li>
+          <!-- <li><a class="dropdown-item" href="https://www.uwbookstore.com/Logout">Logout</a></li> -->
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
   <a href="#contentSection" tabindex="0" class="skip">Skip to main content</a>
 
   <header class="header__main">
-    <div class="backtotop">
+    <div class="backtotop donotprint">
       <a href="#" title="Back to top"><em class="fa fa-chevron-up" aria-hidden="true"></em></a>
     </div>
 
@@ -1406,8 +1438,14 @@
 
   </header>
 
+  <div id="Cart" class="btn btn-default btn-lg clear">
+    <span class="fa fa-shopping-cart"></span><span id="SpanCart">
+      <span id="Item-Count">Item Count: </span> <span id="ItemCount" class="Count">2</span></span><br><span
+      id="Sub-Total">Sub-Total: </span> <span id="SubTotal" class="count">$88.98</span>
+  </div>
 
   <main id="ContainDiv" class="container">
+
 
     <!-- <section class="empty-results text-center">
       <h1>
@@ -1616,10 +1654,12 @@
         </div>
       </div>
     </div> -->
+
     <section class="login">
       <div class="red lgMessage">
         Please use your school's single sign-on process to login.
       </div>
+      <p>This is the <a href="/" class="forgotPasswordLink">Forgot Password</a> link</p>
     </section>
 
     <section class="buttons">
@@ -1859,17 +1899,17 @@
     </div>
   </footer>
 
-  <script type="text/javascript" src="./js/merch-variables.js"></script>
+  <script>
+    var baseUrl = "https://med.uwbookstore.com/";
+    var subUrl = "www.uwbookstore.com";
+  </script>
   <script type="text/javascript" src="./src/app.js"></script>
   <script src="./src/menu.js"></script>
   <script type="text/javascript" src="https://i.univbkstr.com/v3/js/jquery.colorbox-min.js"></script>
 
   <script>
     $(document).ready(function () {
-      if ($(window).width() >= 768) {
-        $('.dropdown-toggle').unbind('focus');
-        $('.dropdown-toggle').unbind('click');
-      }
+
 
       $('.category__sidebar-toggle').click(function () {
         $(this).toggleClass('open');

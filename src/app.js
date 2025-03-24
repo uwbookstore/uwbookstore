@@ -88,30 +88,6 @@ if (cart) {
 }
 // End of shopping cart button
 
-/*
- * Handle login errors
- * remove MBS default classes
- * wrap in alert-danger
- * if there is an SSO error,
- * display custom message.
- **/
-const loginMsg = document.querySelector('.lgMessage');
-if (loginMsg) {
-  loginMsg.classList.remove('red');
-  loginMsg.classList.add('alert', 'alert-danger', 'wi-50', 'mx-auto', 'px-1');
-  if (
-    loginMsg.innerText
-      .toLowerCase()
-      .includes("please use your school's single sign-on process to login.")
-  ) {
-    loginMsg.innerHTML = `
-          <em class="fa fa-exclamation-triangle"></em> &mdash; 
-          Please use your <a href="https://www.uwbookstore.com/login">UW Student Sign In</a>
-        `;
-  }
-}
-// End of login error handling
-
 /**
  * Update the coupon code & expiration date
  * for the various pages that use it
@@ -278,3 +254,237 @@ if (custStudID) {
     '10 digit phone number or UW Student ID *'
   );
 }
+
+// Functions for the Monthly Coupons page
+const coupons = document.querySelectorAll('.coupons li');
+const couponSelect = document.querySelector('.select');
+const couponDeselect = document.querySelector('.deselect');
+const printCoupons = document.querySelector('#couponbook .print');
+
+if (coupons.length) {
+  coupons.forEach((coupon) => {
+    coupon.addEventListener('click', (e) => {
+      e.target.parentElement.parentElement.classList.toggle('print');
+    });
+  });
+
+  couponSelect.addEventListener('click', (e) => {
+    e.preventDefault();
+    coupons.forEach((coupon) => {
+      coupon.classList.add('print');
+    });
+  });
+
+  couponDeselect.addEventListener('click', (e) => {
+    e.preventDefault();
+    coupons.forEach((coupon) => {
+      coupon.classList.remove('print');
+    });
+  });
+
+  printCoupons.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.print();
+  });
+}
+
+/*
+ * Handle login errors
+ * remove MBS default classes
+ * wrap in alert-danger
+ * if there is an SSO error,
+ * display custom message.
+ **/
+const loginMsg = document.querySelector('.lgMessage');
+if (loginMsg) {
+  loginMsg.classList.remove('red');
+  loginMsg.classList.add('alert', 'alert-danger', 'mx-auto', 'px-1');
+  loginMsg.style.maxWidth = '600px';
+  if (
+    loginMsg.innerText
+      .toLowerCase()
+      .includes("please use your school's single sign-on process to login.")
+  ) {
+    loginMsg.innerHTML = `
+          <em class="fa fa-exclamation-triangle"></em> &mdash; 
+          Please use your <a href="https://www.uwbookstore.com/login">UW Student Sign In</a>
+        `;
+  }
+}
+// End of login error handling
+
+const myNavbar = document.querySelector('#myNavbar a');
+const loginContainer = document.getElementById('login');
+// const forgotPasswordLink = document.querySelector('.forgotPasswordLink');
+
+// if (forgotPasswordLink) {
+//   forgotPasswordLink.classList.add('btn', 'btn-text');
+// }
+
+if (
+  baseUrl === 'https://www.uwbookstore.com/' ||
+  baseUrl === 'http://127.0.0.1:8080/'
+) {
+  if (myNavbar.textContent.includes('Login')) {
+    loginContainer.innerHTML = `
+    <a href="https://www.uwbookstore.com/login" class="navbar__account">
+      <em class="fa fa-user" aria-hidden="true"></em>
+      <span>Login</span>
+    </a>
+  `;
+  } else {
+    loginContainer.innerHTML = `
+    <a href="https://www.uwbookstore.com/customeraccount?s=www.uwbookstore.com" class="navbar__account">
+      <em class="fa fa-user" aria-hidden="true"></em>
+      <span>Account</span>
+    </a>
+  `;
+  }
+} else if (baseUrl === 'https://med.uwbookstore.com/') {
+  if (myNavbar.textContent.includes('Login')) {
+    loginContainer.innerHTML = `
+    <a href="https://med.uwbookstore.com/login" class="navbar__account">
+      <em class="fa fa-user" aria-hidden="true"></em>
+      <span>Login</span>
+    </a>
+  `;
+  } else {
+    loginContainer.innerHTML = `
+    <a href="https://med.uwbookstore.com/customeraccount?s=med.uwbookstore.com" class="navbar__account">
+      <em class="fa fa-user" aria-hidden="true"></em>
+      <span>Account</span>
+    </a>
+  `;
+  }
+}
+
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+
+// TODO: test below to see if it's necessary
+addEventListenerIfExists('.dropdown-menu', 'click', (e) => {
+  e.stopPropagation();
+});
+// TODO: test above to see if it's necessary
+
+// Helper function to addEventHandlers
+function addEventListenerIfExists(elementId, eventType, callback) {
+  const element = document.querySelector(elementId);
+
+  if (element) {
+    element.addEventListener(eventType, callback);
+  }
+}
+
+/*
+ * Can't convert to vanilla JS due to jQuery dependency
+ * Coming from MBS 🤬
+ */
+$(document).ready(function () {
+  // Makes sure that only one dropdown is open at a time
+  if ($(window).width() >= 768) {
+    $('.dropdown-toggle').unbind('focus');
+    $('.dropdown-toggle').unbind('click');
+  }
+
+  // animate dropdown for submenus in navbar
+  $('.nav-title').on('click', function (e) {
+    const width = $(window).width();
+
+    if (width < 1169) {
+      $(this).next().slideToggle(500);
+      e.preventDefault();
+    }
+  });
+});
+
+/* TODO:
+ * Look into converting to vanilla JS
+ * down the road
+ **/
+// Additional Information Tabs
+$('ul.meganav__tabs-list').each(function () {
+  // For each set of tabs, we want to keep track of
+  // which tab is active and its associated content
+  let $active;
+  let $content;
+  const $links = $(this).find('a');
+
+  // If the location.hash matches one of the links, use that as the active tab.
+  // If no match is found, use the first link as the initial active tab.
+  $active = $(
+    $links.filter('[href="' + window.location.hash + '"]')[0] || $links[0]
+  );
+  $active.addClass('meganav__tabs--link-active');
+
+  $content = $($active[0].hash);
+
+  // Hide the remaining content
+  $links.not($active).each(function () {
+    $(this.hash).hide();
+  });
+
+  // Bind the click event handler
+  $(this).on('click', 'a.meganav__tabs--link', function (e) {
+    // Make the old tab inactive.
+    $active.removeClass('meganav__tabs--link-active');
+    $content.hide();
+
+    // Update the variables with the new link and content
+    $active = $(this);
+    $content = $(this.hash);
+
+    // Make the tab active.
+    $active.addClass('meganav__tabs--link-active');
+    $content.show();
+
+    // Prevent the anchor's default click action
+    e.preventDefault();
+  });
+});
+
+// TODO: look into below
+// $('.dropdown-toggle').click(function (e) {
+//   e.preventDefault();
+//   e.stopImmediatePropagation();
+//   if ($(this).parent().hasClass('open')) {
+//     $(this).parent().removeClass('open');
+//   } else {
+//     $('.has-megamenu, .dropdown').removeClass('open');
+//     $(this).parent().toggleClass('open');
+//   }
+// });
+
+// $('.modal-open2').click(function (e) {
+//   $('#buyback-confirm').modal();
+//   e.stopPropagation();
+// });
+
+// $('.inline').colorbox({ inline: true, width: '50%' });
+
+// $.urlParam = function (name) {
+//   const results = new RegExp('[?&]' + name + '=([^&#]*)').exec(
+//     window.location.href
+//   );
+//   return results[1] || 0;
+// };
+// TODO: look into above
+
+// FIXME:  Maybe leave below as jQuery for now
+// $('.banner__message').click(function () {
+//   $('#exclusions').slideToggle(500);
+//   if (!$('.navbar-toggle').hasClass('collapsed')) {
+//     $('.navbar-toggle').addClass('collapsed');
+//     $('.navbar-collapse.collapse').removeClass('in');
+//   }
+// });
+
+// May not be needed
+// $('.dropdown-toggle').off('focus');
+// $('.dropdown-toggle').off('click');
+// FIXME:  Maybe leave above as jQuery for now

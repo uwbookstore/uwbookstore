@@ -440,17 +440,40 @@ if (logoutPanel) {
 // Shopping cart page
 // Rewrite DOM - MBS default is ugly
 if (window.location.href.toLowerCase().search('/shoppingcart') !== -1) {
-  const cartHeader = document
-    .querySelector('.scHeader')
-    .parentElement()
-    .parentElement();
+  const cartHeader =
+    document.querySelector('.scHeader').parentElement.parentElement;
   const cartCardLeft = document.getElementById('cart-leftCard');
 
   if (document.querySelector('.validation-summary-errors')) {
     document.querySelector('.validation-summary-errors').style.display = 'none';
   }
 
+  // Show alerts to show user Promo information
+  const promoAlert = document.createElement('div');
+  promoAlert.classList.add('row');
+  promoAlert.innerHTML = `
+    <div class="col-md-6">
+      <div class="alert alert-success">
+        <div class="text-center bold"><em>NOTE:</em></div>
+        <div class="text-center">Promotional Discounts applied to items on your cart will not be viewable until
+          the end of
+          the
+          checkout process.</div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="alert alert-info">
+        <div class="text-center bold"><em>Do you have a Promo Code?</em></div>
+        <div class="text-center">You will be prompted for your Promo Code at checkout before entering your credit card
+          information.</div>
+      </div>
+    </div>
+  `;
+
   itemCount.textContent === '0' ? (cartHeader.style.display = 'none') : null;
+  itemCount.textContent >= '1'
+    ? cartCardLeft.parentElement.after(promoAlert)
+    : null;
 
   // Make the cart look a bit prettier when empty
   if (

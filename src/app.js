@@ -437,6 +437,57 @@ if (logoutPanel) {
   }
 }
 
+// Shopping cart page
+// Rewrite DOM - MBS default is ugly
+if (window.location.href.toLowerCase().search('/shoppingcart') !== -1) {
+  const cartHeader = document
+    .querySelector('.scHeader')
+    .parentElement()
+    .parentElement();
+  const cartCardLeft = document.getElementById('cart-leftCard');
+
+  if (document.querySelector('.validation-summary-errors')) {
+    document.querySelector('.validation-summary-errors').style.display = 'none';
+  }
+
+  itemCount.textContent === '0' ? (cartHeader.style.display = 'none') : null;
+
+  // Make the cart look a bit prettier when empty
+  if (
+    (itemCount.textContent === '0' &&
+      baseUrl === 'https://www.uwbookstore.com/') ||
+    (itemCount.textContent === '0' &&
+      baseUrl === 'https://insitestore2.mbsbooks.com/uwmadison/home')
+  ) {
+    cartCardLeft.innerHTML = `
+      <div class="cart__container"><i class="cart__icon fa fa-shopping-cart" aria-hidden="true"></i>
+        <p class="cart__p">Your shopping cart is empty.</p><a class="btn btn-primary cart__btn"
+          href="https://www.uwbookstore.com/home" title="Shop Clothing &amp; Gifts">Shop Clothing &amp; Gifts</a>
+        <div class="cart__account">
+          <p><a class="btn btn-text" href="https://www.uwbookstore.com/Customer-Help" title="Customer Help">Customer
+              Help</a>
+          </p><span class="phone">(608) 257-3784</span> or <span class="phone">(800) 993-2665</span>
+        </div>
+      </div>
+    `;
+  } else if (
+    itemCount.textContent === '0' &&
+    baseUrl === 'https://med.uwbookstore.com/'
+  ) {
+    cartCardLeft.innerHTML = `
+      <div class="cart__container"><i class="cart__icon fa fa-shopping-cart" aria-hidden="true"></i>
+        <p class="cart__p">Your shopping cart is empty.</p><a class="btn btn-primary cart__btn"
+          href="https://med.uwbookstore.com/home" title="Shop Clothing &amp; Gifts">Shop Clothing &amp; Gifts</a>
+        <div class="cart__account">
+          <p><a class="btn btn-text" href="https://med.uwbookstore.com/SiteText?id=62781" title="Customer Help">Customer
+              Help</a>
+          </p><span class="phone">(608) 257-3784</span> or <span class="phone">(800) 993-2665</span>
+        </div>
+      </div>
+    `;
+  }
+}
+
 /*********************************************************/
 /*********************************************************/
 /*********************************************************/

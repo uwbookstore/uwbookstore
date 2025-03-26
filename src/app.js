@@ -358,6 +358,35 @@ if (
   }
 }
 
+// Lost password form rewrite
+const lostPasswordPanelHeader = document.getElementById(
+  'lostPasswordPanelHeader'
+);
+const lostPasswordPanelBody = document.querySelector('#lostPasswordPanelBody');
+const lostPasswordPanelBodyCol = document.querySelector(
+  '#lostPasswordPanelBody [class^="col"]'
+);
+const lostPasswordPrevLink = document.querySelector(
+  '#lostPasswordPanelBody a.previousLink'
+);
+
+if (lostPasswordPanelHeader) {
+  console.log('this should work');
+  lostPasswordPanelHeader.textContent = 'Forgot Your Password?';
+}
+
+if (lostPasswordPanelBody) {
+  lostPasswordPanelBody.classList.add('text-center');
+}
+
+if (lostPasswordPrevLink) {
+  lostPasswordPrevLink.classList.add('btn', 'btn-outline-primary', 'mb-2');
+}
+
+if (lostPasswordPanelBodyCol) {
+  lostPasswordPanelBodyCol.removeAttribute('class');
+}
+
 /*********************************************************/
 /*********************************************************/
 /*********************************************************/

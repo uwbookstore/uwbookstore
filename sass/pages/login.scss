@@ -34,3 +34,17 @@
     }
   }
 }
+
+// Logout
+#logoutPanelHeader {
+  background-color: transparent;
+  padding: rem(20) rem(5) 0;
+  border-bottom: none;
+}
+
+#ordersPanelBody {
+  .oneOrder:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}

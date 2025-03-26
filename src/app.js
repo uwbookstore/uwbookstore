@@ -359,6 +359,7 @@ if (
 }
 
 // Lost password form rewrite
+// Rewrite DOM - MBS default is ugly
 const lostPasswordPanelHeader = document.getElementById(
   'lostPasswordPanelHeader'
 );
@@ -385,6 +386,55 @@ if (lostPasswordPrevLink) {
 
 if (lostPasswordPanelBodyCol) {
   lostPasswordPanelBodyCol.removeAttribute('class');
+}
+
+// Customer account page
+// Rewrite DOM - MBS default is ugly
+const accountUL = document.getElementById('accountUL');
+const accountULItems = document.querySelectorAll('#accountUL li.accountLI');
+if (accountUL) {
+  // Add Bootstrap list-group classes
+  accountUL.classList.add('list-group');
+  accountULItems.forEach((item) => {
+    item.classList.add('list-group-item');
+
+    if (item.textContent.toLowerCase().includes('track orders')) {
+      item.querySelector('a').textContent = 'Manage Orders';
+    }
+    if (
+      item.textContent.toLowerCase().includes('bookstore profile number') ||
+      item.textContent
+        .toLowerCase()
+        .includes('view loyalty account information')
+    ) {
+      item.style.display = 'none';
+    }
+  });
+}
+
+// Order history page
+// TODO: Refactor after testing
+
+// Logout page
+// Rewrite DOM - MBS default is ugly
+const logoutPanel = document.getElementById('logoutPanel');
+const logoutPanelHeader = document.getElementById('logoutPanelHeader');
+const logoutText = document.querySelector('#logoutPanelBody .logoutText');
+
+if (logoutPanel) {
+  logoutPanelHeader.innerHTML = `
+    <h1 class="heading__line-center"><span>You are now logged out</span></h1>
+  `;
+
+  if (baseUrl === 'https://www.uwbookstore.com/') {
+    logoutText.innerHTML = `
+      <div class="login__btns"><a href="https://www.uwbookstore.com/login" class="btn btn-secondary">Log Back In</a><a href="https://www.uwbookstore.com/home" class="btn btn-primary">UW Book Store</a></div>
+    `;
+  } else if (baseUrl === 'https://med.uwbookstore.com') {
+    logoutText.innerHTML = `
+      <div class="login__btns"><a href="https://med.uwbookstore.com/login" class="btn btn-secondary">Log Back In</a><a href="https://med.uwbookstore.com/home" class="btn btn-primary">Home</a></div>
+    `;
+  }
 }
 
 /*********************************************************/

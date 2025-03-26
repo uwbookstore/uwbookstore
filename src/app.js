@@ -511,6 +511,61 @@ if (window.location.href.toLowerCase().search('/shoppingcart') !== -1) {
   }
 }
 
+// THINGS THAT SHOULD BE IN THE FOOTER OF THE PAGE
+// Add Copyright date to footer
+const d = new Date();
+const year = d.getFullYear();
+const footerCopyright = document.querySelector(
+  '.footer__copyright span.copyright'
+);
+
+footerCopyright.innerHTML = `
+  &copy; Copyright ${year} University Book Store | <a href="/Privacy" class="privacy" tabindex="0">Privacy Policy</a>
+`;
+
+// TODO: Look at Order Details page
+/*
+  $(
+    '<div id="order-info" class="row"><div id="list-container" class="col-md-4"></div><div class="col-md-8"></div></div>'
+  ).insertAfter('h1#ordersHeader');
+  $('div#ordersPanel').detach().appendTo('div#order-info div.col-md-8');
+  $('div.orderPanel').detach().appendTo('div#order-info div.col-md-8');
+
+  $('div#list-container').html(
+    [
+      '<h2 class="textc">Customer Help</h2>',
+      '<div class="list-group">',
+      '<a href="https://www.uwbookstore.com/Customer-Help#faq" class="list-group-item textc">View our FAQ</a>',
+      '<a href="https://www.uwbookstore.com/Customer-Help#return" class="list-group-item textc">Return an order</a>',
+      '</div>',
+    ].join('\n')
+  );
+
+  if (!$('div#ordersPanelBody').has('div.oneOrder').length) {
+    $(
+      '<em>You have no orders.<br>If you are looking for a textbook order, please login at <a href="https://text.uwbookstore.com/login">text.uwbookstore.com</a></em>'
+    ).appendTo('div#ordersPanelBody');
+  }
+
+  if (window.location.href.search(/orderdetails/) !== -1) {
+    // const orderNum = $('#ordersHeader').text();
+    $(
+      `<a href="https://www.uwbookstore.com/Contact" class="list-group-item textc order_q">Question about this order?</a>`
+      // `<a href="https://www.uwbookstore.com/contact/?order_id=${orderNum}" class="list-group-item textc order_q">Question about this order?</a>`
+    ).appendTo('.list-group');
+  }
+    
+ * Vanilla JS version of MBS jQuery
+  document.addEventListener("DOMContentLoaded", function () {
+    const ordersPanel = document.querySelector("div#ordersPanel");
+    const targetContainer = document.querySelector("div#order-info div.col-md-8");
+
+    if (ordersPanel && targetContainer) {
+      targetContainer.appendChild(ordersPanel);
+    }
+  });  
+**/
+
 /*********************************************************/
 /*********************************************************/
 /*********************************************************/

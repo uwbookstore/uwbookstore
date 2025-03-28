@@ -44,7 +44,78 @@
 
 #ordersPanelBody {
   .oneOrder:last-child {
-    border-bottom: none;
+    border-bottom: none !important;
     margin-bottom: 0;
+  }
+}
+
+h1#ordersHeader.page-header {
+  font-size: rem(28);
+  margin-bottom: rem(10);
+}
+
+#order-info {
+  h2 {
+    font-size: rem(26);
+    margin-bottom: rem(10);
+    text-align: center;
+  }
+}
+
+// Order History
+#ordersPanelHeader.card-header p {
+  font-size: rem(16);
+}
+
+#order-info #list-container {
+  .list-group a {
+    position: relative;
+    color: var(--bs-gray-dark);
+    display: block;
+
+    display: inline-block;
+    padding-block: rem(15);
+    font-size: rem(18);
+    line-height: 1;
+    opacity: 0.75;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      border-bottom: rem(1) solid var(--bs-primary);
+      width: 0;
+      transition: var(--transition);
+    }
+
+    &::before {
+      right: 50%;
+    }
+
+    &::after {
+      left: 50%;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      width: 50%;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    &:focus-visible {
+      text-decoration: underline;
+    }
+
+    @include breakpoint(medium) {
+      padding-block: rem(10);
+      font-size: rem(16);
+    }
   }
 }

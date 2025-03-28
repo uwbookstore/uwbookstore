@@ -321,10 +321,7 @@ const loginContainer = document.getElementById('login');
 //   forgotPasswordLink.classList.add('btn', 'btn-text');
 // }
 
-if (
-  baseUrl === 'https://www.uwbookstore.com/' ||
-  baseUrl === 'http://127.0.0.1:8080/'
-) {
+if (baseUrl === 'https://www.uwbookstore.com/') {
   if (myNavbar.textContent.includes('Login')) {
     loginContainer.innerHTML = `
     <a href="https://www.uwbookstore.com/login" class="navbar__account">
@@ -351,6 +348,22 @@ if (
   } else {
     loginContainer.innerHTML = `
     <a href="https://med.uwbookstore.com/customeraccount?s=med.uwbookstore.com" class="navbar__account">
+      <em class="fa fa-user" aria-hidden="true"></em>
+      <span>Account</span>
+    </a>
+  `;
+  }
+} else if (baseUrl === 'https://text.uwbookstore.com/') {
+  if (myNavbar.textContent.includes('Login')) {
+    loginContainer.innerHTML = `
+    <a href="https://text.uwbookstore.com/login" class="navbar__account">
+      <em class="fa fa-user" aria-hidden="true"></em>
+      <span>Login</span>
+    </a>
+  `;
+  } else {
+    loginContainer.innerHTML = `
+    <a href="https://text.uwbookstore.com/customeraccount?s=text.uwbookstore.com" class="navbar__account">
       <em class="fa fa-user" aria-hidden="true"></em>
       <span>Account</span>
     </a>
@@ -434,6 +447,10 @@ if (logoutPanel) {
     logoutText.innerHTML = `
       <div class="login__btns"><a href="https://med.uwbookstore.com/login" class="btn btn-secondary">Log Back In</a><a href="https://med.uwbookstore.com/home" class="btn btn-primary">Home</a></div>
     `;
+  } else if (baseUrl === 'https://text.uwbookstore.com') {
+    logoutText.innerHTML = `
+      <div class="login__btns"><a href="https://text.uwbookstore.com/login" class="btn btn-secondary">Log Back In</a><a href="https://text.uwbookstore.com/home" class="btn btn-primary">Home</a></div>
+    `;
   }
 }
 
@@ -508,6 +525,21 @@ if (window.location.href.toLowerCase().search('/shoppingcart') !== -1) {
         </div>
       </div>
     `;
+  } else if (
+    itemCount.textContent === '0' &&
+    baseUrl === 'https://text.uwbookstore.com/'
+  ) {
+    cartCardLeft.innerHTML = `
+      <div class="cart__container"><i class="cart__icon fa fa-shopping-cart" aria-hidden="true"></i>
+        <p class="cart__p">Your shopping cart is empty.</p><a class="btn btn-primary cart__btn"
+          href="https://text.uwbookstore.com/home" title="Shop Clothing &amp; Gifts">Shop Clothing &amp; Gifts</a>
+        <div class="cart__account">
+          <p><a class="btn btn-text" href="https://text.uwbookstore.com/SiteText?id=62781" title="Customer Help">Customer
+              Help</a>
+          </p><span class="phone">(608) 257-3784</span> or <span class="phone">(800) 993-2665</span>
+        </div>
+      </div>
+    `;
   }
 }
 
@@ -519,52 +551,102 @@ const footerCopyright = document.querySelector(
   '.footer__copyright span.copyright'
 );
 
-footerCopyright.innerHTML = `
+footerCopyright
+  ? (footerCopyright.innerHTML = `
   &copy; Copyright ${year} University Book Store | <a href="/Privacy" class="privacy" tabindex="0">Privacy Policy</a>
-`;
+`)
+  : null;
 
 // TODO: Look at Order Details page
-/*
-  $(
-    '<div id="order-info" class="row"><div id="list-container" class="col-md-4"></div><div class="col-md-8"></div></div>'
-  ).insertAfter('h1#ordersHeader');
-  $('div#ordersPanel').detach().appendTo('div#order-info div.col-md-8');
-  $('div.orderPanel').detach().appendTo('div#order-info div.col-md-8');
+// Create the order info div and insert after h1#ordersHeader
+const orderInfo = document.createElement('div');
+orderInfo.id = 'order-info';
+orderInfo.className = 'row';
+orderInfo.innerHTML = `
+  <div id="list-container" class="col-md-4"></div><div class="col-md-8"></div>
+`;
 
-  $('div#list-container').html(
-    [
-      '<h2 class="textc">Customer Help</h2>',
-      '<div class="list-group">',
-      '<a href="https://www.uwbookstore.com/Customer-Help#faq" class="list-group-item textc">View our FAQ</a>',
-      '<a href="https://www.uwbookstore.com/Customer-Help#return" class="list-group-item textc">Return an order</a>',
-      '</div>',
-    ].join('\n')
-  );
+const ordersHeader = document.querySelector('h1#ordersHeader');
+if (ordersHeader) {
+  ordersHeader.insertAdjacentElement('afterend', orderInfo);
+}
 
-  if (!$('div#ordersPanelBody').has('div.oneOrder').length) {
-    $(
-      '<em>You have no orders.<br>If you are looking for a textbook order, please login at <a href="https://text.uwbookstore.com/login">text.uwbookstore.com</a></em>'
-    ).appendTo('div#ordersPanelBody');
+// Move div#ordersPanel into div#order-info div.col-md-8
+const ordersPanel = document.querySelector('div#ordersPanel');
+const colMd8 = document.querySelector('div#order-info div.col-md-8');
+if (ordersPanel && colMd8) {
+  colMd8.appendChild(ordersPanel);
+}
+
+// Move div.orderPanel into div#order-info div.col-md-8
+document.querySelectorAll('div.orderPanel').forEach((orderPanel) => {
+  if (colMd8) {
+    colMd8.appendChild(orderPanel);
   }
+});
 
-  if (window.location.href.search(/orderdetails/) !== -1) {
-    // const orderNum = $('#ordersHeader').text();
-    $(
-      `<a href="https://www.uwbookstore.com/Contact" class="list-group-item textc order_q">Question about this order?</a>`
-      // `<a href="https://www.uwbookstore.com/contact/?order_id=${orderNum}" class="list-group-item textc order_q">Question about this order?</a>`
-    ).appendTo('.list-group');
+// Set inner HTML for div#list-container
+const listContainer = document.querySelector('div#list-container');
+if (listContainer) {
+  if (
+    baseUrl === 'https://www.uwbookstore.com/' ||
+    baseUrl === 'https://insitestore2.mbsbooks.com/uwmadison/' ||
+    baseUrl === 'http://127.0.0.1:8080/'
+  ) {
+    listContainer.innerHTML = `
+    <h2>Customer Help</h2>
+    <div class="list-group">
+      <a href="https://www.uwbookstore.com/Customer-Help#faq" class="list-group-item textc">View our FAQ</a>
+      <a href="https://www.uwbookstore.com/Customer-Help#return" class="list-group-item textc">Return an order</a>
+    </div>  
+  `;
+  } else if (baseUrl === 'https://med.uwbookstore.com/') {
+    listContainer.innerHTML = `
+    <h2>Customer Help</h2>
+    <div class="list-group">
+      <a href="https://med.uwbookstore.com/SiteText?id=62781#faq" class="list-group-item textc">View our FAQ</a>
+      <a href="https://med.uwbookstore.com/SiteText?id=62781#return" class="list-group-item textc">Return an order</a>
+    </div>  
+  `;
+  } else if (baseUrl === 'https://text.uwbookstore.com/') {
+    listContainer.innerHTML = `
+    <h2>Customer Help</h2>
+    <div class="list-group">
+      <a href="https://text.uwbookstore.com/SiteText?id=2369#faq" class="list-group-item textc">View our FAQ</a>
+      <a href="https://text.uwbookstore.com/SiteText?id=2369#return" class="list-group-item textc">Return an order</a>
+    </div>  
+  `;
   }
-    
- * Vanilla JS version of MBS jQuery
-  document.addEventListener("DOMContentLoaded", function () {
-    const ordersPanel = document.querySelector("div#ordersPanel");
-    const targetContainer = document.querySelector("div#order-info div.col-md-8");
+}
 
-    if (ordersPanel && targetContainer) {
-      targetContainer.appendChild(ordersPanel);
-    }
-  });  
-**/
+// Check if div#ordersPanelBody contains div.oneOrder
+const ordersPanelBody = document.querySelector('div#ordersPanelBody');
+if (ordersPanelBody && !ordersPanelBody.querySelector('div.oneOrder')) {
+  const noOrdersMessage = document.createElement('em');
+  noOrdersMessage.innerHTML = `You have no orders.<br>If you are looking for a textbook order, please login at <a href="https://text.uwbookstore.com/login">text.uwbookstore.com</a>`;
+  ordersPanelBody.appendChild(noOrdersMessage);
+}
+
+// If the URL contains "orderdetails", append a question link
+if (window.location.href.includes('orderdetails')) {
+  const questionLink = document.createElement('a');
+  const logoutLink = document.querySelector('.logoutLink');
+  logoutLink.style.display = 'none';
+  if (baseUrl === 'https://www.uwbookstore.com/') {
+    questionLink.href = 'https://www.uwbookstore.com/Contact';
+  } else if (baseUrl === 'https://med.uwbookstore.com/') {
+    questionLink.href = 'https://med.uwbookstore.com/Contact';
+  } else if (baseUrl === 'https://text.uwbookstore.com/') {
+    questionLink.href = 'https://text.uwbookstore.com/Contact';
+  }
+  questionLink.className = 'list-group-item textc order_q';
+  questionLink.textContent = 'Question about this order?';
+
+  const listGroup = document.querySelector('.list-group');
+  if (listGroup) {
+    listGroup.appendChild(questionLink);
+  }
+}
 
 /*********************************************************/
 /*********************************************************/

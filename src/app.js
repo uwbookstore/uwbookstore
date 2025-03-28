@@ -389,10 +389,15 @@ $(document).ready(function () {
 
   if (window.location.href.search(/orderdetails/) !== -1) {
     // const orderNum = $('#ordersHeader').text();
-    $(
-      `<a href="https://www.uwbookstore.com/Contact" class="list-group-item textc order_q">Question about this order?</a>`
-      // `<a href="https://www.uwbookstore.com/contact/?order_id=${orderNum}" class="list-group-item textc order_q">Question about this order?</a>`
-    ).appendTo('.list-group');
+    if (baseUrl === 'https://www.uwbookstore.com/') {
+      $(
+        `<a href="https://www.uwbookstore.com/Contact" class="list-group-item textc order_q">Question about this order?</a>`
+      ).appendTo('.list-group');
+    } else if (baseUrl === 'https://text.uwbookstore.com/') {
+      $(
+        `<a href="https://text.uwbookstore.com/Contact" class="list-group-item textc order_q">Question about this order?</a>`
+      ).appendTo('.list-group');
+    }
   }
 
   if (baseUrl === 'https://www.uwbookstore.com/') {

@@ -192,11 +192,12 @@
         right: rem(10);
         content: '\f078';
         display: block;
+        transition: var(--transition);
       }
 
       &.open {
         &::after {
-          top: 0;
+          top: 25%;
           transform: rotate(180deg);
         }
       }
@@ -205,6 +206,57 @@
       &:active,
       &:focus {
         opacity: 1;
+      }
+    }
+
+    &-link {
+      position: relative;
+      color: var(--bs-gray-dark);
+      display: block;
+
+      display: inline-block;
+      padding-block: rem(15);
+      font-size: rem(18);
+      line-height: 1;
+      opacity: 0.75;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        border-bottom: rem(1) solid var(--bs-primary);
+        width: 0;
+        transition: var(--transition);
+      }
+
+      &::before {
+        right: 50%;
+      }
+
+      &::after {
+        left: 50%;
+      }
+
+      &:hover::before,
+      &:hover::after {
+        width: 50%;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
+        opacity: 1;
+      }
+
+      &:focus-visible {
+        text-decoration: underline;
+      }
+
+      @include breakpoint(medium) {
+        padding-block: rem(10);
+        font-size: rem(16);
       }
     }
 
@@ -217,57 +269,6 @@
         display: none;
         margin: 0;
         padding: 0;
-      }
-
-      a {
-        position: relative;
-        color: var(--bs-gray-dark);
-        display: block;
-
-        display: inline-block;
-        padding-block: rem(15);
-        font-size: rem(18);
-        line-height: 1;
-        opacity: 0.75;
-
-        &::before,
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          border-bottom: rem(1) solid var(--bs-primary);
-          width: 0;
-          transition: var(--transition);
-        }
-
-        &::before {
-          right: 50%;
-        }
-
-        &::after {
-          left: 50%;
-        }
-
-        &:hover::before,
-        &:hover::after {
-          width: 50%;
-        }
-
-        &:hover,
-        &:active,
-        &:focus {
-          text-decoration: none;
-          opacity: 1;
-        }
-
-        &:focus-visible {
-          text-decoration: underline;
-        }
-
-        @include breakpoint(medium) {
-          padding-block: rem(10);
-          font-size: rem(16);
-        }
       }
     }
   }
@@ -344,5 +345,28 @@
         flex: 0 0 30%;
       }
     }
+  }
+}
+
+.category__link-single {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: rem(18);
+  width: 100%;
+  text-align: left;
+  opacity: 0.75;
+  padding-block: rem(8);
+  transition: var(--transition);
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 1;
+  }
+
+  a {
+    color: var(--bs-gray-dark);
+    text-decoration: none;
   }
 }

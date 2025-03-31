@@ -497,7 +497,7 @@ if (window.location.href.toLowerCase().search('/shoppingcart') !== -1) {
     (itemCount.textContent === '0' &&
       baseUrl === 'https://www.uwbookstore.com/') ||
     (itemCount.textContent === '0' &&
-      baseUrl === 'https://insitestore2.mbsbooks.com/uwmadison/home')
+      baseUrl === 'https://insitestore2.mbsbooks.com/uwmadison/')
   ) {
     cartCardLeft.innerHTML = `
       <div class="cart__container"><i class="cart__icon fa fa-shopping-cart" aria-hidden="true"></i>
@@ -546,14 +546,14 @@ if (window.location.href.toLowerCase().search('/shoppingcart') !== -1) {
 // THINGS THAT SHOULD BE IN THE FOOTER OF THE PAGE
 // Add Copyright date to footer
 const d = new Date();
-const year = d.getFullYear();
+const copyYear = d.getFullYear();
 const footerCopyright = document.querySelector(
   '.footer__copyright span.copyright'
 );
 
 footerCopyright
   ? (footerCopyright.innerHTML = `
-  &copy; Copyright ${year} University Book Store | <a href="/Privacy" class="privacy" tabindex="0">Privacy Policy</a>
+  &copy; Copyright ${copyYear} University Book Store | <a href="/Privacy" class="privacy" tabindex="0">Privacy Policy</a>
 `)
   : null;
 

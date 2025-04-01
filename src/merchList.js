@@ -294,6 +294,13 @@ $(document).ready(function () {
     ).insertBefore('.merch__filter');
   }
 
+  if (categoryTitle.toLowerCase().substring(0, 11) === 'cheeseheads') {
+    $(
+      `<img alt="" role="presentation" src="https://i.univbkstr.com/v3/img/banners/aprilFools.jpg" class="img-fluid">
+      <span class="sr-only">FRIER IS OUT! Cheese curd shirts = devoured. Cheese hat = still on the menu! GET YOUR CHEESE GEAR TODAY CHEESE CURDS EXPIRED APRIL 1, 2025 (April Fool's Badgers!)</span>`
+    ).insertBefore('.merch__filter');
+  }
+
   if (categoryTitle.toLowerCase().substring(0, 16) === 'touchdown monday') {
     $(
       `

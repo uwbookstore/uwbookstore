@@ -443,11 +443,11 @@ if (logoutPanel) {
     logoutText.innerHTML = `
       <div class="login__btns"><a href="https://www.uwbookstore.com/login" class="btn btn-secondary">Log Back In</a><a href="https://www.uwbookstore.com/home" class="btn btn-primary">UW Book Store</a></div>
     `;
-  } else if (baseUrl === 'https://med.uwbookstore.com') {
+  } else if (baseUrl === 'https://med.uwbookstore.com/') {
     logoutText.innerHTML = `
       <div class="login__btns"><a href="https://med.uwbookstore.com/login" class="btn btn-secondary">Log Back In</a><a href="https://med.uwbookstore.com/home" class="btn btn-primary">Home</a></div>
     `;
-  } else if (baseUrl === 'https://text.uwbookstore.com') {
+  } else if (baseUrl === 'https://text.uwbookstore.com/') {
     logoutText.innerHTML = `
       <div class="login__btns"><a href="https://text.uwbookstore.com/login" class="btn btn-secondary">Log Back In</a><a href="https://text.uwbookstore.com/home" class="btn btn-primary">Home</a></div>
     `;
@@ -630,8 +630,8 @@ if (ordersPanelBody && !ordersPanelBody.querySelector('div.oneOrder')) {
 // If the URL contains "orderdetails", append a question link
 if (window.location.href.includes('orderdetails')) {
   const questionLink = document.createElement('a');
-  const logoutLink = document.querySelector('.logoutLink');
-  logoutLink.style.display = 'none';
+  // const logoutLink = document.querySelector('.logoutLink');
+  // logoutLink.style.display = 'none';
   if (baseUrl === 'https://www.uwbookstore.com/') {
     questionLink.href = 'https://www.uwbookstore.com/Contact';
   } else if (baseUrl === 'https://med.uwbookstore.com/') {

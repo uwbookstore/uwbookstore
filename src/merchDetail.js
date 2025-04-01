@@ -545,7 +545,7 @@ $(document).ready(function () {
     prodName.substring(0, 6) === 'Legacy'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/legacy" class="merch__detail-size-link gtmSizeTrack mb-2" style="font-size: 1.6rem; display: inline-block; text-transform: none;" title="Legacy Size Guide">Legacy Hat Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/legacy" class="merch__detail-size-link gtmSizeTrack mb-2" style="font-size: 0.875rem; display: inline-block; text-transform: none;" title="Legacy Size Guide">Legacy Hat Size Guide</a>'
     ).appendTo('div#merch-info');
   } else if (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) {
     $(

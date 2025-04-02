@@ -52,7 +52,7 @@ $(document).ready(function () {
     }
   } else
     'new arrivals' === categoryTitle.toLowerCase() &&
-      (('https://insitestore2.mbsbooks.com/uwmadison/home' !== baseUrl &&
+      (('https://insitestore2.mbsbooks.com/uwmadison/' !== baseUrl &&
         'https://www.uwbookstore.com/' !== baseUrl &&
         'https://www.uwalumnistore.com/' !== baseUrl) ||
         ($('.noListItems').length &&
@@ -259,6 +259,21 @@ $(document).ready(function () {
     $(
       '<div class="alert alert-warning"><p style="text-align: center; margin: 0; font-size: 20px;"><em>Note</em> - All books sold in packs of five &mdash; price listed is for five books.</p></div>'
     ).insertAfter('.merch__filter');
+  }
+
+  if (
+    'new arrivals' === categoryTitle.toLowerCase() &&
+    baseUrl === 'https://www.uwbookstore.com/'
+  ) {
+    $(
+      `
+      <div class="text-center">
+        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/New-Items" class="btn btn-primary">
+          Back in Stock Items
+        </a>
+      </div>
+    `
+    ).insertAfter('#merch__filter');
   }
 
   if (categoryTitle.toLowerCase().substring(0, 6) === 'am fam') {

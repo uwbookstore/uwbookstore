@@ -5,6 +5,15 @@ const itemImage = document.querySelectorAll('.merchImage');
 const productName = document.querySelectorAll('p.merchTitle');
 const searchCatWrapRow = document.querySelector('.searchCatWrap').parentElement;
 const noListItems = document.querySelector('.noListItems');
+const filterSelectionsRow =
+  document.querySelector('.filterSelections').parentElement;
+const merchSortBy = document.querySelector('select.merchSortBy');
+const filterColumn = document.querySelector('.filterColumn');
+const merchItem = document.querySelectorAll('.merchItem');
+const merchColumn = document.querySelector('.merchColumn');
+const merchResultsSelect = document.querySelector('select.merchResultsSelect');
+const pagination = document.querySelector('ul.pagination');
+const pageItems = document.querySelector('.pagination li');
 
 // Create new div for no items found
 const noResults = document.createElement('div');
@@ -101,10 +110,6 @@ if (window.location.href.toLowerCase().search(/merchlist/) !== -1) {
     <label style="display: block;">Sort By</label>  
   `;
 
-  const merchSortBy = document.querySelector('select.merchSortBy');
-  const merchResultsSelect = document.querySelector(
-    'select.merchResultsSelect'
-  );
   sortBy.appendChild(merchSortBy);
   merchFilterWrap.appendChild(sortBy);
 
@@ -118,19 +123,7 @@ if (window.location.href.toLowerCase().search(/merchlist/) !== -1) {
   merchFilterWrap.appendChild(shoppingCartBtn);
 
   // SELECT ELEMENT TO ADD HEADER WRAPPER AFTER
-  const filterColumn = document.querySelector('.filterColumn');
   filterColumn.after(merchFilterWrap);
-
-  // HANDLE RESULTS PAGINATION
-  const pagination = document.querySelector('ul.pagination');
-  const pageItems = document.querySelector('.pagination li');
-
-  pageItems.length === 1 ? (pagination.style.display = 'none') : null;
-  pageItems.length === 1 ? (merchResultsSelect.style.display = 'none') : null;
-
-  // const paginationBtm = document.getElementById('pagination-btm');
-  // paginationBtm.appendChild(pagination);
-  // paginationBtm.appendChild(merchResultsSelect);
 
   // REPLACE MBS's NO IMAGE AVAILABLE GIF
   itemImage.forEach((image) => {
@@ -143,10 +136,114 @@ if (window.location.href.toLowerCase().search(/merchlist/) !== -1) {
     }
   });
 
-  const merchItem = document.querySelectorAll('.merchItem');
   merchItem.forEach((item) => {
     item.className = '';
     item.classList.add('merch__card-item');
+  });
+
+  // CREATE THE PRODUCTS WRAPPER - merch__card
+  const merchCard = document.createElement('div');
+  merchCard.id = 'merch__card';
+
+  merchFilterWrap.after(merchCard);
+
+  merchColumn.classList.add('flex', 'merch__card');
+  merchCard.appendChild(merchColumn);
+
+  // HANDLE RESULTS PAGINATION
+  pageItems.length === 1 ? (pagination.style.display = 'none') : null;
+  pageItems.length === 1 ? (merchResultsSelect.style.display = 'none') : null;
+
+  merchResultsSelect.classList.remove(
+    'wauto',
+    'displayib',
+    'right5',
+    'bottom10'
+  );
+  merchResultsSelect.classList.add('mx-auto');
+
+  const paginationBtm = document.createElement('div');
+  paginationBtm.id = 'pagination-btm';
+  paginationBtm.className = 'text-center';
+  paginationBtm.appendChild(pagination);
+  paginationBtm.appendChild(merchResultsSelect);
+
+  merchCard.after(paginationBtm);
+  filterSelectionsRow.style.display = 'none';
+
+  // ADD BANNERS/MESSAGES TO CERTAIN PAGES
+  // create container for banner/message
+  const pageBanner = document.createElement('div');
+
+  // FOR SCANDINAVIAN STUDIES
+  if (
+    categoryTitle.textContent.toLowerCase().substring(0, 12) === 'scandinavian'
+  ) {
+    pageBanner.classList.add('alert', 'alert-warning');
+    pageBanner.innerHTML = `
+      <p style="text-align: center; margin: 0; font-size: 20px;">
+        <em>Note</em> - All books sold in packs of five &mdash; price listed is for five books.
+      </p>    
+    `;
+    merchFilterWrap.after(pageBanner);
+  }
+
+  // FOR NEW ARRIVALS
+  if (categoryTitle.textContent.toLowerCase() === 'new arrivals') {
+    pageBanner.classList.add('text-center');
+    pageBanner.innerHTML = `
+    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/New-Items" class="btn btn-primary">
+    Back in Stock Items
+    </a>
+    `;
+    merchFilterWrap.after(pageBanner);
+  }
+
+  // FOR AM FAM CHAMPIONSHIP ITEMS
+  if (categoryTitle.textContent.toLowerCase().substring(0, 6) === 'am fam') {
+    pageBanner.innerHTML = `
+      <img src="https://i.univbkstr.com/v3/img/landing/merch/AmFamGolf.png" class="img-fluid img__center" alt="AmFam Championship. Official Merchandise Partner of the American Family Insurance Championship.">   
+    `;
+    filterColumn.after(pageBanner);
+  }
+
+  // FOR JULIA GASH ITEMS
+  if (
+    categoryTitle.textContent.toLowerCase().substring(0, 10) === 'julia gash'
+  ) {
+    pageBanner.innerHTML = `
+      <img alt="Julia Gash" src="https://i.univbkstr.com/v3/img/banners/JuliaGash.png" class="img-fluid">
+    `;
+    filterColumn.after(pageBanner);
+  }
+
+  // SPECIAL PRICING NOTE FOR ELECTRONICS
+  if (
+    categoryTitle.textContent.toLowerCase().substring(0, 7) === 'macbook' ||
+    categoryTitle.textContent.toLowerCase().substring(0, 11) ===
+      'dell laptop' ||
+    categoryTitle.textContent.toLowerCase().substring(0, 4) === 'ipad' ||
+    categoryTitle.textContent.toLowerCase().substring(0, 6) === 'laptop'
+  ) {
+    pageBanner.classList.add('alert', 'alert-info', 'text-center');
+    pageBanner.innerHTML = `
+        <p class="mb-0"><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p>
+      `;
+    merchFilterWrap.after(pageBanner);
+  }
+
+  // ADD BACK IN STOCK BADGE TO ITEMS WITH ^ IN PRODUCTNAME
+  productName.forEach((item) => {
+    const name = item.textContent;
+
+    if (name.includes('^')) {
+      const restockBadge = document.createElement('div');
+      restockBadge.className = 'restockBadge';
+      restockBadge.textContent = 'Back in Stock!';
+
+      const merchLink = item.closest('.merchDetailWrapper .merchLink');
+      merchLink.prepend(restockBadge);
+    }
   });
 } // END OF MERCHLIST IF STATEMENT
 

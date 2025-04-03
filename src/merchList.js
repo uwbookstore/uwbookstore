@@ -52,7 +52,7 @@ $(document).ready(function () {
     }
   } else
     'new arrivals' === categoryTitle.toLowerCase() &&
-      (('https://insitestore2.mbsbooks.com/uwmadison/home' !== baseUrl &&
+      (('https://insitestore2.mbsbooks.com/uwmadison/' !== baseUrl &&
         'https://www.uwbookstore.com/' !== baseUrl &&
         'https://www.uwalumnistore.com/' !== baseUrl) ||
         ($('.noListItems').length &&
@@ -261,6 +261,21 @@ $(document).ready(function () {
     ).insertAfter('.merch__filter');
   }
 
+  if (
+    'new arrivals' === categoryTitle.toLowerCase() &&
+    baseUrl === 'https://www.uwbookstore.com/'
+  ) {
+    $(
+      `
+      <div class="text-center">
+        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/New-Items" class="btn btn-primary">
+          Back in Stock Items
+        </a>
+      </div>
+    `
+    ).insertAfter('#merch__filter');
+  }
+
   if (categoryTitle.toLowerCase().substring(0, 6) === 'am fam') {
     $(
       '<img src="https://i.univbkstr.com/v3/img/landing/merch/AmFamGolf.png" class="img-fluid img__center" alt="AmFam Championship. Official Merchandise Partner of the American Family Insurance Championship.">'
@@ -291,13 +306,6 @@ $(document).ready(function () {
   if (categoryTitle.toLowerCase().substring(0, 10) === 'julia gash') {
     $(
       '<img alt="Julia Gash" src="https://i.univbkstr.com/v3/img/banners/JuliaGash.png" class="img-fluid">'
-    ).insertBefore('.merch__filter');
-  }
-
-  if (categoryTitle.toLowerCase().substring(0, 11) === 'cheeseheads') {
-    $(
-      `<img alt="" role="presentation" src="https://i.univbkstr.com/v3/img/banners/aprilFools.jpg" class="img-fluid">
-      <span class="sr-only">FRIER IS OUT! Cheese curd shirts = devoured. Cheese hat = still on the menu! GET YOUR CHEESE GEAR TODAY CHEESE CURDS EXPIRED APRIL 1, 2025 (April Fool's Badgers!)</span>`
     ).insertBefore('.merch__filter');
   }
 

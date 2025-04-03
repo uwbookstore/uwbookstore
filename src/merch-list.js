@@ -64,21 +64,73 @@ if (window.location.href.toLowerCase().search(/merchlist/) !== -1) {
     categoryTitle.textContent.toLowerCase().substring(0, 14) ===
     'dept. of comp.'
   ) {
-    categoryTitle = 'Department of Computer Science';
+    categoryTitle.textContent = 'Department of Computer Science';
     document.title = 'Department of Computer Science';
   } else if (
     categoryTitle.textContent.toLowerCase().substring(0, 18) ===
     'college of l and s'
   ) {
-    categoryTitle = 'College of Letters and Science';
+    categoryTitle.textContent = 'College of Letters and Science';
     document.title = 'College of Letters and Science';
   } else if (
     categoryTitle.textContent.toLowerCase().substring(0, 23) ===
     'dept of medical physics'
   ) {
-    categoryTitle = 'Department of Medical Physics';
+    categoryTitle.textContent = 'Department of Medical Physics';
     document.title = 'Department of Medical Physics';
   }
+
+  // HIDE SEARCHCATWRAP PARENT
+  searchCatWrapRow.style.display = 'none';
+
+  // CREATE HEADER WRAPPER DIV, ADD CLASS & ID
+  const merchFilterWrap = document.createElement('div');
+  merchFilterWrap.classList.add('merch__filter');
+  merchFilterWrap.id = 'merch__filter';
+
+  categoryTitle.style.display = 'none';
+
+  merchFilterWrap.innerHTML = `
+      <h2 class="heading__list">${categoryTitle.textContent}</h2>
+  `;
+
+  const sortBy = document.createElement('div');
+  sortBy.id = 'sort-by';
+  sortBy.className = 'merch__filter--item';
+  sortBy.innerHTML = `
+    <label style="display: block;">Sort By</label>  
+  `;
+
+  const merchSortBy = document.querySelector('select.merchSortBy');
+  const merchResultsSelect = document.querySelector(
+    'select.merchResultsSelect'
+  );
+  sortBy.appendChild(merchSortBy);
+  merchFilterWrap.appendChild(sortBy);
+
+  const shoppingCartBtn = document.createElement('div');
+  shoppingCartBtn.className = 'merch__filter--item';
+  shoppingCartBtn.innerHTML = `
+    <a class="btn btn-primary" href="https://www.uwbookstore.com/ShoppingCart">
+      Shopping Cart
+    </a>  
+  `;
+  merchFilterWrap.appendChild(shoppingCartBtn);
+
+  // SELECT ELEMENT TO ADD HEADER WRAPPER AFTER
+  const filterColumn = document.querySelector('.filterColumn');
+  filterColumn.after(merchFilterWrap);
+
+  // HANDLE RESULTS PAGINATION
+  const pagination = document.querySelector('ul.pagination');
+  const pageItems = document.querySelector('.pagination li');
+
+  pageItems.length === 1 ? (pagination.style.display = 'none') : null;
+  pageItems.length === 1 ? (merchResultsSelect.style.display = 'none') : null;
+
+  // const paginationBtm = document.getElementById('pagination-btm');
+  // paginationBtm.appendChild(pagination);
+  // paginationBtm.appendChild(merchResultsSelect);
 
   // REPLACE MBS's NO IMAGE AVAILABLE GIF
   itemImage.forEach((image) => {
@@ -97,6 +149,14 @@ if (window.location.href.toLowerCase().search(/merchlist/) !== -1) {
     item.classList.add('merch__card-item');
   });
 } // END OF MERCHLIST IF STATEMENT
+
+/* ********************************************************** */
+/* ********************************************************** */
+/* ********************************************************** */
+/* ********************************************************** */
+/* ********************************************************** */
+/* ********************************************************** */
+/* ********************************************************** */
 
 // HANDLE EMPTY NEW ARRIVALS PAGE
 if (window.location.href.toLowerCase().search(/newarrivals/) !== -1) {

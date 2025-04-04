@@ -9,11 +9,10 @@ const filterSelectionsRow =
   document.querySelector('.filterSelections').parentElement;
 const merchSortBy = document.querySelector('select.merchSortBy');
 const filterColumn = document.querySelector('.filterColumn');
-const merchItem = document.querySelectorAll('.merchItem');
 const merchColumn = document.querySelector('.merchColumn');
 const merchResultsSelect = document.querySelector('select.merchResultsSelect');
 const pagination = document.querySelector('ul.pagination');
-const pageItems = document.querySelector('.pagination li');
+const pageItems = document.querySelectorAll('.pagination li');
 
 // Create new div for no items found
 const noResults = document.createElement('div');
@@ -136,6 +135,7 @@ if (window.location.href.toLowerCase().search(/merchlist/) !== -1) {
     }
   });
 
+  const merchItem = document.querySelectorAll('.merchItem');
   merchItem.forEach((item) => {
     item.className = '';
     item.classList.add('merch__card-item');
@@ -150,10 +150,6 @@ if (window.location.href.toLowerCase().search(/merchlist/) !== -1) {
   merchColumn.classList.add('flex', 'merch__card');
   merchCard.appendChild(merchColumn);
 
-  // HANDLE RESULTS PAGINATION
-  pageItems.length === 1 ? (pagination.style.display = 'none') : null;
-  pageItems.length === 1 ? (merchResultsSelect.style.display = 'none') : null;
-
   merchResultsSelect.classList.remove(
     'wauto',
     'displayib',
@@ -165,8 +161,18 @@ if (window.location.href.toLowerCase().search(/merchlist/) !== -1) {
   const paginationBtm = document.createElement('div');
   paginationBtm.id = 'pagination-btm';
   paginationBtm.className = 'text-center';
-  paginationBtm.appendChild(pagination);
-  paginationBtm.appendChild(merchResultsSelect);
+  console.log(merchItem.length);
+
+  if (merchItem.length < 12) {
+    console.log('less than 12 items');
+    pagination.style.visibility = 'hidden';
+    pagination.style.display = 'none';
+    merchResultsSelect.style.visibility = 'hidden';
+  } else {
+    console.log('12 or more items');
+    paginationBtm.appendChild(pagination);
+    paginationBtm.appendChild(merchResultsSelect);
+  }
 
   merchCard.after(paginationBtm);
   filterSelectionsRow.style.display = 'none';
@@ -220,10 +226,8 @@ if (window.location.href.toLowerCase().search(/merchlist/) !== -1) {
   // SPECIAL PRICING NOTE FOR ELECTRONICS
   if (
     categoryTitle.textContent.toLowerCase().substring(0, 7) === 'macbook' ||
-    categoryTitle.textContent.toLowerCase().substring(0, 11) ===
-      'dell laptop' ||
     categoryTitle.textContent.toLowerCase().substring(0, 4) === 'ipad' ||
-    categoryTitle.textContent.toLowerCase().substring(0, 6) === 'laptop'
+    categoryTitle.textContent.toLowerCase().includes('laptop')
   ) {
     pageBanner.classList.add('alert', 'alert-info', 'text-center');
     pageBanner.innerHTML = `
@@ -239,9 +243,9 @@ if (window.location.href.toLowerCase().search(/merchlist/) !== -1) {
     if (name.includes('^')) {
       const restockBadge = document.createElement('div');
       restockBadge.className = 'restockBadge';
-      restockBadge.textContent = 'Back in Stock!';
+      restockBadge.innerHTML = 'Back in<br>Stock!';
 
-      const merchLink = item.closest('.merchDetailWrapper .merchLink');
+      const merchLink = item.closest('.merchDetailWrapper');
       merchLink.prepend(restockBadge);
     }
   });

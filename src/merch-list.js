@@ -10,9 +10,6 @@ const filterColumn = document.querySelector('.filterColumn');
 const merchColumn = document.querySelector('.merchColumn');
 const merchResultsSelect = document.querySelector('select.merchResultsSelect');
 const pagination = document.querySelector('ul.pagination');
-// const pageItems = document.querySelectorAll(
-//   '.pagination li a.hover_pointer.pageNumber'
-// );
 
 // Create new div for no items found
 const noResults = document.createElement('div');
@@ -58,7 +55,7 @@ if (
 
     // IF THERE ARE SEARCH RESULTS
     // Set the page title
-    categoryTitle = `Search Results For: ${searchTerm}`;
+    categoryTitle.textContent = `Search Results For: ${searchTerm}`;
 
     if (searchTerm.toLocaleLowerCase() === 'contact') {
       // TODO: rewrite this down the road
@@ -73,10 +70,6 @@ if (
     categoryTitle.textContent.toLowerCase() === 'new arrivals' &&
     noListItems
   ) {
-    console.log(
-      `You are on the ${categoryTitle.textContent.toLowerCase()} page.`
-    );
-
     noListItems.style.display = 'none'; // Hide MBS div
     categoryTitle.style.display = 'none'; // Hide MBS page title
 
@@ -213,19 +206,9 @@ if (
   paginationBtm.id = 'pagination-btm';
   paginationBtm.className = 'text-center';
 
-  // document.addEventListener('DOMContentLoaded', () => {
-  //   console.log(`DOM is ready...there are ${pageItems.length} list items`);
-  //   if (merchItems.length <= 24 && pageItems.length === 1) {
-  //     pagination.style.visibility = 'hidden';
-  //     pagination.style.display = 'none';
-  //     merchResultsSelect.style.visibility = 'hidden';
-  //   } else {
-  //     paginationBtm.appendChild(pagination);
-  //     paginationBtm.appendChild(merchResultsSelect);
-  //   }
-  // });
-
   merchCard.after(paginationBtm);
+  paginationBtm.appendChild(pagination);
+  paginationBtm.appendChild(merchResultsSelect);
   const filterSelectionsRow =
     document.querySelector('.filterSelections').parentElement;
 
@@ -290,6 +273,19 @@ if (
     merchFilterWrap.after(pageBanner);
   }
 
+  // ADD RED SHIRT HELP BUTTON
+  if (
+    window.location.href.toLowerCase().indexOf('red%20shirt') > -1 ||
+    window.location.href.indexOf('17th') > -1
+  ) {
+    pageBanner.classList.add('p-0', 'text-center');
+    pageBanner.innerHTML = `
+      Looking for The Red Shirt&trade;, 17<sup>th</sup> Edition? Find it here:<br>
+      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/The-Red-Shirt-17th-Edition" class="btn btn-primary m-2">The Red Shirt&trade;</a>    
+    `;
+    filterColumn.after(pageBanner);
+  }
+
   // ADD BACK IN STOCK BADGE TO ITEMS WITH ^ IN PRODUCTNAME
   productName.forEach((item) => {
     const name = item.textContent;
@@ -320,7 +316,7 @@ $(document).ready(() => {
   const pageItems = $('.pagination li');
   const merchItem = $('.merchItem');
 
-  if (merchItem.length < +24 && pageItems.length === 1) {
+  if (merchItem.length <= 12 && pageItems.length === 1) {
     $('ul.pagination, select.merchResultsSelect').hide();
   }
 });

@@ -10,7 +10,9 @@ const filterColumn = document.querySelector('.filterColumn');
 const merchColumn = document.querySelector('.merchColumn');
 const merchResultsSelect = document.querySelector('select.merchResultsSelect');
 const pagination = document.querySelector('ul.pagination');
-const pageItems = document.querySelectorAll('.pagination li');
+// const pageItems = document.querySelectorAll(
+//   '.pagination li a.hover_pointer.pageNumber'
+// );
 
 // Create new div for no items found
 const noResults = document.createElement('div');
@@ -158,8 +160,8 @@ if (
     <label style="display: block;">Sort By</label>  
   `;
 
-  sortBy.appendChild(merchSortBy);
-  merchFilterWrap.appendChild(sortBy);
+  sortBy ? sortBy.appendChild(merchSortBy) : null;
+  sortBy ? merchFilterWrap.appendChild(sortBy) : null;
 
   const shoppingCartBtn = document.createElement('div');
   shoppingCartBtn.className = 'merch__filter--item';
@@ -184,8 +186,8 @@ if (
     }
   });
 
-  const merchItem = document.querySelectorAll('.merchItem');
-  merchItem.forEach((item) => {
+  const merchItems = document.querySelectorAll('.merchItem');
+  merchItems.forEach((item) => {
     item.className = '';
     item.classList.add('merch__card-item');
   });
@@ -211,14 +213,17 @@ if (
   paginationBtm.id = 'pagination-btm';
   paginationBtm.className = 'text-center';
 
-  if (merchItem.length < 24) {
-    pagination.style.visibility = 'hidden';
-    pagination.style.display = 'none';
-    merchResultsSelect.style.visibility = 'hidden';
-  } else {
-    paginationBtm.appendChild(pagination);
-    paginationBtm.appendChild(merchResultsSelect);
-  }
+  // document.addEventListener('DOMContentLoaded', () => {
+  //   console.log(`DOM is ready...there are ${pageItems.length} list items`);
+  //   if (merchItems.length <= 24 && pageItems.length === 1) {
+  //     pagination.style.visibility = 'hidden';
+  //     pagination.style.display = 'none';
+  //     merchResultsSelect.style.visibility = 'hidden';
+  //   } else {
+  //     paginationBtm.appendChild(pagination);
+  //     paginationBtm.appendChild(merchResultsSelect);
+  //   }
+  // });
 
   merchCard.after(paginationBtm);
   const filterSelectionsRow =
@@ -308,6 +313,14 @@ if (
 /* ********************************************************** */
 /* ********************************************************** */
 
-// HANDLE EMPTY NEW ARRIVALS PAGE
-if (window.location.href.toLowerCase().search(/newarrivals/) !== -1) {
-}
+// USE JQUERY TO CHECK PAGE ITEMS LENGTH
+// IF ONLY ONE PAGE OF RESULTS, HIDE PAGINATION
+// AND MERCHRESULTSSELECT BOX
+$(document).ready(() => {
+  const pageItems = $('.pagination li');
+  const merchItem = $('.merchItem');
+
+  if (merchItem.length < +24 && pageItems.length === 1) {
+    $('ul.pagination, select.merchResultsSelect').hide();
+  }
+});

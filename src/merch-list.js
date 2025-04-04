@@ -5,8 +5,6 @@ const itemImage = document.querySelectorAll('.merchImage');
 const productName = document.querySelectorAll('p.merchTitle');
 const searchCatWrapRow = document.querySelector('.searchCatWrap').parentElement;
 const noListItems = document.querySelector('.noListItems');
-const filterSelectionsRow =
-  document.querySelector('.filterSelections').parentElement;
 const merchSortBy = document.querySelector('select.merchSortBy');
 const filterColumn = document.querySelector('.filterColumn');
 const merchColumn = document.querySelector('.merchColumn');
@@ -19,7 +17,10 @@ const noResults = document.createElement('div');
 noResults.classList.add('empty-results');
 
 // Make sure we're on a merchList page
-if (window.location.href.toLowerCase().search(/merchlist/) !== -1) {
+if (
+  window.location.href.toLowerCase().search(/merchlist/) !== -1 ||
+  window.location.href.toLowerCase().search(/newarrivals/) !== -1
+) {
   if (categoryTitle.textContent.toLocaleLowerCase() === 'search all') {
     const searched = window.location.search.split('=');
     const searchTerm = searched[2].replace(/%20/g, ' ');
@@ -66,6 +67,54 @@ if (window.location.href.toLowerCase().search(/merchlist/) !== -1) {
       // TODO: rewrite down the road
     }
   } // END OF if (categoryTitle.toLowerCase() === 'search all')
+  else if (
+    categoryTitle.textContent.toLowerCase() === 'new arrivals' &&
+    noListItems
+  ) {
+    console.log(
+      `You are on the ${categoryTitle.textContent.toLowerCase()} page.`
+    );
+
+    noListItems.style.display = 'none'; // Hide MBS div
+    categoryTitle.style.display = 'none'; // Hide MBS page title
+
+    noResults.innerHTML = `
+      <section class="empty-results text-center">
+        <h1>
+          Badger fans, stay tuned&mdash;new gear is coming!
+        </h1>
+        <p class="bold">
+          Until then, explore our best-selling favorites and show your Wisconsin pride!
+        </p>
+        <div class="row">
+          <div class="col-sm-12 col-md-6 mb-2">
+            <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Mens/Best-Sellers">
+              <img src="https://i.univbkstr.com/v3/img/pages/newArrivals/letsGo.jpg" alt=""
+                class="img-fluid d-block mb-2">
+            </a>
+            <div class="text-center">
+              <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Mens/Best-Sellers" class="btn btn-primary">Shop Men's
+                Best
+                Sellers</a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 mb-2">
+            <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Womens/Best-Sellers">
+              <img src="https://i.univbkstr.com/v3/img/pages/newArrivals/badgers.jpg" alt=""
+                class="img-fluid d-block mb-2">
+            </a>
+            <div class="text-center">
+              <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Womens/Best-Sellers" class="btn btn-primary">Shop
+                Women's
+                Best Sellers</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+
+    searchCatWrapRow.after(noResults);
+  }
 
   // FIX CATEGORY TITLES SINCE MBS HAS CHARACTER LIMITS
   if (
@@ -161,21 +210,21 @@ if (window.location.href.toLowerCase().search(/merchlist/) !== -1) {
   const paginationBtm = document.createElement('div');
   paginationBtm.id = 'pagination-btm';
   paginationBtm.className = 'text-center';
-  console.log(merchItem.length);
 
-  if (merchItem.length < 12) {
-    console.log('less than 12 items');
+  if (merchItem.length < 24) {
     pagination.style.visibility = 'hidden';
     pagination.style.display = 'none';
     merchResultsSelect.style.visibility = 'hidden';
   } else {
-    console.log('12 or more items');
     paginationBtm.appendChild(pagination);
     paginationBtm.appendChild(merchResultsSelect);
   }
 
   merchCard.after(paginationBtm);
-  filterSelectionsRow.style.display = 'none';
+  const filterSelectionsRow =
+    document.querySelector('.filterSelections').parentElement;
+
+  filterSelectionsRow ? (filterSelectionsRow.style.display = 'none') : null;
 
   // ADD BANNERS/MESSAGES TO CERTAIN PAGES
   // create container for banner/message
@@ -261,45 +310,4 @@ if (window.location.href.toLowerCase().search(/merchlist/) !== -1) {
 
 // HANDLE EMPTY NEW ARRIVALS PAGE
 if (window.location.href.toLowerCase().search(/newarrivals/) !== -1) {
-  if (noListItems) {
-    noListItems.style.display = 'none'; // Hide MBS div
-    categoryTitle.style.display = 'none'; // Hide MBS page title
-
-    noResults.innerHTML = `
-      <section class="empty-results text-center">
-        <h1>
-          Badger fans, stay tuned&mdash;new gear is coming!
-        </h1>
-        <p class="bold">
-          Until then, explore our best-selling favorites and show your Wisconsin pride!
-        </p>
-        <div class="row">
-          <div class="col-sm-12 col-md-6 mb-2">
-            <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Mens/Best-Sellers">
-              <img src="https://i.univbkstr.com/v3/img/pages/newArrivals/letsGo.jpg" alt=""
-                class="img-fluid d-block mb-2">
-            </a>
-            <div class="text-center">
-              <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Mens/Best-Sellers" class="btn btn-primary">Shop Men's
-                Best
-                Sellers</a>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 mb-2">
-            <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Womens/Best-Sellers">
-              <img src="https://i.univbkstr.com/v3/img/pages/newArrivals/badgers.jpg" alt=""
-                class="img-fluid d-block mb-2">
-            </a>
-            <div class="text-center">
-              <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Womens/Best-Sellers" class="btn btn-primary">Shop
-                Women's
-                Best Sellers</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    `;
-
-    searchCatWrapRow.after(noResults);
-  }
 }

@@ -182,7 +182,7 @@ if (
   const merchItems = document.querySelectorAll('.merchItem');
   merchItems.forEach((item) => {
     item.className = '';
-    item.classList.add('merch__card-item');
+    item.classList.add('merchItem', 'merch__card-item');
   });
 
   // CREATE THE PRODUCTS WRAPPER - merch__card

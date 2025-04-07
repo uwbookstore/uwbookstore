@@ -126,6 +126,19 @@ if (document.querySelector('p.salePrice')) {
 const infoBlock = document.createElement('div');
 infoBlock.id = 'description-block';
 infoBlock.className = 'merch__detail-description';
+console.log(merchDisclaimer);
+const merchDisclaimerHtml = `
+    <div id="item-disclaimer" class="alert alert-warning">
+      <label></label>
+    </div>
+  `;
+
+// Add needed disclaimer text
+const landsEndDisclaimer = document.getElementById('div#landsEndReally');
+console.log(landsEndDisclaimer);
+if (landsEndDisclaimer) {
+  console.log('This has a lands end disclaimer');
+}
 
 infoBlock.innerHTML = `
   <h3 class="merch__detail-title-small">The Details</h3>
@@ -135,6 +148,7 @@ infoBlock.innerHTML = `
   <strong>Item:</strong> ${prodSku}
   </div>
   ${gmPromo ? gmPromo : ''}
+  ${merchDisclaimer ? merchDisclaimerHtml : ''}
 `;
 
 // Append elements to info block

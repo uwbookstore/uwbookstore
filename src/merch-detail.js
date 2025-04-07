@@ -23,6 +23,7 @@ const merchDisclaimer = document.querySelector('input.merchDisclaimer');
 const noAddCart = document.querySelector('div.hiddenCartText');
 const thumbnails = document.querySelectorAll('a.merchThumbnail');
 const detailImgs = document.querySelectorAll('a.merchThumbnail img');
+const gmPromo = document.querySelector('p.gmPromo');
 
 // Check for multiple images
 if (thumbnails.length > 0) {
@@ -87,3 +88,58 @@ if (thumbnails.length > 0) {
   merchImgs.appendChild(newImg);
 }
 // END OF IMAGE CONTAINER
+
+// START PRODUCT DETAILS LAYOUT
+// Add the product name
+const pageHeader = document.createElement('h2');
+pageHeader.className = 'merch__detail-title';
+pageHeader.textContent = prodName;
+
+// Create the price block
+const priceBlock = document.createElement('div');
+priceBlock.id = 'priceBlock';
+priceBlock.className = 'merch__detail-price';
+
+const prodPrice = document.querySelector('span.merchPriceCurrent').textContent;
+const origPrice = document
+  .querySelector('p.merchRegPrice')
+  ?.innerHTML.split('$')
+  .pop();
+
+// Check for sale price
+if (document.querySelector('p.salePrice')) {
+  const salePrice = prodPrice.replace(/\$/g, '');
+
+  const salePriceHtml = `
+    <span class="original">$${origPrice}</span><span class="sale">$${salePrice}</span>
+  `;
+
+  priceBlock.insertAdjacentHTML('beforeend', salePriceHtml);
+} else {
+  priceHtml = `
+    <span>${prodPrice}</span>
+  `;
+  priceBlock.insertAdjacentHTML('beforeend', priceHtml);
+}
+
+// Add the product description
+const infoBlock = document.createElement('div');
+infoBlock.id = 'description-block';
+infoBlock.className = 'merch__detail-description';
+
+infoBlock.innerHTML = `
+  <h3 class="merch__detail-title-small">The Details</h3>
+  ${description}
+  ${noAddCart ? noAddCart : ''}
+  <div class="merch__detail-sku">
+  <strong>Item:</strong> ${prodSku}
+  </div>
+  ${gmPromo ? gmPromo : ''}
+`;
+
+// Append elements to info block
+merchInfoWrapper.append(pageHeader);
+merchInfoWrapper.append(priceBlock);
+merchInfoWrapper.append(infoBlock);
+
+// merchDisclaimer ? console.log(merchDisclaimer) : null;

@@ -213,3 +213,77 @@ merchDisclaimer ? merchInfoWrapper.appendChild(merchDisclaimerHtml) : '';
 merchDisclaimer ? merchDisclaimerHtml.after(disclaimerError) : '';
 
 // document.querySelector('.row.merchItem').style.display = 'none';
+
+// HELPER FUNCTION TO CHANGE SIZE BUTTON TEXT
+function changeLCS(elem) {
+  elem.forEach((e) => {
+    const btnText = e.textContent.toLowerCase();
+    if (btnText === 'small/medium') {
+      e.textContent = 'S/M';
+    } else if (btnText === 'medium/large') {
+      e.textContent = 'M/L';
+    } else if (btnText === 'large/x-large' || btnText === 'large/xlarge') {
+      e.textContent = 'L/XL';
+    } else if (btnText === 'xx-small') {
+      e.textContent = '2XS';
+    } else if (btnText === 'x-small') {
+      e.textContent = 'XS';
+    } else if (btnText === 'small') {
+      e.textContent = 'S';
+    } else if (btnText === 'medium') {
+      e.textContent = 'M';
+    } else if (btnText === 'large') {
+      e.textContent = 'M';
+    } else if (btnText === 'x-large') {
+      e.textContent = 'XL';
+    } else if (btnText === 'xx-large' || btnText === '2x-large') {
+      e.textContent = '2XL';
+    } else if (btnText === 'xxx-large' || btnText === '3x-large') {
+      e.textContent = '3XL';
+    } else if (btnText === '5x') {
+      e.textContent = '5XL';
+    } else if (btnText === '6x') {
+      e.textContent = '6XL';
+    } else if (btnText === 'newborn 3 month') {
+      e.textContent = 'NB/3M';
+    } else if (btnText === '3 month') {
+      e.textContent = '3M';
+    } else if (btnText === '6 month') {
+      e.textContent = '6M';
+    } else if (btnText === '12 month') {
+      e.textContent = '12M';
+    } else if (btnText === '18 month') {
+      e.textContent = '18M';
+    } else if (btnText === '24 month') {
+      e.textContent = '24M';
+    } else if (btnText === '2 toddler') {
+      e.textContent = '2T';
+    } else if (btnText === '3 toddler') {
+      e.textContent = '3T';
+    } else if (btnText === '4 toddler') {
+      e.textContent = '4T';
+    } else if (btnText === '5 toddler') {
+      e.textContent = '5T';
+    } else if (btnText === '5/6 toddler') {
+      e.textContent = '5/6T';
+    } else if (btnText === '6 toddler') {
+      e.textContent = '6T';
+    } else if (btnText === '6 child') {
+      e.textContent = '6C';
+    } else if (btnText === '7 child') {
+      e.textContent = '7C';
+    } else if (btnText === '6 x 8 / 6 x 8') {
+      e.parentElement.classList.add('btn-w-auto');
+    } else if (btnText === '6 x 8 / 8 x 10') {
+      e.parentElement.classList.add('btn-w-auto');
+    } else if (btnText === '8 x 10 / 8 x 10') {
+      e.parentElement.classList.add('btn-w-auto');
+    } else if (btnText === 'toddler') {
+      e.parentElement.classList.add('btn-w-auto');
+    } else {
+      e.parentElement.classList.add('btn-w-auto');
+    }
+  });
+}
+
+changeLCS(sizeOptions);

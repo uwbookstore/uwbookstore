@@ -205,14 +205,29 @@ infoBlock.innerHTML = `
 // HIDE ORIGINAL MERCH INFO BLOCK
 // document.querySelector('.merchInfo').style.display = 'none';
 
+sizeOptions ? changeLCS(sizeOptions) : null;
+logoOptions ? changeLCS(logoOptions) : null;
+
+// HANDLE SIZE PICKER & SIZE CHART LINK
+// create container div
+const merchSizes = document.createElement('div');
+merchSizes.id = 'sizes';
+merchSizes.className = 'merch__detail-size';
+
+if (sizes) {
+  const sizeArray = sizes.innerHTML;
+  merchSizes.innerHTML = `
+  <div class="flex merch__detail-size-picker">${sizeArray}</div>
+`;
+}
+
 // Append elements to info block
 merchInfoWrapper.append(pageHeader);
 merchInfoWrapper.append(priceBlock);
 merchInfoWrapper.append(infoBlock);
 merchDisclaimer ? merchInfoWrapper.appendChild(merchDisclaimerHtml) : '';
 merchDisclaimer ? merchDisclaimerHtml.after(disclaimerError) : '';
-
-// document.querySelector('.row.merchItem').style.display = 'none';
+sizes ? merchInfoWrapper.appendChild(merchSizes) : '';
 
 // HELPER FUNCTION TO CHANGE SIZE BUTTON TEXT
 function changeLCS(elem) {
@@ -285,5 +300,3 @@ function changeLCS(elem) {
     }
   });
 }
-
-changeLCS(sizeOptions);

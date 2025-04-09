@@ -24,6 +24,7 @@ const noAddCart = document.querySelector('div.hiddenCartText');
 const thumbnails = document.querySelectorAll('a.merchThumbnail');
 const detailImgs = document.querySelectorAll('a.merchThumbnail img');
 const gmPromo = document.querySelector('p.gmPromo');
+const select = document.querySelectorAll('select.merchDropdown option');
 const logos = document.querySelector('.lcsLogoWrapper');
 const colors = document.querySelector('.lcsColorWrapper');
 const sizes = document.querySelector('.lcsSizeWrapper');
@@ -33,6 +34,10 @@ const sizeOptions = document.querySelectorAll(
 const logoOptions = document.querySelectorAll(
   'button.typeCodeOption span.logoName'
 );
+const colorOptions = document.querySelectorAll(
+  'button.typeCodeOption span.colorName'
+);
+const singleItem = document.querySelector('span.selectedSize');
 
 // Check for multiple images
 if (thumbnails.length > 0) {
@@ -207,6 +212,7 @@ infoBlock.innerHTML = `
 
 sizeOptions ? changeLCS(sizeOptions) : null;
 logoOptions ? changeLCS(logoOptions) : null;
+colorOptions ? changeLCS(colorOptions) : null;
 
 // HANDLE SIZE PICKER & SIZE CHART LINK
 // create container div
@@ -214,11 +220,41 @@ const merchSizes = document.createElement('div');
 merchSizes.id = 'sizes';
 merchSizes.className = 'merch__detail-size';
 
-if (sizes) {
-  const sizeArray = sizes.innerHTML;
+const sizeGuideDiv = document.createElement('div');
+sizeGuideDiv.className = 'merch__detail-size-label';
+sizeGuideDiv.textContent = 'Size |';
+
+if (sizes || logos || colors) {
+  let pickerArray;
+  sizes
+    ? (pickerArray = sizes.innerHTML)
+    : logos
+      ? (pickerArray = logos.innerHTML)
+      : (pickerArray = colors.innerHTML);
   merchSizes.innerHTML = `
-  <div class="flex merch__detail-size-picker">${sizeArray}</div>
+  <div class="flex merch__detail-size-picker">${pickerArray}</div>
 `;
+
+  merchSizes.prepend(sizeGuideDiv);
+} else if (!logos && !sizes && !colors && singleItem) {
+  let singleItemText = singleItem.textContent.toLowerCase();
+
+  if (singleItemText === 'xxx-large' || singleItemText === '3x-large') {
+    singleItemText = '3XL';
+  } else if (singleItemText === 'newborn 3 month') {
+    singleItemText = 'NB/3M';
+  } else if (singleItemText === 'large/x-large') {
+    singleItemText = 'L/XL';
+  }
+  //  else {
+  //   singleItemText = capitalizeFirstLetter(singleItem.textContent);
+  // }
+  merchSizes.innerHTML = `
+    <div class="flex merch__detail-size-picker">
+      <span class="btn btn-default typeSelected">${singleItemText}</span>
+    </div>
+  `;
+  merchSizes.prepend(sizeGuideDiv);
 }
 
 // Append elements to info block
@@ -228,6 +264,7 @@ merchInfoWrapper.append(infoBlock);
 merchDisclaimer ? merchInfoWrapper.appendChild(merchDisclaimerHtml) : '';
 merchDisclaimer ? merchDisclaimerHtml.after(disclaimerError) : '';
 sizes ? merchInfoWrapper.appendChild(merchSizes) : '';
+singleItem ? merchInfoWrapper.appendChild(merchSizes) : '';
 
 // HELPER FUNCTION TO CHANGE SIZE BUTTON TEXT
 function changeLCS(elem) {

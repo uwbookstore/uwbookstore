@@ -10,6 +10,22 @@ const merchMain = `
       <div id="merch-info" class="merch__detail-info"></div>
     </div>
   </div>
+  <h2 class="heading__line-center" id="tabs-header"><span>Additional Information</span></h2>
+  <div class="tabs">
+    <ul class="tabs__nav">
+      <li class="tabs__item">
+        <a href="#returns" class="tabs__link">
+          <i class="fa fa-exchange" aria-hidden="true"></i> Returns &amp; Exchanges
+        </a>
+      </li>
+      <li class="tabs__item">
+        <a href="#shipping" class="tabs__link">
+          <i class="fa fa-truck" aria-hidden="true"></i> Shipping &amp; Handling
+        </a>
+      </li>
+    </ul>
+  </div>
+
 `;
 
 // Prepend new wrapper to ContainDiv element
@@ -48,7 +64,6 @@ const addToCartBtn = document.querySelector('a.addToCart.btn.btn-primary');
 const addToCartTypes = document.querySelector(
   'a.addToCartTypes.btn.btn-primary'
 );
-console.log(addToCartTypes);
 
 // Check for multiple images
 if (thumbnails.length > 0) {
@@ -380,7 +395,10 @@ addToCartBtn
     : '';
 qtyWrapper.append(qtyInput);
 addToCartField.append(qtyWrapper);
+btnWrapper.append(document.querySelector('p.addedToCart'));
 addToCartField.append(btnWrapper);
+
+// Add Additional Info Tabs below product
 
 // Append error messages to info block
 merchSelectError ? merchSizes.appendChild(merchSelectError) : '';
@@ -476,3 +494,15 @@ function capitalizeFirstLetter(string) {
   const newString = string.toLowerCase();
   return newString.charAt(0).toUpperCase() + newString.slice(1);
 }
+
+/*
+  TODO: See if any of the code below is needed any more
+    if ($('#tOs').length > 0) {
+    $('#tOs').insertBefore('div.merch__detail-add');
+  }
+
+  if ($('#sold-out').length > 0) {
+    $('#sold-out').insertBefore('div.merch__detail-add');
+  }
+
+**/

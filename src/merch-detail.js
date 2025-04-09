@@ -24,7 +24,7 @@ const noAddCart = document.querySelector('div.hiddenCartText');
 const thumbnails = document.querySelectorAll('a.merchThumbnail');
 const detailImgs = document.querySelectorAll('a.merchThumbnail img');
 const gmPromo = document.querySelector('p.gmPromo');
-const select = document.querySelectorAll('select.merchDropdown option');
+const select = document.querySelector('select.merchDropdown');
 const logos = document.querySelector('.lcsLogoWrapper');
 const colors = document.querySelector('.lcsColorWrapper');
 const sizes = document.querySelector('.lcsSizeWrapper');
@@ -38,6 +38,11 @@ const colorOptions = document.querySelectorAll(
   'button.typeCodeOption span.colorName'
 );
 const singleItem = document.querySelector('span.selectedSize');
+const disclaimerSpan = document.querySelector('span.normal');
+const disclaimerError = document.querySelector('p.merchDisclaimerError');
+const merchSelectError = document.querySelector('p.merchSelectError');
+const addGiftErrorLCS = document.querySelector('p.addGiftErrorLCS');
+const addGiftError = document.querySelector('p.addGiftError');
 
 // Check for multiple images
 if (thumbnails.length > 0) {
@@ -148,8 +153,6 @@ const merchDisclaimerHtml = document.createElement('div');
 merchDisclaimerHtml.id = 'item-disclaimer';
 merchDisclaimerHtml.classList.add('alert', 'alert-warning');
 const disclaimerLabel = document.createElement('label');
-const disclaimerSpan = document.querySelector('span.normal');
-const disclaimerError = document.querySelector('p.merchDisclaimerError');
 
 if (merchDisclaimer) {
   disclaimerLabel.appendChild(merchDisclaimer);
@@ -222,7 +225,9 @@ merchSizes.className = 'merch__detail-size';
 
 const sizeGuideDiv = document.createElement('div');
 sizeGuideDiv.className = 'merch__detail-size-label';
-sizeGuideDiv.textContent = 'Size |';
+select
+  ? (sizeGuideDiv.textContent = 'Make Selection:')
+  : (sizeGuideDiv.textContent = 'Size |');
 
 if (sizes || logos || colors) {
   let pickerArray;
@@ -260,7 +265,14 @@ if (sizes || logos || colors) {
     </div>
   `;
   merchSizes.prepend(sizeGuideDiv);
+} else if (select) {
+  merchSizes.prepend(sizeGuideDiv);
+  merchSizes.appendChild(select);
 }
+
+merchSelectError ? merchSizes.appendChild(merchSelectError) : '';
+addGiftErrorLCS ? merchSizes.appendChild(addGiftErrorLCS) : '';
+addGiftError ? merchSizes.appendChild(addGiftError) : '';
 
 // Append elements to info block
 merchInfoWrapper.append(pageHeader);
@@ -268,8 +280,10 @@ merchInfoWrapper.append(priceBlock);
 merchInfoWrapper.append(infoBlock);
 merchDisclaimer ? merchInfoWrapper.appendChild(merchDisclaimerHtml) : '';
 merchDisclaimer ? merchDisclaimerHtml.after(disclaimerError) : '';
+
 sizes ? merchInfoWrapper.appendChild(merchSizes) : '';
 singleItem ? merchInfoWrapper.appendChild(merchSizes) : '';
+select ? merchInfoWrapper.appendChild(merchSizes) : '';
 
 // HELPER FUNCTION TO CHANGE SIZE BUTTON TEXT
 function changeLCS(elem) {

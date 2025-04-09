@@ -198,6 +198,9 @@ const addToCartBtn = document.querySelector('a.addToCart.btn.btn-primary');
 const addToCartTypes = document.querySelector(
   'a.addToCartTypes.btn.btn-primary'
 );
+const disco = document.getElementById('disco');
+const tabsHeader = document.querySelector('.tabs-container ul');
+const tabsContent = document.querySelector('.tabs__panels');
 
 // Check for multiple images
 if (thumbnails.length > 0) {
@@ -532,7 +535,31 @@ addToCartField.append(qtyWrapper);
 btnWrapper.append(document.querySelector('p.addedToCart'));
 addToCartField.append(btnWrapper);
 
-// Add Additional Info Tabs below product
+// Check if item is discontinued. If yes, show info in tabs
+const discoTab = document.createElement('li');
+discoTab.innerHTML = `
+  <a id="tab-1" href="#disco">
+    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Discontinued Item Policy
+  </a>
+`;
+
+const discoDiv = document.createElement('div');
+discoDiv.id = 'disco';
+discoDiv.setAttribute('aria-labelledby', 'tab-1');
+discoDiv.innerHTML = `
+  <p>You will not be charged for your order until the order ships.<br>
+    We search for discontinued items at each of our 5 locations so it may take longer for those items to be
+    pulled.
+    <span>If you are placing a Next Day Air or 2nd Day Air order the order processing time will be delayed
+      while we check all of our locations for the discontinued item.</span>
+  </p>
+  <p>If we don't find the item, your order packing slip will show it as "Discontinued" and you will not receive
+    that item.
+  </p>
+`;
+
+tabsHeader.prepend(discoTab);
+tabsContent.prepend(discoDiv);
 
 // Append error messages to info block
 merchSelectError ? merchSizes.appendChild(merchSelectError) : '';

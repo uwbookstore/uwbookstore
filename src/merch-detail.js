@@ -223,11 +223,98 @@ const merchSizes = document.createElement('div');
 merchSizes.id = 'sizes';
 merchSizes.className = 'merch__detail-size';
 
-const sizeGuideDiv = document.createElement('div');
+const sizeGuideDiv = document.createElement('label');
 sizeGuideDiv.className = 'merch__detail-size-label';
 select
   ? (sizeGuideDiv.textContent = 'Make Selection:')
   : (sizeGuideDiv.textContent = 'Size |');
+
+// ADD SIZE CHART LINK TO PRODUCT AS NEEDED
+let sizeChartUrl, sizeChartBrand;
+const sizeChartLink = document.createElement('a');
+sizeChartLink.classList.add('merch__detail-size-link', 'gtmSizeTrack');
+
+if (sizes && prodName.toLowerCase().substring(0, 13) === 'the red shirt') {
+  sizeChartUrl = 'sizeChart/redshirt';
+  sizeChartBrand = 'The Red Shirt™';
+} else if (sizes && prodName.toLowerCase().substring(0, 8) === 'champion') {
+  sizeChartUrl = 'sizeChart/champion';
+  sizeChartBrand = 'Champion';
+} else if (sizes && prodName.toLowerCase().substring(0, 9) === 'game bibs') {
+  sizeChartUrl = 'sizeChart/gameBibs';
+  sizeChartBrand = 'Game Bibs';
+} else if (sizes && prodName.toLowerCase().substring(0, 8) === 'columbia') {
+  sizeChartUrl = 'sizeChart/columbia';
+  sizeChartBrand = 'Columbia';
+} else if (
+  sizes &&
+  prodName.toLowerCase().substring(0, 12) === 'under armour'
+) {
+  sizeChartUrl = 'sizeChart/ua';
+  sizeChartBrand = 'Under Armour';
+} else if (sizes && prodName.toLowerCase().substring(0, 7) === 'blue 84') {
+  sizeChartUrl = 'sizeChart/blue84';
+  sizeChartBrand = 'Blue 84';
+} else if (
+  sizes &&
+  prodName.toLowerCase().substring(0, 13) === 'for bare feet'
+) {
+  sizeChartUrl = 'sizeChart/fbf';
+  sizeChartBrand = 'For Bare Feet';
+} else if (
+  sizes &&
+  prodName.toLowerCase().substring(0, 12) === 'college kids'
+) {
+  sizeChartUrl = 'sizeChart/cllgKids';
+  sizeChartBrand = 'College Kids';
+} else if (
+  sizes &&
+  (prodName.toLowerCase().substring(0, 13) === '&#39;47 Brand' ||
+    prodName.toLowerCase().substring(0, 9) === "'47 Brand")
+) {
+  sizeChartUrl = 'sizeChart/47Brand';
+  sizeChartBrand = "'47 Brand";
+} else if (
+  sizes &&
+  prodName.toLowerCase().substring(0, 13) === 'all star dogs'
+) {
+  sizeChartUrl = 'sizeChart/allStarDog';
+  sizeChartBrand = 'All Star Dogs';
+} else if (sizes && prodName.toLowerCase().substring(0, 7) === 'zoozatz') {
+  sizeChartUrl = 'sizeChart/zooZatz';
+  sizeChartBrand = 'ZooZatz';
+} else if (sizes && prodName.toLowerCase().substring(0, 10) === 'boxercraft') {
+  sizeChartUrl = 'sizeChart/boxercraft';
+  sizeChartBrand = 'Boxercraft';
+} else if (sizes && prodName.toLowerCase().substring(0, 10) === "Lands' End") {
+  sizeChartUrl = 'sizeChart/landsEnd';
+  sizeChartBrand = "Lands' End";
+} else if (sizes && prodName.toLowerCase().substring(0, 6) === 'league') {
+  sizeChartUrl = 'sizeChart/league';
+  sizeChartBrand = 'League';
+} else if (sizes && prodName.toLowerCase().substring(0, 7) === 'vantage') {
+  sizeChartUrl = 'sizeChart/vantage';
+  sizeChartBrand = 'Vantage';
+} else if (
+  sizes &&
+  prodName.toLowerCase().substring(0, 30) === 'little earth wisconsin pet hat'
+) {
+  sizeChartUrl = 'sizeChart/littleEarth';
+  sizeChartBrand = 'Little Earth';
+} else if (
+  (prodName.indexOf('Hat') >= 0 || prodName.indexOf('Visor') >= 0) &&
+  sizes &&
+  prodName.toLowerCase().substring(0, 6) === 'legacy'
+) {
+  sizeChartUrl = 'sizeChart/legacy';
+  sizeChartBrand = 'Legacy Hat';
+} else if (sizes) {
+  sizeChartUrl = 'sizeChart';
+  sizeChartBrand = '';
+}
+sizeChartLink.href = `https://i.univbkstr.com/${sizeChartUrl}`;
+sizeChartLink.textContent = `${sizeChartBrand} Size Guide`;
+sizeChartLink.title = `${sizeChartBrand} Size Guide"></a>`;
 
 if (sizes || logos || colors) {
   let pickerArray;
@@ -239,7 +326,7 @@ if (sizes || logos || colors) {
   merchSizes.innerHTML = `
   <div class="flex merch__detail-size-picker">${pickerArray}</div>
 `;
-
+  merchSizes.prepend(sizeChartLink);
   merchSizes.prepend(sizeGuideDiv);
 } else if (!logos && !sizes && !colors && singleItem) {
   let singleItemText = singleItem.textContent.toLowerCase();

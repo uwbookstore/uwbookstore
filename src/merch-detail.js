@@ -245,10 +245,9 @@ if (sizes || logos || colors) {
     singleItemText = 'NB/3M';
   } else if (singleItemText === 'large/x-large') {
     singleItemText = 'L/XL';
+  } else {
+    singleItemText = capitalizeFirstLetter(singleItem.textContent);
   }
-  //  else {
-  //   singleItemText = capitalizeFirstLetter(singleItem.textContent);
-  // }
   merchSizes.innerHTML = `
     <div class="flex merch__detail-size-picker">
       <span class="btn btn-default typeSelected">${singleItemText}</span>
@@ -336,4 +335,9 @@ function changeLCS(elem) {
       e.parentElement.classList.add('btn-w-auto');
     }
   });
+}
+
+function capitalizeFirstLetter(string) {
+  const newString = string.toLowerCase();
+  return newString.charAt(0).toUpperCase() + newString.slice(1);
 }

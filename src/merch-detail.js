@@ -241,6 +241,12 @@ if (sizes || logos || colors) {
 
   if (singleItemText === 'xxx-large' || singleItemText === '3x-large') {
     singleItemText = '3XL';
+  } else if (singleItemText === '4x' || singleItemText === '4x-large') {
+    singleItemText = '4XL';
+  } else if (singleItemText === '5x' || singleItemText === '5x-large') {
+    singleItemText = '5XL';
+  } else if (singleItemText === '6x' || singleItemText === '6x-large') {
+    singleItemText = '6XL';
   } else if (singleItemText === 'newborn 3 month') {
     singleItemText = 'NB/3M';
   } else if (singleItemText === 'large/x-large') {
@@ -250,7 +256,7 @@ if (sizes || logos || colors) {
   }
   merchSizes.innerHTML = `
     <div class="flex merch__detail-size-picker">
-      <span class="btn btn-default typeSelected">${singleItemText}</span>
+      <span class="btn btn-default typeSelected btn-w-auto">${singleItemText}</span>
     </div>
   `;
   merchSizes.prepend(sizeGuideDiv);

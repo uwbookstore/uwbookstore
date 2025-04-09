@@ -173,6 +173,10 @@
       width: auto;
     }
   }
+
+  &-w-auto {
+    width: auto !important;
+  }
 }
 
 .btn:disabled,

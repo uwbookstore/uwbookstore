@@ -235,7 +235,7 @@ const sizeChartLink = document.createElement('a');
 sizeChartLink.classList.add('merch__detail-size-link', 'gtmSizeTrack');
 
 if (sizes && prodName.toLowerCase().substring(0, 13) === 'the red shirt') {
-  sizeChartUrl = 'sizeChart/redshirt';
+  sizeChartUrl = 'sizeChart/redShirt';
   sizeChartBrand = 'The Red Shirt™';
 } else if (sizes && prodName.toLowerCase().substring(0, 8) === 'champion') {
   sizeChartUrl = 'sizeChart/champion';
@@ -269,8 +269,8 @@ if (sizes && prodName.toLowerCase().substring(0, 13) === 'the red shirt') {
   sizeChartBrand = 'College Kids';
 } else if (
   sizes &&
-  (prodName.toLowerCase().substring(0, 13) === '&#39;47 Brand' ||
-    prodName.toLowerCase().substring(0, 9) === "'47 Brand")
+  (prodName.toLowerCase().substring(0, 13) === '&#39;47 brand' ||
+    prodName.toLowerCase().substring(0, 9) === "'47 brand")
 ) {
   sizeChartUrl = 'sizeChart/47Brand';
   sizeChartBrand = "'47 Brand";
@@ -286,7 +286,7 @@ if (sizes && prodName.toLowerCase().substring(0, 13) === 'the red shirt') {
 } else if (sizes && prodName.toLowerCase().substring(0, 10) === 'boxercraft') {
   sizeChartUrl = 'sizeChart/boxercraft';
   sizeChartBrand = 'Boxercraft';
-} else if (sizes && prodName.toLowerCase().substring(0, 10) === "Lands' End") {
+} else if (sizes && prodName.toLowerCase().substring(0, 10) === "lands' end") {
   sizeChartUrl = 'sizeChart/landsEnd';
   sizeChartBrand = "Lands' End";
 } else if (sizes && prodName.toLowerCase().substring(0, 6) === 'league') {
@@ -313,8 +313,8 @@ if (sizes && prodName.toLowerCase().substring(0, 13) === 'the red shirt') {
   sizeChartBrand = '';
 }
 sizeChartLink.href = `https://i.univbkstr.com/${sizeChartUrl}`;
-sizeChartLink.textContent = `${sizeChartBrand} Size Guide`;
-sizeChartLink.title = `${sizeChartBrand} Size Guide"></a>`;
+sizeChartLink.textContent = `Size Guide`;
+sizeChartLink.title = `${sizeChartBrand} Size Guide`;
 
 if (sizes || logos || colors) {
   let pickerArray;

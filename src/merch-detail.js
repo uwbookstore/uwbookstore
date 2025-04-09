@@ -43,6 +43,12 @@ const disclaimerError = document.querySelector('p.merchDisclaimerError');
 const merchSelectError = document.querySelector('p.merchSelectError');
 const addGiftErrorLCS = document.querySelector('p.addGiftErrorLCS');
 const addGiftError = document.querySelector('p.addGiftError');
+const qtyInput = document.getElementById('merchQTY');
+const addToCartBtn = document.querySelector('a.addToCart.btn.btn-primary');
+const addToCartTypes = document.querySelector(
+  'a.addToCartTypes.btn.btn-primary'
+);
+console.log(addToCartTypes);
 
 // Check for multiple images
 if (thumbnails.length > 0) {
@@ -357,6 +363,26 @@ if (sizes || logos || colors) {
   merchSizes.appendChild(select);
 }
 
+// Append Quantity & Add to Cart button
+const addToCartField = document.createElement('div');
+addToCartField.id = 'add-qty';
+addToCartField.classList.add('flex', 'merch__detail-add"></div>');
+const qtyWrapper = document.createElement('div');
+qtyWrapper.className = 'merch__detail-qty';
+qtyWrapper.innerHTML = `<label for="merchQTY" class="sr-only">Quantity: </label>`;
+const btnWrapper = document.createElement('div');
+btnWrapper.className = 'merch__detail-add-btn';
+
+addToCartBtn
+  ? btnWrapper.append(addToCartBtn)
+  : addToCartTypes
+    ? btnWrapper.append(addToCartTypes)
+    : '';
+qtyWrapper.append(qtyInput);
+addToCartField.append(qtyWrapper);
+addToCartField.append(btnWrapper);
+
+// Append error messages to info block
 merchSelectError ? merchSizes.appendChild(merchSelectError) : '';
 addGiftErrorLCS ? merchSizes.appendChild(addGiftErrorLCS) : '';
 addGiftError ? merchSizes.appendChild(addGiftError) : '';
@@ -371,6 +397,8 @@ merchDisclaimer ? merchDisclaimerHtml.after(disclaimerError) : '';
 sizes ? merchInfoWrapper.appendChild(merchSizes) : '';
 singleItem ? merchInfoWrapper.appendChild(merchSizes) : '';
 select ? merchInfoWrapper.appendChild(merchSizes) : '';
+
+merchInfoWrapper.append(addToCartField);
 
 // HELPER FUNCTION TO CHANGE SIZE BUTTON TEXT
 function changeLCS(elem) {

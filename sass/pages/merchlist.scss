@@ -547,44 +547,31 @@ li.attribute {
 .card.previousDynamic .card-header,
 .card.featuredDynamic .card-header,
 .card.checkoutDynamic .card-header {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-column-gap: rem(10);
+  align-items: center;
+  border-bottom: none;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  background: none;
   font-size: rem(25);
-  margin: 0 0 rem(25);
+  margin: 0;
   width: 100%;
-  padding-bottom: rem(10);
-  border-bottom: rem(1) solid var(--bs-gray-dark);
-  display: block;
-  text-align: center;
 
   span {
     display: inline-block;
     background-color: var(--bs-white);
-    padding: rem(10);
     background-color: inherit;
+    padding: 0;
   }
-
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    grid-column-gap: rem(10);
-    align-items: center;
-    border-bottom: none;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    background: none;
-
-    span {
-      padding: 0;
-    }
-
-    &::before,
-    &::after {
-      content: '';
-      height: rem(1);
-      display: block;
-      // background-color: var(--bs-gray-300);
-      background-color: currentColor;
-    }
+  &::before,
+  &::after {
+    content: '';
+    height: rem(1);
+    display: block;
+    background-color: currentColor;
   }
 }
 

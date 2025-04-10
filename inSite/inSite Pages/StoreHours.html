@@ -10,32 +10,28 @@
     store you wish to reach.
   </p>
 
-  <div class="locations">
+  <div class="tabs-container locations">
+    <ul class="tabs-nav" aria-labelledby="tabs-title">
+      <li>
+        <a id="tab-1" class="btn btn-primary-outline" href="#stateSt">711 State Street</a>
+      </li>
+      <li>
+        <a id="tab-2" class="btn btn-primary-outline" href="#hilldale">Hilldale</a>
+      </li>
+      <li>
+        <a id="tab-3" class="btn btn-primary-outline" href="#hslc">Health Sciences</a>
+      </li>
+      <li>
+        <a id="tab-4" class="btn btn-primary-outline" href="#brookfield">Brookfield
+          Square</a>
+      </li>
+      <li>
+        <a id="tab-5" class="btn btn-primary-outline" href="#warehouse">Warehouse</a>
+      </li>
+    </ul>
 
-    <nav class="locations__nav">
-      <ul>
-        <li>
-          <a class="btn btn-primary-outline store__link" href="#711State">711 State Street</a>
-        </li>
-        <li>
-          <a class="btn btn-primary-outline store__link" href="#hilldale">Hilldale</a>
-        </li>
-        <li>
-          <a class="btn btn-primary-outline store__link" href="#hslc">Health Sciences</a>
-        </li>
-        <li>
-          <a class="btn btn-primary-outline store__link" href="#brookfield">Brookfield
-            Square</a>
-        </li>
-        <li>
-          <a class="btn btn-primary-outline store__link" href="#warehouse">Warehouse</a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="locations__stores">
-
-      <article id="711State">
+    <div class="tabs__panels">
+      <div id="stateSt" aria-labelledby="tab-1">
         <div class="flex locations">
           <div class="locations__hours">
             <h2>University Book Store</h2>
@@ -65,34 +61,38 @@
                 <a href="tel:+1-800-993-2665">(800) 993-2665</a>
               </li>
             </ul>
-
             <!-- START SPECIAL HOURS -->
-            <div class="alert alert-danger">
-              <p class="bold">SPRING BREAK HOURS (see normal hours below)</p>
-              <ul class="hours m-0">
-                <li><span class="hours__day">Monday 3/24 - Saturday 3/29:</span> <span class="hours__times">9:00am -
-                    5:00pm</span>
-                </li>
-            </div>
+            <!-- <div class="alert alert-danger">
+                  <p class="bold">SPECIAL STORE HOURS (see normal hours below)</p>
+                  <ul class="hours m-0">
+                    <li><span class="hours__day">Tuesday 01/21:</span> <span class="hours__times">8:30am - 7:00pm</span>
+                    </li>
+                    <li><span class="hours__day">Wednesday 01/22:</span> <span class="hours__times">8:30am - 7:00pm</span>
+                    </li>
+                    <li><span class="hours__day">Thursday 01/23:</span> <span class="hours__times">8:30am - 7:00pm</span>
+                    </li>
+                    <li><span class="hours__day">Friday 01/24:</span> <span class="hours__times">8:30am - 5:30pm</span></li>
+                  </ul>
+                </div> -->
             <!-- END SPECIAL HOURS -->
-
             <div class="stateSt">
               <!-- 711 Hours -->
               <ul class="hours">
                 <li><strong>NORMAL STORE HOURS</strong></li>
-                <li><span class="red bold">Campus Shipping Center closes &frac12; hour before the store closes.</span>
+                <li><span class="red bold">Campus Shipping Center closes ½ hour before the store
+                    closes.</span>
                 </li>
                 <li><span class="hours__day">Sunday:</span> <span class="hours__times">12:00pm - 5:00pm</span></li>
                 <li><span class="hours__day">Monday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
                 <li><span class="hours__day">Tuesday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
-                <li><span class="hours__day">Wednesday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
+                <li><span class="hours__day">Wednesday:</span> <span class="hours__times">9:00am - 7:00pm</span>
+                </li>
                 <li><span class="hours__day">Thursday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
                 <li><span class="hours__day">Friday:</span> <span class="hours__times">9:00am - 5:30pm</span></li>
                 <li><span class="hours__day">Saturday:</span> <span class="hours__times">9:00am - 5:30pm</span></li>
               </ul>
             </div>
           </div>
-
           <div class="locations__info">
             <div class="pull-right text-center">
               <img src="https://i.univbkstr.com/v3/img/pages/hours/state-street.jpg"
@@ -101,7 +101,8 @@
                   aria-hidden="true"></em></a>
             </div>
             <p>
-              Our flagship location serves the University of Wisconsin-Madison campus, as well as the greater Madison
+              Our flagship location serves the University of Wisconsin-Madison campus, as well as the greater
+              Madison
               community.
             </p>
             <h3 class="mb-0">Clothing Department</h3>
@@ -113,7 +114,7 @@
             </ul>
             <h3 class="mb-0">Supply Department</h3>
             <ul>
-              <li><a href='https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Dorm-Accessories'
+              <li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Dorm-Accessories"
                   title="Dorm Supplies">Dorm</a>, <a href="https://www.uwbookstore.com/School-Supplies">School &amp;
                   Office Supplies</a></li>
               <li>Fine Pens, Fine Art &amp; Graphics Supplies</li>
@@ -128,9 +129,9 @@
             </ul>
             <h3 class="mb-0"><a href="https://www.uwbookstore.com/Tech">Tech Department</a></h3>
             <ul>
-              <li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Apple-Products">
-                  Apple Authorized Campus Store
-                </a></li>
+              <li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Apple-Products">Authorized
+                  Campus
+                  Store</a></li>
               <li><a href="https://www.uwbookstore.com/Tech#Graphite">Graphite: Apple Authorized Service
                   Provider</a></li>
               <!-- <li>Dell Laptops</li> -->
@@ -150,16 +151,15 @@
             <h3 class="mb-0"><a href="https://mymokacoffee.com/" target="_blank">Moka Coffee Bar</a></h3>
           </div>
         </div>
-
         <div id="stateStMap" class="locations__map">
           <iframe title="711 State Street"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11657.665938115935!2d-89.3976838!3d43.0747386!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x503dcf1385952494!2sUniversity+Book+Store!5e0!3m2!1sen!2sus!4v1522157634193"
             width="600" height="450"></iframe>
         </div>
-      </article>
+      </div>
       <!-- END 711 STATE STREET -->
 
-      <article id="hilldale">
+      <div id="hilldale" aria-labelledby="tab-2">
         <div class="flex locations">
           <div class="locations__hours">
             <h2>University Book Store at Hilldale</h2>
@@ -175,12 +175,11 @@
                 <a href="tel:+1-800-993-2665">(800) 993-2665</a>
               </li>
             </ul>
-
             <!-- START SPECIAL HOURS -->
             <!-- <div class="alert alert-danger">
               <p class="bold">SPECIAL WINTER HOURS</p>
               <ul class="hours">
-                <li><span class="hours__day">Monday&ndash;Saturday:</span> <span class="hours__times">10:00am -
+                <li><span class="hours__day">Monday–Saturday:</span> <span class="hours__times">10:00am -
                     7:00pm</span>
                 </li>
                 <li><span class="hours__day">Sunday:</span> <span class="hours__times">11:00am - 6:00pm</span>
@@ -188,7 +187,6 @@
               </ul>
             </div> -->
             <!-- END SPECIAL HOURS -->
-
             <div class="hilldale">
               <!-- Hilldale hours -->
               <ul class="hours">
@@ -196,14 +194,16 @@
                 <li><span class="hours__day">Sunday:</span> <span class="hours__times">11:00am - 6:00pm</span></li>
                 <li><span class="hours__day">Monday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
                 <li><span class="hours__day">Tuesday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-                <li><span class="hours__day">Wednesday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-                <li><span class="hours__day">Thursday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
+                <li><span class="hours__day">Wednesday:</span> <span class="hours__times">10:00am - 8:00pm</span>
+                </li>
+                <li><span class="hours__day">Thursday:</span> <span class="hours__times">10:00am - 8:00pm</span>
+                </li>
                 <li><span class="hours__day">Friday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-                <li><span class="hours__day">Saturday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
+                <li><span class="hours__day">Saturday:</span> <span class="hours__times">10:00am - 8:00pm</span>
+                </li>
               </ul>
             </div>
           </div>
-
           <div class="locations__info">
             <div class="pull-right text-center">
               <img src="https://i.univbkstr.com/v3/img/pages/hours/hilldale.jpg" alt="University Book Store at Hilldale"
@@ -211,7 +211,6 @@
               <a class="btn btn-primary my-2 mx-auto" href="/Contact">Contact Us <em class="fa fa-envelope-o ml-1"
                   aria-hidden="true"></em></a>
             </div>
-
             <p>
               Our Hilldale location is on the West Side of Madison and boasts an
               expanded shopping area for Badger clothing, and gifts.
@@ -235,16 +234,15 @@
             </ul>
           </div>
         </div>
-
         <div id="hilldaleMap" class="locations__map">
           <iframe title="454 N. Midvale Blvd."
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2914.5620448738346!2d-89.455327!3d43.0716778!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xef3e04571a54569e!2sUniversity+Book+Store%3A+Hilldale!5e0!3m2!1sen!2sus!4v1510762061734"
             width="600" height="450"></iframe>
         </div>
-      </article>
+      </div>
       <!-- END HILDALE -->
 
-      <article id="hslc">
+      <div id="hslc" aria-labelledby="tab-3">
         <div class="flex locations">
           <div class="locations__hours">
             <h2>University Book Store Health Sciences</h2>
@@ -262,24 +260,24 @@
                 <a href="tel:+1-800-993-2665">(800) 993-2665</a>
               </li>
             </ul>
-
             <!-- START SPECIAL HOURS -->
             <!-- <div class="alert alert-danger">
-              <p class="bold">SPECIAL HOURS</p>
-              <ul class="hours">
-                <li><span class="hours__day">Closed for Winter Break.</span> <span class="hours__times">Reopens Monday
-                    January 13th.</span></li>
-            </div> -->
+                  <p class="bold">SPECIAL HOURS</p>
+                  <ul class="hours">
+                    <li><span class="hours__day">Closed for Winter Break.</span> <span class="hours__times">Reopens Monday
+                        January 13th.</span></li>
+                </div> -->
             <!-- END SPECIAL HOURS -->
-
             <div class="hslc">
               <!-- HSLC hours-->
               <ul class="hours">
                 <li><strong>NORMAL STORE HOURS</strong></li>
-                <li class="closed"><span class="hours__day">Sunday:</span> <span class="hours__times">Closed</span></li>
+                <li class="closed"><span class="hours__day">Sunday:</span> <span class="hours__times">Closed</span>
+                </li>
                 <li><span class="hours__day">Monday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
                 <li><span class="hours__day">Tuesday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
-                <li><span class="hours__day">Wednesday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
+                <li><span class="hours__day">Wednesday:</span> <span class="hours__times">8:30am - 4:30pm</span>
+                </li>
                 <li><span class="hours__day">Thursday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
                 <li><span class="hours__day">Friday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
                 <li class="closed"><span class="hours__day">Saturday:</span> <span class="hours__times">Closed</span>
@@ -287,7 +285,6 @@
               </ul>
             </div>
           </div>
-
           <div class="locations__info">
             <div class="pull-right text-center">
               <img src="https://i.univbkstr.com/v3/img/pages/hours/hslc.jpg" alt="University Book Store at HSLC"
@@ -295,7 +292,6 @@
               <a class="btn btn-primary my-2 mx-auto" href="/Contact">Contact Us <em class="fa fa-envelope-o ml-1"
                   aria-hidden="true"></em></a>
             </div>
-
             <p>
               Our Health Sciences Learning Center store is located adjacent to the UW
               Hospital and Clinics, serving the students, faculty, staff, and health
@@ -322,23 +318,21 @@
             <ul>
               <li>Select medical and technical reference books</li>
             </ul>
-
           </div>
         </div>
-
         <div id="hslcMap" class="locations__map">
           <iframe title="750 Highland Ave."
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.289936565962!2d-89.43331552324774!3d43.07739947113525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8807ac8cc3e9ab85%3A0xefc3d16839002810!2sUniversity%20Book%20Store%3A%20Health%20Sciences!5e0!3m2!1sen!2sus!4v1696612839301!5m2!1sen!2sus"
             width="600" height="450" style="border:0;" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
           <!-- <iframe style="border: 0px;"
-                                        src="https://www.google.com/maps/embed/v1/place?q=750%20Highland%20Avenue%2C%20Madison%2C%20WI%2C%20United%20States&amp;"
-                                        width="600" height="450"></iframe> -->
+                                            src="https://www.google.com/maps/embed/v1/place?q=750%20Highland%20Avenue%2C%20Madison%2C%20WI%2C%20United%20States&amp;"
+                                            width="600" height="450"></iframe> -->
         </div>
-      </article>
+      </div>
       <!-- END HSLC -->
 
-      <article id="brookfield">
+      <div id="brookfield" aria-labelledby="tab-4">
         <div class="flex locations">
           <div class="locations__hours">
             <h2>University Book Store Brookfield</h2>
@@ -355,41 +349,41 @@
                 <a href="tel:+1-800-993-2665">(800) 993-2665</a>
               </li>
             </ul>
-
             <!-- START SPECIAL HOURS -->
             <!-- <div class="alert alert-danger">
-              <p class="bold">SPECIAL STORE HOURS &ndash; Feb. 16&ndash;Feb. 22</p>
-              <ul class="hours">
-                <li><span class="hours__day">Sunday 2/16:</span> <span class="hours__times">11:00am - 6:00pm</span></li>
-                <li><span class="hours__day">Monday 2/17:</span> <span class="hours__times">3:00pm - 8:00pm</span></li>
-                <li><span class="hours__day">Tuesday 2/18:</span> <span class="hours__times">10:00am - 8:00pm</span>
-                </li>
-                <li><span class="hours__day">Wednesday 2/19:</span> <span class="hours__times">10:00am - 8:00pm</span>
-                </li>
-                <li><span class="hours__day">Thursday 2/20:</span> <span class="hours__times">3:00pm - 8:00pm</span>
-                </li>
-                <li><span class="hours__day">Friday 2/21:</span> <span class="hours__times">3:00pm - 8:00pm</span></li>
-                <li><span class="hours__day">Saturday 2/22:</span> <span class="hours__times">2:00pm - 8:00pm</span>
-                </li>
-                </li>
-              </ul>
-            </div> -->
+                  <p class="bold">SPECIAL STORE HOURS &ndash; Feb. 16&ndash;Feb. 22</p>
+                  <ul class="hours">
+                    <li><span class="hours__day">Sunday 2/16:</span> <span class="hours__times">11:00am - 6:00pm</span></li>
+                    <li><span class="hours__day">Monday 2/17:</span> <span class="hours__times">3:00pm - 8:00pm</span></li>
+                    <li><span class="hours__day">Tuesday 2/18:</span> <span class="hours__times">10:00am - 8:00pm</span>
+                    </li>
+                    <li><span class="hours__day">Wednesday 2/19:</span> <span class="hours__times">10:00am - 8:00pm</span>
+                    </li>
+                    <li><span class="hours__day">Thursday 2/20:</span> <span class="hours__times">3:00pm - 8:00pm</span>
+                    </li>
+                    <li><span class="hours__day">Friday 2/21:</span> <span class="hours__times">3:00pm - 8:00pm</span></li>
+                    <li><span class="hours__day">Saturday 2/22:</span> <span class="hours__times">2:00pm - 8:00pm</span>
+                    </li>
+                    </li>
+                  </ul>
+                </div> -->
             <!-- END SPECIAL HOURS -->
-
             <div class="brookfield">
               <ul class="hours">
                 <li><strong>NORMAL STORE HOURS</strong></li>
                 <li><span class="hours__day">Sunday:</span> <span class="hours__times">11:00am - 6:00pm</span></li>
                 <li><span class="hours__day">Monday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
                 <li><span class="hours__day">Tuesday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-                <li><span class="hours__day">Wednesday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-                <li><span class="hours__day">Thursday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
+                <li><span class="hours__day">Wednesday:</span> <span class="hours__times">10:00am - 8:00pm</span>
+                </li>
+                <li><span class="hours__day">Thursday:</span> <span class="hours__times">10:00am - 8:00pm</span>
+                </li>
                 <li><span class="hours__day">Friday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-                <li><span class="hours__day">Saturday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
+                <li><span class="hours__day">Saturday:</span> <span class="hours__times">10:00am - 8:00pm</span>
+                </li>
               </ul>
             </div>
           </div>
-
           <div class="locations__info">
             <div class="pull-right text-center">
               <img src="https://i.univbkstr.com/v3/img/pages/hours/brookfield.jpg"
@@ -397,24 +391,23 @@
               <a class="btn btn-primary my-2 mx-auto" href="/Contact">Contact Us <em class="fa fa-envelope-o ml-1"
                   aria-hidden="true"></em></a>
             </div>
-
             <p>
-              Our Brookfield Mall store is located on the outside of the mall, facing Moorland Road. We offer a large
+              Our Brookfield Mall store is located on the outside of the mall, facing Moorland Road. We offer a
+              large
               selection of UW Badgers collegiate clothing and gifts.
             </p>
           </div>
         </div>
-
         <div id="brookfieldMap" class="locations__map">
           <iframe title="95 North Moorland Road"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11666.108659435413!2d-88.1086861!3d43.0303387!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880506680e273da3%3A0xd7b513da73f1a72!2sUniversity%20Book%20Store%3A%20Brookfield%20Square!5e0!3m2!1sen!2sus!4v1722456470747!5m2!1sen!2sus"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            width="600" height="450" style="border:0;" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-      </article>
+      </div>
       <!-- END BROOKFIELD -->
 
-      <article id="warehouse">
+      <div id="warehouse" aria-labelledby="tab-5">
         <div class="flex locations">
           <div class="locations__hours">
             <h2>University Book Store Warehouse</h2>
@@ -431,23 +424,23 @@
                 <a href="tel:+1-800-993-2665">(800) 993-2665</a>
               </li>
             </ul>
-
             <!-- START SPECIAL HOURS -->
             <!-- <div class="alert alert-danger">
-              <p class="bold">SPECIAL STORE HOURS</p>
-              <ul class="hours">
-                <li><span class="hours__day">Wednesday 01/01:</span> <span class="hours__times">CLOSED</span></li>
-            </div> -->
+                  <p class="bold">SPECIAL STORE HOURS</p>
+                  <ul class="hours">
+                    <li><span class="hours__day">Wednesday 01/01:</span> <span class="hours__times">CLOSED</span></li>
+                </div> -->
             <!-- END SPECIAL HOURS -->
-
             <div class="warehouse">
               <!-- <li>Hours:</li> -->
               <ul class="hours">
                 <li><strong>NORMAL STORE HOURS</strong></li>
-                <li class="closed"><span class="hours__day">Sunday:</span> <span class="hours__times">Closed</span></li>
+                <li class="closed"><span class="hours__day">Sunday:</span> <span class="hours__times">Closed</span>
+                </li>
                 <li><span class="hours__day">Monday:</span> <span class="hours__times">9:00am - 5:00pm</span></li>
                 <li><span class="hours__day">Tuesday:</span> <span class="hours__times">9:00am - 5:00pm</span></li>
-                <li><span class="hours__day">Wednesday:</span> <span class="hours__times">9:00am - 5:00pm</span></li>
+                <li><span class="hours__day">Wednesday:</span> <span class="hours__times">9:00am - 5:00pm</span>
+                </li>
                 <li><span class="hours__day">Thursday:</span> <span class="hours__times">9:00am - 5:00pm</span></li>
                 <li><span class="hours__day">Friday:</span> <span class="hours__times">9:00am - 5:00pm</span></li>
                 <li class="closed"><span class="hours__day">Saturday:</span> <span class="hours__times">Closed</span>
@@ -455,7 +448,6 @@
               </ul>
             </div>
           </div>
-
           <div class="locations__info">
             <div class="pull-right text-center">
               <img src="https://i.univbkstr.com/v3/img/pages/hours/warehouse.jpg" alt="University Book Store Warehouse"
@@ -463,7 +455,6 @@
               <a class="btn btn-primary my-2 mx-auto" href="/Contact">Contact Us <em class="fa fa-envelope-o ml-1"
                   aria-hidden="true"></em></a>
             </div>
-
             <p>
               University Book Store Warehouse is located on the West Beltline
               frontage road, Southwest of the Verona Road and West Beltline
@@ -472,13 +463,12 @@
             </p>
           </div>
         </div>
-
         <div id="warehouseMap" class="locations__map">
           <iframe title="4509 W. Beltline Hwy."
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.2049813085255!2d-89.45730158452211!3d43.03711847914718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8807ad9553c82093%3A0x68cd01d14dd0e9cc!2s4509+W+Beltline+Hwy%2C+Madison%2C+WI+53711!5e0!3m2!1sen!2sus!4v1562336374692!5m2!1sen!2sus"
             style="border: 0px;" width="600" height="450"></iframe>
         </div>
-      </article>
+      </div>
       <!-- END WAREHOUSE -->
     </div>
     <!-- END .locations__stores -->

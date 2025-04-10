@@ -201,6 +201,10 @@ const addToCartTypes = document.querySelector(
 const disco = document.getElementById('disco');
 const tabsHeader = document.querySelector('.tabs-container ul');
 const tabsContent = document.querySelector('.tabs__panels');
+const merchSuggested = document.querySelector('.merchSuggested');
+const suggestedItems = document.querySelectorAll('.suggestedItem');
+const merchRank = document.querySelector('.merchRank');
+const itemRanking = document.getElementById('itemRanking');
 
 // Check for multiple images
 if (thumbnails.length > 0) {
@@ -535,6 +539,21 @@ addToCartField.append(qtyWrapper);
 btnWrapper.append(document.querySelector('p.addedToCart'));
 addToCartField.append(btnWrapper);
 
+// CHECK FOR ITEM RATINGS
+const rankCount = document.querySelector('span.rankCount').textContent;
+
+const ratingsTab = document.createElement('li');
+ratingsTab.innerHTML = `
+  <a id="tab-4" href="#ratings">
+    <i class="fa fa-star" aria-hidden="true"></i> Reviews ${rankCount}
+  </a> 
+`;
+
+const ratingsDiv = document.createElement('div');
+ratingsDiv.id = 'ratings';
+ratingsDiv.setAttribute('aria-labelledby', 'tab-4');
+ratingsDiv.appendChild(itemRanking);
+
 // Check if item is discontinued. If yes, show info in tabs
 const discoTab = document.createElement('li');
 discoTab.innerHTML = `
@@ -559,7 +578,40 @@ discoDiv.innerHTML = `
 `;
 
 tabsHeader.prepend(discoTab);
+tabsHeader.append(ratingsTab);
 tabsContent.prepend(discoDiv);
+tabsContent.append(ratingsDiv);
+
+// HANDLE SUGGESTED SELL ITEMS
+const otherSuggested = document.createElement('div');
+otherSuggested.innerHTML = `
+  <h2 class="heading__line-center">Other Suggested Items</h2>
+  <div id="suggested-grid" class="flex merch__card"></div>
+`;
+merchSuggested
+  ? document.getElementById('merch-main').after(otherSuggested)
+  : '';
+
+const suggestedGrid = document.getElementById('suggested-grid');
+
+suggestedItems.forEach((item, i) => {
+  const link = item.childNodes[3];
+  const image = item.childNodes[3].childNodes[3];
+  const name = item.childNodes[3].childNodes[7];
+  const price = item.childNodes[5];
+
+  item.classList.remove('col-sm-2', 'col-xs-6');
+  item.classList.add('merch__card-item');
+  link.id = i + 1;
+  link.classList.add('merch__card-link');
+  image.classList.remove('margin_auto');
+  image.classList.add('merch__card-img');
+  image.removeAttribute('width');
+  name.classList.add('merch__card-title');
+  price.classList.remove('center');
+  price.classList.add('merch__card-price');
+  suggestedGrid.appendChild(item);
+});
 
 // Append error messages to info block
 merchSelectError ? merchSizes.appendChild(merchSelectError) : '';
@@ -579,6 +631,13 @@ select ? merchInfoWrapper.appendChild(merchSizes) : '';
 
 merchInfoWrapper.append(addToCartField);
 
+// Pick up in store message
+const pickupMsg = document.getElementById('puo');
+if (pickupMsg) {
+  pickupMsg.innerHTML = `<strong>This item has a handling charge of $15.00. Will not apply to In-Store Pickups.</strong>`;
+}
+
+document.querySelector('.row.merchItem').style.display = 'none';
 // HELPER FUNCTION TO CHANGE SIZE BUTTON TEXT
 function changeLCS(elem) {
   elem.forEach((e) => {

@@ -203,7 +203,6 @@ const tabsHeader = document.querySelector('.tabs-container ul');
 const tabsContent = document.querySelector('.tabs__panels');
 const merchSuggested = document.querySelector('.merchSuggested');
 const suggestedItems = document.querySelectorAll('.suggestedItem');
-const merchRank = document.querySelector('.merchRank');
 const itemRanking = document.getElementById('itemRanking');
 
 // Check for multiple images
@@ -539,21 +538,6 @@ addToCartField.append(qtyWrapper);
 btnWrapper.append(document.querySelector('p.addedToCart'));
 addToCartField.append(btnWrapper);
 
-// CHECK FOR ITEM RATINGS
-const rankCount = document.querySelector('span.rankCount').textContent;
-
-const ratingsTab = document.createElement('li');
-ratingsTab.innerHTML = `
-  <a id="tab-4" href="#ratings">
-    <i class="fa fa-star" aria-hidden="true"></i> Reviews ${rankCount}
-  </a> 
-`;
-
-const ratingsDiv = document.createElement('div');
-ratingsDiv.id = 'ratings';
-ratingsDiv.setAttribute('aria-labelledby', 'tab-4');
-ratingsDiv.appendChild(itemRanking);
-
 // Check if item is discontinued. If yes, show info in tabs
 const discoTab = document.createElement('li');
 discoTab.innerHTML = `
@@ -578,9 +562,27 @@ discoDiv.innerHTML = `
 `;
 
 tabsHeader.prepend(discoTab);
-tabsHeader.append(ratingsTab);
 tabsContent.prepend(discoDiv);
-tabsContent.append(ratingsDiv);
+
+// CHECK FOR ITEM RATINGS
+if (itemRanking) {
+  const rankCount = document.querySelector('span.rankCount').textContent;
+
+  const ratingsTab = document.createElement('li');
+  ratingsTab.innerHTML = `
+    <a id="tab-4" href="#ratings">
+      <i class="fa fa-star" aria-hidden="true"></i> Reviews ${rankCount}
+    </a> 
+  `;
+
+  const ratingsDiv = document.createElement('div');
+  ratingsDiv.id = 'ratings';
+  ratingsDiv.setAttribute('aria-labelledby', 'tab-4');
+  ratingsDiv.appendChild(itemRanking);
+
+  tabsHeader.append(ratingsTab);
+  tabsContent.append(ratingsDiv);
+}
 
 // HANDLE SUGGESTED SELL ITEMS
 const otherSuggested = document.createElement('div');

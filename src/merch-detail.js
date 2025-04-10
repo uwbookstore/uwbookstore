@@ -298,7 +298,7 @@ if (document.querySelector('p.salePrice')) {
 
   priceBlock.insertAdjacentHTML('beforeend', salePriceHtml);
 } else {
-  priceHtml = `
+  const priceHtml = `
     <span>${prodPrice}</span>
   `;
   priceBlock.insertAdjacentHTML('beforeend', priceHtml);

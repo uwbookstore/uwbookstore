@@ -180,6 +180,7 @@
         padding: 0 rem(20);
 
         &#disco,
+        &#discontinued,
         &#shipping {
           max-width: rem(750);
         }
@@ -229,4 +230,8 @@
       }
     }
   }
+}
+
+.row:has(.backCart) {
+  display: none;
 }

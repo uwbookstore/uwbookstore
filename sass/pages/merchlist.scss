@@ -52,6 +52,10 @@ p.merchPrice.red {
   margin-left: rem(10);
 }
 
+.hiddenCartText {
+  width: 100%;
+}
+
 .merch {
   &__card {
     position: relative;
@@ -353,10 +357,10 @@ p.merchPrice.red {
   width: 100%;
 }
 
-.merchItem {
-  max-width: rem(300);
-  margin: rem(20) 0 rem(35);
-}
+// .merchItem {
+//   max-width: rem(300);
+//   margin: rem(20) 0 rem(35);
+// }
 
 .merchItem.col-xs-12 {
   display: flex;

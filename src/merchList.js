@@ -388,14 +388,14 @@ $(document).ready(function () {
     ).insertBefore('#merch__card');
   }
 
-  if (
-    categoryTitle.toLowerCase().substring(0, 10) === 'flash sale' ||
-    categoryTitle.toLowerCase().substring(0, 15) === 'flamingo hoodie'
-  ) {
-    $(`
-        <div class="alert alert-warning text-center" style="max-width: 50%; margin: auto;"><h2 class="mb-0"><strong>SOLD OUT!</strong></h2></div>  
-      `).insertBefore('#merch__card');
-  }
+  // if (
+  //   categoryTitle.toLowerCase().substring(0, 10) === 'flash sale' ||
+  //   categoryTitle.toLowerCase().substring(0, 15) === 'flamingo hoodie'
+  // ) {
+  //   $(`
+  //       <div class="alert alert-warning text-center" style="max-width: 50%; margin: auto;"><h2 class="mb-0"><strong>SOLD OUT!</strong></h2></div>
+  //     `).insertBefore('#merch__card');
+  // }
 
   productName.each(function () {
     const name = $(this).text();

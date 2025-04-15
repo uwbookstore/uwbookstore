@@ -229,6 +229,34 @@
         }
       }
     }
+
+    &.locations {
+      .tabs-nav,
+      [role='tablist'] {
+        display: flex;
+        flex-flow: row wrap;
+        gap: rem(10);
+        justify-content: center;
+        list-style: none;
+
+        li {
+          flex: 0 0 48%;
+
+          a {
+            width: 100%;
+          }
+        }
+
+        @include breakpoint(medium) {
+          li {
+            flex: initial;
+            a {
+              width: auto;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

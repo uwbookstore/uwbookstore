@@ -296,10 +296,6 @@ $(document).ready(function () {
         $(this).text('6C');
       } else if ($(this).text().toLowerCase() === '7 child') {
         $(this).text('7C');
-      } else if ($(this).text().toLowerCase() === '9-11 medium') {
-        $(this).parent().addClass('btn-w-auto');
-      } else if ($(this).text().toLowerCase() === '10-13 large') {
-        $(this).parent().addClass('btn-w-auto');
       } else if ($(this).text().toLowerCase() === '6 x 8 / 6 x 8') {
         $(this).parent().addClass('btn-w-auto');
       } else if ($(this).text().toLowerCase() === '6 x 8 / 8 x 10') {
@@ -331,23 +327,23 @@ $(document).ready(function () {
     sizes.length === 0 &&
     $('span.selectedSize').length
   ) {
-    const singleItem = $('span.selectedSize').text();
+    const singleItem = $('span.selectedSize').text().toLowerCase();
 
-    if (singleItem.toLowerCase() === 'xxx-large') {
+    if (singleItem === 'xxx-large') {
       $(
         '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">3XL</span></div></div>'
       ).appendTo('div#merch-info');
-    } else if (singleItem.toLowerCase() === 'newborn 3 month') {
+    } else if (singleItem === 'newborn 3 month') {
       $(
         '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">NB/3M</span></div></div>'
       ).appendTo('div#merch-info');
-    } else if (singleItem.toLowerCase() === 'large/x-large') {
+    } else if (singleItem === 'large/x-large') {
       $(
         '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">L/XL</span></div></div>'
       ).appendTo('div#merch-info');
     } else {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected btn-w-auto">' +
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">' +
           singleItem +
           '</span></div></div>'
       ).appendTo('div#merch-info');
@@ -564,7 +560,7 @@ $(document).ready(function () {
   $(
     `
       <div class="merch__detail-qty">
-        <label for="merchQTY" class="sr-only">Quantity: </label>
+        <label for="merchQTY">Quantity: </label>
       </div>
     `
   ).appendTo('.merch__detail-add');

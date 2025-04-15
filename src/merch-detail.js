@@ -714,6 +714,10 @@ function changeLCS(elem) {
       e.textContent = '6C';
     } else if (btnText === '7 child') {
       e.textContent = '7C';
+    } else if (btnText === '9-11 medium') {
+      e.parentElement.classList.add('btn-w-auto');
+    } else if (btnText === '10-13 large') {
+      e.parentElement.classList.add('btn-w-auto');
     } else if (btnText === '6 x 8 / 6 x 8') {
       e.parentElement.classList.add('btn-w-auto');
     } else if (btnText === '6 x 8 / 8 x 10') {

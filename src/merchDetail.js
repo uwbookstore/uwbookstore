@@ -12,8 +12,7 @@ $(document).ready(function () {
     `
   ).prependTo('div#ContainDiv');
 
-  // const prodName = $('h2.merchTitle').text();
-  const prodName = $('h1.merchTitle').text();
+  const prodName = $('.merchTitle').text();
   const prodSku = $('p.merchItem span').text();
   const description = $('div.merchDesc').html();
   const merchDisclaimer = $('input.merchDisclaimer');

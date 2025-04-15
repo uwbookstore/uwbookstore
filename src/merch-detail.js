@@ -156,7 +156,7 @@ const merchMain = `
 containDiv.insertAdjacentHTML('afterbegin', merchMain);
 
 const merchInfoWrapper = document.getElementById('merch-info');
-const prodName = document.querySelector('h2.merchTitle')?.textContent || '';
+const prodName = document.querySelector('.merchTitle')?.textContent || '';
 const prodSku = document.querySelector('p.merchItem span')?.textContent || '';
 const description = document.querySelector('.merchDesc')?.innerHTML || '';
 const merchDisclaimer = document.querySelector('input.merchDisclaimer');

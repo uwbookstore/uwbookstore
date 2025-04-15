@@ -304,6 +304,10 @@ $(document).ready(function () {
         $(this).parent().addClass('btn-w-auto');
       } else if ($(this).text().toLowerCase() === 'toddler') {
         $(this).parent().addClass('btn-w-auto');
+      } else if ($(this).text().toLowerCase() === '9-11 medium') {
+        $(this).parent().addClass('btn-w-auto');
+      } else if ($(this).text().toLowerCase() === '10-13 large') {
+        $(this).parent().addClass('btn-w-auto');
       } else {
         $(this).parent().addClass('btn-w-auto');
       }
@@ -343,7 +347,7 @@ $(document).ready(function () {
       ).appendTo('div#merch-info');
     } else {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">' +
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected btn-w-auto">' +
           singleItem +
           '</span></div></div>'
       ).appendTo('div#merch-info');

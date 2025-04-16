@@ -315,6 +315,15 @@ if (loginMsg) {
 
 const myNavbar = document.querySelector('#myNavbar a');
 const loginContainer = document.getElementById('login');
+const logoutContainer = document.createElement('li');
+logoutContainer.id = 'logout';
+logoutContainer.className = 'navbar__links--item';
+logoutContainer.innerHTML = `
+  <a href="${baseUrl}logout" class="navbar__account">
+    <em class="fa fa-sign-out" aria-hidden="true"></em>
+    <span>Log&nbsp;Out</span>
+  </a>
+`;
 // const forgotPasswordLink = document.querySelector('.forgotPasswordLink');
 
 // if (forgotPasswordLink) {
@@ -336,6 +345,7 @@ if (baseUrl === 'https://www.uwbookstore.com/') {
       <span>Account</span>
     </a>
   `;
+    loginContainer.after(logoutContainer);
   }
 } else if (baseUrl === 'https://med.uwbookstore.com/') {
   if (myNavbar.textContent.includes('Login')) {
@@ -352,6 +362,7 @@ if (baseUrl === 'https://www.uwbookstore.com/') {
       <span>Account</span>
     </a>
   `;
+    loginContainer.after(logoutContainer);
   }
 } else if (baseUrl === 'https://text.uwbookstore.com/') {
   if (myNavbar.textContent.includes('Login')) {
@@ -368,6 +379,7 @@ if (baseUrl === 'https://www.uwbookstore.com/') {
       <span>Account</span>
     </a>
   `;
+    loginContainer.after(logoutContainer);
   }
 }
 

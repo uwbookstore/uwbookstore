@@ -750,6 +750,19 @@ $('ul.meganav__tabs-list').each(function () {
   });
 });
 
+// SET SLIDETOGGLE FOR EXCLUSIONS BANNER IN HEADER
+const bannerMsg = document.querySelector('.banner__message');
+bannerMsg.addEventListener('click', function () {
+  const exclusions = document.getElementById('exclusions');
+  slideToggle(exclusions, 500);
+
+  const navbarToggle = document.querySelector('.navbar-toggle');
+  const navbarCollapse = document.querySelector('.navbar-collapse.collapse');
+  !navbarCollapse.classList.contains('collapsed')
+    ? navbarToggle?.classList.add('collapsed')
+    : navbarCollapse?.classList.remove('in');
+});
+
 // TODO: look into below
 // $('.dropdown-toggle').click(function (e) {
 //   e.preventDefault();
@@ -776,15 +789,6 @@ $('ul.meganav__tabs-list').each(function () {
 //   return results[1] || 0;
 // };
 // TODO: look into above
-
-// FIXME:  Maybe leave below as jQuery for now
-// $('.banner__message').click(function () {
-//   $('#exclusions').slideToggle(500);
-//   if (!$('.navbar-toggle').hasClass('collapsed')) {
-//     $('.navbar-toggle').addClass('collapsed');
-//     $('.navbar-collapse.collapse').removeClass('in');
-//   }
-// });
 
 // May not be needed
 // $('.dropdown-toggle').off('focus');

@@ -563,7 +563,7 @@ $(document).ready(function () {
   $(
     `
       <div class="merch__detail-qty">
-        <label for="merchQTY">Quantity: </label>
+        <label for="merchQTY" class="sr-only">Quantity: </label>
       </div>
     `
   ).appendTo('.merch__detail-add');

@@ -752,16 +752,18 @@ $('ul.meganav__tabs-list').each(function () {
 
 // SET SLIDETOGGLE FOR EXCLUSIONS BANNER IN HEADER
 const bannerMsg = document.querySelector('.banner__message');
-bannerMsg.addEventListener('click', function () {
-  const exclusions = document.getElementById('exclusions');
-  slideToggle(exclusions, 500);
+if (bannerMsg) {
+  bannerMsg.addEventListener('click', function () {
+    const exclusions = document.getElementById('exclusions');
+    slideToggle(exclusions, 500);
 
-  const navbarToggle = document.querySelector('.navbar-toggle');
-  const navbarCollapse = document.querySelector('.navbar-collapse.collapse');
-  !navbarCollapse.classList.contains('collapsed')
-    ? navbarToggle?.classList.add('collapsed')
-    : navbarCollapse?.classList.remove('in');
-});
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbarCollapse = document.querySelector('.navbar-collapse.collapse');
+    !navbarCollapse.classList.contains('collapsed')
+      ? navbarToggle?.classList.add('collapsed')
+      : navbarCollapse?.classList.remove('in');
+  });
+}
 
 // TODO: look into below
 // $('.dropdown-toggle').click(function (e) {

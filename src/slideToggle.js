@@ -19,14 +19,14 @@ function slideUp(element, duration = 400) {
 
   window.setTimeout(() => {
     element.style.display = 'none';
-    element.style.removeProperty = 'height';
-    element.style.removeProperty = 'padding-top';
-    element.style.removeProperty = 'padding-bottom';
-    element.style.removeProperty = 'margin-top';
-    element.style.removeProperty = 'margin-bottom';
-    element.style.removeProperty = 'overflow';
-    element.style.removeProperty = 'transition-duration';
-    element.style.removeProperty = 'transition-property';
+    element.style.removeProperty('height');
+    element.style.removeProperty('padding-top');
+    element.style.removeProperty('padding-bottom');
+    element.style.removeProperty('margin-top');
+    element.style.removeProperty('margin-bottom');
+    element.style.removeProperty('overflow');
+    element.style.removeProperty('transition-duration');
+    element.style.removeProperty('transition-property');
   }, duration);
 }
 

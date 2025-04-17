@@ -20,10 +20,9 @@ if (
   window.location.href.toLowerCase().search(/merchlist/) !== -1 ||
   window.location.href.toLowerCase().search(/newarrivals/) !== -1
 ) {
+  const searched = window.location.search.split('=');
+  const searchTerm = searched[2].replace(/%20/g, ' ');
   if (categoryTitle.textContent.toLocaleLowerCase() === 'search all') {
-    const searched = window.location.search.split('=');
-    const searchTerm = searched[2].replace(/%20/g, ' ');
-
     // HANDLE NO SEARCH RESULTS RETURNED
     if (noListItems) {
       noListItems.style.display = 'none'; // Hide MBS div
@@ -111,6 +110,35 @@ if (
     searchCatWrapRow.after(noResults);
   }
 
+  // HANDLE NO SEARCH RESULTS RETURNED
+  if (noListItems) {
+    noListItems.style.display = 'none'; // Hide MBS div
+    categoryTitle.style.display = 'none'; // Hide MBS page title
+
+    if (baseUrl === 'https://text.uwbookstore.com/') {
+      noResults.innerHTML = `
+        <div class="empty-results">
+          <h1>Sorry, we couldn't find any products.</h1>
+          <p>We were unable to find results for <strong>${searchTerm}</strong>. Please check your spelling or try searching for similar terms.</p>
+        </div>
+        
+        <div class="text-center">
+          <a class="btn btn-primary" href="https://text.uwbookstore.com/SelectTermDept">Search Textbooks</a>
+        </div>
+        `;
+    } else {
+      noResults.innerHTML = `
+        <div class="empty-results">
+          <h1>Sorry, we couldn't find any products.</h1>
+          <p>We were unable to find results for <strong>${searchTerm}</strong>. Please check your spelling or try searching for similar terms.</p>
+        </div>
+        `;
+    }
+
+    searchCatWrapRow.after(noResults);
+  }
+  // END - NO SEARCH RESULTS FOUND
+
   // FIX CATEGORY TITLES SINCE MBS HAS CHARACTER LIMITS
   if (
     categoryTitle.textContent.toLowerCase().substring(0, 14) ===
@@ -153,8 +181,8 @@ if (
     <label style="display: block;">Sort By</label>  
   `;
 
-  sortBy ? sortBy.appendChild(merchSortBy) : null;
-  sortBy ? merchFilterWrap.appendChild(sortBy) : null;
+  merchSortBy ? sortBy.appendChild(merchSortBy) : null;
+  merchSortBy ? merchFilterWrap.appendChild(sortBy) : null;
 
   const shoppingCartBtn = document.createElement('div');
   shoppingCartBtn.className = 'merch__filter--item';

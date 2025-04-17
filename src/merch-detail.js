@@ -387,9 +387,12 @@ merchSizes.className = 'merch__detail-size';
 
 const sizeGuideDiv = document.createElement('label');
 sizeGuideDiv.className = 'merch__detail-size-label';
-select
-  ? (sizeGuideDiv.textContent = 'Make Selection:')
-  : (sizeGuideDiv.textContent = 'Size |');
+
+if (select || logos || colors) {
+  sizeGuideDiv.textContent = 'Make Selection:';
+} else {
+  sizeGuideDiv.textContent = 'Size |';
+}
 
 // ADD SIZE CHART LINK TO PRODUCT AS NEEDED
 let sizeChartUrl, sizeChartBrand;
@@ -480,15 +483,16 @@ sizeChartLink.title = `${sizeChartBrand} Size Guide`;
 
 if (sizes || logos || colors) {
   let pickerArray;
-  sizes
-    ? (pickerArray = sizes.innerHTML)
-    : logos
-      ? (pickerArray = logos.innerHTML)
-      : (pickerArray = colors.innerHTML);
+  logos
+    ? (pickerArray = logos.innerHTML)
+    : colors
+      ? (pickerArray = colors.innerHTML)
+      : (pickerArray = sizes.innerHTML);
   merchSizes.innerHTML = `
   <div class="flex merch__detail-size-picker">${pickerArray}</div>
 `;
-  merchSizes.prepend(sizeChartLink);
+
+  sizes ? merchSizes.prepend(sizeChartLink) : null;
   merchSizes.prepend(sizeGuideDiv);
 } else if (!logos && !sizes && !colors && singleItem) {
   let singleItemText = singleItem.textContent.toLowerCase();
@@ -529,7 +533,6 @@ qtyWrapper.innerHTML = `<label for="merchQTY" class="sr-only">Quantity: </label>
 const btnWrapper = document.createElement('div');
 btnWrapper.className = 'merch__detail-add-btn';
 const merchSku = document.getElementById('merch-sku');
-noAddCart ? infoBlock.insertBefore(noAddCart, merchSku) : '';
 
 if (!noAddCart) {
   addToCartBtn
@@ -542,6 +545,8 @@ if (!noAddCart) {
   btnWrapper.append(document.querySelector('p.addedToCart'));
   addToCartField.append(btnWrapper);
 } else {
+  btnWrapper.append(noAddCart);
+  addToCartField.append(btnWrapper);
   noAddCart.classList.add('mt-2', 'alert', 'alert-warning', 'text-center');
 }
 
@@ -635,9 +640,13 @@ merchInfoWrapper.append(infoBlock);
 merchDisclaimer ? merchInfoWrapper.appendChild(merchDisclaimerHtml) : '';
 merchDisclaimer ? merchDisclaimerHtml.after(disclaimerError) : '';
 
-sizes ? merchInfoWrapper.appendChild(merchSizes) : '';
-singleItem ? merchInfoWrapper.appendChild(merchSizes) : '';
-select ? merchInfoWrapper.appendChild(merchSizes) : '';
+if (!noAddCart) {
+  logos ? merchInfoWrapper.appendChild(merchSizes) : '';
+  colors ? merchInfoWrapper.appendChild(merchSizes) : '';
+  sizes ? merchInfoWrapper.appendChild(merchSizes) : '';
+  singleItem ? merchInfoWrapper.appendChild(merchSizes) : '';
+  select ? merchInfoWrapper.appendChild(merchSizes) : '';
+}
 
 merchInfoWrapper.append(addToCartField);
 
@@ -654,8 +663,12 @@ document.querySelector('.mainItem')
   ? (document.querySelector('.mainItem').style.display = 'none')
   : '';
 document.querySelector('.page_header')
-  ? document.querySelector('.page_header')
+  ? (document.querySelector('.page_header').style.display = 'none')
   : '';
+document.querySelector('.backCart')
+  ? (document.querySelector('.backCart').style.display = 'none')
+  : '';
+
 // HELPER FUNCTION TO CHANGE SIZE BUTTON TEXT
 function changeLCS(elem) {
   elem.forEach((e) => {

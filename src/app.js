@@ -765,6 +765,16 @@ if (bannerMsg) {
   });
 }
 
+const emailOptCheckbox = document.querySelectorAll('.newCheckboxText');
+
+emailOptCheckbox.forEach((e) => {
+  e.textContent.toLowerCase().trim() ===
+  'i want to receive emails particular to my school.'
+    ? (e.textContent =
+        'I want to receive emails related to my school & the University Book Store.')
+    : null;
+});
+
 // TODO: look into below
 // $('.dropdown-toggle').click(function (e) {
 //   e.preventDefault();

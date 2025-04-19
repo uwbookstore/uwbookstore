@@ -521,13 +521,10 @@ p.sale-info {
   letter-spacing: rem(1);
 }
 
-// .modal-body {
-//   .addedToCartDeposit,
-//   .addedToCartSKU,
-//   .addedToCartQTY {
-//     display: none;
-//   }
-// }
+input.merchDisclaimer + span.checkmark {
+  position: initial;
+  background-color: transparent;
+}
 
 .lcsSizeWrapper {
   .btn.typeCodeOption {

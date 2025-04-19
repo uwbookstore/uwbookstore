@@ -263,16 +263,48 @@ if (
     }
 
     // SPECIAL PRICING NOTE FOR ELECTRONICS
-    if (
-      categoryTitle.textContent.toLowerCase().substring(0, 7) === 'macbook' ||
-      categoryTitle.textContent.toLowerCase().substring(0, 4) === 'ipad' ||
-      categoryTitle.textContent.toLowerCase().includes('laptop')
-    ) {
+    if (categoryTitle.textContent.toLowerCase().substring(0, 4) === 'ipad') {
       pageBanner.classList.add('alert', 'alert-info', 'text-center');
       pageBanner.innerHTML = `
         <p class="mb-0"><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p>
       `;
       merchFilterWrap.after(pageBanner);
+    }
+
+    // ADD MACBOOK/DELL CROSSLINKS
+    if (baseUrl === 'https://www.uwbookstore.com/') {
+      if (
+        categoryTitle.textContent.toLowerCase().substring(0, 16) ===
+        'dell laptop'
+      ) {
+        pageBanner.innerHTML = `
+        <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li></ul>
+        <div class="alert alert-info text-center">
+          <p class="mb-0"><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p>
+        </div>
+      `;
+        merchFilterWrap.after(pageBanner);
+      } else if (
+        categoryTitle.textContent.toLowerCase().substring(0, 7) === 'macbook'
+      ) {
+        pageBanner.innerHTML = `
+        <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li></ul>
+        <div class="alert alert-info text-center">
+          <p class="mb-0"><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p>
+        </div>
+      `;
+        merchFilterWrap.after(pageBanner);
+      } else if (
+        categoryTitle.textContent.toLowerCase().substring(0, 6) === 'laptop'
+      ) {
+        pageBanner.innerHTML = `
+        <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li></ul>
+        <div class="alert alert-info text-center">
+          <p class="mb-0"><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p>
+        </div>
+      `;
+        merchFilterWrap.after(pageBanner);
+      }
     }
 
     // ADD RED SHIRT HELP BUTTON
@@ -303,14 +335,6 @@ if (
     });
   }
 } // END OF MERCHLIST IF STATEMENT
-
-/* ********************************************************** */
-/* ********************************************************** */
-/* ********************************************************** */
-/* ********************************************************** */
-/* ********************************************************** */
-/* ********************************************************** */
-/* ********************************************************** */
 
 // USE JQUERY TO CHECK PAGE ITEMS LENGTH
 // IF ONLY ONE PAGE OF RESULTS, HIDE PAGINATION

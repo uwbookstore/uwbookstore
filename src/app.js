@@ -477,6 +477,21 @@ if (window.location.href.toLowerCase().search('/shoppingcart') !== -1) {
     document.querySelector('.validation-summary-errors').style.display = 'none';
   }
 
+  // Replace MBS default Image Not Available gif
+  const merchWrapperImage = document.querySelectorAll('.merch-wrapper img');
+
+  if (merchWrapperImage) {
+    merchWrapperImage.forEach((image) => {
+      if (image.getAttribute('src').includes('/images/notavail.gif')) {
+        image.setAttribute(
+          'src',
+          'https://i.univbkstr.com/v3/img/misc/no-image-thumb.jpg'
+        );
+        image.setAttribute('alt', 'Image not available');
+      }
+    });
+  }
+
   // Show alerts to show user Promo information
   const promoAlert = document.createElement('div');
   promoAlert.classList.add('row');

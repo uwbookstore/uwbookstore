@@ -628,6 +628,26 @@ suggestedItems.forEach((item, i) => {
   suggestedGrid.appendChild(item);
 });
 
+// ADD A CLOSE ICON TO ERROR MESSAGE
+// ADD CLICK EVENT HANDLER TO ICON
+const closeIcon = document.createElement('i');
+closeIcon.classList.add('close-p', 'fa', 'fa-times');
+disclaimerError ? disclaimerError.appendChild(closeIcon) : null;
+merchSelectError ? merchSelectError.appendChild(closeIcon) : null;
+
+document.querySelectorAll('.close-p').forEach((el) => {
+  el.addEventListener('click', () => {
+    const parentP = el.closest('p');
+    if (parentP) {
+      parentP.style.transition = 'opacity 0.4s ease';
+      parentP.style.opacity = 0;
+      setTimeout(() => {
+        parentP.style.display = 'none';
+      }, 400); // Match fade duration
+    }
+  });
+});
+
 // Append error messages to info block
 merchSelectError ? merchSizes.appendChild(merchSelectError) : '';
 addGiftErrorLCS ? merchSizes.appendChild(addGiftErrorLCS) : '';

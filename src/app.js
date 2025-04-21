@@ -458,7 +458,11 @@ if (listContainer) {
 const ordersPanelBody = document.querySelector('div#ordersPanelBody');
 if (ordersPanelBody && !ordersPanelBody.querySelector('div.oneOrder')) {
   const noOrdersMessage = document.createElement('em');
-  noOrdersMessage.innerHTML = `You have no orders.<br>If you are looking for a textbook order, please login at <a href="https://text.uwbookstore.com/login">text.uwbookstore.com</a>`;
+  if (baseUrl !== 'https://text.uwbookstore.com/') {
+    noOrdersMessage.innerHTML = `You have no orders.<br>If you are looking for a textbook order, please login at <a href="https://text.uwbookstore.com/login">text.uwbookstore.com</a>`;
+  } else {
+    noOrdersMessage.innerHTML = `You have no orders.<br>If you are looking for a clothing or gift order, please login at <a href="https://www.uwbookstore.com/login">www.uwbookstore.com</a>`;
+  }
   ordersPanelBody.appendChild(noOrdersMessage);
 }
 

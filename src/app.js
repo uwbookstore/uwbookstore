@@ -330,57 +330,21 @@ logoutContainer.innerHTML = `
 //   forgotPasswordLink.classList.add('btn', 'btn-text');
 // }
 
-if (baseUrl === 'https://www.uwbookstore.com/') {
-  if (myNavbar.textContent.includes('Login')) {
-    loginContainer.innerHTML = `
-    <a href="https://www.uwbookstore.com/login" class="navbar__account">
-      <em class="fa fa-user" aria-hidden="true"></em>
-      <span>Login</span>
-    </a>
-  `;
-  } else {
-    loginContainer.innerHTML = `
-    <a href="https://www.uwbookstore.com/customeraccount?s=www.uwbookstore.com" class="navbar__account">
-      <em class="fa fa-user" aria-hidden="true"></em>
-      <span>Account</span>
-    </a>
-  `;
-    loginContainer.after(logoutContainer);
-  }
-} else if (baseUrl === 'https://med.uwbookstore.com/') {
-  if (myNavbar.textContent.includes('Login')) {
-    loginContainer.innerHTML = `
-    <a href="https://med.uwbookstore.com/login" class="navbar__account">
-      <em class="fa fa-user" aria-hidden="true"></em>
-      <span>Login</span>
-    </a>
-  `;
-  } else {
-    loginContainer.innerHTML = `
-    <a href="https://med.uwbookstore.com/customeraccount?s=med.uwbookstore.com" class="navbar__account">
-      <em class="fa fa-user" aria-hidden="true"></em>
-      <span>Account</span>
-    </a>
-  `;
-    loginContainer.after(logoutContainer);
-  }
-} else if (baseUrl === 'https://text.uwbookstore.com/') {
-  if (myNavbar.textContent.includes('Login')) {
-    loginContainer.innerHTML = `
-    <a href="https://text.uwbookstore.com/login" class="navbar__account">
-      <em class="fa fa-user" aria-hidden="true"></em>
-      <span>Login</span>
-    </a>
-  `;
-  } else {
-    loginContainer.innerHTML = `
-    <a href="https://text.uwbookstore.com/customeraccount?s=text.uwbookstore.com" class="navbar__account">
-      <em class="fa fa-user" aria-hidden="true"></em>
-      <span>Account</span>
-    </a>
-  `;
-    loginContainer.after(logoutContainer);
-  }
+if (myNavbar.textContent.toLowerCase().includes('login')) {
+  loginContainer.innerHTML = `
+  <a href="${baseUrl}login" class="navbar__account">
+    <em class="fa fa-user" aria-hidden="true"></em>
+    <span>Login</span>
+  </a>
+`;
+} else {
+  loginContainer.innerHTML = `
+  <a href="${baseUrl}customeraccount?s=${subUrl}" class="navbar__account">
+    <em class="fa fa-user" aria-hidden="true"></em>
+    <span>Account</span>
+  </a>
+`;
+  loginContainer.after(logoutContainer);
 }
 
 // Lost password form rewrite
@@ -397,7 +361,6 @@ const lostPasswordPrevLink = document.querySelector(
 );
 
 if (lostPasswordPanelHeader) {
-  console.log('this should work');
   lostPasswordPanelHeader.textContent = 'Forgot Your Password?';
 }
 
@@ -448,22 +411,26 @@ const logoutText = document.querySelector('#logoutPanelBody .logoutText');
 
 if (logoutPanel) {
   logoutPanelHeader.innerHTML = `
-    <h1 class="heading__line-center"><span>You are now logged out</span></h1>
+    <h2 class="panel-header">You are now logged out</h2>
   `;
+  document.querySelector('.page_header').style.display = 'none';
 
-  if (baseUrl === 'https://www.uwbookstore.com/') {
-    logoutText.innerHTML = `
-      <div class="login__btns"><a href="https://www.uwbookstore.com/login" class="btn btn-secondary">Log Back In</a><a href="https://www.uwbookstore.com/home" class="btn btn-primary">UW Book Store</a></div>
-    `;
-  } else if (baseUrl === 'https://med.uwbookstore.com/') {
-    logoutText.innerHTML = `
-      <div class="login__btns"><a href="https://med.uwbookstore.com/login" class="btn btn-secondary">Log Back In</a><a href="https://med.uwbookstore.com/home" class="btn btn-primary">Home</a></div>
-    `;
-  } else if (baseUrl === 'https://text.uwbookstore.com/') {
-    logoutText.innerHTML = `
-      <div class="login__btns"><a href="https://text.uwbookstore.com/login" class="btn btn-secondary">Log Back In</a><a href="https://text.uwbookstore.com/home" class="btn btn-primary">Home</a></div>
-    `;
-  }
+  logoutText.innerHTML = `
+    <div class="login__btns"><a href="${baseUrl}login" class="btn btn-secondary">Log Back In</a><a href="${baseUrl}home" class="btn btn-primary">Home</a></div>
+  `;
+}
+
+let custHelpLinkText;
+let btnText = 'Shop Clothing & Gifts';
+if (baseUrl === 'https://www.uwbookstore.com/') {
+  custHelpLinkText = 'Customer-Help';
+} else if (baseUrl === 'https://text.uwbookstore.com/') {
+  custHelpLinkText = 'SiteText?id=2369';
+  btnText = 'Shop Textbooks';
+} else if (baseUrl === 'https://med.uwbookstore.com/') {
+  custHelpLinkText = 'SiteText?id=62781';
+} else {
+  custHelpLinkText = 'SiteText?id=55059';
 }
 
 // Shopping cart page
@@ -520,50 +487,21 @@ if (window.location.href.toLowerCase().search('/shoppingcart') !== -1) {
     : null;
 
   // Make the cart look a bit prettier when empty
-  if (
-    (itemCount.textContent === '0' &&
-      baseUrl === 'https://www.uwbookstore.com/') ||
-    (itemCount.textContent === '0' &&
-      baseUrl === 'https://insitestore2.mbsbooks.com/uwmadison/')
-  ) {
+  if (itemCount.textContent === '0') {
     cartCardLeft.innerHTML = `
-      <div class="cart__container"><i class="cart__icon fa fa-shopping-cart" aria-hidden="true"></i>
-        <p class="cart__p">Your shopping cart is empty.</p><a class="btn btn-primary cart__btn"
-          href="https://www.uwbookstore.com/home" title="Shop Clothing &amp; Gifts">Shop Clothing &amp; Gifts</a>
+      <div class="cart__container">
+        <i class="cart__icon fa fa-shopping-cart" aria-hidden="true"></i>
+        <p class="cart__p">Your shopping cart is empty.</p>
+        <a class="btn btn-primary cart__btn" href="${baseUrl}home">
+          ${btnText}
+        </a>
         <div class="cart__account">
-          <p><a class="btn btn-text" href="https://www.uwbookstore.com/Customer-Help" title="Customer Help">Customer
-              Help</a>
-          </p><span class="phone">(608) 257-3784</span> or <span class="phone">(800) 993-2665</span>
-        </div>
-      </div>
-    `;
-  } else if (
-    itemCount.textContent === '0' &&
-    baseUrl === 'https://med.uwbookstore.com/'
-  ) {
-    cartCardLeft.innerHTML = `
-      <div class="cart__container"><i class="cart__icon fa fa-shopping-cart" aria-hidden="true"></i>
-        <p class="cart__p">Your shopping cart is empty.</p><a class="btn btn-primary cart__btn"
-          href="https://med.uwbookstore.com/home" title="Shop Clothing &amp; Gifts">Shop Clothing &amp; Gifts</a>
-        <div class="cart__account">
-          <p><a class="btn btn-text" href="https://med.uwbookstore.com/SiteText?id=62781" title="Customer Help">Customer
-              Help</a>
-          </p><span class="phone">(608) 257-3784</span> or <span class="phone">(800) 993-2665</span>
-        </div>
-      </div>
-    `;
-  } else if (
-    itemCount.textContent === '0' &&
-    baseUrl === 'https://text.uwbookstore.com/'
-  ) {
-    cartCardLeft.innerHTML = `
-      <div class="cart__container"><i class="cart__icon fa fa-shopping-cart" aria-hidden="true"></i>
-        <p class="cart__p">Your shopping cart is empty.</p><a class="btn btn-primary cart__btn"
-          href="https://text.uwbookstore.com/home" title="Shop Clothing &amp; Gifts">Shop Clothing &amp; Gifts</a>
-        <div class="cart__account">
-          <p><a class="btn btn-text" href="https://text.uwbookstore.com/SiteText?id=62781" title="Customer Help">Customer
-              Help</a>
-          </p><span class="phone">(608) 257-3784</span> or <span class="phone">(800) 993-2665</span>
+          <p>
+            <a class="btn btn-text" href="${baseUrl}${custHelpLinkText}">
+              Customer Help
+            </a>
+          </p>
+            <a href="tel:+16082573784">(608) 257-3784</a> or <a href="tel:+18009932665">(800) 993-2665</a>
         </div>
       </div>
     `;
@@ -613,37 +551,16 @@ document.querySelectorAll('div.orderPanel').forEach((orderPanel) => {
 });
 
 // Set inner HTML for div#list-container
-const listContainer = document.querySelector('div#list-container');
+const listContainer = document.getElementById('list-container');
+
 if (listContainer) {
-  if (
-    baseUrl === 'https://www.uwbookstore.com/' ||
-    baseUrl === 'https://insitestore2.mbsbooks.com/uwmadison/' ||
-    baseUrl === 'http://127.0.0.1:8080/'
-  ) {
-    listContainer.innerHTML = `
+  listContainer.innerHTML = `
     <h2>Customer Help</h2>
     <div class="list-group">
-      <a href="https://www.uwbookstore.com/Customer-Help#faq" class="list-group-item textc">View our FAQ</a>
-      <a href="https://www.uwbookstore.com/Customer-Help#return" class="list-group-item textc">Return an order</a>
+      <a href="${baseUrl}${custHelpLinkText}#faq" class="list-group-item textc">View our FAQ</a>
+      <a href="${baseUrl}${custHelpLinkText}#return" class="list-group-item textc">Return an order</a>
     </div>  
   `;
-  } else if (baseUrl === 'https://med.uwbookstore.com/') {
-    listContainer.innerHTML = `
-    <h2>Customer Help</h2>
-    <div class="list-group">
-      <a href="https://med.uwbookstore.com/SiteText?id=62781#faq" class="list-group-item textc">View our FAQ</a>
-      <a href="https://med.uwbookstore.com/SiteText?id=62781#return" class="list-group-item textc">Return an order</a>
-    </div>  
-  `;
-  } else if (baseUrl === 'https://text.uwbookstore.com/') {
-    listContainer.innerHTML = `
-    <h2>Customer Help</h2>
-    <div class="list-group">
-      <a href="https://text.uwbookstore.com/SiteText?id=2369#faq" class="list-group-item textc">View our FAQ</a>
-      <a href="https://text.uwbookstore.com/SiteText?id=2369#return" class="list-group-item textc">Return an order</a>
-    </div>  
-  `;
-  }
 }
 
 // Check if div#ordersPanelBody contains div.oneOrder
@@ -657,8 +574,7 @@ if (ordersPanelBody && !ordersPanelBody.querySelector('div.oneOrder')) {
 // If the URL contains "orderdetails", append a question link
 if (window.location.href.includes('orderdetails')) {
   const questionLink = document.createElement('a');
-  // const logoutLink = document.querySelector('.logoutLink');
-  // logoutLink.style.display = 'none';
+
   if (baseUrl === 'https://www.uwbookstore.com/') {
     questionLink.href = 'https://www.uwbookstore.com/Contact';
   } else if (baseUrl === 'https://med.uwbookstore.com/') {

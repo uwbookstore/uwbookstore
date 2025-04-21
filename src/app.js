@@ -117,107 +117,6 @@ fillInnerContent('coupon-code', '434', 'text');
 fillInnerContent('coupon-expiration', '6.30.25', 'text');
 // End of coupon code update
 
-/**
- * ACCESSIBLE TABS
- */
-// const tabsContainer = document.querySelector('.tabs-container');
-
-// if (tabsContainer) {
-//   const tabsList = tabsContainer.querySelector('ul');
-//   const tabButtons = tabsList.querySelectorAll('a');
-//   const tabPanels = tabsContainer.querySelectorAll('.tabs__panels > div');
-
-//   tabsList.setAttribute('role', 'tablist');
-
-//   tabsList.querySelectorAll('li').forEach((listitem) => {
-//     listitem.setAttribute('role', 'presentation');
-//   });
-
-//   tabButtons.forEach((tab, index) => {
-//     tab.setAttribute('role', 'tab');
-//     if (index === 0) {
-//       tab.setAttribute('aria-selected', 'true');
-//       // we'll add something here
-//     } else {
-//       tab.setAttribute('tabindex', '-1');
-//       tabPanels[index].setAttribute('hidden', '');
-//     }
-//   });
-
-//   tabPanels.forEach((panel) => {
-//     panel.setAttribute('role', 'tabpanel');
-//     panel.setAttribute('tabindex', '0');
-//   });
-
-//   tabsContainer.addEventListener('click', (e) => {
-//     const clickedTab = e.target.closest('a');
-//     if (!clickedTab) return;
-//     e.preventDefault();
-
-//     switchTab(clickedTab);
-//   });
-
-//   tabsContainer.addEventListener('keydown', (e) => {
-//     switch (e.key) {
-//       case 'ArrowLeft':
-//         moveLeft();
-//         break;
-//       case 'ArrowRight':
-//         moveRight();
-//         break;
-//       case 'Home':
-//         e.preventDefault();
-//         switchTab(tabButtons[0]);
-//         break;
-//       case 'End':
-//         e.preventDefault();
-//         switchTab(tabButtons[tabButtons.length - 1]);
-//         break;
-//     }
-//   });
-
-//   function moveLeft() {
-//     const currentTab = document.activeElement;
-//     if (!currentTab.parentElement.previousElementSibling) {
-//       switchTab(tabButtons[tabButtons.length - 1]);
-//     } else {
-//       switchTab(
-//         currentTab.parentElement.previousElementSibling.querySelector('a')
-//       );
-//     }
-//   }
-
-//   function moveRight() {
-//     const currentTab = document.activeElement;
-//     if (!currentTab.parentElement.nextElementSibling) {
-//       switchTab(tabButtons[0]);
-//     } else {
-//       switchTab(currentTab.parentElement.nextElementSibling.querySelector('a'));
-//     }
-//   }
-
-//   function switchTab(newTab) {
-//     const activePanelId = newTab.getAttribute('href');
-//     const activePanel = tabsContainer.querySelector(activePanelId);
-
-//     tabButtons.forEach((button) => {
-//       button.setAttribute('aria-selected', false);
-//       button.setAttribute('tabindex', '-1');
-//     });
-
-//     tabPanels.forEach((panel) => {
-//       panel.setAttribute('hidden', true);
-//     });
-
-//     activePanel.removeAttribute('hidden', false);
-
-//     newTab.setAttribute('aria-selected', true);
-//     newTab.setAttribute('tabindex', '0');
-//     newTab.focus();
-//   }
-// }
-// END ACCESSIBLE TABS
-
 /*
  * fix various MBS classes
  **/
@@ -324,11 +223,6 @@ logoutContainer.innerHTML = `
     <span>Log&nbsp;Out</span>
   </a>
 `;
-// const forgotPasswordLink = document.querySelector('.forgotPasswordLink');
-
-// if (forgotPasswordLink) {
-//   forgotPasswordLink.classList.add('btn', 'btn-text');
-// }
 
 if (myNavbar.textContent.toLowerCase().includes('login')) {
   loginContainer.innerHTML = `
@@ -399,9 +293,6 @@ if (accountUL) {
     }
   });
 }
-
-// Order history page
-// TODO: Refactor after testing
 
 // Logout page
 // Rewrite DOM - MBS default is ugly
@@ -575,13 +466,8 @@ if (ordersPanelBody && !ordersPanelBody.querySelector('div.oneOrder')) {
 if (window.location.href.includes('orderdetails')) {
   const questionLink = document.createElement('a');
 
-  if (baseUrl === 'https://www.uwbookstore.com/') {
-    questionLink.href = 'https://www.uwbookstore.com/Contact';
-  } else if (baseUrl === 'https://med.uwbookstore.com/') {
-    questionLink.href = 'https://med.uwbookstore.com/Contact';
-  } else if (baseUrl === 'https://text.uwbookstore.com/') {
-    questionLink.href = 'https://text.uwbookstore.com/Contact';
-  }
+  questionLink.href = `${baseUrl}Contact`;
+
   questionLink.className = 'list-group-item textc order_q';
   questionLink.textContent = 'Question about this order?';
 
@@ -590,14 +476,6 @@ if (window.location.href.includes('orderdetails')) {
     listGroup.appendChild(questionLink);
   }
 }
-
-/*********************************************************/
-/*********************************************************/
-/*********************************************************/
-/*********************************************************/
-/*********************************************************/
-/*********************************************************/
-/*********************************************************/
 
 // TODO: test below to see if it's necessary
 addEventListenerIfExists('.dropdown-menu', 'click', (e) => {

@@ -1433,6 +1433,89 @@
 
 
 
+        <script type="21b7f871b0d9219b4f457fbe-text/javascript">
+                const ga4_items = [];
+                let ga4_items_temp = [];
+                const lga4_module = ga4.modules.merchdetail;
+                $(document).ready(function () {
+                    // add merchandise item
+                    $('.merchInfo').each(function () {
+                        const item = new Object();
+        
+                        item.item_id = ga4.safeTrim($(this).find('.ga4-sku').val());
+                        item.item_name = ga4.safeTrim(ga4.stripHtml($(this).find('.ga4-name').val()));
+        
+                        const salePrice = parseFloat($(this).find('.ga4-salePrice').val());
+                        const regularPrice = parseFloat($(this).find('.ga4-price').val());
+                        const gmPromo = $(this).find('.ga4-discount').val();
+                        var discount = 0.00; // initialize to 0 to start, will update if there is a sale
+                        var finalPrice = regularPrice; // initialize to regularPrice to start. this will change if the item is on sale.
+        
+                        if (salePrice > 0) {
+                            // Then our item is on sale
+                            discount = Math.abs(regularPrice - salePrice);
+                            finalPrice = salePrice;
+                        }
+        
+                        // set our price to send (this should be the regular price minus sale price aka real potential revenue from the item)
+                        item.price = finalPrice;
+        
+                        //if (discount > 0)
+                        //    item.discount = discount;
+        
+                        //if (gmPromo != '')
+                        //    item.coupon = ga4.safeTrim(gmPromo);
+        
+                        item.affiliation = ga4.safeTrim($(this).find('.ga4-affiliation').val());
+        
+                        if (item.item_id.includes('W')) {
+                            $(this).find('.ga4-isWebSku').val('true');
+                            item._isWebSku = true;
+                        }
+        
+                        const nonMerchandise = $(this).find('.ga4-isNonMerch').val();
+        
+                        if (nonMerchandise && nonMerchandise != '') {
+                            const nmVal = nonMerchandise.toLowerCase() == 'true' ? true : false;
+        
+                            if (nmVal) {
+                                $(this).find('.ga4-isWebSku').val('true');
+                                item._isWebSku = true;
+                            }
+                        }
+                        
+                        item.item_variant = 'merchandise';
+                        item.quantity = 1;
+        
+                        ga4_items.push(item);
+                    });
+        
+                    if (lga4_module.view_item.enabled) {
+                        ga4.loadScript(lga4_module.view_item.script, function () {
+                            if (!ga4_items || !ga4_items.length)
+                                return;
+        
+                            // send event
+                            if (ga4.enabled)
+                                ga4.view_item(ga4_items);
+                        });
+                    }
+        
+                    if (lga4_module.add_to_cart.enabled)
+                        ga4.loadScript(lga4_module.add_to_cart.script);
+        
+                    if (lga4_module.add_to_wishlist.enabled)
+                        ga4.loadScript(lga4_module.add_to_wishlist.script);
+                });
+            </script>
+        <input type="hidden" class="ga4-sku-form" value="" />
+        <input type="hidden" class="ga4-name-form" value="" />
+        <input type="hidden" class="ga4-discount-form" value="" />
+        <input type="hidden" class="ga4-affiliation-form" value="" />
+        <input type="hidden" class="ga4-price-form" value="" />
+        <input type="hidden" class="ga4-quantity-form" value="" />
+        <input type="hidden" class="ga4-category-form" value="" />
+        <input type="hidden" class="ga4-location" value="merchdetail" />
 
 
 
@@ -1442,94 +1525,118 @@
         <!--Breadcrumbs-->
 
         <ul class="breadcrumb background_none">
-          <li> <a Class="small" href="https://insitestore2.mbsbooks.com/uwmadison/merchandise?mc_id=-1"> Merchandise
+          <li> <a Class="small" href="https://www.uwbookstore.com/merchandise?mc_id=4270"> Merchandise
               Categories</a></li>
-          <li> <a Class="small" href="https://insitestore2.mbsbooks.com/uwmadison/merchlist?ID=10318"> Men&#39;s
-              Long Sleeve Tees</a></li>
-          <li> <a Class="small"> Champion "Bucky" Long Sleeve T-Shirt (White)</a></li>
+          <li> <a Class="small" href="https://www.uwbookstore.com/merchlist?ID=28368"> Tech</a></li>
+          <li> <a Class="small"> MacBook Air 15" (M4)</a></li>
 
         </ul>
 
         <!--Breadcrumbs End-->
-        <a class="floatr right15 top-50 pageHelp"
-          href="https://insitestore2.mbsbooks.com/uwmadison/help/MerchandiseDetail.htm">Help</a>
-        <form
-          action="/uwmadison/MerchDetail?MerchID=1346529&amp;CategoryName=Men%27s%20Long%20Sleeve%20Tees&amp;CatID=10318&amp;Name=Men%27s%20Long%20Sleeve%20Tees"
-          method="post"><input name="__RequestVerificationToken" type="hidden"
-            value="4EtclY6dVvYAhHTEdHfWq6skrqbVqpS2yD04ic3xv_8362dAlfBBuvYk8ZUKHaN-_QVV3PvYlRUYyCah94kdIPHsid01" /><input
+        <a class="floatr right15 top-50 pageHelp" href="https://www.uwbookstore.com/help/MerchandiseDetail.htm">Help</a>
+        <form action="/Wisconsin-Badgers/Tech/MacBook/MacBook-Air-15-M4" method="post"><input
+            name="__RequestVerificationToken" type="hidden"
+            value="hl-1vrAbHlXcl54a0XkXYd3eMcnOu0IH7wQHXomFI0zfMDfbeQj2eR7GTq5AJOnEQXnKexkIOQX_6jxkmYcVlD48VEU1" /><input
             id="hiddenType" name="itemType" type="hidden" value="" /><input id="customerLoyaltyRWD_totalPointsAvail"
             name="customerLoyaltyRWD.totalPointsAvail" type="hidden" value="0" /><input id="hiddenSKU" name="SKU"
-            type="hidden" value="2046574           " /><input id="hiddenImg" name="merchDefaultFull" type="hidden"
-            value="/storeimages/171-1346529-1.png" />
+            type="hidden" value="W000070           " /><input id="hiddenImg" name="merchDefaultFull" type="hidden"
+            value="/storeimages/177-1880851-5.png" />
           <div Class="center">
-            <h2 Class="page_header bottom10 displayn">Product Detail</h2>
+            <h1 Class="page_header bottom10 displayn">Product Detail</h1>
           </div>
-          <style>
-            .merchPriceCurrent {
-              font-weight: bold;
-              font-size: 18px;
-            }
+          <!--One Item-->
+          <div class="row merchItem">
+            <div class="merchImage col-sm-2 col-12">
+              <div Class="merchImageMain">
+                <img width="200" Class="merchDetailImage margin_auto img-responsive" data-id="1"
+                  src="https://www.uwbookstore.com/storeimages/177-1880851-5.png"
+                  data-high="https://www.uwbookstore.com/storeimages/177-1880851-5_hi.png"
+                  data-thumb="https://www.uwbookstore.com/storeimages/177-1880851-5_th.png"
+                  alt="Cover Image For MacBook Air 15&quot; (M4)">
+              </div>
+              <div Class="merchThumbnailWrapper top10">
+                <a Class="merchThumbnail"><img width="50"
+                    class="individualThumb img-thumbnail verticalTop top5 hover_pointer" tabindex="0"
+                    src="https://www.uwbookstore.com/storeimages/177-1880851-5_th.png"
+                    data-high="https://www.uwbookstore.com/storeimages/177-1880851-5_hi.png"
+                    data-full="https://www.uwbookstore.com/storeimages/177-1880851-5.png" data-tgcid="0"
+                    alt="Cover Image for MacBook Air 15&quot; (M4)" role="button" aria-label="Cover image 1" /></a>
+                <a Class="merchThumbnail"><img width="50"
+                    class="individualThumb img-thumbnail verticalTop top5 hover_pointer" tabindex="0"
+                    src="https://www.uwbookstore.com/storeimages/177-1880851-1_th.png"
+                    data-high="https://www.uwbookstore.com/storeimages/177-1880851-1_hi.png"
+                    data-full="https://www.uwbookstore.com/storeimages/177-1880851-1.png" data-tgcid="0"
+                    alt="Cover Image for MacBook Air 15&quot; (M4)" role="button" aria-label="Cover image 2" /></a>
+                <a Class="merchThumbnail"><img width="50"
+                    class="individualThumb img-thumbnail verticalTop top5 hover_pointer" tabindex="0"
+                    src="https://www.uwbookstore.com/storeimages/177-1880851-2_th.png"
+                    data-high="https://www.uwbookstore.com/storeimages/177-1880851-2_hi.png"
+                    data-full="https://www.uwbookstore.com/storeimages/177-1880851-2.png" data-tgcid="0"
+                    alt="Cover Image for MacBook Air 15&quot; (M4)" role="button" aria-label="Cover image 3" /></a>
+                <a Class="merchThumbnail"><img width="50"
+                    class="individualThumb img-thumbnail verticalTop top5 hover_pointer" tabindex="0"
+                    src="https://www.uwbookstore.com/storeimages/177-1880851-3_th.png"
+                    data-high="https://www.uwbookstore.com/storeimages/177-1880851-3_hi.png"
+                    data-full="https://www.uwbookstore.com/storeimages/177-1880851-3.png" data-tgcid="0"
+                    alt="Cover Image for MacBook Air 15&quot; (M4)" role="button" aria-label="Cover image 4" /></a>
+                <a Class="merchThumbnail"><img width="50"
+                    class="individualThumb img-thumbnail verticalTop top5 hover_pointer" tabindex="0"
+                    src="https://www.uwbookstore.com/storeimages/177-1880851-4_th.png"
+                    data-high="https://www.uwbookstore.com/storeimages/177-1880851-4_hi.png"
+                    data-full="https://www.uwbookstore.com/storeimages/177-1880851-4.png" data-tgcid="0"
+                    alt="Cover Image for MacBook Air 15&quot; (M4)" role="button" aria-label="Cover image 5" /></a>
+              </div>
+              <div id="imageLightBox" Class="modal fade" role="dialog">
+                <div Class="modal-dialog modal-lg">
+                  <div Class="modal-content">
+                    <div Class="modal-body">
+                      <div Class="row bottom10">
+                        <div Class="col-md-1 col-sm-2 col-2 textl">
+                          <a Class="imageLightBoxLeft btn btn-default btn-lg" style="display: inline-block;"><span
+                              class="glyphicon glyphicon-chevron-left"></span></a>
+                        </div>
+                        <div Class="modalDetailImage textc col-md-10 col-sm-8 col-8" data-count="0">
+                          <img data-id="1" Class="imageLightBoxBig img-responsive margin_auto" alt="" />
+                        </div>
+                        <div Class="col-md-1 col-sm-2 col-2 textr">
+                          <a Class="imageLightBoxRight btn btn-default btn-lg" style="display: inline-block;"><span
+                              class="glyphicon glyphicon-chevron-right"></span></a>
+                        </div>
+                      </div>
+                      <div Class="modalDetailThumbnail textc"></div>
+                    </div>
+                    <div Class="modal-footer">
+                      <Button type="button" Class="btn btn-default" data-bs-dismiss="modal">Close</Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <style>
+                .merchDetailImage {
+                  cursor: zoom-in;
+                }
+              </style>
+              <!--Merch Image-->
+            </div>
 
-            .merchPrice strong {
-              display: none;
-            }
+            <!--Hidden Information to display in modal-->
+            <div class="merchInfo col-sm-10 col-12">
+              <input type="hidden" class="ga4-name" value="MacBook Air 15&quot; (M4)" />
+              <input type="hidden" class="ga4-price" value="0" />
 
-            .merchPriceCurrent {
-              font-weight: bold;
-              font-size: 18px;
-            }
 
-            .gmPromo {
-              color: #c10000;
-            }
+              <input type="hidden" class="ga4-salePrice" value="0" />
+              <input type="hidden" class="ga4-sku" value="W000070           " />
+              <input type="hidden" class="ga4-discount" value="" />
+              <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+              <input type="hidden" class="ga4-isNonMerch" value="True" />
+              <input type="hidden" class="ga4-isWebSku" value="false" />
+              <!--Merch Title-->
+              <h2 tabindex="0" Class="merchTitle top5" data-id="1880851">MacBook Air 15" (M4)</h2>
 
-            .max_height350 {
-              max-height: 350px;
-            }
 
-            #merchQTY {
-              border-radius: 0px;
-            }
-
-            .imageLeft {
-              position: absolute;
-              top: 48%;
-              left: 20px;
-              width: 50px;
-              height: 65px;
-            }
-
-            .imageRight {
-              position: absolute;
-              top: 48%;
-              right: 20px;
-              width: 50px;
-              height: 65px;
-            }
-
-            .imageLeft:hover,
-            .imageRight:hover {
-              cursor: pointer;
-            }
-
-            .circleActive {
-              color: black;
-            }
-
-            .circleNotActive {
-              color: #757575;
-            }
-
-            .opacity5 {
-              opacity: .5;
-            }
-          </style>
-          <div class="mainItem">
-            <!--Mobile-->
-            <div class="center no_show_large">
-              <h1 class="page_header bottom10">Champion "Bucky" Long Sleeve T-Shirt (White)</h1>
               <!--Merch Ranking-->
-              <div Class="merchRank bottom10">
+              <div Class="merchRank">
                 <span Class="ranking red fa fa-star-o"></span>
                 <span Class="ranking red fa fa-star-o"></span>
                 <span Class="ranking red fa fa-star-o"></span>
@@ -1540,235 +1647,196 @@
                   <span Class="rankComment">Be the first to Comment</span>
                 </a>
               </div>
+
+              <!--Merch Long Description-->
+              <div Class="merchDesc">
+                <table class="compare">
+                  <thead>
+                    <tr>
+                      <th scope="col">Compare & Buy
+                      <th scope="col">Other Retailers
+                      <th scope="col">University Book Store
+                  <tbody>
+                    <tr>
+                      <td scope="row">MacBook Air 15" (M4)
+                      <td>$1199-$1599
+                      <td>$1099-$1499
+                    <tr>
+                      <td scope="row">AppleCare+
+                      <td>$229
+                      <td>$185
+                  <tfoot>
+                    <tr>
+                      <th scope="row">Total Potential Savings
+                      <th>
+                      <th>$144
+                </table>
+                <strong>MacBook Air 15″. Smart. Speedy. Superlight.</strong><br>The 15-inch MacBook Air with the M4
+                chip can tackle challenging coursework and personal projects. With Apple Intelligence,<sup>1</sup> a
+                spacious 15.3-inch Liquid Retina display,<sup>2</sup> up to 18 hours of battery life,<sup>3</sup>
+                and a strikingly thin and light design, it’s built to last through graduation and beyond, so you can
+                take on just about anything, anywhere.<div class="btn-container"><button id="toggle">More
+                    Info</button></div>
+                <div class="merch__detail-overflow">
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <td>SUPERCHARGED BY M4—The Apple M4 chip brings even more speed and fluidity to everything
+                          you do, like multitasking on complex school projects across multiple apps, editing videos,
+                          or playing graphically demanding games.</td>
+                      </tr>
+                      <tr>
+                        <td>APPLE INTELLIGENCE<sup>2</sup>—Apple's personal intelligence system helps you write,
+                          express yourself, and get things done effortlessly. With groundbreaking privacy
+                          protections, it gives you peace of mind that no one else can access your data—not even
+                          Apple</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  See <a href="https://apple.com/macbook-air/specs" target="_blank">apple.com/macbook-air/specs</a>
+                  for complete tech specs<br>
+                  Configurable options are available, contact us.<br>
+                  <sup>1</sup>Apple Intelligence available in beta with Siri & device language set to English, as an
+                  iPadOS 18 update. Additional features & language support coming over the course of the year. Some
+                  features may not be available in all regions or languages.<br>
+                  <sup>2</sup>The display has rounded corners at the top. When measured as a standard rectangular
+                  shape, the screen is 15.3 inches diagonally (actual viewable area is less)<br>
+                  <sup>3</sup>Battery life varies by use and configuration. See <a href="https://apple.com/batteries"
+                    target="_blank">apple.com/batteries</a> for more
+                  information<br>
+                </div><br>
+                Release Date: March 2025<br>
+                MacBook Air is ideal for general use- multitasking internet, email, and limited data processing or
+                light photo/video editing. Not recommended for intense workloads or demanding apps. For more power
+                and fan-cooling, choose more memory or a MacBook Pro.<br>
+                •macOS may not work with some engineering or CAD software and is not supported by the College of
+                Engineering for some majors<br>
+                •macOS may have compatibility issues with some software used in some School of Business classes<br>
+                <div class="alert alert-warning"><strong>All Shipping/Handling charges for this item will be removed
+                    AFTER you order IF you choose Pickup at Store instead of shipping. If shipping, there is a $25
+                    insurance charge.</strong></div>
+              </div>
+
+              <!--Merch Item Number-->
+              <p Class="merchItem"><strong>Item: </strong><span class="itemSKU">W000070 </span></p>
+
+              <!--Merch Price-->
+
+              <input type="hidden" id="hiddenPriceVal" value="0" />
+
+
+              <!--Merch Options-->
+              <div Class="merchOptions top5">
+                <span Class="hidden_label">Select Merchandise Option Before Adding to Cart</span>
+                <div class="input-group maxW-400-nm">
+                  <span class="input-group-text">Select</span>
+                  <select Class="merchDropdown form-control form-select" required data-select="1880851"
+                    aria-label="Please make a selection">
+                    <option disabled selected value="-1">Please Select</option>
+                    <option data-points="1099" value="1154884" data-egift="False">MBA15&quot; M4; 16gb RAM; 256gb
+                      SSD / Sky Blue ($1,099.00)</option>
+                    <option data-points="1099" value="1154885" data-egift="False">MBA15&quot; M4; 16gb RAM; 256gb
+                      SSD / Silver ($1,099.00)</option>
+                    <option data-points="1099" value="1154886" data-egift="False">MBA15&quot; M4; 16gb RAM; 256gb
+                      SSD / Starlight ($1,099.00)</option>
+                    <option data-points="1099" value="1154887" data-egift="False">MBA15&quot; M4; 16gb RAM; 256gb
+                      SSD / Midnight ($1,099.00)</option>
+                    <option data-points="1299" value="1154888" data-egift="False">MBA15&quot; M4; 16gb RAM; 512gb
+                      SSD / Sky Blue / takes 1-4day extra ($1,299.00)</option>
+                    <option data-points="1299" value="1154889" data-egift="False">MBA15&quot; M4; 16gb RAM; 512gb
+                      SSD / Silver / takes 1-4day extra ($1,299.00)</option>
+                    <option data-points="1299" value="1154890" data-egift="False">MBA15&quot; M4; 16gb RAM; 512gb
+                      SSD / Starlight / takes 1-4day extra ($1,299.00)</option>
+                    <option data-points="1299" value="1154891" data-egift="False">MBA15&quot; M4; 16gb RAM; 512gb
+                      SSD / Midnight / takes 1-4day extra ($1,299.00)</option>
+                    <option data-points="1499" value="1154892" data-egift="False">MBA15&quot; M4; 24gb RAM; 512gb
+                      SSD / Sky Blue / takes 1-4day extra ($1,499.00)</option>
+                    <option data-points="1499" value="1154893" data-egift="False">MBA15&quot; M4; 24gb RAM; 512gb
+                      SSD / Silver / takes 1-4day extra ($1,499.00)</option>
+                    <option data-points="1499" value="1154894" data-egift="False">MBA15&quot; M4; 24gb RAM; 512gb
+                      SSD / Starlight / takes 1-4day extra ($1,499.00)</option>
+                    <option data-points="1499" value="1154895" data-egift="False">MBA15&quot; M4; 24gb RAM; 512gb
+                      SSD / Midnight / takes 1-4day extra ($1,499.00)</option>
+                  </select>
+                </div>
+                <p class="merchSelectError red displayn" role="alert" data-selectError="1880851">Please select
+                  option for MacBook Air 15" (M4)&nbsp;.</p>
+              </div>
+
+
+              <!--Add to Cart Button-->
+              <div class="addToCartButton top5">
+                <div class="input-group maxW-250-all">
+                  <span class="input-group-text">QTY</span>
+                  <input type="number" id="merchQTY" data-QTYid="1880851" Class="form-control merchDetailQTY QTY1 max"
+                    value="1" maxlength="3" min="1" max="999" aria-label="Quantity" />
+                  <a tabindex="0" Class="addToCart btn btn-primary" data-name="MacBook Air 15&quot; (M4)"
+                    data-Id="1880851" data-isTypeless="False" data-regularPrice="0" data-isLoyalty="False"
+                    data-formid="904" data-isOnSale="False" data-egiftCard="False" data-nonMerch="True" data-classID="0"
+                    data-csID="0" data-storeID="177" data-pricePoint="true" data-disclaimer="False"
+                    data-reload="False">Add To Cart</a>
+                </div>
+                <p Class="addedToCart displayn" data-addedtocart="1880851"><span
+                    class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span>
+                  This item has been added to your Cart.</p>
+              </div>
+
+
+
+              <!--Merch Suggested Items-->
+              <div Class="merchSuggested">
+                <!--Suggested Iftle-->
+                <p Class="merchSuggestedTitle lead">If you bought this, you might also like these...</p>
+                <div class="row">
+                  <!--One Suggested Begin-->
+                  <div Class="suggestedItem col-sm-2 col-6">
+                    <!-- Suggested Link-->
+                    <a tabindex="0"
+                      href="//www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years"
+                      Class="suggestedLink textc">
+                      <!--Suggested Image-->
+                      <img width="50" Class="margin_auto suggestedImg img-responsive"
+                        src="https://www.uwbookstore.com/storeimages/177-1881788-1_th.png"
+                        alt="Cover Image for MacBook Air 15&quot; (M4)">
+                      <!--Suggested Title-->
+                      <p Class="suggestedName">AppleCare+ for MacBook Air 15" M4 (3 Years)</p>
+                    </a>
+                    <p Class="suggestedPrice center">$229.00</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="row">
-              <div class="col-sm-6 col-12 padding0 bottom10">
-                <img Class="merchDetailImage margin_auto img-responsive max_height350" data-id="1"
-                  src="https://insitestore2.mbsbooks.com/uwmadison/storeimages/171-1346529-1.png"
-                  data-high="https://insitestore2.mbsbooks.com/uwmadison/storeimages/171-1346529-1_hi.png"
-                  data-thumb="https://insitestore2.mbsbooks.com/uwmadison/storeimages/171-1346529-1_th.png"
-                  alt="Cover Image For Champion &quot;Bucky&quot; Long Sleeve T-Shirt (White)" aria-hidden="true" />
-                <div id="imageLightBox" Class="modal fade" role="dialog">
-                  <div Class="modal-dialog modal-lg">
-                    <div Class="modal-content">
-                      <div Class="modal-body">
-                        <div Class="row">
-                          <div Class="col-md-1 col-sm-2 col-2 textl">
-                            <a Class="imageLightBoxLeft" style="display: inline-block;">
-                              <img tabindex="0" class="imageLeft"
-                                src="https://insitestore2.mbsbooks.com/uwmadison/RWD-IMG/chevLeft.png"
-                                alt="Previous Image" role="button" />
-                            </a>
 
-                          </div>
-                          <div Class="modalDetailImage textc col-md-10 col-sm-8 col-8" data-count="0">
-                            <img data-id="1" Class="imageLightBoxBig img-responsive margin_auto" alt="" />
-                          </div>
-                          <div Class="col-md-1 col-sm-2 col-2 textr">
-                            <a Class="imageLightBoxRight" style="display: inline-block;">
-                              <img tabindex="0" class="imageRight"
-                                src="https://insitestore2.mbsbooks.com/uwmadison/RWD-IMG/chevRight.png" alt="Next Image"
-                                role="button" />
-                            </a>
-                          </div>
-                        </div>
-                        <div Class="modalDetailThumbnail textc"></div>
-                      </div>
-                      <div Class="modal-footer">
-                        <button type="button" Class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <style>
-                  .merchDetailImage {
-                    cursor: zoom-in;
-                  }
-                </style>
-              </div>
-
-              <div class="col-sm-6 col-12 padding0 bottom10">
-                <input type="hidden" class="ga4-name" value="Champion &quot;Bucky&quot; Long Sleeve T-Shirt (White)" />
-                <input type="hidden" class="ga4-price" value="10" />
-
-
-
-                <input type="hidden" class="ga4-salePrice" value="5" />
-                <input type="hidden" class="ga4-sku" value="2046574           " />
-                <input type="hidden" class="ga4-discount" value="" />
-                <input type="hidden" class="ga4-affiliation" value="UW Sandbox" />
-                <input type="hidden" class="ga4-class" value="10318" />
-                <input type="hidden" class="ga4-isNonMerch" value="False" />
-                <input type="hidden" class="ga4-isWebSku" value="false" />
-                <div class="no_show_small bottom10">
-                  <h1 tabindex="0" Class="merchTitle" data-id="1346529">Champion "Bucky" Long Sleeve T-Shirt (White)
-                  </h1>
-                  <!--Merch Ranking-->
-                  <div Class="merchRank">
-                    <span Class="ranking red fa fa-star-o"></span>
-                    <span Class="ranking red fa fa-star-o"></span>
-                    <span Class="ranking red fa fa-star-o"></span>
-                    <span Class="ranking red fa fa-star-o"></span>
-                    <span Class="ranking red fa fa-star-o"></span>
-                    <a tabindex="0" Class="merchRankLink" href="#itemRanking">
-                      <span Class="rankCount">(0)</span>
-                      <span Class="rankComment">Be the first to Comment</span>
-                    </a>
-                  </div>
-
-                </div>
-
-                <p class="merchRegPrice top5 lineThrough"><strong>Reg. Price: </strong>$10.00</p>
-                <p class="merchSavePrice"><strong>You Save: </strong>$5.00</p>
-                <p class="salePrice red"><strong>Sale Price: </strong><span class="merchPriceCurrent">$5.00</span>
-                </p>
-                <input type="hidden" id="hiddenPriceVal" value="10" />
-
-
-                <Label><input class="top4 merchDisclaimer" data-disclaimer="1824517" type="checkbox" /><span
-                    class="normal">
-                    <div id="landsEndReally"></div>
-                  </span></Label>
-                <p class="merchDisclaimerError red displayn" role="alert" data-disclaimerError="1824517">Please check
-                  the disclaimer
-                  checkbox to add this item to the cart.</p>
-
-                <p Class="merchSizeTitle bold"><span class="merchSizeDesc">1 ADULT SIZES:</span> <span
-                    class="selectedSize"></span></p>
-                <div class="lcsSizeWrapper">
-                  <button Class="btn btn-default sizeOption typeCodeOption" tabindex="0" data-size="SMALL"
-                    data-merid="1346529" data-value="101"><span Class="sizeName">SMALL</span></button>
-                  <button Class="btn btn-default sizeOption typeCodeOption" tabindex="0" data-size="MEDIUM"
-                    data-merid="1346529" data-value="102"><span Class="sizeName">MEDIUM</span></button>
-                  <button Class="btn btn-default sizeOption typeCodeOption" tabindex="0" data-size="LARGE"
-                    data-merid="1346529" data-value="103"><span Class="sizeName">LARGE</span></button>
-                  <button Class="btn btn-default sizeOption typeCodeOption" tabindex="0" data-size="X-LARGE"
-                    data-merid="1346529" data-value="104"><span Class="sizeName">X-LARGE</span></button>
-                  <button Class="btn btn-default sizeOption typeCodeOption" tabindex="0" data-size="XX-LARGE"
-                    data-merid="1346529" data-value="105"><span Class="sizeName">XX-LARGE</span></button>
-                </div>
-                <input id="colorSelected" name="colorSelected" type="hidden" value="" /><input id="colorCodeSelected"
-                  name="colorCodeSelected" type="hidden" value="" /><input id="sizeSelected" name="sizeSelected"
-                  type="hidden" value="" /><input id="sizeCodeSelected" name="sizeCodeSelected" type="hidden"
-                  value="" /><input id="logoSelected" name="logoSelected" type="hidden" value="" /><input
-                  id="logoCodeSelected" name="logoCodeSelected" type="hidden" value="" /><input id="allThree"
-                  name="allThree" type="hidden" value="False" /><input id="noColor" name="noColor" type="hidden"
-                  value="True" /><input id="noSize" name="noSize" type="hidden" value="False" /><input id="noLogo"
-                  name="noLogo" type="hidden" value="True" /><input id="firstSelected" name="firstSelected"
-                  type="hidden" value="0" /><input id="showHex" name="showHex" type="hidden" value="True" /><input
-                  id="colorOne" name="colorOne" type="hidden" value="False" /><input id="sizeOne" name="sizeOne"
-                  type="hidden" value="False" /><input id="logoOne" name="logoOne" type="hidden" value="False" /><input
-                  id="typeselected" name="typeselected" type="hidden" value="0" />
-                <p Class="merchSelectError red displayn" role="alert" data-selectError="1346529">Please select
-                  option for Champion "Bucky" Long Sleeve T-Shirt (White)&nbsp;.</p>
-
-                <!--Add to Cart Button-->
-                <div Class="addToCartButton top5">
-                  <div class="bottom5">
-                    <span class="fa fa-minus qtyMinus hover_pointer no_show_largeib right5" tabindex="0"></span>
-                    <span class="fa fa-plus qtyPlus hover_pointer no_show_largeib left5" tabindex="0"></span>
-                    <div class="input-group maxW-250-all">
-                      <span class="input-group-text qtyTitle">QTY</span>
-                      <input type="number" id="merchQTY" data-QTYid="1346529" Class="form-control merchDetailQTY QTY1"
-                        value="1" maxlength="3" min="1" max="999" aria-label="Quantity" />
-                      <a tabindex="0" Class="addToCartTypes btn btn-primary"
-                        data-name="Champion &quot;Bucky&quot; Long Sleeve T-Shirt (White)" data-Id="1346529"
-                        data-isTypeless="False" data-regularPrice="10" data-isLoyalty="False" data-formid="-1"
-                        data-isOnSale="True" data-egiftCard="False" data-nonMerch="False" data-classID="0" data-csID="0"
-                        data-storeID="171" data-pricePoint="false" data-disclaimer="True" data-reload="False">Add To
-                        Cart</a>
-                    </div>
-
-                    <div class="lcs-inventory-display-data force-hidden">
-                      <input type="hidden" class="lcs-inventory-display" data-id="629819" data-message=""
-                        data-textcolor="" data-orbcolor="" data-class="" />
-                      <input type="hidden" class="lcs-inventory-display" data-id="629820" data-message=""
-                        data-textcolor="" data-orbcolor="" data-class="" />
-                      <input type="hidden" class="lcs-inventory-display" data-id="629821" data-message=""
-                        data-textcolor="" data-orbcolor="" data-class="" />
-                      <input type="hidden" class="lcs-inventory-display" data-id="629822" data-message=""
-                        data-textcolor="" data-orbcolor="" data-class="" />
-                      <input type="hidden" class="lcs-inventory-display" data-id="629823" data-message=""
-                        data-textcolor="" data-orbcolor="" data-class="" />
-                    </div>
-                    <div class="inventory-display-wrapper long force-hidden">
-                      <svg class="inventory-display-orb" height="15" width="15" xmlns="http://www.w3.org/2000/svg">
-                        <circle r="6" cx="7" cy="7" fill="" fill-opacity="0.5 " stroke="" />
-                      </svg>
-                      <p class="inventory-display-text" style=""></p>
-                    </div>
-
-                  </div>
-                  <script>
-                    $(document).ready(function () {
-                      $('.qtyMinus').click(function () {
-                        var value = parseInt($('.merchDetailQTY').val());
-                        if (value <= 1) {
-                          value = 1
-                          $('.merchDetailQTY').val(value);
-                        } else {
-                          value = value - 1;
-                          $('.merchDetailQTY').val(value);
-                        }
-                      });
-                      $('.qtyPlus').click(function () {
-                        var value = parseInt($('.merchDetailQTY').val());
-                        if (value >= 999) {
-                          value = 999
-                          $('.merchDetailQTY').val(value);
-                        } else {
-                          value = value + 1;
-                          $('.merchDetailQTY').val(value);
-                        }
-                      });
-                    });
-                  </script>
-
-                  <p Class="addedToCart displayn" data-addedtocart="1346529"><span
-                      class="glyphicon glyphicon-ok Gift_Checkmark faa-shake Checkmark_Color padding0"></span> This
-                    item has been added to your Cart.</p>
-                </div>
-              </div>
-
-              <div class="col-12 border_top merchDescription padding0 bottom10">
-                <h2 class="descTitle bold">Product Description</h2>
-
-                <p Class="merchItem"><strong>Item: </strong><span class="itemSKU">2046574 </span></p>
-
-                <div Class="merchDesc">
-                  Everyone loves Bucky Badger and this is a great way to represent Wisconsin. White long sleeve
-                  t-shirt with "Bucky" printed across the chest. <br>Imported<br>100% Cotton
-                </div>
-
-              </div>
-
+          </div>
+          <div class="row">
+            <div class="backCart col-12 textr">
+              <a class="hover_pointer btn btn-primary backButton">Back</a>
+              <a href="https://www.uwbookstore.com/shoppingcart"
+                class="hover_pointer btn btn-primary cartButton">Shopping
+                Cart</a>
             </div>
           </div>
-          <div id="itemRanking" class="itemRanking top10">
-            <a class="pleaseLogin bottom10 displayb"
-              href="https://insitestore2.mbsbooks.com/uwmadison/LoginOptions?returnurl=/merchdetail?merchid=1346529#itemRanking">Please
-              Login to leave a ranking.</a>
+          <!--End One Item-->
+          <div class="row">
+            <div id="itemRanking" Class="itemRanking top10 col-12">
+              <a class="pleaseLogin bottom10 displayb"
+                href="https://www.uwbookstore.com/LoginOptions?returnurl=/merchdetail?merchid=1880851#itemRanking">Please
+                Login to leave a ranking.</a>
 
-            <!--Start One Approved Comment-->
+              <!--Start One Approved Comment-->
+            </div>
           </div>
           <div id="itemFormModal" Class="modal fade" role="dialog">
             <input type="hidden" value="" id="itemFormButton" />
             <input type="hidden" value="" id="itemFormType" />
             <input type="hidden" value="" id="itemFormQty" />
-            <input type="hidden" value="" id="itemFormcolorDesc" />
-            <input type="hidden" value="" id="itemFormcolorValue" />
-            <input type="hidden" value="" id="itemFormlogoDesc" />
-            <input type="hidden" value="" id="itemFormlogoValue" />
-            <input type="hidden" value="" id="itemFormsizeDesc" />
-            <input type="hidden" value="" id="itemFormsizeValue" />
-            <input type="hidden" value="" id="itemFormTypeCode" />
-            <input type="hidden" value="" id="itemFormOldType" />
-            <input type="hidden" value="" id="itemFormOldTypeValue" />
-            <input type="hidden" value="" id="itemFormQuick" />
             <input type="hidden" value="" id="itemFormSKU" />
             <input type="hidden" value="" id="itemFormMerchImage" />
+            <input type="hidden" value="" id="itemFormOldType" />
+            <input type="hidden" value="" id="itemFormOldTypeValue" />
             <input type="hidden" value="" id="itemFormCurrentPrice" />
+
             <div Class="modal-dialog">
               <!-- Modal content-->
               <div Class="modal-content itemFormModalContent"></div>
@@ -1803,7 +1871,8 @@
             <div Class="modal-dialog">
               <!-- Modal content-->
               <div Class="modal-content">
-                <div Class="modal-header"></div>
+                <div Class="modal-header">
+                </div>
                 <div Class="modal-body">
                   <p>This item requires more points than you have available.</p>
                 </div>

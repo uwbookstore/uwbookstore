@@ -487,6 +487,15 @@ addEventListenerIfExists('.dropdown-menu', 'click', (e) => {
 });
 // TODO: test above to see if it's necessary
 
+// USE FN TO TOGGLE DROPDOWN ITEMS:
+const dropdownTrigger = document.getElementById('dropdown-trigger');
+if (dropdownTrigger) {
+  dropdownTrigger.addEventListener('click', () => {
+    const dropdownItem = document.getElementById('dropdown-item');
+    dropdownItem.classList.toggle('show');
+  });
+}
+
 // Helper function to addEventHandlers
 function addEventListenerIfExists(elementId, eventType, callback) {
   const element = document.querySelector(elementId);

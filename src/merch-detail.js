@@ -275,26 +275,29 @@ const priceBlock = document.createElement('div');
 priceBlock.id = 'priceBlock';
 priceBlock.className = 'merch__detail-price';
 
-const prodPrice = document.querySelector('span.merchPriceCurrent').textContent;
-const origPrice = document
-  .querySelector('p.merchRegPrice')
-  ?.innerHTML.split('$')
-  .pop();
+const prodPrice = document.querySelector('span.merchPriceCurrent');
 
-// Check for sale price
-if (document.querySelector('p.salePrice')) {
-  const salePrice = prodPrice.replace(/\$/g, '');
+if (prodPrice) {
+  const origPrice = document
+    .querySelector('p.merchRegPrice')
+    ?.innerHTML.split('$')
+    .pop();
 
-  const salePriceHtml = `
+  // Check for sale price
+  if (document.querySelector('p.salePrice')) {
+    const salePrice = prodPrice.textContent.replace(/\$/g, '');
+
+    const salePriceHtml = `
     <span class="original">$${origPrice}</span><span class="sale">$${salePrice}</span>
   `;
 
-  priceBlock.insertAdjacentHTML('beforeend', salePriceHtml);
-} else {
-  const priceHtml = `
-    <span>${prodPrice}</span>
+    priceBlock.insertAdjacentHTML('beforeend', salePriceHtml);
+  } else {
+    const priceHtml = `
+    <span>${prodPrice.textContent}</span>
   `;
-  priceBlock.insertAdjacentHTML('beforeend', priceHtml);
+    priceBlock.insertAdjacentHTML('beforeend', priceHtml);
+  }
 }
 
 // Add the product description

@@ -20,12 +20,14 @@ if (
   window.location.href.toLowerCase().search(/merchlist/) !== -1 ||
   window.location.href.toLowerCase().search(/newarrivals/) !== -1
 ) {
+  console.log(`We're on the merch list or new arrivals page`);
   if (categoryTitle.textContent.toLocaleLowerCase() === 'search all') {
     const searched = window.location.search.split('=');
     const searchTerm = searched[2].replace(/%20/g, ' ');
-
+    console.log(`This is a search results page`);
     // NO RESULTS RETURNED
     if (noListItems) {
+      console.log(`Search results are empty`);
       noListItems.style.display = 'none'; // Hide MBS div
       categoryTitle.style.display = 'none'; // Hide MBS page title
 
@@ -57,6 +59,9 @@ if (
     categoryTitle.textContent.toLowerCase() === 'new arrivals' &&
     noListItems
   ) {
+    console.log(
+      `We're on the new arrivals page, and there aren't any new items`
+    );
     noListItems.style.display = 'none'; // Hide MBS div
     categoryTitle.style.display = 'none'; // Hide MBS page title
 
@@ -111,6 +116,7 @@ if (
   }
 
   if (!noListItems) {
+    console.log('.noListItems div is empty');
     // FIX CATEGORY TITLES SINCE MBS HAS CHARACTER LIMITS
     if (
       categoryTitle.textContent.toLowerCase().substring(0, 14) ===

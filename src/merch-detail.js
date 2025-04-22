@@ -881,3 +881,40 @@ if (tabsContainer) {
   }
 }
 // END ACCESSIBLE TABS
+
+$('.flexslider').flexslider({
+  animation: 'fade',
+  controlNav: 'thumbnails',
+  directionNav: false,
+  slideshow: false,
+});
+
+$('#toggle').click(function () {
+  const elem = $('#toggle').text();
+  if (elem === 'More Info') {
+    //Stuff to do when btn is in the read more state
+    $('#toggle').text('Read Less');
+    $('.merch__detail-overflow').slideDown();
+  } else {
+    //Stuff to do when btn is in the read less state
+    $('#toggle').text('More Info');
+    $('.merch__detail-overflow').slideUp();
+  }
+});
+
+// Size charts colorbox
+$('.merch__detail-size-link').colorbox({
+  current: '{current} of {total}',
+  rel: 'merch__detail-size-link',
+  iframe: true,
+  width: '75%',
+  height: '90%',
+});
+
+if (window.matchMedia) {
+  // Establishing media check
+  const width700Check = window.matchMedia('(max-width: 700px)');
+  if (width700Check.matches) {
+    $.colorbox.remove();
+  }
+}

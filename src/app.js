@@ -613,6 +613,14 @@ if (ssoLoginLink) {
   document.querySelector('.page_header').parentElement.style.display = 'none';
 }
 
+// DEFINE RETURN POLICY FOR TEXTBOOKS IN ON LOCATION
+const retPolicy = document.querySelector('.retPolicy');
+if (retPolicy) {
+  retPolicy.innerHTML = `
+    You may return your textbooks with a receipt for a full refund through Wednesday, September 10<sup>th</sup> (2025 Fall Semester), and through Tuesday, January 27<sup>th</sup> (2026 Spring Semester).
+  `;
+}
+
 // TODO: look into below
 // $('.dropdown-toggle').click(function (e) {
 //   e.preventDefault();

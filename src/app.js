@@ -597,6 +597,22 @@ emailOptCheckbox.forEach((e) => {
     : null;
 });
 
+// HANDLE LOGIN OPTIONS PAGE BUTTONS
+const ssoLoginLink = document.querySelector('.SSOLoginLink');
+const nonSsoLoginLink = document.querySelector('.nonSSOLoginLink');
+const ssoLoginLinkBox = document.getElementById('SSOLoginLink-box');
+const nonSsoLoginLinkBox = document.getElementById('nonSSOLoginLink-box');
+const loginOptionsPanel = document.getElementById('loginOptionsPanel');
+
+if (ssoLoginLink) {
+  ssoLoginLink.classList.add('m-2');
+  nonSsoLoginLink.classList.add('m-2');
+  ssoLoginLinkBox.append(ssoLoginLink);
+  nonSsoLoginLinkBox.append(nonSsoLoginLink);
+  loginOptionsPanel.style.display = 'none';
+  document.querySelector('.page_header').parentElement.style.display = 'none';
+}
+
 // TODO: look into below
 // $('.dropdown-toggle').click(function (e) {
 //   e.preventDefault();

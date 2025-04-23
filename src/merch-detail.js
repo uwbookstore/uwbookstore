@@ -711,7 +711,7 @@ function changeLCS(elem) {
     } else if (btnText === 'medium') {
       e.textContent = 'M';
     } else if (btnText === 'large') {
-      e.textContent = 'M';
+      e.textContent = 'L';
     } else if (btnText === 'x-large') {
       e.textContent = 'XL';
     } else if (btnText === 'xx-large' || btnText === '2x-large') {

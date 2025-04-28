@@ -32,7 +32,7 @@ if (backToTopBtn) {
 // Call custom search - Not MBS search
 function search() {
   let searchInput = document.getElementById('search-term').value;
-  searchInput = searchInput.replace(/[^a-zA-Z 0-9]+/g, '');
+  // searchInput = searchInput.replace(/[^a-zA-Z 0-9]+/g, '');
   document.location.href = `${baseUrl}merchlist?searchtype=all&txtSearch=${searchInput}`;
 }
 

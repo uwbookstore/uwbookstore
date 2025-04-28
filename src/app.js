@@ -613,6 +613,23 @@ if (ssoLoginLink) {
   document.querySelector('.page_header').parentElement.style.display = 'none';
 }
 
+// FIX TEXTING OPTIONS PAGE
+const textPhoneInput = document.getElementById('textPhone');
+const textPhoneButton = document.querySelector(
+  '#textPhone + input[type="submit"]'
+);
+const textPhoneLabel = document.querySelector('p.textText');
+if (textPhoneButton) {
+  textPhoneInput.classList.add('form-control');
+  textPhoneInput.classList.remove('rem2');
+  textPhoneButton.classList.add('btn', 'btn-primary');
+  textPhoneButton.classList.remove('rem2');
+  textPhoneLabel.innerHTML = `
+    Please enter your cell number and opt-in to receive notices about your orders, rental reminders and buyback notices.
+    <br><strong class="red">If you do not wish to sign up, click the "Update" button to continue</strong>
+  `;
+}
+
 // DEFINE RETURN POLICY FOR TEXTBOOKS IN ON LOCATION
 const retPolicy = document.querySelector('.retPolicy');
 if (retPolicy) {

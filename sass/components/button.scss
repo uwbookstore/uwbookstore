@@ -227,3 +227,13 @@ fieldset:disabled .btn {
     color: var(--bs-white);
   }
 }
+
+// Override Bootstrap 🙄
+.btn-check:checked + .btn,
+:not(.btn-check) + .btn:active,
+.btn:first-child:active,
+.btn.active,
+.btn.show {
+  background-color: #9e040a;
+  border-color: #940409;
+}

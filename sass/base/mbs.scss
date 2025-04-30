@@ -15,6 +15,11 @@
     padding-inline: 0;
   }
 
+  &:has(.container-soar) {
+    max-width: rem(1520);
+    margin: 0 auto;
+  }
+
   &:has(.container-full) {
     max-width: 100%;
   }

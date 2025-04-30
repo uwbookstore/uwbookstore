@@ -94,57 +94,6 @@
   }
 }
 
-// .contest {
-//   margin: rem(30) 0;
-//   text-align: center;
-
-//   &__header {
-//     color: var(--bs-primary);
-//     font-family: 'Dancing Script';
-//     font-size: rem(75);
-
-//     @include breakpoint(medium) {
-//       font-size: rem(150);
-//     }
-//   }
-
-//   &__subhead {
-//     text-transform: uppercase;
-//     font-size: rem(30);
-//     margin-bottom: rem(20);
-
-//     @include breakpoint(medium) {
-//       font-size: rem(60);
-//     }
-//   }
-
-//   p {
-//     text-transform: uppercase;
-//     font-size: rem(16);
-
-//     @include breakpoint(medium) {
-//       font-size: rem(30);
-//     }
-//   }
-
-//   .btn {
-//     border-radius: rem(10);
-//     text-transform: uppercase;
-//     font-weight: 800;
-//     font-size: rem(25);
-//     padding: rem(10) rem(20);
-//     height: auto;
-//   }
-
-//   hr {
-//     display: block;
-//     margin: rem(40) auto;
-//     border-top: rem(3) solid #000;
-//     width: 60%;
-//     height: rem(1);
-//   }
-// }
-
 .social {
   text-align: center;
 
@@ -208,25 +157,6 @@
   padding: rem(50) rem(15);
 
   &__grid {
-    display: flex;
-    flex-flow: row wrap;
-
-    &-item {
-      flex: 0 1 100%;
-      padding: rem(20);
-      margin-bottom: rem(40);
-      display: flex;
-      flex-direction: column;
-
-      ul {
-        padding-left: rem(30);
-      }
-
-      @include breakpoint(medium) {
-        flex: 0 0 50%;
-      }
-    }
-
     &-btn {
       text-align: center;
       margin-top: auto;
@@ -237,7 +167,6 @@
         font-size: rem(20);
 
         @include breakpoint(medium) {
-          width: auto;
           font-size: rem(17);
         }
       }
@@ -246,5 +175,43 @@
 
   &:last-child {
     padding-bottom: 0;
+  }
+
+  &__card {
+    justify-content: space-between;
+    gap: rem(50);
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+      max-width: rem(350);
+      margin: 0 auto;
+      padding: 0;
+      align-items: stretch;
+      /* TODO: Add bottom border to all but
+      last child */
+
+      h3 {
+        font-size: rem(20);
+      }
+
+      @include breakpoint(medium) {
+        margin-bottom: rem(30);
+      }
+    }
+
+    &-img {
+      border: rem(6) solid var(--bs-primary);
+      border-radius: rem(30);
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: rem(30);
+    border: rem(6) solid var(--bs-black);
   }
 }

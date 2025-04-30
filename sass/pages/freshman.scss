@@ -181,6 +181,10 @@
     justify-content: space-between;
     gap: rem(50);
 
+    @include breakpoint(medium) {
+      gap: 0;
+    }
+
     &-block {
       display: flex;
       flex-direction: column;
@@ -188,15 +192,23 @@
       margin: 0 auto;
       padding: 0;
       align-items: stretch;
-      /* TODO: Add bottom border to all but
-      last child */
+
+      &:not(:last-child) {
+        padding-bottom: rem(50);
+        border-bottom: 2px solid var(--bs-primary);
+      }
 
       h3 {
         font-size: rem(20);
       }
 
-      @include breakpoint(medium) {
+      @include breakpoint(small) {
         margin-bottom: rem(30);
+
+        &:not(:last-child) {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
       }
     }
 

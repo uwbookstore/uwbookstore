@@ -1,28 +1,43 @@
-// Anyway, I have a Javascript question. I'm trying to make a DIV that only shows when the URL of a page matches the parameters I set. I am trying to show a DIV on a page with the URL "/find-your-energy." So far, I have the following Javascript on our page, but it's not showing as I was anticipating. Do you have any ideas what could be going on?
+// Get the category title - (h1.page_header)
+let categoryTitle = document.querySelector('h1.page_header');
 
-// Function to show a specific DIV based on the URL
-function showDivBasedOnURL() {
-  // Get the current URL path
-  const urlPath = window.location.pathname;
+// ADD BANNERS/MESSAGES TO CERTAIN PAGES
+// create container for banner/message
+const divToShow = document.createElement('div');
+divToShow.className = 'hidden';
+categoryTitle.after(divToShow);
 
-  // Mapping of paths to their respective DIV IDs
-  const divMappings = {
-    '/shop/gifts/find-your-energy/': 'FYEDiv',
-    // Add more paths and div IDs as needed
-  };
-
-  // Determine which DIV to show based on the URL path
-  const divToShow = divMappings[urlPath];
-
-  // If a matching DIV is found, remove the hidden class to display it
-  if (divToShow) {
-    document.getElementById(divToShow).classList.remove('hidden');
-  }
+// FOR FIND YOUR ENERGY
+if (
+  categoryTitle.textContent.toLowerCase().substring(0, 16) ===
+  'find your energy'
+) {
+  divToShow.className = '';
+  divToShow.innerHTML = `
+      <p>
+        This is the FYE Page DIV.
+      </p>    
+    `;
+} else if (
+  categoryTitle.textContent.toLowerCase().substring(0, 16) ===
+  'another category'
+) {
+  divToShow.className = '';
+  divToShow.classList.add('alert', 'alert-info');
+  divToShow.innerHTML = `
+      <p>
+        This is Another Category Page DIV.
+      </p>    
+    `;
+} else if (
+  categoryTitle.textContent.toLowerCase().substring(0, 22) ===
+  "men's long sleeve tees"
+) {
+  divToShow.className = '';
+  divToShow.classList.add('alert', 'alert-info');
+  divToShow.innerHTML = `
+      <p>
+        This is the Men's Long Sleeve Tees Page
+      </p>    
+    `;
 }
-
-// Call the function when the page loads
-window.onload = showDivBasedOnURL;
-
-// On the MerchList page, I have this markup:
-
-// <div id="FYEDiv" class="hidden">This is the FYE Page DIV.</div>

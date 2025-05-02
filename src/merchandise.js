@@ -1,36 +1,48 @@
-$(document).ready(() => {
-  const parentDiv = $('.card');
-  $.each(parentDiv, function () {
-    if (!$(this).children().length > 0) {
-      $(this).parent().hide();
-    }
-  });
+// HANDLE MERCHANDISE PAGE
+// HIDE ANY CATEGORY IN ALL CAPS
+// REMOVE ALL EMPTY CATEGORIES
 
-  $(".category-name:contains('SPECIAL')").parent().parent().hide();
-  $(".category-name:contains('PACKAGE')").parent().parent().hide();
-  $(".category-name:contains('Study Aids')").parent().parent().hide();
-  $('.category-name:contains("WOMEN\'S HATS")').parent().parent().hide();
+// Hide parent of .panel-body if it has no children
+document.querySelectorAll('.panel-body').forEach((panel) => {
+  if (panel.children.length === 0) {
+    panel.parentElement.style.display = 'none';
+  }
+});
 
-  const isUpperCase = (str) => str === str.toUpperCase();
+// Hide parent containers based on category name text content
+['New Arrivals', 'SPECIAL', 'PACKAGE', 'Study Aids', "WOMEN'S HATS"].forEach(
+  (keyword) => {
+    document.querySelectorAll('.category-name').forEach((elem) => {
+      if (elem.textContent.includes(keyword)) {
+        elem.parentElement.parentElement.style.display = 'none';
+      }
+    });
+  }
+);
 
-  const merchLink = $('.merchLinkText');
-  $.each(merchLink, function () {
-    $(this).removeClass('top5');
-    $(this).parent().removeClass('textc small displayb padding5');
-    if (isUpperCase($(this).text())) {
-      $(this).parent().parent().addClass('hide');
-    }
+// Helper function to test if string is uppercase
+const isUpperCase = (str) => str === str.toUpperCase();
 
-    if ($(this).text() === 'cold&deg;gear') {
-      $(this).html('cold&deg;gear');
-    }
+// Process .merchLinkText elements
+document.querySelectorAll('.merchLinkText').forEach((link) => {
+  link.classList.remove('top5');
+  link.parentElement.classList.remove('textc', 'small', 'displayb', 'padding5');
 
-    if ($(this).text() === 'heat&deg;gear') {
-      $(this).html('heat&deg;gear');
-    }
+  const text = link.textContent;
 
-    if ($(this).text() === 'Tokyodachi&reg;') {
-      $(this).html('Tokyodachi&reg;');
-    }
-  });
+  if (isUpperCase(text)) {
+    link.parentElement.parentElement.classList.add('hide');
+  }
+
+  if (text === 'cold°gear') {
+    link.innerHTML = 'cold&deg;gear';
+  }
+
+  if (text === 'heat°gear') {
+    link.innerHTML = 'heat&deg;gear';
+  }
+
+  if (text === 'Tokyodachi®') {
+    link.innerHTML = 'Tokyodachi&reg;';
+  }
 });

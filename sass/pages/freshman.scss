@@ -49,9 +49,13 @@
           border-radius: rem(10);
           text-transform: uppercase;
           font-weight: 800;
-          font-size: rem(25);
+          font-size: rem(16);
           padding: rem(10) rem(20);
           height: auto;
+
+          @include breakpoint(small) {
+            font-size: rem(25);
+          }
         }
       }
     }
@@ -213,17 +217,72 @@
     }
 
     &-img {
+      max-width: 100%;
+      height: auto;
       border: rem(6) solid var(--bs-primary);
       border-radius: rem(30);
       margin-bottom: rem(20);
     }
   }
+}
 
-  &__img {
+.best__sellers {
+  display: grid;
+  grid-auto-rows: 1fr;
+  background-color: var(--bs-primary);
+  color: var(--bs-white);
+  border: rem(6) solid var(--bs-black);
+  border-radius: rem(30);
+
+  &-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(20);
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: rem(30);
+    text-transform: uppercase;
+  }
+
+  &-img {
     max-width: 100%;
     height: auto;
     display: block;
-    border-radius: rem(30);
-    border: rem(6) solid var(--bs-black);
+    border-radius: 0 0 rem(25) rem(25);
+  }
+
+  @include breakpoint(xsmall) {
+    &-text {
+      font-size: rem(50);
+    }
+  }
+
+  @include breakpoint(small) {
+    &-text {
+      font-size: 85px;
+    }
+  }
+
+  @media (min-width: 49em) {
+    display: flex;
+    flex-flow: row nowrap;
+
+    > div {
+      flex: 1 1 50%;
+    }
+    &-text {
+      font-size: rem(40);
+    }
+    &-img {
+      border-radius: 0 rem(25) rem(25) 0;
+    }
+  }
+
+  @include breakpoint(menu) {
+    &-text {
+      // font-size: 120px;
+    }
   }
 }

@@ -60,22 +60,12 @@ p.merchPrice.red {
   &__card {
     position: relative;
     z-index: 0;
-    margin-bottom: rem(20);
+    margin: rem(20) auto;
     justify-content: center;
 
     &-item {
       padding: rem(25);
-      text-align: center;
-      font-style: italic;
       transition: opacity 0.25s ease-in-out;
-      position: relative;
-      margin: rem(10) 0;
-      flex: 0 0 100%;
-
-      a,
-      h2 {
-        text-align: center;
-      }
 
       a:focus {
         outline-offset: 0;
@@ -190,25 +180,26 @@ p.merchPrice.red {
   }
 
   &__filter {
-    width: 100%;
-    display: flex;
     padding: 0 0 rem(30);
-    flex-direction: column;
-    justify-content: flex-start;
 
-    @include breakpoint(medium) {
+    @include breakpoint(small) {
+      display: flex;
+      justify-content: flex-start;
       flex-direction: row;
       align-items: flex-end;
     }
 
     h2 {
-      flex: 1;
       align-self: flex-start;
-      margin-bottom: rem(20);
+      margin-bottom: 0;
+      text-align: center;
+      font-size: rem(32);
 
-      @include breakpoint(medium) {
+      @include breakpoint(small) {
+        flex: 1;
         align-self: flex-end;
-        margin-bottom: 0;
+        text-align: left;
+        font-size: rem(20);
       }
     }
 
@@ -218,26 +209,32 @@ p.merchPrice.red {
 
       label {
         color: var(--bs-gray);
-        font-size: rem(10);
+        font-size: rem(16);
         font-weight: 500;
         line-height: 2;
         text-transform: uppercase;
       }
 
-      a {
+      a,
+      select {
         width: 100%;
       }
 
       &:not(:last-child) {
-        margin-bottom: rem(30);
+        margin-bottom: rem(20);
       }
 
-      @include breakpoint(medium) {
+      @include breakpoint(small) {
         align-self: flex-end;
         width: auto;
 
-        a {
+        a,
+        select {
           width: auto;
+        }
+
+        label {
+          font-size: rem(10);
         }
 
         &:not(:last-child) {
@@ -347,20 +344,15 @@ p.merchPrice.red {
 // .pageHelp,
 // .searchCatWrap,
 // .merchTop,
-// .viewfiltersDiv,
 // .bottomButtons,
-// .backCart {
-//   display: none;
-// }
+// .backCart,
+.viewFiltersDiv {
+  display: none;
+}
 
 .sortCatWrap {
   width: 100%;
 }
-
-// .merchItem {
-//   max-width: rem(300);
-//   margin: rem(20) 0 rem(35);
-// }
 
 .merchItem.col-xs-12 {
   display: flex;
@@ -609,18 +601,6 @@ li.attribute {
   }
 }
 
-// TODO: Remove these lines from js file if CSS works
-// ul.breadcrumb,
-// .searchCatWrap,
-// .merchTop.Buttons,
-// .pageHelp,
-// .bottomButtons,
-// .sortCatWrap,
-// h1.page_header,
-// .merchRank {
-//   display: none;
-// }
-
 // Merchandise Categories
 .card-body > .row .merchLinkWrap {
   padding: 0 0.5rem;
@@ -764,7 +744,6 @@ li.attribute {
     width: rem(115);
     top: rem(-15);
     left: rem(-20);
-    font-size: rem(14);
   }
 }
 

@@ -1427,1431 +1427,1666 @@
     <div class="row">
 
       <div id="contentSection" Class="col-lg-12 col-md-12 col-sm-12 col-12" role="main">
+        <ul class="breadcrumb background_none">
+          <li> <a Class="small" href="https://www.uwbookstore.com/merchandise"> Merchandise Categories</a></li>
+          <li> <a Class="small"> New Arrivals</a></li>
+
+        </ul>
+
+
+        <a Class="floatr right15 top-50 pageHelp" href="https://www.uwbookstore.com/help/MerchandiseBrowse.htm">Help</a>
+        <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+        <input type="hidden" class="ga4-itemlistid" />
+        <input type="hidden" class="ga4-itemlistname" value="New Arrivals" />
+
+        <input type="hidden" class="ga4-location" value="merchlist" />
 
 
 
+        <form action="/NewArrivals" method="post"><input name="__RequestVerificationToken" type="hidden"
+            value="4Lxi9_CeMfy1ePMYQb9OyXKTXfa-lYh9GI-ITuFHPi0I6xH7-xqvt7DD-1TF4wcdIVzrhGQWsWVD56ewVkQGiR7BMHk1" />
 
-        <a Class="textr right15 pageHelp displayb"
-          href="https://www.uwbookstore.com/help/MerchandiseCategories.htm">Help</a>
-        <div Class="center">
-          <h1 Class="page_header">Gift Items</h1>
-        </div>
-        <div id="new-arrivals-panel" class="card merch_panel bottom20">
-          <!--Panel Header-->
-          <div Class="card-header">
-            <p class="bold category-name">New Arrivals</p>
+          <input id="hiddenShowResults1" name="showResults1" type="hidden" value="1" /><input id="hiddenShowResults2"
+            name="showResults2" type="hidden" value="22" /><input id="hiddenShowPerPage" name="showPerPage"
+            type="hidden" value="24" /><input id="hiddenID" name="mclID" type="hidden" value="" /><input id="hiddenType"
+            name="itemType" type="hidden" value="8" /><input id="hiddenSearchString" name="searchString" type="hidden"
+            value="" /><input id="hiddenSearchType" name="searchType" type="hidden" value="All" /><input id="hiddenNum"
+            name="num" type="hidden" value="" /><input id="hiddenSearchIn" name="searchin" type="hidden"
+            value="" /><input id="hiddenSearchMCL" name="searchMCL" type="hidden" value="" /><input id="hiddenCatID"
+            name="CatID" type="hidden" value="" /><input id="hiddenOriginal" name="originalSearchType" type="hidden"
+            value="" /><input id="hiddenStore" name="StoreID" type="hidden" value="177" /><input id="hiddenSort"
+            name="sortOrderEnum" type="hidden" value="8" /><input id="hiddenCatSearch" name="catSearch" type="hidden"
+            value="" /><input id="useRouting" name="useRouting" type="hidden" value="False" /><input id="isMerchList"
+            name="isMerchList" type="hidden" value="True" /><input id="hiddenLargeSwitch" name="largeSwitch"
+            type="hidden" value="False" /><input id="hiddenLowPrice" name="lowPrice" type="hidden" value="0" /><input
+            id="hiddenHighPrice" name="highPrice" type="hidden" value="1000000" /><input id="GiftReload"
+            name="GiftReload" type="hidden" value="False" /><input id="fc" name="fc" type="hidden" value="" /><input
+            id="fv" name="fv" type="hidden" value="" /><input id="listView" name="listView" type="hidden" value="" />
+
+
+          <input type="submit" id="showPerPageSubmit" value="showPerPage" name="submitButton" class="displayn" />
+          <input type="submit" id="firstSubmit" value="firstSubmit" name="submitButton" class="displayn" />
+          <input type="submit" id="prevSubmit" value="prevSubmit" name="submitButton" class="displayn" />
+          <input type="submit" id="nextSubmit" value="nextSubmit" name="submitButton" class="displayn" />
+          <input type="submit" id="lastSubmit" value="lastSubmit" name="submitButton" class="displayn" />
+          <input type="submit" id="sortSubmit" value="sortSubmit" name="submitButton" class="displayn" />
+          <input type="submit" id="searchSubmit" value="searchSubmit" name="submitButton" class="displayn" />
+          <input type="submit" id="filterSubmit" value="filterSubmit" name="submitButton" class="displayn" />
+          <div id="scrollPositionIgnore"></div>
+          <!-- <a id="goToTop" class="btn btn-default displayn" title="Go to top"><span
+              class="glyphicon glyphicon-chevron-up"></span></a> -->
+          <div Class="center">
+            <h1 Class="page_header">New Arrivals</h1>
           </div>
+          <!--Search and Sort Dropdown Row-->
+          <div class="row">
+            <!--Search Bar-->
+            <div class="searchCatWrap col-sm-4 col-12 padding0 padding-right10 bottom10">
+              <div class="input-group">
+                <input type="text" class="form-control searchCat" placeholder="Search New Arrivals"
+                  aria-label="Search New Arrivals" />
+                <!-- <button class="btn btn-default searchCatButton" type="button" aria-label="Search New Arrivals"><span
+                    class="glyphicon glyphicon-search"></span></button> -->
+              </div>
+            </div>
 
-          <div class="card-body">
-            <div class="row">
-              <div id="" class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/NewArrivals" class="merchLink small textc displayb padding5">
-                  <p class="merchLinkText top5">New Arrivals</p>
-                </a>
+            <!--Sort Dropdowns-->
+            <div class="sortCatWrap col-sm-8 col-12 padding0 bottom10">
+              <div class="row" style="width: 100%; justify-content: flex-end;">
+                <div class="col-md-5 col-sm-0 col-0 padding0 no_show_small">
+                  <div class="input-group">
+                    <label class="input-group-text" for="merchResultsSelectID">Show:</label>
+                    <select aria-label="Show number of items per page" id="merchResultsSelectID"
+                      class="merchResultsSelect form-control form-select wauto right5">
+                      <option selected value="24">24 Items Per Page</option>
+                      <option value="48">48 Items Per Page</option>
+                      <option value="72">72 Items Per Page</option>
+                      <option value="96">96 Items Per Page</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-5 col-sm-12 col-12 padding0">
+                  <div class="input-group">
+                    <label class="input-group-text" for="merchSortBySelectID">Sort By:</label>
+                    <select aria-label="Sort By" id="merchSortBySelectID"
+                      class="merchSortBy form-control form-select wauto">
+                      <option value="0"> Description(A - Z)</option>
+                      <option value="1"> Description(Z - A)</option>
+                      <option value="2"> Price(Low - High)</option>
+                      <option value="3"> Price(High - Low)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-2 col-sm-0 col-0 padding0 no_show_small">
+                  <div Class="displayib largeSwitch listSwitch" data-class="" tabindex="0" aria-label="Display Large"
+                    role="button"><span class="fa fa-2x fa-th-large switchIcon"></span></div>
+                  <div Class="displayib smallSwitch listSwitch" tabindex="0" aria-label="Display Small" role="button">
+                    <span class="fa fa-2x fa-th switchIcon"></span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+          </div>
+          <!--Filter and Merch Row-->
+          <div class="row">
+            <div class="viewFiltersDiv col-12 bottom10">
+              <div class="filterButtonWrapper">
+                <div tabindex="0" role="button" aria-label="Open Filters Dialog" class="viewFiltersButton displayn">
+                  <span class="filterText">FILTERS</span>
+                </div>
+              </div>
+            </div>
+
+            <!--Filter Section-->
+            <div role="dialog" class="filterColumn col-md-3 col-sm-3 col-12 displayn">
+              <div class="row">
+                <div class="col-12 padding0">
+                  <p Class="filterTitle font20"><strong>FILTER BY:</strong></p>
+                  <p class="closeFilterX floatr hover_pointer filterDisplay"><span
+                      class="glyphicon glyphicon-remove"></span></p>
+                  <input type="button" id="filterButton1"
+                    class="btn btn-primary top5 wauto filterButton filterButtonDisplay" value="Apply" />
+                </div>
+              </div>
+              <div class="filterOption top10 filterPriceOption row">
+
+                <div class="col-12 padding0">
+                  <p Class="filterOptionTitle padding5 bottom_border bottom5"><strong>Price</strong><span
+                      class="fa fa-minus-square floatr hover_pointer filterCollapse" data-id="filterPriceOption"
+                      data-filtername="Price" tabindex="0" aria-label="Collapse Price Filter" role="button"></span></p>
+                </div>
+                <div class="col-12 padding0">
+                  <div class="filterValueWrapper bottom10 " data-filterid="filterPriceOption">
+                    <div class="filterPrice top10 bottom10 input-group">
+                      <input aria-label="Minimum Price Filter Input" class="filterMin form-control visibilityHide"
+                        id="filterMinInput" max="100000" min="0" name="filterMin" placeholder="Min" type="number"
+                        value="0" />
+                      <span class="input-group-text">to</span>
+                      <input aria-label="Maximum Price Filter Input" class="filterMin form-control visibilityHide"
+                        id="filterMaxInput" max="100000" min="0" name="filterMax" placeholder="Max" type="number"
+                        value="1000000" />
+                    </div>
+                    <div class="filterOption top10 filterSaleOption">
+                      <div class="form-floating">
+                        <input aria-label="On Sale" class="filterCheck newCheckbox" data-category="filteronsale"
+                          data-value="filteronsale" id="merchFilterOnSale" name="merchFilterOnSale" type="checkbox"
+                          value="true" /><input name="merchFilterOnSale" type="hidden" value="false" />
+                        <span class="newCheckboxText"> On Sale</span>
+                      </div>
+                    </div>
+                    <p id="priceError" role="alert" class="red top10"></p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+            <!--MerchList Section-->
+            <div class="merchColumn col-12">
+              <div class="row">
+                <div class="filterSelections col-12 padding0 bottom10">
+                  <a class="hover_pointer clearIndPriceFilter bottom10 displayn filterSelection" tabindex="0">
+                    <span class="priceFilterOptionText"></span>
+                    <span class="fa fa-times"></span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 padding0">
+                  <div class="row">
+                    <!--
+  This is the container for all merch list / grid items.
+  This is where we determine if we need to display merch list / grid, and iterate through our merch items.
+-->
+
+
+
+                    <!---->
+
+
+
+                    <!--One Item-->
+                    <div data-count="1" data-merID="1884952"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name"
+                        value="Wisconsin Design Team Graduation Bear Sweatshirt (Black)" />
+                      <input type="hidden" class="ga4-price" value="79.99" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="2079600           " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1884952&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1884952-2.png"
+                                  alt="Wisconsin Design Team Graduation Bear Sweatshirt (Black)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1884952">Wisconsin Design Team Graduation
+                              Bear Sweatshirt (Black)</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">2079600 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$79.99</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="2" data-merID="1884210" class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name"
+                        value="&#39;47 Brand Milwaukee Brewers Glove T-Shirt (Navy)" />
+                      <input type="hidden" class="ga4-price" value="35" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="2079480           " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1884210&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1884210-1.png"
+                                  alt="&#39;47 Brand Milwaukee Brewers Glove T-Shirt (Navy)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1884210">'47 Brand Milwaukee Brewers Glove
+                              T-Shirt (Navy)</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">2079480 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$35.00</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="3" data-merID="1885173"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name" value="Bucky Badger Fight Song Bobblehead" />
+                      <input type="hidden" class="ga4-price" value="39.99" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="65226198612       " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1885173&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1885173-1.png"
+                                  alt="Bucky Badger Fight Song Bobblehead" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1885173">Bucky Badger Fight Song Bobblehead
+                            </p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">65226198612 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$39.99</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="4" data-merID="1879764" class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name"
+                        value="Champion Youth WI Badgers Full Zip Sweatshirt (Red)" />
+                      <input type="hidden" class="ga4-price" value="54.99" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="2078110           " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1879764&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1879764-1.png"
+                                  alt="Champion Youth WI Badgers Full Zip Sweatshirt (Red)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1879764">Champion Youth WI Badgers Full Zip
+                              Sweatshirt (Red)</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">2078110 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$54.99</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="5" data-merID="1884707"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name"
+                        value="For Bare Feet Wisconsin Badgers Stripe Tail Swoop Socks" />
+                      <input type="hidden" class="ga4-price" value="14.99" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="19608232817       " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1884707&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1884707-1.png"
+                                  alt="For Bare Feet Wisconsin Badgers Stripe Tail Swoop Socks" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1884707">For Bare Feet Wisconsin Badgers
+                              Stripe Tail Swoop Socks</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">19608232817 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$14.99</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="6" data-merID="1879716" class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name" value="Giltee Central Time Social Club Crew Neck (Green)" />
+                      <input type="hidden" class="ga4-price" value="59.99" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="2077578           " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1879716&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1879716-1.png"
+                                  alt="Giltee Central Time Social Club Crew Neck (Green)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1879716">Giltee Central Time Social Club Crew
+                              Neck (Green)</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">2077578 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$59.99</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="7" data-merID="1885071"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name" value="Hello Kitty Graduation Plush" />
+                      <input type="hidden" class="ga4-price" value="24.99" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="09167100750       " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1885071&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1885071-1.png"
+                                  alt="Hello Kitty Graduation Plush" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1885071">Hello Kitty Graduation Plush</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">09167100750 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$24.99</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="8" data-merID="1883707" class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name"
+                        value="Logo Brands Wisconsin Dream Weave Blanket (Red/Black)" />
+                      <input type="hidden" class="ga4-price" value="39.99" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="19738155423       " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1883707&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1883707-3.png"
+                                  alt="Logo Brands Wisconsin Dream Weave Blanket (Red/Black)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1883707">Logo Brands Wisconsin Dream Weave
+                              Blanket (Red/Black)</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">19738155423 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$39.99</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="9" data-merID="1885185"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name"
+                        value="Neil Enterprises, Inc. UW Soft Pillow by Julia Gash" />
+                      <input type="hidden" class="ga4-price" value="54.99" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="05012257752       " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1885185&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1885185-1.png"
+                                  alt="Neil Enterprises, Inc. UW Soft Pillow by Julia Gash" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1885185">Neil Enterprises, Inc. UW Soft
+                              Pillow by Julia Gash</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">05012257752 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$54.99</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="10" data-merID="1884374"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name"
+                        value="SDS Design Small Bucky Badger Window Cling (Inside)" />
+                      <input type="hidden" class="ga4-price" value="2.99" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="85272019288       " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1884374&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1884374-1.png"
+                                  alt="SDS Design Small Bucky Badger Window Cling (Inside)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1884374">SDS Design Small Bucky Badger Window
+                              Cling (Inside)</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">85272019288 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$2.99</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="11" data-merID="1884372"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name" value="SDS Design Small Motion W Window Cling (Inside)" />
+                      <input type="hidden" class="ga4-price" value="2.99" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="85272019287       " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1884372&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1884372-1.png"
+                                  alt="SDS Design Small Motion W Window Cling (Inside)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1884372">SDS Design Small Motion W Window
+                              Cling (Inside)</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">85272019287 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$2.99</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="12" data-merID="1884673"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name" value="Storm Duds Wisconsin Eco Sport Umbrella (White)" />
+                      <input type="hidden" class="ga4-price" value="19.99" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="72193509500       " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1884673&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1884673-2.png"
+                                  alt="Storm Duds Wisconsin Eco Sport Umbrella (White)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1884673">Storm Duds Wisconsin Eco Sport
+                              Umbrella (White)</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">72193509500 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$19.99</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="13" data-merID="1884675"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name"
+                        value="Storm Duds Wisconsin Eco Super Stick Umbrella (White)" />
+                      <input type="hidden" class="ga4-price" value="24.99" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="72193509400       " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1884675&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1884675-2.png"
+                                  alt="Storm Duds Wisconsin Eco Super Stick Umbrella (White)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1884675">Storm Duds Wisconsin Eco Super Stick
+                              Umbrella (White)</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">72193509400 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$24.99</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="14" data-merID="1879719"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name" value="Tommy Bahama Milwaukee Brewers &#189; Zip (Navy)*" />
+                      <input type="hidden" class="ga4-price" value="148" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="2077630           " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1879719&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1879719-1.png"
+                                  alt="Tommy Bahama Milwaukee Brewers &#189; Zip (Navy)*" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1879719">Tommy Bahama Milwaukee Brewers ½ Zip
+                              (Navy)*</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">2077630 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$148.00</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="15" data-merID="1884248"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name"
+                        value="Wisconsin Design Team Bucky Badger Spiral T-Shirt (White)" />
+                      <input type="hidden" class="ga4-price" value="35" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="2079492           " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1884248&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1884248-1.png"
+                                  alt="Wisconsin Design Team Bucky Badger Spiral T-Shirt (White)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1884248">Wisconsin Design Team Bucky Badger
+                              Spiral T-Shirt (White)</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">2079492 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$35.00</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="16" data-merID="1884001"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name" value="Wisconsin Design Team Diamond T-Shirt (Cream)" />
+                      <input type="hidden" class="ga4-price" value="35" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="2079493           " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1884001&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1884001-1.png"
+                                  alt="Wisconsin Design Team Diamond T-Shirt (Cream)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1884001">Wisconsin Design Team Diamond
+                              T-Shirt (Cream)</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">2079493 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$35.00</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="17" data-merID="1884242"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name"
+                        value="Wisconsin Design Team WI Volleyball Teddy Crew Neck (Red)" />
+                      <input type="hidden" class="ga4-price" value="70" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="2079495           " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1884242&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1884242-1.png"
+                                  alt="Wisconsin Design Team WI Volleyball Teddy Crew Neck (Red)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1884242">Wisconsin Design Team WI Volleyball
+                              Teddy Crew Neck (Red)</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">2079495 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$70.00</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="18" data-merID="1883711"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name" value="Wisconsin Design Team Wisconsin Badgers Hat (Red)" />
+                      <input type="hidden" class="ga4-price" value="35" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="81016077226       " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1883711&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1883711-2.png"
+                                  alt="Wisconsin Design Team Wisconsin Badgers Hat (Red)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1883711">Wisconsin Design Team Wisconsin
+                              Badgers Hat (Red)</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">81016077226 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$35.00</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="19" data-merID="1883709"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name"
+                        value="Wisconsin Design Team Wisconsin Diamond Hat (Red/Cream)" />
+                      <input type="hidden" class="ga4-price" value="35" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="81016077225       " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1883709&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1883709-2.png"
+                                  alt="Wisconsin Design Team Wisconsin Diamond Hat (Red/Cream)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1883709">Wisconsin Design Team Wisconsin
+                              Diamond Hat (Red/Cream)</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">81016077225 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$35.00</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="20" data-merID="1884245"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name"
+                        value="Wisconsin Design WI Teddy Bear Family Sweatshirt (Gray)" />
+                      <input type="hidden" class="ga4-price" value="79.99" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="2079496           " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1884245&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1884245-1.png"
+                                  alt="Wisconsin Design WI Teddy Bear Family Sweatshirt (Gray)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1884245">Wisconsin Design WI Teddy Bear
+                              Family Sweatshirt (Gray)</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">2079496 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$79.99</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="21" data-merID="1883548"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                      <input type="hidden" class="ga4-name" value="You The Fan Wisconsin Badgers Cornhole Set" />
+                      <input type="hidden" class="ga4-price" value="129.99" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="84036462809       " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1883548&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1883548-1.png"
+                                  alt="You The Fan Wisconsin Badgers Cornhole Set" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1883548">You The Fan Wisconsin Badgers
+                              Cornhole Set</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">84036462809 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$129.99</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+
+
+                    <!--One Item-->
+                    <div data-count="22" data-merID="1883699"
+                      class="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6"
+                      data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
+                      data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                      <input type="hidden" class="ga4-name" value="ZooZatz Wisconsin Color Block Tank (Red/White)" />
+                      <input type="hidden" class="ga4-price" value="34.99" />
+
+
+
+                      <input type="hidden" class="ga4-salePrice" value="0" />
+                      <input type="hidden" class="ga4-sku" value="2078503           " />
+                      <input type="hidden" class="ga4-discount" />
+                      <input type="hidden" class="ga4-affiliation" value="University Book Store" />
+                      <input type="hidden" class="ga4-items-identifier" value="-1" />
+                      <input type="hidden" class="ga4-isGeneral" value="False" />
+                      <input type="hidden" class="ga4-author" />
+                      <input type="hidden" class="ga4-isNonMerch" value="False" />
+                      <input type="hidden" class="ga4-isWebSku" value="false" />
+                      <!--Merch Info-->
+                      <div class="row">
+                        <div class="merchDetailWrapper col-12">
+
+                          <a tabindex="0"
+                            href="//www.uwbookstore.com/MerchDetail?MerchID=1883699&amp;type=8&amp;CategoryName=&amp;CatID=-1&amp;Name="
+                            Class="merchLink displayb bottom10">
+                            <div Class="imageWrapper">
+                              <div Class="bottom10 merchImageWrapper merchlist">
+                                <div class="newBadge" style="background-color: #6E6E6E;">NEW!</div>
+                                <!--Merch Image-->
+                                <img width="200" Class="merchImage img-responsive"
+                                  src="https://www.uwbookstore.com/storeimages/177-1883699-1.png"
+                                  alt="ZooZatz Wisconsin Color Block Tank (Red/White)" aria-hidden="true">
+                              </div>
+                            </div>
+                            <p Class="merchTitle top0 textc lead" data-id="1883699">ZooZatz Wisconsin Color Block Tank
+                              (Red/White)</p>
+                          </a>
+                          <div Class="merchCol1 textc bottom10">
+
+                            <div Class="merchRank">
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                              <span Class="ranking red fa fa-star-o"></span>
+                            </div>
+
+
+                            <!--Merch Item Number-->
+                            <p Class="merchNumber"><span class="merchSKU">2078503 </span></p>
+
+                            <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$34.99</span></p>
+
+                            <p Class="merchDiscount red top5 bold"></p>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--End MerchListSection-->
+                  </div>
+                  <div class="row">
+                    <div class="textc">
+                      <ul Class="pagination">
+                        <li class="chevLeft"><a class="hover_pointer">&#8249;</a></li>
+                        <li class="chevRight"><a class="hover_pointer">&#8250;</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div Class="card merch_panel bottom20">
-          <!--Panel Header-->
-          <div Class="card-header">
-            <p class="bold category-name">Gift Items</p>
-          </div>
-          <div Class="card-body">
-            <div class="row">
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/flash-sale"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Alumni Crew Neck</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Alumni"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Alumni Gifts</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/American-Family"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Am Fam Championship</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Axe-Game-2024"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Axe Game 2024</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/B10-Tournament-Champs"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">B10 Tournament Champs</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/New-Items"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Back in Stock</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Backpacks"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Backpacks</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Badger-Family"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Badger Family</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Badger-Pets"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Badger Pets</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Balls-Pucks-Helmets"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Balls, Pucks, &amp; Helmets</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Banners-and-Flags"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Banners &amp; Flags</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Barware"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Barware</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Basketball"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Basketball Items</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Bed-and-Bath"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Bed &amp; Bath</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Biking-Items"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Biking Items</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Black-Out-the-Kohl-Center"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Black Out the Kohl Center</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Blankets-and-Rugs"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Blankets &amp; Rugs</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Books"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Books</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/BookTok"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">BookTok</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/brewers-and-bucks"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Brewers &amp; Bucks</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Buckys-On-Parade"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Bucky on Parade</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Bucky-on-Parade-Figurines"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Bucky on Parade Figurines</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Buttons"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Buttons</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Car-Accessories"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Car Accessories</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Champion-Pre-Sale"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Champion Pre-Sale</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Champion-Sale"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Champion Sale</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/ChampionUpsideDown"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">ChampionUpsideDown</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Cheeseheads"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Cheeseheads</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/clear-bags"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Clear Bags</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Clearance-Items"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Clearance Items</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/MerchList?ID=28378"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">COMMENCEMENT </p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Cow-Print"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Cow Print</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Custom-Orders"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Custom Orders</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Dairyland-Gifts"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Dairyland Gifts</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Decals-Patches-Stickers"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Decals/Patches/Stickers</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Dorm-Accessories"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Dorm Accessories</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/MerchList?ID=24133"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">DORM SUPPLIES </p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Duck-Hunt"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Duck Hunt</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Electronic-Accessories"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Electronic Accessories</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Engineering-Supplies"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Engineering Supplies</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Family-Equality"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Family Equality</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Family-Weekend"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Family Weekend</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Fathers-Day-Gifts"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Father&#39;s Day Items</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Fine-Gifts"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Fine Gifts</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Fitness"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Fitness</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Football"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Football Items</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/For-the-Wall"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">For The Wall</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Frozen-Confines"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Frozen Confines</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Game-Day-Ready"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Game Day Ready</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/MerchList?ID=9420" Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">GAMES &amp; SPORT EQUIPMENT </p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/gift-cards"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Gift Cards</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/MerchList?ID=28493"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">GIFT FOOD </p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Gifts-Under-100"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Gifts Under $100</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Gifts-Under-25"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Gifts Under $25</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Gifts-Under-50"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Gifts Under $50</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Golf"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Golf Items</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Greek-Life"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Greek Life</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Hair-Accessories"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Hair Accessories</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Halloween"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Halloween Items</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Hawaiian-Shirts"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Hawaiian Shirts</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Health-and-Beauty"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Health and Beauty</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/MerchList?ID=3937" Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">HIGH END </p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Holiday-Gift-Guide"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Holiday Gift Guide</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Holiday"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Holiday Items</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Index-Cards"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Index Cards</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Infant"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Infant Gifts</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/jacket-sale"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Jacket Sale</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Jewelry-Sale"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Jewelry Sale</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Jewelry-Watches-Pins"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Jewelry, Watches, &amp; Pins</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Jump-Around"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Jump Around</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Keychains"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Key Chains</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Kitchen-and-Dining"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Kitchen &amp; Dining</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Lanyards"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Lanyards</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Made-in-USA"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Made in U.S.A.</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Magnets"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Magnets</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Hockey"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Men&#39;s Hockey</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Miscellaneous-Supplies"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Miscellaneous Supplies</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Mothers-Day-Gifts"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Mother&#39;s Day</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Mugs"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Mugs</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Office-Supplies-Furnishings"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Office Supp./Furnishings</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Organizers-Ring-Binders"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Organizers &amp; Ring Binders</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Other-Sports"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Other Sports</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Outfit-of-the-Week"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Outfit of the Week</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Green-Bay-Packers"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Packers Items</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Paper"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Paper</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/MerchList?ID=3965" Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">PAPER AND WRITING </p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Party-Supplies"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Party Supplies</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Patio-and-Outdoor"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Patio &amp; Outdoor</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Pens"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Pens</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Plush"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Plush</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/MerchList?ID=8625" Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">POSTERS </p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Rain-Gear"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Rain Gear</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Recycled"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Recycled</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Roll-Badge"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Roll Badge</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/MerchList?ID=5329" Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">School of Nursing</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/School-of-Nursing-Hood"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">School of Nursing Hood</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/School-Supplies"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">School Supplies</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Snoopy"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Snoopy</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Soccer"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Soccer Items</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Notebooks-Pads"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Spirals, Notebooks &amp; Pads</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Spring-Items"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Spring Items</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Squishy-Plush"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Squishy Plush</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/St-Patricks-Day"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">St. Patrick&#39;s Day Items</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Starter-Jackets"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Starter Jackets</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Steve-Stricker-Collection"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Steve Stricker Collection</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Stocking-Stuffers"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Stocking Stuffers</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Stripe-Out-Red"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Stripe Out Red</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Study-Gear"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Study Gear</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Sunglasses"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Sunglasses</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Tailgate-Gear"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Tailgate Gear</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/The-Red-Shirt-17th-Edition"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">The Red Shirt™ 17th</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Toddler"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Toddler Gifts</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Totes-and-Purses"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Totes &amp; Purses</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Toys-and-Games"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Toys &amp; Games</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Travel-Mugs-and-Water-Bottles"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Travel Mugs/Water Bottles</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Upside-Down"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Upside Down</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/UW-Band-Items"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">UW Band Items</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Valentines-Gift-Ideas"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Valentine&#39;s Gift Ideas</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Vault"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Vault</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Vintage-Inspired-Logo"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Vintage Inspired Logo</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Volleyball"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Volleyball Items</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Wallets-and-ID-Holders"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Wallets &amp; ID Holders</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/wandos"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Wando&#39;s</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Stripe-Out-White"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">White Items</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/MerchList?ID=25535"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">WHOLESALE SALES </p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Wisconsin-Family"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Wisconsin Family</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Wisconsin-Socks"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Wisconsin Socks</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Wisconsin-vs-Alabama-T-Shirt"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Wisconsin vs. Alabama Tee</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Womens-Hockey"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Women&#39;s Hockey</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Womens-Hockey-Champions"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Women&#39;s Hockey Champions</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Womens-Sports"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Women&#39;s Sports</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Wrestling"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Wrestling Items</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Writing-Supplies"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Writing Supplies</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Yard-Signs"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Yard Signs</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
-              <!--Start One Item I have included a hidden input field for your value plust a hidden img field where they can add an image if they want wiht jquery-->
-              <div id="" Class="merchLinkWrap col-md-3 col-6">
-                <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Youth"
-                  Class="merchLink small textc displayb padding5">
-                  <!--Link Text-->
-                  <p Class="merchLinkText top5">Youth Gifts</p>
-                </a>
-                <!--End link-->
-              </div>
-              <!--End One Item-->
+
+
+          <div id="itemFormModal" Class="modal fade" role="dialog">
+            <input type="hidden" value="" id="itemFormButton" />
+            <input type="hidden" value="" id="itemFormType" />
+            <input type="hidden" value="" id="itemFormQty" />
+            <input type="hidden" value="" id="itemFormcolorDesc" />
+            <input type="hidden" value="" id="itemFormcolorValue" />
+            <input type="hidden" value="" id="itemFormlogoDesc" />
+            <input type="hidden" value="" id="itemFormlogoValue" />
+            <input type="hidden" value="" id="itemFormsizeDesc" />
+            <input type="hidden" value="" id="itemFormsizeValue" />
+            <input type="hidden" value="" id="itemFormTypeCode" />
+            <input type="hidden" value="" id="itemFormCurrentPrice" />
+            <input type="hidden" value="" id="itemFormOldType" />
+            <input type="hidden" value="" id="itemFormOldTypeValue" />
+            <input type="hidden" value="" id="itemFormQuick" />
+            <input type="hidden" value="" id="itemFormSKU" />
+            <input type="hidden" value="" id="itemFormMerchImage" />
+            <div Class="modal-dialog">
+              <!-- Modal content-->
+              <div Class="modal-content itemFormModalContent"></div>
             </div>
           </div>
-        </div>
+          <div id="cartType" Class="modal fade" role="dialog">
+            <div Class="modal-dialog">
+              <!-- Modal content-->
+              <div Class="modal-content">
+                <div class="modal-body cartTypeBody"></div>
+              </div>
+            </div>
+          </div>
+          <div id="quickViewModal" Class="modal fade" role="dialog">
+            <div Class="modal-dialog modal-lg">
+              <!-- Modal content-->
+              <div Class="modal-content quickViewContent">
+              </div>
+            </div>
+          </div>
+          <div id="overlay">
+            <i id="merchSpinner" class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+          </div>
+          <div id="imageLightBox" Class="modal fade" role="dialog">
+            <div Class="modal-dialog modal-lg">
+              <div Class="modal-content">
+                <div Class="modal-body">
+                  <div Class="row bottom10">
+                    <div Class="col-md-1 col-sm-2 col-2 textl">
+                      <a Class="imageLightBoxLeft" style="display: inline-block;"><img class="imageLeft"
+                          src="https://www.uwbookstore.com/RWD-IMG/chevLeft.png" alt="Left Arrow For Light Box" /></a>
+                    </div>
+                    <div Class="modalDetailImage textc col-md-10 col-sm-8 col-8" data-count="0">
+                      <img data-id="1" Class="imageLightBoxBig img-responsive margin_auto" alt="" />
+                    </div>
+                    <div Class="col-md-1 col-sm-2 col-2 textr">
+                      <a Class="imageLightBoxRight" style="display: inline-block;"><img class="imageRight"
+                          src="https://www.uwbookstore.com/RWD-IMG/chevRight.png" alt="Right Arrow For Light Box" /></a>
+                    </div>
+                  </div>
+                  <div Class="modalDetailThumbnail textc">
+                  </div>
+                </div>
+                <div Class="modal-footer">
+                  <Button type="button" Class="btn btn-default" data-bs-dismiss="modal">Close</Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
 
 
-        <script type="9b9fe8f4a7ffbad3c95f5eba-text/javascript">
-function getParameterByName(name, url) {
-if (!url) url = window.location.href;
-name = name.replace(/[\[\]]/g, "\\$&");
-var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-results = regex.exec(url.toLowerCase());
-if (!results) return '';
-if (!results[2]) return '';
-return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-$('body').hide();
-$(document).ready(function () {
-var idvalue = [];
-var id, dataid, datavalue, inarray;
-
-$('.merch_panel').each(function () {
-datavalue = $(this).find('.category-name').text().toLowerCase();;
-datavalue = datavalue.replace(/\s/g, "");
-datavalue = datavalue.replace(/[^\w\s]|_/g, "");
-datavalue = datavalue.replace(/\s/g, "");
-$(this).attr('data-category', datavalue);
-idvalue.push(datavalue);
-});
-var id = getParameterByName('cat').toLowerCase();
-id = id.replace(/\s/g, "");
-id = id.replace(/[^\w\s]|_/g, "");
-id = id.replace(/\s/g, "");
-inarray = $.inArray(id, idvalue);
-if (inarray >= 0) {
-$('.merch_panel').each(function () {
-  var dataid = $(this).attr('data-category');
-  if (id === dataid) {
-      $(this).show();
-  } else {
-      $(this).hide();
-  }
-});
-}
-$('body').show();
-
-});
-
-</script>
       </div>
     </div>
 
@@ -3156,7 +3391,9 @@ $('body').show();
   <script type="text/javascript" src="./js/merch-variables.js"></script>
   <script type="text/javascript" src="./src/app.js"></script>
   <script src="./src/menu.js"></script>
-  <script src="./src/merchandise.js"></script>
+  <script src="./src/merch-list.js"></script>
+  <!-- <script src="./src/merch-detail.js"></script> -->
+  <!-- <script src="./src/merchandise.js"></script> -->
   <script>
 
     $('.flexslider').flexslider({

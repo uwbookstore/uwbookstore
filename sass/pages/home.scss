@@ -1,17 +1,18 @@
 @use '../util' as *;
 
 .hero__image {
-  background-color: var(--bs-white);
-  padding-bottom: rem(40);
   margin-bottom: rem(24);
+
+  @include breakpoint(small) {
+    padding-bottom: rem(40);
+  }
 }
 
 .featured {
   &__wrapper {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: space-around;
-    max-width: rem(1170);
     margin-bottom: rem(90);
     gap: rem(20);
   }

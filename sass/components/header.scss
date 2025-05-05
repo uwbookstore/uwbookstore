@@ -17,13 +17,6 @@
       h1 {
         margin-bottom: 0;
       }
-
-      img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-        margin: auto;
-      }
     }
 
     @include breakpoint(menu) {
@@ -60,9 +53,7 @@
 .navbar {
   &__links {
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    position: relative;
     padding: rem(15);
     background-color: var(--bs-primary);
     color: var(--bs-white);

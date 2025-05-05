@@ -626,10 +626,34 @@ li.attribute {
   padding: 0 0.5rem;
 }
 
+.card-body.card-body-gift > .row {
+  gap: rem(20);
+  justify-content: center;
+
+  @include breakpoint(medium) {
+    gap: 0;
+    margin-inline: rem(-10);
+  }
+}
+
+.card-body.card-body-gift > .row .merchLinkWrap {
+  padding: 0;
+  flex: 1 1 100%;
+
+  @include breakpoint(small) {
+    flex: 1 1 48%;
+  }
+
+  @include breakpoint(medium) {
+    flex: initial;
+    padding-inline: rem(10);
+  }
+}
+
 .card-body > .row .merchLinkWrap .merchLink {
   background: #f8d7da;
   display: flex;
-  margin-bottom: 1.25rem;
+  margin-bottom: rem(20);
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -641,6 +665,15 @@ li.attribute {
   transition: var(--transition);
   font-size: 1.125rem;
 }
+
+.card-body.card-body.card-body-gift > .row .merchLinkWrap .merchLink {
+  margin-bottom: 0;
+
+  @include breakpoint(medium) {
+    margin-bottom: rem(20);
+  }
+}
+
 .card-body > .row .merchLinkWrap .merchLink p {
   margin: 0;
 }

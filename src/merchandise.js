@@ -3,22 +3,32 @@
 // REMOVE ALL EMPTY CATEGORIES
 
 // Remove card styles if on gift items page
-const categoryName = document.querySelectorAll('.category-name');
-categoryName.forEach((category) => {
-  if (category.textContent.toLowerCase() === 'gift items') {
-    const categoryParentDiv = category.parentElement.parentElement;
-    const categoryBody = category.parentElement.nextElementSibling;
-    const categoryHeader = document.createElement('div');
-    categoryHeader.classList.add('jumbotron', 'landing');
-    categoryHeader.innerHTML = '<h2>Badger Gifts</h2>';
+const urlParam = (name) => {
+  const params = new URLSearchParams(window.location.search);
+  return params.get(name) || 0;
+};
 
-    category.parentElement.style.display = 'none';
-    categoryParentDiv.classList.remove('card');
-    categoryBody.classList.add('card-body-gift');
-    categoryBody.style.padding = '20px 0 10px';
-    categoryParentDiv.insertBefore(categoryHeader, category.parentElement);
-  }
-});
+if (
+  window.location.href.toLowerCase().search(/gift-items/) !== -1 ||
+  urlParam('mc_id') === '1113'
+) {
+  const categoryName = document.querySelectorAll('.category-name');
+  categoryName.forEach((category) => {
+    if (category.textContent.toLowerCase() === 'gift items') {
+      const categoryParentDiv = category.parentElement.parentElement;
+      const categoryBody = category.parentElement.nextElementSibling;
+      const categoryHeader = document.createElement('div');
+      categoryHeader.classList.add('jumbotron', 'landing');
+      categoryHeader.innerHTML = '<h2>Badger Gifts</h2>';
+
+      category.parentElement.style.display = 'none';
+      categoryParentDiv.classList.remove('card');
+      categoryBody.classList.add('card-body-gift');
+      categoryBody.style.padding = '20px 0 10px';
+      categoryParentDiv.insertBefore(categoryHeader, category.parentElement);
+    }
+  });
+}
 
 // Hide parent of .panel-body if it has no children
 document.querySelectorAll('.panel-body').forEach((panel) => {
@@ -81,7 +91,6 @@ if (pageHeader.textContent.toLowerCase() !== 'merchandise categories') {
   'Engineering Supplies',
   'Family Equality',
   'Family Weekend',
-  "Father's Day Items",
   'Fine Gifts',
   'Fitness',
   'Football Items',
@@ -98,7 +107,6 @@ if (pageHeader.textContent.toLowerCase() !== 'merchandise categories') {
   'Made in U.S.A.',
   "Men's Hockey",
   'Miscellaneous Supplies',
-  "Mother's Day",
   'Organizers & Ring Binders',
   'Other Sports',
   'Outfit of the Week',
@@ -163,17 +171,14 @@ document.querySelectorAll('.merchLinkText').forEach((link) => {
   }
 
   if (text === 'cold°gear') {
-    console.log('coldgear');
     link.innerHTML = 'cold&deg;gear';
   }
 
   if (text === 'heat°gear') {
-    console.log('heatgear');
     link.innerHTML = 'heat&deg;gear';
   }
 
   if (text === 'Wite-Out®') {
-    console.log('wite-out');
     link.innerHTML = 'Wite-Out&reg;';
   }
 });

@@ -25,8 +25,8 @@
     &-img {
       img {
         border-radius: 50%;
-        height: rem(275);
-        width: rem(275);
+        height: rem(175);
+        width: rem(175);
         margin-bottom: rem(30);
       }
     }
@@ -71,7 +71,11 @@
           display: block;
           height: 80%;
         }
+      }
+    }
 
+    @include breakpoint(menu) {
+      &-info {
         h2 {
           font-size: rem(50);
         }
@@ -79,6 +83,8 @@
 
       &-img {
         img {
+          height: rem(275);
+          width: rem(275);
           margin-bottom: 0;
           margin-right: rem(30);
         }
@@ -140,15 +146,15 @@
     }
 
     @include breakpoint(medium) {
+      height: auto;
       &-title {
         font-size: rem(75);
         margin-bottom: rem(100);
       }
 
-      height: auto;
       &-btns {
         flex-flow: row nowrap;
-        justify-content: flex-end;
+        justify-content: center;
         gap: rem(75);
         margin-bottom: rem(10);
 

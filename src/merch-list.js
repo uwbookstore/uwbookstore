@@ -21,7 +21,7 @@ noResults.classList.add('empty-results');
 //   window.location.href.toLowerCase().search(/newarrivals/) !== -1
 // ) {
 
-if (categoryTitle.textContent.toLocaleLowerCase() === 'search all') {
+if (categoryTitle.textContent.toLowerCase() === 'search all') {
   const searched = window.location.search.split('=');
   const searchTerm = searched[2].replace(/%20/g, ' ');
 

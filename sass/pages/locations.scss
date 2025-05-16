@@ -14,7 +14,8 @@
 .locations,
 .footer-locations {
   &__nav {
-    ul {
+    ul,
+    [role='tablist'] {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -33,7 +34,8 @@
       a {
         width: 100%;
 
-        &.active {
+        &.active,
+        &[aria-selected='true'] {
           background-color: var(--bs-primary);
           color: var(--bs-white);
           box-shadow: none;
@@ -114,6 +116,23 @@
 
     @include breakpoint(medium) {
       flex: 0 0 60%;
+    }
+  }
+
+  .tabs-nav {
+    &[role='tablist'] {
+      li {
+        a {
+          &.active,
+          &[aria-selected='true'] {
+            background-color: var(--bs-primary);
+            color: var(--bs-white);
+            box-shadow: none;
+            text-decoration: none;
+            border-color: var(--bs-primary);
+          }
+        }
+      }
     }
   }
 }

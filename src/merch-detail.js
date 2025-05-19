@@ -529,7 +529,7 @@ if (sizes || logos || colors) {
 // Append Quantity & Add to Cart button
 const addToCartField = document.createElement('div');
 addToCartField.id = 'add-qty';
-addToCartField.classList.add('flex', 'merch__detail-add"></div>');
+addToCartField.classList.add('flex', 'merch__detail-add');
 const qtyWrapper = document.createElement('div');
 qtyWrapper.className = 'merch__detail-qty';
 qtyWrapper.innerHTML = `<label for="merchQTY" class="sr-only">Quantity: </label>`;

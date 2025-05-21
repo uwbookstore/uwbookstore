@@ -463,6 +463,9 @@ if (sizes && prodName.toLowerCase().substring(0, 13) === 'the red shirt') {
 } else if (sizes && prodName.toLowerCase().substring(0, 7) === 'vantage') {
   sizeChartUrl = 'sizeChart/vantage';
   sizeChartBrand = 'Vantage';
+} else if (sizes && prodName.toLowerCase().substring(0, 8) === 'kadyluxe') {
+  sizeChartUrl = 'sizeChart/kadyluxe';
+  sizeChartBrand = 'KadyLuxe';
 } else if (
   sizes &&
   prodName.toLowerCase().substring(0, 30) === 'little earth wisconsin pet hat'

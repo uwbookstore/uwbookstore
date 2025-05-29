@@ -247,6 +247,10 @@ if (!noListItems) {
   // FOR AM FAM CHAMPIONSHIP ITEMS
   if (categoryTitle.textContent.toLowerCase().substring(0, 6) === 'am fam') {
     pageBanner.innerHTML = `
+      <div class="alert alert-danger text-center mb-3">
+        <h2 class="mb-1">Thanks for supporting the American Family Championship.</h2>
+        <p class="mb-0">All of the products have been packed up for the event!<br>Come see us at TPC Wisconsin June 6-8.</p>
+      </div>
       <img src="https://i.univbkstr.com/v3/img/landing/merch/AmFamGolf.png" class="img-fluid img__center d-block" alt="AmFam Championship. Official Merchandise Partner of the American Family Insurance Championship.">   
     `;
     filterColumn.after(pageBanner);

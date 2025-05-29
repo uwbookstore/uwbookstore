@@ -316,8 +316,15 @@ if (merchDisclaimer) {
   merchDisclaimerHtml.appendChild(disclaimerLabel);
 
   // Add needed disclaimer text
+  // IRON JOC DISCLAIMER
+  if (document.getElementById('landsEnd')) {
+    disclaimerSpan.innerHTML = `
+      <strong>PLEASE READ BEFORE PURCHASE!  Store pick-up orders will incur a $7.50 drop ship charge.</strong> This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>
+    `;
+    disclaimerLabel.appendChild(disclaimerSpan);
+  }
   // LANDS' END DISCLAIMER
-  if (document.getElementById('landsEndReally')) {
+  else if (document.getElementById('landsEndReally')) {
     disclaimerSpan.innerHTML = `
       <strong>PLEASE READ BEFORE PURCHASE! — Lands&apos; End may take 10-15 business days (M-F) to ship. Lands&rsquo; End orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>
     `;

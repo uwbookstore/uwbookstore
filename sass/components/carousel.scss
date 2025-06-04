@@ -12,12 +12,21 @@
   }
 }
 
+.carousel-control-prev,
+.carousel-control-next,
 .carousel-control.left,
 .carousel-control.right {
-  color: color-mix(in srgb, var(--bs-gray-400), #000 10%);
+  color: color-mix(in srgb, var(--bs-black), #000 10%);
   background-image: none;
   opacity: 1;
-  width: 2.5%;
+  width: 10%;
+}
+
+.carousel-control-prev-icon {
+  background-image: url(https://i.univbkstr.com/v3/img/pages/home/rotator/controls/chevron-left.svg);
+}
+.carousel-control-next-icon {
+  background-image: url(https://i.univbkstr.com/v3/img/pages/home/rotator/controls/chevron-right.svg);
 }
 
 .carousel-indicators {

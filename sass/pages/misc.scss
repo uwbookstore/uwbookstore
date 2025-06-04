@@ -71,15 +71,10 @@
 
 .coupon {
   margin: rem(30) auto;
-  padding: rem(10);
   text-align: center;
-  border: rem(5) dashed #333;
+  border: rem(5) solid var(--bs-primary);
   width: 100%;
   font-family: Helvetica, Arial, sans-serif;
-
-  &__images {
-    display: none;
-  }
 
   img {
     display: block;
@@ -87,36 +82,43 @@
     height: auto;
   }
 
-  &__header {
-    width: 100%;
-    background-color: #333;
-    color: var(--bs-white);
-    padding: rem(5);
-    text-transform: uppercase;
-    font-size: rem(25);
+  &__logo {
+    border-top: 4px solid var(--bs-black);
+  }
 
+  > div {
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: var(--bs-primary);
+      color: var(--bs-white);
+      padding: rem(30) 0;
+
+      p {
+        font-weight: 300;
+      }
+
+      a {
+        color: var(--bs-white);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__header {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     h3 {
-      font-size: rem(70);
-      text-align: center;
-      line-height: 100%;
+      line-height: 0.85;
+      font-size: rem(155);
+      margin-bottom: rem(10);
     }
 
     p {
-      margin: 0;
+      line-height: 0.85;
+      font-size: rem(50);
+      text-transform: uppercase;
       font-weight: 700;
-    }
-
-    @include breakpoint(medium) {
-      padding: rem(5) rem(15);
-
-      h3 {
-        font-size: rem(135);
-        letter-spacing: rem(2);
-      }
-
-      p {
-        font-size: rem(40);
-      }
     }
   }
 
@@ -127,8 +129,8 @@
     background-color: #333;
     padding: rem(5);
     height: rem(60);
-    width: rem(225);
-    margin: auto;
+    width: rem(315);
+    margin: 0 auto rem(20);
 
     &-text,
     &-id {
@@ -144,7 +146,8 @@
       text-align: center;
       background-color: #fff;
       color: #333;
-      font-size: rem(25);
+      font-size: rem(35);
+      font-weight: 300;
       text-transform: uppercase;
     }
 
@@ -154,39 +157,26 @@
     }
   }
 
-  &__stores {
-    font-weight: 700;
-    margin-top: rem(20);
-    font-size: rem(20);
-  }
-
-  &__footer {
-    margin-top: rem(20);
-    font-size: rem(12);
-    text-align: center;
-    position: relative;
-
-    p {
-      margin-bottom: 0;
-    }
-  }
-
   @include breakpoint(medium) {
-    display: grid;
-    grid-template-columns: rem(140) 1fr rem(140);
-    grid-template-rows: auto;
-    gap: 0;
-    width: rem(1000);
+    display: flex;
 
-    &__images {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
+    & > div {
+      width: 50%;
+
+      &:first-child {
+        padding-inline: rem(10);
+      }
     }
 
-    &__body {
-      padding-inline: rem(15);
+    &__header {
+      h3 {
+        font-size: rem(250);
+        letter-spacing: 1px;
+      }
+
+      p {
+        font-size: rem(60);
+      }
     }
   }
 }

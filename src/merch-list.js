@@ -196,21 +196,21 @@ if (!noListItems) {
   merchColumn.classList.add('flex', 'merch__card');
   merchCard.appendChild(merchColumn);
 
-  merchResultsSelect.classList.remove(
-    'wauto',
-    'displayib',
-    'right5',
-    'bottom10'
-  );
-  merchResultsSelect.classList.add('mx-auto');
+  // merchResultsSelect.classList.remove(
+  //   'wauto',
+  //   'displayib',
+  //   'right5',
+  //   'bottom10'
+  // );
+  // merchResultsSelect.classList.add('mx-auto');
 
   const paginationBtm = document.createElement('div');
   paginationBtm.id = 'pagination-btm';
   paginationBtm.className = 'text-center';
 
   merchCard.after(paginationBtm);
-  paginationBtm.appendChild(pagination);
-  paginationBtm.appendChild(merchResultsSelect);
+  // paginationBtm.appendChild(pagination);
+  // paginationBtm.appendChild(merchResultsSelect);
   const filterSelectionsRow =
     document.querySelector('.filterSelections').parentElement;
 
@@ -345,8 +345,14 @@ if (!noListItems) {
 $(document).ready(() => {
   const pageItems = $('.pagination li');
   const merchItem = $('.merchItem');
+  $('ul.pagination').appendTo('#pagination-btm');
 
-  if (merchItem.length <= 12 && pageItems.length === 1) {
+  $('select.merchResultsSelect')
+    .removeClass('wauto displayib right5 bottom10')
+    .addClass('mx-auto')
+    .appendTo('#pagination-btm');
+
+  if (merchItem.length <= 24 && pageItems.length === 1) {
     $('ul.pagination, select.merchResultsSelect').hide();
   }
 });

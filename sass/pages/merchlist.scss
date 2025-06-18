@@ -708,6 +708,17 @@ li.attribute {
   cy: 7;
 }
 
+.specialBadge {
+  position: absolute;
+  right: -10px;
+  color: var(--bs-white);
+  background: var(--bs-black);
+  padding: 2px 10px;
+  top: -7px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
 .newBadge,
 .saleBadge,
 .restockBadge,

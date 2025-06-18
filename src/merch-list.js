@@ -325,7 +325,7 @@ if (!noListItems) {
 
   // ADD BACK IN STOCK BADGE TO ITEMS WITH ^ IN PRODUCTNAME
   productName.forEach((item) => {
-    const name = item.textContent;
+    const name = item.textContent.toLowerCase();
 
     if (name.includes('^')) {
       const restockBadge = document.createElement('div');
@@ -334,6 +334,24 @@ if (!noListItems) {
 
       const merchLink = item.closest('.merchDetailWrapper');
       merchLink.prepend(restockBadge);
+    }
+
+    if (name.startsWith('ipad air') || name.startsWith('ipad pro')) {
+      const specialBadge = document.createElement('div');
+      specialBadge.className = 'specialBadge';
+      specialBadge.textContent = 'Free Pencil Pro';
+
+      const merchLink = item.closest('.merchDetailWrapper');
+      merchLink.prepend(specialBadge);
+    }
+
+    if (name.startsWith('macbook') || name.startsWith('imac')) {
+      const specialBadge = document.createElement('div');
+      specialBadge.className = 'specialBadge';
+      specialBadge.textContent = 'Free AirPods';
+
+      const merchLink = item.closest('.merchDetailWrapper');
+      merchLink.prepend(specialBadge);
     }
   });
 }

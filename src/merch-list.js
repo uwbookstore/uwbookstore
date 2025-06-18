@@ -336,8 +336,8 @@ if (!noListItems) {
       merchLink.prepend(restockBadge);
     }
 
+    const specialBadge = document.createElement('div');
     if (name.startsWith('ipad air') || name.startsWith('ipad pro')) {
-      const specialBadge = document.createElement('div');
       specialBadge.className = 'specialBadge';
       specialBadge.textContent = 'Free Pencil Pro';
 
@@ -346,7 +346,6 @@ if (!noListItems) {
     }
 
     if (name.startsWith('macbook') || name.startsWith('imac')) {
-      const specialBadge = document.createElement('div');
       specialBadge.className = 'specialBadge';
       specialBadge.textContent = 'Free AirPods';
 

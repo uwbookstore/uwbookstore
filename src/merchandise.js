@@ -31,9 +31,9 @@ if (
 }
 
 // Hide parent of .panel-body if it has no children
-document.querySelectorAll('.panel-body').forEach((panel) => {
-  if (panel.children.length === 0) {
-    panel.parentElement.style.display = 'none';
+document.querySelectorAll('.card-body .row').forEach((card) => {
+  if (card.children.length === 0) {
+    card.parentElement.parentElement.style.display = 'none';
   }
 });
 
@@ -54,6 +54,10 @@ if (pageHeader.textContent.toLowerCase() !== 'merchandise categories') {
   "WOMEN'S HATS",
   'DNR MAPS',
   'General Books',
+  'CAP & GOWN',
+  "MEN'S S&L",
+  "WOMEN'S S&L",
+  'SHARED DO',
   'School Of Business',
 ].forEach((keyword) => {
   document.querySelectorAll('.category-name').forEach((elem) => {

@@ -379,8 +379,17 @@ infoBlock.innerHTML = `
   <div id="merch-sku" class="merch__detail-sku">
   <strong>Item:</strong> ${prodSku}
   </div>
-  ${gmPromo ? gmPromo : ''}
 `;
+
+if (gmPromo) {
+  infoBlock.appendChild(gmPromo);
+  const promoTxt = gmPromo.textContent;
+  gmPromo.classList.remove('red', 'bold');
+  gmPromo.classList.add('alert', 'alert-success');
+  if (promoTxt === 'Buy 1 Get $179.00 Off' || promoTxt === 'Buy 1 Get 1 Free') {
+    gmPromo.innerHTML = `<strong>This Back-to-School when students, staff, faculty, or UW-Health employees buy a Qualifying <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook">MacBook</a> or <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-Desktop/iMac24-M4-16-256">iMac</a> you also get FREE Noise Cancelling AirPods 4th-Gen, OR you can upgrade to AirPods Pro 2nd-Gen for just $70</strong> after $179 promotional savings, in addition to our everyday educational Mac discounts and extra AppleCare discount!`;
+  }
+}
 
 // HIDE ORIGINAL MERCH INFO BLOCK
 // document.querySelector('.merchInfo').style.display = 'none';

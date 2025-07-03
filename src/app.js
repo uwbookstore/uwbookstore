@@ -114,7 +114,7 @@ function fillInnerContent(el, text, type) {
 fillInnerContent('coupon-header', '15% OFF', 'text');
 fillInnerContent('coupon-subhead', 'Your Entire Purchase!*', 'text');
 fillInnerContent('coupon-code', 'CRTR', 'text');
-fillInnerContent('coupon-expiration', '6.30.25', 'text');
+fillInnerContent('coupon-expiration', '6.30.26', 'text');
 // End of coupon code update
 
 /*

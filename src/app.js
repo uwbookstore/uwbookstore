@@ -351,8 +351,8 @@ if (window.location.href.toLowerCase().search('/shoppingcart') !== -1) {
   }
 
   // Show alerts to show user Promo information
+  const promoAlert = document.createElement('div');
   if (baseUrl !== 'https://waa.uwbookstore.com/') {
-    const promoAlert = document.createElement('div');
     promoAlert.classList.add('row');
     promoAlert.innerHTML = `
     <div class="col-md-6">

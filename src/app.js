@@ -155,15 +155,15 @@ if (custStudID) {
 }
 
 // Functions for the Monthly Coupons page
-const coupons = document.querySelectorAll('.coupons li');
+const coupons = document.querySelectorAll('.couponbook > div');
 const couponSelect = document.querySelector('.select');
 const couponDeselect = document.querySelector('.deselect');
-const printCoupons = document.querySelector('#couponbook .print');
+const printCoupons = document.getElementById('printbutton');
 
 if (coupons.length) {
   coupons.forEach((coupon) => {
     coupon.addEventListener('click', (e) => {
-      e.target.parentElement.parentElement.classList.toggle('print');
+      e.target.parentElement.classList.toggle('print');
     });
   });
 

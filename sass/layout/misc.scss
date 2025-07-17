@@ -9,59 +9,6 @@
   }
 }
 
-// Monthly coupons
-#couponbook {
-  width: 100%;
-  max-width: 100%;
-  margin: rem(10) auto;
-  text-align: center;
-}
-
-.coupons {
-  ul {
-    list-style: none;
-
-    li {
-      position: relative;
-      list-style: none;
-      width: auto;
-      display: inline-block;
-      vertical-align: top;
-      text-align: center;
-      margin: 0 0 rem(20) 0;
-      background: transparent;
-      border: rem(2) dashed var(--bs-gray-400);
-      cursor: pointer;
-
-      .check {
-        background-image: url('https://www.uwbookstore.com/SiteImages/11-SchoolImages/11-coupons/11-pagecurl.png');
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        position: absolute;
-        top: rem(-2);
-        left: rem(-3);
-        height: rem(43);
-        width: rem(36);
-      }
-
-      img {
-        margin: auto;
-      }
-
-      @include breakpoint(medium) {
-        margin: 0 rem(10) rem(20);
-        width: rem(500);
-      }
-
-      &.print {
-        .check {
-          background-position: rem(-72) 0;
-        }
-      }
-    }
-  }
-}
-
 /* =displays */
 @media print {
   .donotprint {
@@ -90,32 +37,6 @@
   .speakonly,
   .accessKey {
     speak: never;
-  }
-}
-
-@media print {
-  #couponbook .coupons {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0 auto;
-  }
-  .coupons ul li .check,
-  #couponbook .coupons ul li {
-    display: none;
-  }
-  #couponbook .coupons ul li.print {
-    display: inline-block;
-    width: 45%;
-  }
-  #couponbook .coupons ul li .coupon {
-    position: relative;
-  }
-  #ubsHead,
-  [id*='div_bottom_sec'],
-  [id*='div_top_sec'],
-  .printbutton {
-    display: none;
   }
 }
 

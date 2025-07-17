@@ -1,0 +1,200 @@
+@use '../util' as *;
+
+// Monthly coupons
+.couponbook {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  gap: rem(20);
+  margin-bottom: rem(20);
+
+  div {
+    position: relative;
+
+    .check {
+      background-image: url('https://www.uwbookstore.com/SiteImages/11-SchoolImages/11-coupons/11-pagecurl.png');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: rem(-2);
+      left: rem(-3);
+      height: rem(43);
+      width: rem(36);
+    }
+    &.print {
+      .check {
+        background-position: rem(-72) 0;
+      }
+    }
+  }
+  &__img {
+    margin: auto;
+    padding: rem(5);
+    background: transparent;
+    border: rem(2) dashed var(--bs-gray-400);
+    cursor: pointer;
+  }
+
+  &__header {
+    display: inline-block;
+    margin-bottom: rem(20);
+
+    img {
+      border: 1px solid var(--bs-black);
+    }
+  }
+
+  @include breakpoint(small) {
+    flex-flow: row wrap;
+
+    div {
+      width: 48%;
+    }
+  }
+
+  @include breakpoint(medium) {
+    div {
+      width: 24%;
+    }
+  }
+}
+
+@media print {
+  .couponbook {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  .couponbook div .check,
+  .couponbook div {
+    display: none;
+  }
+  .couponbook div.print {
+    display: inline-block;
+    width: 45%;
+  }
+  .couponbook div {
+    position: relative;
+  }
+  #ubsHead,
+  [id*='div_bottom_sec'],
+  [id*='div_top_sec'] {
+    display: none;
+  }
+}
+
+.coupon {
+  margin: rem(30) auto;
+  text-align: center;
+  border: rem(5) solid var(--bs-primary);
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__logo {
+    border-top: 4px solid var(--bs-black);
+  }
+
+  > div {
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: var(--bs-primary);
+      color: var(--bs-white);
+      padding: rem(30) 0;
+
+      p {
+        font-weight: 300;
+      }
+
+      a {
+        color: var(--bs-white);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__header {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    h3 {
+      line-height: 0.85;
+      font-size: rem(155);
+      margin-bottom: rem(10);
+    }
+
+    p {
+      line-height: 0.85;
+      font-size: rem(50);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+
+  &__code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: rem(5);
+    height: rem(60);
+    width: rem(315);
+    margin: 0 auto rem(20);
+
+    &-text,
+    &-id {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+      font-weight: 700;
+    }
+
+    &-text {
+      text-align: center;
+      background-color: #fff;
+      color: #333;
+      font-size: rem(35);
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    &-id {
+      color: white;
+      font-size: rem(45);
+    }
+  }
+
+  @include breakpoint(medium) {
+    display: flex;
+
+    & > div {
+      width: 50%;
+
+      &:first-child {
+        padding-inline: rem(10);
+      }
+    }
+
+    &__header {
+      h3 {
+        font-size: rem(250);
+        letter-spacing: 1px;
+      }
+
+      p {
+        font-size: rem(60);
+      }
+    }
+  }
+}

@@ -340,6 +340,12 @@
   font-size: rem(20);
 }
 
+@media print {
+  .backtotop {
+    display: none !important;
+  }
+}
+
 // @media (min-width: 768px)
 @media (min-width: rem(768)) {
   .dropdown:hover > .dropdown-menu {

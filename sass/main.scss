@@ -11,3 +11,204 @@ Author URI: https://www.uwbookstore.com
 @use 'layout';
 @use 'components';
 @use 'pages';
+
+// New rotator
+@use './util' as *;
+
+.gallery {
+  margin-bottom: rem(30);
+}
+
+.gallery-cell {
+  width: 100%;
+  max-width: rem(500);
+  height: auto;
+  margin-right: rem(10);
+  counter-increment: gallery-cell;
+  border: rem(2) solid var(--bs-gray-600);
+}
+
+.flickity-page-dots {
+  display: none;
+}
+
+.gallery .flickity-button-icon {
+  fill: var(--bs-primary);
+}
+
+// Featured Items banner
+.featured__wrapper {
+  justify-content: center;
+  margin-bottom: rem(30);
+}
+
+.featured__item p {
+  font-weight: 600;
+  font-size: rem(14);
+}
+
+// New Collections section
+.collection__wrapper {
+  width: 100%;
+  margin-bottom: rem(30);
+}
+
+.collection {
+  text-align: center;
+}
+
+.collection:not(:last-child) {
+  margin-bottom: rem(30);
+}
+
+.collection__img {
+  border-radius: rem(30);
+  border: rem(4) solid transparent;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Shop by Brand rotator
+.shop-by-brand {
+  margin-bottom: rem(30);
+}
+
+.shop-by-brand-cell {
+  width: 100%;
+  max-width: rem(150);
+  padding: rem(14);
+  height: auto;
+  margin-right: rem(20);
+  border: rem(4) solid var(--bs-black);
+  border-radius: rem(6);
+  counter-increment: shop-by-brand-cell;
+}
+
+// Gift Cards
+.giftcards {
+  background-color: var(--bs-primary);
+  color: var(--bs-white);
+  margin-inline: rem(-10);
+  padding: rem(20);
+}
+
+.giftcards__body {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.giftcards__img {
+  padding: rem(10);
+}
+
+.giftcards__text {
+  h2 {
+    font-size: rem(32);
+    font-weight: 600;
+    margin-bottom: rem(20);
+    text-align: center;
+  }
+}
+
+@media (min-width: 48em) {
+  .giftcards {
+    padding: 0;
+    height: rem(395);
+  }
+  .giftcards__body {
+    margin: auto;
+    max-width: rem(1117);
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  .giftcards__img {
+    margin-right: rem(30);
+    img {
+      max-width: rem(394);
+    }
+  }
+
+  .giftcards__text {
+    h2 {
+      text-align: left;
+      font-size: rem(48);
+      line-height: rem(48);
+      margin-bottom: rem(10);
+    }
+
+    p {
+      font-size: rem(24);
+    }
+  }
+}
+
+@media (min-width: 64em) {
+  .giftcards {
+    margin-inline: 0;
+  }
+}
+
+// About Us section
+.about-us {
+  //
+}
+
+.about-us__body {
+  padding: rem(20);
+}
+
+.about-us__img img {
+  display: block;
+  border-radius: 100%;
+  height: rem(200);
+  width: rem(200);
+  margin: auto;
+}
+
+.about-us__text {
+  h2 {
+    font-weight: 400;
+    font-size: rem(24);
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: rem(36);
+  }
+
+  p > .btn {
+    display: flex;
+    background-color: var(--bs-gray-dark);
+    border-color: var(--bs-gray-dark);
+  }
+
+  p > .btn:hover {
+    opacity: 0.85;
+  }
+}
+
+@media (min-width: 48em) {
+  .about-us__body {
+    max-width: rem(1320);
+    margin: auto;
+    margin-top: rem(30);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .about-us__text {
+    max-width: calc(100% - rem(200));
+
+    p {
+      font-size: rem(20);
+    }
+
+    p > .btn {
+      display: inline-flex;
+    }
+  }
+}

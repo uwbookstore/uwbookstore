@@ -27,36 +27,6 @@
     font-size: rem(18);
     text-shadow: rem(1) rem(1) rem(3) rgba(0, 0, 0, 0.47);
   }
-
-  &-submit {
-    color: var(--bs-primary);
-    font-weight: 700;
-    font-size: rem(18);
-    border-radius: 0;
-    background-color: var(--bs-white);
-    border: rem(2) solid var(--bs-white);
-    width: 100%;
-    transition: var(--transition);
-
-    &:hover,
-    &:focus,
-    &:focus-visible {
-      background-color: rgba(255, 255, 255, 0.15);
-      color: var(--bs-white);
-      border: rem(2) solid var(--bs-white);
-    }
-
-    &:focus-visible {
-      box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
-    }
-
-    @include breakpoint(small) {
-      display: flex;
-      font-size: rem(16);
-      margin: 0 auto;
-      max-width: rem(200);
-    }
-  }
 }
 
 .footer {

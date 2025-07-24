@@ -275,6 +275,16 @@ if (!noListItems) {
     merchFilterWrap.after(pageBanner);
   }
 
+  // if (categoryTitle.textContent.toLowerCase().includes('best sellers')) {
+  //   productName.forEach((item) => {
+  //     const specialBadge = document.createElement('div');
+  //     specialBadge.className = 'specialBadge';
+  //     specialBadge.textContent = 'Best Seller';
+  //     const merchLink = item.closest('.merchDetailWrapper');
+  //     merchLink.prepend(specialBadge);
+  //   });
+  // }
+
   // ADD MACBOOK/DELL CROSSLINKS
   if (baseUrl === 'https://www.uwbookstore.com/') {
     if (
@@ -326,30 +336,30 @@ if (!noListItems) {
   // ADD BACK IN STOCK BADGE TO ITEMS WITH ^ IN PRODUCTNAME
   productName.forEach((item) => {
     const name = item.textContent.toLowerCase();
+    const merchLink = item.closest('.merchDetailWrapper');
 
     if (name.includes('^')) {
       const restockBadge = document.createElement('div');
       restockBadge.className = 'restockBadge';
       restockBadge.innerHTML = 'Back in<br>Stock!';
 
-      const merchLink = item.closest('.merchDetailWrapper');
       merchLink.prepend(restockBadge);
     }
 
     const specialBadge = document.createElement('div');
+    specialBadge.className = 'specialBadge';
     if (name.startsWith('ipad air') || name.startsWith('ipad pro')) {
-      specialBadge.className = 'specialBadge';
       specialBadge.textContent = 'Free Pencil Pro';
-
-      const merchLink = item.closest('.merchDetailWrapper');
       merchLink.prepend(specialBadge);
     }
 
     if (name.startsWith('macbook') || name.startsWith('imac')) {
-      specialBadge.className = 'specialBadge';
       specialBadge.textContent = 'Free AirPods';
+      merchLink.prepend(specialBadge);
+    }
 
-      const merchLink = item.closest('.merchDetailWrapper');
+    if (name.endsWith('-')) {
+      specialBadge.textContent = 'Best Seller';
       merchLink.prepend(specialBadge);
     }
   });

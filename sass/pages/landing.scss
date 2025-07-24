@@ -55,22 +55,21 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  gap: rem(20);
+  gap: rem(10);
   // https://bennettfeely.com/clippy/
-  clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%);
+  // clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%);
   // background: url('https://i.univbkstr.com/v3/css/img/jt-bg.jpg') no-repeat top
   //   center;
   // background-size: cover;
-  background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png),
-    linear-gradient(
-      0deg,
-      var(--bs-primary) 0%,
-      color-mix(in srgb, var(--bs-primary), #000 20%) 100%
-    );
-  height: auto;
-  padding: rem(30);
-  color: white;
-  border-radius: 0;
+  // background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png),
+  //   linear-gradient(
+  //     0deg,
+  //     var(--bs-primary) 0%,
+  //     color-mix(in srgb, var(--bs-primary), #000 20%) 100%
+  //   );
+  // height: auto;
+  // padding: rem(30);
+  // border-radius: 0;
   margin-inline: rem(-10);
   margin-bottom: rem(15);
 
@@ -90,10 +89,11 @@
   }
 
   h2 {
-    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    color: var(--bs-primary);
+    text-shadow: 0 rem(2) rem(2) rgba(0, 0, 0, 0.15);
 
     @include breakpoint(medium) {
-      font-size: rem(63);
+      font-size: rem(36);
     }
   }
 
@@ -106,7 +106,7 @@
 
   @include breakpoint(medium) {
     margin-inline: 0;
-    height: rem(200);
+    // height: rem(200);
   }
 }
 

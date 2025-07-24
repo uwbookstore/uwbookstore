@@ -17,7 +17,7 @@ $(document).ready(function () {
           </div>
           <div class="modal-body">
           <div class="alert alert-danger" role="alert">
-            <em class="fa fa-exclamation-triangle"></em> Must be a dorm or apartment resident to use dorm/apartment delivery.<br>If you are not a dorm/apartment resident, and select this delivery option, your order will be changed to pick up at 711 State Street.<br><br><strong>Orders are currently scheduled to be delivered to the specified Front Desks on August 26<sup>th</sup> and then once per day, M-F. The Desk will notify you via email when your package has arrived at the Mail Desk. You can then pick up during normal Desk hours.</div>
+            <em class="fa fa-exclamation-triangle"></em> Must be a dorm or apartment resident to use dorm/apartment delivery.<br>If you are not a dorm/apartment resident, and select this delivery option, your order will be changed to pick up at 711 State Street.<br><br><strong>Orders are currently scheduled to be delivered to the specified Front Desks on August 29<sup>th</sup> and then once per day, M-F, until September 12<sup>th</sup>. The Desk will notify you via email when your package has arrived at the Mail Desk. You can then pick up during normal Desk hours.</div>
             <p>Please make sure to include your dorm or apartment, and room number in your address. You may edit your <a href="https://secure2.mbsbooks.com/AddressBook?s=www.uwbookstore.com">address here</a>.</p>
           </div>
           <div class="modal-footer">

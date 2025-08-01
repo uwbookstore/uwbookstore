@@ -327,8 +327,8 @@ if (!noListItems) {
   ) {
     pageBanner.classList.add('p-0', 'text-center');
     pageBanner.innerHTML = `
-      Looking for The Red Shirt&trade;, 17<sup>th</sup> Edition? Find it here:<br>
-      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/The-Red-Shirt-17th-Edition" class="btn btn-primary m-2">The Red Shirt&trade;</a>    
+      Looking for The Red Shirt&trade;, 18<sup>th</sup> Edition? Find it here:<br>
+      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/The-Red-Shirt-18th-Edition" class="btn btn-primary m-2">The Red Shirt&trade;</a>    
     `;
     filterColumn.after(pageBanner);
   }

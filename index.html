@@ -1191,226 +1191,245 @@
 
   <main id="ContainDiv" class="container">
     <!-- https://flickity.metafizzy.co/ -->
-    <section class="container-full">
 
-      <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true, "groupCells": true }'>
-        <div class="gallery-cell">
-          <a href="/">
-            <img src="./images/rotator/rotator-1.jpg" alt="" role="presentation" class="img-fluid d-block">
-            <span class="sr-only">Polo Sale! Now Only $50!</span>
-          </a>
+    <div style="max-width: 1170px; margin-inline: auto; margin-top: -20px">
+
+      <div class="hero__image">
+
+        <div id="ubs-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#ubs-carousel" data-bs-slide-to="0" class="active" aria-current="true"
+              aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#ubs-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#ubs-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#ubs-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <!-- <button type="button" data-bs-target="#ubs-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button> -->
+          </div>
+
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/The-Red-Shirt-18th-Edition">
+                <picture>
+                  <source media="(min-width: 48em)"
+                    srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/redShirtRotator-lg.jpg" width="1170"
+                    height="450">
+                  <source media="(min-width: 28.125em)"
+                    srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/redShirtRotator-md.jpg" width="768"
+                    height="840">
+                  <img alt="" src="https://i.univbkstr.com/v3/img/pages/home/rotator/redShirtRotator-sm.jpg"
+                    class="img-fluid" loading="lazy" width="450" height="500">
+                </picture>
+              </a>
+              <div class="sr-only carousel-caption">
+                Now Available! 18th Edition of The Red Shirt. Wisconsin Alumni Association&reg; Show your Badger Pride!
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <a href="https://www.uwbookstore.com/newArrivals">
+                <picture>
+                  <source media="(min-width: 48em)"
+                    srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/backToSchool-lg.jpg" width="1170"
+                    height="450">
+                  <source media="(min-width: 28.125em)"
+                    srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/backToSchool-md.jpg" width="768"
+                    height="840">
+                  <img alt="" src="https://i.univbkstr.com/v3/img/pages/home/rotator/backToSchool-sm.jpg"
+                    class="img-fluid" loading="lazy" width="450" height="500">
+                </picture>
+              </a>
+              <div class="sr-only carousel-caption">
+                School starts soon! Get Ready, Badger-style!
+              </div>
+            </div>
+
+            <!-- <div class="carousel-item">
+              <a href="https://www.uwbookstore.com/newArrivals">
+                <picture>
+                  <source media="(min-width: 48em)"
+                    srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/newArrivals-lg.jpg" width="1170" height="450">
+                  <source media="(min-width: 28.125em)"
+                    srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/newArrivals-md.jpg" width="768" height="840">
+                  <img alt="" src="https://i.univbkstr.com/v3/img/pages/home/rotator/newArrivals-sm.jpg" class="img-fluid"
+                    loading="lazy" width="450" height="500">
+                </picture>
+              </a>
+              <div class="sr-only carousel-caption">
+                Your Badger Headquarters.
+              </div>
+            </div> -->
+
+            <div class="carousel-item">
+              <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Football">
+                <picture>
+                  <source media="(min-width: 48em)"
+                    srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/tailgateSeason-lg.jpg" width="1170"
+                    height="450">
+                  <source media="(min-width: 28.125em)"
+                    srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/tailgateSeason-md.jpg" width="768"
+                    height="840">
+                  <img alt="" src="https://i.univbkstr.com/v3/img/pages/home/rotator/tailgateSeason-sm.jpg"
+                    class="img-fluid" loading="lazy" width="450" height="500">
+                </picture>
+              </a>
+              <div class="sr-only carousel-caption">
+                Tailgate Season Starts Here! Get game day ready with us today!
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <a href="https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Apple-Products">
+                <picture>
+                  <source media="(min-width: 48em)"
+                    srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/appleRotator-lg.jpg" width="1170"
+                    height="450">
+                  <source media="(min-width: 28.125em)"
+                    srcset="https://i.univbkstr.com/v3/img/pages/home/rotator/appleRotator-md.jpg" width="768"
+                    height="840">
+                  <img alt="" src="https://i.univbkstr.com/v3/img/pages/home/rotator/appleRotator-sm.jpg"
+                    class="img-fluid" loading="lazy" width="450" height="500">
+                </picture>
+              </a>
+              <div class="sr-only carousel-caption">
+                Buy a Mac for college. Get AirPods.* - Buy an iPad for college. Get Apple Pencil.*<br>
+                *Terms apply
+              </div>
+            </div>
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#ubs-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#ubs-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-
-        <div class="gallery-cell">
-          <a href="/">
-            <img src="./images/rotator/rotator-blank.jpg" alt="" role="presentation" class="img-fluid d-block">
-            <span class="sr-only">Cool rotator graphic</span>
-          </a>
-        </div>
-
-        <div class="gallery-cell">
-          <a href="/">
-            <img src="./images/rotator/rotator-2.jpg" alt="" role="presentation" class="img-fluid d-block">
-            <span class="sr-only">Apple Back to School Sale!</span>
-          </a>
-        </div>
-
-        <div class="gallery-cell">
-          <a href="/">
-            <img src="./images/rotator/rotator-blank.jpg" alt="" role="presentation" class="img-fluid d-block">
-            <span class="sr-only">Cool rotator graphic</span>
-          </a>
-        </div>
-
-        <div class="gallery-cell">
-          <a href="/">
-            <img src="./images/rotator/rotator-1.jpg" alt="" role="presentation" class="img-fluid d-block">
-            <span class="sr-only">Polo Sale! Now Only $50!</span>
-          </a>
-        </div>
-
-        <div class="gallery-cell">
-          <a href="/">
-            <img src="./images/rotator/rotator-blank.jpg" alt="" role="presentation" class="img-fluid d-block">
-            <span class="sr-only">Cool rotator graphic</span>
-          </a>
-        </div>
-
-        <div class="gallery-cell">
-          <a href="/">
-            <img src="./images/rotator/rotator-2.jpg" alt="" role="presentation" class="img-fluid d-block">
-            <span class="sr-only">Apple Back to School Sale!</span>
-          </a>
-        </div>
-
-        <div class="gallery-cell">
-          <a href="/">
-            <img src="./images/rotator/rotator-blank.jpg" alt="" role="presentation" class="img-fluid d-block">
-            <span class="sr-only">Cool rotator graphic</span>
-          </a>
-        </div>
-
       </div>
+    </div>
 
+    <div style="max-width: 1170px; margin-inline: auto;">
       <div class="text-center mb-4">
         <a href="https://www.cityofmadison.com/parking/garages-lots/current-hourly-parking-availability" target="_blank"
           class="d-block">
           <picture>
             <source media="(min-width: 48em)" srcset="https://i.univbkstr.com/v3/img/pages/home/stateStParking.jpg"
               width="865" height="100">
-            <img src="https://i.univbkstr.com/v3/img/pages/home/stateStParking-sm.jpg" alt="" loading="lazy"
-              role="presentation" class="border-lt-gray img-fluid" width="600" height="120">
+            <img src="https://i.univbkstr.com/v3/img/pages/home/stateStParking-sm.jpg"
+              alt="Hey Freshman! From Technology to Textbooks, we've got you covered." loading="lazy"
+              class="border-lt-gray img-fluid" width="600" height="120">
           </picture>
-          <span class="sr-only">Visiting the University Book Store, 711 State St. location? Click here to view live
-            parking availability!</span>
         </a>
       </div>
 
-      <div class="content__wrapper px-2">
-
+      <section class="content__wrapper">
         <div class="featured__wrapper">
           <div class="featured__item">
             <a href="https://www.uwbookstore.com/NewArrivals">
-              <img loading="lazy" src="./images/homepage/newArrivals.webp" class="img-fluid" alt="New Arrivals"
-                width="150" height="150">
+              <img loading="lazy" src="https://i.univbkstr.com/v3/img/pages/home/newArrivals.webp" class="img-fluid"
+                alt="New Arrivals" width="210" height="210">
             </a>
             <p>New Arrivals</p>
           </div>
 
           <div class="featured__item">
-            <a href="https://www.uwbookstore.com/Mens-Clothing">
-              <img loading="lazy" src="./images/homepage/mens.webp" class="img-fluid" alt="Mens" width="150"
-                height="150">
-            </a>
-            <p>Mens</p>
-          </div>
-
-          <div class="featured__item">
-            <a href="https://www.uwbookstore.com/Womens-Clothing">
-              <img loading="lazy" src="./images/homepage/womens.webp" class="img-fluid" alt="Womens" width="150"
-                height="150"> </a>
-            <p>Womens</p>
-          </div>
-
-          <div class="featured__item">
-            <a href="https://www.uwbookstore.com/Kids-Clothing">
-              <img loading="lazy" src="./images/homepage/kids.webp" class="img-fluid" alt="Kids" width="150"
-                height="150">
-            </a>
-            <p>Kids</p>
-          </div>
-
-          <div class="featured__item">
-            <a href="https://www.uwbookstore.com/Badger-Gifts">
-              <img loading="lazy" src="./images/homepage/gifts.webp" class="img-fluid" alt="Gifts" width="150"
-                height="150">
-            </a>
-            <p>Gifts</p>
+            <a href="https://www.uwbookstore.com/Tech">
+              <img loading="lazy" src="https://i.univbkstr.com/v3/img/pages/home/tech.webp" class="img-fluid"
+                alt="Apple" width="210" height="210"> </a>
+            <p>Apple</p>
           </div>
 
           <div class="featured__item">
             <a href="https://www.uwbookstore.com/School-Supplies">
-              <img loading="lazy" src="./images/homepage/schoolSupplies.webp" class="img-fluid" alt="School Supplies"
-                width="150" height="150"> </a>
-            <p>School<br>Supplies</p>
+              <img loading="lazy" src="https://i.univbkstr.com/v3/img/pages/home/schoolSupplies.webp" class="img-fluid"
+                alt="School Supplies" width="210" height="210"> </a>
+            <p>School Supplies</p>
           </div>
 
           <div class="featured__item">
-            <a href="https://www.uwbookstore.com/home">
-              <img loading="lazy" src="./images/homepage/textbooks.webp" class="img-fluid"
-                alt="Textbooks &amp; Course Materials" width="150" height="150">
+            <a href="https://www.uwbookstore.com/Headwear">
+              <img loading="lazy" src="https://i.univbkstr.com/v3/img/pages/home/hats.webp" class="img-fluid" alt="Hats"
+                width="210" height="210">
             </a>
-            <p>Textbooks &amp;<br>Course Materials</p>
-          </div>
-
-          <div class="featured__item">
-            <a href="https://www.uwbookstore.com/Tech">
-              <img loading="lazy" src="./images/homepage/tech.webp" class="img-fluid" alt="Tech" width="150"
-                height="150">
-            </a>
-            <p>Tech</p>
-          </div>
-
-
-          <div class="featured__item">
-            <a href="https://www.uwbookstore.com/December-Graduation-Timeline">
-              <img loading="lazy" src="./images/homepage/capAndGown.webp" class="img-fluid" alt="Cap &amp; Gown"
-                width="150" height="150">
-            </a>
-            <p>Cap &amp; Gown</p>
+            <p>Hats</p>
           </div>
         </div>
 
-        <div class="collection__wrapper">
-          <h2 class="heading__line">Newest Collections at the<br>University Book Store</h2>
-          <div class="collection">
-            <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Tailgate-Gear">
-              <img src="./images/collections/gameday.jpg" alt="" class="collection__img mx-auto" role="presentation"
-                style="border-color: var(--bs-black);">
-            </a>
+        <div class="wiscard__wrapper">
+          <div class="wiscard__item--img">
+            <img alt="" class="img-fluid center-block" src="https://i.univbkstr.com/v3/img/pages/home/bookyWiscard.webp"
+              loading="lazy" width="400" height="252">
           </div>
 
-          <div class="collection">
-            <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Summer-Clearance">
-              <img src="./images/collections/summer.jpg" alt="" class="collection__img mx-auto" role="presentation"
-                style="border-color: var(--bs-black);">
-            </a>
-          </div>
-
-          <div class="collection">
-            <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items">
-              <img src="./images/collections/fall.jpg" alt="" class="collection__img mx-auto" role="presentation"
-                style="border-color: var(--bs-primary);">
-            </a>
+          <div class="wiscard__item--text">
+            <div class="wiscard__header">
+              5% OFF. ALL&nbsp;DAY. EVERY&nbsp;DAY.
+              <span class="sub-header">
+                When you pay with WISCARD.
+              </span>
+            </div>
+            <p class="fine-print">* Excludes sale items, gift cards, The Red Shirt, custom orders, and technology
+              products. Exclusions subject to change. Cannot be combined with other offers. Valid at State St, HSLC,
+              and uwbookstore.com.</p>
           </div>
         </div>
 
-      </div>
+        <div class="wrapper">
+          <a href="https://www.uwbookstore.com/New-Students" class="d-block">
+            <picture>
+              <source media="(min-width: 48em)" srcset="https://i.univbkstr.com/v3/img/pages/home/freshmanBanner.jpg"
+                width="1700" height="400">
+              <img src="https://i.univbkstr.com/v3/img/pages/home/freshmanBanner-sm.jpg" alt="" class="img-fluid"
+                loading="lazy" width="768" height="800">
+            </picture>
+          </a>
+          <p class="visually-hidden">
+            Welcome Badgers! New Students! We're your Badger Headquarters: gear, tech, textbooks &amp; more.
+          </p>
+        </div>
 
-      <div class="px-2">
-        <h2 class="heading__line">Shop by Brand</h2>
-      </div>
+        <div class="giftcard__container-fluid">
+          <a class="giftcard__banner" href="https://www.uwbookstore.com/Gift-Cards">
+            <img src="https://i.univbkstr.com/v3/img/pages/home/giftCardBanner.jpg"
+              alt="Gift Cards - The perfect gift for any occasion!" class="mb-3 img-fluid center-block" loading="lazy"
+              width="1170" height="200">
+          </a>
 
-      <div id="shop-by-brand" class="shop-by-brand js-flickity"
-        data-flickity-options='{ "wrapAround": true, "groupCells": true }'>
-      </div>
-
-      <div class="giftcards">
-        <div class="giftcards__body">
-          <div class="giftcards__img">
-            <img src="https://i.univbkstr.com/images/gift-cards.png" alt="" role="presentation"
-              class="img-fluid d-block">
-          </div>
-          <div class="giftcards__text">
+          <div class="container__stacked-sm">
             <h2>Gift Cards</h2>
-            <p>Want to support your Badger with books, school supplies, or other essentials? Shopping for a Badger fan
-              who
-              loves having
-              options? A University Book Store gift card is the perfect choice!</p>
-            <p><a href="https://www.uwbookstore.com/Gift-Cards" class="btn buy-now">Buy Now</a></p>
+            <p>The perfect gift for any occasion!</p>
+            <a href="https://www.uwbookstore.com/Gift-Cards" class="btn btn-primary">Buy Now</a>
+            <img src="https://i.univbkstr.com/v3/img/pages/home/giftcard-large.webp" alt="gftcard"
+              class="img-fluid center-block" loading="lazy" width="600" height="368">
           </div>
         </div>
-      </div>
 
-      <div class="about-us">
-        <div class="about-us__body">
-
-          <div class="about-us__text">
-            <h2>Our Story</h2>
-            <h3>Who We Are</h3>
-            <p>As a long time partner of UW-Madison, we are the University Book Store, your official Badger headquarters
-              &mdash; your destination for textbooks, official Badger merchandise, and a century-strong commitment to
-              student and community success.</p>
-            <p><a href="https://www.uwbookstore.com/StoreAbout" class="btn btn-primary">Learn More</a></p>
-          </div>
-
-          <div class="about-us__img">
-            <img src="https://i.univbkstr.com/v3/img/pages/hours/state-street.jpg" alt="" class="img-fluid">
-          </div>
+        <div class="wrapper">
+          <a href="https://www.wisc.edu/" target="_blank" class="uw-info">
+            <picture>
+              <source media="(min-width: 48em)" srcset="https://i.univbkstr.com/v3/img/pages/home/uwBanner.jpg"
+                width="1170" height="110">
+              <img src="https://i.univbkstr.com/v3/img/pages/home/uwBanner-sm.jpg" alt="UW Banner"
+                class="mb-2 img-fluid" loading="lazy" width="768" height="800">
+            </picture>
+          </a>
         </div>
-      </div>
 
-    </section>
+        <div class="wrapper text-center">
+          <a href="https://i.univbkstr.com/downloads/25-26_Campus_Calendar.pdf" class="d-block" target="_blank">
+            <picture>
+              <source media="(min-width: 48em)" srcset="https://i.univbkstr.com/v3/img/pages/home/calendar-banner.jpg"
+                width="1170" height="206">
+              <img src="https://i.univbkstr.com/v3/img/pages/home/calendar-banner-sm.jpg"
+                alt="Download the 2025-2026 Campus Events Calendar" class="img-fluid" loading="lazy" width="450"
+                height="500">
+            </picture>
+          </a>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer role="contentinfo">

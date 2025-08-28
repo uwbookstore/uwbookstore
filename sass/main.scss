@@ -15,6 +15,12 @@ Author URI: https://www.uwbookstore.com
 // New rotator
 @use './util' as *;
 
+.displayn,
+.merch-quantity.merch-quantity-dropdown,
+.book-quantity.book-quantity-dropdown {
+  display: none;
+}
+
 .gallery {
   margin-bottom: rem(30);
 }

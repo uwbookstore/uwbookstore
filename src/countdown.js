@@ -26,7 +26,7 @@ const countdownWrapper = document.querySelector('.countdown__wrapper');
 const items = document.querySelectorAll('.timer__box p');
 
 // months are ZERO index based;
-const futureDate = new Date(Date.UTC(2025, 7, 29, 1, 0, 0));
+const futureDate = new Date(Date.UTC(2025, 8, 6, 20, 0, 0));
 // console.log(futureDate);
 const year = futureDate.getFullYear();
 const hours = futureDate.getHours();

@@ -5,7 +5,6 @@
   color: black;
   height: auto;
   width: 100%;
-  margin-bottom: rem(20);
   border-top: rem(1) solid lightgray;
   border-bottom: rem(1) solid lightgray;
 
@@ -86,4 +85,10 @@
       margin-left: rem(20);
     }
   }
+}
+
+.countdown__wrapper img.icon-football {
+  max-width: rem(30);
+  display: inline-block;
+  height: auto;
 }

@@ -464,7 +464,7 @@ if (prodName.toLowerCase().substring(0, 13) === 'the red shirt') {
   sizeChartUrl = 'sizeChart/league';
   sizeChartBrand = 'League';
 } else if (prodName.toLowerCase().substring(0, 7) === 'vantage') {
-  sizeChartUrl = 'sizeChart/vantage';
+  sizeChartUrl = 'sizeChart/vantage/update.html';
   sizeChartBrand = 'Vantage';
 } else if (prodName.toLowerCase().substring(0, 8) === 'kadyluxe') {
   sizeChartUrl = 'sizeChart/kadyluxe';

@@ -528,7 +528,7 @@ $(document).ready(function () {
     prodName.substring(0, 7) === 'Vantage'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/vantage" class="merch__detail-size-link gtmSizeTrack" title="Vantage Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/vantage/update.html" class="merch__detail-size-link gtmSizeTrack" title="Vantage Size Guide">Size Guide</a>'
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&

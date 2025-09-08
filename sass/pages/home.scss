@@ -457,7 +457,7 @@
     a {
       height: rem(70);
       padding-inline: rem(40);
-      font-size: rem(36) !important;
+      font-size: rem(32) !important;
     }
 
     @include breakpoint(small) {
@@ -472,16 +472,20 @@
 .text {
   &__grid {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     margin: 0 auto;
 
     &-item {
-      flex: 1 1 100%;
-      display: flex;
       margin-bottom: rem(40);
+      flex: 1 1 100%;
 
       @include breakpoint(medium) {
-        flex: 0 0 33.3333%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        flex: 0 0 30%;
         padding: 0 rem(20);
       }
     }

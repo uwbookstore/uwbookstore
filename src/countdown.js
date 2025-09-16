@@ -26,7 +26,7 @@ const countdownWrapper = document.querySelector('.countdown__wrapper');
 const items = document.querySelectorAll('.timer__box p');
 
 // months are ZERO index based;
-const futureDate = new Date(Date.UTC(2025, 8, 6, 20, 0, 0));
+const futureDate = new Date(Date.UTC(2025, 8, 20, 16, 0, 0));
 // console.log(futureDate);
 const year = futureDate.getFullYear();
 const hours = futureDate.getHours();
@@ -74,7 +74,7 @@ const getRemainingTime = () => {
             class="img-fluid">
         </div>
 
-        <div class="timer__text ml-0">It's Game Day!</div>
+        <div class="timer__text ml-0">Go Badgers!</div>
 
         <div class="countdown__image ml-3">
           <img src="https://i.univbkstr.com/v3/img/landing/graduation/motionW.png" alt="" role="presentation"

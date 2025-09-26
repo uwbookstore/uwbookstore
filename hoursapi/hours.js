@@ -6,7 +6,25 @@ async function fetchCSV(url) {
       header: true,
       complete: function (results) {
         const { data } = results;
-        console.log({ data });
+        // console.log({ data });
+        const groupByLocation = {};
+
+        for (const item of data) {
+          const location = item.location;
+          if (groupByLocation[location]) {
+            groupByLocation[location].push(item);
+          } else {
+            groupByLocation[location] = [item];
+          }
+        }
+
+        const stores = groupByLocation;
+        Object.keys(stores).forEach((store) => {
+          console.log(store);
+        });
+        Object.values(stores).forEach((value) => {
+          console.log(value);
+        });
       },
     });
   } catch (error) {

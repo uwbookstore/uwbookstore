@@ -61,7 +61,7 @@ async function fetchCSV(url) {
               storeClosed = true;
               showHours = 'Closed';
             } else {
-              showHours = `${convertMilitaryToStandard(open)}-${convertMilitaryToStandard(close)}`;
+              showHours = `${convertMilitaryToStandard(open)} - ${convertMilitaryToStandard(close)}`;
             }
             const dayLi = document.createElement('li');
             if (storeClosed) {
@@ -75,6 +75,10 @@ async function fetchCSV(url) {
       },
     });
   } catch (error) {
-    console.error('Error fetching CSV: ', error);
+    const errOutput = document.getElementById('fetch-error');
+    const errMsg = document.createElement('div');
+    errMsg.classList.add('alert', 'alert-danger');
+    errMsg.innerHTML = `<strong>Error fetching hours: ${error.message}</strong>`;
+    errOutput.appendChild(errMsg);
   }
 }

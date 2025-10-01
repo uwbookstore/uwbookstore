@@ -362,15 +362,15 @@ if (!noListItems) {
 
     const specialBadge = document.createElement('div');
     specialBadge.className = 'specialBadge';
-    if (name.startsWith('ipad air') || name.startsWith('ipad pro')) {
-      specialBadge.textContent = 'Free Pencil Pro';
-      merchLink.prepend(specialBadge);
-    }
+    // if (name.startsWith('ipad air') || name.startsWith('ipad pro')) {
+    //   specialBadge.textContent = 'Free Pencil Pro';
+    //   merchLink.prepend(specialBadge);
+    // }
 
-    if (name.startsWith('macbook') || name.startsWith('imac')) {
-      specialBadge.textContent = 'Free AirPods';
-      merchLink.prepend(specialBadge);
-    }
+    // if (name.startsWith('macbook') || name.startsWith('imac')) {
+    //   specialBadge.textContent = 'Free AirPods';
+    //   merchLink.prepend(specialBadge);
+    // }
 
     if (name.endsWith('-')) {
       specialBadge.textContent = 'Best Seller';

@@ -11,8 +11,7 @@
     max-width: rem(1200);
 
     &--logo {
-      padding: rem(10);
-      margin: auto;
+      padding: rem(10) 0;
 
       h1 {
         margin-bottom: 0;
@@ -123,10 +122,9 @@
 
   @include breakpoint(menu) {
     &__links {
-      justify-content: flex-end;
       background-color: var(--bs-white);
       color: var(--bs-gray-dark);
-      width: 50%;
+      width: 45%;
       gap: rem(20);
 
       &--item {
@@ -244,7 +242,7 @@
       position: relative;
 
       &--input {
-        width: 90%;
+        width: 100%;
 
         input {
           font-size: inherit;
@@ -261,7 +259,7 @@
 
       &--submit {
         position: absolute;
-        left: rem(20);
+        left: rem(-10);
         button {
           font-size: inherit;
           background-color: transparent;

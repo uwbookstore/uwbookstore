@@ -35,16 +35,18 @@
 
 @include breakpoint(medium) {
   .carousel-indicators {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(5);
     position: absolute;
-    bottom: rem(-40);
+    bottom: rem(-30);
     left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
     z-index: 0;
-    width: 60%;
-    padding-left: 0;
-    margin-left: -30%;
-    text-align: center;
+    width: 100%;
     list-style: none;
-    display: block;
 
     [data-bs-target] {
       display: inline-block;

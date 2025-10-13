@@ -35,36 +35,7 @@
     type="text/javascript"></script>
   <script src="./js/popper.min.js"></script>
   <script src="./js/bootstrap_v5_2.js"></script>
-  <style>
-    #heroCarousel .frame,
-    #heroCarousel .carousel-inner {
-      aspect-ratio: 1170 / 450;
-      background: #000;
-    }
 
-    #heroCarousel .frame>img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
-
-    #heroCarousel .carousel-item {
-      transition: none !important;
-    }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0
-    }
-  </style>
 </head>
 
 
@@ -1224,18 +1195,19 @@
 
     <div style="max-width: 1170px; margin-inline: auto;">
       <div class="hero__image">
-        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel"
-          aria-label="Featured photos">
-          <div class="carousel-indicators">&nbsp;</div>
-          <div class="carousel-inner">&nbsp;</div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"
-            aria-label="Previous">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"
-            aria-label="Next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </button>
+        <div id="ubs-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-indicators"></div>
+          <div class="carousel-inner"></div>
+          <div class="carousel-controls">
+            <button class="carousel-control-prev" type="button" data-bs-target="#ubs-carousel" data-bs-slide="prev"
+              aria-label="Previous">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#ubs-carousel" data-bs-slide="next"
+              aria-label="Next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -1430,7 +1402,7 @@
   <script src="./src/flickity.js"></script>
   <script src="./src/menu.js"></script>
   <script src="./home-carousel.js"></script>
-  <script src="./carousel.js"></script>
+  <script src="./src/carousel.js"></script>
   <script type="text/javascript" src="https://i.univbkstr.com/v3/js/jquery.colorbox-min.js"></script>
   <script>
     const tabsContainer = document.querySelector(".tabs-container");

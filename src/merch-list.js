@@ -131,6 +131,13 @@ if (!noListItems) {
   ) {
     categoryTitle.textContent = 'Department of Medical Physics';
     document.title = 'Department of Medical Physics';
+  } else if (
+    categoryTitle.textContent.toLowerCase().substring(0, 25) ===
+    'electrical & computer eng'
+  ) {
+    categoryTitle.innerHTML =
+      'Department of Electrical &amp; Computer Engineering';
+    document.title = 'Department of Electrical &amp; Computer Engineering';
   }
 
   // HIDE SEARCHCATWRAP PARENT

@@ -1,84 +1,55 @@
-function convertMilitaryToStandard(time) {
-  const parts = time.split(':');
-  let hours = parseInt(parts[0], 10);
-  const minutes = parts[1];
+(() => {
+  const cfg = window.HOURS_CONFIG;
+  const stores = cfg.stores;
 
-  let ampm = 'am';
+  function convertMilitaryToStandard(time) {
+    const parts = time.split(':');
+    let hours = parseInt(parts[0], 10);
+    const minutes = parts[1];
 
-  // Handle midnight (00:xx)
-  if (hours === 0) {
-    hours = 12;
-  }
-  // Handle PM hours (13:xx to 23:xx)
-  else if (hours >= 12) {
-    ampm = 'pm';
-    if (hours > 12) {
-      hours -= 12;
+    let ampm = 'am';
+
+    // Handle midnight (00:xx)
+    if (hours === 0) {
+      hours = 12;
     }
+    // Handle PM hours (13:xx to 23:xx)
+    else if (hours >= 12) {
+      ampm = 'pm';
+      if (hours > 12) {
+        hours -= 12;
+      }
+    }
+
+    const formattedMinutes = minutes.padStart(2, '0');
+
+    return `${hours}:${formattedMinutes}${ampm}`;
   }
 
-  const formattedMinutes = minutes.padStart(2, '0');
+  stores.forEach((store, i) => {
+    const { name, hours } = store;
+    const storeContainer = document.querySelector(`.${name}`);
+    const hoursUL = document.createElement('ul');
+    hoursUL.className = 'hours';
 
-  return `${hours}:${formattedMinutes}${ampm}`;
-}
+    hours.forEach((weekday) => {
+      const { day, open, close } = weekday;
 
-async function fetchCSV(url) {
-  try {
-    const response = await fetch(url);
-    const data = await response.text();
-    Papa.parse(data, {
-      header: true,
-      complete: function (results) {
-        const { data } = results;
-        // console.log({ data });
-        const groupByLocation = {};
-
-        for (const item of data) {
-          const location = item.location;
-          if (groupByLocation[location]) {
-            groupByLocation[location].push(item);
-          } else {
-            groupByLocation[location] = [item];
-          }
-        }
-
-        const stores = groupByLocation;
-        Object.keys(stores).forEach((store) => {
-          const output = document.querySelector(`.${store}`);
-
-          const hoursUL = document.createElement('ul');
-          const hoursHeader = document.createElement('li');
-
-          hoursUL.className = 'hours';
-          hoursHeader.innerHTML = '<strong>NORMAL STORE HOURS</strong>';
-          hoursUL.appendChild(hoursHeader);
-
-          stores[store].map((store) => {
-            const { day, open, close } = store;
-            let storeClosed = false;
-            let showHours;
-            if (open === 'closed' || close === 'closed') {
-              storeClosed = true;
-              showHours = 'Closed';
-            } else {
-              showHours = `${convertMilitaryToStandard(open)} - ${convertMilitaryToStandard(close)}`;
-            }
-            const dayLi = document.createElement('li');
-            if (storeClosed) {
-              dayLi.className = 'closed';
-            }
-            dayLi.innerHTML = `<span class="hours__day">${day}</span><span class="hours__times">${showHours}</span>`;
-            hoursUL.appendChild(dayLi);
-          });
-          output.appendChild(hoursUL);
-        });
-      },
+      let storeClosed = false;
+      let showHours;
+      if (open === 'closed' || close === 'closed') {
+        storeClosed = true;
+        showHours = 'Closed';
+      } else {
+        showHours = `${convertMilitaryToStandard(open)} - ${convertMilitaryToStandard(close)}`;
+      }
+      const dayLi = document.createElement('li');
+      if (storeClosed) {
+        dayLi.className = 'closed';
+      }
+      dayLi.innerHTML = `<span class="hours__day">${day}</span><span class="hours__times">${showHours}</span>`;
+      hoursUL.appendChild(dayLi);
     });
-  } catch (error) {
-    const errOutput = document.getElementById('fetch-error');
-    const errMsg = document.createElement('div');
-    errMsg.classList.add('alert', 'alert-danger');
-    errMsg.innerHTML = `<strong>Error fetching hours: ${error.message}</strong>`;
-    errOutput.appendChild(errMsg);
-  }
-}
+    storeContainer.appendChild(hoursUL);
+  });
+})();

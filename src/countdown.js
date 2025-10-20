@@ -25,42 +25,45 @@ const weekdays = [
 const countdownWrapper = document.querySelector('.countdown__wrapper');
 const items = document.querySelectorAll('.timer__box p');
 
-// months are ZERO index based;
-const futureDate = new Date(Date.UTC(2025, 9, 18, 19, 30, 0));
-// console.log(futureDate);
-const year = futureDate.getFullYear();
-const hours = futureDate.getHours();
-const minutes = futureDate.getMinutes();
-let month = futureDate.getMonth();
+const centralTarget = new Date('2025-11-08T14:30:00');
+const targetInCentral = new Date(
+  centralTarget.toLocaleDateString('en-US', { timeZone: 'America/Chicago' })
+);
+const futureTime = targetInCentral.getTime();
 
-month = months[month];
-const weekeday = weekdays[futureDate.getDay()];
-const date = futureDate.getDate();
+// const displayDate = new Date(
+//   centralTarget.toLocaleString('en-US', { timeZone: 'America/Chicago' })
+// );
+// const year = displayDate.getFullYear();
+// const month = months[displayDate.getMonth()];
+// const weekday = weekdays[displayDate.getDay()];
+// const date = displayDate.getDate();
+// const hours = displayDate.getHours();
+// const minutes = displayDate.getMinutes();
 
-const futureTime = futureDate.getTime();
+// console.log(
+//   `Countdown target: ${weekday}, ${month} ${date}, ${year} ${hours}:${minutes
+//     .toString()
+//     .padStart(2, '0')} (Central Time)`
+// );
 
 const getRemainingTime = () => {
-  const today = new Date().getTime();
+  const now = new Date().getTime();
+  const t = futureTime - now;
 
-  const t = futureTime - today;
   const oneDay = 24 * 60 * 60 * 1000;
   const oneHour = 60 * 60 * 1000;
   const oneMinute = 60 * 1000;
+
   // calculate all values
-  let days = t / oneDay;
-  days = Math.floor(days);
+  let days = Math.floor(t / oneDay);
   let hours = Math.floor((t % oneDay) / oneHour);
   let minutes = Math.floor((t % oneHour) / oneMinute);
   let seconds = Math.floor((t % oneMinute) / 1000);
 
   // set values array
   const values = [days, hours, minutes, seconds];
-  function format(item) {
-    if (item < 10) {
-      return (item = `0${item}`);
-    }
-    return item;
-  }
+  const format = (item) => (item < 10 ? `0${item}` : item);
 
   items.forEach(function (item, index) {
     item.innerHTML = format(values[index]);

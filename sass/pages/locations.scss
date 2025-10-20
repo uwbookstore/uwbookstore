@@ -147,6 +147,11 @@
       border-top: rem(1) solid var(--bs-gray-400);
     }
 
+    &.closed,
+    &.open {
+      font-weight: 500;
+    }
+
     &.closed {
       color: color-mix(in srgb, var(--bs-primary), #fff 5%);
     }

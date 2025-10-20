@@ -1,274 +1,143 @@
-const stateSt = document.querySelector('.stateSt');
-const hilldale = document.querySelector('.hilldale');
-const hslc = document.querySelector('.hslc');
-const brookfield = document.querySelector('.brookfield');
-const warehouse = document.querySelector('.warehouse');
-const date = new Date();
-const day = date.getDay();
-// const day = 6;
-const hour = date.getUTCHours() - 6;
-// const hour = 17;
-// console.log(hour);
-const minutes = date.getUTCMinutes();
-console.log(hour);
+(() => {
+  const cfg = window.HOURS_CONFIG;
+  const stores = cfg.stores;
 
-function displayHours(li, idx, open, openMin, close, closeMin) {
-  if (
-    day === idx &&
-    ((hour >= open && hour < close) || (hour === close && minutes < closeMin))
-  ) {
-    li.parentElement.classList.add('open');
-    li.parentElement.style.backgroundColor = 'rgba(0,0,0,0.065)';
-    li.innerText += ` - open`;
-  } else if (day === idx && li.innerText !== 'Closed') {
-    if (hour < open) {
-      li.parentElement.classList.add('closed');
-      if (open < 12) {
-        li.innerText = `Opens at ${open}:${openMin === 0 ? '00' : openMin}am`;
-      } else {
-        li.innerText = `Opens at ${open}:${openMin === 0 ? '00' : openMin}pm`;
+  function convertMilitaryToStandard(time) {
+    const parts = time.split(':');
+    let hours = parseInt(parts[0], 10);
+    const minutes = parts[1];
+
+    let ampm = 'am';
+
+    // Handle midnight (00:xx)
+    if (hours === 0) {
+      hours = 12;
+    }
+    // Handle PM hours (13:xx to 23:xx)
+    else if (hours >= 12) {
+      ampm = 'pm';
+      if (hours > 12) {
+        hours -= 12;
       }
-    } else if (hour >= close) {
-      li.parentElement.classList.add('closed');
-      li.innerText += ` - currently closed`;
     }
+
+    const formattedMinutes = minutes.padStart(2, '0');
+
+    return `${hours}:${formattedMinutes}${ampm}`;
   }
-}
 
-function getStateStHrs() {
-  stateSt.innerHTML = `
-    <ul class="hours">
-        <li><strong>STORE HOURS</strong></li>
-        <li><span class="red bold">Campus Shipping Center closes &frac12; hour before the store closes.</li>
-        <li><span class="hours__day">Sunday:</span> <span class="hours__times">10:30am - 5:00pm</span></li>
-        <li><span class="hours__day">Monday:</span> <span class="hours__times">9:00pm - 7:00pm</span></li>
-        <li><span class="hours__day">Tuesday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
-        <li><span class="hours__day">Wednesday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
-        <li><span class="hours__day">Thursday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
-        <li><span class="hours__day">Friday:</span> <span class="hours__times">9:00am - 7:00pm</span></li>
-        <li><span class="hours__day">Saturday:</span> <span class="hours__times">8:30am - 5:30pm</span></li>
-    </ul>
-`;
+  stores.forEach((store) => {
+    const { name, hours, specialHours } = store;
+    const storeContainer = document.querySelector(`.${name}`);
+    const hoursUL = document.createElement('ul');
+    hoursUL.className = 'hours';
+    const hoursHeader = document.createElement('li');
+    hoursHeader.innerHTML = `<strong>NORMAL STORE HOURS</strong>`;
+    hoursUL.appendChild(hoursHeader);
 
-  const hoursLi = document.querySelectorAll('.stateSt .hours__times');
+    if (specialHours && Array.isArray(specialHours)) {
+      const now = new Date();
 
-  hoursLi.forEach((li, idx) => {
-    let open;
-    let openMin;
-    let close;
-    let closeMin;
+      // Filter only future (or current) special hours
+      const upcomingHours = store.specialHours.filter(({ date }) => {
+        const eventDate = new Date(date);
+        // keep same-day and future events
+        return eventDate >= now.setHours(0, 0, 0, 0);
+      });
 
-    switch (day) {
-      case 1:
-      case 2:
-      case 3:
-      case 4:
-      case 5:
-        open = 9;
-        openMin = 0;
-        close = 19;
-        closeMin = 0;
-        break;
-      case 6:
-        open = 8;
-        openMin = 30;
-        close = 17;
-        closeMin = 30;
-        break;
-      default:
-        open = 10;
-        openMin = 30;
-        close = 17;
-        closeMin = 0;
+      // Only show alert if there are valid upcoming special hours
+      if (upcomingHours.length > 0) {
+        const alert = document.createElement('div');
+        alert.className = 'alert alert-danger';
+
+        const p = document.createElement('p');
+        p.className = 'bold';
+        p.innerText = 'SPECIAL STORE HOURS (see normal hours below)';
+
+        const specUL = document.createElement('ul');
+        specUL.className = 'hours mb-0';
+
+        upcomingHours.forEach(({ date, open, close }) => {
+          const showHours = `${convertMilitaryToStandard(open)} – ${convertMilitaryToStandard(close)}`;
+          const dateObj = new Date(date);
+          const formattedDate = dateObj.toLocaleDateString('en-US', {
+            weekday: 'long',
+            month: 'short',
+            day: 'numeric',
+          });
+
+          const li = document.createElement('li');
+          li.innerHTML = `<span class="hours__day">${formattedDate}:</span><span class="hours__times">${showHours}</span>`;
+          specUL.appendChild(li);
+        });
+
+        alert.appendChild(p);
+        alert.appendChild(specUL);
+        storeContainer.appendChild(alert);
+      }
     }
-    displayHours(li, idx, open, openMin, close, closeMin);
-  });
-}
 
-function getHilldaleHrs() {
-  hilldale.innerHTML = `
-    <ul class="hours">
-        <li><strong>STORE HOURS</strong></li>
-        <li><span class="hours__day">Sunday:</span> <span class="hours__times">11:00am - 6:00pm</span></li>
-        <li><span class="hours__day">Monday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-        <li><span class="hours__day">Tuesday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-        <li><span class="hours__day">Wednesday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-        <li><span class="hours__day">Thursday:</span> <span class="hours__times">10:00pm - 8:00pm</span></li>
-        <li><span class="hours__day">Friday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-        <li><span class="hours__day">Saturday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-    </ul>
-`;
-
-  const hoursLi = document.querySelectorAll('.hilldale .hours__times');
-
-  hoursLi.forEach((li, idx) => {
-    let open;
-    let openMin;
-    let close;
-    let closeMin;
-
-    switch (day) {
-      case 1:
-      case 2:
-      case 3:
-      case 4:
-      case 5:
-      case 6:
-        open = 10;
-        openMin = 0;
-        close = 20;
-        closeMin = 0;
-        break;
-      default:
-        open = 11;
-        openMin = 0;
-        close = 18;
-        closeMin = 0;
+    if (store.name === 'stateSt') {
+      const p = document.createElement('p');
+      p.className = 'red bold';
+      p.innerHTML = `Campus Shipping Center closes &frac12; hour before the store closes.`;
+      storeContainer.appendChild(p);
     }
-    displayHours(li, idx, open, openMin, close, closeMin);
+
+    hours.forEach((weekday) => {
+      const { day, open, close } = weekday;
+      const dayLi = document.createElement('li');
+
+      // Handle fully closed days
+      if (open === 'closed' || close === 'closed') {
+        dayLi.className = 'closed';
+        dayLi.innerHTML = `<span class="hours__day">${day}</span><span class="hours__times">Closed</span>`;
+        hoursUL.appendChild(dayLi);
+        return;
+      }
+
+      const showHours = `${convertMilitaryToStandard(open)} - ${convertMilitaryToStandard(close)}`;
+      const now = new Date();
+      const todayName = now.toLocaleDateString('en-US', { weekday: 'long' });
+
+      // Only apply special logic for the current day
+      if (day.toLowerCase() === todayName.toLowerCase()) {
+        // Parse today's open and close times into Date objects
+        const [openH, openM] = open.split(':').map(Number);
+        const [closeH, closeM] = close.split(':').map(Number);
+
+        const openTime = new Date(now);
+        openTime.setHours(openH, openM, 0, 0);
+
+        const closeTime = new Date(now);
+        closeTime.setHours(closeH, closeM, 0, 0);
+
+        if (now < openTime) {
+          // Before opening
+          dayLi.className = 'closed';
+          dayLi.innerHTML = `
+            <span class="hours__day">${day}</span><span class="hours__times">Opening at ${convertMilitaryToStandard(open)}</span>
+          `;
+        } else if (now >= openTime && now <= closeTime) {
+          // During open hours
+          dayLi.className = 'open';
+          dayLi.innerHTML = `
+            <span class="hours__day">${day}</span><span class="hours__times">${showHours} - Open</span>
+          `;
+        } else {
+          // After hours
+          dayLi.className = 'closed';
+          dayLi.innerHTML = `
+            <span class="hours__day">${day}</span><span class="hours__times">${showHours} - Closed</span>
+          `;
+        }
+      } else {
+        // All other days: normal display
+        dayLi.innerHTML = `<span class="hours__day">${day}</span><span class="hours__times">${showHours}</span>`;
+      }
+
+      hoursUL.appendChild(dayLi);
+    });
+    storeContainer.appendChild(hoursUL);
   });
-}
-
-function getHslcHrs() {
-  hslc.innerHTML = `
-        <ul class="hours">
-            <li><strong>STORE HOURS</strong></li>
-            <li class="closed"><span class="hours__day">Sunday:</span> <span class="hours__times">Closed</span></li>
-            <li><span class="hours__day">Monday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
-            <li><span class="hours__day">Tuesday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
-            <li><span class="hours__day">Wednesday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
-            <li><span class="hours__day">Thursday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
-            <li><span class="hours__day">Friday:</span> <span class="hours__times">8:30am - 4:30pm</span></li>
-            <li class="closed"><span class="hours__day">Saturday:</span> <span class="hours__times">Closed</span></li>
-        </ul>
-    `;
-
-  const hoursLi = document.querySelectorAll('.hslc .hours__times');
-
-  hoursLi.forEach((li, idx) => {
-    let open;
-    let openMin;
-    let close;
-    let closeMin;
-
-    switch (day) {
-      case 1:
-      case 2:
-      case 3:
-      case 4:
-      case 5:
-        open = 8;
-        openMin = 30;
-        close = 16;
-        closeMin = 30;
-        break;
-      default:
-        open = 0;
-        openMin = 0;
-        close = 0;
-        closeMin = 0;
-    }
-    displayHours(li, idx, open, openMin, close, closeMin);
-  });
-}
-
-function getBrookfieldHrs() {
-  brookfield.innerHTML = `
-        <ul class="hours">
-            <li><strong>STORE HOURS</strong></li>
-            <li><span class="hours__day">Sunday:</span> <span class="hours__times">11:00am - 6:00pm</span></li>
-            <li><span class="hours__day">Monday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-            <li><span class="hours__day">Tuesday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-            <li><span class="hours__day">Wednesday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-            <li><span class="hours__day">Thursday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-            <li><span class="hours__day">Friday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-            <li><span class="hours__day">Saturday:</span> <span class="hours__times">10:00am - 8:00pm</span></li>
-        </ul>
-    `;
-
-  const hoursLi = document.querySelectorAll('.brookfield .hours__times');
-
-  hoursLi.forEach((li, idx) => {
-    let open;
-    let openMin;
-    let close;
-    let closeMin;
-
-    switch (day) {
-      case 1:
-      case 2:
-      case 3:
-      case 4:
-      case 5:
-      case 6:
-        open = 10;
-        openMin = 0;
-        close = 20;
-        closeMin = 0;
-        break;
-      default:
-        open = 11;
-        openMin = 0;
-        close = 18;
-        closeMin = 0;
-    }
-    displayHours(li, idx, open, openMin, close, closeMin);
-  });
-}
-
-function getWarehousHrs() {
-  warehouse.innerHTML = `
-        <ul class="hours">
-            <li><strong>STORE HOURS</strong></li>
-            <li class="closed"><span class="hours__day">Sunday:</span> <span class="hours__times">Closed</span></li>
-            <li><span class="hours__day">Monday:</span> <span class="hours__times">9:00am - 5:00pm</span></li>
-            <li><span class="hours__day">Tuesday:</span> <span class="hours__times">9:00am - 5:00pm</span></li>
-            <li><span class="hours__day">Wednesday:</span> <span class="hours__times">9:00am - 5:00pm</span></li>
-            <li><span class="hours__day">Thursday:</span> <span class="hours__times">9:00am - 5:00pm</span></li>
-            <li><span class="hours__day">Friday:</span> <span class="hours__times">9:00am - 5:00pm</span></li>
-            <li class="closed"><span class="hours__day">Saturday:</span> <span class="hours__times">Closed</span></li>
-        </ul>
-    `;
-
-  const hoursLi = document.querySelectorAll('.warehouse .hours__times');
-
-  hoursLi.forEach((li, idx) => {
-    let open;
-    let openMin;
-    let close;
-    let closeMin;
-
-    switch (day) {
-      case 1:
-      case 2:
-      case 3:
-      case 4:
-      case 5:
-        open = 9;
-        openMin = 0;
-        close = 17;
-        closeMin = 0;
-        break;
-      default:
-        open = 0;
-        openMin = 0;
-        close = 0;
-        closeMin = 0;
-    }
-    displayHours(li, idx, open, openMin, close, closeMin);
-  });
-}
-
-getStateStHrs();
-getHilldaleHrs();
-getHslcHrs();
-getBrookfieldHrs();
-getWarehousHrs();
-
-// countdown = setInterval(function () {
-//     getStateStHrs();
-//     getHilldaleHrs();
-//     getHslcHrs();
-//     getBrookfieldHrs();
-//     getWarehousHrs();
-// }, 1000);
+})();

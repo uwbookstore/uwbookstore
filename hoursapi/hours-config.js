@@ -39,6 +39,7 @@ window.HOURS_CONFIG = {
           close: '17:30',
         },
       ],
+      specialHours: [],
     },
     {
       name: 'hilldale',
@@ -79,6 +80,7 @@ window.HOURS_CONFIG = {
           close: '20:00',
         },
       ],
+      specialHours: [],
     },
     {
       name: 'hslc',
@@ -119,6 +121,7 @@ window.HOURS_CONFIG = {
           close: 'closed',
         },
       ],
+      specialHours: [],
     },
     {
       name: 'brookfield',
@@ -159,6 +162,7 @@ window.HOURS_CONFIG = {
           close: '20:00',
         },
       ],
+      specialHours: [],
     },
     {
       name: 'warehouse',
@@ -199,6 +203,7 @@ window.HOURS_CONFIG = {
           close: 'closed',
         },
       ],
+      specialHours: [],
     },
   ],
 };

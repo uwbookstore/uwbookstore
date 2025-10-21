@@ -32,7 +32,11 @@
     const hoursUL = document.createElement('ul');
     hoursUL.className = 'hours';
     const hoursHeader = document.createElement('li');
-    hoursHeader.innerHTML = `<strong>STORE HOURS</strong>`;
+    if (store.name === 'stateSt') {
+      hoursHeader.innerHTML = `<strong>STORE HOURS<br><span class="red">Campus Shipping Center closes &frac12; hour before the store closes.</span></strong>`;
+    } else {
+      hoursHeader.innerHTML = `<strong>STORE HOURS</strong>`;
+    }
     hoursUL.appendChild(hoursHeader);
 
     const now = new Date();
@@ -85,12 +89,12 @@
       }
     }
 
-    if (store.name === 'stateSt') {
-      const p = document.createElement('p');
-      p.className = 'red bold';
-      p.innerHTML = `Campus Shipping Center closes &frac12; hour before the store closes.`;
-      storeContainer.appendChild(p);
-    }
+    // if (store.name === 'stateSt') {
+    //   const p = document.createElement('p');
+    //   p.className = 'red bold mb-0';
+    //   p.innerHTML = `Campus Shipping Center closes &frac12; hour before the store closes.`;
+    //   storeContainer.appendChild(p);
+    // }
 
     // Render normal hours (with overrides for current week special hours)
     hours.forEach(({ day, open: normalOpen, close: normalClose }) => {
@@ -125,7 +129,7 @@
         closeTime.setHours(closeH, closeM, 0, 0);
 
         if (now < openTime) {
-          dayLi.className = 'closed';
+          dayLi.className = 'opening';
           dayLi.innerHTML = `<span class="hours__day">${day}</span><span class="hours__times">Opening at ${convertMilitaryToStandard(open)}</span>`;
         } else if (now >= openTime && now <= closeTime) {
           dayLi.className = 'open';

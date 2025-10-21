@@ -147,6 +147,16 @@
       border-top: rem(1) solid var(--bs-gray-400);
     }
 
+    &.opening {
+      font-weight: 500;
+      .hours__day {
+        color: color-mix(in srgb, var(--bs-success), #000 15%);
+      }
+      .hours__times {
+        color: color-mix(in srgb, var(--bs-primary), #fff 5%);
+      }
+    }
+
     &.closed,
     &.open {
       font-weight: 500;

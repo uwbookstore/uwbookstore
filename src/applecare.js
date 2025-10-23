@@ -6,508 +6,708 @@ document.addEventListener('DOMContentLoaded', function () {
     // ["2052508", "https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-3-year"],
 
     [
-      '19594989947',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-with-M2-3-year',
-    ],
-    [
-      '19594990149',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-with-M3-3-year',
-    ],
-    [
       '19594983625',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
     ],
     [
       '19594983719',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
     ],
     [
       '19594983813',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
     ],
     [
       '19594989026',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
     ],
     [
       '19594983672',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
     ],
     [
       '19594983766',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
     ],
     [
       '19594983860',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
     ],
     [
       '19594989073',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
     ],
     [
       '19594988882',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
     ],
     [
       '19594988929',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
     ],
     [
       '19594988976',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
     ],
     [
       '19594989120',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-13-M4-3-Years',
     ],
     [
       '19594984009',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
     ],
     [
       '19594984103',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
     ],
     [
       '19594984197',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
     ],
     [
       '19594989316',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
     ],
     [
       '19594984056',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
     ],
     [
       '19594984150',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
     ],
     [
       '19594984244',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
     ],
     [
       '19594989363',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
     ],
     [
       '19594989172',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
     ],
     [
       '19594989219',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
     ],
     [
       '19594989266',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
     ],
     [
       '19594989410',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-15-M4-3-Years',
     ],
     [
-      '19594950778',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-3-year',
+      '19595048899',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M5-3-Years ',
     ],
     [
-      '19594950780',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-3-year',
+      '19595049040',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M5-3-Years ',
     ],
     [
-      '19594950779',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-3-year',
+      '19595048946',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M5-3-Years ',
     ],
     [
-      '19594950781',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-3-year',
+      '19595049087',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M5-3-Years ',
     ],
     [
-      '19594992659',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-3-year',
+      '19595048993',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M5-3-Years ',
     ],
     [
-      '19594992705',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-3-year',
+      '19595049134',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M5-3-Years ',
     ],
     [
       '19594987483',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-Pro-M4-Max-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-Pro--M4-Max-3-Years',
     ],
     [
       '19594987348',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-Pro-M4-Max-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-Pro--M4-Max-3-Years',
     ],
     [
       '19594987528',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-Pro-M4-Max-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-Pro--M4-Max-3-Years',
     ],
     [
       '19594987393',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-Pro-M4-Max-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-Pro--M4-Max-3-Years',
     ],
     [
       '19594987573',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-Pro-M4-Max-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-Pro--M4-Max-3-Years',
     ],
     [
       '19594987438',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-Pro-M4-Max-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-14-M4-Pro--M4-Max-3-Years',
     ],
     [
       '19594986960',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-16-M4-Pro-M4-Max-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-16-M4-Pro--M4-Max-3-Years',
     ],
     [
       '19594986780',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-16-M4-Pro-M4-Max-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-16-M4-Pro--M4-Max-3-Years',
     ],
     [
       '19594987005',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-16-M4-Pro-M4-Max-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-16-M4-Pro--M4-Max-3-Years',
     ],
     [
       '19594986825',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-16-M4-Pro-M4-Max-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-16-M4-Pro--M4-Max-3-Years',
     ],
     [
       '19594987050',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-16-M4-Pro-M4-Max-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-16-M4-Pro--M4-Max-3-Years',
     ],
     [
       '19594986870',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-16-M4-Pro-M4-Max-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-16-M4-Pro--M4-Max-3-Years',
     ],
     [
       '19594987095',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-16-M4-Pro-M4-Max-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-16-M4-Pro--M4-Max-3-Years',
     ],
     [
       '19594986915',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-16-M4-Pro-M4-Max-3-year',
-    ],
-    [
-      '19594918813',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M2-2-year',
-    ],
-    [
-      '19594918840',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M2-2-year',
-    ],
-    [
-      '19594918867',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M2-2-year',
-    ],
-    [
-      '19594918948',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M2-2-year',
-    ],
-    [
-      '19594918975',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M2-2-year',
-    ],
-    [
-      '19594925352',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M2-2-year',
-    ],
-    [
-      '19594925433',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M2-2-year',
-    ],
-    [
-      '19594925460',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M2-2-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Pro-16-M4-Pro--M4-Max-3-Years',
     ],
     [
       '19595008623',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
     ],
     [
       '19595008646',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
     ],
     [
       '19595008669',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
     ],
     [
       '19595008692',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
     ],
     [
       '19595008715',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
     ],
     [
       '19595008738',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
     ],
     [
       '19595008761',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
     ],
     [
       '19595008784',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
     ],
     [
       '19595008807',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
     ],
     [
       '19595008830',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
     ],
     [
       '19595008853',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
     ],
     [
       '19595008876',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-11-A16-2-Years',
     ],
     [
       '19594999726',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
     ],
     [
       '19594999749',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
     ],
     [
       '19594999772',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
     ],
     [
       '19594999795',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
     ],
     [
       '19594999818',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
     ],
     [
       '19594999841',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
     ],
     [
       '19594999864',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
     ],
     [
       '19594999887',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
     ],
     [
       '19594999910',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
     ],
     [
       '19594999933',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
     ],
     [
       '19594999956',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
     ],
     [
       '19594999979',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
     ],
     [
       '19595000002',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
     ],
     [
       '19595000025',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
     ],
     [
       '19595000048',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
     ],
     [
       '19595000071',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-11-M3-2-Years',
     ],
     [
       '19594997534',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
     ],
     [
       '19594997557',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
     ],
     [
       '19594997580',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
     ],
     [
       '19594997603',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
     ],
     [
       '19594997626',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
     ],
     [
       '19594997649',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
     ],
     [
       '19594997672',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
     ],
     [
       '19594997695',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
     ],
     [
       '19594997718',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
     ],
     [
       '19594997741',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
     ],
     [
       '19594997764',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
     ],
     [
       '19594997787',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
     ],
     [
       '19594997810',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
     ],
     [
       '19594997833',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
     ],
     [
       '19594997856',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
     ],
     [
       '19594997879',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Air-13-M3-2-Years',
     ],
     [
-      '19594922246',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M4-2-year',
+      '19595039541',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M5-2-Years ',
     ],
     [
-      '19594922272',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M4-2-year',
+      '19595039563',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M5-2-Years ',
     ],
     [
-      '19594922298',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M4-2-year',
+      '19595039585',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M5-2-Years ',
     ],
     [
-      '19594922324',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M4-2-year',
+      '19595039607',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M5-2-Years ',
     ],
     [
-      '19594922350',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M4-2-year',
+      '19595039629',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M5-2-Years ',
     ],
     [
-      '19594922376',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M4-2-year',
+      '19595039651',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M5-2-Years ',
     ],
     [
-      '19594946687',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M4-2-year',
+      '19595039717',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M5-2-Years ',
     ],
     [
-      '19594946710',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M4-2-year',
+      '19595039739',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M5-2-Years ',
     ],
     [
-      '19594923863',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M4-2-year',
+      '19595039673',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M5-2-Years ',
     ],
     [
-      '19594923890',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M4-2-year',
+      '19595039695',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M5-2-Years ',
     ],
     [
-      '19594923917',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M4-2-year',
+      '19595039761',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M5-2-Years ',
     ],
     [
-      '19594923944',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M4-2-year',
+      '19595039783',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-11-M5-2-Years ',
     ],
     [
-      '19594923971',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M4-2-year',
+      '19595039809',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M5-2-Years',
     ],
     [
-      '19594923998',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M4-2-year',
+      '19595039831',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M5-2-Years',
     ],
     [
-      '19594946779',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M4-2-year',
+      '19595039853',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M5-2-Years',
     ],
     [
-      '19594946802',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M4-2-year',
+      '19595039875',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M5-2-Years',
+    ],
+    [
+      '19595039897',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M5-2-Years',
+    ],
+    [
+      '19595039919',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M5-2-Years',
+    ],
+    [
+      '19595039985',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M5-2-Years',
+    ],
+    [
+      '19595040007',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M5-2-Years',
+    ],
+    [
+      '19595039941',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M5-2-Years',
+    ],
+    [
+      '19595039963',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M5-2-Years',
+    ],
+    [
+      '19595040029',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M5-2-Years',
+    ],
+    [
+      '19595040051',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-Pro-13-M5-2-Years',
     ],
     [
       '19594972896',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-mini-A17Pro-2-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-mini-A17Pro-2-Years',
     ],
     [
       '19594972919',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-mini-A17Pro-2-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-mini-A17Pro-2-Years',
     ],
     [
       '19594972942',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-mini-A17Pro-2-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-mini-A17Pro-2-Years',
     ],
     [
       '19594972965',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-mini-A17Pro-2-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iPad-mini-A17Pro-2-Years',
     ],
     [
       '19594908029',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Mac-mini-M4-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Mac-mini-M4-3-Years',
     ],
     [
       '19594908073',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Mac-mini-M4-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Mac-mini-M4-3-Years',
     ],
     [
       '19594994296',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Mac-mini-M4-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Mac-mini-M4-3-Years',
     ],
     [
       '19594994255',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Mac-mini-M4-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Mac-mini-M4-3-Years',
     ],
     [
       '19594959153',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iMac-M4-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iMac-M4-3-Years',
     ],
     [
       '19594959241',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iMac-M4-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iMac-M4-3-Years',
     ],
     [
       '19594959285',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iMac-M4-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iMac-M4-3-Years',
     ],
     [
       '19594959329',
-      'https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iMac-M4-3-year',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-iMac-M4-3-Years',
+    ],
+    [
+      '19595038707',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-SE-3-2-Years',
+    ],
+    [
+      '19595038727',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-SE-3-2-Years',
+    ],
+    [
+      '19595038647',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-SE-3-2-Years',
+    ],
+    [
+      '19595038667',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-SE-3-2-Years',
+    ],
+    [
+      '19595038827',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-SE-3-2-Years',
+    ],
+    [
+      '19595038847',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-SE-3-2-Years',
+    ],
+    [
+      '19595038767',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-SE-3-2-Years',
+    ],
+    [
+      '19595038787',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-SE-3-2-Years',
+    ],
+    [
+      '19595046671',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Series-11-2-Years',
+    ],
+    [
+      '19595046018',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Series-11-2-Years',
+    ],
+    [
+      '19595046113',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Series-11-2-Years',
+    ],
+    [
+      '19595046132',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Series-11-2-Years',
+    ],
+    [
+      '19595046170',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Series-11-2-Years',
+    ],
+    [
+      '19595046189',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Series-11-2-Years',
+    ],
+    [
+      '19595046056',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Series-11-2-Years',
+    ],
+    [
+      '19595046075',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Series-11-2-Years',
+    ],
+    [
+      '19595046251',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Series-11-2-Years',
+    ],
+    [
+      '19595046270',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Series-11-2-Years',
+    ],
+    [
+      '19595046365',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Series-11-2-Years',
+    ],
+    [
+      '19595046384',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Series-11-2-Years',
+    ],
+    [
+      '19595046422',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Series-11-2-Years',
+    ],
+    [
+      '19595046441',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Series-11-2-Years',
+    ],
+    [
+      '19595046308',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Series-11-2-Years',
+    ],
+    [
+      '19595046327',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Series-11-2-Years',
+    ],
+    [
+      '19595048465',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048499',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048533',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048159',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048193',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048227',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048567',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048601',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048261',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048295',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048431',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048125',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048635',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048669',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048703',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048329',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048363',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19595048397',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-Watch-Ultra-3-2-Years',
+    ],
+    [
+      '19425309771',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-TV-3-year',
+    ],
+    [
+      '19425309739',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Apple-TV-3-year',
+    ],
+    [
+      '19594968852',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Headphones-AirPods-2-Years',
+    ],
+    [
+      '19594968960',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Headphones-AirPods-2-Years',
+    ],
+    [
+      '19595054369',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Headphones-AirPods-Pro-3-2-Years',
+    ],
+    [
+      '19594954389',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Headphones-AirPods-Max-2-Years',
+    ],
+    [
+      '19594954403',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Headphones-AirPods-Max-2-Years',
+    ],
+    [
+      '19594954417',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Headphones-AirPods-Max-2-Years',
+    ],
+    [
+      '19594954431',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Headphones-AirPods-Max-2-Years',
+    ],
+    [
+      '19594954445',
+      'http://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-Headphones-AirPods-Max-2-Years',
     ],
   ];
 

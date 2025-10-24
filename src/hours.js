@@ -1,173 +1,250 @@
 (() => {
   const cfg = window.HOURS_CONFIG;
-  const stores = cfg.stores;
+  const stores = cfg.stores || [];
 
-  function convertMilitaryToStandard(time) {
-    const [rawH, rawM] = time.split(':');
-    let hours = parseInt(rawH, 10);
-    const minutes = rawM.padStart(2, '0');
-    let ampm = 'am';
-    if (hours === 0) hours = 12;
-    else if (hours >= 12) {
-      ampm = 'pm';
-      if (hours > 12) hours -= 12;
-    }
-    return `${hours}:${minutes}${ampm}`;
+  // --- Helpers ---
+  const WEEKDAYS = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
+
+  function toYMD(date) {
+    const y = date.getFullYear();
+    const m = String(date.getMonth() + 1).padStart(2, '0');
+    const d = String(date.getDate()).padStart(2, '0');
+    return `${y}-${m}-${d}`;
   }
 
-  function getWeekStart(date) {
+  // Parse 'YYYY-MM-DD' into a local Date at midnight (NOT UTC)
+  function parseLocalDate(dateStr) {
+    if (!dateStr) return null;
+    const parts = dateStr.split('-').map(Number);
+    if (parts.length < 3) return null;
+    return new Date(parts[0], parts[1] - 1, parts[2], 0, 0, 0, 0);
+  }
+
+  function convertToStandardTime(hours, minutes) {
+    if (hours == null || minutes == null) return 'Closed';
+    let h = hours;
+    const m = String(minutes).padStart(2, '0');
+    const ampm = h >= 12 ? 'pm' : 'am';
+    h = h % 12 || 12;
+    return `${h}:${m}${ampm}`;
+  }
+
+  function getStartOfWeekLocal(date) {
     const d = new Date(date);
-    const day = d.getDay(); // 0–6 (Sun–Sat)
+    const day = d.getDay(); // 0..6
     d.setDate(d.getDate() - day);
     d.setHours(0, 0, 0, 0);
     return d;
   }
 
-  function renderStoreHours() {
-    stores.forEach((store) => {
-      const { name, hours, specialHours } = store;
-      const storeContainer = document.querySelector(`.${name}`);
+  // Return date in current week corresponding to weekday name
+  function dateForWeekdayInSameWeek(weekStartDate, weekdayName) {
+    const idx = WEEKDAYS.indexOf(weekdayName);
+    if (idx === -1) return null;
+    const d = new Date(weekStartDate);
+    d.setDate(d.getDate() + idx);
+    d.setHours(0, 0, 0, 0);
+    return d;
+  }
 
+  // --- Main render ---
+  function renderStoreHours() {
+    const now = new Date();
+    const todayLocalMidnight = new Date(now);
+    todayLocalMidnight.setHours(0, 0, 0, 0);
+    const weekStart = getStartOfWeekLocal(now);
+
+    stores.forEach((store) => {
+      const { location, regularHours = {}, specialHours = [] } = store;
+      const storeContainer = document.querySelector(`.${location}`);
+      if (!storeContainer) return;
+
+      // Ensure hours UL exists (header kept)
       let hoursUL = storeContainer.querySelector('.hours');
       if (!hoursUL) {
         hoursUL = document.createElement('ul');
         hoursUL.className = 'hours';
         const header = document.createElement('li');
         header.innerHTML =
-          store.name === 'stateSt'
+          location === 'stateSt'
             ? `<strong>STORE HOURS<br><span class="red">Campus Shipping Center closes &frac12; hour before the store closes.</span></strong>`
             : `<strong>STORE HOURS</strong>`;
         hoursUL.appendChild(header);
         storeContainer.appendChild(hoursUL);
       } else {
+        // remove old list items (keep header)
         [...hoursUL.querySelectorAll('li:not(:first-child)')].forEach((li) =>
           li.remove()
         );
       }
 
-      const now = new Date();
-      const todayName = now.toLocaleDateString('en-US', { weekday: 'long' });
-      const weekStart = getWeekStart(now);
-      const specialHoursMap = {};
-
-      // Remove existing alert
+      // Remove old alert
       const oldAlert = storeContainer.querySelector('.alert');
       if (oldAlert) oldAlert.remove();
 
-      // Special hours handling
-      if (specialHours && Array.isArray(specialHours)) {
-        const upcomingHours = specialHours.filter(
-          ({ date }) => new Date(date) >= new Date().setHours(0, 0, 0, 0)
-        );
+      // --- Build specialHoursMap keyed by local YYYY-MM-DD ---
+      const specialHoursMap = {}; // key: 'YYYY-MM-DD' => { openTime, closeTime, original }
 
-        if (upcomingHours.length > 0) {
-          const alert = document.createElement('div');
-          alert.className = 'alert alert-danger';
-          const p = document.createElement('p');
-          p.className = 'bold';
-          p.innerText = 'SPECIAL STORE HOURS';
-          const specUL = document.createElement('ul');
-          specUL.className = 'hours mb-0';
+      // Normalize incoming specialHours: accept either openTime/closeTime or open/close shape
+      specialHours.forEach((s) => {
+        const parsed = parseLocalDate(s.date || s.dateTime || s.datetime);
+        if (!parsed) return;
+        const key = toYMD(parsed);
+        // Support both {openTime:{hours,minutes}} or legacy {open:{hours,minutes}}
+        const openTime = s.openTime ?? s.open ?? null;
+        const closeTime = s.closeTime ?? s.close ?? null;
+        specialHoursMap[key] = { openTime, closeTime, original: s };
+      });
 
-          upcomingHours.forEach(({ date, open, close }) => {
-            const dateObj = new Date(date);
+      // --- Build upcoming specials list for alert (all upcoming local dates) ---
+      const upcomingSpecialDates = Object.keys(specialHoursMap)
+        .map((k) => ({
+          dateStr: k,
+          dateObj: parseLocalDate(k),
+          ...specialHoursMap[k],
+        }))
+        .filter((item) => item.dateObj >= todayLocalMidnight)
+        .sort((a, b) => a.dateObj - b.dateObj);
+
+      if (upcomingSpecialDates.length > 0) {
+        const alert = document.createElement('div');
+        alert.className = 'alert alert-danger';
+        const p = document.createElement('p');
+        p.className = 'bold';
+        p.innerText = 'SPECIAL STORE HOURS';
+        const specUL = document.createElement('ul');
+        specUL.className = 'hours mb-0';
+
+        upcomingSpecialDates.forEach(
+          ({ dateStr, dateObj, openTime, closeTime }) => {
             const formattedDate = dateObj.toLocaleDateString('en-US', {
               weekday: 'long',
               month: 'short',
               day: 'numeric',
             });
-            const showHours = `${convertMilitaryToStandard(open)} – ${convertMilitaryToStandard(close)}`;
+            const openStr = convertToStandardTime(
+              openTime?.hours,
+              openTime?.minutes
+            );
+            const closeStr = convertToStandardTime(
+              closeTime?.hours,
+              closeTime?.minutes
+            );
             const li = document.createElement('li');
-            li.innerHTML = `<span class="hours__day">${formattedDate}:</span><span class="hours__times">${showHours}</span>`;
-            specUL.appendChild(li);
+            li.innerHTML = `<span class="hours__day">${formattedDate}:</span><span class="hours__times">${openStr} – ${closeStr}</span>`;
 
-            // Only override for the current week
-            if (getWeekStart(dateObj).getTime() === weekStart.getTime()) {
-              const dayOfWeek = dateObj.toLocaleDateString('en-US', {
-                weekday: 'long',
-              });
-              specialHoursMap[dayOfWeek] = { open, close };
+            // mark current-week specials visually
+            const wkStartForSpecial = getStartOfWeekLocal(dateObj);
+            if (wkStartForSpecial.getTime() === weekStart.getTime()) {
+              li.classList.add('current-week-special');
+              // optionally you could also add 'today-special' if dateObj equals todayLocalMidnight
+              if (dateObj.getTime() === todayLocalMidnight.getTime())
+                li.classList.add('today-special');
             }
-          });
 
-          alert.appendChild(p);
-          alert.appendChild(specUL);
-          storeContainer.prepend(alert);
-        }
+            specUL.appendChild(li);
+          }
+        );
+
+        alert.appendChild(p);
+        alert.appendChild(specUL);
+        storeContainer.prepend(alert);
       }
 
-      // Render regular + special hours
-      hours.forEach(({ day, open: normalOpen, close: normalClose }, idx) => {
-        let open = normalOpen;
-        let close = normalClose;
+      // --- Render regular hours (override only when a special exists for that actual date in this week) ---
+      const periods = regularHours.periods || [];
+      // For convenience build a map dayName -> period index (first matching period) and date for that day in this week
+      const dayToPeriodIndex = {};
+      periods.forEach((p, i) => {
+        if (p && p.openDay) dayToPeriodIndex[p.openDay] = i;
+      });
 
-        // Apply special hours override if applicable
-        if (specialHoursMap[day]) {
-          open = specialHoursMap[day].open;
-          close = specialHoursMap[day].close;
-        }
+      periods.forEach((period, idx) => {
+        const { openDay, openTime, closeTime } = period;
+        const li = document.createElement('li');
 
-        const dayLi = document.createElement('li');
+        // Determine the calendar date (local) in this week that corresponds to openDay
+        const periodDate = dateForWeekdayInSameWeek(weekStart, openDay);
+        const periodDateKey = toYMD(periodDate);
 
-        // Closed all day
-        if (open === 'closed' || close === 'closed') {
-          dayLi.className = 'closed';
-          dayLi.innerHTML = `<span class="hours__day">${day}</span><span class="hours__times">Closed</span>`;
-          hoursUL.appendChild(dayLi);
+        // If a special exists for that exact date (in specialHoursMap), use it
+        const specialForThisPeriod = specialHoursMap[periodDateKey];
+
+        const oTime = specialForThisPeriod?.openTime ?? openTime;
+        const cTime = specialForThisPeriod?.closeTime ?? closeTime;
+
+        const openStr = convertToStandardTime(oTime?.hours, oTime?.minutes);
+        const closeStr = convertToStandardTime(cTime?.hours, cTime?.minutes);
+        const showHours =
+          openStr === 'Closed' || closeStr === 'Closed'
+            ? 'Closed'
+            : `${openStr} - ${closeStr}`;
+
+        // If closed all day
+        if (openStr === 'Closed' || closeStr === 'Closed') {
+          li.className = 'closed';
+          li.innerHTML = `<span class="hours__day">${openDay}</span><span class="hours__times">Closed</span>`;
+          hoursUL.appendChild(li);
           return;
         }
 
-        const showHours = `${convertMilitaryToStandard(open)} - ${convertMilitaryToStandard(close)}`;
-        const [openH, openM] = open.split(':').map(Number);
-        const [closeH, closeM] = close.split(':').map(Number);
+        // If this period's date is today, show dynamic status (uses the specialForThisPeriod if it exists for today)
+        if (periodDateKey === toYMD(todayLocalMidnight)) {
+          const openDt = new Date(now);
+          openDt.setHours(oTime.hours, oTime.minutes, 0, 0);
+          const closeDt = new Date(now);
+          closeDt.setHours(cTime.hours, cTime.minutes, 0, 0);
 
-        const openTime = new Date(now);
-        openTime.setHours(openH, openM, 0, 0);
-        const closeTime = new Date(now);
-        closeTime.setHours(closeH, closeM, 0, 0);
-
-        if (day.toLowerCase() === todayName.toLowerCase()) {
-          if (now < openTime) {
-            dayLi.className = 'opening';
-            dayLi.innerHTML = `<span class="hours__day">${day}</span><span class="hours__times">Opening at ${convertMilitaryToStandard(open)}</span>`;
-          } else if (now >= openTime && now <= closeTime) {
-            dayLi.className = 'open';
-            dayLi.innerHTML = `<span class="hours__day">${day}</span><span class="hours__times">${showHours} - Open</span>`;
+          if (now < openDt) {
+            li.className = 'opening';
+            li.innerHTML = `<span class="hours__day">${openDay}</span><span class="hours__times">Opening at ${openStr}</span>`;
+          } else if (now >= openDt && now <= closeDt) {
+            li.className = 'open';
+            li.innerHTML = `<span class="hours__day">${openDay}</span><span class="hours__times">${showHours} - Open</span>`;
           } else {
-            // After hours → show tomorrow’s opening (special or normal)
-            const tomorrowIndex = (idx + 1) % hours.length;
-            const tomorrow = hours[tomorrowIndex];
-            let tomorrowOpen = tomorrow?.open;
-            let tomorrowClose = tomorrow?.close;
+            // after hours → find tomorrow's date (periodDate + 1 day)
+            const tomorrowDate = new Date(periodDate);
+            tomorrowDate.setDate(tomorrowDate.getDate() + 1);
+            const tomorrowKey = toYMD(tomorrowDate);
 
-            // Apply tomorrow’s special hours if applicable
-            if (specialHoursMap[tomorrow.day]) {
-              tomorrowOpen = specialHoursMap[tomorrow.day].open;
-              tomorrowClose = specialHoursMap[tomorrow.day].close;
+            // Find tomorrow special if exists; otherwise find regular period for that weekday in this week
+            const specialTomorrow = specialHoursMap[tomorrowKey];
+            let tOpenTime = specialTomorrow?.openTime;
+            if (!tOpenTime) {
+              // find which weekday name tomorrow is, and the period for that day
+              const tomorrowWeekdayName = WEEKDAYS[tomorrowDate.getDay()];
+              const tomorrowPeriod = periods.find(
+                (p) => p.openDay === tomorrowWeekdayName
+              );
+              tOpenTime = tomorrowPeriod?.openTime;
             }
 
-            let openMsg = '';
-            if (tomorrowOpen === 'closed' || tomorrowClose === 'closed') {
-              openMsg = 'Closed tomorrow';
-            } else {
-              openMsg = `Opens tomorrow at ${convertMilitaryToStandard(tomorrowOpen)}`;
-            }
-
-            dayLi.className = 'closed';
-            dayLi.innerHTML = `<span class="hours__day">${day}</span><span class="hours__times">${showHours} - ${openMsg}</span>`;
+            const tOpenStr = convertToStandardTime(
+              tOpenTime?.hours,
+              tOpenTime?.minutes
+            );
+            li.className = 'closed';
+            li.innerHTML = `<span class="hours__day">${openDay}</span><span class="hours__times">${showHours} - Opens tomorrow at ${tOpenStr}</span>`;
           }
         } else {
-          dayLi.innerHTML = `<span class="hours__day">${day}</span><span class="hours__times">${showHours}</span>`;
+          // non-today: just show the hours (with special override if present for that date)
+          li.innerHTML = `<span class="hours__day">${openDay}</span><span class="hours__times">${showHours}</span>`;
         }
 
-        hoursUL.appendChild(dayLi);
+        hoursUL.appendChild(li);
       });
     });
   }
 
-  // Initial render
+  // initial render + refresh
   renderStoreHours();
-
-  // Refresh every 60 seconds
   setInterval(renderStoreHours, 60 * 1000);
 })();

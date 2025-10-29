@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 /**
  * https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
  * more breakpoint reading
@@ -26,13 +28,13 @@ $breakpoints-down: (
 );
 
 @mixin breakpoint($size) {
-  @media (min-width: map-get($breakpoints-up, $size)) {
+  @media (min-width: map.get($breakpoints-up, $size)) {
     @content;
   }
 }
 
 @mixin breakpoint-down($size) {
-  @media (max-width: map-get($breakpoints-down, $size)) {
+  @media (max-width: map.get($breakpoints-down, $size)) {
     @content;
   }
 }

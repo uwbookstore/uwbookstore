@@ -268,7 +268,7 @@ $(document).ready(function () {
     $(
       `
       <div class="text-center">
-        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/New-Items" class="btn btn-primary">
+        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Back-in-Stock" class="btn btn-primary">
           Back in Stock Items
         </a>
       </div>

@@ -138,6 +138,12 @@ if (!noListItems) {
     categoryTitle.innerHTML =
       'Department of Electrical &amp; Computer Engineering';
     document.title = 'Department of Electrical &amp; Computer Engineering';
+  } else if (
+    categoryTitle.textContent.toLowerCase().substring(0, 18) ===
+    'passcases, wallets'
+  ) {
+    categoryTitle.innerHTML = 'Passcases, Wallets, &amp; Keychains';
+    document.title = 'Passcases, Wallets, &amp; Keychains';
   }
 
   // HIDE SEARCHCATWRAP PARENT
@@ -244,7 +250,7 @@ if (!noListItems) {
   if (categoryTitle.textContent.toLowerCase() === 'new arrivals') {
     pageBanner.classList.add('text-center');
     pageBanner.innerHTML = `
-    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/New-Items" class="btn btn-primary">
+    <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Back-in-Stock" class="btn btn-primary">
     Back in Stock Items
     </a>
     `;

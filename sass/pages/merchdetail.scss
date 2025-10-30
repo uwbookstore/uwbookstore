@@ -49,21 +49,18 @@ span.btn-default.typeSelected {
 
 .flex-control {
   &-nav {
-    display: inline-block;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: rem(20);
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-top: rem(15);
+    margin-block-start: rem(15);
 
     li {
       width: rem(100);
       height: rem(100);
-      margin: 0 rem(10) 0 0;
-      padding: 0;
-      float: left;
-      overflow: hidden;
-      position: relative;
-      text-align: center;
 
       img {
         cursor: pointer;
@@ -80,11 +77,12 @@ span.btn-default.typeSelected {
     }
 
     @include breakpoint(medium) {
-      flex: 1 20%;
-      margin-top: rem(30);
+      display: block;
+      height: rem(500);
+      overflow-y: auto;
 
       li {
-        margin-bottom: rem(20);
+        margin: 0 auto rem(20);
         width: rem(80);
         height: rem(80);
       }

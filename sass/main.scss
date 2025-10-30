@@ -102,8 +102,8 @@ Author URI: https://www.uwbookstore.com
 
 // Gift Cards
 .giftcards {
-  background-color: var(--bs-primary);
-  color: var(--bs-white);
+  background-color: var(--clr-apl-silver);
+  color: var(--bs-black);
   margin-inline: rem(-10);
   padding: rem(20);
 }
@@ -128,8 +128,8 @@ Author URI: https://www.uwbookstore.com
 
 @media (min-width: 48em) {
   .giftcards {
-    padding: 0;
-    height: rem(395);
+    padding-block: rem(50);
+    margin-block-end: rem(-30);
   }
   .giftcards__body {
     margin: auto;

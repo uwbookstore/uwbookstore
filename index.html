@@ -36,7 +36,6 @@
   <script src="./js/popper.min.js"></script>
   <script src="./js/bootstrap_v5_2.js"></script>
   <style>
-
   </style>
 </head>
 
@@ -1186,6 +1185,47 @@
 
   </header>
 
+  <section class="holiday__shipping">
+    <h2 id="toggle-control">
+      <i class="fa fa-chevron-down mr-2" aria-hidden="true"></i>
+      Holiday Order Deadlines
+      <i class="fa fa-chevron-down ml-2" aria-hidden="true"></i>
+    </h2>
+
+    <div id="toggle-target" class="container">
+      <div class="holiday__shipping-deadlines">
+        <div class="flex__item">
+          <div>
+            <span>Ground Shipping</span>
+            December 19,<br>
+            noon (CST)
+          </div>
+        </div>
+        <div class="flex__item">
+          <div>
+            <span>2nd Day Air Shipping</span>
+            December 19,<br>
+            5:00 PM (CST)
+          </div>
+        </div>
+        <div class="flex__item">
+          <div>
+            <span>Next Day Air Shipping</span>
+            December 22,<br>
+            noon (CST)
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <strong class="red oast">DEADLINE FOR LANDS' END CUSTOM ORDERS IS DEC. 2, NOON
+          (CST)</strong><br>
+        <strong>NOTE: All Orders placed after their shipping deadline will be delivered after Dec. 25.</strong><br>
+        These order deadlines apply to destinations in the contiguous United States
+        only. Not applicable to Alaska, Hawaii or any U.S. Territory.
+      </div>
+    </div>
+  </section>
+
   <div id="Cart" class="btn btn-default btn-lg clear">
     <span class="fa fa-shopping-cart"></span><span id="SpanCart">
       <span id="Item-Count">Item Count: </span> <span id="ItemCount" class="Count">0</span></span><br><span
@@ -1732,6 +1772,14 @@
       const dropdownItem = document.getElementById('dropdown-item');
       dropdownItem.classList.toggle('show');
     });
+
+    const dealinesHeader = document.getElementById('toggle-control');
+    if (dealinesHeader) {
+      dealinesHeader.addEventListener('click', function () {
+        const exclusions = document.getElementById('toggle-target');
+        slideToggle(exclusions, 500);
+      });
+    }
   </script>
 </body>
 

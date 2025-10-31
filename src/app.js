@@ -588,6 +588,14 @@ if (bannerMsg) {
   });
 }
 
+const dealinesHeader = document.getElementById('toggle-control');
+if (dealinesHeader) {
+  dealinesHeader.addEventListener('click', function () {
+    const exclusions = document.getElementById('toggle-target');
+    slideToggle(exclusions, 500);
+  });
+}
+
 const emailOptCheckbox = document.querySelectorAll('.newCheckboxText');
 
 emailOptCheckbox.forEach((e) => {

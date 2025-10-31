@@ -102,8 +102,9 @@ Author URI: https://www.uwbookstore.com
 
 // Gift Cards
 .giftcards {
-  background-color: var(--clr-apl-silver);
-  color: var(--bs-black);
+  // background-color: var(--clr-apl-silver);
+  background-color: var(--bs-primary);
+  color: var(--bs-white);
   margin-inline: rem(-10);
   padding: rem(20);
 }
@@ -183,12 +184,12 @@ Author URI: https://www.uwbookstore.com
 }
 
 .about-us__text {
-  h2 {
-    font-weight: 400;
-    font-size: rem(24);
-  }
+  // h2 {
+  //   font-weight: 400;
+  //   font-size: rem(24);
+  // }
 
-  h3 {
+  h2 {
     font-weight: 600;
     font-size: rem(36);
   }

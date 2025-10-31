@@ -588,9 +588,9 @@ if (bannerMsg) {
   });
 }
 
-const dealinesHeader = document.getElementById('toggle-control');
-if (dealinesHeader) {
-  dealinesHeader.addEventListener('click', function () {
+const deadlinesHeader = document.getElementById('toggle-control');
+if (deadlinesHeader) {
+  deadlinesHeader.addEventListener('click', function () {
     const exclusions = document.getElementById('toggle-target');
     slideToggle(exclusions, 500);
   });
@@ -645,6 +645,30 @@ if (retPolicy) {
   retPolicy.innerHTML = `
     You may return your textbooks with a receipt for a full refund through Wednesday, September 10<sup>th</sup> (2025 Fall Semester), and through Tuesday, January 27<sup>th</sup> (2026 Spring Semester).
   `;
+}
+
+// Add Blue Book Exam Booklet link to Textbook Search
+const bookSearch = document.getElementById('Book_Search');
+const bookSearchParent = bookSearch?.parentElement;
+if (bookSearchParent) {
+  const cardColumn = document.createElement('div');
+  cardColumn.className = 'col-lg-6 col-md-6 col-sm-6 col-12 padding0';
+  cardColumn.innerHTML = `
+          <div style="display: flex; flex-flow: row nowrap;" class="mt-2">
+            <div class="flex-image">
+              <a href="https://text.uwbookstore.com/MerchDetail?MerchID=1904025" style="display: block;">
+                <img src="https://i.univbkstr.com/v3/img/pages/textbooks/blueBook.png" alt="" class="img-fluid mx-2">
+              </a>
+            </div>
+            <div class="flex-text"
+              style="display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end">
+              <p class="mb-0">Blue test booklet for exams. 16 pages of wide-ruled paper, 8.5 x 7 in.<br>
+                <a href="https://text.uwbookstore.com/MerchDetail?MerchID=1904025">Blue Book Exam Booklet - $1.99</a>
+              </p>
+            </div>
+          </div>
+            `;
+  bookSearchParent.appendChild(cardColumn);
 }
 
 // TODO: look into below

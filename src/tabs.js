@@ -33,8 +33,12 @@ if (tabsContainer) {
   tabsContainer.addEventListener('click', (e) => {
     const clickedTab = e.target.closest('a');
     if (!clickedTab) return;
-    e.preventDefault();
 
+    // Only handle clicks on actual tab buttons, not other anchor links
+    const isTabButton = Array.from(tabButtons).includes(clickedTab);
+    if (!isTabButton) return;
+
+    e.preventDefault();
     switchTab(clickedTab);
   });
 

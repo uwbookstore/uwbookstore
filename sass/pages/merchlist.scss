@@ -708,15 +708,19 @@ li.attribute {
   cy: 7;
 }
 
-.specialBadge {
+.bestSellerBadge {
   position: absolute;
-  right: -10px;
+  right: rem(-10);
   color: var(--bs-white);
   background: var(--bs-black);
-  padding: 2px 10px;
-  top: -7px;
+  padding: rem(2) rem(10);
+  top: rem(-7);
   font-weight: 600;
-  font-size: 14px;
+  font-size: rem(14);
+
+  &::after {
+    display: none;
+  }
 }
 
 .newBadge,

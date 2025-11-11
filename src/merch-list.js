@@ -384,11 +384,6 @@ if (!noListItems) {
     //   specialBadge.textContent = 'Free AirPods';
     //   merchLink.prepend(specialBadge);
     // }
-
-    if (name.endsWith('-')) {
-      specialBadge.textContent = 'Best Seller';
-      merchLink.prepend(specialBadge);
-    }
   });
 }
 // } END OF MERCHLIST IF STATEMENT

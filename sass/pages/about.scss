@@ -5,19 +5,19 @@
   font-weight: 700;
   padding: rem(10) rem(20);
   border-left: rem(5) solid rgb(197, 5, 12);
-  margin-bottom: rem(20);
+  margin-block-end: rem(20);
 
   p {
     font-weight: inherit;
     &:last-child {
-      margin-bottom: 0;
+      margin-block-end: 0;
     }
   }
 }
 
 .container-full {
   &.about {
-    padding-top: rem(40);
+    padding-block-start: rem(40);
 
     p {
       font-weight: 500;
@@ -28,7 +28,7 @@
 .heading__about {
   text-align: center;
   font-size: rem(24);
-  margin-bottom: rem(20);
+  margin-block-end: rem(20);
   color: var(--bs-primary);
 }
 
@@ -62,8 +62,8 @@
 
   &__container {
     display: block;
-    margin-bottom: rem(80);
-    padding-left: rem(30);
+    margin-block-end: rem(80);
+    padding-inline-start: rem(30);
     position: relative;
 
     a {
@@ -77,7 +77,7 @@
     }
 
     .content p:last-child {
-      margin-bottom: 0;
+      margin-block-end: 0;
     }
 
     &::before {
@@ -101,14 +101,14 @@
     }
 
     .image {
-      margin-bottom: rem(20);
+      margin-block-end: rem(20);
 
       &-auto {
         position: relative;
         width: 100%;
         height: 0;
         overflow: hidden;
-        padding-bottom: 60%;
+        padding-block-end: 60%;
         border-radius: rem(6);
 
         img {
@@ -124,7 +124,7 @@
     }
 
     .content h2 {
-      margin-bottom: rem(10);
+      margin-block-end: rem(10);
       font-size: rem(35);
     }
   }
@@ -155,8 +155,8 @@
     &__container {
       display: flex;
       justify-content: space-between;
-      margin-bottom: rem(120);
-      padding-left: 0;
+      margin-block-end: rem(120);
+      padding-inline-start: 0;
 
       &:nth-child(even) {
         flex-direction: row-reverse;
@@ -176,7 +176,7 @@
         position: relative;
         border-radius: rem(6);
         box-shadow: 0 rem(7) rem(10) 0 rgba(0, 0, 0, 0.25);
-        margin-bottom: auto;
+        margin-block-end: auto;
 
         &::before {
           content: '';

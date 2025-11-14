@@ -46,7 +46,7 @@ input[class^='radio'] {
       width: rem(20);
       height: rem(20);
       vertical-align: 0;
-      margin-left: rem(20);
+      margin-inline-start: rem(20);
     }
   }
 
@@ -63,7 +63,7 @@ input[class^='radio'] {
       &::before {
         width: rem(12);
         height: rem(12);
-        margin-left: rem(10);
+        margin-inline-start: rem(10);
       }
     }
   }

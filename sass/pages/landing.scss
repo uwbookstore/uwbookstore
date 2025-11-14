@@ -71,7 +71,7 @@
   // padding: rem(30);
   // border-radius: 0;
   margin-inline: rem(-10);
-  margin-bottom: rem(15);
+  margin-block-end: rem(15);
 
   h2,
   p {
@@ -123,7 +123,7 @@
       }
 
       .breadcrumb-item + .breadcrumb-item {
-        padding-left: 0;
+        padding-inline-start: 0;
 
         &::before {
           padding-inline: rem(8);
@@ -146,7 +146,7 @@
   }
 
   &__sidebar {
-    margin-top: rem(40);
+    margin-block-start: rem(40);
     display: block;
     flex: 1 1 100%;
     order: 1;
@@ -303,7 +303,7 @@
 
       h3 {
         font-size: rem(18);
-        margin-bottom: rem(20);
+        margin-block-end: rem(20);
       }
 
       .category__link {
@@ -313,7 +313,7 @@
         img,
         em.fa {
           display: block;
-          margin-bottom: rem(30);
+          margin-block-end: rem(30);
           opacity: 1;
           transition: var(--transition);
         }
@@ -340,7 +340,7 @@
       }
 
       .btn {
-        margin-bottom: 0;
+        margin-block-end: 0;
       }
     }
 

@@ -3,7 +3,7 @@
 .event {
   display: flex;
   flex-direction: column;
-  margin-bottom: rem(25);
+  margin-block-end: rem(25);
 
   @include breakpoint(medium) {
     flex-direction: row;
@@ -16,7 +16,7 @@
 
   &__date {
     flex: 1 1 100%;
-    margin-bottom: rem(15);
+    margin-block-end: rem(15);
     padding: rem(5) rem(10);
     font-size: rem(16);
     background-color: var(--bs-primary);
@@ -32,7 +32,7 @@
 
   &__content {
     flex: 1 1 100%;
-    margin-bottom: rem(20);
+    margin-block-end: rem(20);
 
     &--title {
       font-size: rem(18);
@@ -40,7 +40,7 @@
     }
 
     &--info {
-      margin-top: rem(10);
+      margin-block-start: rem(10);
 
       a:not(.btn) {
         color: blue;

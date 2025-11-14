@@ -75,7 +75,7 @@ p {
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
-  margin-bottom: rem(20);
+  margin-block-end: rem(20);
   text-rendering: optimizeLegibility;
   line-height: 1.5;
 }
@@ -92,7 +92,7 @@ a {
 }
 
 ol {
-  padding-left: rem(30);
+  padding-inline-start: rem(30);
 }
 
 li {
@@ -103,21 +103,21 @@ li {
   list-style-type: none;
   font-size: inherit;
   line-height: 1.5;
-  margin-bottom: rem(25);
-  margin-left: rem(20);
+  margin-block-end: rem(25);
+  margin-inline-start: rem(20);
 
   li {
-    margin-bottom: rem(8);
+    margin-block-end: rem(8);
 
     &::before {
       content: '-';
-      margin-right: rem(5);
+      margin-inline-end: rem(5);
     }
   }
 
   &-square {
     list-style-type: square;
-    margin-left: rem(20);
+    margin-inline-start: rem(20);
   }
 }
 
@@ -136,7 +136,7 @@ address.returns {
   border-left: rem(5) solid var(--bs-gray-400);
   padding: rem(5) rem(5) rem(5) rem(10);
   font-size: inherit;
-  margin-left: rem(15);
+  margin-inline-start: rem(15);
 
   @include breakpoint(small) {
     margin: 0 rem(60) rem(12) rem(45);
@@ -167,7 +167,7 @@ address.returns {
 
 .page_header {
   display: block;
-  margin-bottom: rem(10);
+  margin-block-end: rem(10);
   font-size: rem(24);
   font-weight: 500;
   letter-spacing: rem(0.5);
@@ -178,7 +178,7 @@ address.returns {
   font-style: normal;
   font-weight: 700;
   font-size: rem(24);
-  margin-bottom: rem(20);
+  margin-block-end: rem(20);
   line-height: 1;
 }
 
@@ -196,8 +196,8 @@ address.returns {
   grid-column-gap: rem(10);
   align-items: center;
   border-bottom: none;
-  padding-bottom: 0;
-  padding-left: 0;
+  padding-block-end: 0;
+  padding-inline-start: 0;
   background: none;
   font-size: rem(25);
   margin: 0 0 rem(25);
@@ -230,8 +230,8 @@ address.returns {
     position: relative;
     text-transform: uppercase;
     text-align: center;
-    margin-top: rem(25);
-    margin-bottom: rem(32);
+    margin-block-start: rem(25);
+    margin-block-end: rem(32);
     font-weight: 700;
 
     &::before {
@@ -251,8 +251,8 @@ address.returns {
     text-transform: uppercase;
     font-weight: 700;
     line-height: 1.35;
-    margin-top: rem(28);
-    margin-bottom: rem(14);
+    margin-block-start: rem(28);
+    margin-block-end: rem(14);
   }
 }
 
@@ -395,25 +395,25 @@ $spacers: map.merge(
 }
 .my-auto,
 .mt-auto {
-  margin-top: auto !important;
+  margin-block-start: auto !important;
 }
 .my-auto,
 .mb-auto {
-  margin-bottom: auto !important;
+  margin-block-end: auto !important;
 }
 .mx-auto,
 .ml-auto {
-  margin-left: auto !important;
+  margin-inline-start: auto !important;
 }
 .mx-auto,
 .mr-auto {
-  margin-right: auto !important;
+  margin-inline-end: auto !important;
 }
 
 .mb--3 {
-  margin-bottom: rem(-30);
+  margin-block-end: rem(-30);
 }
 
 .mt--3 {
-  margin-top: rem(-30);
+  margin-block-start: rem(-30);
 }

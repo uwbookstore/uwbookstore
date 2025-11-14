@@ -26,7 +26,7 @@
   &__timer {
     display: flex;
     gap: rem(10);
-    margin-bottom: rem(20);
+    margin-block-end: rem(20);
   }
 
   @include breakpoint(medium) {
@@ -43,7 +43,7 @@
     }
 
     &__timer {
-      margin-bottom: 0;
+      margin-block-end: 0;
     }
   }
 }
@@ -60,7 +60,7 @@
 
     p:not(.expired) {
       font-size: rem(40);
-      margin-bottom: rem(2.5);
+      margin-block-end: rem(2.5);
       letter-spacing: rem(2.5);
       line-height: 1;
     }
@@ -82,7 +82,7 @@
     }
 
     &__text {
-      margin-left: rem(20);
+      margin-inline-start: rem(20);
     }
   }
 }

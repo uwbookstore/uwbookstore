@@ -4,7 +4,7 @@
 // a negative top margin on the
 // hero images.
 #modMenu {
-  margin-bottom: rem(20);
+  margin-block-end: rem(20);
 }
 
 #ContainDiv {
@@ -68,7 +68,7 @@ footer[role='contentinfo'] {
 #studentIDText {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  margin-top: rem(-15);
+  margin-block-start: rem(-15);
 }
 
 .card {
@@ -84,7 +84,7 @@ footer[role='contentinfo'] {
 
       @include breakpoint(xsmall) {
         + [class^='col'] {
-          padding-left: rem(15);
+          padding-inline-start: rem(15);
         }
       }
     }
@@ -95,7 +95,7 @@ footer[role='contentinfo'] {
   display: flex;
   align-items: center;
   gap: rem(10);
-  margin-bottom: rem(20);
+  margin-block-end: rem(20);
 
   p {
     margin: 0;
@@ -114,7 +114,7 @@ footer[role='contentinfo'] {
 
 .paymentBilling-wrapper p {
   font-size: var(--fs-default);
-  margin-bottom: rem(10);
+  margin-block-end: rem(10);
 }
 
 .skip {
@@ -143,11 +143,11 @@ footer[role='contentinfo'] {
 
 .req-astrisk {
   float: left;
-  margin-right: rem(5);
+  margin-inline-end: rem(5);
 }
 
 .coExistingAddressText p {
-  margin-bottom: rem(5);
+  margin-block-end: rem(5);
 }
 
 #cart-rightCard .sticky-top {
@@ -180,6 +180,6 @@ div.logoutLink {
 #ordersPanelBody.card-body {
   .row.oneOrder:last-of-type {
     border-bottom: none !important;
-    padding-bottom: 0;
+    padding-block-end: 0;
   }
 }

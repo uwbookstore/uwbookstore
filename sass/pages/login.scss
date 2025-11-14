@@ -21,14 +21,14 @@
       text-transform: uppercase;
 
       &:not(:last-child) {
-        margin-bottom: rem(35);
+        margin-block-end: rem(35);
       }
 
       @include breakpoint(small) {
         width: 60%;
 
         &:not(:last-child) {
-          margin-bottom: rem(20);
+          margin-block-end: rem(20);
         }
       }
     }

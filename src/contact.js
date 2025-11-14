@@ -47,8 +47,8 @@ $(document).ready(() => {
       window.location.host === 'insitestore2.mbsbooks.com/uwmadison/'
     ) {
       $(`
-          <div class="contact-info" style="margin-bottom: 3rem;">
-            <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Store Contact Information:</h2>
+          <div class="contact-info" style="margin-block-end: 3rem;">
+            <h2 style="font-size: 1.8rem; margin-block-end: 1.5rem;">Store Contact Information:</h2>
             <div>University Book Store<br>711 State Street<br>Madison, WI 53703</div>
             <div class="phone">(608) 257-3784</div>
             <div class="phone">(800) 993-2665</div>
@@ -61,8 +61,8 @@ $(document).ready(() => {
       `).appendTo('div.card-body .row > div:first-child');
     } else if (window.location.host === 'text.uwbookstore.com') {
       $(`
-        <div class="contact-info" style="margin-bottom: 3rem;">
-          <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Store Contact Information:</h2>
+        <div class="contact-info" style="margin-block-end: 3rem;">
+          <h2 style="font-size: 1.8rem; margin-block-end: 1.5rem;">Store Contact Information:</h2>
           <div>University Book Store<br>711 State Street<br>Madison, WI 53703</div>
           <div class="phone">(608) 257-3784</div>
           <div class="phone">(800) 993-2665</div>
@@ -76,8 +76,8 @@ $(document).ready(() => {
       `).appendTo('div.card-body .row > div:first-child');
     } else if (window.location.host === 'waa.uwbookstore.com') {
       $(`
-        <div class="contact-info" style="margin-bottom: 3rem;">
-          <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Store Contact Information:</h2>
+        <div class="contact-info" style="margin-block-end: 3rem;">
+          <h2 style="font-size: 1.8rem; margin-block-end: 1.5rem;">Store Contact Information:</h2>
           <div>University Book Store<br>711 State Street<br>Madison, WI 53703</div>
           <div class="phone">(608) 257-3784</div>
           <div class="phone">(800) 993-2665</div>
@@ -99,7 +99,7 @@ $(document).ready(() => {
     }
     $(`
       <div id="dntn-form" style="display: none;">
-        <h2 class="heading__line-center" style="margin-bottom: 2.5rem;">Donation Requests</h2>
+        <h2 class="heading__line-center" style="margin-block-end: 2.5rem;">Donation Requests</h2>
         <p class="text-center">Please click on the button below to fill out our online Donation Request Form.<br>Thank you.
         </p>
         <p class="text-center"><a href="https://i.univbkstr.com/donations/" class="btn btn-primary">Donation Request Form</a>
@@ -168,7 +168,7 @@ $(document).ready(() => {
     //     .html(
     //       `
     //       <div class="text-center">
-    //         <h2 class="heading__line-center" style="margin-bottom: 2.5rem;">APPLE SERVICE - GRAPHITE</h2>
+    //         <h2 class="heading__line-center" style="margin-block-end: 2.5rem;">APPLE SERVICE - GRAPHITE</h2>
     //         <p class="mainP">Your campus service &amp; support<br>for Mac, iPhone&reg;, iPad&reg; and<br>all Apple branded
     //           accessories</p>
     //         <p class="hours past">Graphite Hours: Monday-Friday 9am-5:30pm</p>

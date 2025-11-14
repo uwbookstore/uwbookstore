@@ -3,27 +3,27 @@
 .customer {
   h2 {
     font-weight: 700;
-    margin-bottom: rem(10);
+    margin-block-end: rem(10);
     color: var(--bs-gray-dark);
     font-size: rem(18);
   }
 
   &__faq {
-    margin-top: rem(50);
+    margin-block-start: rem(50);
   }
 
   &__returns {
     &-merch {
-      margin-top: rem(20);
+      margin-block-start: rem(20);
     }
   }
 
   &__clearance {
-    margin-top: rem(50);
+    margin-block-start: rem(50);
   }
 
   &__sizes {
-    margin-top: rem(50);
+    margin-block-start: rem(50);
 
     table {
       margin: rem(20) auto;

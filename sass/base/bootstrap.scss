@@ -9,8 +9,8 @@
 }
 
 hr {
-  margin-top: rem(20);
-  margin-bottom: rem(20);
+  margin-block-start: rem(20);
+  margin-block-end: rem(20);
   border: 0;
   border-top: rem(1) solid var(--bs-gray-400);
   height: 0;
@@ -18,7 +18,7 @@ hr {
 }
 
 select.form-control {
-  padding-right: rem(32);
+  padding-inline-end: rem(32);
 }
 
 .alert {
@@ -37,7 +37,7 @@ select.form-control {
 }
 
 .card-header p {
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 
 .input-group-text {

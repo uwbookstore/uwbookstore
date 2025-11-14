@@ -35,12 +35,12 @@ p.merchPrice {
 }
 
 p.merchNumber {
-  margin-bottom: rem(5);
+  margin-block-end: rem(5);
   font-style: italic;
 }
 
 p.merchRegular {
-  margin-right: rem(10);
+  margin-inline-end: rem(10);
 }
 
 p.merchSalePrice.red,
@@ -49,7 +49,7 @@ p.merchPrice.red {
   font-style: italic;
   font-weight: normal;
   display: inline;
-  margin-left: rem(10);
+  margin-inline-start: rem(10);
 }
 
 .hiddenCartText {
@@ -123,7 +123,7 @@ p.merchPrice.red {
       width: auto;
 
       img {
-        margin-right: rem(5);
+        margin-inline-end: rem(5);
       }
 
       @include breakpoint(medium) {
@@ -156,7 +156,7 @@ p.merchPrice.red {
     }
 
     &-img {
-      margin-bottom: rem(20);
+      margin-block-end: rem(20);
     }
 
     &-link {
@@ -192,7 +192,7 @@ p.merchPrice.red {
 
     h2 {
       align-self: flex-start;
-      margin-bottom: 0;
+      margin-block-end: 0;
       text-align: center;
       font-size: rem(32);
 
@@ -222,7 +222,7 @@ p.merchPrice.red {
       }
 
       &:not(:last-child) {
-        margin-bottom: rem(20);
+        margin-block-end: rem(20);
       }
 
       @include breakpoint(small) {
@@ -239,8 +239,8 @@ p.merchPrice.red {
         }
 
         &:not(:last-child) {
-          margin-right: rem(10);
-          margin-bottom: 0;
+          margin-inline-end: rem(10);
+          margin-block-end: 0;
         }
       }
     }
@@ -248,20 +248,20 @@ p.merchPrice.red {
 }
 
 .prevBackward {
-  margin-right: rem(40);
+  margin-inline-end: rem(40);
 
   @include breakpoint(medium) {
-    margin-right: rem(20);
+    margin-inline-end: rem(20);
   }
 
   i {
-    padding-right: rem(2);
+    padding-inline-end: rem(2);
   }
 }
 
 .nextForward {
   i {
-    padding-left: rem(2);
+    padding-inline-start: rem(2);
   }
 }
 
@@ -381,7 +381,7 @@ p.merchPrice.red {
 
     @include breakpoint(medium) {
       flex: 1 40%;
-      padding-left: rem(20);
+      padding-inline-start: rem(20);
     }
 
     .merchTitle {
@@ -408,7 +408,7 @@ p.merchPrice.red {
 
   p.merchItem,
   p.merchPrice {
-    margin-bottom: rem(10);
+    margin-block-end: rem(10);
   }
 
   p.merchPrice {
@@ -417,25 +417,25 @@ p.merchPrice.red {
 
   p.merchSizeTitle,
   p.merchLogoTitle {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 
   .lcsSizeWrapper,
   .lcsLogoWrapper {
-    padding-bottom: rem(10);
+    padding-block-end: rem(10);
     border-bottom: rem(1) solid var(--bs-gray-dark);
   }
 
   .lcsSizeWrapper {
-    margin-bottom: rem(10);
+    margin-block-end: rem(10);
   }
 
   .lcsLogoWrapper {
-    margin-bottom: rem(20);
+    margin-block-end: rem(20);
   }
 
   .addToCartButton {
-    margin-bottom: rem(20);
+    margin-block-end: rem(20);
   }
 
   .addToCartTypes {
@@ -474,14 +474,14 @@ p.merchPrice.red {
     color: var(--bs-primary);
     font-weight: 700;
     font-size: rem(30);
-    margin-bottom: rem(15);
+    margin-block-end: rem(15);
   }
 }
 
 // BREADCRUMBS
 .breadcrumb {
-  padding-left: 0;
-  margin-bottom: 0;
+  padding-inline-start: 0;
+  margin-block-end: 0;
 }
 
 .breadcrumb li a.small {
@@ -549,9 +549,9 @@ li.attribute {
   grid-column-gap: rem(10);
   align-items: center;
   border-bottom: none;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
+  padding-block-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
   background: none;
   font-size: rem(25);
   margin: 0;
@@ -634,7 +634,7 @@ li.attribute {
 .card-body > .row .merchLinkWrap .merchLink {
   background: #f8d7da;
   display: flex;
-  margin-bottom: rem(20);
+  margin-block-end: rem(20);
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -648,10 +648,10 @@ li.attribute {
 }
 
 .card-body.card-body.card-body-gift > .row .merchLinkWrap .merchLink {
-  margin-bottom: 0;
+  margin-block-end: 0;
 
   @include breakpoint(medium) {
-    margin-bottom: rem(20);
+    margin-block-end: rem(20);
   }
 }
 
@@ -683,7 +683,7 @@ li.attribute {
   font-size: 1.125rem;
 }
 .card-body:has(.merchLinkWrap) {
-  padding-bottom: 0;
+  padding-block-end: 0;
 }
 
 // NEW MBS STUFF UPCOMING
@@ -693,7 +693,7 @@ li.attribute {
 }
 
 .inventory-display-wrapper .inventory-display-text {
-  margin-bottom: 0;
+  margin-block-end: 0;
   font-size: rem(12);
 }
 
@@ -730,7 +730,7 @@ li.attribute {
   display: flex;
   justify-content: center;
   position: absolute;
-  padding-top: rem(20);
+  padding-block-start: rem(20);
   height: rem(50);
   width: rem(100);
   top: rem(-10);
@@ -749,13 +749,13 @@ li.attribute {
 
   @include breakpoint(small) {
     font-size: rem(14);
-    padding-top: rem(22);
+    padding-block-start: rem(22);
     height: rem(53);
     width: rem(106);
   }
 
   @include breakpoint(medium) {
-    padding-top: rem(25);
+    padding-block-start: rem(25);
     height: rem(57.5);
     width: rem(115);
     top: rem(-15);

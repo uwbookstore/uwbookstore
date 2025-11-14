@@ -1,12 +1,12 @@
 @use '../util' as *;
 
 #BottomSection {
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 
 .footer {
   display: block;
-  margin-top: rem(20);
+  margin-block-start: rem(20);
   padding: 0 0 rem(25);
   background-color: var(--bs-gray-100);
   color: var(--bs-gray-dark);
@@ -21,8 +21,8 @@
     font-size: rem(25);
     border-bottom: rem(1) solid;
     text-align: center;
-    padding-bottom: rem(5);
-    margin-bottom: rem(5);
+    padding-block-end: rem(5);
+    margin-block-end: rem(5);
 
     @include breakpoint(medium) {
       text-align: left;
@@ -53,7 +53,7 @@
   }
 
   address {
-    margin-bottom: 0;
+    margin-block-end: 0;
     a {
       font-size: 1em;
       font-weight: 700;
@@ -110,12 +110,12 @@
   .social-footer {
     font-size: rem(24);
     text-align: center;
-    margin-bottom: rem(30);
+    margin-block-end: rem(30);
 
     .local-business {
       height: rem(150);
       width: rem(150);
-      margin-top: rem(20);
+      margin-block-start: rem(20);
     }
 
     a {
@@ -150,7 +150,7 @@
 
       &:link,
       &:visited {
-        margin-right: rem(10);
+        margin-inline-end: rem(10);
         transition: all 0.25s ease-in-out;
       }
 
@@ -160,14 +160,14 @@
       }
 
       &:last-child {
-        margin-right: 0;
+        margin-inline-end: 0;
       }
     }
 
     @include breakpoint(medium) {
       text-align: left;
       font-size: rem(18);
-      margin-bottom: 0;
+      margin-block-end: 0;
     }
   }
 
@@ -176,7 +176,7 @@
     color: var(--bs-gray-dark);
 
     span {
-      margin-bottom: rem(5);
+      margin-block-end: rem(5);
       display: block;
     }
 
@@ -203,8 +203,8 @@
 
       span {
         display: inline;
-        margin-bottom: 0;
-        margin-right: rem(5);
+        margin-block-end: 0;
+        margin-inline-end: rem(5);
       }
     }
   }
@@ -240,7 +240,7 @@
   }
 
   em.fa.fa-envelope-o {
-    margin-left: rem(10);
+    margin-inline-start: rem(10);
   }
 
   a.privacy {
@@ -273,28 +273,29 @@
 }
 
 .mail-list {
-  background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png),
+  background-image:
+    url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png),
     linear-gradient(to top, rgba(202, 202, 202, 0.5), rgba(202, 202, 202, 0.8));
   border-top: rem(1) solid color-mix(in srgb, var(--bs-gray-400), #000 10%);
   padding: rem(30);
-  margin-bottom: rem(35);
+  margin-block-end: rem(35);
 
   h2 {
     color: var(--bs-gray-dark);
-    margin-bottom: rem(15);
+    margin-block-end: rem(15);
     font-size: rem(18);
     font-weight: 700;
   }
 
   .form-inline {
     display: inline-block;
-    margin-bottom: 0;
+    margin-block-end: 0;
     vertical-align: middle;
     width: 100%;
   }
 
   .form-inline .form-control {
-    margin-bottom: 0;
+    margin-block-end: 0;
     width: 100%;
     border: rem(2) solid color-mix(in srgb, var(--bs-gray-dark), #fff 30%);
     border-bottom: none;
@@ -328,7 +329,8 @@
 
   &-small {
     background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png);
-    background-image: linear-gradient(
+    background-image:
+      linear-gradient(
         to top,
         rgba(241, 241, 241, 0.1),
         rgba(241, 241, 241, 0.3)
@@ -341,13 +343,13 @@
     p {
       font-size: rem(16);
       //   font-weight: bold;
-      margin-bottom: rem(5);
+      margin-block-end: rem(5);
     }
 
     h2 {
       font-size: rem(30);
       font-weight: bold;
-      margin-bottom: rem(5);
+      margin-block-end: rem(5);
     }
 
     button {
@@ -355,7 +357,7 @@
     }
 
     .form-group {
-      margin-bottom: 0;
+      margin-block-end: 0;
     }
 
     @include breakpoint(medium) {
@@ -365,7 +367,7 @@
 
       h2 {
         font-size: rem(20);
-        margin-bottom: rem(25);
+        margin-block-end: rem(25);
       }
     }
   }
@@ -373,10 +375,10 @@
 
 .shop-local {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
+  margin-inline-end: auto;
+  margin-inline-start: auto;
   max-width: 100%;
   height: rem(150);
   width: rem(150);
-  margin-top: rem(20);
+  margin-block-start: rem(20);
 }

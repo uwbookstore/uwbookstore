@@ -43,7 +43,7 @@
     text-transform: uppercase;
     font-size: rem(30);
     padding: 0 rem(15);
-    margin-bottom: rem(20);
+    margin-block-end: rem(20);
     transition: all 0.2s ease;
     box-shadow: 0 rem(5) rem(5) rgba(77, 77, 77, 0.6);
 
@@ -91,29 +91,29 @@
     }
 
     h1 {
-      margin-left: rem(15);
-      margin-bottom: rem(30);
+      margin-inline-start: rem(15);
+      margin-block-end: rem(30);
     }
 
     ol {
       list-style-type: none;
 
       li {
-        margin-bottom: rem(30);
+        margin-block-end: rem(30);
       }
     }
   }
 
   @include breakpoint(small) {
-    padding-left: 15%;
+    padding-inline-start: 15%;
   }
 
   @include breakpoint(medium) {
-    padding-top: 65%;
+    padding-block-start: 65%;
     min-height: rem(1210);
 
     h1 {
-      margin-left: 0;
+      margin-inline-start: 0;
       font-size: rem(50);
     }
 
@@ -127,17 +127,17 @@
   --bs-alert-bg: transparent;
   --bs-alert-padding-x: rem(10);
   --bs-alert-padding-y: rem(10);
-  --bs-alert-margin-bottom: rem(10);
+  --bs-alert-margin-block-end: rem(10);
   --bs-alert-border: rem(1) solid var(--bs-alert-border-color);
   --bs-alert-border-radius: rem(0.0375);
   position: relative;
   padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
-  margin-bottom: var(--bs-alert-margin-bottom);
+  margin-block-end: var(--bs-alert-margin-bottom);
   color: var(--bs-alert-color);
   background-color: var(--bs-alert-bg);
   border: var(--bs-alert-border);
   border-radius: var(--bs-alert-border-radius);
-  padding-left: rem(55);
+  padding-inline-start: rem(55);
   --bs-alert-color: #842029;
   --bs-alert-bg: #f8d7da;
   --bs-alert-border-color: #f5c2c7;
@@ -181,7 +181,7 @@
   &-body {
     &-box {
       border: rem(5) solid var(--bs-primary);
-      margin-bottom: rem(30);
+      margin-block-end: rem(30);
       padding: rem(10);
       text-align: center;
 
@@ -192,7 +192,7 @@
     }
 
     .row {
-      margin-bottom: rem(30);
+      margin-block-end: rem(30);
       .col-sm-4 {
         &:first-child {
           text-align: center;
@@ -206,7 +206,7 @@
           }
         }
         &:not(:last-child) {
-          margin-bottom: rem(40);
+          margin-block-end: rem(40);
         }
       }
 
@@ -238,7 +238,7 @@
       font-weight: 700;
 
       &.small {
-        margin-top: rem(10);
+        margin-block-start: rem(10);
         font-size: rem(13);
       }
     }
@@ -284,7 +284,7 @@
 
   @include breakpoint(medium) {
     margin: 0;
-    margin-left: auto;
+    margin-inline-start: auto;
   }
 }
 
@@ -292,7 +292,7 @@
 .bag-on-break {
   font-family: 'Pompiere', sans-serif;
   border: rem(1) solid var(--bs-primary);
-  margin-bottom: rem(20);
+  margin-block-end: rem(20);
 
   &__header {
     display: block;
@@ -302,11 +302,11 @@
   h3 {
     text-transform: uppercase;
     letter-spacing: rem(2);
-    margin-bottom: rem(30);
+    margin-block-end: rem(30);
   }
 
   h2 {
-    margin-top: rem(10);
+    margin-block-start: rem(10);
     font-size: rem(60);
     font-weight: 700;
     span {
@@ -328,10 +328,10 @@
     ol {
       font-weight: 600;
       font-size: rem(30);
-      margin-bottom: rem(40);
+      margin-block-end: rem(40);
 
       li {
-        margin-bottom: rem(20);
+        margin-block-end: rem(20);
 
         span {
           color: var(--bs-primary);
@@ -346,7 +346,7 @@
     align-items: center;
     justify-content: center;
     gap: rem(30);
-    margin-bottom: rem(30);
+    margin-block-end: rem(30);
   }
 
   &__rules {
@@ -406,7 +406,7 @@
   &__title {
     position: relative;
     padding: 0 rem(10) rem(32);
-    margin-bottom: rem(32);
+    margin-block-end: rem(32);
     color: var(--bs-primary);
     text-align: left;
     font-family: var(--ff-serif);
@@ -427,7 +427,7 @@
 
     @include breakpoint(small) {
       padding-inline: 0;
-      padding-bottom: rem(16);
+      padding-block-end: rem(16);
 
       &::after {
         left: 0;
@@ -438,7 +438,7 @@
   &__sans {
     position: relative;
     padding: 0 rem(10) rem(16);
-    margin-bottom: rem(16);
+    margin-block-end: rem(16);
     color: var(--bs-primary);
     text-align: left;
     font-family: var(--ff-serif);
@@ -449,7 +449,7 @@
   }
 
   &__subtitle {
-    margin-bottom: rem(20);
+    margin-block-end: rem(20);
     font-size: rem(20);
   }
 }
@@ -473,7 +473,7 @@
     width: 100%;
 
     td {
-      padding-left: 0;
+      padding-inline-start: 0;
       border-bottom: rem(1) solid rgba(0, 0, 0, 0.12);
       padding: rem(11) rem(15);
       text-align: left;
@@ -537,16 +537,16 @@
 div.subHeader {
   position: relative;
   font-weight: 800;
-  margin-top: rem(32);
-  padding-bottom: rem(10);
-  margin-bottom: rem(8);
+  margin-block-start: rem(32);
+  padding-block-end: rem(10);
+  margin-block-end: rem(8);
   font-size: rem(14);
   line-height: rem(16);
   text-transform: capitalize;
   border-bottom: rem(2) solid rgb(204, 204, 204);
 
   &:first-child {
-    margin-top: 0;
+    margin-block-start: 0;
   }
 
   @include breakpoint(small) {
@@ -588,7 +588,7 @@ div.subHeader {
 }
 
 // .sale {
-//   padding-top: rem(10);
+//   padding-block-start: rem(10);
 //   background: var(--clr-gradient-start);
 //   background: linear-gradient(
 //     45deg,
@@ -598,7 +598,7 @@ div.subHeader {
 //   color: var(--bs-white);
 //   width: 100%;
 //   overflow: hidden;
-//   margin-top: rem(-20);
+//   margin-block-start: rem(-20);
 
 //   &__wrapper {
 //     padding: rem(20) rem(10) 0;
@@ -624,7 +624,7 @@ div.subHeader {
 //     margin: 0 auto rem(15);
 
 //     p {
-//       margin-bottom: 0;
+//       margin-block-end: 0;
 
 //       &:last-child {
 //         font-size: rem(15);
@@ -698,7 +698,7 @@ div.subHeader {
 
 //       @include breakpoint(small) {
 //         gap: rem(15);
-//         margin-bottom: 0;
+//         margin-block-end: 0;
 //         padding: rem(10) rem(20);
 
 //         span {
@@ -712,7 +712,7 @@ div.subHeader {
 
 //       @include breakpoint(medium) {
 //         gap: rem(20);
-//         margin-bottom: 0;
+//         margin-block-end: 0;
 //         padding: rem(20);
 
 //         span {

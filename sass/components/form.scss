@@ -43,7 +43,7 @@ select.form-control {
     border: none;
     box-shadow: none;
     padding: 0;
-    margin-top: rem(-10);
+    margin-block-start: rem(-10);
     cursor: text;
   }
 }
@@ -52,8 +52,8 @@ select.form-control {
 .form-floating > .form-control:not(:placeholder-shown),
 .form-floating > .form-control-plaintext:focus,
 .form-floating > .form-control-plaintext:not(:placeholder-shown) {
-  padding-top: rem(25);
-  padding-bottom: rem(10);
+  padding-block-start: rem(25);
+  padding-block-end: rem(10);
 }
 
 #mc_embed_signup {

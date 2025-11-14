@@ -2,7 +2,7 @@
   --bs-alert-bg: #cff4fc;
   --bs-alert-padding-x: rem(10);
   --bs-alert-padding-y: rem(10);
-  --bs-alert-margin-bottom: rem(10);
+  --bs-alert-margin-block-end: rem(10);
   --bs-alert-color: #055160;
   --bs-alert-border-color: #b6effb;
   --bs-alert-border: rem(1) solid var(--bs-alert-border-color);
@@ -10,7 +10,7 @@
   font-weight: 700;
   position: relative;
   padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
-  margin-bottom: var(--bs-alert-margin-bottom);
+  margin-block-end: var(--bs-alert-margin-bottom);
   color: var(--bs-alert-color);
   background-color: var(--bs-alert-bg);
   border: var(--bs-alert-border);

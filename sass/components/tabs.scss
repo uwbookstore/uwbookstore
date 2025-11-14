@@ -23,7 +23,7 @@
       width: auto;
 
       &:not(:last-child) {
-        margin-right: rem(15);
+        margin-inline-end: rem(15);
       }
     }
   }
@@ -57,7 +57,7 @@
     }
 
     i {
-      margin-right: rem(10);
+      margin-inline-end: rem(10);
 
       &.fa.fa-exclamation-triangle {
         color: var(--bs-primary);
@@ -103,7 +103,7 @@
       }
 
       ol {
-        margin-left: rem(30);
+        margin-inline-start: rem(30);
 
         @include breakpoint(small) {
           margin: rem(10) auto;
@@ -139,7 +139,7 @@
 
         a {
           i {
-            margin-right: rem(10);
+            margin-inline-end: rem(10);
           }
 
           i.fa.fa-exclamation-triangle {
@@ -191,7 +191,7 @@
         }
 
         ol {
-          margin-left: rem(30);
+          margin-inline-start: rem(30);
 
           @include breakpoint(small) {
             margin: rem(10) auto;
@@ -224,7 +224,7 @@
       @include breakpoint(medium) {
         ul {
           li:not(:last-child) {
-            margin-right: rem(15);
+            margin-inline-end: rem(15);
           }
         }
       }

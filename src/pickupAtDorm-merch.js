@@ -32,7 +32,7 @@ $(document).ready(function () {
   $('#studentIDText')
     .parent()
     .removeClass('left5')
-    .attr('style', 'margin-top: -1.5rem')
+    .attr('style', 'margin-block-start: -1.5rem')
     .addClass('alert alert-danger');
 
   const selectElement = document.getElementById('shippingMethod-select');

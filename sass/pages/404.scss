@@ -7,7 +7,7 @@
 
   p {
     text-transform: uppercase;
-    margin-bottom: rem(5);
+    margin-block-end: rem(5);
 
     &:first-child {
       font-weight: 700;
@@ -19,7 +19,7 @@
   }
 
   img {
-    margin-top: rem(30);
+    margin-block-start: rem(30);
     max-height: rem(500);
   }
 }

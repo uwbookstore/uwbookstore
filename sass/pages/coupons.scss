@@ -6,7 +6,7 @@
   justify-content: center;
   flex-flow: column wrap;
   gap: rem(20);
-  margin-bottom: rem(20);
+  margin-block-end: rem(20);
 
   div {
     position: relative;
@@ -37,7 +37,7 @@
 
   &__header {
     display: inline-block;
-    margin-bottom: rem(20);
+    margin-block-end: rem(20);
 
     img {
       border: 1px solid var(--bs-black);
@@ -129,7 +129,7 @@
     h3 {
       line-height: 0.85;
       font-size: rem(155);
-      margin-bottom: rem(10);
+      margin-block-end: rem(10);
     }
 
     p {

@@ -10,28 +10,20 @@
 
 .featured {
   &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-block-end: rem(20);
-    gap: rem(10);
+    //
   }
 
-  &__item {
+  &-item {
     text-align: center;
-    flex: 0 1 calc(25% - rem(10));
+    margin-inline: rem(15);
+    counter-increment: featured-item;
 
     a {
       display: block;
     }
 
     img {
-      transform: scale(1);
-      transition: all 0.25s ease-in-out;
-
-      &:hover {
-        transform: scale(1.05);
-      }
+      margin-inline: auto;
     }
 
     p {

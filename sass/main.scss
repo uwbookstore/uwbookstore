@@ -68,15 +68,37 @@ Author URI: https://www.uwbookstore.com
 }
 
 .collection:not(:last-child) {
-  margin-block-end: rem(30);
+  margin-block-end: rem(10);
 }
 
 .collection__img {
-  border-radius: rem(30);
-  border: rem(4) solid transparent;
+  border-radius: rem(4);
+  border: rem(2) solid var(--bs-black);
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+@media (min-width: 48em) {
+  .collection:not(:last-child) {
+    margin-block-end: rem(20);
+  }
+
+  .collection__img {
+    border-radius: rem(10);
+    border-width: rem(3);
+  }
+}
+
+@media (min-width: 64em) {
+  .collection:not(:last-child) {
+    margin-block-end: rem(30);
+  }
+
+  .collection__img {
+    border-radius: rem(15);
+    border-width: rem(4);
+  }
 }
 
 // Shop by Brand rotator
@@ -95,9 +117,54 @@ Author URI: https://www.uwbookstore.com
   padding: rem(14);
   height: rem(150);
   margin-inline-end: rem(20);
-  border: rem(4) solid var(--bs-black);
   border-radius: rem(6);
   counter-increment: shop-by-brand-cell;
+}
+
+.student__resources-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: rem(5);
+  margin-block-end: rem(30);
+}
+
+.student__resources-wrapper a {
+  display: block;
+  overflow: hidden;
+}
+
+.student__resources-wrapper a img {
+  border: 3px solid var(--bs-black);
+}
+
+.student__resources-wrapper a:first-child img {
+  border-radius: 10px 10px 0 0;
+}
+
+.student__resources-wrapper a:last-child img {
+  border-radius: 0 0 10px 10px;
+}
+
+@media (min-width: 48em) {
+  .student__resources {
+    h2 > br {
+      display: none;
+    }
+  }
+  .student__resources-wrapper {
+    flex-direction: row;
+    gap: rem(20);
+  }
+
+  .student__resources-wrapper a:first-child img {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .student__resources-wrapper a:last-child img {
+    border-radius: 0 10px 10px 0;
+  }
 }
 
 // Gift Cards
@@ -115,7 +182,7 @@ Author URI: https://www.uwbookstore.com
 }
 
 .giftcards__img {
-  padding: rem(10);
+  display: none;
 }
 
 .giftcards__text {
@@ -129,33 +196,25 @@ Author URI: https://www.uwbookstore.com
 
 @media (min-width: 48em) {
   .giftcards {
-    padding-block: rem(50);
-    margin-block-end: rem(-30);
-  }
-  .giftcards__body {
-    margin: auto;
-    max-width: rem(1117);
-    flex-flow: row nowrap;
-    align-items: center;
+    padding-block: rem(5);
   }
 
-  .giftcards__img {
-    margin-inline-end: rem(30);
-    img {
-      max-width: rem(394);
-    }
+  .giftcards__body {
+    margin: auto;
+    gap: rem(30);
+    max-width: rem(990);
+    flex-flow: row nowrap;
+    align-items: center;
   }
 
   .giftcards__text {
     h2 {
       text-align: left;
-      font-size: rem(48);
-      line-height: rem(48);
       margin-block-end: rem(10);
     }
 
     p {
-      font-size: rem(24);
+      font-size: rem(20);
     }
   }
 }
@@ -163,6 +222,15 @@ Author URI: https://www.uwbookstore.com
 @media (min-width: 64em) {
   .giftcards {
     margin-inline: 0;
+  }
+
+  .giftcards__img {
+    display: block;
+    margin-inline: auto;
+
+    img {
+      max-width: rem(394);
+    }
   }
 }
 
@@ -175,11 +243,19 @@ Author URI: https://www.uwbookstore.com
   padding: rem(20);
 }
 
+.about-us-imgblock {
+  display: none;
+}
+
+.about-us__img {
+  flex: 0 0 auto;
+}
+
 .about-us__img img {
   display: block;
   border-radius: 100%;
-  height: rem(200);
-  width: rem(200);
+  height: rem(120);
+  width: rem(120);
   margin: auto;
 }
 
@@ -211,14 +287,20 @@ Author URI: https://www.uwbookstore.com
     margin: auto;
     margin-block-start: rem(30);
     display: flex;
-    flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .about-us-imgblock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(20);
+    margin-block-end: rem(20);
   }
 
   .about-us__text {
-    max-width: calc(100% - rem(200));
-
     p {
       font-size: rem(20);
     }
@@ -226,5 +308,50 @@ Author URI: https://www.uwbookstore.com
     p > .btn {
       display: inline-flex;
     }
+  }
+}
+
+@media (min-width: 64em) {
+  .about-us__body {
+    flex-direction: row;
+    gap: rem(15);
+  }
+
+  .about-us-imgblock {
+    margin-block-end: 0;
+  }
+
+  .about-us__text,
+  .about-us__imgblock {
+    flex: 0 0 50%;
+  }
+
+  .about-us__text {
+    p {
+      font-size: rem(18);
+    }
+  }
+}
+
+@media (min-width: 85.375em) {
+  .about-us__body {
+    max-width: calc(90% - 100px);
+  }
+
+  .about-us-imgblock {
+    gap: rem(40);
+  }
+
+  .about-us__img img {
+    height: rem(220);
+    width: rem(220);
+  }
+
+  .about-us__text {
+    flex: 0 0 45%;
+  }
+
+  .about-us__imgblock {
+    flex: 0 0 55%;
   }
 }

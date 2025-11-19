@@ -46,16 +46,94 @@ Author URI: https://www.uwbookstore.com
   fill: var(--bs-primary);
 }
 
-// Featured Items banner
-// .featured__wrapper {
-//   justify-content: center;
-//   margin-block-end: rem(30);
-// }
+.featured__wrapper /* .carousel-container */ {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-block: rem(40);
+}
 
-// .featured__item p {
-//   font-weight: 600;
-//   font-size: rem(14);
-// }
+.featured__container /* .carousel-track */ {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: rem(50);
+  transition: transform 0.5s ease-in-out;
+}
+
+.featured__item /* .carousel-item */ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(20);
+  justify-content: space-between;
+  flex: 0 0 auto;
+  min-height: rem(210);
+  width: rem(150);
+  text-align: center;
+
+  &-image {
+    position: relative;
+    a {
+      display: block;
+      height: rem(150);
+      width: rem(150);
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      z-index: 2;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: var(--bs-primary);
+      box-sizing: border-box;
+      pointer-events: none;
+      z-index: 1;
+    }
+  }
+
+  p {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: rem(14);
+    margin-block-end: 0;
+  }
+}
+
+.btn-prev,
+.btn-next {
+  position: absolute;
+  top: rem(50);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--bs-primary);
+  border-radius: 50%;
+  width: rem(40);
+  height: rem(40);
+  color: var(--bs-primary);
+
+  &:hover,
+  &:active {
+    border: 1px solid var(--bs-primary) !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: var(--bs-primary) !important;
+  }
+}
+.btn-prev {
+  left: rem(10);
+}
+.btn-next {
+  right: rem(10);
+}
 
 // New Collections section
 .collection__wrapper {

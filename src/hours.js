@@ -120,6 +120,8 @@
         const p = document.createElement('p');
         p.className = 'bold';
         p.innerText = 'SPECIAL STORE HOURS';
+        const scrollContainer = document.createElement('div');
+        scrollContainer.className = 'scroll-alert';
         const specUL = document.createElement('ul');
         specUL.className = 'hours mb-0';
 
@@ -159,7 +161,8 @@
         );
 
         alert.appendChild(p);
-        alert.appendChild(specUL);
+        alert.appendChild(scrollContainer);
+        scrollContainer.appendChild(specUL);
         storeContainer.prepend(alert);
       }
 

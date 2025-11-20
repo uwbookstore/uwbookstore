@@ -139,7 +139,11 @@
               closeTime?.minutes
             );
             const li = document.createElement('li');
-            li.innerHTML = `<span class="hours__day">${formattedDate}:</span><span class="hours__times">${openStr} – ${closeStr}</span>`;
+            const showHours =
+              openStr === 'Closed' || closeStr === 'Closed'
+                ? 'Closed'
+                : `${openStr} - ${closeStr}`;
+            li.innerHTML = `<span class="hours__day">${formattedDate}:</span><span class="hours__times">${showHours}</span>`;
 
             // mark current-week specials visually
             const wkStartForSpecial = getStartOfWeekLocal(dateObj);

@@ -1,29 +1,75 @@
-const slideToHide = document.querySelectorAll('.divToHide');
-// const slideToHide2 = document.getElementById("divToHide2");
-const slideToActivate = document.querySelectorAll('.divToShow');
-// const slide2ToActivate = document.getElementById("setToShow");
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+const weekdays = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+];
 
-// months are ZERO index based;
-const futureDate = new Date(Date.UTC(2023, 9, 10, 1, 0, 0));
+const countdownWrapper = document.querySelector('.countdown__wrapper');
+const items = document.querySelectorAll('.timer__box p');
 
-const futureTime = futureDate.getTime();
+const centralTarget = new Date('2025-12-14T10:00:00');
+const targetInCentral = new Date(
+  centralTarget.toLocaleDateString('en-US', { timeZone: 'America/Chicago' })
+);
+const futureTime = targetInCentral.getTime();
 
-let countdown;
+const getRemainingTime = () => {
+  const now = new Date().getTime();
+  const t = futureTime - now;
 
-function getRemainingTime() {
-  const today = new Date().getTime();
+  const oneDay = 24 * 60 * 60 * 1000;
+  const oneHour = 60 * 60 * 1000;
+  const oneMinute = 60 * 1000;
 
-  const t = futureTime - today;
+  // calculate all values
+  let days = Math.floor(t / oneDay);
+  let hours = Math.floor((t % oneDay) / oneHour);
+  let minutes = Math.floor((t % oneHour) / oneMinute);
+  let seconds = Math.floor((t % oneMinute) / 1000);
+
+  // set values array
+  const values = [days, hours, minutes, seconds];
+  const format = (item) => (item < 10 ? `0${item}` : item);
+
+  items.forEach(function (item, index) {
+    item.innerHTML = format(values[index]);
+  });
+
   if (t < 0) {
     clearInterval(countdown);
-    slideToHide.remove();
-    // slideToHide2.remove();
-    slideToActivate.classList.add('active');
-    // slide2ToActivate.classList.remove("hide");
-  }
-}
-// countdown;
-countdown = setInterval(getRemainingTime, 1000);
+    countdownWrapper.innerHTML = `
+        <div class="countdown__image mr-3">
+          <img src="https://i.univbkstr.com/v3/img/landing/graduation/motionW.png" alt="" role="presentation"
+            class="img-fluid">
+        </div>
 
-//set initial values
+        <div class="timer__text ml-0">Congratulations Graduates!</div>
+
+        <div class="countdown__image ml-3">
+          <img src="https://i.univbkstr.com/v3/img/landing/graduation/motionW.png" alt="" role="presentation"
+            class="img-fluid">
+        </div>
+    `;
+  }
+};
+
+let countdown = setInterval(getRemainingTime, 1000);
 getRemainingTime();

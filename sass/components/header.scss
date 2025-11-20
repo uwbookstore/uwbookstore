@@ -8,13 +8,13 @@
     display: block;
     position: relative;
     margin: 0 auto;
-    max-width: rem(1200);
+    max-width: rem(1320);
 
     &--logo {
-      padding: rem(10) 0;
+      padding: rem(5) rem(10);
 
-      h1 {
-        margin-block-end: 0;
+      a {
+        display: block;
       }
     }
 
@@ -22,10 +22,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-inline: rem(30);
 
       &__ubs--logo {
         margin: 0;
+        padding-inline: 0;
       }
     }
 
@@ -84,7 +84,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         text-decoration: none;
         color: inherit;
       }
@@ -252,7 +252,7 @@
           width: 100%;
           display: inline;
           box-shadow: none;
-          padding: 0 0 0 rem(30);
+          padding: 0 0 0 rem(35);
           height: rem(35);
         }
       }
@@ -309,6 +309,11 @@ input[type='search']::-webkit-search-cancel-button {
   right: rem(10);
   width: rem(50);
   height: rem(50);
+
+  @include breakpoint(medium) {
+    height: rem(40);
+    width: rem(40);
+  }
 }
 
 .backtotop a {
@@ -324,11 +329,6 @@ input[type='search']::-webkit-search-cancel-button {
     // outline: 0;
     position: absolute;
     transition: all 0.2s ease;
-
-    @include breakpoint(medium) {
-      height: rem(40);
-      width: rem(40);
-    }
   }
 
   &:hover {

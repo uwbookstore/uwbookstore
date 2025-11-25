@@ -21,6 +21,12 @@ Author URI: https://www.uwbookstore.com
   display: none;
 }
 
+@include breakpoint(medium) {
+  .content__wrapper {
+    padding-inline: rem(20);
+  }
+}
+
 .gallery {
   margin-block-end: rem(30);
 }
@@ -38,12 +44,19 @@ Author URI: https://www.uwbookstore.com
   display: none;
 }
 
-.gallery .flickity-button {
+.flickity-button {
   border: rem(1) solid var(--bs-primary);
-}
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0.65;
+  transition: var(--transition);
 
-.gallery .flickity-button-icon {
-  fill: var(--bs-primary);
+  &-icon {
+    fill: var(--bs-primary);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .featured__wrapper /* .carousel-container */ {
@@ -55,30 +68,70 @@ Author URI: https://www.uwbookstore.com
 
 .featured__container /* .carousel-track */ {
   display: flex;
-  flex-wrap: nowrap;
   align-items: flex-start;
-  justify-content: center;
-  gap: rem(50);
-  transition: transform 0.5s ease-in-out;
+  justify-content: space-between;
+  gap: rem(20);
+  margin-block: rem(30);
+  padding-block-end: rem(10);
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    height: rem(8);
+    border-radius: rem(5);
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: rem(5);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(197, 5, 12, 0.7);
+    border-radius: rem(5);
+  }
+
+  .flickity-button.flickity-prev-next-button {
+    top: rem(75);
+  }
+
+  @include breakpoint(medium) {
+    overflow-x: hidden;
+  }
+
+  @include breakpoint(menu) {
+    justify-content: center;
+    gap: rem(10);
+    padding-block-end: 0;
+    padding-inline: rem(20);
+  }
+
+  @include breakpoint(large) {
+    gap: rem(20);
+    padding-inline: rem(30);
+  }
+
+  @include breakpoint(xlarge) {
+    justify-content: space-between;
+    padding-inline: rem(40);
+  }
 }
 
-.featured__item /* .carousel-item */ {
+.featured-item /* .carousel-item */ {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: rem(20);
   justify-content: space-between;
-  flex: 0 0 auto;
-  min-height: rem(210);
-  width: rem(150);
+  counter-increment: featured-item;
+  min-height: rem(128);
+  width: rem(90);
   text-align: center;
 
   &-image {
     position: relative;
     a {
       display: block;
-      height: rem(150);
-      width: rem(150);
+      height: rem(90);
+      width: rem(90);
       position: relative;
     }
 
@@ -95,7 +148,8 @@ Author URI: https://www.uwbookstore.com
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      background-color: var(--bs-primary);
+      background-color: #cacaca;
+      // background-color: var(--bs-primary);
       box-sizing: border-box;
       pointer-events: none;
       z-index: 1;
@@ -105,8 +159,49 @@ Author URI: https://www.uwbookstore.com
   p {
     font-weight: 700;
     text-transform: uppercase;
-    font-size: rem(14);
+    font-size: rem(12);
     margin-block-end: 0;
+
+    span {
+      display: none;
+    }
+  }
+
+  @include breakpoint(menu) {
+    width: rem(120);
+    min-height: rem(165);
+
+    &-image a {
+      width: rem(120);
+      height: rem(120);
+    }
+
+    p {
+      font-size: rem(14);
+    }
+  }
+
+  @include breakpoint(large) {
+    width: rem(130);
+    min-height: rem(200);
+
+    &-image a {
+      width: rem(130);
+      height: rem(130);
+    }
+  }
+
+  @include breakpoint(xlarge) {
+    width: rem(150);
+
+    &-image a {
+      width: rem(150);
+      height: rem(150);
+    }
+
+    p span {
+      display: inline;
+    }
   }
 }
 
@@ -136,25 +231,32 @@ Author URI: https://www.uwbookstore.com
 }
 
 // New Collections section
-.collection__wrapper {
-  width: 100%;
-  margin-block-end: rem(30);
-}
 
 .collection {
   text-align: center;
-}
+  line-height: 0;
 
-.collection:not(:last-child) {
-  margin-block-end: rem(10);
-}
+  a {
+    display: inline-block;
+  }
 
-.collection__img {
-  border-radius: rem(4);
-  border: rem(2) solid var(--bs-black);
-  display: block;
-  max-width: 100%;
-  height: auto;
+  &__wrapper {
+    width: 100%;
+    margin-block-end: rem(30);
+  }
+
+  &:not(:last-child) {
+    margin-block-end: rem(10);
+  }
+
+  &__img {
+    box-sizing: border-box;
+    border-radius: rem(4);
+    border: rem(2) solid var(--bs-black);
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @media (min-width: 48em) {
@@ -182,21 +284,27 @@ Author URI: https://www.uwbookstore.com
 // Shop by Brand rotator
 .shop-by-brand {
   margin-block-end: rem(30);
-  height: rem(150);
-}
-
-.shop-by-brand .flickity-button {
-  border: 1px solid var(--bs-gray-dark);
+  // height: rem(150);
 }
 
 .shop-by-brand-cell {
-  width: 100%;
-  max-width: rem(150);
-  padding: rem(14);
-  height: rem(150);
-  margin-inline-end: rem(20);
-  border-radius: rem(6);
+  padding: rem(8);
+  width: rem(100);
+  height: rem(100);
   counter-increment: shop-by-brand-cell;
+
+  @include breakpoint(small) {
+    padding: rem(12);
+    width: rem(120);
+    height: rem(120);
+  }
+
+  @include breakpoint(medium) {
+    padding: rem(14) 0;
+    margin-inline: rem(32);
+    width: rem(150);
+    height: auto;
+  }
 }
 
 .student__resources-wrapper {
@@ -214,7 +322,7 @@ Author URI: https://www.uwbookstore.com
 }
 
 .student__resources-wrapper a img {
-  border: 3px solid var(--bs-black);
+  border: rem(2) solid var(--bs-black);
 }
 
 .student__resources-wrapper a:first-child img {
@@ -225,7 +333,7 @@ Author URI: https://www.uwbookstore.com
   border-radius: 0 0 10px 10px;
 }
 
-@media (min-width: 48em) {
+@include breakpoint(small) {
   .student__resources {
     h2 > br {
       display: none;
@@ -238,6 +346,7 @@ Author URI: https://www.uwbookstore.com
 
   .student__resources-wrapper a:first-child img {
     border-radius: 10px 0 0 10px;
+    border-width: rem(3);
   }
 
   .student__resources-wrapper a:last-child img {
@@ -272,7 +381,7 @@ Author URI: https://www.uwbookstore.com
   }
 }
 
-@media (min-width: 48em) {
+@include breakpoint(small) {
   .giftcards {
     padding-block: rem(5);
   }
@@ -297,7 +406,7 @@ Author URI: https://www.uwbookstore.com
   }
 }
 
-@media (min-width: 64em) {
+@include breakpoint(medium) {
   .giftcards {
     margin-inline: 0;
   }
@@ -359,7 +468,7 @@ Author URI: https://www.uwbookstore.com
   }
 }
 
-@media (min-width: 48em) {
+@include breakpoint(small) {
   .about-us__body {
     max-width: rem(1320);
     margin: auto;
@@ -389,7 +498,7 @@ Author URI: https://www.uwbookstore.com
   }
 }
 
-@media (min-width: 64em) {
+@include breakpoint(medium) {
   .about-us__body {
     flex-direction: row;
     gap: rem(15);
@@ -411,7 +520,7 @@ Author URI: https://www.uwbookstore.com
   }
 }
 
-@media (min-width: 85.375em) {
+@include breakpoint(large) {
   .about-us__body {
     max-width: calc(90% - 100px);
   }

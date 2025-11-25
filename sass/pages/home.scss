@@ -8,44 +8,44 @@
   }
 }
 
-.featured {
-  &__wrapper {
-    //
-  }
+// .featured {
+//   &__wrapper {
+//     //
+//   }
 
-  &-item {
-    text-align: center;
-    margin-inline: rem(15);
-    counter-increment: featured-item;
+//   &-item {
+//     text-align: center;
+//     margin-inline: rem(15);
+//     counter-increment: featured-item;
 
-    a {
-      display: block;
-    }
+//     a {
+//       display: block;
+//     }
 
-    img {
-      margin-inline: auto;
-    }
+//     img {
+//       margin-inline: auto;
+//     }
 
-    p {
-      margin: rem(10) 0 0;
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: rem(11);
-    }
-  }
+//     p {
+//       margin: rem(10) 0 0;
+//       font-weight: 700;
+//       text-transform: uppercase;
+//       font-size: rem(11);
+//     }
+//   }
 
-  @include breakpoint(small) {
-    &__wrapper {
-      margin-block-end: rem(40);
-    }
+//   @include breakpoint(small) {
+//     &__wrapper {
+//       margin-block-end: rem(40);
+//     }
 
-    &__item {
-      p {
-        font-size: rem(18);
-      }
-    }
-  }
-}
+//     &__item {
+//       p {
+//         font-size: rem(18);
+//       }
+//     }
+//   }
+// }
 
 .wiscard {
   &__wrapper {

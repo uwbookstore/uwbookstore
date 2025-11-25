@@ -400,18 +400,29 @@ colorOptions ? changeLCS(colorOptions) : null;
 
 // HANDLE SIZE PICKER & SIZE CHART LINK
 // create container div
+const merchLogos = document.createElement('div');
+merchLogos.id = 'logos';
+merchLogos.className = 'merch__detail-logo';
+
+const merchColors = document.createElement('div');
+merchColors.id = 'colors';
+merchColors.className = 'merch__detail-color';
+
 const merchSizes = document.createElement('div');
 merchSizes.id = 'sizes';
 merchSizes.className = 'merch__detail-size';
 
+const logoGuideDiv = document.createElement('label');
+logoGuideDiv.className = 'merch__detail-logo-label';
+logoGuideDiv.textContent = 'Make Selection:';
+
+const colorGuideDiv = document.createElement('label');
+colorGuideDiv.className = 'merch__detail-color-label';
+colorGuideDiv.textContent = 'Make Selection';
+
 const sizeGuideDiv = document.createElement('label');
 sizeGuideDiv.className = 'merch__detail-size-label';
-
-if (select || logos || colors) {
-  sizeGuideDiv.textContent = 'Make Selection:';
-} else {
-  sizeGuideDiv.textContent = 'Size |';
-}
+sizeGuideDiv.textContent = 'Size |';
 
 // ADD SIZE CHART LINK TO PRODUCT AS NEEDED
 let sizeChartUrl, sizeChartBrand;
@@ -489,20 +500,31 @@ sizeChartLink.href = `https://i.univbkstr.com/${sizeChartUrl}`;
 sizeChartLink.textContent = `Size Guide`;
 sizeChartLink.title = `${sizeChartBrand} Size Guide`;
 
-if (sizes || logos || colors) {
-  let pickerArray;
-  logos
-    ? (pickerArray = logos.innerHTML)
-    : colors
-      ? (pickerArray = colors.innerHTML)
-      : (pickerArray = sizes.innerHTML);
-  merchSizes.innerHTML = `
-  <div class="flex merch__detail-size-picker">${pickerArray}</div>
+if (logos) {
+  merchLogos.innerHTML = `
+  <div class="flex merch__detail-size-picker">${logos.innerHTML}</div>
 `;
 
-  sizes ? merchSizes.prepend(sizeChartLink) : null;
+  merchLogos.prepend(logoGuideDiv);
+}
+if (colors) {
+  merchColors.innerHTML = `
+  <div class="flex merch__detail-size-picker">${colors.innerHTML}</div>
+`;
+
+  merchColors.prepend(colorGuideDiv);
+}
+
+if (sizes) {
+  merchSizes.innerHTML = `
+  <div class="flex merch__detail-size-picker">${sizes.innerHTML}</div>
+  `;
+
+  merchSizes.prepend(sizeChartLink);
   merchSizes.prepend(sizeGuideDiv);
-} else if (!logos && !sizes && !colors && singleItem) {
+}
+
+if (!logos && !sizes && !colors && singleItem) {
   let singleItemText = singleItem.textContent.toLowerCase();
 
   if (singleItemText === 'xxx-large' || singleItemText === '3x-large') {
@@ -670,8 +692,8 @@ merchDisclaimer ? merchInfoWrapper.appendChild(merchDisclaimerHtml) : '';
 merchDisclaimer ? merchDisclaimerHtml.after(disclaimerError) : '';
 
 if (!noAddCart) {
-  logos ? merchInfoWrapper.appendChild(merchSizes) : '';
-  colors ? merchInfoWrapper.appendChild(merchSizes) : '';
+  logos ? merchInfoWrapper.appendChild(merchLogos) : '';
+  colors ? merchInfoWrapper.appendChild(merchColors) : '';
   sizes ? merchInfoWrapper.appendChild(merchSizes) : '';
   singleItem ? merchInfoWrapper.appendChild(merchSizes) : '';
   select ? merchInfoWrapper.appendChild(merchSizes) : '';

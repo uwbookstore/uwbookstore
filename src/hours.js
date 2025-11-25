@@ -185,8 +185,16 @@
         // If a special exists for that exact date (in specialHoursMap), use it
         const specialForThisPeriod = specialHoursMap[periodDateKey];
 
-        const oTime = specialForThisPeriod?.openTime ?? openTime;
-        const cTime = specialForThisPeriod?.closeTime ?? closeTime;
+        let oTime, cTime;
+        if (specialForThisPeriod) {
+          // Special hours exist for this date - use them even if null (closed)
+          oTime = specialForThisPeriod.openTime;
+          cTime = specialForThisPeriod.closeTime;
+        } else {
+          // No special hours - use regular hours
+          oTime = openTime;
+          cTime = closeTime;
+        }
 
         const openStr = convertToStandardTime(oTime?.hours, oTime?.minutes);
         const closeStr = convertToStandardTime(cTime?.hours, cTime?.minutes);

@@ -64,137 +64,142 @@
 const brands = [
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/47-Brand',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/47Brand.png',
+    logo: '47Brand.png',
     text: "'47 Brand",
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Antigua',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/antigua.png',
+    logo: 'antigua.png',
     text: 'Antigua',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Badger-Doodles',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/badgerDoodles.png',
+    logo: 'badgerDoodles.png',
     text: 'Badger Doodles',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Blue-84',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/blue84.png',
+    logo: 'blue84.png',
     text: 'Blue 84',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Blue-Q',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/blue-Q.png',
+    logo: 'blue-Q.png',
     text: 'Blue Q',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Boxercraft',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/boxercraft.png',
+    logo: 'boxercraft.png',
     text: 'Boxercraft',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Champion',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/champion.png',
+    logo: 'champion.png',
     text: 'Champion',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Columbia',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/columbia.png',
+    logo: 'columbia.png',
     text: 'Columbia',
   },
   {
-    link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Cutter-and-Buck',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/cutterAndBuck.png',
-    text: 'Cutter &amp; Buck',
-  },
-  {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Game-Bibs',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/gameBibs.png',
+    logo: 'gameBibs.png',
     text: 'Game Bibs',
   },
   {
+    link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Gameday-Social',
+    logo: 'gameDaySocial.png',
+    text: 'Gameday Social',
+  },
+  {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Gear-For-Sports',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/gear.png',
+    logo: 'gear.png',
     text: 'Gear For Sports',
   },
   {
+    link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Hair-2-U',
+    logo: 'hair2U.png',
+    text: 'Hair2U',
+  },
+  {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Hydro-Flask',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/HydroFlask.png',
+    logo: 'HydroFlask.png',
     text: 'Hydro Flask',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Hype-and-Vice',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/hype.png',
+    logo: 'hype.png',
     text: 'Hype and Vice',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Iron-Joc',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/ironJoc.png',
+    logo: 'ironJoc.png',
     text: 'Iron Joc',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Johnnie-)',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/johnnieO.png',
+    logo: 'johnnieO.png',
     text: 'Johnnie-O',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Julia-Gash',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/juliaGash.png',
+    logo: 'juliaGash.png',
     text: 'Julia Gash',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Kady-Luxe',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/kadyluxe.png',
+    logo: 'kadyluxe.png',
     text: 'Kady Luxe',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/kyle-Cavan',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/kyleCavan.png',
+    logo: 'kyleCavan.png',
     text: 'Kyle Cavan',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Lands-End',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/landsEnd.png',
+    logo: 'landsEnd.png',
     text: "Lands' End",
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/League',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/league.png',
+    logo: 'league.png',
     text: 'League',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Legacy',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/legacy.png',
+    logo: 'legacy.png',
     text: 'Legacy',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Manitowoc-Minute',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/manitowocMinute.png',
+    logo: 'manitowocMinute.png',
     text: 'Manitowoc Minute',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Old-Fashioned-Golf',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/oldFashionedGolf.png',
+    logo: 'oldFashionedGolf.png',
     text: 'Old Fashioned Golf',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Tommy-Bahama',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/tommyBahama.png',
+    logo: 'tommyBahama.png',
     text: 'Tommy Bahama',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Under-Armour',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/underArmour.png',
+    logo: 'underArmour.png',
     text: 'Under Armour',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Wisconsin-Design-Team',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/wiscDesignTeam.png',
+    logo: 'wiscDesignTeam.png',
     text: 'Wisconsin Design Team',
   },
   {
     link: 'https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/ZooZatz',
-    logo: 'https://i.univbkstr.com/v3/img/logos/brands/zooZatz.png',
+    logo: 'zooZatz.png',
     text: 'ZooZatz',
   },
 ];
@@ -207,7 +212,7 @@ brands.forEach((brand) => {
   container.className = 'shop-by-brand-cell';
   container.innerHTML = `
     <a href="${brand.link}">
-      <img src="${brand.logo}" alt="${brand.text}" class="img-fluid d-block">
+      <img src="https://i.univbkstr.com/v3/img/logos/brands/${brand.logo}" alt="${brand.text}" class="img-fluid d-block">
     </a>
   `;
 

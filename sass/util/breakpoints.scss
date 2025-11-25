@@ -5,25 +5,25 @@
  * more breakpoint reading
  */
 
-// 450px, 768px, 1024px, 1169px, 1366px, 1920px, 2560px
+// 450px, 768px, 1024px, 1169px, 1366px, 1520px, 2560px
 $breakpoints-up: (
   'xsmall': '28.125em',
   'small': '48em',
   'medium': '64em',
   'menu': '73.0625em',
   'large': '85.375em',
-  'xlarge': '120em',
+  'xlarge': '95em',
   'xxlarge': '160em',
 );
 
-// 449px, 767px, 1023px, 1168px, 1365px, 1919px, 2559px
+// 449px, 767px, 1023px, 1168px, 1365px, 1519px, 2559px
 $breakpoints-down: (
   'xsmall': '28.0625em',
   'small': '47.9375em',
   'medium': '63.9375em',
   'menu': '73em',
   'large': '85.3125em',
-  'xlarge': '119.9375em',
+  'xlarge': '94.9375em',
   'xxlarge': '159.9375em',
 );
 

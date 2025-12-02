@@ -183,7 +183,7 @@ ul.store-phone li {
 }
 
 .scroll-alert {
-  max-height: rem(150);
+  max-height: rem(130);
   overflow-y: auto;
   padding-inline-end: rem(10);
 
@@ -198,7 +198,7 @@ ul.store-phone li {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(197, 5, 12, 0.4);
+    background-color: rgba(184, 165, 103, 0.8);
     border-radius: rem(5);
   }
 }

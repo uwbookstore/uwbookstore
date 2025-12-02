@@ -12,6 +12,7 @@ $(document).ready(function () {
   $('#technav-1 ul li').clone().appendTo('#menu-tech');
   $('#technav-2 ul li').clone().appendTo('#menu-tech-2');
   $('#technav-3 ul li').clone().appendTo('#menu-tech-3');
+  $('#technav-4 ul li').clone().appendTo('#menu-tech-4');
 
   // Clone the navigation links
   // Clothing

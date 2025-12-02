@@ -34,7 +34,7 @@
     item.className = 'gallery-cell';
     item.setAttribute('aria-label', `Slide ${i + 1} of ${slides.length}`);
 
-    const imgPath = `https://i.univbkstr.com/images/rotator/${s.imgName}`;
+    const imgPath = `https://i.univbkstr.com/img/pages/home/rotator/${s.imgName}`;
 
     let parent = item;
 

@@ -2,15 +2,16 @@ window.CAROUSEL_CONFIG = {
   options: { autoplay_ms: 5000, loop: true },
   slides: [
     {
-      imgName: 'rotator-1',
-      sr_caption: 'Badger Holiday Gift Ideas.',
-      link: 'https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Holiday-Gift-Guide',
+      imgName: 'historic',
+      sr_caption:
+        'Locally Grown. Badger Strong. Supporting UW-Madison since 1894.',
+      link: 'https://www.uwbookstore.com/newArrivals',
       target: '_self',
       start: '',
       end: '',
     },
     {
-      imgName: 'rotator-2',
+      imgName: 'basketballRotator',
       sr_caption: "Let's go Badger football! Visit us at Badger Bash!",
       link: 'https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Football',
       target: '_self',
@@ -18,7 +19,7 @@ window.CAROUSEL_CONFIG = {
       end: '2026-11-22T20:55:00-06:00',
     },
     {
-      imgName: 'rotator-blank',
+      imgName: 'holidayRotator',
       sr_caption: "Let's Go Badger Basketball!",
       link: 'https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Basketball',
       target: '_self',
@@ -26,7 +27,7 @@ window.CAROUSEL_CONFIG = {
       end: '',
     },
     {
-      imgName: 'rotator-1',
+      imgName: 'volleyballRotator',
       sr_caption: 'Your Badger Headquarters! Shop New Arrivals!',
       link: 'https://www.uwbookstore.com/NewArrivals',
       target: '_self',
@@ -34,7 +35,7 @@ window.CAROUSEL_CONFIG = {
       end: '2026-11-29T16:32:00-05:00',
     },
     {
-      imgName: 'rotator-2',
+      imgName: 'techRotator',
       sr_caption: 'Your Badger Headquarters! Shop New Arrivals!',
       link: 'https://www.uwbookstore.com/NewArrivals',
       target: '_self',

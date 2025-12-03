@@ -290,12 +290,12 @@
   display: block;
   text-align: center;
   background: lightgray;
-  padding: rem(30) rem(10);
+  padding: rem(10);
   margin-block-end: rem(30);
   text-decoration: none;
   color: var(--bs-black);
   font-weight: 600;
-  font-size: rem(24);
+  font-size: rem(20);
   opacity: 1;
   transition: var(--transition);
 
@@ -316,7 +316,9 @@
   }
 
   @include breakpoint(small) {
+    padding-block: rem(30);
     padding-inline: 0;
+    font-size: rem(24);
     br {
       display: none;
     }

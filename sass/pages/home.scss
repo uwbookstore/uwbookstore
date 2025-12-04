@@ -289,7 +289,7 @@
 .home__banner-info {
   display: block;
   text-align: center;
-  background: lightgray;
+  background: var(--bs-gray-300);
   padding: rem(10);
   margin-block-end: rem(30);
   text-decoration: none;

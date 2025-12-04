@@ -25,10 +25,8 @@ const weekdays = [
 const countdownWrapper = document.querySelector('.countdown__wrapper');
 const items = document.querySelectorAll('.timer__box p');
 
-const centralTarget = new Date('2025-12-14T10:00:00');
-const targetInCentral = new Date(
-  centralTarget.toLocaleDateString('en-US', { timeZone: 'America/Chicago' })
-);
+// const centralTarget = new Date('2025-12-14T10:00:00');
+const targetInCentral = new Date(Date.UTC(2025, 11, 14, 16, 0, 0));
 const futureTime = targetInCentral.getTime();
 
 const getRemainingTime = () => {

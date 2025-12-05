@@ -318,7 +318,18 @@ if (!noListItems) {
       categoryTitle.textContent.toLowerCase().substring(0, 16) === 'dell laptop'
     ) {
       pageBanner.innerHTML = `
-        <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li></ul>
+        <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Surface-Laptop" class="btn btn-primary">Surface Laptops</a></li></ul>
+        <div class="alert alert-info text-center">
+          <p class="mb-0"><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p>
+        </div>
+      `;
+      merchFilterWrap.after(pageBanner);
+    } else if (
+      categoryTitle.textContent.toLowerCase().substring(0, 14) ===
+      'surface laptop'
+    ) {
+      pageBanner.innerHTML = `
+        <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li></ul>
         <div class="alert alert-info text-center">
           <p class="mb-0"><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p>
         </div>
@@ -328,7 +339,7 @@ if (!noListItems) {
       categoryTitle.textContent.toLowerCase().substring(0, 7) === 'macbook'
     ) {
       pageBanner.innerHTML = `
-        <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li></ul>
+        <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Surface-Laptop" class="btn btn-primary">Surface Laptops</a></li></ul>
         <div class="alert alert-info text-center">
           <p class="mb-0"><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p>
         </div>
@@ -338,7 +349,7 @@ if (!noListItems) {
       categoryTitle.textContent.toLowerCase().substring(0, 6) === 'laptop'
     ) {
       pageBanner.innerHTML = `
-        <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li></ul>
+        <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop" class="btn btn-primary">Dell Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Surface-Laptop" class="btn btn-primary">Surface Laptops</a></li></ul>
         <div class="alert alert-info text-center">
           <p class="mb-0"><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p>
         </div>

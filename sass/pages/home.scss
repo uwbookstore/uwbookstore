@@ -39,10 +39,23 @@
 }
 
 .featured__wrapper /* .carousel-container */ {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  margin-block: rem(40);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: rem(10);
+  flex-wrap: wrap;
+
+  .featured-item {
+    flex: 0 0 48%;
+  }
+
+  @include breakpoint(small) {
+    gap: rem(50);
+
+    .featured-item {
+      flex: 1 0 auto;
+    }
+  }
 }
 
 .featured__container /* .carousel-track */ {
@@ -107,6 +120,9 @@
 
   &-image {
     position: relative;
+    opacity: 1;
+    transition: var(--transition);
+
     a {
       display: block;
       height: rem(90);
@@ -128,10 +144,18 @@
       height: 100%;
       border-radius: 50%;
       background-color: #cacaca;
-      // background-color: var(--bs-primary);
       box-sizing: border-box;
       pointer-events: none;
+      opacity: 1;
       z-index: 1;
+      transition: var(--transition);
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0.55;
+        box-shadow: 0 0 rem(10) rgba(197, 5, 12, 0.6);
+      }
     }
   }
 

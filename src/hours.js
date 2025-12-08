@@ -116,10 +116,12 @@
 
       if (upcomingSpecialDates.length > 0) {
         const alert = document.createElement('div');
-        alert.className = 'alert alert-danger';
+        alert.className = 'alert alert-warning';
         const p = document.createElement('p');
         p.className = 'bold';
         p.innerText = 'SPECIAL STORE HOURS';
+        const scrollContainer = document.createElement('div');
+        scrollContainer.className = 'scroll-alert';
         const specUL = document.createElement('ul');
         specUL.className = 'hours mb-0';
 
@@ -139,7 +141,11 @@
               closeTime?.minutes
             );
             const li = document.createElement('li');
-            li.innerHTML = `<span class="hours__day">${formattedDate}:</span><span class="hours__times">${openStr} – ${closeStr}</span>`;
+            const showHours =
+              openStr === 'Closed' || closeStr === 'Closed'
+                ? 'Closed'
+                : `${openStr} - ${closeStr}`;
+            li.innerHTML = `<span class="hours__day">${formattedDate}:</span><span class="hours__times">${showHours}</span>`;
 
             // mark current-week specials visually
             const wkStartForSpecial = getStartOfWeekLocal(dateObj);
@@ -155,7 +161,8 @@
         );
 
         alert.appendChild(p);
-        alert.appendChild(specUL);
+        alert.appendChild(scrollContainer);
+        scrollContainer.appendChild(specUL);
         storeContainer.prepend(alert);
       }
 
@@ -178,8 +185,16 @@
         // If a special exists for that exact date (in specialHoursMap), use it
         const specialForThisPeriod = specialHoursMap[periodDateKey];
 
-        const oTime = specialForThisPeriod?.openTime ?? openTime;
-        const cTime = specialForThisPeriod?.closeTime ?? closeTime;
+        let oTime, cTime;
+        if (specialForThisPeriod) {
+          // Special hours exist for this date - use them even if null (closed)
+          oTime = specialForThisPeriod.openTime;
+          cTime = specialForThisPeriod.closeTime;
+        } else {
+          // No special hours - use regular hours
+          oTime = openTime;
+          cTime = closeTime;
+        }
 
         const openStr = convertToStandardTime(oTime?.hours, oTime?.minutes);
         const closeStr = convertToStandardTime(cTime?.hours, cTime?.minutes);

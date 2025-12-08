@@ -52,7 +52,11 @@
   --columns: 2;
 
   // Transition
-  --transition: all 0.25s ease-in-out;
+  --transition: all 0.3s ease-in-out;
+
+  @media (prefers-reduced-motion: reduce) {
+    --transition: none;
+  }
 
   // Landing page header clip-path
   --clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%);

@@ -519,6 +519,7 @@ $(document).ready(function () {
 
   // animate dropdown for submenus in navbar
   $('.nav-title').on('click', function (e) {
+    e.stopPropagation();
     const width = $(window).width();
 
     if (width < 1169) {

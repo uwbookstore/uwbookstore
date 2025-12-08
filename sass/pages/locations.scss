@@ -181,3 +181,24 @@
 ul.store-phone li {
   margin-block-end: rem(10);
 }
+
+.scroll-alert {
+  max-height: rem(130);
+  overflow-y: auto;
+  padding-inline-end: rem(10);
+
+  &::-webkit-scrollbar {
+    width: rem(8);
+    border-radius: rem(5);
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: rem(5);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(184, 165, 103, 0.8);
+    border-radius: rem(5);
+  }
+}

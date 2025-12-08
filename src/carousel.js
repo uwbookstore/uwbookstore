@@ -1,7 +1,6 @@
 (() => {
   const cfg = window.CAROUSEL_CONFIG;
-  const loop = !!(cfg.options && cfg.options.loop);
-  const interval = (cfg.options && parseInt(cfg.options.autoplay_ms, 10)) || 0;
+
   const isBlank = (v) =>
     v == null || (typeof v === 'string' && v.trim() === '');
   const parseDate = (dateString) => {
@@ -28,56 +27,25 @@
       return (!a || now >= a) && (!b || now <= b);
     })
     .slice(0, 5);
-  const root = document.getElementById('ubs-carousel');
-  const inner = root.querySelector('.carousel-inner');
-  const ind = root.querySelector('.carousel-indicators');
-  const controls = root.querySelector('.carousel-controls');
+  const root = document.getElementById('ubs-gallery');
 
   slides.forEach((s, i) => {
-    const li = document.createElement('button');
-    li.type = 'button';
-    li.setAttribute('data-bs-target', '#ubs-carousel');
-    li.setAttribute('data-bs-slide-to', String(i));
-    if (i === 0) li.className = 'active';
-    li.setAttribute('aria-label', `Go to slide ${i + 1}`);
-    ind.appendChild(li);
-    if (slides.length === 1) {
-      ind.style.display = 'none';
-      controls.style.display = 'none';
-    }
     const item = document.createElement('div');
-    item.className = 'carousel-item' + (i === 0 ? ' active' : '');
+    item.className = 'gallery-cell';
     item.setAttribute('aria-label', `Slide ${i + 1} of ${slides.length}`);
 
-    const imgPath = `https://i.univbkstr.com/v3/img/pages/home/rotator/${s.imgName}`;
+    const imgPath = `https://i.univbkstr.com/img/pages/home/rotator/${s.imgName}`;
 
     let parent = item;
-    const picture = document.createElement('picture');
-
-    const sourceLg = document.createElement('source');
-    sourceLg.media = '(min-width: 48em)';
-    sourceLg.width = '1170';
-    sourceLg.height = '450';
-    sourceLg.srcset = `${imgPath}-lg.jpg`;
-
-    const sourceMd = document.createElement('source');
-    sourceMd.media = '(min-width: 28.125em)';
-    sourceMd.width = '768';
-    sourceMd.height = '840';
-    sourceMd.srcset = `${imgPath}-md.jpg`;
 
     const img = document.createElement('img');
-    img.src = `${imgPath}-sm.jpg`;
-    img.className = 'img-fluid';
-    img.width = '450';
-    img.height = '500';
+    img.src = `${imgPath}.jpg`;
+    img.className = 'img-fluid d-block';
+    img.width = '640';
+    img.height = '475';
     img.alt = s.alt || '';
     img.decoding = 'async';
     img.loading = i === 0 ? 'eager' : 'lazy';
-
-    picture.appendChild(sourceLg);
-    picture.appendChild(sourceMd);
-    picture.appendChild(img);
 
     if (s.link) {
       const a = document.createElement('a');
@@ -85,10 +53,10 @@
       if (s.target) a.target = s.target;
       if (s.target === '_blank') a.rel = 'noopener';
       a.style.display = 'block';
-      a.appendChild(picture);
+      a.appendChild(img);
       parent.appendChild(a);
     } else {
-      parent.appendChild(picture);
+      parent.appendChild(img);
     }
 
     let ids = [];
@@ -101,11 +69,8 @@
       ids.push(sr.id);
     }
     if (ids.length) img.setAttribute('aria-describedby', ids.join(' '));
-    inner.appendChild(item);
+    root.appendChild(item);
   });
-  new bootstrap.Carousel(root, {
-    interval: interval || false,
-    ride: interval ? 'carousel' : false,
-    wrap: loop,
-  });
+
+  // Flickity options
 })();

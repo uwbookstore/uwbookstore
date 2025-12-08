@@ -192,6 +192,15 @@
       svg {
         fill: var(--bs-gray-400);
       }
+
+      a {
+        opacity: 1;
+        transition: var(--transition);
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
     }
 
     @include breakpoint(small) {

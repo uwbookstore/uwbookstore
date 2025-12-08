@@ -587,165 +587,172 @@ div.subHeader {
   border: rem(1) solid var(--bs-gray-300);
 }
 
-// .sale {
-//   padding-block-start: rem(10);
-//   background: var(--clr-gradient-start);
-//   background: linear-gradient(
-//     45deg,
-//     var(--clr-gradient-start) 0%,
-//     var(--clr-gradient-end) 100%
-//   );
-//   color: var(--bs-white);
-//   width: 100%;
-//   overflow: hidden;
-//   margin-block-start: rem(-20);
+.faculty-sale {
+  padding-block-start: rem(10);
+  background: var(--clr-gradient-start);
+  background: linear-gradient(
+    45deg,
+    var(--clr-gradient-start) 0%,
+    var(--clr-gradient-end) 100%
+  );
+  color: var(--bs-white);
+  width: 100%;
+  overflow: hidden;
+  margin-block-start: rem(-20);
 
-//   &__wrapper {
-//     padding: rem(20) rem(10) 0;
-//     width: 100%;
-//     max-width: rem(1080);
-//     margin: 0 auto;
-//   }
+  &__wrapper {
+    padding: rem(20) rem(10) 0;
+    width: 100%;
+    max-width: rem(1080);
+    margin: 0 auto;
+  }
 
-//   &__header {
-//     text-transform: uppercase;
-//     h2 {
-//       text-align: center;
-//       font-size: rem(40);
+  &__header {
+    text-transform: uppercase;
+    h2 {
+      text-align: center;
+      font-size: rem(40);
 
-//       @include breakpoint(small) {
-//         font-size: rem(50);
-//       }
-//     }
-//   }
+      @include breakpoint(small) {
+        font-size: rem(50);
+      }
+    }
+  }
 
-//   &__body {
-//     max-width: rem(860);
-//     margin: 0 auto rem(15);
+  &__body {
+    max-width: rem(860);
+    margin: 0 auto rem(15);
 
-//     p {
-//       margin-block-end: 0;
+    p {
+      margin-block-end: 0;
 
-//       &:last-child {
-//         font-size: rem(15);
+      &:last-child {
+        font-size: rem(15);
 
-//         @include breakpoint(small) {
-//           font-size: rem(25);
-//         }
-//       }
-//     }
-//   }
+        @include breakpoint(small) {
+          font-size: rem(25);
+        }
+      }
+    }
+  }
 
-//   &__info {
-//     font-family: 'Impact';
-//     text-align: center;
-//     text-transform: uppercase;
-//     font-size: rem(80);
-//     font-weight: 700;
-//     color: yellow;
-//     line-height: 1;
+  &__info {
+    font-family: 'Impact';
+    text-align: center;
+    text-transform: uppercase;
+    font-size: rem(80);
+    font-weight: 700;
+    color: yellow;
+    line-height: 1;
 
-//     span {
-//       display: block;
-//       font-size: rem(100);
-//     }
-//     @include breakpoint(small) {
-//       font-size: rem(87);
-//       letter-spacing: rem(1);
-//       span {
-//         font-size: rem(260);
-//       }
-//     }
-//   }
+    span {
+      display: block;
+      font-size: rem(100);
+    }
+    @include breakpoint(small) {
+      font-size: rem(87);
+      letter-spacing: rem(1);
+      span {
+        font-size: rem(260);
+      }
+    }
+  }
 
-//   &__footer {
-//     &-info {
-//       text-align: center;
-//       text-transform: uppercase;
+  &__footer {
+    margin-block-end: rem(40);
 
-//       p {
-//         font-weight: 700;
-//         line-height: 1;
+    &-info {
+      text-align: center;
+      text-transform: uppercase;
 
-//         @include breakpoint(small) {
-//           font-size: rem(35);
-//         }
-//       }
-//     }
+      p {
+        font-weight: 700;
+        line-height: 1;
 
-//     &-btn {
-//       display: inline-flex;
-//       justify-content: center;
-//       align-items: center;
-//       gap: rem(10);
-//       text-transform: uppercase;
-//       background-color: yellow;
-//       border-radius: rem(10);
-//       padding: rem(5) rem(20);
-//       text-align: center;
-//       line-height: 1;
-//       margin: 0 auto rem(20);
-//       width: auto;
+        a {
+          color: var(--bs-white);
+          text-decoration: underline;
+        }
 
-//       span {
-//         color: black;
-//         font-weight: 700;
-//         display: inline-block;
-//         &.code {
-//           font-size: rem(45);
-//         }
-//       }
+        @include breakpoint(small) {
+          font-size: rem(35);
+        }
+      }
+    }
 
-//       @include breakpoint(small) {
-//         gap: rem(15);
-//         margin-block-end: 0;
-//         padding: rem(10) rem(20);
+    &-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: rem(10);
+      text-transform: uppercase;
+      background-color: yellow;
+      border-radius: rem(10);
+      padding: rem(5) rem(20);
+      text-align: center;
+      line-height: 1;
+      margin: 0 auto rem(20);
+      width: auto;
 
-//         span {
-//           font-size: rem(30);
+      span {
+        color: black;
+        font-weight: 700;
+        display: inline-block;
+        &.code {
+          font-size: rem(45);
+        }
+      }
 
-//           &.code {
-//             font-size: rem(70);
-//           }
-//         }
-//       }
+      @include breakpoint(small) {
+        gap: rem(15);
+        margin-block-end: 0;
+        padding: rem(10) rem(20);
 
-//       @include breakpoint(medium) {
-//         gap: rem(20);
-//         margin-block-end: 0;
-//         padding: rem(20);
+        span {
+          font-size: rem(30);
 
-//         span {
-//           font-size: rem(45);
+          &.code {
+            font-size: rem(70);
+          }
+        }
+      }
 
-//           &.code {
-//             font-size: rem(100);
-//           }
-//         }
-//       }
-//     }
+      @include breakpoint(medium) {
+        gap: rem(20);
+        margin-block-end: 0;
+        padding: rem(20);
 
-//     &-img {
-//       text-align: center;
-//     }
+        span {
+          font-size: rem(45);
 
-//     @include breakpoint(small) {
-//       display: grid;
-//       grid-template-columns: 1fr rem(300);
-//       align-items: center;
-//       gap: rem(20);
-//     }
-//   }
+          &.code {
+            font-size: rem(100);
+          }
+        }
+      }
+    }
 
-//   &__disclaimer {
-//     background-color: var(--bs-white);
-//     color: var(--bs-gray-dark);
-//     padding: rem(40);
-//     text-align: center;
-//     font-size: rem(12);
-//     font-weight: 700;
-//   }
-// }
+    &-img {
+      text-align: center;
+    }
+
+    @include breakpoint(small) {
+      display: grid;
+      grid-template-columns: 1fr rem(300);
+      align-items: center;
+      gap: rem(20);
+    }
+  }
+
+  &__disclaimer {
+    background-color: var(--bs-white);
+    color: var(--bs-gray-dark);
+    padding: rem(40);
+    text-align: center;
+    font-size: rem(12);
+    font-weight: 700;
+  }
+}
 
 .grid__faculty-sale {
   grid-template-columns: 1fr;

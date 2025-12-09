@@ -7,7 +7,7 @@
     if (!dateString) return null;
     // Assume Central if no offset of Z
     if (!dateString.includes('Z') && !/[+-]\d{2}:\d{2}$/.test(dateString)) {
-      dateString += '-05:00'; // fallback
+      dateString += '-06:00'; // fallback
     }
     return new Date(dateString);
   };
@@ -20,13 +20,11 @@
     return new Date(centralString);
   };
   const now = getNowCentral();
-  const slides = cfg.slides
-    .filter((s) => {
-      const a = parseDate(s.start),
-        b = parseDate(s.end);
-      return (!a || now >= a) && (!b || now <= b);
-    })
-    .slice(0, 5);
+  const slides = cfg.slides.filter((s) => {
+    const a = parseDate(s.start),
+      b = parseDate(s.end);
+    return (!a || now >= a) && (!b || now <= b);
+  });
   const root = document.getElementById('ubs-gallery');
 
   slides.forEach((s, i) => {

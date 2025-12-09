@@ -36,7 +36,7 @@ const getRemainingTime = () => {
   const t = futureTime - now;
   if (t < 0) {
     clearInterval(countdown);
-    saleCode.innerHTML = `<span>online code:</span> <span class="code">2025</span>`;
+    saleCode.innerHTML = `<span>online code:</span> <span class="code">2SFS5</span>`;
   }
 };
 

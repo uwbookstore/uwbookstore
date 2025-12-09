@@ -839,6 +839,17 @@ div.subHeader {
             font-size: rem(50);
           }
           font-size: rem(40);
+
+          a {
+            color: inherit;
+            text-decoration: underline;
+            opacity: 1;
+            transition: var(--transition);
+
+            &:hover {
+              opacity: 0.7;
+            }
+          }
         }
       }
 
@@ -851,6 +862,10 @@ div.subHeader {
         h2 {
           font-size: rem(35);
           color: var(--bs-primary);
+        }
+
+        img {
+          max-width: rem(150);
         }
       }
     }

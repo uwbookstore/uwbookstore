@@ -7,12 +7,12 @@
 }
 
 .tech-block,
-.graphite {
+.service {
   padding: 0 0 rem(30) 0;
 }
 
 .tech-signup,
-.graphite {
+.service {
   padding: rem(60) 0;
 }
 
@@ -34,10 +34,7 @@
   }
 }
 
-.graphite {
-  .mainP {
-    font-weight: 700;
-    font-size: rem(24);
-    margin-block-start: rem(20);
-  }
+.service {
+  max-width: rem(800);
+  margin-inline: auto;
 }

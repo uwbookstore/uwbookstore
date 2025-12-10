@@ -26,7 +26,8 @@ const countdownWrapper = document.querySelector('.countdown__wrapper');
 const items = document.querySelectorAll('.timer__box p');
 
 // const centralTarget = new Date('2025-12-14T10:00:00');
-const targetInCentral = new Date(Date.UTC(2025, 11, 11, 6, 0, 0));
+const targetInCentral = new Date(Date.UTC(2025, 11, 12, 5, 59, 59));
+console.log(targetInCentral);
 const futureTime = targetInCentral.getTime();
 
 const saleCode = document.getElementById('fac-sale-code');
@@ -36,7 +37,7 @@ const getRemainingTime = () => {
   const t = futureTime - now;
   if (t < 0) {
     clearInterval(countdown);
-    saleCode.innerHTML = `<span>online code:</span> <span class="code">2SFS5</span>`;
+    saleCode.innerHTML = `<span>Sale has ended</span>`;
   }
 };
 

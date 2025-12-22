@@ -644,7 +644,7 @@ if (textPhoneButton) {
 const retPolicy = document.querySelector('.retPolicy');
 if (retPolicy) {
   retPolicy.innerHTML = `
-    You may return your textbooks with a receipt for a full refund through Wednesday, September 10<sup>th</sup> (2025 Fall Semester), and through Tuesday, January 27<sup>th</sup> (2026 Spring Semester).
+    You may return your textbooks with a receipt for a full refund through Wednesday, September 10<sup>th</sup> (2025 Fall Semester), and through Monday January 19<sup>th</sup> for Law School books &amp; Tuesday, January 27<sup>th</sup> for all other books (2026 Spring Semester).
   `;
 }
 

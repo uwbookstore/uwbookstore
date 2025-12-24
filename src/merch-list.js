@@ -258,13 +258,13 @@ if (!noListItems) {
   }
 
   // FOR CAP & GOWN PACKAGES
-  if (categoryTitle.textContent.toLowerCase() === 'cap & gown packages') {
-    pageBanner.classList.add('alert', 'alert-danger', 'text-center');
-    pageBanner.innerHTML = `
-        <p class="mb-0"><strong>RENT IN-STORE @ 711 STATE STREET IN PERSON ONLY. ONLINE ORDERS ARE CLOSED.</strong></p>
-      `;
-    merchFilterWrap.after(pageBanner);
-  }
+  // if (categoryTitle.textContent.toLowerCase() === 'cap & gown packages') {
+  //   pageBanner.classList.add('alert', 'alert-danger', 'text-center');
+  //   pageBanner.innerHTML = `
+  //       <p class="mb-0"><strong>RENT IN-STORE @ 711 STATE STREET IN PERSON ONLY. ONLINE ORDERS ARE CLOSED.</strong></p>
+  //     `;
+  //   merchFilterWrap.after(pageBanner);
+  // }
 
   // FOR AM FAM CHAMPIONSHIP ITEMS
   if (categoryTitle.textContent.toLowerCase().substring(0, 6) === 'am fam') {

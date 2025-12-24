@@ -75,7 +75,8 @@
         const header = document.createElement('li');
         header.innerHTML =
           location === 'stateSt'
-            ? `<strong>STORE HOURS<br><span class="red">Campus Shipping Center closes &frac12; hour before the store closes.</span></strong>`
+            ? `<strong>STORE HOURS<br><span class="red">Campus Shipping Center closes &frac12; hour before the store closes.<br>
+            IKEA pick-up hours are 10:00 a.m. – 5:00 p.m.</span></strong>`
             : `<strong>STORE HOURS</strong>`;
         hoursUL.appendChild(header);
         storeContainer.appendChild(hoursUL);

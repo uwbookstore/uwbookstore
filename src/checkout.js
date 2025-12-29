@@ -37,7 +37,7 @@ $('#shippingMethod-select option:contains("GC Next Day est. $30.00")').text(
 );
 
 $(document).on('ajaxComplete', function (e, t) {
-  null != t.responseJSON.showAddress &&
+  (null != t.responseJSON.showAddress &&
     !0 === t.responseJSON.showAddress &&
     ($('label[for="coShipStudentNumber"]').text(
       'Student ID or 10 digit phone number*'
@@ -62,7 +62,7 @@ $(document).on('ajaxComplete', function (e, t) {
           scrollTop: $('.coPaymentCard').offset().top - 10,
         },
         200
-      );
+      ));
 });
 $(document).ready(function () {
   // Shipping Name
@@ -136,10 +136,6 @@ $(document).ready(function () {
         '<div class="alert alert-danger">*$1.28 flat rate ground shipping to a contiguous U.S. delivery address. Excludes Lands\' End items, textbooks, all StandardChair of Gardner products, custom orders, tech items, and drop-ship items. <strong>Orders with any excluded items will be charged the full standard shipping fee.</strong> All items with a handling charge will receive $1.28 ground shipping but handling charge will still be applied.</div>';
         break;
       case '970':
-      case '1626':
-        message =
-          '<div id="shipDisclaimer" class="alert alert-danger">Please note: Pickup at Brookfield location can take up to 7 days.  Please click on the Shipping Policy above for details.</div>';
-        break;
       case '1957':
         message =
           '<div id="shipDisclaimer" class="alert alert-danger"><strong>CONTACTLESS PICK-UP AVAILABLE</strong><br>Park in front of sandwich board in front of store.<br>Call 310-5976 when you arrive.</div>';

@@ -21,7 +21,17 @@ $(document).ready(function () {
       .parent()
       .addClass('hide-btn');
     $(
-      '<div class="alert alert-danger mb-15"><p>This course is participating in the University\'s Engage eText Program. The course\'s textbook and other required materials (e.g., homework or lab software) will be delivered digitally via an online eText tool. The eText and materials have already been pre-purchased for all students enrolled in the course, and the charges will appear on each student\'s tuition bill. Students who decide to opt out of using the digital materials will not be charged and will need to purchase the required text(s) elsewhere.</p><p>This loose leaf copy of the course\'s textbook is only available for students who have not opted out and wish to have a printed version of the text in addition to the digital version. Proof of enrollment in the course is required</p><label><input id="unizen-confirm" type="checkbox" value="" style="margin-inline-end: 1rem">I understand that proof of enrollment in the course is required and must present my student ID at the time of order pickup to validate my enrollment status.</label></div>'
+      `
+      <div class="alert alert-danger mb-15">
+        <p>
+          This course is participating in the University's Engage eText Program. The course's textbook and other required materials (e.g., homework or lab software) will be delivered digitally via an online eText tool. The eText and materials have already been pre-purchased for all students enrolled in the course, and the charges will appear on each student's tuition bill. Students who decide to opt out of using the digital materials will not be charged and will need to purchase the required text(s) elsewhere.</p>
+        <p>
+          This loose leaf copy of the course's textbook is only available for students who have not opted out and wish to have a printed version of the text in addition to the digital version. Proof of enrollment in the course is required.
+        </p>
+        <label><input id="unizen-confirm" type="checkbox" value="" style="margin-inline-end: 1rem">
+          I understand that proof of enrollment in the course is required and must present my student ID at the time of order pickup to validate my enrollment status.
+        </label>
+      </div>`
     ).insertBefore($('h1.page_header').parent());
 
     $('.hide-btn .col-lg-10 .price-div button.add_cart').hide();
@@ -60,10 +70,10 @@ $(document).ready(function () {
             <div class="alert alert-info p-2">
               <p>Textbook requirements have not yet been determined for this course.If your instructor decides not to require any materials, this course will not be processed.</p>
             </div>
-            <div class="alert alert-info p-2">
+            <!-- <div class="alert alert-info p-2">
               <p><em>Your professor has not provided the store a list of materials for this course. This page will be updated if we receive information. Please check back.</em></p>
               <p class="center">If you've received a syllabus from your professor indicating there is a required book or required materials, send a screenshot (must be legible) of your syllabus to Amber, <a href="mailto:textbooks@uwbookstore.com">textbooks@uwbookstore.com</a>.  Be the first person to do so and receive a free Book Store t-shirt!<br>If your instructor decides not to require any materials, this course will not be processed.</p>
-            </div>
+            </div> -->
           `);
       $(this)
         .find('.No_Material_Course_Text_Req')
@@ -73,10 +83,10 @@ $(document).ready(function () {
         .find('.No_Material_Course_Text')
         .html(
           `
-          <div class="alert alert-info p-2">
+          <!-- <div class="alert alert-info p-2">
             <p><em>Your professor has not provided the store a list of materials for this course. This page will be updated if we receive information. Please check back.</em></p>
             <p class="center">If you've received a syllabus from your professor indicating there is a required book or required materials, send a screenshot (must be legible) of your syllabus to Amber, <a href="mailto:textbooks@uwbookstore.com">textbooks@uwbookstore.com</a>.  Be the first person to do so and receive a free Book Store t-shirt!<br>If your instructor decides not to require any materials, this course will not be processed.</p>
-          </div>
+          </div> -->
           `
         );
 

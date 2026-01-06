@@ -78,6 +78,11 @@ p {
   margin-block-end: rem(20);
   text-rendering: optimizeLegibility;
   line-height: 1.5;
+
+  &:has(+ ol),
+  &:has(+ ul) {
+    margin-block-end: rem(5);
+  }
 }
 
 a {

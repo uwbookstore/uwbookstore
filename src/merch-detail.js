@@ -370,7 +370,7 @@ if (merchDisclaimer) {
 // }
 
 infoBlock.innerHTML = `
-  <h3 class="merch__detail-title-small">The Details</h3>
+  <!-- <h3 class="merch__detail-title-small">The Details</h3> -->
   ${description}
   <div id="merch-sku" class="merch__detail-sku">
   <strong>Item:</strong> ${prodSku}

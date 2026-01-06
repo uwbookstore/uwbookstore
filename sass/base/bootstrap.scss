@@ -47,3 +47,9 @@ select.form-control {
     height: rem(40);
   }
 }
+
+.modal {
+  &-dialog {
+    --bs-modal-width: #{rem(700)};
+  }
+}

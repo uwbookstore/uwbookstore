@@ -144,6 +144,12 @@ if (!noListItems) {
   ) {
     categoryTitle.innerHTML = 'Passcases, Wallets, &amp; Keychains';
     document.title = 'Passcases, Wallets, &amp; Keychains';
+  } else if (
+    categoryTitle.textContent.toLowerCase().substring(0, 23) ===
+    'journalism & mass comm'
+  ) {
+    categoryTitle.innerHTML = 'School of Journalism and Mass Communication';
+    document.title = 'School of Journalism and Mass Communication';
   }
 
   // HIDE SEARCHCATWRAP PARENT

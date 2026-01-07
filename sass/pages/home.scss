@@ -63,8 +63,8 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: rem(20);
-  margin-block: rem(30);
-  padding-block-end: rem(10);
+  margin-block-start: rem(20);
+  padding-block: rem(10) 0;
   overflow-x: scroll;
 
   &::-webkit-scrollbar {
@@ -93,7 +93,6 @@
   @include breakpoint(menu) {
     justify-content: center;
     gap: rem(10);
-    padding-block-end: 0;
     padding-inline: rem(20);
   }
 

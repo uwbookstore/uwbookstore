@@ -322,7 +322,7 @@ if (merchDisclaimer) {
   // LANDS' END DISCLAIMER
   else if (document.getElementById('landsEndReally')) {
     disclaimerSpan.innerHTML = `
-      <strong>PLEASE READ BEFORE PURCHASE! — DEADLINE FOR LANDS' END CUSTOM HOLIDAY ORDERS HAS PASSED. ORDERS PLACED NOW WILL ARRIVE AFTER CHRISTMAS - Lands&apos; End may take 10-15 business days (M-F) to ship. Lands&rsquo; End orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>
+      <strong>PLEASE READ BEFORE PURCHASE! — Lands&apos; End may take 10-15 business days (M-F) to ship. Lands&rsquo; End orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>
     `;
     disclaimerLabel.appendChild(disclaimerSpan);
   }
@@ -336,7 +336,7 @@ if (merchDisclaimer) {
   // CDI DROPSHIP DISCLAIMER
   else if (document.getElementById('cdiDrop')) {
     disclaimerSpan.innerHTML = `
-      <strong>PLEASE READ BEFORE PURCHASE! DEADLINE FOR CDI CUSTOM ORDERS IS DEC. 15, NOON (CST) &ndash; Custom orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>
+      <strong>PLEASE READ BEFORE PURCHASE! Custom orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>
     `;
     disclaimerLabel.appendChild(disclaimerSpan);
   }

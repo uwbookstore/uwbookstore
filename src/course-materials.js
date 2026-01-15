@@ -83,6 +83,9 @@ $(document).ready(function () {
         .find('.No_Material_Course_Text')
         .html(
           `
+          <div class="alert alert-info p-2">
+              <p>Textbook requirements have not yet been determined for this course.If your instructor decides not to require any materials, this course will not be processed.</p>
+            </div>
           <!-- <div class="alert alert-info p-2">
             <p><em>Your professor has not provided the store a list of materials for this course. This page will be updated if we receive information. Please check back.</em></p>
             <p class="center">If you've received a syllabus from your professor indicating there is a required book or required materials, send a screenshot (must be legible) of your syllabus to Amber, <a href="mailto:textbooks@uwbookstore.com">textbooks@uwbookstore.com</a>.  Be the first person to do so and receive a free Book Store t-shirt!<br>If your instructor decides not to require any materials, this course will not be processed.</p>

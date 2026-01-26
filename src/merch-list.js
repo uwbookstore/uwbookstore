@@ -150,6 +150,11 @@ if (!noListItems) {
   ) {
     categoryTitle.innerHTML = 'School of Journalism and Mass Communication';
     document.title = 'School of Journalism and Mass Communication';
+  } else if (
+    categoryTitle.textContent.toLowerCase().substring(0, 11) === 'white items'
+  ) {
+    categoryTitle.innerHTML = 'White Wisconsin Gear &amp; Clothing';
+    document.title = 'White Wisconsin Gear & Clothing';
   }
 
   // HIDE SEARCHCATWRAP PARENT
@@ -193,7 +198,7 @@ if (!noListItems) {
     if (image.getAttribute('src') === '/images/notavail.gif') {
       image.setAttribute(
         'src',
-        'https://i.univbkstr.com/v3/img/misc/no-image-sm.jpg'
+        'https://i.univbkstr.com/v3/img/misc/no-image-sm.jpg',
       );
       image.setAttribute('alt', 'Image not available');
     }

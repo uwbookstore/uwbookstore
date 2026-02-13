@@ -8,7 +8,8 @@
 
   &__shop {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: rem(10);
   }
@@ -22,7 +23,7 @@
     }
 
     &__shop {
-      flex-direction: column;
+      // flex-direction: column;
       gap: rem(30);
     }
   }

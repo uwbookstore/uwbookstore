@@ -257,6 +257,18 @@ if (!noListItems) {
     merchFilterWrap.after(pageBanner);
   }
 
+  // FOR CLEAR BAGS
+  if (
+    categoryTitle.textContent.toLowerCase().substring(0, 10) === 'clear bags'
+  ) {
+    pageBanner.innerHTML = `
+      <div class="alert alert-info" style="text-align: center; margin-inline: auto; max-width: 650px; text-wrap: balance;">
+        UW Carry-In Policy: One small clutch (6.5&Prime; &times; 4.5&Prime;) and one large clear bag per attendee. Large bag must be either a 1-gallon clear storage bag or a 12&Prime; &times; 6&Prime; &times; 12&Prime; clear tote. <a href="https://commencement.wisc.edu/commencement-day/carry-in-policy/" target="_blank">View current UW policy &raquo;</a>
+      </div>    
+    `;
+    merchFilterWrap.after(pageBanner);
+  }
+
   // FOR NEW ARRIVALS
   if (categoryTitle.textContent.toLowerCase() === 'new arrivals') {
     pageBanner.classList.add('text-center');

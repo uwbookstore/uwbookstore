@@ -73,17 +73,13 @@
         hoursUL = document.createElement('ul');
         hoursUL.className = 'hours';
         const header = document.createElement('li');
-        header.innerHTML =
-          location === 'stateSt'
-            ? `<strong>STORE HOURS<br><span class="red">Campus Shipping Center closes &frac12; hour before the store closes.<br>
-            IKEA pick-up hours are 10:00 a.m. – 5:00 p.m.</span></strong>`
-            : `<strong>STORE HOURS</strong>`;
+        header.innerHTML = `<strong>STORE HOURS</strong>`;
         hoursUL.appendChild(header);
         storeContainer.appendChild(hoursUL);
       } else {
         // remove old list items (keep header)
         [...hoursUL.querySelectorAll('li:not(:first-child)')].forEach((li) =>
-          li.remove()
+          li.remove(),
         );
       }
 
@@ -135,11 +131,11 @@
             });
             const openStr = convertToStandardTime(
               openTime?.hours,
-              openTime?.minutes
+              openTime?.minutes,
             );
             const closeStr = convertToStandardTime(
               closeTime?.hours,
-              closeTime?.minutes
+              closeTime?.minutes,
             );
             const li = document.createElement('li');
             const showHours =
@@ -158,7 +154,7 @@
             }
 
             specUL.appendChild(li);
-          }
+          },
         );
 
         alert.appendChild(p);
@@ -238,14 +234,14 @@
               // find which weekday name tomorrow is, and the period for that day
               const tomorrowWeekdayName = WEEKDAYS[tomorrowDate.getDay()];
               const tomorrowPeriod = periods.find(
-                (p) => p.openDay === tomorrowWeekdayName
+                (p) => p.openDay === tomorrowWeekdayName,
               );
               tOpenTime = tomorrowPeriod?.openTime;
             }
 
             const tOpenStr = convertToStandardTime(
               tOpenTime?.hours,
-              tOpenTime?.minutes
+              tOpenTime?.minutes,
             );
             li.className = 'closed';
             li.innerHTML = `<span class="hours__day">${openDay}</span><span class="hours__times">${showHours} - Opens tomorrow at ${tOpenStr}</span>`;

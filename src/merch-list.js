@@ -73,7 +73,7 @@ else if (
           <div class="row">
             <div class="col-sm-12 col-md-6 mb-2">
               <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Mens/Best-Sellers">
-                <img src="https://i.univbkstr.com/v3/img/pages/newArrivals/letsGo.jpg" alt=""
+                <img src="https://i.univbkstr.com/img/pages/newArrivals/letsGo.jpg" alt=""
                   class="img-fluid d-block mb-2">
               </a>
               <div class="text-center">
@@ -84,7 +84,7 @@ else if (
             </div>
             <div class="col-sm-12 col-md-6 mb-2">
               <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Womens/Best-Sellers">
-                <img src="https://i.univbkstr.com/v3/img/pages/newArrivals/badgers.jpg" alt=""
+                <img src="https://i.univbkstr.com/img/pages/newArrivals/badgers.jpg" alt=""
                   class="img-fluid d-block mb-2">
               </a>
               <div class="text-center">
@@ -198,7 +198,7 @@ if (!noListItems) {
     if (image.getAttribute('src') === '/images/notavail.gif') {
       image.setAttribute(
         'src',
-        'https://i.univbkstr.com/v3/img/misc/no-image-sm.jpg',
+        'https://i.univbkstr.com/img/misc/no-image-sm.jpg',
       );
       image.setAttribute('alt', 'Image not available');
     }
@@ -296,7 +296,7 @@ if (!noListItems) {
         <h2 class="mb-1">Thanks for supporting the American Family Championship.</h2>
         <p class="mb-0">All of the products have been packed up for the event!<br>Come see us at TPC Wisconsin June 6-8.</p>
       </div>
-      <img src="https://i.univbkstr.com/v3/img/landing/merch/AmFamGolf.png" class="img-fluid img__center d-block" alt="AmFam Championship. Official Merchandise Partner of the American Family Insurance Championship.">   
+      <img src="https://i.univbkstr.com/img/landing/merch/AmFamGolf.png" class="img-fluid img__center d-block" alt="AmFam Championship. Official Merchandise Partner of the American Family Insurance Championship.">   
     `;
     filterColumn.after(pageBanner);
   }
@@ -306,19 +306,40 @@ if (!noListItems) {
     categoryTitle.textContent.toLowerCase().substring(0, 10) === 'julia gash'
   ) {
     pageBanner.innerHTML = `
-      <img alt="Julia Gash" src="https://i.univbkstr.com/v3/img/banners/JuliaGash.png" class="img-fluid img__center d-block">
+      <img alt="Julia Gash" src="https://i.univbkstr.com/img/banners/JuliaGash.png" class="img-fluid img__center d-block">
     `;
     filterColumn.after(pageBanner);
   }
 
   // FOR SHOP BY BRAND - APPLE
   if (categoryTitle.textContent.toLowerCase().substring(0, 5) === 'apple') {
+    pageBanner.classList.add('p-0');
     pageBanner.innerHTML = `
       <picture>
         <source media="(min-width: 28.125em)"
-          srcset="https://i.univbkstr.com/v3/img/banners/appleBanner.jpg" width="1320"
+          srcset="https://i.univbkstr.com/img/banners/appleBanner.jpg" width="1320"
           height="200">
-        <img alt="Apple Authorized Campus Store" src="https://i.univbkstr.com/v3/img/banners/appleBanner-sm.jpg"
+        <img alt="Apple Authorized Campus Store" src="https://i.univbkstr.com/img/banners/appleBanner-sm.jpg"
+          class="img-fluid img__center d-block mb-2" loading="lazy" width="450" height="200">
+      </picture>
+    `;
+    filterColumn.after(pageBanner);
+  }
+
+  // FOR SHOP BY BRAND - APPLE
+  if (
+    categoryTitle.textContent.toLowerCase().substring(0, 12) ===
+      "men's hockey" ||
+    categoryTitle.textContent.toLowerCase().substring(0, 14) ===
+      "women's hockey"
+  ) {
+    pageBanner.classList.add('p-0');
+    pageBanner.innerHTML = `
+      <picture>
+        <source media="(min-width: 28.125em)"
+          srcset="https://i.univbkstr.com/img/banners/hockey.jpg" width="1320"
+          height="200">
+        <img alt="Apple Authorized Campus Store" src="https://i.univbkstr.com/img/banners/hockey-sm.jpg"
           class="img-fluid img__center d-block mb-2" loading="lazy" width="450" height="200">
       </picture>
     `;

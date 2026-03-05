@@ -280,6 +280,26 @@ if (!noListItems) {
     merchFilterWrap.after(pageBanner);
   }
 
+  const urlParam = (name) => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(name) || 0;
+  };
+
+  if (urlParam('id') === 'wmaa') {
+    pageBanner.classList.add('p-0');
+    pageBanner.innerHTML = `
+      <picture>
+        <source media="(min-width: 28.125em)"
+          srcset="https://i.univbkstr.com/img/banners/smphCoupon.jpg" width="1320"
+          height="200">
+        <img alt="" role="presentation" src="https://i.univbkstr.com/img/banners/smphCoupon-sm.jpg"
+          class="img-fluid img__center d-block mb-2" loading="lazy" width="450" height="200">
+      </picture>
+      <span class="sr-only"> Use code SMPH6 Online or in-store (State Street, Hilldale, or Health Sciences) for 20% off one gift or clothing item - Visit <a href="https://www.uwbookstore.com/disclaimer">uwbookstore.com/disclaimer</a> for exclusions. Expires 08.01.26</span>
+    `;
+    merchFilterWrap.after(pageBanner);
+  }
+
   // FOR CAP & GOWN PACKAGES
   // if (categoryTitle.textContent.toLowerCase() === 'cap & gown packages') {
   //   pageBanner.classList.add('alert', 'alert-danger', 'text-center');

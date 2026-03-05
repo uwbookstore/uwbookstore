@@ -342,3 +342,113 @@
     }
   }
 }
+
+.fadeout-horizontal {
+  @include breakpoint(small) {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black rem(80),
+      black calc(100% - rem(80)),
+      transparent
+    );
+  }
+}
+
+.marquee {
+  &-container {
+    background: var(--bs-gray-300);
+    padding: rem(10);
+    margin-block-end: rem(30);
+    text-decoration: none;
+    color: var(--bs-gray-800);
+    font-weight: 600;
+    font-size: rem(20);
+
+    @include breakpoint(small) {
+      padding-block: rem(30);
+      padding-inline: 0;
+      font-size: rem(24);
+    }
+  }
+
+  &-content {
+    &-track {
+      text-align: center;
+
+      .clone {
+        display: none;
+      }
+
+      a {
+        color: inherit;
+        sup {
+          font-size: rem(12);
+          color: var(--bs-secondary);
+        }
+
+        span {
+          color: var(--bs-primary);
+          font-size: rem(16);
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      svg {
+        display: none;
+      }
+
+      @include breakpoint(small) {
+        display: flex;
+        gap: rem(48);
+        padding-inline-start: rem(48);
+        width: max-content;
+
+        .clone {
+          display: block;
+        }
+
+        svg {
+          display: inline;
+          height: rem(20);
+          width: rem(20);
+          fill: var(--bs-primary);
+          stroke: var(--bs-primary);
+          margin-inline-start: rem(40);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+          animation: marquee-move-text 15s linear infinite;
+        }
+
+        &-reverse {
+          @media (prefers-reduced-motion: no-preference) {
+            animation-direction: reverse;
+          }
+        }
+      }
+    }
+
+    @include breakpoint(small) {
+      &:hover {
+        .marquee-content-track {
+          animation-play-state: paused;
+        }
+      }
+      overflow: clip;
+
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes marquee-move-text {
+  to {
+    transform: translateX(-50%);
+  }
+}

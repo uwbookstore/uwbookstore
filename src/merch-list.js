@@ -120,6 +120,12 @@ if (!noListItems) {
     categoryTitle.textContent = 'Department of Computer Science';
     document.title = 'Department of Computer Science';
   } else if (
+    categoryTitle.textContent.toLowerCase().substring(0, 25) ===
+    'school of medicine and ph'
+  ) {
+    categoryTitle.textContent = 'School of Medicine and Public Health';
+    document.title = 'School of Medicine and Public Health';
+  } else if (
     categoryTitle.textContent.toLowerCase().substring(0, 18) ===
     'college of l and s'
   ) {

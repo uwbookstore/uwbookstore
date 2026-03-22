@@ -353,24 +353,24 @@ if (!noListItems) {
   }
 
   // FOR SHOP BY BRAND - APPLE
-  if (
-    categoryTitle.textContent.toLowerCase().substring(0, 12) ===
-      "men's hockey" ||
-    categoryTitle.textContent.toLowerCase().substring(0, 14) ===
-      "women's hockey"
-  ) {
-    pageBanner.classList.add('p-0');
-    pageBanner.innerHTML = `
-      <picture>
-        <source media="(min-width: 28.125em)"
-          srcset="https://i.univbkstr.com/img/banners/hockey.jpg" width="1320"
-          height="200">
-        <img alt="Apple Authorized Campus Store" src="https://i.univbkstr.com/img/banners/hockey-sm.jpg"
-          class="img-fluid img__center d-block mb-2" loading="lazy" width="450" height="200">
-      </picture>
-    `;
-    filterColumn.after(pageBanner);
-  }
+  // if (
+  //   categoryTitle.textContent.toLowerCase().substring(0, 12) ===
+  //     "men's hockey" ||
+  //   categoryTitle.textContent.toLowerCase().substring(0, 14) ===
+  //     "women's hockey"
+  // ) {
+  //   pageBanner.classList.add('p-0');
+  //   pageBanner.innerHTML = `
+  //     <picture>
+  //       <source media="(min-width: 28.125em)"
+  //         srcset="https://i.univbkstr.com/img/banners/hockey.jpg" width="1320"
+  //         height="200">
+  //       <img alt="Apple Authorized Campus Store" src="https://i.univbkstr.com/img/banners/hockey-sm.jpg"
+  //         class="img-fluid img__center d-block mb-2" loading="lazy" width="450" height="200">
+  //     </picture>
+  //   `;
+  //   filterColumn.after(pageBanner);
+  // }
 
   // SPECIAL PRICING NOTE FOR ELECTRONICS
   if (categoryTitle.textContent.toLowerCase().substring(0, 4) === 'ipad') {

@@ -128,7 +128,7 @@ if (shipsubmitBtn) {
 
 const studentIDText = document.getElementById('studentIDText');
 const billingstudentNumberWrapper = document.getElementById(
-  'billingstudentNumberWrapper'
+  'billingstudentNumberWrapper',
 );
 if (studentIDText) {
   studentIDText.classList.add('alert', 'alert-danger', 'bold');
@@ -150,7 +150,7 @@ const custStudID = document.getElementById('custStudentID');
 if (custStudID) {
   custStudID.setAttribute(
     'placeholder',
-    '10 digit phone number or UW Student ID *'
+    '10 digit phone number or UW Student ID *',
   );
 }
 
@@ -244,14 +244,14 @@ if (myNavbar.textContent.toLowerCase().includes('login')) {
 // Lost password form rewrite
 // Rewrite DOM - MBS default is ugly
 const lostPasswordPanelHeader = document.getElementById(
-  'lostPasswordPanelHeader'
+  'lostPasswordPanelHeader',
 );
 const lostPasswordPanelBody = document.querySelector('#lostPasswordPanelBody');
 const lostPasswordPanelBodyCol = document.querySelector(
-  '#lostPasswordPanelBody [class^="col"]'
+  '#lostPasswordPanelBody [class^="col"]',
 );
 const lostPasswordPrevLink = document.querySelector(
-  '#lostPasswordPanelBody a.previousLink'
+  '#lostPasswordPanelBody a.previousLink',
 );
 
 if (lostPasswordPanelHeader) {
@@ -331,6 +331,12 @@ if (window.location.href.toLowerCase().search('/shoppingcart') !== -1) {
     document.querySelector('.scHeader').parentElement.parentElement;
   const cartCardLeft = document.getElementById('cart-leftCard');
 
+  // TEMP CART MESSAGE
+  // const paymentOptionsBtn = document.getElementById(
+  //   'cart-continuePayment-wrapper',
+  // );
+  // paymentOptionsBtn.style.display = 'none';
+
   if (document.querySelector('.validation-summary-errors')) {
     document.querySelector('.validation-summary-errors').style.display = 'none';
   }
@@ -343,7 +349,7 @@ if (window.location.href.toLowerCase().search('/shoppingcart') !== -1) {
       if (image.getAttribute('src').includes('/images/notavail.gif')) {
         image.setAttribute(
           'src',
-          'https://i.univbkstr.com/v3/img/misc/no-image-thumb.jpg'
+          'https://i.univbkstr.com/v3/img/misc/no-image-thumb.jpg',
         );
         image.setAttribute('alt', 'Image not available');
       }
@@ -405,7 +411,7 @@ if (window.location.href.toLowerCase().search('/shoppingcart') !== -1) {
 const d = new Date();
 const copyYear = d.getFullYear();
 const footerCopyright = document.querySelector(
-  '.footer__copyright span.copyright'
+  '.footer__copyright span.copyright',
 );
 
 footerCopyright
@@ -544,7 +550,7 @@ $('ul.meganav__tabs-list').each(function () {
   // If the location.hash matches one of the links, use that as the active tab.
   // If no match is found, use the first link as the initial active tab.
   $active = $(
-    $links.filter('[href="' + window.location.hash + '"]')[0] || $links[0]
+    $links.filter('[href="' + window.location.hash + '"]')[0] || $links[0],
   );
   $active.addClass('meganav__tabs--link-active');
 
@@ -626,7 +632,7 @@ if (ssoLoginLink) {
 // FIX TEXTING OPTIONS PAGE
 const textPhoneInput = document.getElementById('textPhone');
 const textPhoneButton = document.querySelector(
-  '#textPhone + input[type="submit"]'
+  '#textPhone + input[type="submit"]',
 );
 const textPhoneLabel = document.querySelector('p.textText');
 if (textPhoneButton) {

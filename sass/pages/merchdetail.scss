@@ -539,3 +539,11 @@ input.merchDisclaimer + span.checkmark {
 .merch__detail-add .merch__detail-qty #merchQTY {
   border-radius: rem(4);
 }
+
+// NEW MBS STUFF UPCOMING
+input.merchDisclaimer + span.checkmark {
+  position: absolute;
+  background-color: #fff;
+  border: rem(1) solid hsl(from var(--bs-black) h s 90%);
+  border-radius: rem(3);
+}

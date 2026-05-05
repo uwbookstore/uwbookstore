@@ -85,6 +85,11 @@ const brands = [
     link: 'Kady-Luxe',
   },
   {
+    name: 'Kokyuo',
+    image: 'kokyuo.png',
+    link: 'Kokuyo',
+  },
+  {
     name: 'Jewelry by Kyle Cavan',
     image: 'kyleCavan.png',
     link: 'Kyle-Cavan',

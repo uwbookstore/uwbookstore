@@ -167,13 +167,13 @@ const logos = document.querySelector('.lcsLogoWrapper');
 const colors = document.querySelector('.lcsColorWrapper');
 const sizes = document.querySelector('.lcsSizeWrapper');
 const sizeOptions = document.querySelectorAll(
-  'button.typeCodeOption span.sizeName'
+  'button.typeCodeOption span.sizeName',
 );
 const logoOptions = document.querySelectorAll(
-  'button.typeCodeOption span.logoName'
+  'button.typeCodeOption span.logoName',
 );
 const colorOptions = document.querySelectorAll(
-  'button.typeCodeOption span.colorName'
+  'button.typeCodeOption span.colorName',
 );
 const singleItem = document.querySelector('span.selectedSize');
 const disclaimerSpan = document.querySelector('span.normal');
@@ -184,7 +184,7 @@ const addGiftError = document.querySelector('p.addGiftError');
 const qtyInput = document.getElementById('merchQTY');
 const addToCartBtn = document.querySelector('a.addToCart.btn.btn-primary');
 const addToCartTypes = document.querySelector(
-  'a.addToCartTypes.btn.btn-primary'
+  'a.addToCartTypes.btn.btn-primary',
 );
 const disco = document.getElementById('disco');
 const tabsHeader = document.querySelector('.tabs-container ul');
@@ -284,13 +284,13 @@ if (prodPrice) {
     const salePrice = prodPrice.textContent.replace(/\$/g, '');
 
     const salePriceHtml = `
-    <span class="original">$${origPrice}</span><span class="sale">$${salePrice}</span>
+    <span class="original"><i class="sr-only">Original Price:</i> $${origPrice}</span><span class="sale"><i class="sr-only">Current Price:</i> $${salePrice}</span>
   `;
 
     priceBlock.insertAdjacentHTML('beforeend', salePriceHtml);
   } else {
     const priceHtml = `
-    <span>${prodPrice.textContent}</span>
+    <span><i class="sr-only">Current Price:</i> ${prodPrice.textContent}</span>
   `;
     priceBlock.insertAdjacentHTML('beforeend', priceHtml);
   }
@@ -873,7 +873,7 @@ if (tabsContainer) {
       switchTab(tabButtons[tabButtons.length - 1]);
     } else {
       switchTab(
-        currentTab.parentElement.previousElementSibling.querySelector('a')
+        currentTab.parentElement.previousElementSibling.querySelector('a'),
       );
     }
   }

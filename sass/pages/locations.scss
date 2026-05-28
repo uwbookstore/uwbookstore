@@ -5,9 +5,16 @@
     flex: rem(24);
     margin-block-end: rem(10);
   }
+}
 
-  ul {
-    padding: 0;
+.location-container {
+  scroll-margin-top: rem(135);
+
+  @media (width >= 689px) {
+    scroll-margin-top: rem(70);
+  }
+  @media (width >= 1024px) {
+    scroll-margin-top: rem(60);
   }
 }
 

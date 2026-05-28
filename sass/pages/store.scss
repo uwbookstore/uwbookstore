@@ -4,13 +4,20 @@
 .page-nav {
   display: flex;
   flex-wrap: wrap;
+  gap: rem(15);
+  background: var(--bs-white);
   list-style: none;
   justify-content: center;
+  margin: 0;
+  padding: 0;
+  margin-block-end: rem(10);
+  padding-block: rem(10);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
   li {
-    flex: 0 0 50%;
-    padding: 0 rem(5);
-    margin-block-end: rem(15);
+    // flex: 0 0 50%;
 
     @include breakpoint(medium) {
       flex: 0 0 auto;

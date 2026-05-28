@@ -67,8 +67,14 @@
   }
 
   &__text {
+    color: inherit;
     font-size: rem(30);
     text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+      color: var(--bs-primary);
+    }
   }
 
   @include breakpoint(medium) {

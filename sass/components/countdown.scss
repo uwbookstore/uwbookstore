@@ -71,6 +71,17 @@
     font-size: rem(30);
     text-transform: uppercase;
 
+    span {
+      font-size: rem(11);
+      display: block;
+      color: var(--bs-primary);
+
+      svg {
+        block-size: rem(16);
+        vertical-align: text-bottom;
+      }
+    }
+
     &:hover {
       text-decoration: none;
       color: var(--bs-primary);

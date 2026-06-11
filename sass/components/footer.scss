@@ -397,7 +397,8 @@
         }
       }
 
-      svg {
+      svg,
+      img {
         display: none;
       }
 
@@ -411,7 +412,8 @@
           display: block;
         }
 
-        svg {
+        svg,
+        img {
           display: inline;
           height: rem(20);
           width: rem(20);

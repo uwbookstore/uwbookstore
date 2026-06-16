@@ -416,7 +416,7 @@ const footerCopyright = document.querySelector(
 
 footerCopyright
   ? (footerCopyright.innerHTML = `
-  &copy; Copyright ${copyYear} University Book Store | <a href="/Privacy" class="privacy" tabindex="0">Privacy Policy</a>
+  &copy; Copyright ${copyYear} University Book Store
 `)
   : null;
 

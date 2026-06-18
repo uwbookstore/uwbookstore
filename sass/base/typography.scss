@@ -422,3 +422,7 @@ $spacers: map.merge(
 .mt--3 {
   margin-block-start: rem(-30);
 }
+
+.prose {
+  max-inline-size: 60ch;
+}

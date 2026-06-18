@@ -336,6 +336,24 @@ if (!noListItems) {
     `;
     filterColumn.after(pageBanner);
   }
+  // https://i.univbkstr.com/downloads/Dell-2026-Student-Rebate-Offer-Promotional.pdf
+
+  // FOR SHOP BY BRAND - DELL
+  if (categoryTitle.textContent.toLowerCase().substring(0, 4) === 'dell') {
+    pageBanner.classList.add('p-0');
+    pageBanner.innerHTML = `
+      <a href="https://i.univbkstr.com/downloads/Dell-2026-Student-Rebate-Offer-Promotional.pdf" target="_blank" title="Click to learn more about the Dell Back-To-College Rebate Offer">
+        <picture>
+          <source media="(min-width: 28.125em)"
+            srcset="https://i.univbkstr.com/img/banners/dellBanner.png" width="1320"
+            height="200">
+          <img alt="Redeem your $100 Rebate with the purchase of any Dell PCs $499+" src="https://i.univbkstr.com/img/banners/dellBanner-sm.png"
+            class="img-fluid img__center d-block mb-2" loading="lazy" width="450" height="200">
+        </picture>
+      </a>
+    `;
+    filterColumn.after(pageBanner);
+  }
 
   // FOR SHOP BY BRAND - APPLE
   if (categoryTitle.textContent.toLowerCase().substring(0, 5) === 'apple') {
@@ -397,6 +415,15 @@ if (!noListItems) {
       categoryTitle.textContent.toLowerCase().substring(0, 16) === 'dell laptop'
     ) {
       pageBanner.innerHTML = `
+        <a href="https://i.univbkstr.com/downloads/Dell-2026-Student-Rebate-Offer-Promotional.pdf" target="_blank" title="Click to learn more about the Dell Back-To-College Rebate Offer">
+          <picture>
+            <source media="(min-width: 28.125em)"
+              srcset="https://i.univbkstr.com/img/banners/dellBanner.png" width="1320"
+              height="200">
+            <img alt="Redeem your $100 Rebate with the purchase of any Dell PCs $499+" src="https://i.univbkstr.com/img/banners/dellBanner-sm.png"
+              class="img-fluid img__center d-block mb-2" loading="lazy" width="450" height="200">
+          </picture>
+        </a>
         <ul class="page-nav"><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops" class="btn btn-primary">All Laptops</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a></li><li><a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Surface-Laptop" class="btn btn-primary">Surface Laptops</a></li></ul>
         <div class="alert alert-info text-center">
           <p class="mb-0"><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p>

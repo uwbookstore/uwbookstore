@@ -873,10 +873,6 @@ div.subHeader {
           font-size: rem(35);
           color: var(--bs-primary);
         }
-
-        img {
-          // max-width: rem(150);
-        }
       }
     }
   }
@@ -1004,6 +1000,11 @@ div.subHeader {
     text-decoration: none;
     opacity: 1;
     transition: var(--transition);
+    color: currentColor;
+
+    p {
+      font-weight: 700;
+    }
 
     span {
       display: inline-block;

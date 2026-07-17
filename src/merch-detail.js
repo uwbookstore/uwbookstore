@@ -81,8 +81,8 @@ const merchMain = `
       <div id="shipping" aria-labelledby="tab-3">
         <h2 class="tabs__header">Shipping &amp; Handling</h2>
         <div class="text-center">
-          <img src="https://i.univbkstr.com/v3/img/misc/usps.png" alt="USPS Logo">
-          <img src="https://i.univbkstr.com/v3/img/misc/ups.png" alt="UPS Logo">
+          <img src="https://i.univbkstr.com/img/misc/usps.png" alt="USPS Logo">
+          <img src="https://i.univbkstr.com/img/misc/ups.png" alt="UPS Logo">
         </div>
         <p><strong>Methods for shipping are:</strong></p>
         <table class="table table-striped">
@@ -245,7 +245,7 @@ if (thumbnails.length > 0) {
   newImg.className = 'merch__detail-img';
 
   if (merchImg?.getAttribute('src') === '/images/notavail.gif') {
-    newImg.src = 'https://i.univbkstr.com/v3/img/misc/no-image.jpg';
+    newImg.src = 'https://i.univbkstr.com/img/misc/no-image.jpg';
     newImg.alt = 'Image not available';
   } else if (merchImg) {
     newImg.src = merchImg.getAttribute('data-high');

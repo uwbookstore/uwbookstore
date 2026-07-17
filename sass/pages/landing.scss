@@ -58,10 +58,10 @@
   gap: rem(10);
   // https://bennettfeely.com/clippy/
   // clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%);
-  // background: url('https://i.univbkstr.com/v3/css/img/jt-bg.jpg') no-repeat top
+  // background: url('https://i.univbkstr.com/v4/css/img/jt-bg.jpg') no-repeat top
   //   center;
   // background-size: cover;
-  // background-image: url(https://i.univbkstr.com/v3/css/img/light_noise_diagonal.png),
+  // background-image: url(https://i.univbkstr.com/v4/css/img/light_noise_diagonal.png),
   //   linear-gradient(
   //     0deg,
   //     var(--bs-primary) 0%,
@@ -99,7 +99,7 @@
 
   &.no-clip {
     clip-path: none;
-    // background: url('https://i.univbkstr.com/v3/css/img/jt-bg.jpg') no-repeat
+    // background: url('https://i.univbkstr.com/v4/css/img/jt-bg.jpg') no-repeat
     //   top center;
     // background-size: cover;
   }

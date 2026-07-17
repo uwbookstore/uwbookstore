@@ -597,3 +597,20 @@ $(document).ready(() => {
     $('ul.pagination, select.merchResultsSelect').hide();
   }
 });
+
+// HIDE ART KIT PRICES FOR SELECT SKUS
+// const discountSKUs = ['2078789', '2055318', '2061829', '2067290', '2078795'];
+
+// // Loop through all product cards
+// document.querySelectorAll('.merch__card-item').forEach((card) => {
+//   // Get the SKU
+//   const sku = card.querySelector('.merchSKU')?.textContent.trim();
+
+//   // If this SKU is in the discount list, hide the price
+//   if (discountSKUs.includes(sku)) {
+//     const price = card.querySelector('.merchPrice');
+//     if (price) {
+//       price.style.display = 'none';
+//     }
+//   }
+// });

@@ -27,7 +27,7 @@ const items = document.querySelectorAll('.timer__box p');
 
 const centralTarget = new Date('2025-11-08T14:30:00');
 const targetInCentral = new Date(
-  centralTarget.toLocaleDateString('en-US', { timeZone: 'America/Chicago' })
+  centralTarget.toLocaleDateString('en-US', { timeZone: 'America/Chicago' }),
 );
 const futureTime = targetInCentral.getTime();
 
@@ -73,14 +73,14 @@ const getRemainingTime = () => {
     clearInterval(countdown);
     countdownWrapper.innerHTML = `
         <div class="countdown__image mr-3">
-          <img src="https://i.univbkstr.com/v3/img/landing/graduation/motionW.png" alt="" role="presentation"
+          <img src="https://i.univbkstr.com/img/landing/graduation/motionW.png" alt="" role="presentation"
             class="img-fluid">
         </div>
 
         <div class="timer__text ml-0">Go Badgers!</div>
 
         <div class="countdown__image ml-3">
-          <img src="https://i.univbkstr.com/v3/img/landing/graduation/motionW.png" alt="" role="presentation"
+          <img src="https://i.univbkstr.com/img/landing/graduation/motionW.png" alt="" role="presentation"
             class="img-fluid">
         </div>
     `;

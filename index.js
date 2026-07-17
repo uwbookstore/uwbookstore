@@ -182,7 +182,7 @@
 //   container.className = 'shop-by-brand-cell';
 //   container.innerHTML = `
 //     <a href="${brand.link}">
-//       <img src="https://i.univbkstr.com/v3/img/logos/brands/${brand.logo}" alt="${brand.text}" class="img-fluid d-block">
+//       <img src="https://i.univbkstr.com/img/logos/brands/${brand.logo}" alt="${brand.text}" class="img-fluid d-block">
 //     </a>
 //   `;
 

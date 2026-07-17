@@ -9,7 +9,7 @@ $(document).ready(function () {
           <div id="merch-info" class="merch__detail-info"></div>
         </div>
       </div>
-    `
+    `,
   ).prependTo('div#ContainDiv');
 
   const prodName = $('.merchTitle').text();
@@ -27,7 +27,7 @@ $(document).ready(function () {
         <div class="flexslider">
           <ul class="slides merch__detail-slides"></ul>
         </div>
-      `
+      `,
     ).appendTo('div#merch-imgs');
     for (let i = 0; i < imgArray; i += 1) {
       $(
@@ -35,7 +35,7 @@ $(document).ready(function () {
           <li id="thumbnail_${i}">
             <img id="fullsize_${i}" alt="" role="presentation" class="merch__detail-img">
           </li>
-        `
+        `,
       ).appendTo('ul.slides');
       $.each(detail, function (j) {
         $('li#thumbnail_' + j).attr('data-thumb', $(this).attr('data-full'));
@@ -50,28 +50,28 @@ $(document).ready(function () {
       // No image available
       $(
         `
-          <img src="https://i.univbkstr.com/v3/img/misc/no-image.jpg" class="merch__detail-img" alt="Image not available">
-        `
+          <img src="https://i.univbkstr.com/img/misc/no-image.jpg" class="merch__detail-img" alt="Image not available">
+        `,
       ).appendTo('div#merch-imgs');
     } else {
       $(
         `
           <img src="${$('img.merchDetailImage').attr('data-high')}" alt="" role="presentation" class="merch__detail-img">
-        `
+        `,
       ).appendTo('div#merch-imgs');
     }
   } // END of imgArray if
 
   // Start Product Details layout
   $(`<h2 class="merch__detail-title">${prodName}</h2>`).appendTo(
-    'div#merch-info'
+    'div#merch-info',
   );
 
   // Price blockk
   const prodPrice = $('span.merchPriceCurrent').text();
   let salePrice = $('span.merchPriceCurrent').text();
   $(`<div id="priceBlock" class="merch__detail-price"></div>`).appendTo(
-    'div#merch-info'
+    'div#merch-info',
   );
 
   if ($('p.salePrice').length > 0) {
@@ -81,18 +81,18 @@ $(document).ready(function () {
     $(
       `
         <span class="original">$${origPrice}</span>
-      `
+      `,
     ).appendTo('div#priceBlock');
     $(
       `
         <span class="sale">$${salePrice}</span>
-      `
+      `,
     ).appendTo('div#priceBlock');
   } else {
     $(
       `
         <span> ${prodPrice}  </span>
-      `
+      `,
     ).appendTo('div#priceBlock');
   } // END of price-block if
 
@@ -112,13 +112,13 @@ $(document).ready(function () {
       <div id="description-block" class="merch__detail-description">
         <h3 class="merch__detail-title-small">The Details</h3>
       </div>
-    `
+    `,
   ).appendTo('div#merch-info');
 
   $(
     `
       <div class="merch__detail-description-open">${description}</div>
-    `
+    `,
   ).appendTo('div#description-block');
   $(noAddCart)
     .addClass('alert alert-warning text-center m5')
@@ -128,7 +128,7 @@ $(document).ready(function () {
       <div class="merch__detail-sku">
         <strong>Item:</strong> ${prodSku}
       </div>
-    `
+    `,
   ).appendTo('div#description-block');
   $('p.gmPromo').appendTo('div#description-block');
 
@@ -143,7 +143,7 @@ $(document).ready(function () {
         <div id="item-disclaimer" class="alert alert-warning">
           <label></label>
         </div>
-      `
+      `,
     ).appendTo('div#merch-info');
 
     if ($('div#kyleCavan').length > 0) {
@@ -154,7 +154,7 @@ $(document).ready(function () {
       $('.normal').html(
         `
           <strong>PLEASE READ BEFORE PURCHASE!</strong> Shipping time takes 10-15 business days (M-F). This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for store pick-up, promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>
-        `
+        `,
       );
       $('div#kyleCavan').hide();
       $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
@@ -166,7 +166,7 @@ $(document).ready(function () {
       $('.normal').html(
         `
           <strong>PLEASE READ BEFORE PURCHASE! — Custom orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>
-        `
+        `,
       );
       $('div#cdiDrop').hide();
       $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
@@ -178,7 +178,7 @@ $(document).ready(function () {
       $('.normal').html(
         `
           <strong>PLEASE READ BEFORE PURCHASE! — Lands&apos; End may take 10-15 business days (M-F) to ship. Lands&rsquo; End orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>
-        `
+        `,
       );
       $('div#landsEndReally').hide();
       $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
@@ -190,7 +190,7 @@ $(document).ready(function () {
       $('.normal').html(
         `
           <strong>PLEASE READ BEFORE PURCHASE! — Lands&rsquo; End items will be charged when order is placed. Your order will be placed with Lands&rsquo; End at the end of the sale. Lands&rsquo; End may take 10-15 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge. By clicking this box, you are agreeing to these terms.</strong>
-        `
+        `,
       );
       $('div#smphLe').hide();
       $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
@@ -202,7 +202,7 @@ $(document).ready(function () {
       $('.normal').html(
         `
           <strong>PLEASE READ BEFORE PURCHASE! — This is a manufacturer direct item. This item ships separately. Please allow 10 business days (M-F) for delivery</strong>. This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms</strong>.
-        `
+        `,
       );
       $('div#jardine').hide();
       $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
@@ -320,10 +320,10 @@ $(document).ready(function () {
         <div id="sizes" class="merch__detail-size">
           <div class="flex merch__detail-size-picker">${sizeArray}</div>
         </div>
-      `
+      `,
     ).appendTo('div#merch-info');
     $('<label class="merch__detail-size-label">Size |</label>').prependTo(
-      'div#sizes'
+      'div#sizes',
     );
   } else if (
     logos.length === 0 &&
@@ -334,36 +334,36 @@ $(document).ready(function () {
 
     if (singleItem === 'xxx-large') {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">3XL</span></div></div>'
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">3XL</span></div></div>',
       ).appendTo('div#merch-info');
     } else if (singleItem === 'newborn 3 month') {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">NB/3M</span></div></div>'
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">NB/3M</span></div></div>',
       ).appendTo('div#merch-info');
     } else if (singleItem === 'large/x-large') {
       $(
-        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">L/XL</span></div></div>'
+        '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected">L/XL</span></div></div>',
       ).appendTo('div#merch-info');
     } else {
       $(
         '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker"><span class="btn btn-default typeSelected btn-w-auto">' +
           singleItem +
-          '</span></div></div>'
+          '</span></div></div>',
       ).appendTo('div#merch-info');
     }
 
     $('<label class="merch__detail-size-label">Size |</label>').prependTo(
-      'div#sizes'
+      'div#sizes',
     );
   } else if (logos.length > 0) {
     const logoArray = logos.html();
     $(
       '<div id="sizes" class="merch__detail-size"><div class="flex merch__detail-size-picker">' +
         logoArray +
-        '</div></div>'
+        '</div></div>',
     ).appendTo('div#merch-info');
     $('<label class="merch__detail-size-label">Size |</label>').prependTo(
-      'div#sizes'
+      'div#sizes',
     );
   } else if (colors.length > 0) {
     const colorArray = colors.html();
@@ -371,10 +371,10 @@ $(document).ready(function () {
     $(
       '<div id="colors" class="merch__detail-color"><div class="flex merch__detail-color-picker">' +
         colorArray +
-        '</div></div>'
+        '</div></div>',
     ).appendTo('div#merch-info');
     $(
-      `<label id="color-label" class="merch__detail-color-label">${colorTitle} </label>`
+      `<label id="color-label" class="merch__detail-color-label">${colorTitle} </label>`,
     ).prependTo('div#colors');
     $('.selectedColor').appendTo('#color-label');
   }
@@ -393,15 +393,15 @@ $(document).ready(function () {
     // Select dropdown...
 
     $(`<div id="sizes" class="merch__detail-size "></div>`).appendTo(
-      'div#merch-info'
+      'div#merch-info',
     );
     $(
-      `<label class="merch__detail-size-label">Make Selection:</label>`
+      `<label class="merch__detail-size-label">Make Selection:</label>`,
     ).appendTo('div#sizes');
 
     $('select.merchDropdown').appendTo('div#sizes').addClass('form-control');
     $(`<div class="flex merch__detail-size-picker"></div>`).appendTo(
-      'div#sizes'
+      'div#sizes',
     );
 
     // $('select.merchDropdown').hide();
@@ -409,151 +409,151 @@ $(document).ready(function () {
   }
 
   $(
-    'p.merchDisclaimerError, p.merchSelectError, p.addGiftErrorLCS, p.addGiftError'
+    'p.merchDisclaimerError, p.merchSelectError, p.addGiftErrorLCS, p.addGiftError',
   ).prependTo('div#sizes');
 
   // Add size charts
 
   if (logos.length > 0 && prodName.substring(0, 13) === 'The Red Shirt') {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/redShirt/" class="merch__detail-size-link gtmSizeTrack" title="The Red Shirt&trade; Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/redShirt/" class="merch__detail-size-link gtmSizeTrack" title="The Red Shirt&trade; Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 8) === 'Champion'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/champion/" class="merch__detail-size-link gtmSizeTrack" title="Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/champion/" class="merch__detail-size-link gtmSizeTrack" title="Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 9) === 'Game Bibs'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/gameBibs/" class="merch__detail-size-link gtmSizeTrack" title="Game Bibs Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/gameBibs/" class="merch__detail-size-link gtmSizeTrack" title="Game Bibs Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 8) === 'Columbia'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/columbia/" class="merch__detail-size-link gtmSizeTrack" title="Columbia Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/columbia/" class="merch__detail-size-link gtmSizeTrack" title="Columbia Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 12) === 'Under Armour'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/ua/" class="merch__detail-size-link gtmSizeTrack" title="Under Armour Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/ua/" class="merch__detail-size-link gtmSizeTrack" title="Under Armour Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 12) === 'Peter Millar'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/peterMillar/" class="merch__detail-size-link gtmSizeTrack" title="Peter Millar Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/peterMillar/" class="merch__detail-size-link gtmSizeTrack" title="Peter Millar Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 7) === 'Blue 84'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/blue84/" class="merch__detail-size-link gtmSizeTrack" title="Blue 84 Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/blue84/" class="merch__detail-size-link gtmSizeTrack" title="Blue 84 Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 13) === 'For Bare Feet'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/fbf/" class="merch__detail-size-link gtmSizeTrack" title="For Bare Feet Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/fbf/" class="merch__detail-size-link gtmSizeTrack" title="For Bare Feet Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 12) === 'College Kids'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/cllgKids/" class="merch__detail-size-link gtmSizeTrack" title="College Kids Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/cllgKids/" class="merch__detail-size-link gtmSizeTrack" title="College Kids Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 13) === '&#39;47 Brand'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/47Brand/" class="merch__detail-size-link gtmSizeTrack" title="&#39;47 Brand Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/47Brand/" class="merch__detail-size-link gtmSizeTrack" title="&#39;47 Brand Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 9) === "'47 Brand"
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/47Brand/" class="merch__detail-size-link gtmSizeTrack" title="&#39;47 Brand Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/47Brand/" class="merch__detail-size-link gtmSizeTrack" title="&#39;47 Brand Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 13) === 'All Star Dogs'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/allStarDog/" class="merch__detail-size-link gtmSizeTrack" title="All Star Dogs Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/allStarDog/" class="merch__detail-size-link gtmSizeTrack" title="All Star Dogs Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 7).toLowerCase() === 'zoozatz'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/zooZatz/" class="merch__detail-size-link gtmSizeTrack" title="ZooZatz Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/zooZatz/" class="merch__detail-size-link gtmSizeTrack" title="ZooZatz Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 10) === 'Boxercraft'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/boxercraft/" class="merch__detail-size-link gtmSizeTrack" title="Boxercraft Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/boxercraft/" class="merch__detail-size-link gtmSizeTrack" title="Boxercraft Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 10) === "Lands' End"
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/landsEnd/" class="merch__detail-size-link gtmSizeTrack" title="Lands\' End Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/landsEnd/" class="merch__detail-size-link gtmSizeTrack" title="Lands\' End Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 6) === 'League'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/league/" class="merch__detail-size-link gtmSizeTrack" title="League Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/league/" class="merch__detail-size-link gtmSizeTrack" title="League Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 7) === 'Vantage'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/vantage/update.html" class="merch__detail-size-link gtmSizeTrack" title="Vantage Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/vantage/update.html" class="merch__detail-size-link gtmSizeTrack" title="Vantage Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 11) === 'Alternative'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/alternativeApparel" class="merch__detail-size-link gtmSizeTrack" title="Alternative Apparel Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/alternativeApparel" class="merch__detail-size-link gtmSizeTrack" title="Alternative Apparel Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
     prodName.substring(0, 30).toLowerCase() === 'little earth wisconsin pet hat'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/littleEarth" class="merch__detail-size-link gtmSizeTrack" title="Little Earth Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/littleEarth" class="merch__detail-size-link gtmSizeTrack" title="Little Earth Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   } else if (
     (prodName.indexOf('Hat') >= 0 || prodName.indexOf('Visor') >= 0) &&
     prodName.substring(0, 6) === 'Legacy'
   ) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/legacy" class="merch__detail-size-link gtmSizeTrack mb-2" style="font-size: 0.875rem; display: inline-block; text-transform: none;" title="Legacy Size Guide">Legacy Hat Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/legacy" class="merch__detail-size-link gtmSizeTrack mb-2" style="font-size: 0.875rem; display: inline-block; text-transform: none;" title="Legacy Size Guide">Legacy Hat Size Guide</a>',
     ).appendTo('div#merch-info');
   } else if (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) {
     $(
-      '<a href="https://i.univbkstr.com/sizeChart/" class="merch__detail-size-link gtmSizeTrack" title="General Size Guide">Size Guide</a>'
+      '<a href="https://i.univbkstr.com/sizeChart/" class="merch__detail-size-link gtmSizeTrack" title="General Size Guide">Size Guide</a>',
     ).insertAfter('.merch__detail-size-label');
   }
 
@@ -565,7 +565,7 @@ $(document).ready(function () {
       <div class="merch__detail-qty">
         <label for="merchQTY" class="sr-only">Quantity: </label>
       </div>
-    `
+    `,
   ).appendTo('.merch__detail-add');
   $(qty).appendTo('.merch__detail-qty');
   $('<div class="merch__detail-add-btn"></div>').appendTo('.merch__detail-add');
@@ -609,11 +609,11 @@ $(document).ready(function () {
           </li>
         </ul>
       </div>
-    `
+    `,
   ).insertAfter('#merch-main');
 
   $(`<div id="tabs__container" class="tabs__container group"></div>`).appendTo(
-    'div.tabs'
+    'div.tabs',
   );
 
   $('div#tabs__container').html(
@@ -667,8 +667,8 @@ $(document).ready(function () {
     <div id="shipping">
       <h2 class="tabs__header">Shipping &amp; Handling</h2>
       <div class="text-center">
-        <img src="https://i.univbkstr.com/v3/img/misc/usps.png" alt="USPS Logo">
-        <img src="https://i.univbkstr.com/v3/img/misc/ups.png" alt="UPS Logo">
+        <img src="https://i.univbkstr.com/img/misc/usps.png" alt="USPS Logo">
+        <img src="https://i.univbkstr.com/img/misc/ups.png" alt="UPS Logo">
       </div>
       <p><strong>Methods for shipping are:</strong></p>
       <table class="table table-striped">
@@ -725,7 +725,7 @@ $(document).ready(function () {
       <p>We are happy to work with customers who have particular shipping needs. Please feel free to <a
           href="https://www.uwbookstore.com/Contact">email</a> us, or call us toll free at 800-993-2665 ext. 5997.</p>
     </div>  
-    `
+    `,
   );
 
   const rating = $('div.merchRank');
@@ -738,7 +738,7 @@ $(document).ready(function () {
             <i class="fa fa-star" aria-hidden="true"></i> Reviews ${rankCount}
           </a>
         </li>
-      `
+      `,
     ).appendTo('ul.tabs__nav');
     $(`<div id="ratings"></div>`).appendTo('.tabs__container');
     $('div#itemRanking').appendTo('#ratings');
@@ -754,7 +754,7 @@ $(document).ready(function () {
             <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Discontinued Item Policy
           </a>
         </li>
-      `
+      `,
     ).prependTo('ul.tabs__nav');
     $(`<div id="disco"></div>`).appendTo('div#tabs__container');
 
@@ -766,12 +766,12 @@ $(document).ready(function () {
          while we check all of our locations for the discontinued item.</span>
       </p>
       <p>If we don't find the item, your order packing slip will show it as &quot;Discontinued&quot; and you will not receive that item.</p>
-      `
+      `,
     );
   }
 
   $(`<i class="close-p fa fa-times"></i>`).appendTo(
-    'p.merchDisclaimerError, p.merchSelectError, p.addGiftErrorLCS, p.addGiftError'
+    'p.merchDisclaimerError, p.merchSelectError, p.addGiftErrorLCS, p.addGiftError',
   );
   $('.close-p').on('click', function () {
     $(this).parent('p').fadeOut();
@@ -788,7 +788,7 @@ $(document).ready(function () {
     // If the location.hash matches one of the links, use that as the active tab.
     // If no match is found, use the first link as the initial active tab.
     $active = $(
-      $links.filter('[href="' + window.location.hash + '"]')[0] || $links[0]
+      $links.filter('[href="' + window.location.hash + '"]')[0] || $links[0],
     );
     $active.addClass('tabs__link-active');
 
@@ -823,7 +823,7 @@ $(document).ready(function () {
       `
         <h2 class="heading__line-center">Other Suggested Items</h2>
         <div id="suggested-grid" class="flex merch__card"></div>
-      `
+      `,
     ).insertBefore('#tabs-header');
     $('.suggestedItem ').each(function (i) {
       $(this)

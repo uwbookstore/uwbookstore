@@ -56,14 +56,14 @@ const getRemainingTime = () => {
     clearInterval(countdown);
     countdownWrapper.innerHTML = `
         <div class="countdown__image mr-3">
-          <img src="https://i.univbkstr.com/v3/img/landing/graduation/motionW.png" alt="" role="presentation"
+          <img src="https://i.univbkstr.com/img/landing/graduation/motionW.png" alt="" role="presentation"
             class="img-fluid">
         </div>
 
         <div class="timer__text ml-0">Congratulations Graduates!</div>
 
         <div class="countdown__image ml-3">
-          <img src="https://i.univbkstr.com/v3/img/landing/graduation/motionW.png" alt="" role="presentation"
+          <img src="https://i.univbkstr.com/img/landing/graduation/motionW.png" alt="" role="presentation"
             class="img-fluid">
         </div>
     `;

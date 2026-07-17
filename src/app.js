@@ -349,7 +349,7 @@ if (window.location.href.toLowerCase().search('/shoppingcart') !== -1) {
       if (image.getAttribute('src').includes('/images/notavail.gif')) {
         image.setAttribute(
           'src',
-          'https://i.univbkstr.com/v3/img/misc/no-image-thumb.jpg',
+          'https://i.univbkstr.com/img/misc/no-image-thumb.jpg',
         );
         image.setAttribute('alt', 'Image not available');
       }
@@ -729,7 +729,7 @@ if (bookSearchParent) {
           <div style="display: flex; flex-flow: row nowrap;" class="mt-2">
             <div class="flex-image">
               <a href="https://text.uwbookstore.com/MerchDetail?MerchID=1904025" style="display: block;">
-                <img src="https://i.univbkstr.com/v3/img/pages/textbooks/blueBook.png" alt="" class="img-fluid mx-2">
+                <img src="https://i.univbkstr.com/img/pages/textbooks/blueBook.png" alt="" class="img-fluid mx-2">
               </a>
             </div>
             <div class="flex-text"

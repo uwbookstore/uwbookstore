@@ -13,6 +13,7 @@
   font-size: inherit;
   transition: all 0.2s ease-in-out;
   border-radius: rem(4);
+  line-height: 1;
 
   @include breakpoint(medium) {
     height: rem(40);

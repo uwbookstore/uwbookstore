@@ -575,6 +575,7 @@ h2.merchTitle {
 .merch-add-submit {
   text-transform: uppercase;
   font-weight: 500;
+  flex: initial;
 }
 
 .merch-qty-step[aria-label='Decrease quantity'],
@@ -593,24 +594,6 @@ h2.merchTitle {
   border-radius: 0 4px 4px 0;
 }
 
-.form-check.mt-3:has(input.form-check-input) {
-  --bs-alert-color: #664d03;
-  --bs-alert-bg: #fff3cd;
-  --bs-alert-border-color: #ffecb5;
-  --bs-alert-padding-x: 1rem;
-  --bs-alert-padding-y: 1rem;
-  --bs-alert-margin-bottom: 1rem;
-  --bs-alert-border: 1px solid var(--bs-alert-border-color);
-  --bs-alert-border-radius: 0.375rem;
-  position: relative;
-  padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
-  margin-bottom: var(--bs-alert-margin-bottom);
-  color: var(--bs-alert-color);
-  background-color: var(--bs-alert-bg);
-  border: var(--bs-alert-border);
-  border-radius: var(--bs-alert-border-radius);
-}
-
 .form-check.mt-3 > input.form-check-input {
   float: none;
   margin-inline-start: 0;
@@ -618,4 +601,37 @@ h2.merchTitle {
 
 .form-check.mt-3 > label {
   display: inline;
+}
+
+.merch-typecode-buttons {
+  button.btn.merch-typecode-option {
+    border-radius: rem(4);
+    border-width: rem(1) !important;
+
+    &:hover,
+    &.typeSelected,
+    &.selected {
+      border-width: rem(1) !important;
+      border-color: var(--bs-primary) !important;
+      color: var(--bs-white);
+      background-color: var(--bs-primary);
+    }
+  }
+}
+
+.merchImage {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 30px;
+    aspect-ratio: 1;
+    right: 32%;
+    top: 170px;
+    border-radius: 4px;
+    padding: 4px;
+    background-color: #fff;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0ic2l6ZS01Ij4KICA8cGF0aCBkPSJNOSA2YS43NS43NSAwIDAgMSAuNzUuNzV2MS41aDEuNWEuNzUuNzUgMCAwIDEgMCAxLjVoLTEuNXYxLjVhLjc1Ljc1IDAgMCAxLTEuNSAwdi0xLjVoLTEuNWEuNzUuNzUgMCAwIDEgMC0xLjVoMS41di0xLjVBLjc1Ljc1IDAgMCAxIDkgNloiIC8+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMiA5YTcgNyAwIDEgMSAxMi40NTIgNC4zOTFsMy4zMjggMy4zMjlhLjc1Ljc1IDAgMSAxLTEuMDYgMS4wNmwtMy4zMjktMy4zMjhBNyA3IDAgMCAxIDIgOVptNy01LjVhNS41IDUuNSAwIDEgMCAwIDExIDUuNSA1LjUgMCAwIDAgMC0xMVoiIGNsaXAtcnVsZT0iZXZlbm9kZCIgLz4KPC9zdmc+Cg==);
+  }
 }

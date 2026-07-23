@@ -1,0 +1,8 @@
+@use '../util/' as *;
+
+// Merch Detail page
+// Hide MBS heading
+.center > h1.page_header.bottom10.displayn,
+.center > h2.page_header.bottom10.displayn {
+  display: none;
+}

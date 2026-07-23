@@ -1,6 +1,4 @@
-// REWRITE MERCHDETAIL PAGE DOM
-// Define variables
-const containDiv = document.getElementById('ContainDiv');
+const mainItemWrapper = document.querySelector('.mainItem');
 
 // Create new wrapper for merchdetail page
 const merchMain = `
@@ -149,11 +147,11 @@ const merchMain = `
 `;
 
 // Prepend new wrapper to ContainDiv element
-containDiv.insertAdjacentHTML('afterbegin', merchMain);
+mainItemWrapper.insertAdjacentHTML('afterend', merchMain);
 
 const merchInfoWrapper = document.getElementById('merch-info');
 const prodName = document.querySelector('.merchTitle')?.textContent || '';
-const prodSku = document.querySelector('p.merchItem span')?.textContent || '';
+const prodSku = document.querySelector('p.merchItem')?.textContent || '';
 const description = document.querySelector('.merchDesc')?.innerHTML || '';
 const noAddCart = document.querySelector('div.hiddenCartText');
 const thumbnails = document.querySelectorAll('a.merchThumbnail');
@@ -161,37 +159,14 @@ const detailImgs = document.querySelectorAll('a.merchThumbnail img');
 const merchImage = document.querySelector('.merchImage');
 const merchDetailImage = document.querySelector('.merchDetailImage');
 const gmPromo = document.querySelector('p.gmPromo');
-const select = document.querySelector('select.merchDropdown');
-const logos = document.querySelector('.lcsLogoWrapper');
-const colors = document.querySelector('.lcsColorWrapper');
-const sizes = document.querySelector('.lcsSizeWrapper');
-const sizeOptions = document.querySelectorAll(
-  'button.typeCodeOption span.sizeName',
-);
-const logoOptions = document.querySelectorAll(
-  'button.typeCodeOption span.logoName',
-);
-const colorOptions = document.querySelectorAll(
-  'button.typeCodeOption span.colorName',
-);
-const singleItem = document.querySelector('span.selectedSize');
-const disclaimerLabel = document.querySelector('label.labelContainer.normal');
-const disclaimerError = document.querySelector('p.merchDisclaimerError');
-const merchSelectError = document.querySelector('p.merchSelectError');
-const addGiftErrorLCS = document.querySelector('p.addGiftErrorLCS');
-const addGiftError = document.querySelector('p.addGiftError');
-const qtyInput = document.getElementById('merchQTY');
-const addToCartBtn = document.querySelector('a.addToCart.btn.btn-primary');
-const addToCartTypes = document.querySelector(
-  'a.addToCartTypes.btn.btn-primary',
-);
-const disco = document.getElementById('disco');
-const tabsHeader = document.querySelector('.tabs-container ul');
-const tabsContent = document.querySelector('.tabs__panels');
+
+const disco = document.querySelector('disco');
+
 const merchSuggested = document.querySelector('.merchSuggested');
 const suggestedItems = document.querySelectorAll('.suggestedItem');
 const itemRanking = document.getElementById('itemRanking');
-const inventoryDisplay = document.querySelector('.inventory-display-wrapper');
+
+const disclaimerError = document.querySelector('p.merchDisclaimerError');
 
 // Check for multiple images
 if (thumbnails.length > 0) {
@@ -245,7 +220,7 @@ if (thumbnails.length > 0) {
   newImg.className = 'merch__detail-img';
 
   if (merchImg?.getAttribute('src') === '/images/notavail.gif') {
-    newImg.src = 'https://i.univbkstr.com/v4/img/misc/no-image.jpg';
+    newImg.src = 'https://i.univbkstr.com/img/misc/no-image.jpg';
     newImg.alt = 'Image not available';
   } else if (merchImg) {
     newImg.src = merchImg.getAttribute('data-high');
@@ -272,7 +247,6 @@ priceBlock.id = 'priceBlock';
 priceBlock.className = 'merch__detail-price';
 
 const prodPrice = document.querySelector('span.merchPriceCurrent');
-
 if (prodPrice) {
   const origPrice = document
     .querySelector('p.merchRegPrice')
@@ -284,14 +258,14 @@ if (prodPrice) {
     const salePrice = prodPrice.textContent.replace(/\$/g, '');
 
     const salePriceHtml = `
-      <span class="original">$${origPrice}</span><span class="sale">$${salePrice}</span>
-    `;
+    <span class="original"><i class="sr-only">Original Price:</i> $${origPrice}</span><span class="sale"><i class="sr-only">Current Price:</i> $${salePrice}</span>
+  `;
 
     priceBlock.insertAdjacentHTML('beforeend', salePriceHtml);
   } else {
     const priceHtml = `
-      <span>${prodPrice.textContent}</span>
-    `;
+    <span><i class="sr-only">Current Price:</i> ${prodPrice.textContent}</span>
+  `;
     priceBlock.insertAdjacentHTML('beforeend', priceHtml);
   }
 }
@@ -302,222 +276,76 @@ infoBlock.id = 'description-block';
 infoBlock.className = 'merch__detail-description';
 
 // HANDLE DISCLAIMERS
-const disclaimerLabelHtml = document.createElement('div');
-const disclaimerSpan = document.createElement('div');
-disclaimerLabelHtml.id = 'item-disclaimer';
-disclaimerLabelHtml.classList.add('alert', 'alert-warning');
+const merchDisclaimerFormCheck = document.querySelector('.form-check.mt-3');
+const merchDisclaimer = document.querySelector('[data-merch-disclaimer]');
+const disclaimerLabel = document.querySelector(
+  '.form-check.mt-3 > label.form-check-label',
+);
+const disclaimerText = document.createElement('span');
 
-disclaimerLabel ? disclaimerLabelHtml.appendChild(disclaimerLabel) : null;
+const merchDisclaimerHtml = document.createElement('div');
+merchDisclaimerHtml.id = 'item-disclaimer';
+merchDisclaimerHtml.classList.add('alert', 'alert-warning');
+
+if (merchDisclaimerFormCheck) {
+  merchDisclaimerFormCheck.classList.remove('mt-3');
+  disclaimerLabel.appendChild(merchDisclaimer);
+  disclaimerLabel.appendChild(disclaimerText);
+  merchDisclaimerHtml.appendChild(disclaimerLabel);
+  merchDisclaimerFormCheck.after(merchDisclaimerHtml);
+
+  // Add needed disclaimer text
+  // IRON JOC DISCLAIMER
+  if (document.getElementById('landsEnd')) {
+    disclaimerText.innerHTML = `
+      <strong>PLEASE READ BEFORE PURCHASE!  Store pick-up orders will incur a $7.50 drop ship charge.</strong> This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>
+    `;
+  }
+  // LANDS' END DISCLAIMER
+  else if (document.getElementById('landsEndReally')) {
+    disclaimerText.innerHTML = `
+      <strong>PLEASE READ BEFORE PURCHASE! — Lands&apos; End may take 10-15 business days (M-F) to ship. Lands&rsquo; End orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>
+    `;
+  } // KYLE CAVAN DISCLAIMER
+  else if (document.getElementById('kyleCavan')) {
+    disclaimerText.innerHTML = `
+      <strong>PLEASE READ BEFORE PURCHASE!</strong> Shipping time takes 10-15 business days (M-F). This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for store pick-up, promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>
+    `;
+  }
+  // CDI DROPSHIP DISCLAIMER
+  else if (document.getElementById('cdiDrop')) {
+    disclaimerText.innerHTML = `
+      <strong>PLEASE READ BEFORE PURCHASE! Custom orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>
+    `;
+  }
+  // SMPH LANDS' END DISCLAIMER
+  else if (document.getElementById('smphLe')) {
+    disclaimerText.innerHTML = `
+      <strong>PLEASE READ BEFORE PURCHASE! — Lands&rsquo; End items will be charged when order is placed. Your order will be placed with Lands&rsquo; End at the end of the sale. Lands&rsquo; End may take 10-15 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge. By clicking this box, you are agreeing to these terms.</strong>
+    `;
+  }
+  // JARDINE DISCLAIMER
+  else if (document.getElementById('jardine')) {
+    disclaimerText.innerHTML = `
+      <strong>PLEASE READ BEFORE PURCHASE! — This is a manufacturer direct item. This item ships separately. Please allow 10 business days (M-F) for delivery</strong>. This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms</strong>.
+    `;
+  }
+  // DEFAULT DISCLAIMER
+  else {
+    console.log('Why is this showing on a lands end item?');
+    // disclaimerText.innerHTML = disclaimerLabel.textContent;
+    // TODO: Move input to front of text
+  }
+}
 
 infoBlock.innerHTML = `
-  <!-- <h3 class="merch__detail-title-small">The Details</h3> -->
+  <h3 class="merch__detail-title-small">The Details</h3>
   ${description}
   <div id="merch-sku" class="merch__detail-sku">
   <strong>Item:</strong> ${prodSku}
   </div>
 `;
-
-if (gmPromo) {
-  infoBlock.appendChild(gmPromo);
-  const promoTxt = gmPromo.textContent;
-  gmPromo.classList.remove('red', 'bold');
-  gmPromo.classList.add('alert', 'alert-success');
-  if (promoTxt === 'Buy 1 Get $179.00 Off' || promoTxt === 'Buy 1 Get 1 Free') {
-    gmPromo.innerHTML = `<strong>This Back-to-School when students, staff, faculty, or UW-Health employees buy a Qualifying <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook">MacBook</a> or <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-Desktop/iMac24-M4-16-256">iMac</a> you also get FREE Noise Cancelling AirPods 4th-Gen, OR you can upgrade to AirPods Pro 2nd-Gen for just $70</strong> after $179 promotional savings, in addition to our everyday educational Mac discounts and extra AppleCare discount!`;
-  }
-}
-
-sizeOptions ? changeLCS(sizeOptions) : null;
-logoOptions ? changeLCS(logoOptions) : null;
-colorOptions ? changeLCS(colorOptions) : null;
-
-// HANDLE SIZE PICKER & SIZE CHART LINK
-// Create container div
-const merchLogos = document.createElement('div');
-merchLogos.id = 'logos';
-merchLogos.className = 'merch__detail-logo';
-
-const merchColors = document.createElement('div');
-merchColors.id = 'colors';
-merchColors.className = 'merch__detail-color';
-
-const merchSizes = document.createElement('div');
-merchSizes.id = 'sizes';
-merchSizes.className = 'merch__detail-size';
-
-const logoGuideDiv = document.createElement('label');
-logoGuideDiv.className = 'merch__detail-logo-label';
-logoGuideDiv.textContent = 'Make Selection:';
-
-const colorGuideDiv = document.createElement('label');
-colorGuideDiv.className = 'merch__detail-color-label';
-colorGuideDiv.textContent = 'Make Selection';
-
-const sizeGuideDiv = document.createElement('label');
-sizeGuideDiv.className = 'merch__detail-size-label';
-sizeGuideDiv.textContent = 'Select |';
-
-// ADD SIZE CHART LINK TO PRODUCT AS NEEDED
-let sizeChartUrl, sizeChartBrand;
-const sizeChartLink = document.createElement('a');
-sizeChartLink.classList.add('merch__detail-size-link', 'gtmSizeTrack');
-
-if (prodName.toLowerCase().substring(0, 13) === 'the red shirt') {
-  sizeChartUrl = 'sizeChart/redShirt';
-  sizeChartBrand = 'The Red Shirt™';
-} else if (prodName.toLowerCase().substring(0, 8) === 'champion') {
-  sizeChartUrl = 'sizeChart/champion';
-  sizeChartBrand = 'Champion';
-} else if (prodName.toLowerCase().substring(0, 9) === 'game bibs') {
-  sizeChartUrl = 'sizeChart/gameBibs';
-  sizeChartBrand = 'Game Bibs';
-} else if (prodName.toLowerCase().substring(0, 8) === 'columbia') {
-  sizeChartUrl = 'sizeChart/columbia';
-  sizeChartBrand = 'Columbia';
-} else if (prodName.toLowerCase().substring(0, 12) === 'under armour') {
-  sizeChartUrl = 'sizeChart/ua';
-  sizeChartBrand = 'Under Armour';
-} else if (prodName.toLowerCase().substring(0, 7) === 'blue 84') {
-  sizeChartUrl = 'sizeChart/blue84';
-  sizeChartBrand = 'Blue 84';
-} else if (prodName.toLowerCase().substring(0, 13) === 'for bare feet') {
-  sizeChartUrl = 'sizeChart/fbf';
-  sizeChartBrand = 'For Bare Feet';
-} else if (prodName.toLowerCase().substring(0, 12) === 'college kids') {
-  sizeChartUrl = 'sizeChart/cllgKids';
-  sizeChartBrand = 'College Kids';
-} else if (
-  prodName.toLowerCase().substring(0, 13) === '&#39;47 brand' ||
-  prodName.toLowerCase().substring(0, 9) === "'47 brand"
-) {
-  sizeChartUrl = 'sizeChart/47Brand';
-  sizeChartBrand = "'47 Brand";
-} else if (prodName.toLowerCase().substring(0, 13) === 'all star dogs') {
-  sizeChartUrl = 'sizeChart/allStarDog';
-  sizeChartBrand = 'All Star Dogs';
-} else if (prodName.toLowerCase().substring(0, 7) === 'zoozatz') {
-  sizeChartUrl = 'sizeChart/zooZatz';
-  sizeChartBrand = 'ZooZatz';
-} else if (prodName.toLowerCase().substring(0, 10) === 'boxercraft') {
-  sizeChartUrl = 'sizeChart/boxercraft';
-  sizeChartBrand = 'Boxercraft';
-} else if (prodName.toLowerCase().substring(0, 10) === "lands' end") {
-  sizeChartUrl = 'sizeChart/landsEnd';
-  sizeChartBrand = "Lands' End";
-} else if (prodName.toLowerCase().substring(0, 6) === 'league') {
-  sizeChartUrl = 'sizeChart/league';
-  sizeChartBrand = 'League';
-} else if (prodName.toLowerCase().substring(0, 7) === 'vantage') {
-  sizeChartUrl = 'sizeChart/vantage/update.html';
-  sizeChartBrand = 'Vantage';
-} else if (prodName.toLowerCase().substring(0, 8) === 'kadyluxe') {
-  sizeChartUrl = 'sizeChart/kadyluxe';
-  sizeChartBrand = 'KadyLuxe';
-} else if (
-  prodName.toLowerCase().substring(0, 30) === 'little earth wisconsin pet hat'
-) {
-  sizeChartUrl = 'sizeChart/littleEarth';
-  sizeChartBrand = 'Little Earth';
-} else if (
-  (prodName.indexOf('Hat') >= 0 || prodName.indexOf('Visor') >= 0) &&
-  sizes &&
-  prodName.toLowerCase().substring(0, 6) === 'legacy'
-) {
-  sizeChartUrl = 'sizeChart/legacy';
-  sizeChartBrand = 'Legacy Hat';
-} else if (sizes || singleItem) {
-  sizeChartUrl = 'sizeChart';
-  sizeChartBrand = '';
-}
-sizeChartLink.href = `https://i.univbkstr.com/${sizeChartUrl}`;
-sizeChartLink.textContent = `Size Guide`;
-sizeChartLink.title = `${sizeChartBrand} Size Guide`;
-
-if (logos) {
-  merchLogos.innerHTML = `
-    <div class="flex merch__detail-size-picker">${logos.innerHTML}</div>
-  `;
-
-  merchLogos.prepend(logoGuideDiv);
-}
-
-if (colors) {
-  merchColors.innerHTML = `
-    <div class="flex merch__detail-size-picker">${colors.innerHTML}</div>
-  `;
-
-  merchColors.prepend(colorGuideDiv);
-}
-
-if (sizes) {
-  merchSizes.innerHTML = `
-    <div class="flex merch__detail-size-picker">${sizes.innerHTML}</div>
-  `;
-
-  merchSizes.prepend(sizeChartLink);
-  merchSizes.prepend(sizeGuideDiv);
-}
-
-if (!logos && !sizes && !colors && singleItem) {
-  let singleItemText = singleItem.textContent.toLowerCase();
-
-  if (singleItemText === 'xxx-large' || singleItemText === '3x-large') {
-    singleItemText = '3XL';
-  } else if (singleItemText === '4x' || singleItemText === '4x-large') {
-    singleItemText = '4XL';
-  } else if (singleItemText === '5x' || singleItemText === '5x-large') {
-    singleItemText = '5XL';
-  } else if (singleItemText === '6x' || singleItemText === '6x-large') {
-    singleItemText = '6XL';
-  } else if (singleItemText === 'newborn 3 month') {
-    singleItemText = 'NB/3M';
-  } else if (singleItemText === 'large/x-large') {
-    singleItemText = 'L/XL';
-  } else {
-    singleItemText = capitalizeFirstLetter(singleItem.textContent);
-  }
-  merchSizes.innerHTML = `
-    <div class="flex merch__detail-size-picker">
-      <span class="btn btn-default typeSelected btn-w-auto">${singleItemText}</span>
-    </div>
-  `;
-  merchSizes.prepend(sizeChartLink);
-  merchSizes.prepend(sizeGuideDiv);
-} else if (select) {
-  merchSizes.prepend(sizeGuideDiv);
-  merchSizes.appendChild(select);
-}
-
-// Append Quantity & Add to Cart button
-const addToCartField = document.createElement('div');
-addToCartField.id = 'add-qty';
-addToCartField.classList.add('flex', 'merch__detail-add');
-const qtyWrapper = document.createElement('div');
-qtyWrapper.className = 'merch__detail-qty';
-qtyWrapper.innerHTML = `<label for="merchQTY" class="sr-only">Quantity: </label>`;
-const btnWrapper = document.createElement('div');
-btnWrapper.className = 'merch__detail-add-btn';
-const merchSku = document.getElementById('merch-sku');
-
-if (!noAddCart) {
-  addToCartBtn
-    ? btnWrapper.append(addToCartBtn)
-    : addToCartTypes
-      ? btnWrapper.append(addToCartTypes)
-      : '';
-  qtyWrapper.append(qtyInput);
-  addToCartField.append(qtyWrapper);
-  btnWrapper.append(document.querySelector('p.addedToCart'));
-  addToCartField.append(btnWrapper);
-  addToCartField.append(inventoryDisplay);
-} else {
-  btnWrapper.append(noAddCart);
-  addToCartField.append(btnWrapper);
-  noAddCart.classList.add('mt-2', 'alert', 'alert-warning', 'text-center');
-  addToCartField.append(inventoryDisplay);
-}
-
-// Check if item is discontinued. If yes, show in tabs
+// Check if item is discontinued. If yes, show info in tabs
 const discoTab = document.createElement('li');
 discoTab.innerHTML = `
   <a id="tab-1" href="#discontinued">
@@ -526,42 +354,23 @@ discoTab.innerHTML = `
 `;
 
 if (disco) {
+  console.log('Discontinued');
   const discoDiv = document.createElement('div');
   discoDiv.id = 'discontinued';
   discoDiv.setAttribute('aria-labelledby', 'tab-1');
   discoDiv.innerHTML = `
-    <p>You will not be charged for your order until the order ships.<br>
-      We search for discontinued items at each of our 5 locations so it may take longer for those items to be
-      pulled.
-      <span>If you are placing a Next Day Air or 2nd Day Air order the order processing time will be delayed
-        while we check all of our locations for the discontinued item.</span>
-    </p>
-    <p>If we don't find the item, your order packing slip will show it as "Discontinued" and you will not receive
-      that item.
-    </p>
-  `;
+  <p>You will not be charged for your order until the order ships.<br>
+    We search for discontinued items at each of our 5 locations so it may take longer for those items to be
+    pulled.
+    <span>If you are placing a Next Day Air or 2nd Day Air order the order processing time will be delayed
+      while we check all of our locations for the discontinued item.</span>
+  </p>
+  <p>If we don't find the item, your order packing slip will show it as "Discontinued" and you will not receive
+    that item.
+  </p>
+`;
   tabsHeader.prepend(discoTab);
   tabsContent.prepend(discoDiv);
-}
-
-// CHECK FOR ITEM RATINGS
-if (itemRanking) {
-  const rankCount = document.querySelector('span.rankCount').textContent;
-
-  const ratingsTab = document.createElement('li');
-  ratingsTab.innerHTML = `
-    <a id="tab-4" href="#ratings">
-      <i class="fa fa-star" aria-hidden="true"></i> Reviews ${rankCount}
-    </a>
-  `;
-
-  const ratingsDiv = document.createElement('div');
-  ratingsDiv.id = 'ratings';
-  ratingsDiv.setAttribute('aria-labelledby', 'tab-4');
-  ratingsDiv.appendChild(itemRanking);
-
-  tabsHeader.append(ratingsTab);
-  tabsContent.append(ratingsDiv);
 }
 
 // HANDLE SUGGESTED SELL ITEMS
@@ -595,269 +404,9 @@ suggestedItems.forEach((item, i) => {
   suggestedGrid.appendChild(item);
 });
 
-// ADD A CLOSE ICON TO ERROR MESSAGE
-// ADD CLICK EVENT HANDLER TO ICON
-const closeIcon = document.createElement('i');
-closeIcon.classList.add('close-p', 'fa', 'fa-times');
-merchSelectError ? merchSelectError.appendChild(closeIcon) : null;
-
-document.querySelectorAll('.close-p').forEach((el) => {
-  el.addEventListener('click', () => {
-    const parentP = el.closest('p');
-    if (parentP) {
-      parentP.style.transition = 'opacity 0.4s ease';
-      parentP.style.opacity = 0;
-      setTimeout(() => {
-        parentP.style.display = 'none';
-      }, 400); // Match fade duration
-    }
-  });
-});
-
-// Append error messages to info block
-merchSelectError ? merchSizes.appendChild(merchSelectError) : '';
-addGiftErrorLCS ? merchSizes.appendChild(addGiftErrorLCS) : '';
-addGiftError ? merchSizes.appendChild(addGiftError) : '';
-
 // Append elements to info block
 merchInfoWrapper.append(pageHeader);
 merchInfoWrapper.append(priceBlock);
 merchInfoWrapper.append(infoBlock);
-if (disclaimerLabel) {
-  merchInfoWrapper.appendChild(disclaimerLabelHtml);
-  disclaimerError ? disclaimerError.appendChild(closeIcon) : null;
-  disclaimerError ? disclaimerLabelHtml.after(disclaimerError) : null;
-}
-
-if (!noAddCart) {
-  logos ? merchInfoWrapper.appendChild(merchLogos) : '';
-  colors ? merchInfoWrapper.appendChild(merchColors) : '';
-  sizes ? merchInfoWrapper.appendChild(merchSizes) : '';
-  singleItem ? merchInfoWrapper.appendChild(merchSizes) : '';
-  select ? merchInfoWrapper.appendChild(merchSizes) : '';
-}
-
-merchInfoWrapper.append(addToCartField);
-
-// HIDE ORIGINAL MERCH INFO BLOCK
-document.querySelector('h2.page_header').style.display = 'none';
-document.querySelector('.mainItem').style.display = 'none';
-
-// HELPER FUNCTION TO CHANGE SIZE BUTTON TEXT
-function changeLCS(elem) {
-  elem.forEach((e) => {
-    const btnText = e.textContent.toLowerCase();
-    if (btnText === 'small/medium') {
-      e.textContent = 'S/M';
-    } else if (btnText === 'medium/large') {
-      e.textContent = 'M/L';
-    } else if (btnText === 'large/x-large' || btnText === 'large/xlarge') {
-      e.textContent = 'L/XL';
-    } else if (btnText === 'xx-small') {
-      e.textContent = '2XS';
-    } else if (btnText === 'x-small') {
-      e.textContent = 'XS';
-    } else if (btnText === 'small') {
-      e.textContent = 'S';
-    } else if (btnText === 'medium') {
-      e.textContent = 'M';
-    } else if (btnText === 'large') {
-      e.textContent = 'L';
-    } else if (btnText === 'x-large') {
-      e.textContent = 'XL';
-    } else if (btnText === 'xx-large' || btnText === '2x-large') {
-      e.textContent = '2XL';
-    } else if (btnText === 'xxx-large' || btnText === '3x-large') {
-      e.textContent = '3XL';
-    } else if (btnText === '5x') {
-      e.textContent = '5XL';
-    } else if (btnText === '6x') {
-      e.textContent = '6XL';
-    } else if (btnText === 'newborn 3 month') {
-      e.textContent = 'NB/3M';
-    } else if (btnText === '3 month') {
-      e.textContent = '3M';
-    } else if (btnText === '6 month') {
-      e.textContent = '6M';
-    } else if (btnText === '12 month') {
-      e.textContent = '12M';
-    } else if (btnText === '18 month') {
-      e.textContent = '18M';
-    } else if (btnText === '24 month') {
-      e.textContent = '24M';
-    } else if (btnText === '2 toddler') {
-      e.textContent = '2T';
-    } else if (btnText === '3 toddler') {
-      e.textContent = '3T';
-    } else if (btnText === '4 toddler') {
-      e.textContent = '4T';
-    } else if (btnText === '5 toddler') {
-      e.textContent = '5T';
-    } else if (btnText === '5/6 toddler') {
-      e.textContent = '5/6T';
-    } else if (btnText === '6 toddler') {
-      e.textContent = '6T';
-    } else if (btnText === '6 child') {
-      e.textContent = '6C';
-    } else if (btnText === '7 child') {
-      e.textContent = '7C';
-    } else if (btnText === '9-11 medium') {
-      e.parentElement.classList.add('btn-w-auto');
-    } else if (btnText === '10-13 large') {
-      e.parentElement.classList.add('btn-w-auto');
-    } else if (btnText === '6 x 8 / 6 x 8') {
-      e.parentElement.classList.add('btn-w-auto');
-    } else if (btnText === '6 x 8 / 8 x 10') {
-      e.parentElement.classList.add('btn-w-auto');
-    } else if (btnText === '8 x 10 / 8 x 10') {
-      e.parentElement.classList.add('btn-w-auto');
-    } else if (btnText === 'toddler') {
-      e.parentElement.classList.add('btn-w-auto');
-    } else {
-      e.parentElement.classList.add('btn-w-auto');
-    }
-  });
-}
-
-function capitalizeFirstLetter(string) {
-  const newString = string.toLowerCase();
-  return newString.charAt(0).toUpperCase() + newString.slice(1);
-}
-
-/**
- * ACCESSIBLE TABS
- */
-const tabsContainer = document.querySelector('.tabs-container');
-
-if (tabsContainer) {
-  const tabsList = tabsContainer.querySelector('ul');
-  const tabButtons = tabsList.querySelectorAll('a');
-  const tabPanels = tabsContainer.querySelectorAll('.tabs__panels > div');
-
-  tabsList.setAttribute('role', 'tablist');
-
-  tabsList.querySelectorAll('li').forEach((listitem) => {
-    listitem.setAttribute('role', 'presentation');
-  });
-
-  tabButtons.forEach((tab, index) => {
-    tab.setAttribute('role', 'tab');
-    if (index === 0) {
-      tab.setAttribute('aria-selected', 'true');
-      // we'll add something here
-    } else {
-      tab.setAttribute('tabindex', '-1');
-      tabPanels[index].setAttribute('hidden', '');
-    }
-  });
-
-  tabPanels.forEach((panel) => {
-    panel.setAttribute('role', 'tabpanel');
-    panel.setAttribute('tabindex', '0');
-  });
-
-  tabsContainer.addEventListener('click', (e) => {
-    const clickedTab = e.target.closest('a');
-    if (!clickedTab) return;
-    e.preventDefault();
-
-    switchTab(clickedTab);
-  });
-
-  tabsContainer.addEventListener('keydown', (e) => {
-    switch (e.key) {
-      case 'ArrowLeft':
-        moveLeft();
-        break;
-      case 'ArrowRight':
-        moveRight();
-        break;
-      case 'Home':
-        e.preventDefault();
-        switchTab(tabButtons[0]);
-        break;
-      case 'End':
-        e.preventDefault();
-        switchTab(tabButtons[tabButtons.length - 1]);
-        break;
-    }
-  });
-
-  function moveLeft() {
-    const currentTab = document.activeElement;
-    if (!currentTab.parentElement.previousElementSibling) {
-      switchTab(tabButtons[tabButtons.length - 1]);
-    } else {
-      switchTab(
-        currentTab.parentElement.previousElementSibling.querySelector('a'),
-      );
-    }
-  }
-
-  function moveRight() {
-    const currentTab = document.activeElement;
-    if (!currentTab.parentElement.nextElementSibling) {
-      switchTab(tabButtons[0]);
-    } else {
-      switchTab(currentTab.parentElement.nextElementSibling.querySelector('a'));
-    }
-  }
-
-  function switchTab(newTab) {
-    const activePanelId = newTab.getAttribute('href');
-    const activePanel = tabsContainer.querySelector(activePanelId);
-
-    tabButtons.forEach((button) => {
-      button.setAttribute('aria-selected', false);
-      button.setAttribute('tabindex', '-1');
-    });
-
-    tabPanels.forEach((panel) => {
-      panel.setAttribute('hidden', true);
-    });
-
-    activePanel.removeAttribute('hidden', false);
-
-    newTab.setAttribute('aria-selected', true);
-    newTab.setAttribute('tabindex', '0');
-    newTab.focus();
-  }
-}
-// END ACCESSIBLE TABS
-
-$('.flexslider').flexslider({
-  animation: 'fade',
-  controlNav: 'thumbnails',
-  directionNav: false,
-  slideshow: false,
-});
-
-$('#toggle').click(function () {
-  const elem = $('#toggle').text();
-  if (elem === 'More Info') {
-    //Stuff to do when btn is in the read more state
-    $('#toggle').text('Read Less');
-    $('.merch__detail-overflow').slideDown();
-  } else {
-    //Stuff to do when btn is in the read less state
-    $('#toggle').text('More Info');
-    $('.merch__detail-overflow').slideUp();
-  }
-});
-
-// Size charts colorbox
-$('.merch__detail-size-link').colorbox({
-  current: '{current} of {total}',
-  rel: 'merch__detail-size-link',
-  iframe: true,
-  width: '75%',
-  height: '90%',
-});
-
-if (window.matchMedia) {
-  // Establishing media check
-  const width700Check = window.matchMedia('(max-width: 700px)');
-  if (width700Check.matches) {
-    $.colorbox.remove();
-  }
-}
+merchDisclaimer ? merchInfoWrapper.appendChild(merchDisclaimerHtml) : '';
+merchDisclaimer ? merchDisclaimerHtml.after(disclaimerError) : '';

@@ -573,8 +573,7 @@ h2.merchTitle {
 }
 
 .merch-add-submit {
-  text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
   flex: initial;
 }
 
@@ -619,6 +618,11 @@ h2.merchTitle {
   }
 }
 
+.merch-purchase-bar {
+  justify-content: flex-end;
+  margin-block-end: rem(20);
+}
+
 .merchImage {
   position: relative;
 
@@ -627,7 +631,7 @@ h2.merchTitle {
     position: absolute;
     height: 30px;
     aspect-ratio: 1;
-    right: 32%;
+    right: 30%;
     top: 170px;
     border-radius: 4px;
     padding: 4px;

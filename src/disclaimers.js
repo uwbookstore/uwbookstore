@@ -1,5 +1,5 @@
 const merchDisclaimerFormCheck = document.querySelector('.form-check.mt-3');
-const merchDisclaimer = document.querySelector('[data-merch-disclaimer');
+const merchDisclaimer = document.querySelector('[data-merch-disclaimer]');
 const disclaimerLabel = document.querySelector(
   '.form-check.mt-3 > label.form-check-label',
 );

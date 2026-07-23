@@ -34,7 +34,11 @@
     type="text/javascript"></script>
   <script src="./js/popper.min.js"></script>
   <script src="./js/bootstrap_v5_2.js"></script>
-
+  <style>
+    .display-none {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -1186,797 +1190,427 @@
 
     <div class="row">
 
-      <div id="contentSection" class="col-lg-12 col-md-12 col-sm-12 col-12" role="main">
-
-
-
-
-
+      <div id="contentSection" Class="col-lg-12 col-md-12 col-sm-12 col-12" role="main">
+        <!--Breadcrumbs-->
 
         <ul class="breadcrumb background_none">
-          <li> <a class="small" href="https://text.uwbookstore.com/merchandise"> Merchandise Categories</a></li>
-          <li> <a class="small"> Class Kits</a></li>
+          <li> <a Class="small" href="https://insitestore2.mbsbooks.com/uwmadison/merchandise?mc_id=-1"> Merchandise
+              Categories</a></li>
+          <li> <a Class="small" href="https://insitestore2.mbsbooks.com/uwmadison/merchlist?ID=10318"> Men&#39;s
+              Long Sleeve Tees</a></li>
+          <li> <a Class="small"> Champion University of Wisconsin Long Sleeve T-Shirt (White)</a></li>
 
         </ul>
 
 
+        <!--Breadcrumbs End-->
         <a class="floatr right15 top-50 pageHelp"
-          href="https://text.uwbookstore.com/help/MerchandiseBrowse.htm">Help</a>
-        <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+          href="https://insitestore2.mbsbooks.com/uwmadison/help/MerchandiseDetail.htm">Help</a>
 
-
-
-
-        <form action="/MerchList?ID=24512" method="post"><input name="__RequestVerificationToken" type="hidden"
-            value="sC9p4vSO6ehFXD4w-GdY_EJlB24TvEN_bCoH-imgMvPrrzm5Ru5HDn6bIpWVwfWUN4i46oqG0LEVXddKCNJ_JezhjwQ1">
-
-
-          <div id="scrollPositionIgnore"></div>
-          <a id="goToTop" class="btn btn-default displayn" title="Go to top" tabindex="0"><span
-              class="glyphicon glyphicon-chevron-up"></span></a>
-          <div class="center">
-            <h1 class="page_header" style="display: none;">Class Kits</h1>
+        <form
+          action="/uwmadison/MerchDetail?MerchID=1349190&amp;CategoryName=Men%27s%20Long%20Sleeve%20Tees&amp;CatID=10318&amp;Name=Men%27s%20Long%20Sleeve%20Tees"
+          method="post"><input name="__RequestVerificationToken" type="hidden"
+            value="fPDDuNWMd0zSJ_lOqEUwffzQVJ5-XQO-SVoPa08MQH_bmMfcFai_hADD_Q2OQmhTK7zdSHKXRjXTnHIl1gyChm8-Gdg1" /><input
+            id="hiddenType" name="itemType" type="hidden" value="" /><input id="customerLoyaltyRWD_totalPointsAvail"
+            name="customerLoyaltyRWD.totalPointsAvail" type="hidden" value="0" /><input id="hiddenSKU" name="SKU"
+            type="hidden" value="2066586           " /><input id="hiddenImg" name="merchDefaultFull" type="hidden"
+            value="/storeimages/171-1349190-2.png" />
+          <div Class="center">
+            <h2 Class="page_header bottom10 displayn">Product Detail</h2>
           </div>
-          <!--Search and Sort Dropdown Row-->
-          <div class="row" style="display: none;">
-            <!--Search Bar-->
-            <div class="searchCatWrap col-sm-4 col-12 padding0 padding-right10 bottom10">
-              <div class="input-group">
-                <input type="text" class="form-control searchCat" placeholder="Search Class Kits"
-                  aria-label="Search Class Kits">
-                <button class="btn btn-default searchCatButton" type="button" aria-label="Search Class Kits"
-                  tabindex="0"><span class="glyphicon glyphicon-search"></span></button>
-              </div>
-            </div>
 
-            <!--Sort Dropdowns-->
-            <div class="sortCatWrap col-sm-8 col-12 padding0 bottom10">
-              <div class="row" style="width: 100%; justify-content: flex-end;">
-                <div class="col-md-5 col-sm-0 col-0 padding0 no_show_small">
-                  <div class="input-group">
-                    <label class="input-group-text" for="merchResultsSelectID">Show:</label>
+          <div class="mainItem">
+            <!--Mobile-->
+            <div class="center no_show_large">
+              <h1 class="page_header merchTitle merch-value merch-value--name">Champion University of Wisconsin Long
+                Sleeve T-Shirt (White)</h1>
 
-                  </div>
-                </div>
+              <p Class="merchItem itemSKU merch-value merch-value--sku mt-1">2066586 </p>
 
-                <div class="col-md-5 col-sm-12 col-12 padding0">
-                  <div class="input-group">
-                    <label class="input-group-text" for="merchSortBySelectID">Sort By:</label>
-
-                  </div>
-                </div>
-
-                <div class="col-md-2 col-sm-0 col-0 padding0 no_show_small">
-                  <div class="displayib largeSwitch listSwitch" data-class="" tabindex="0" aria-label="Display Large"
-                    role="button"><span class="fa fa-2x fa-th-large switchIcon"></span></div>
-                  <div class="displayib smallSwitch listSwitch listSwitchSelected" tabindex="0"
-                    aria-label="Display Small" role="button"><span class="fa fa-2x fa-th switchIcon"></span></div>
-                </div>
-
-              </div>
-            </div>
-
-
-          </div>
-          <!--Filter and Merch Row-->
-          <div class="row">
-            <div class="viewFiltersDiv col-12 bottom10">
-              <div class="filterButtonWrapper">
-                <div tabindex="0" role="button" aria-label="Open Filters Dialog" class="viewFiltersButton displayn">
-                  <span class="filterText">FILTERS</span>
-                </div>
-              </div>
-            </div>
-
-            <!--Filter Section-->
-            <div role="dialog" class="filterColumn col-md-3 col-sm-3 col-12 displayn">
-              <div class="row">
-                <div class="col-12 padding0">
-                  <p class="filterTitle font20"><strong>FILTER BY:</strong></p>
-                  <p class="closeFilterX floatr hover_pointer filterDisplay"><span
-                      class="glyphicon glyphicon-remove"></span></p>
-                  <input type="button" id="filterButton1"
-                    class="btn btn-primary top5 wauto filterButton filterButtonDisplay" value="Apply" tabindex="0">
-                </div>
-              </div>
-              <div class="filterOption top10 filterPriceOption row">
-
-                <div class="col-12 padding0">
-                  <p class="filterOptionTitle padding5 bottom_border bottom5"><strong>Price</strong><span
-                      class="fa fa-minus-square floatr hover_pointer filterCollapse" data-id="filterPriceOption"
-                      data-filtername="Price" tabindex="0" aria-label="Collapse Price Filter" role="button"></span></p>
-                </div>
-                <div class="col-12 padding0">
-                  <div class="filterValueWrapper bottom10 " data-filterid="filterPriceOption">
-                    <div class="filterPrice top10 bottom10 input-group">
-                      <input aria-label="Minimum Price Filter Input" class="filterMin form-control" id="filterMinInput"
-                        max="100000" min="0" name="filterMin" placeholder="Min" type="number" value="0">
-                      <span class="input-group-text">to</span>
-                      <input aria-label="Maximum Price Filter Input" class="filterMin form-control" id="filterMaxInput"
-                        max="100000" min="0" name="filterMax" placeholder="Max" type="number" value="1000000">
-                    </div>
-                    <div class="filterOption top10 filterSaleOption">
-                      <div class="form-floating">
-                        <input aria-label="On Sale" class="filterCheck newCheckbox" data-category="filteronsale"
-                          data-value="filteronsale" id="merchFilterOnSale" name="merchFilterOnSale" type="checkbox"
-                          value="true"><input name="merchFilterOnSale" type="hidden" value="false">
-                        <span class="newCheckboxText"> On Sale</span>
-                      </div>
-                    </div>
-                    <p id="priceError" role="alert" class="red top10"></p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="merch__filter" id="merch__filter">
-              <h2 class="heading__list">Class Kits</h2>
-              <div id="sort-by" class="merch__filter--item">
-                <label style="display: block;">Sort By</label>
-                <select aria-label="Sort By" id="merchSortBySelectID"
-                  class="merchSortBy form-control form-select wauto">
-                  <option value="0" class="subject-option"> Description(A - Z)</option>
-                  <option value="1" class="subject-option"> Description(Z - A)</option>
-                  <option value="2" class="subject-option"> Price(Low - High)</option>
-                  <option value="3" class="subject-option"> Price(High - Low)</option>
-                </select>
-              </div>
-              <div class="merch__filter--item">
-                <a class="btn btn-primary" href="https://www.uwbookstore.com/ShoppingCart" tabindex="0">
-                  Shopping Cart
+              <!--Merch Ranking-->
+              <div Class="merchRank bottom10">
+                <span Class="ranking red fa fa-star-o"></span>
+                <span Class="ranking red fa fa-star-o"></span>
+                <span Class="ranking red fa fa-star-o"></span>
+                <span Class="ranking red fa fa-star-o"></span>
+                <span Class="ranking red fa fa-star-o"></span>
+                <a tabindex="0" Class="merchRankLink" href="#itemRanking">
+                  <span Class="rankCount">(0)</span>
+                  <span Class="rankComment">Be the first to Comment</span>
                 </a>
               </div>
             </div>
-            <div id="merch__card">
-              <div class="merchColumn col-12 flex merch__card" style="visibility: visible;">
-                <div class="row" style="display: none;">
-                  <div class="filterSelections col-12 padding0 bottom10">
-                    <a class="hover_pointer clearIndPriceFilter bottom10 displayn filterSelection" tabindex="0">
-                      <span class="priceFilterOptionText"></span>
-                      <span class="fa fa-times"></span>
-                    </a>
+
+            <div class="row">
+              <div class="col-sm-6 col-12 bottom10">
+
+
+
+                <div class="merchImageMain">
+                  <div class="top">
+                    <i class="bi bi-chevron-left imageLeft" tabindex="0"></i>
+
+                    <img class="merchDetailImage margin_auto img-responsive cursor-zoom" data-id="1"
+                      src="https://insitestore2.mbsbooks.com/uwmadison/storeimages/171-1349190-2.png"
+                      data-high="https://insitestore2.mbsbooks.com/uwmadison/storeimages/171-1349190-2_hi.png"
+                      data-thumb="https://insitestore2.mbsbooks.com/uwmadison/storeimages/171-1349190-2_th.png"
+                      alt="Cover Image For Champion University of Wisconsin Long Sleeve T-Shirt (White)"
+                      aria-hidden="true" />
+
+                    <i class="bi bi-chevron-right imageRight" tabindex="0"></i>
+                  </div>
+
+                  <div class="bottom no_show_large">
+                    <div class="imageButtons textc">
+                      <span class="fa fa-circle circleActive right5 imageCircle hover_pointer" data-count="1"
+                        tabindex="0" role="button" aria-label="Image 1"></span>
+                      <span class="fa fa-circle circleNotActive right5 imageCircle hover_pointer" data-count="2"
+                        tabindex="0" role="button" aria-label="Image 2"></span>
+                    </div>
                   </div>
                 </div>
+                <div class="merchThumbnailWrapper col-12 top10 textc no_show_small">
+                  <a class="merchThumbnail thumbSelected" data-count="1">
+                    <img width="50" class="individualThumb img-thumbnail verticalTop top5 hover_pointer" tabindex="0"
+                      src="https://insitestore2.mbsbooks.com/uwmadison/storeimages/171-1349190-2_th.png"
+                      data-high="https://insitestore2.mbsbooks.com/uwmadison/storeimages/171-1349190-2_hi.png"
+                      data-full="https://insitestore2.mbsbooks.com/uwmadison/storeimages/171-1349190-2.png"
+                      data-tgcid="0" alt="Cover Image for Champion University of Wisconsin Long Sleeve T-Shirt (White)"
+                      role="button" aria-label="Cover image 1" />
+                  </a>
+                  <a class="merchThumbnail opacity-50" data-count="2">
+                    <img width="50" class="individualThumb img-thumbnail verticalTop top5 hover_pointer" tabindex="0"
+                      src="https://insitestore2.mbsbooks.com/uwmadison/storeimages/171-1349190-1_th.png"
+                      data-high="https://insitestore2.mbsbooks.com/uwmadison/storeimages/171-1349190-1_hi.png"
+                      data-full="https://insitestore2.mbsbooks.com/uwmadison/storeimages/171-1349190-1.png"
+                      data-tgcid="0" alt="Cover Image for Champion University of Wisconsin Long Sleeve T-Shirt (White)"
+                      role="button" aria-label="Cover image 2" />
+                  </a>
+                </div>
 
-                <div class="row">
-                  <div class="col-12 padding0">
-                    <div class="row">
-                      <!--
-  This is the container for all merch list / grid items.
-  This is where we determine if we need to display merch list / grid, and iterate through our merch items.
--->
+              </div>
+
+              <div class="col-sm-6 col-12 bottom10 merch-info-col">
+                <div class="no_show_small bottom10">
+                  <h1 tabindex="0" Class="merchTitle merch-value merch-value--name" data-id="1349190">Champion
+                    University of Wisconsin Long Sleeve T-Shirt (White)</h1>
+
+                  <p Class="merchItem itemSKU merch-value merch-value--sku mt-1">2066586 </p>
+
+                  <!--Merch Ranking-->
+                  <div Class="merchRank">
+                    <span Class="ranking red fa fa-star-o"></span>
+                    <span Class="ranking red fa fa-star-o"></span>
+                    <span Class="ranking red fa fa-star-o"></span>
+                    <span Class="ranking red fa fa-star-o"></span>
+                    <span Class="ranking red fa fa-star-o"></span>
+
+                    <a tabindex="0" Class="merchRankLink" href="#itemRanking">
+                      <span Class="rankCount">(0)</span>
+                      <span Class="rankComment">Be the first to Comment</span>
+                    </a>
+                  </div>
+
+                </div>
+
+                <div data-merch-price-container data-merch-base-price="33.99">
+                  <p class="merchRegPrice top5 lineThrough"><strong>Reg. Price: </strong>$39.99</p>
+                  <p class="merchSavePrice"><strong>You Save: </strong>$6.00</p>
+                  <p class="salePrice red"><strong>Sale Price: </strong><span class="merchPriceCurrent">$33.99</span>
+                  </p>
+                </div>
+
+                <input type="hidden" id="hiddenPriceVal" value="39.99" />
 
 
 
-                      <!---->
+
+                <!-- Add to Cart Button -->
+                <div class="addToCartButton top5">
+                  <div class="bottom5">
 
 
 
-                      <!--One Item-->
-                      <div data-count="1" data-merid="1845076" class="merchItem merch__card-item"
-                        data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
 
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//text.uwbookstore.com/MerchDetail?MerchID=1845076&amp;CategoryName=Class Kits&amp;CatID=24512&amp;Name=Class Kits"
-                              class="merchLink displayb bottom10">
-                              <div class="imageWrapper">
-                                <div class="bottom10 merchImageWrapper merchlist">
-
-                                  <!--Merch Image-->
-                                  <img width="200" class="merchImage img-responsive"
-                                    src="https://www.uwbookstore.com/storeimages/11-1845076-1.png"
-                                    alt="Art 100 Class Kit" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p class="merchTitle top0 textc lead" data-id="1845076">Art 100 Class Kit</p>
-                            </a>
-                            <div class="merchCol1 textc bottom10">
+                    <div data-merch-add-root data-source="detail" data-ga4-module="merchdetail"
+                      data-post-url="//insitestore2.mbsbooks.com/uwmadison/shoppingcart/AddMerchItem"
+                      data-checkout-url="http://insitestore2.mbsbooks.com/uwmadison/shoppingcart"
+                      data-merch-id="1349190" data-course-section-id="0" data-requires-type="true"
+                      data-has-disclaimer="true" data-reload="false"
+                      data-name="Champion University of Wisconsin Long Sleeve T-Shirt (White)"
+                      data-sku="2066586           " data-price-html="$39.99"
+                      data-image-src="https://insitestore2.mbsbooks.com/uwmadison/storeimages/171-1349190-2.png"
+                      data-is-loyalty="false" data-source-modal="" data-hide-source-on-needs-form="">
 
 
 
-                              <!--Merch Item Number-->
-                              <p class="merchNumber"><span class="merchSKU">2077729 </span></p>
 
-                              <p class="merchPrice top5 bold"><span
-                                  class="merchPriceCurrent currentPrice1845076">$90.00</span></p>
 
-                              <p class="merchDiscount red top5 bold"></p>
 
-                            </div>
+
+
+
+                      <!-- Separate Type Codes -->
+                      <div class="merch-typecodes mt-2" data-typecode-context="driver" data-typecode-mer-id="1349190"
+                        data-typecode-mode="separate" data-typecode-selected-target="#typeselected">
+
+
+                        <div class="merch-typecode-group" data-typecode-group="size">
+                          <p class="merch-typecode-label">1 ADULT SIZES: <span class="merch-typecode-selected"
+                              data-typecode-selected-part="size"></span></p>
+
+                          <div class="merch-typecode-buttons mt-1">
+                            <button type="button" class="btn btn-default merch-typecode-option  "
+                              data-typecode-part="size" data-typecode-text="SMALL" data-typecode-value="101">
+                              SMALL
+                            </button>
+                            <button type="button" class="btn btn-default merch-typecode-option  "
+                              data-typecode-part="size" data-typecode-text="MEDIUM" data-typecode-value="102">
+                              MEDIUM
+                            </button>
+                            <button type="button" class="btn btn-default merch-typecode-option  "
+                              data-typecode-part="size" data-typecode-text="LARGE" data-typecode-value="103">
+                              LARGE
+                            </button>
+                            <button type="button" class="btn btn-default merch-typecode-option  "
+                              data-typecode-part="size" data-typecode-text="X-LARGE" data-typecode-value="104">
+                              X-LARGE
+                            </button>
+                            <button type="button" class="btn btn-default merch-typecode-option  "
+                              data-typecode-part="size" data-typecode-text="XX-LARGE" data-typecode-value="105">
+                              XX-LARGE
+                            </button>
                           </div>
                         </div>
+
                       </div>
-                      <!--End MerchListSection-->
 
-
-                      <!--One Item-->
-                      <div data-count="2" data-merid="1899152" class="merchItem merch__card-item"
-                        data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
-
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//text.uwbookstore.com/MerchDetail?MerchID=1899152&amp;CategoryName=Class Kits&amp;CatID=24512&amp;Name=Class Kits"
-                              class="merchLink displayb bottom10">
-                              <div class="imageWrapper">
-                                <div class="bottom10 merchImageWrapper merchlist">
-                                  <div class="newBadge" style="background-color: #818181;">New</div>
-
-                                  <!--Merch Image-->
-                                  <img width="200" class="merchImage img-responsive"
-                                    src="https://www.uwbookstore.com/storeimages/11-1899152-1.png"
-                                    alt="Art 100 Class Kit" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p class="merchTitle top0 textc lead" data-id="1899152">Art 100 Class Kit</p>
-                            </a>
-                            <div class="merchCol1 textc bottom10">
+                      <p data-merch-type-error class="merchSelectError red display-none" role="alert">
+                        Please select a valid option(s).
+                      </p>
 
 
 
-                              <!--Merch Item Number-->
-                              <p class="merchNumber"><span class="merchSKU">2078789 </span></p>
 
-                              <p class="merchPrice top5 bold"><span
-                                  class="merchPriceCurrent currentPrice1899152">$90.00</span></p>
+                      <div class="form-check mt-3">
+                        <input data-merch-disclaimer class="form-check-input merchDisclaimer" type="checkbox" />
 
-                              <p class="merchDiscount red top5 bold"></p>
+                        <label class="form-check-label">
+                          <div id="landsEndReally"></div>
+                        </label>
+                      </div>
 
-                            </div>
+                      <p data-merch-disclaimer-error class="merchDisclaimerError red display-none" role="alert">
+                        Please agree to continue.
+                      </p>
+                      <div data-addon-host>
+
+
+                        <script>
+                          // noop fallbacks
+                          window.validateAddonSelections = window.validateAddonSelections || function () {
+                            return true;
+                          };
+
+                          window.getAddonSelectionsJson = window.getAddonSelectionsJson || function () {
+                            return '';
+                          };
+
+                          window.buildSelectedAddonSummaryHtml = window.buildSelectedAddonSummaryHtml || function () {
+                            return '';
+                          }
+                        </script>
+                      </div>
+
+                      <div class="merch-purchase-bar">
+                        <div class="merch-qty">
+                          <label class="merch-label merch-label--qty" for="qty-1349190">Quantity</label>
+                          <div class="merch-qty-stepper input-group" role="group" aria-label="Quantity selector">
+                            <button type="button" class="btn merch-qty-step" data-merch-qty-step="-1"
+                              aria-label="Decrease quantity" tabindex="0">
+
+                              <span class="fa fa-minus" aria-hidden="true"></span>
+                            </button>
+
+                            <input data-merch-qty id="qty-1349190" type="number" inputmode="numeric"
+                              data-QTYid="1349190" class="form-control merch-qty-input merchDetailQTY QTY1" value="1"
+                              min="1" max="999" maxlength="3" aria-label="Quantity" />
+
+                            <button type="button" class="btn merch-qty-step" data-merch-qty-step="1"
+                              aria-label="Increase quantity" tabindex="0">
+
+                              <span class="fa fa-plus" aria-hidden="true"></span>
+                            </button>
                           </div>
                         </div>
+
+                        <input data-merch-type-id type="hidden" value="" />
+
+                        <button data-merch-add-submit type="button" class="btn btn-primary merch-add-submit">
+                          Add To Cart
+                        </button>
+
                       </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="3" data-merid="1864961" class="merchItem merch__card-item"
-                        data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
-
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//text.uwbookstore.com/MerchDetail?MerchID=1864961&amp;CategoryName=Class Kits&amp;CatID=24512&amp;Name=Class Kits"
-                              class="merchLink displayb bottom10">
-                              <div class="imageWrapper">
-                                <div class="bottom10 merchImageWrapper merchlist">
-
-                                  <!--Merch Image-->
-                                  <img width="200" class="merchImage img-responsive"
-                                    src="https://www.uwbookstore.com/storeimages/11-1864961-1.png"
-                                    alt="Art 102 Class Kit" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p class="merchTitle top0 textc lead" data-id="1864961">Art 102 Class Kit</p>
-                            </a>
-                            <div class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p class="merchNumber"><span class="merchSKU">2055318 </span></p>
-
-                              <p class="merchPrice top5 bold"><span
-                                  class="merchPriceCurrent currentPrice1864961">$90.00</span></p>
-
-                              <p class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="4" data-merid="1864965" class="merchItem merch__card-item"
-                        data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
-
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//text.uwbookstore.com/MerchDetail?MerchID=1864965&amp;CategoryName=Class Kits&amp;CatID=24512&amp;Name=Class Kits"
-                              class="merchLink displayb bottom10">
-                              <div class="imageWrapper">
-                                <div class="bottom10 merchImageWrapper merchlist">
-
-                                  <!--Merch Image-->
-                                  <img width="200" class="merchImage img-responsive"
-                                    src="https://www.uwbookstore.com/storeimages/11-1864965-2.png"
-                                    alt="Art 112 Class Kit" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p class="merchTitle top0 textc lead" data-id="1864965">Art 112 Class Kit</p>
-                            </a>
-                            <div class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p class="merchNumber"><span class="merchSKU">2061829 </span></p>
-
-                              <p class="merchPrice top5 bold"><span
-                                  class="merchPriceCurrent currentPrice1864965">$90.00</span></p>
-
-                              <p class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="5" data-merid="1864963" class="merchItem merch__card-item"
-                        data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
-
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//text.uwbookstore.com/MerchDetail?MerchID=1864963&amp;CategoryName=Class Kits&amp;CatID=24512&amp;Name=Class Kits"
-                              class="merchLink displayb bottom10">
-                              <div class="imageWrapper">
-                                <div class="bottom10 merchImageWrapper merchlist">
-
-                                  <!--Merch Image-->
-                                  <img width="200" class="merchImage img-responsive"
-                                    src="https://www.uwbookstore.com/storeimages/11-1864963-2.png"
-                                    alt="Art 212 Class Kit" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p class="merchTitle top0 textc lead" data-id="1864963">Art 212 Class Kit</p>
-                            </a>
-                            <div class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p class="merchNumber"><span class="merchSKU">2067290 </span></p>
-
-                              <p class="merchPrice top5 bold"><span
-                                  class="merchPriceCurrent currentPrice1864963">$140.00</span></p>
-
-                              <p class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="6" data-merid="1594406" class="merchItem merch__card-item"
-                        data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
-
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//text.uwbookstore.com/MerchDetail?MerchID=1594406&amp;CategoryName=Class Kits&amp;CatID=24512&amp;Name=Class Kits"
-                              class="merchLink displayb bottom10">
-                              <div class="imageWrapper">
-                                <div class="bottom10 merchImageWrapper merchlist">
-
-                                  <!--Merch Image-->
-                                  <img width="200" class="merchImage img-responsive"
-                                    src="https://www.uwbookstore.com/storeimages/11-1594406-2.png"
-                                    alt="Art 222 Oil Painting Kit" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p class="merchTitle top0 textc lead" data-id="1594406">Art 222 Oil Painting Kit</p>
-                            </a>
-                            <div class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p class="merchNumber"><span class="merchSKU">2072799 </span></p>
-
-                              <p class="merchPrice top5 bold"><span
-                                  class="merchPriceCurrent currentPrice1594406">$219.99</span></p>
-
-                              <p class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="7" data-merid="1343321" class="merchItem merch__card-item"
-                        data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
-
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//text.uwbookstore.com/MerchDetail?MerchID=1343321&amp;CategoryName=Class Kits&amp;CatID=24512&amp;Name=Class Kits"
-                              class="merchLink displayb bottom10">
-                              <div class="imageWrapper">
-                                <div class="bottom10 merchImageWrapper merchlist">
-
-                                  <!--Merch Image-->
-                                  <img width="200" class="merchImage img-responsive"
-                                    src="https://www.uwbookstore.com/storeimages/11-1343321-1.png"
-                                    alt="Art 224 Class Kit - Clay Kit" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p class="merchTitle top0 textc lead" data-id="1343321">Art 224 Class Kit - Clay Kit</p>
-                            </a>
-                            <div class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p class="merchNumber"><span class="merchSKU">2050574 </span></p>
-
-                              <p class="merchPrice top5 bold"><span
-                                  class="merchPriceCurrent currentPrice1343321">$65.00</span></p>
-
-                              <p class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="8" data-merid="1594404" class="merchItem merch__card-item"
-                        data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
-
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//text.uwbookstore.com/MerchDetail?MerchID=1594404&amp;CategoryName=Class Kits&amp;CatID=24512&amp;Name=Class Kits"
-                              class="merchLink displayb bottom10">
-                              <div class="imageWrapper">
-                                <div class="bottom10 merchImageWrapper merchlist">
-
-                                  <!--Merch Image-->
-                                  <img width="200" class="merchImage img-responsive"
-                                    src="https://www.uwbookstore.com/storeimages/11-1594404-1.png"
-                                    alt="Art 302 Color Theory Painting Kit" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p class="merchTitle top0 textc lead" data-id="1594404">Art 302 Color Theory Painting Kit
-                              </p>
-                            </a>
-                            <div class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p class="merchNumber"><span class="merchSKU">2072798 </span></p>
-
-                              <p class="merchPrice top5 bold"><span
-                                  class="merchPriceCurrent currentPrice1594404">$179.99</span></p>
-
-                              <p class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="9" data-merid="1918718" class="merchItem merch__card-item"
-                        data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
-
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//text.uwbookstore.com/MerchDetail?MerchID=1918718&amp;CategoryName=Class Kits&amp;CatID=24512&amp;Name=Class Kits"
-                              class="merchLink displayb bottom10">
-                              <div class="imageWrapper">
-                                <div class="bottom10 merchImageWrapper merchlist">
-
-                                  <!--Merch Image-->
-                                  <img width="200" class="merchImage img-responsive"
-                                    src="https://www.uwbookstore.com/storeimages/11-1918718-1.png"
-                                    alt="Civil Engineering 159 Class Kit" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p class="merchTitle top0 textc lead" data-id="1918718">Civil Engineering 159 Class Kit
-                              </p>
-                            </a>
-                            <div class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p class="merchNumber"><span class="merchSKU">2080763 </span></p>
-
-                              <p class="merchPrice top5 bold"><span
-                                  class="merchPriceCurrent currentPrice1918718">$44.99</span></p>
-
-                              <p class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="10" data-merid="1343323" class="merchItem merch__card-item"
-                        data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
-
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//text.uwbookstore.com/MerchDetail?MerchID=1343323&amp;CategoryName=Class Kits&amp;CatID=24512&amp;Name=Class Kits"
-                              class="merchLink displayb bottom10">
-                              <div class="imageWrapper">
-                                <div class="bottom10 merchImageWrapper merchlist">
-
-                                  <!--Merch Image-->
-                                  <img width="200" class="merchImage img-responsive"
-                                    src="https://www.uwbookstore.com/storeimages/11-1343323-1.jpg"
-                                    alt="Design Studies 120 Kit" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p class="merchTitle top0 textc lead" data-id="1343323">Design Studies 120 Kit</p>
-                            </a>
-                            <div class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p class="merchNumber"><span class="merchSKU">2045392 </span></p>
-
-                              <p class="merchPrice top5 bold"><span
-                                  class="merchPriceCurrent currentPrice1343323">$89.99</span></p>
-
-                              <p class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="11" data-merid="1878828" class="merchItem merch__card-item"
-                        data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClearTwo"
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
-
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//text.uwbookstore.com/MerchDetail?MerchID=1878828&amp;CategoryName=Class Kits&amp;CatID=24512&amp;Name=Class Kits"
-                              class="merchLink displayb bottom10">
-                              <div class="imageWrapper">
-                                <div class="bottom10 merchImageWrapper merchlist">
-
-                                  <!--Merch Image-->
-                                  <img width="200" class="merchImage img-responsive"
-                                    src="https://www.uwbookstore.com/storeimages/11-1878828-1.png"
-                                    alt="Design Studies 150 Kit" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p class="merchTitle top0 textc lead" data-id="1878828">Design Studies 150 Kit</p>
-                            </a>
-                            <div class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p class="merchNumber"><span class="merchSKU">2079294 </span></p>
-
-                              <p class="merchPrice top5 bold"><span
-                                  class="merchPriceCurrent currentPrice1878828">$59.99</span></p>
-
-                              <p class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="12" data-merid="1877893" class="merchItem merch__card-item"
-                        data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 "
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
-
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//text.uwbookstore.com/MerchDetail?MerchID=1877893&amp;CategoryName=Class Kits&amp;CatID=24512&amp;Name=Class Kits"
-                              class="merchLink displayb bottom10">
-                              <div class="imageWrapper">
-                                <div class="bottom10 merchImageWrapper merchlist">
-
-                                  <!--Merch Image-->
-                                  <img width="200" class="merchImage img-responsive"
-                                    src="https://www.uwbookstore.com/storeimages/11-1877893-1.png"
-                                    alt="Landscape Architecture 250 Class Kit" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p class="merchTitle top0 textc lead" data-id="1877893">Landscape Architecture 250 Class
-                                Kit
-                              </p>
-                            </a>
-                            <div class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p class="merchNumber"><span class="merchSKU">2079202 </span></p>
-
-                              <p class="merchPrice top5 bold"><span
-                                  class="merchPriceCurrent currentPrice1877893">$21.99</span></p>
-
-                              <p class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="13" data-merid="1832105" class="merchItem merch__card-item"
-                        data-classdefault="merchItem padding0 bottom10 col-md-3 col-sm-6 col-6 merchListClear4 merchListClearTwo"
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
-
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//text.uwbookstore.com/MerchDetail?MerchID=1832105&amp;CategoryName=Class Kits&amp;CatID=24512&amp;Name=Class Kits"
-                              class="merchLink displayb bottom10">
-                              <div class="imageWrapper">
-                                <div class="bottom10 merchImageWrapper merchlist">
-
-                                  <!--Merch Image-->
-                                  <img width="200" class="merchImage img-responsive"
-                                    src="https://www.uwbookstore.com/storeimages/11-1832105-2.png"
-                                    alt="Mechanical Engineering 231 Kit" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p class="merchTitle top0 textc lead" data-id="1832105">Mechanical Engineering 231 Kit</p>
-                            </a>
-                            <div class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p class="merchNumber"><span class="merchSKU">2077145 </span></p>
-
-                              <p class="merchPrice top5 bold"><span
-                                  class="merchPriceCurrent currentPrice1832105">$47.99</span></p>
-
-                              <p class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
                     </div>
-                    <div class="row">
-                      <div class="textc">
 
-                      </div>
+
+
+                    <div class="lcs-inventory-display-data force-hidden">
+                      <input type="hidden" class="lcs-inventory-display" data-id="637477" data-message="In Stock"
+                        data-textcolor="#6FC64F" data-orbcolor="#6FC64F" data-class="in-stock" />
+                      <input type="hidden" class="lcs-inventory-display" data-id="637478" data-message="Out of Stock"
+                        data-textcolor="#C10000" data-orbcolor="#C10000" data-class="out-of-stock" />
+                      <input type="hidden" class="lcs-inventory-display" data-id="637479" data-message="In Stock"
+                        data-textcolor="#6FC64F" data-orbcolor="#6FC64F" data-class="in-stock" />
+                      <input type="hidden" class="lcs-inventory-display" data-id="637480" data-message="In Stock"
+                        data-textcolor="#6FC64F" data-orbcolor="#6FC64F" data-class="in-stock" />
+                      <input type="hidden" class="lcs-inventory-display" data-id="637481" data-message="Out of Stock"
+                        data-textcolor="#C10000" data-orbcolor="#C10000" data-class="out-of-stock" />
+                    </div>
+                    <div class="inventory-display-wrapper long force-hidden">
+                      <svg class="inventory-display-orb" height="15" width="15" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="6" cx="7" cy="7" fill="" fill-opacity="0.5 " stroke="" />
+                      </svg>
+
                     </div>
                   </div>
+
+                  <p data-addedtocart="1349190" class="addedToCart merch-added-pill">
+                    <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                    <span class="merch-added-pill-text">Added</span>
+                  </p>
+                </div>
+
+                <input id="colorSelected" name="colorSelected" type="hidden" value="" /><input id="colorCodeSelected"
+                  name="colorCodeSelected" type="hidden" value="" /><input id="sizeSelected" name="sizeSelected"
+                  type="hidden" value="" /><input id="sizeCodeSelected" name="sizeCodeSelected" type="hidden"
+                  value="" /><input id="logoSelected" name="logoSelected" type="hidden" value="" /><input
+                  id="logoCodeSelected" name="logoCodeSelected" type="hidden" value="" /><input id="allThree"
+                  name="allThree" type="hidden" value="False" /><input id="noColor" name="noColor" type="hidden"
+                  value="True" /><input id="noSize" name="noSize" type="hidden" value="False" /><input id="noLogo"
+                  name="noLogo" type="hidden" value="True" /><input id="firstSelected" name="firstSelected"
+                  type="hidden" value="0" /><input id="showHex" name="showHex" type="hidden" value="True" /><input
+                  id="colorOne" name="colorOne" type="hidden" value="False" /><input id="sizeOne" name="sizeOne"
+                  type="hidden" value="False" /><input id="logoOne" name="logoOne" type="hidden" value="False" /><input
+                  id="typeselected" name="typeselected" type="hidden" value="0" />
+              </div>
+
+              <div class="col-12 border_top merchDescription padding0 bottom10">
+                <h2 class="descTitle bold">Product Description</h2>
+
+                <div Class="merchDesc">
+                  Get ready for game day with your University of Wisconsin long sleeve. "University of Wisconsin"
+                  and Bucky Badger is printed on the chest of the t-shirt. On the left sleeve a motion W and
+                  "Badgers" is printed in red. <br>Imported <br> 100% Cotton <span class="disco"></span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <div id="itemRanking" class="itemRanking top10">
+            <a class="pleaseLogin bottom10 displayb"
+              href="https://insitestore2.mbsbooks.com/uwmadison/LoginOptions?returnurl=/merchdetail?merchid=1349190#itemRanking">Please
+              Login to leave a ranking.</a>
+
+            <!--Start One Approved Comment-->
+          </div>
+          <div id="imageLightBox" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="imageLightBoxMain">
+                    <i class="bi bi-chevron-left imageLightBoxLeft" tabindex="0"></i>
+
+                    <div class="modalDetailImage" data-count="0">
+                      <img data-id="1" class="imageLightBoxBig img-responsive margin_auto" alt="" />
+                    </div>
+
+                    <i class="bi bi-chevron-right imageLightBoxRight" tabindex="0"></i>
+                  </div>
+
+                  <div class="modalDetailThumbnail textc mt-2"></div>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-bs-dismiss="modal">
+                    Close
+                  </button>
                 </div>
               </div>
             </div>
-            <div id="pagination-btm" class="text-center">
-              <ul class="pagination" style="visibility: visible; display: none;">
-
-                <li class="active"><a tabindex="0" class="hover_pointer pageNumber" data-buttoncount="1"
-                    data-pagecount="1">1</a></li>
-              </ul><select aria-label="Show number of items per page" id="merchResultsSelectID"
-                class="merchResultsSelect form-control form-select mx-auto" style="display: none;">
-                <option selected="" value="24" class="subject-option">24 Items Per Page</option>
-                <option value="48" class="subject-option">48 Items Per Page</option>
-                <option value="72" class="subject-option">72 Items Per Page</option>
-                <option value="96" class="subject-option">96 Items Per Page</option>
-              </select>
-            </div>
-
-
-            <!--MerchList Section-->
-
           </div>
-
-          <div id="cartType" class="modal fade" role="dialog" tabindex="0">
+          <div id="cartType" class="modal fade" role="dialog">
             <div class="modal-dialog">
-              <!-- Modal content-->
               <div class="modal-content">
                 <div class="modal-body cartTypeBody"></div>
               </div>
             </div>
           </div>
-          <div id="quickViewModal" class="modal fade" role="dialog" tabindex="0">
-            <div class="modal-dialog modal-lg">
-              <!-- Modal content-->
-              <div class="modal-content quickViewContent">
+
+          <div id="reportPostModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title">Report Comment</h3>
+                </div>
+
+                <div class="modal-body">
+                  <p>Are you sure you want to report this comment for inappropriate content?</p>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary reportCommentYes">Yes</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
               </div>
             </div>
           </div>
-          <div id="overlay">
-            <i id="merchSpinner" class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-          </div>
-          <div id="imageLightBox" class="modal fade" role="dialog" tabindex="0">
-            <div class="modal-dialog modal-lg">
+
+          <div id="notEnough" class="modal fade" role="dialog">
+            <div class="modal-dialog">
               <div class="modal-content">
+                <div class="modal-header"></div>
+
                 <div class="modal-body">
-                  <div class="row bottom10">
-                    <div class="col-md-1 col-sm-2 col-2 textl">
-                      <a class="imageLightBoxLeft" style="display: inline-block;"><img class="imageLeft"
-                          src="https://www.uwbookstore.com/RWD-IMG/chevLeft.png" alt="Left Arrow For Light Box"></a>
-                    </div>
-                    <div class="modalDetailImage textc col-md-10 col-sm-8 col-8" data-count="0">
-                      <img data-id="1" class="imageLightBoxBig img-responsive margin_auto" alt="">
-                    </div>
-                    <div class="col-md-1 col-sm-2 col-2 textr">
-                      <a class="imageLightBoxRight" style="display: inline-block;"><img class="imageRight"
-                          src="https://www.uwbookstore.com/RWD-IMG/chevRight.png" alt="Right Arrow For Light Box"></a>
-                    </div>
-                  </div>
-                  <div class="modalDetailThumbnail textc">
-                  </div>
+                  <p>This item requires more points than you have available.</p>
                 </div>
+
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-bs-dismiss="modal" tabindex="0">Close</button>
+                  <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
                 </div>
               </div>
+            </div>
+          </div>
+          <div id="itemFormModal" class="modal fade" role="dialog">
+            <input type="hidden" value="" id="itemFormButton" />
+            <input type="hidden" value="" id="itemFormType" />
+            <input type="hidden" value="" id="itemFormQty" />
+            <input type="hidden" value="" id="itemFormcolorDesc" />
+            <input type="hidden" value="" id="itemFormcolorValue" />
+            <input type="hidden" value="" id="itemFormlogoDesc" />
+            <input type="hidden" value="" id="itemFormlogoValue" />
+            <input type="hidden" value="" id="itemFormsizeDesc" />
+            <input type="hidden" value="" id="itemFormsizeValue" />
+            <input type="hidden" value="" id="itemFormTypeCode" />
+            <input type="hidden" value="" id="itemFormOldType" />
+            <input type="hidden" value="" id="itemFormOldTypeValue" />
+            <input type="hidden" value="" id="itemFormQuick" />
+            <input type="hidden" value="" id="itemFormSKU" />
+            <input type="hidden" value="" id="itemFormMerchImage" />
+            <input type="hidden" value="" id="itemFormCurrentPrice" />
+            <input type="hidden" value="" id="itemFormDriverName" />
+            <input type="hidden" value="" id="itemFormDriverDeposit" />
+            <input type="hidden" value="" id="itemFormDriverSKU" />
+            <input type="hidden" value="" id="itemFormDriverPrice" />
+            <input type="hidden" value="" id="itemFormDriverImage" />
+
+            <div Class="modal-dialog">
+              <!-- Modal content-->
+              <div Class="modal-content itemFormModalContent"></div>
             </div>
           </div>
         </form>
-
-
       </div>
     </div>
 
@@ -2211,7 +1845,8 @@
   <script type="text/javascript" src="./src/app.js"></script>
   <!-- <script src="./src/test.js"></script> -->
   <script src="./src/menu.js"></script>
-  <script src="./src/merch-list.js"></script>
+  <script src="./src/new-merch-detail.js"></script>
+  <script src="./src/tabs.js"></script>
   <!-- <script src="./src/merch-detail.js"></script> -->
   <!-- <script src="./src/merchandise.js"></script> -->
   <script>

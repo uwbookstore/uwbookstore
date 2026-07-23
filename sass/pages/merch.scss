@@ -1,8 +1,44 @@
 @use '../util/' as *;
 
-// Merch Detail page
-// Hide MBS heading
-.center > h1.page_header.bottom10.displayn,
-.center > h2.page_header.bottom10.displayn {
-  display: none;
+/***************
+    MERCH "ADDED TO CART" PILL
+***************/
+.merch-added-pill {
+  // display: none;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 6px 14px;
+  border-radius: 999px; /* the pill shape */
+  background: var(--bs-success, 'green');
+  color: var(--bs-white, 'white');
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1;
+  box-shadow: 0 2px 6px var(--c-black-t-20);
+  /* drop-in start state */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  pointer-events: none;
+}
+
+.merch-added-pill.is-visible {
+  opacity: 1;
+  transform: translateY(0); /* "drops down" from the button */
+}
+
+.merch-added-pill .bi {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .merch-added-pill,
+  .merch-added-pill.is-visible {
+    transform: none;
+    transition: opacity 0.15s ease;
+  }
 }

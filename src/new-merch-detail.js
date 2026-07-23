@@ -158,15 +158,27 @@ const thumbnails = document.querySelectorAll('a.merchThumbnail');
 const detailImgs = document.querySelectorAll('a.merchThumbnail img');
 const merchImage = document.querySelector('.merchImage');
 const merchDetailImage = document.querySelector('.merchDetailImage');
+const thumbnailWrapper = document.querySelector('.merchThumbnailWrapper');
+const merchButtons = document.querySelector('.merch-typecode-buttons');
 const gmPromo = document.querySelector('p.gmPromo');
 
-const disco = document.querySelector('disco');
+const disco = document.querySelector('.disco');
 
+const tabsHeader = document.querySelector('.tabs-container ul');
+const tabsContent = document.querySelector('.tabs__panels');
 const merchSuggested = document.querySelector('.merchSuggested');
 const suggestedItems = document.querySelectorAll('.suggestedItem');
 const itemRanking = document.getElementById('itemRanking');
 
 const disclaimerError = document.querySelector('p.merchDisclaimerError');
+const qtyInput = document.querySelector('.merchDetailQTY');
+
+const addToCartBtn = document.querySelector(
+  '.btn.btn-primary.merch-add-submit',
+);
+const addToCartTypes = document.querySelector(
+  'a.addToCartTypes.btn.btn-primary',
+);
 
 // Check for multiple images
 if (thumbnails.length > 0) {
@@ -232,6 +244,7 @@ if (thumbnails.length > 0) {
 }
 // HIDE ORIGINAL MERCH IMAGES BLOCK
 merchImage ? (merchImage.style.display = 'none') : '';
+thumbnailWrapper ? (thumbnailWrapper.style.display = 'none') : '';
 merchDetailImage ? (merchDetailImage.style.display = 'none') : '';
 // END OF IMAGE CONTAINER
 
@@ -345,6 +358,34 @@ infoBlock.innerHTML = `
   <strong>Item:</strong> ${prodSku}
   </div>
 `;
+
+// Append Quantity & Add to Cart button
+const addToCartField = document.createElement('div');
+addToCartField.id = 'add-qty';
+addToCartField.classList.add('flex', 'merch__detail-add');
+const qtyWrapper = document.createElement('div');
+qtyWrapper.className = 'merch__detail-qty';
+qtyWrapper.innerHTML = `<label for="merchQTY" class="sr-only">Quantity: </label>`;
+const btnWrapper = document.createElement('div');
+btnWrapper.className = 'merch__detail-add-btn';
+const merchSku = document.getElementById('merch-sku');
+
+if (!noAddCart) {
+  addToCartBtn
+    ? btnWrapper.append(addToCartBtn)
+    : addToCartTypes
+      ? btnWrapper.append(addToCartTypes)
+      : '';
+  qtyWrapper.append(qtyInput);
+  addToCartField.append(qtyWrapper);
+  btnWrapper.append(document.querySelector('p.addedToCart'));
+  addToCartField.append(btnWrapper);
+} else {
+  btnWrapper.append(noAddCart);
+  addToCartField.append(btnWrapper);
+  noAddCart.classList.add('mt-2', 'alert', 'alert-warning', 'text-center');
+}
+
 // Check if item is discontinued. If yes, show info in tabs
 const discoTab = document.createElement('li');
 discoTab.innerHTML = `
@@ -410,3 +451,13 @@ merchInfoWrapper.append(priceBlock);
 merchInfoWrapper.append(infoBlock);
 merchDisclaimer ? merchInfoWrapper.appendChild(merchDisclaimerHtml) : '';
 merchDisclaimer ? merchDisclaimerHtml.after(disclaimerError) : '';
+
+// if (!noAddCart) {
+//   logos ? merchInfoWrapper.appendChild(merchLogos) : '';
+//   colors ? merchInfoWrapper.appendChild(merchColors) : '';
+//   sizes ? merchInfoWrapper.appendChild(merchSizes) : '';
+//   singleItem ? merchInfoWrapper.appendChild(merchSizes) : '';
+//   select ? merchInfoWrapper.appendChild(merchSizes) : '';
+// }
+
+merchInfoWrapper.append(addToCartField);

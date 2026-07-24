@@ -1,3 +1,4 @@
+const mainItem = document.querySelector('.mainItem');
 const merchImageMain = document.querySelector('.merchImageMain');
 const merchImageMainTop = document.querySelector('.merchImageMain .top');
 const merchImageMainBottom = document.querySelector('.merchImageMain .bottom');
@@ -13,6 +14,19 @@ const productDescriptionBlock = document.querySelector('.merchDescription');
 const productDescription = document.querySelector('.merchDesc');
 priceBlock.after(productDescription);
 productDescriptionBlock.style.display = 'none';
+
+const merchSuggested = document.querySelector('.merchSuggested');
+const suggestedItems = document.querySelectorAll('.suggestedItem');
+
+const merchTypeCodes = document.querySelector('.merch-typecodes');
+const lcsInventoryDisplayData = document.querySelector(
+  '.lcs-inventory-display-data',
+);
+const lcsInventoryDisplayWrapper = document.querySelector(
+  '.inventory-display-wrapper',
+);
+merchTypeCodes.after(lcsInventoryDisplayData);
+merchTypeCodes.after(lcsInventoryDisplayWrapper);
 
 const disco = document.querySelector('.disco');
 
@@ -60,15 +74,16 @@ if (thumbnails.length > 0) {
     }
   });
 } else {
-  // TODO: FIX SINGLE IMAGE
   // Handle single image
   const merchImg = document.querySelector('img.merchDetailImage');
-  const merchImgs = document.querySelector('div#merch-imgs');
+  const imgWrapper = document.querySelector(
+    '.mainItem .row .col-sm-6:has(img)',
+  );
 
   const newImg = document.createElement('img');
   newImg.className = 'merch__detail-img';
 
-  if (merchImg?.getAttribute('src') === '/images/notavail.gif') {
+  if (merchImg?.getAttribute('src') === '/assets/img/error/not-available.gif') {
     newImg.src = 'https://i.univbkstr.com/img/misc/no-image.jpg';
     newImg.alt = 'Image not available';
   } else if (merchImg) {
@@ -77,8 +92,39 @@ if (thumbnails.length > 0) {
     newImg.setAttribute('role', 'presentation');
   }
 
-  merchImageMain.appendChild(newImg);
+  imgWrapper.appendChild(newImg);
 }
+
+// HANDLE SUGGESTED SELL ITEMS
+const otherSuggested = document.createElement('div');
+otherSuggested.innerHTML = `
+  <h2 class="heading__line-center">Other Suggested Items</h2>
+  <div id="suggested-grid" class="flex merch__card"></div>
+`;
+merchSuggested ? mainItem.after(otherSuggested) : '';
+merchSuggested.style.display = 'none';
+
+const suggestedGrid = document.getElementById('suggested-grid');
+
+suggestedItems.forEach((item, i) => {
+  const link = item.childNodes[3];
+  const image = item.childNodes[3].childNodes[3];
+  const name = item.childNodes[3].childNodes[7];
+  const price = item.childNodes[5];
+
+  item.classList.remove('col-sm-2', 'col-xs-6');
+  item.classList.add('merch__card-item');
+  link.id = i + 1;
+  link.classList.add('merch__card-link');
+  image.classList.remove('margin_auto');
+  image.classList.add('merch__card-img');
+  image.removeAttribute('width');
+  name.classList.add('merch__card-title');
+  price.classList.remove('center');
+  price.classList.add('merch__card-price');
+  suggestedGrid.appendChild(item);
+});
+
 // HIDE ORIGINAL MERCH IMAGES BLOCK
 merchImage ? (merchImage.style.display = 'none') : '';
 thumbnailWrapper ? (thumbnailWrapper.style.display = 'none') : '';

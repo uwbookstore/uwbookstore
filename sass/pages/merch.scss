@@ -91,6 +91,7 @@ h1.merchTitle,
 h2.merchTitle {
   margin: rem(15) auto;
   font-size: rem(24);
+  line-height: 1.2;
   font-style: italic;
   font-weight: 700;
   color: var(--bs-primary);
@@ -306,7 +307,7 @@ div[data-addon-host] {
   &-group {
     padding: rem(15);
     border-radius: rem(8);
-    border: rem(1) solid var(--bs-gray-200);
+    border: rem(1) solid var(--bs-gray-400);
   }
 
   &-item {
@@ -315,9 +316,39 @@ div[data-addon-host] {
     &-name {
       margin: 0;
     }
+
+    &-selected {
+      .indicator.bi-circle {
+        color: var(--bs-gray-600);
+      }
+    }
   }
 
   &-total-price {
     margin-block: rem(30) !important;
   }
+}
+
+.suggestedItem.merch__card-item {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+  text-align: center;
+
+  &:hover {
+    opacity: 0.7;
+    transition: opacity 0.25s ease-in-out;
+  }
+}
+
+.suggestedLink.merch__card-link {
+  text-decoration: none;
+
+  .suggestedName.merch__card-title {
+    font-weight: 700;
+    color: var(--bs-gray-dark);
+  }
+}
+
+.suggestedImg {
+  margin-inline: auto;
 }

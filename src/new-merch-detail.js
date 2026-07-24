@@ -25,6 +25,7 @@ const lcsInventoryDisplayData = document.querySelector(
 const lcsInventoryDisplayWrapper = document.querySelector(
   '.inventory-display-wrapper',
 );
+
 merchTypeCodes.after(lcsInventoryDisplayData);
 merchTypeCodes.after(lcsInventoryDisplayWrapper);
 
@@ -102,7 +103,7 @@ otherSuggested.innerHTML = `
   <div id="suggested-grid" class="flex merch__card"></div>
 `;
 merchSuggested ? mainItem.after(otherSuggested) : '';
-merchSuggested.style.display = 'none';
+merchSuggested ? (merchSuggested.style.display = 'none') : '';
 
 const suggestedGrid = document.getElementById('suggested-grid');
 
@@ -166,7 +167,7 @@ merchDisclaimerHtml.id = 'item-disclaimer';
 merchDisclaimerHtml.classList.add('alert', 'alert-warning');
 
 if (merchDisclaimerFormCheck) {
-  merchDisclaimerFormCheck.classList.remove('mt-3');
+  merchDisclaimerFormCheck.style.display = 'none';
   disclaimerLabel.appendChild(merchDisclaimer);
   disclaimerLabel.appendChild(disclaimerText);
   merchDisclaimerHtml.appendChild(disclaimerLabel);

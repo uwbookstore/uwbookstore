@@ -352,3 +352,23 @@ div[data-addon-host] {
 .suggestedImg {
   margin-inline: auto;
 }
+
+.inventory-display-wrapper.long.force-hidden {
+  display: flex !important;
+  block-size: rem(21);
+}
+
+#item-disclaimer {
+  margin: 0;
+}
+
+.form-check:empty {
+  display: none;
+}
+
+.inventory-display-wrapper:has(p.inventory-display-text:empty) {
+  .inventory-display-orb {
+    stroke: none;
+    fill: none;
+  }
+}

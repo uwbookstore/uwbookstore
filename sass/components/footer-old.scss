@@ -274,7 +274,7 @@
 
 .mail-list {
   background-image:
-    url(https://i.univbkstr.com/v4/css/img/light_noise_diagonal.png),
+    url(https://i.univbkstr.com/img/misc/light_noise_diagonal.png),
     linear-gradient(to top, rgba(202, 202, 202, 0.5), rgba(202, 202, 202, 0.8));
   border-top: rem(1) solid color-mix(in srgb, var(--bs-gray-400), #000 10%);
   padding: rem(30);
@@ -328,14 +328,14 @@
   }
 
   &-small {
-    background-image: url(https://i.univbkstr.com/v4/css/img/light_noise_diagonal.png);
+    background-image: url(https://i.univbkstr.com/img/misc/light_noise_diagonal.png);
     background-image:
       linear-gradient(
         to top,
         rgba(241, 241, 241, 0.1),
         rgba(241, 241, 241, 0.3)
       ),
-      url(https://i.univbkstr.com/v4/css/img/light_noise_diagonal.png);
+      url(https://i.univbkstr.com/img/misc/light_noise_diagonal.png);
     padding: rem(25);
     width: 100%;
     // margin: 1.5rem 0;

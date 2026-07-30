@@ -37,6 +37,9 @@
         display: block;
         max-width: 100%;
         height: auto;
+        border: rem(1) solid var(--bs-gray-500);
+        border-radius: rem(4);
+        padding: rem(4);
 
         &.flex-active {
           cursor: default;
@@ -73,6 +76,14 @@
     flex: 1 80%;
     order: 2;
   }
+}
+
+.merchDropdown-form .input-group.maxW-400-nm {
+  max-width: 100% !important;
+}
+
+.merch__detail-overflow {
+  display: none;
 }
 
 .merch__detail-img {
@@ -354,6 +365,11 @@ div[data-addon-host] {
 .inventory-display-wrapper.long.force-hidden {
   display: flex !important;
   block-size: rem(21);
+}
+
+div[data-merch-price-container] {
+  display: flex;
+  block-size: rem(30);
 }
 
 #item-disclaimer {

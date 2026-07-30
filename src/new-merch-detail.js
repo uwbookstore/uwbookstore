@@ -26,8 +26,10 @@ const lcsInventoryDisplayWrapper = document.querySelector(
   '.inventory-display-wrapper',
 );
 
-merchTypeCodes.after(lcsInventoryDisplayData);
-merchTypeCodes.after(lcsInventoryDisplayWrapper);
+lcsInventoryDisplayData ? merchTypeCodes.after(lcsInventoryDisplayData) : '';
+lcsInventoryDisplayWrapper
+  ? merchTypeCodes.after(lcsInventoryDisplayWrapper)
+  : '';
 
 const disco = document.querySelector('.disco');
 

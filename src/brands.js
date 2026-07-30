@@ -120,6 +120,11 @@ const brands = [
     link: 'Michael-Roger',
   },
   {
+    name: 'Peter Millar',
+    image: 'peterMillar.png',
+    link: 'Peter-Millar',
+  },
+  {
     name: 'Old Fashioned Golf',
     image: 'oldFashionedGolf.png',
     link: 'Old-Fashioned-Golf',

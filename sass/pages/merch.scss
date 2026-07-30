@@ -58,6 +58,7 @@
     }
   }
 }
+
 .no_show_large {
   display: none !important;
 }
@@ -95,10 +96,7 @@ h2.merchTitle {
   font-style: italic;
   font-weight: 700;
   color: var(--bs-primary);
-
-  @include breakpoint(medium) {
-    font-size: rem(20);
-  }
+  text-wrap: balance;
 }
 
 .merch-value--sku {
@@ -371,4 +369,16 @@ div[data-addon-host] {
     stroke: none;
     fill: none;
   }
+}
+
+.inventory-display-text {
+  font-weight: 500;
+}
+
+.inventory-display-text.in-stock {
+  color: var(--bs-success);
+}
+
+.inventory-display-text.out-of-stock {
+  color: var(--bs-danger);
 }

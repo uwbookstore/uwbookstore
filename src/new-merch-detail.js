@@ -26,6 +26,10 @@ const lcsInventoryDisplayWrapper = document.querySelector(
   '.inventory-display-wrapper',
 );
 
+const hiddenCartText = document.querySelector('.hiddenCartText');
+
+hiddenCartText ? hiddenCartText.classList.add('alert', 'alert-warning') : '';
+
 lcsInventoryDisplayData ? merchTypeCodes.after(lcsInventoryDisplayData) : '';
 lcsInventoryDisplayWrapper
   ? merchTypeCodes.after(lcsInventoryDisplayWrapper)

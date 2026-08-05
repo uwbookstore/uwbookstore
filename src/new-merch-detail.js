@@ -142,26 +142,33 @@ const additionalInfo = `
 
 mainItem.insertAdjacentHTML('afterend', additionalInfo);
 
+// Image variables
 const merchImageMain = document.querySelector('.merchImageMain');
 const merchImageMainTop = document.querySelector('.merchImageMain .top');
 const merchImageMainBottom = document.querySelector('.merchImageMain .bottom');
-
 const thumbnails = document.querySelectorAll('a.merchThumbnail');
 const detailImgs = document.querySelectorAll('a.merchThumbnail img');
 const merchImage = document.querySelector('.merchImage');
 const merchDetailImage = document.querySelector('.merchDetailImage');
 const thumbnailWrapper = document.querySelector('.merchThumbnailWrapper');
 
+const prodName = document.querySelector('.merchTitle')?.textContent || '';
 const priceBlock = document.querySelector('[data-merch-price-container]');
 const productDescriptionBlock = document.querySelector('.merchDescription');
 const productDescription = document.querySelector('.merchDesc');
 priceBlock.after(productDescription);
 productDescriptionBlock.style.display = 'none';
 
+const merchButtons = document.querySelectorAll(
+  '.btn.btn-default.merch-typecode-option',
+);
+console.log(merchButtons.length);
+
 const merchSuggested = document.querySelector('.merchSuggested');
 const suggestedItems = document.querySelectorAll('.suggestedItem');
-
+const merchTypecodeLabel = document.querySelector('.merch-typecode-label');
 const merchTypeCodes = document.querySelector('.merch-typecodes');
+const merchTypeCodeGroup = document.querySelector('.merch-typecode-group');
 const lcsInventoryDisplayData = document.querySelector(
   '.lcs-inventory-display-data',
 );
@@ -248,6 +255,97 @@ if (thumbnails.length > 0) {
   imgWrapper.appendChild(newImg);
 }
 
+const merchSizes = document.createElement('div');
+merchSizes.id = 'sizes';
+merchSizes.className = 'merch__detail-size';
+
+const sizeGuideDiv = document.createElement('span');
+sizeGuideDiv.className = 'merch__detail-size-label';
+sizeGuideDiv.textContent = 'Select |';
+
+// ADD SIZE CHART LINK TO PRODUCT AS NEEDED
+let sizeChartUrl, sizeChartBrand;
+const sizeChartLink = document.createElement('a');
+sizeChartLink.classList.add('merch__detail-size-link', 'gtmSizeTrack');
+
+if (prodName.toLowerCase().substring(0, 13) === 'the red shirt') {
+  sizeChartUrl = 'sizeChart/redShirt';
+  sizeChartBrand = 'The Red Shirt™';
+} else if (prodName.toLowerCase().substring(0, 8) === 'champion') {
+  sizeChartUrl = 'sizeChart/champion';
+  sizeChartBrand = 'Champion';
+} else if (prodName.toLowerCase().substring(0, 9) === 'game bibs') {
+  sizeChartUrl = 'sizeChart/gameBibs';
+  sizeChartBrand = 'Game Bibs';
+} else if (prodName.toLowerCase().substring(0, 8) === 'columbia') {
+  sizeChartUrl = 'sizeChart/columbia';
+  sizeChartBrand = 'Columbia';
+} else if (prodName.toLowerCase().substring(0, 12) === 'under armour') {
+  sizeChartUrl = 'sizeChart/ua';
+  sizeChartBrand = 'Under Armour';
+} else if (prodName.toLowerCase().substring(0, 7) === 'blue 84') {
+  sizeChartUrl = 'sizeChart/blue84';
+  sizeChartBrand = 'Blue 84';
+} else if (prodName.toLowerCase().substring(0, 13) === 'for bare feet') {
+  sizeChartUrl = 'sizeChart/fbf';
+  sizeChartBrand = 'For Bare Feet';
+} else if (prodName.toLowerCase().substring(0, 12) === 'college kids') {
+  sizeChartUrl = 'sizeChart/cllgKids';
+  sizeChartBrand = 'College Kids';
+} else if (
+  prodName.toLowerCase().substring(0, 13) === '&#39;47 brand' ||
+  prodName.toLowerCase().substring(0, 9) === "'47 brand"
+) {
+  sizeChartUrl = 'sizeChart/47Brand';
+  sizeChartBrand = "'47 Brand";
+} else if (prodName.toLowerCase().substring(0, 13) === 'all star dogs') {
+  sizeChartUrl = 'sizeChart/allStarDog';
+  sizeChartBrand = 'All Star Dogs';
+} else if (prodName.toLowerCase().substring(0, 7) === 'zoozatz') {
+  sizeChartUrl = 'sizeChart/zooZatz';
+  sizeChartBrand = 'ZooZatz';
+} else if (prodName.toLowerCase().substring(0, 10) === 'boxercraft') {
+  sizeChartUrl = 'sizeChart/boxercraft';
+  sizeChartBrand = 'Boxercraft';
+} else if (prodName.toLowerCase().substring(0, 10) === "lands' end") {
+  sizeChartUrl = 'sizeChart/landsEnd';
+  sizeChartBrand = "Lands' End";
+} else if (prodName.toLowerCase().substring(0, 6) === 'league') {
+  sizeChartUrl = 'sizeChart/league';
+  sizeChartBrand = 'League';
+} else if (prodName.toLowerCase().substring(0, 7) === 'vantage') {
+  sizeChartUrl = 'sizeChart/vantage/update.html';
+  sizeChartBrand = 'Vantage';
+} else if (prodName.toLowerCase().substring(0, 8) === 'kadyluxe') {
+  sizeChartUrl = 'sizeChart/kadyluxe';
+  sizeChartBrand = 'KadyLuxe';
+} else if (prodName.toLowerCase().substring(0, 12) === 'peter millar') {
+  sizeChartUrl = 'sizeChart/peterMillar';
+  sizeChartBrand = 'peterMillar';
+} else if (
+  prodName.toLowerCase().substring(0, 30) === 'little earth wisconsin pet hat'
+) {
+  sizeChartUrl = 'sizeChart/littleEarth';
+  sizeChartBrand = 'Little Earth';
+} else if (
+  (prodName.indexOf('Hat') >= 0 || prodName.indexOf('Visor') >= 0) &&
+  merchSizes &&
+  prodName.toLowerCase().substring(0, 6) === 'legacy'
+) {
+  sizeChartUrl = 'sizeChart/legacy';
+  sizeChartBrand = 'Legacy Hat';
+} else {
+  sizeChartUrl = 'sizeChart';
+  sizeChartBrand = '';
+}
+sizeChartLink.href = `https://i.univbkstr.com/${sizeChartUrl}`;
+sizeChartLink.textContent = `Size Guide`;
+sizeChartLink.title = `${sizeChartBrand} Size Guide`;
+
+merchTypeCodeGroup ? merchTypecodeLabel.after(sizeChartLink) : '';
+merchTypeCodeGroup ? merchTypecodeLabel.after(sizeGuideDiv) : '';
+merchTypecodeLabel ? (merchTypecodeLabel.style.display = 'none') : '';
+
 // HANDLE SUGGESTED SELL ITEMS
 const otherSuggested = document.createElement('div');
 otherSuggested.innerHTML = `
@@ -285,26 +383,6 @@ merchDetailImage ? (merchDetailImage.style.display = 'none') : '';
 merchImageMainTop ? (merchImageMainTop.style.display = 'none') : '';
 merchImageMainBottom ? (merchImageMainBottom.style.display = 'none') : '';
 // END OF IMAGE CONTAINER
-
-$('.flexslider').flexslider({
-  animation: 'fade',
-  controlNav: 'thumbnails',
-  directionNav: false,
-  slideshow: false,
-});
-
-$('#toggle').click(function () {
-  const elem = $('#toggle').text();
-  if (elem === 'More Info') {
-    //Stuff to do when btn is in the read more state
-    $('#toggle').text('Read Less');
-    $('.merch__detail-overflow').slideDown();
-  } else {
-    //Stuff to do when btn is in the read less state
-    $('#toggle').text('More Info');
-    $('.merch__detail-overflow').slideUp();
-  }
-});
 
 // DISCLAIMERS
 const merchDisclaimerFormCheck = document.querySelector('.form-check.mt-3');
@@ -413,4 +491,41 @@ if (itemRanking) {
 
   tabsHeader.append(ratingsTab);
   tabsContent.append(ratingsDiv);
+}
+
+$('.flexslider').flexslider({
+  animation: 'fade',
+  controlNav: 'thumbnails',
+  directionNav: false,
+  slideshow: false,
+});
+
+$('#toggle').click(function () {
+  const elem = $('#toggle').text();
+  if (elem === 'More Info') {
+    //Stuff to do when btn is in the read more state
+    $('#toggle').text('Read Less');
+    $('.merch__detail-overflow').slideDown();
+  } else {
+    //Stuff to do when btn is in the read less state
+    $('#toggle').text('More Info');
+    $('.merch__detail-overflow').slideUp();
+  }
+});
+
+// Size charts colorbox
+$('.merch__detail-size-link').colorbox({
+  current: '{current} of {total}',
+  rel: 'merch__detail-size-link',
+  iframe: true,
+  width: '75%',
+  height: '90%',
+});
+
+if (window.matchMedia) {
+  // Establishing media check
+  const width700Check = window.matchMedia('(max-width: 700px)');
+  if (width700Check.matches) {
+    $.colorbox.remove();
+  }
 }

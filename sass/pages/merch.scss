@@ -338,6 +338,19 @@ div[data-addon-host] {
   }
 }
 
+.merch__detail-size {
+  &-link {
+    &:link,
+    &:visited {
+      text-decoration: underline;
+      font-size: rem(14);
+      text-transform: lowercase;
+      margin-inline-start: rem(8);
+      color: var(--bs-gray-dark);
+    }
+  }
+}
+
 .suggestedItem.merch__card-item {
   opacity: 1;
   transition: opacity 0.25s ease-in-out;

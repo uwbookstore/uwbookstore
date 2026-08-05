@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $(
-    '<div class="modal fade" id="dorm-warning" tabindex="-1" role="dialog" aria-labelledby="dorm-warningLabel"></div>'
+    '<div class="modal fade" id="dorm-warning" tabindex="-1" role="dialog" aria-labelledby="dorm-warningLabel"></div>',
   ).appendTo('body');
   $('#dorm-warning').html(
     [
@@ -13,8 +13,8 @@ $(document).ready(function () {
           </div>
           <div class="modal-body">
           <div class="alert alert-danger" role="alert">
-            <em class="fa fa-exclamation-triangle"></em> Must be a dorm or apartment resident to use dorm/apartment delivery.<br>If you are not a dorm/apartment resident, and select this delivery option, your order will be changed to pick up at 711 State Street.<br><br><strong>Orders are currently scheduled to be delivered to the specified Front Desks on January 20<sup>th</sup> and then once per day, M-F, until February 2<sup>nd</sup>. The Desk will notify you via email when your package has arrived at the Mail Desk. You can then pick up during normal Desk hours.</div>
-            <p>Please make sure to include your dorm or apartment, and room number in your address. You may edit your <a href="https://secure2.mbsbooks.com/AddressBook?s=www.uwbookstore.com">address here</a>.</p>
+            <em class="fa fa-exclamation-triangle"></em> Must be a dorm or apartment resident to use dorm/apartment delivery.<br>If you are not a dorm/apartment resident, and select this delivery option, your order will be changed to pick up at 711 State Street.<br><br><strong>Orders are currently scheduled to be delivered to the specified Front Desks on August 31<sup>st</sup> and then once per day, M-F, until September 14<sup>th</sup>. The Desk will notify you via email when your package has arrived at the Mail Desk. You can then pick up during normal Desk hours.</div>
+            <p>Please make sure to include your dorm or apartment, and room number in your address. You may edit your <a href="https://secure2.mbsbooks.com/AddressBook?s=text.uwbookstore.com">address here</a>.</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -22,7 +22,7 @@ $(document).ready(function () {
         </div>
       </div>
       `,
-    ].join('\n')
+    ].join('\n'),
   );
 
   $('#studentIDText')
@@ -69,7 +69,7 @@ $(document).ready(function () {
         break;
       case '2155':
         $(
-          '<div class="alert alert-danger" role="alert"><em class="fa fa-exclamation-triangle"></em> Be aware that the Health Sciences Learning Center is Badge Access only at this time.</div>'
+          '<div class="alert alert-danger" role="alert"><em class="fa fa-exclamation-triangle"></em> Be aware that the Health Sciences Learning Center is Badge Access only at this time.</div>',
         ).insertAfter('select#selectedMethod');
         break;
       default:

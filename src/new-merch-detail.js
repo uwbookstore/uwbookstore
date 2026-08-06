@@ -162,7 +162,6 @@ productDescriptionBlock.style.display = 'none';
 const merchButtons = document.querySelectorAll(
   '.btn.btn-default.merch-typecode-option',
 );
-console.log(merchButtons.length);
 
 const merchSuggested = document.querySelector('.merchSuggested');
 const suggestedItems = document.querySelectorAll('.suggestedItem');

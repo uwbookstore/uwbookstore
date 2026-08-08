@@ -162,6 +162,8 @@ productDescriptionBlock.style.display = 'none';
 const merchButtons = document.querySelectorAll(
   '.btn.btn-default.merch-typecode-option',
 );
+const merchSelectError = document.querySelector('[data-merch-type-error]');
+merchSelectError ? merchSelectError.classList.add('alert', 'alert-danger') : '';
 
 const merchSuggested = document.querySelector('.merchSuggested');
 const suggestedItems = document.querySelectorAll('.suggestedItem');

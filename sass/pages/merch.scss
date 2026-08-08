@@ -351,6 +351,14 @@ div[data-addon-host] {
   }
 }
 
+.merchSelectError {
+  position: absolute;
+  margin: 0;
+  bottom: 10%;
+  right: 0;
+  z-index: 100;
+}
+
 .suggestedItem.merch__card-item {
   opacity: 1;
   transition: opacity 0.25s ease-in-out;

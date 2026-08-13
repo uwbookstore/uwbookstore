@@ -82,10 +82,10 @@
       }
     }
 
-    &:hover {
-      text-decoration: none;
-      color: var(--bs-primary);
-    }
+    // &:hover {
+    //   text-decoration: none;
+    //   color: var(--bs-primary);
+    // }
   }
 
   @include breakpoint(medium) {

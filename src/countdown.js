@@ -1,51 +1,10 @@
-const months = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
-const weekdays = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-];
-
 const countdownWrapper = document.querySelector('.countdown__wrapper');
 const items = document.querySelectorAll('.timer__box p');
 
-const centralTarget = new Date('2025-11-08T14:30:00');
-const targetInCentral = new Date(
-  centralTarget.toLocaleDateString('en-US', { timeZone: 'America/Chicago' }),
-);
+// const centralTarget = new Date('2026-09-06T18:30:00');
+const targetInCentral = new Date(Date.UTC(2026, 8, 6, 23, 30, 0));
+console.log(targetInCentral);
 const futureTime = targetInCentral.getTime();
-
-// const displayDate = new Date(
-//   centralTarget.toLocaleString('en-US', { timeZone: 'America/Chicago' })
-// );
-// const year = displayDate.getFullYear();
-// const month = months[displayDate.getMonth()];
-// const weekday = weekdays[displayDate.getDay()];
-// const date = displayDate.getDate();
-// const hours = displayDate.getHours();
-// const minutes = displayDate.getMinutes();
-
-// console.log(
-//   `Countdown target: ${weekday}, ${month} ${date}, ${year} ${hours}:${minutes
-//     .toString()
-//     .padStart(2, '0')} (Central Time)`
-// );
 
 const getRemainingTime = () => {
   const now = new Date().getTime();

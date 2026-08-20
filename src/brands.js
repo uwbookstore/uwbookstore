@@ -165,7 +165,7 @@ if (brandsContainer) {
     const { name, image, link } = brand;
     brandItem.innerHTML = `
     <a href="${linkURL}${link}" class="merch__card-link">
-      <img src="${imgURL}${image}" class="merch__card-img img-fluid d-block mx-auto" role="presentation">
+      <img src="${imgURL}${image}" class="merch__card-img img-fluid d-block mx-auto" role="presentation" width="200" height="200">
       <span class="merch__card-title">${name}</span>
     </a>
   `;
@@ -181,7 +181,8 @@ if (homeBrandsContainer) {
     const { name, image, link } = brand;
     brandItem.innerHTML = `
     <a href="${linkURL}${link}">
-      <img src="${imgURL}${image}" alt="${name}" class="img-fluid d-block" />
+      <img src="${imgURL}${image}" alt="${name}" class="img-fluid d-block" width="200" height="200">
+      <span class="sr-only">${name}</span>
     </a>
   `;
     homeBrandsContainer.appendChild(brandItem);

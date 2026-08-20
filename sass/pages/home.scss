@@ -972,10 +972,6 @@
   transition: all 0.25s ease-in-out;
   border-radius: rem(5);
 
-  &:link,
-  &:visited {
-  }
-
   &:hover {
     background-color: var(--bs-primary);
     border-color: var(--bs-primary);
@@ -987,8 +983,8 @@
   &:active:hover,
   &:focus,
   &:active:focus {
-    background-color: color-mix(in srgb, var(--bs-primary), #000 4%);
-    border-color: color-mix(in srgb, var(--bs-primary), #000 5%);
+    background-color: hsl(from var(--bs-primary) h s 35%);
+    border-color: hsl(from var(--bs-primary) h s 30%);
     text-decoration: none;
     color: var(--bs-white);
   }

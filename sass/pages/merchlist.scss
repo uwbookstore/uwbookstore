@@ -492,7 +492,7 @@ p.merchPrice.red {
 li.attribute {
   a {
     cursor: default;
-    color: color-mix(in srgb, var(--bs-gray-600), #000 5%);
+    color: hsl(from var(--bs-gray-600) h s 44%);
 
     &:hover {
       text-decoration: none;

@@ -21,7 +21,7 @@
     font-size: rem(16);
     background-color: var(--bs-primary);
     color: var(--bs-white);
-    text-shadow: 0 rem(1) 0 color-mix(in srgb, var(--bs-gray-dark), #000 5%);
+    text-shadow: 0 rem(1) 0 hsl(from var(--bs-gray-dark) h s 15%);
     font-weight: 700;
     text-transform: uppercase;
 

@@ -32,7 +32,7 @@ select.form-control {
 
   &-light {
     background-color: var(--bs-gray-100);
-    border-color: color-mix(in srgb, var(--bs-gray-100), #000 10%);
+    border-color: hsl(from var(--bs-gray-100) h s 90%);
   }
 }
 

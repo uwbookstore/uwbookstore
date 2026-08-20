@@ -133,13 +133,10 @@
     text-decoration: none;
     transition: all 0.25s ease-in-out;
 
-    &:hover {
-      background-color: color-mix(
-        in srgb,
-        var(--bs-primary),
-        #000 20%
-      ) !important;
-      border-color: color-mix(in srgb, var(--bs-primary), #000 25%);
+    &:hover,
+    &:focus-visible {
+      background-color: hsl(from var(--bs-primary) h s 32%) !important;
+      border-color: hsl(from var(--bs-primary) h s 28%);
       text-decoration: none;
       transition: all 0.25s ease-in-out;
       color: var(--bs-white);
@@ -149,8 +146,8 @@
     &:active:hover,
     &:focus,
     &:active:focus {
-      background-color: color-mix(in srgb, var(--bs-primary), #000 4%);
-      border-color: color-mix(in srgb, var(--bs-primary), #000 5%);
+      background-color: hsl(from var(--bs-primary) h s 32%) !important;
+      border-color: hsl(from var(--bs-primary) h s 28%);
       text-decoration: none;
       color: var(--bs-white);
       transition: all 0.25s ease-in-out;
@@ -232,7 +229,7 @@ fieldset:disabled .btn {
     font-weight: 700;
     color: var(--bs-white);
     text-decoration: none;
-    background-color: color-mix(in srgb, var(--bs-gray-dark), #000 5%);
+    background-color: hsl(from var(--bs-gray-dark) h s 5%);
     padding: rem(10);
     font-size: rem(38);
     transition: all 0.2s ease;

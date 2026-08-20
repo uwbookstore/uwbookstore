@@ -6,7 +6,7 @@
 
   &__gray {
     background-color: var(--bs-gray-100);
-    border: rem(1) solid color-mix(in srgb, var(--bs-gray-100), #000 5%);
+    border: rem(1) solid hsl(from var(--bs-gray-100) h s 95%);
     margin-block-end: rem(20);
     padding: rem(20);
 
@@ -29,7 +29,7 @@
   }
 
   &__black {
-    background-color: color-mix(in srgb, var(--bs-gray-100), #000 8%);
+    background-color: hsl(from var(--bs-gray-100) h s 98%);
     color: var(--bs-white);
     padding: rem(20);
   }
@@ -46,7 +46,7 @@
     &-ubs {
       color: var(--bs-white);
       background-color: var(--bs-primary);
-      border-color: color-mix(in srgb, var(--bs-primary), #000 10%);
+      border-color: hsl(from var(--bs-primary) h s 35%);
       padding: rem(5) rem(1.5);
       margin-block-end: rem(20);
       font-weight: normal;

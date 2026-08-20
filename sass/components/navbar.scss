@@ -82,7 +82,7 @@
           &:hover,
           &:active,
           &:focus {
-            background-color: color-mix(in srgb, var(--bs-gray-300), #000 5%);
+            background-color: hsl(from var(--bs-gray-300) h s 85%);
             transition: all 0.25s ease-in-out;
             text-decoration: none;
           }
@@ -92,7 +92,7 @@
           &.open {
             > a {
               color: var(--bs-white);
-              background-color: color-mix(in srgb, var(--bs-primary), #000 5%);
+              background-color: hsl(from var(--bs-primary) h s 35%);
             }
           }
           > a {
@@ -111,14 +111,14 @@
             &:active,
             &:focus {
               color: var(--bs-white);
-              background-color: color-mix(in srgb, var(--bs-primary), #000 5%);
+              background-color: hsl(from var(--bs-primary) h s 35%);
             }
           }
 
           &:hover,
           &:active,
           &:focus {
-            background-color: color-mix(in srgb, var(--bs-primary), #000 5%);
+            background-color: hsl(from var(--bs-primary) h s 35%);
           }
         }
       }
@@ -341,7 +341,7 @@
 
       &:hover {
         text-decoration: none;
-        background-color: color-mix(in srgb, var(--bs-gray-300), #000 5%);
+        background-color: hsl(from var(--bs-gray-300) h s 85%);
       }
 
       @include breakpoint(menu) {

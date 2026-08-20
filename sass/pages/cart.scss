@@ -68,13 +68,10 @@ a.paymentBilling-change {
   color: var(--bs-gray-dark);
   font-weight: 700;
   text-align: center;
-  &:link,
-  &:visited {
-  }
 
   &:hover {
-    background-color: color-mix(in srgb, var(--bs-info), #000 10%);
-    border-color: color-mix(in srgb, var(--bs-info), #000 12%);
+    background-color: hsl(from var(--bs-info) h s 45%);
+    border-color: hsl(from var(--bs-info) h s 42%);
     color: var(--bs-white);
   }
 
@@ -82,8 +79,8 @@ a.paymentBilling-change {
   &:active:hover,
   &:focus,
   &:active:focus {
-    background-color: color-mix(in srgb, var(--bs-info), #000 8%);
-    border-color: color-mix(in srgb, var(--bs-info), #000 10%);
+    background-color: hsl(from var(--bs-info) h s 46%);
+    border-color: hsl(from var(--bs-info) h s 44%);
     color: var(--bs-white);
   }
 }

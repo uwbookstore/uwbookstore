@@ -16,7 +16,7 @@
 .carousel-control-next,
 .carousel-control.left,
 .carousel-control.right {
-  color: color-mix(in srgb, var(--bs-black), #000 10%);
+  color: hsl(from var(--bs-black) h s 90%);
   background-image: none;
   opacity: 1;
   width: 10%;

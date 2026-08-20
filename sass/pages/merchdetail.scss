@@ -130,7 +130,7 @@ span.btn-default.typeSelected {
       .message_merch_promo {
         padding: rem(10);
         margin-block-end: rem(15);
-        border: rem(1) solid color-mix(in srgb, var(--bs-success), #000 20%);
+        border: rem(1) solid hsl(from var(--bs-success) h s 42%);
       }
     }
 

@@ -211,7 +211,7 @@
         &:visited {
           display: inline-block;
           padding: rem(5);
-          color: color-mix(in srgb, var(--bs-gray-dark), #fff 10%);
+          color: hsl(from var(--bs-gray-dark) h s 25%);
           transition: color 0.25s ease-in-out;
 
           &:hover {

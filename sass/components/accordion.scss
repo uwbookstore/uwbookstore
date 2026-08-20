@@ -38,7 +38,7 @@
 
     &:focus,
     &:hover {
-      background-color: color-mix(in srgb, var(--bs-gray-100), #000 3%);
+      background-color: hsl(from var(--bs-gray-100) h s 97%);
     }
 
     &:focus .Accordion-title {

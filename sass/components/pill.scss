@@ -1,0 +1,59 @@
+@use '../util' as *;
+
+.pill {
+  --pill-bg: var(--bs-white);
+  --pill-bdr: hsl(from var(--bs-black) h s 85%);
+  --pill-clr: hsl(from var(--bs-black) h s 25%);
+
+  max-width: fit-content;
+  border-radius: 100vw;
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-bdr);
+  color: var(--pill-clr);
+  padding: rem(3.2) rem(10);
+  font-weight: 700;
+  font-size: rem(13);
+  line-height: 1.45;
+  margin-block-end: rem(3);
+
+  &__success {
+    --pill-bg: hsl(from var(--bs-success) h s 92%);
+    --pill-bdr: hsl(from var(--bs-success) h s 85%);
+    --pill-clr: hsl(from var(--bs-success) h s 28%);
+  }
+
+  &__info {
+    --pill-bg: hsl(from var(--bs-info) h s 92%);
+    --pill-bdr: hsl(from var(--bs-info) h s 85%);
+    --pill-clr: hsl(from var(--bs-info) h s 28%);
+  }
+
+  &__warning {
+    --pill-bg: hsl(from var(--bs-warning) h s 92%);
+    --pill-bdr: hsl(from var(--bs-warning) h s 85%);
+    --pill-clr: hsl(from var(--bs-warning) h s 22%);
+  }
+
+  &__danger {
+    --pill-bg: hsl(from var(--bs-danger) h s 92%);
+    --pill-bdr: hsl(from var(--bs-danger) h s 85%);
+    --pill-clr: hsl(from var(--bs-danger) h s 40%);
+  }
+}
+
+.merch-value--gm {
+  --pill-bg: hsl(from var(--bs-danger) h s 92%);
+  --pill-bdr: hsl(from var(--bs-danger) h s 85%);
+  --pill-clr: hsl(from var(--bs-danger) h s 40%);
+
+  max-width: fit-content;
+  border-radius: 100vw;
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-bdr);
+  color: var(--pill-clr);
+  padding: rem(3.2) rem(10);
+  font-weight: 700;
+  font-size: rem(13);
+  line-height: 1.45;
+  margin-block-end: rem(3);
+}

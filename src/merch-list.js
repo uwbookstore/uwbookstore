@@ -12,11 +12,13 @@ const merchResultsSelect = document.querySelector('select.merchResultsSelect');
 const pagination = document.querySelector('ul.pagination');
 const merchDiscount = document.querySelectorAll('.merchDiscount');
 
-merchDiscount.forEach((item) => {
-  if (item.textContent === 'Buy 1 Get 50 Percent Off') {
-    item.textContent = 'Buy One, Get One 50% Off';
-  }
-});
+if (merchDiscount) {
+  merchDiscount.forEach((item) => {
+    if (item.textContent === 'Buy 1 Get 50 Percent Off') {
+      item.textContent = 'Buy One, Get One 50% Off';
+    }
+  });
+}
 
 // Create new div for no items found
 const noResults = document.createElement('div');

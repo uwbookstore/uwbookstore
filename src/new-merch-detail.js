@@ -165,6 +165,12 @@ const merchButtons = document.querySelectorAll(
 const merchSelectError = document.querySelector('[data-merch-type-error]');
 merchSelectError ? merchSelectError.classList.add('alert', 'alert-danger') : '';
 
+const merchDiscount = document.querySelector('.merch-value.merch-value--gm');
+
+if (merchDiscount.textContent === 'Buy 1 Get 50 Percent Off') {
+  merchDiscount.textContent = 'Buy One, Get One 50% Off';
+}
+
 const merchSuggested = document.querySelector('.merchSuggested');
 const suggestedItems = document.querySelectorAll('.suggestedItem');
 const merchTypecodeLabel = document.querySelector('.merch-typecode-label');

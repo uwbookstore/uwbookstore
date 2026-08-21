@@ -87,12 +87,20 @@ p {
 
 a {
   color: #0054ad;
-  text-decoration: none;
+  text-decoration: underline;
   transition: all 0.25s ease-in-out;
 
+  &:has(p.dynamicLink) {
+    text-decoration: none;
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+
   &:hover,
-  &:focus {
-    text-decoration: underline;
+  &:focus-visible {
+    color: hsl(from var(--bs-primary) h s 35%);
   }
 }
 

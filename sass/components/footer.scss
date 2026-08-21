@@ -89,6 +89,7 @@
       font-weight: 400;
       line-height: rem(36);
       letter-spacing: rem(1);
+      text-decoration: none;
 
       em.fa {
         margin-inline-start: rem(10);
@@ -247,6 +248,11 @@
 
     a {
       color: var(--bs-gray-400);
+
+      &:hover,
+      &:focus-visible {
+        color: hsl(from var(--bs-primary) h s 35%);
+      }
     }
 
     @include breakpoint(small) {
@@ -383,6 +389,8 @@
 
       a {
         color: inherit;
+        text-decoration: none;
+
         sup {
           font-size: rem(12);
           color: var(--bs-secondary);
@@ -394,6 +402,7 @@
         }
 
         &:hover {
+          color: hsl(from var(--bs-primary) h s 35%);
           text-decoration: none;
         }
       }

@@ -743,19 +743,6 @@ if (bookSearchParent) {
   bookSearchParent.appendChild(cardColumn);
 }
 
-// Fix MBS default messages
-const merchDiscountValue = document.querySelectorAll(
-  '.merch-value.merch-value--gm',
-);
-
-if (merchDiscountValue) {
-  merchDiscountValue.forEach((item) => {
-    if (item.textContent === 'Buy 1 Get 50 Percent Off') {
-      item.textContent = 'Buy One, Get One 50% Off';
-    }
-  });
-}
-
 // TODO: look into below
 // $('.dropdown-toggle').click(function (e) {
 //   e.preventDefault();

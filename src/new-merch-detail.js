@@ -165,6 +165,25 @@ const merchButtons = document.querySelectorAll(
 const merchSelectError = document.querySelector('[data-merch-type-error]');
 merchSelectError ? merchSelectError.classList.add('alert', 'alert-danger') : '';
 
+// Fix MBS default messages
+const merchDiscountValue = document.querySelectorAll(
+  '.merch-value.merch-value--gm',
+);
+
+const merchDiscountInfo = document.createElement('div');
+merchDiscountInfo.classList.add('pill', 'pill__info');
+
+if (merchDiscountValue) {
+  merchDiscountValue.forEach((item) => {
+    if (item.textContent === 'Buy 1 Get 50 Percent Off') {
+      item.textContent = 'Buy One, Get One 50% Off';
+    }
+    merchDiscountInfo.textContent =
+      'Discounts applied will not be viewable until the end of checkout.';
+    item.after(merchDiscountInfo);
+  });
+}
+
 const merchSuggested = document.querySelector('.merchSuggested');
 const suggestedItems = document.querySelectorAll('.suggestedItem');
 const merchTypecodeLabel = document.querySelector('.merch-typecode-label');

@@ -7,6 +7,7 @@
   --callout-bdr-rad: 4px;
 
   display: flex;
+  align-items: center;
   border-radius: var(--callout-bdr-rad);
   background: var(--callout-bg);
   color: var(--callout-clr);
@@ -15,10 +16,14 @@
   font-weight: 700;
   font-size: rem(16);
   line-height: 1.45;
-  margin-block-end: rem(10);
+  margin-block-start: rem(15);
 
   &.center {
     margin-inline: auto;
+  }
+
+  &.fw-4 {
+    font-weight: 400;
   }
 
   &.fit-content {

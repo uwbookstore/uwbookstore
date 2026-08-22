@@ -177,10 +177,10 @@ if (merchDiscountValue) {
   merchDiscountValue.forEach((item) => {
     if (item.textContent === 'Buy 1 Get 50 Percent Off') {
       item.textContent = 'Buy One, Get One 50% Off';
+      merchDiscountInfo.textContent =
+        'Discounts applied will not be viewable until the end of checkout.';
+      item.after(merchDiscountInfo);
     }
-    merchDiscountInfo.textContent =
-      'Discounts applied will not be viewable until the end of checkout.';
-    item.after(merchDiscountInfo);
   });
 }
 
@@ -414,7 +414,7 @@ const disclaimerText = document.createElement('span');
 
 const merchDisclaimerHtml = document.createElement('div');
 merchDisclaimerHtml.id = 'item-disclaimer';
-merchDisclaimerHtml.classList.add('alert', 'alert-warning');
+merchDisclaimerHtml.classList.add('callout', 'callout-warning', 'fw-4');
 
 if (merchDisclaimerFormCheck) {
   merchDisclaimerFormCheck.style.display = 'none';

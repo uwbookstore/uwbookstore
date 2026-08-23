@@ -163,7 +163,9 @@ const merchButtons = document.querySelectorAll(
   '.btn.btn-default.merch-typecode-option',
 );
 const merchSelectError = document.querySelector('[data-merch-type-error]');
-merchSelectError ? merchSelectError.classList.add('alert', 'alert-danger') : '';
+merchSelectError
+  ? merchSelectError.classList.add('callout', 'callout-danger', 'fit-content')
+  : '';
 
 // Fix MBS default messages
 const merchDiscountValue = document.querySelectorAll(
@@ -198,7 +200,9 @@ const lcsInventoryDisplayWrapper = document.querySelector(
 
 const hiddenCartText = document.querySelector('.hiddenCartText');
 
-hiddenCartText ? hiddenCartText.classList.add('alert', 'alert-warning') : '';
+hiddenCartText
+  ? hiddenCartText.classList.add('callout', 'callout-warning', 'fit-content')
+  : '';
 
 lcsInventoryDisplayData ? merchTypeCodes.after(lcsInventoryDisplayData) : '';
 lcsInventoryDisplayWrapper
@@ -414,7 +418,7 @@ const disclaimerText = document.createElement('span');
 
 const merchDisclaimerHtml = document.createElement('div');
 merchDisclaimerHtml.id = 'item-disclaimer';
-merchDisclaimerHtml.classList.add('callout', 'callout-warning', 'fw-4');
+merchDisclaimerHtml.classList.add('callout', 'callout-warning');
 
 if (merchDisclaimerFormCheck) {
   merchDisclaimerFormCheck.style.display = 'none';

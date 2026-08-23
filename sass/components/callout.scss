@@ -6,14 +6,14 @@
   --callout-bdr: hsl(from var(--bs-black) h s 85%);
   --callout-bdr-rad: 4px;
 
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   border-radius: var(--callout-bdr-rad);
   background: var(--callout-bg);
   color: var(--callout-clr);
   border: 1px solid var(--callout-bdr);
   padding: rem(16) rem(16);
-  font-weight: 700;
+  font-weight: 500;
   font-size: rem(16);
   line-height: 1.45;
   margin-block-start: rem(15);
@@ -22,8 +22,8 @@
     margin-inline: auto;
   }
 
-  &.fw-4 {
-    font-weight: 400;
+  &.fw-7 {
+    font-weight: 700;
   }
 
   &.fit-content {

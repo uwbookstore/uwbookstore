@@ -55,26 +55,27 @@
       PercentOff: 'Save {percent}%',
       BuyGetDollarsOff: 'Buy {buyQty}, save {amount}',
       BuyGetFree: 'Buy {buyQty}, get one free',
-      BuyGetPercentOff: 'Buy {buyQty}, save {percent}%',
+      BuyGetPercentOff: 'Buy One, Get One {percent}% Off',
       SpendGetFree: 'Spend {spend}, get one free',
       SpendGetDollarsOff: 'Spend {spend}, get one for {amount} off',
       SpendGetPercentOff: 'Spend {spend}, get one for {percent}% off',
       // Tiers are a list, so this one takes a function. t.qty / t.price are display-ready.
-      QuantityForDeal: ({ tiers }) => tiers.map((t) => `${t.qty} for ${t.price}`).join(' · '),
+      QuantityForDeal: ({ tiers }) =>
+        tiers.map((t) => `${t.qty} for ${t.price}`).join(' · '),
     },
 
     // Per-SKU. "*" = all types; named keys = that type only.
     // NOTE: keys are compared as strings. Quote SKUs that have leading zeros
     // or non-numeric characters ('00123', 'ABC-1'), otherwise JS will mangle them.
-    skus: {
-      2079187: {
-        '*': 'Clearance - see cart for savings',
-      },
-      2079186: {
-        BuyGetPercentOff: '🔥 Buy one, get {percent}% off',
-        '*': '{original}',
-      },
-    },
+    // skus: {
+    //   2079187: {
+    //     '*': 'Clearance - see cart for savings',
+    //   },
+    //   2079186: {
+    //     BuyGetPercentOff: '🔥 Buy one, get {percent}% off',
+    //     '*': '{original}',
+    //   },
+    // },
   };
 
   // Where the script finds items in the DOM. One entry per page layout; all
@@ -85,9 +86,24 @@
   //   sku:   element INSIDE item whose text is the SKU
   //   promo: element INSIDE item whose text is the promo message
   const DOM_LAYOUTS = [
-    { name: 'MerchList', item: 'div.merchItem', sku: '.merchSKU', promo: '.merch-value--gm' },
-    { name: 'MerchDetail', item: 'div.mainItem', sku: '.merch-value--sku', promo: '.merch-value--gm' },
-    { name: 'MerchDetail modal', item: 'div.oneItem', sku: '.merch-value--sku', promo: '.merch-value--gm' },
+    {
+      name: 'MerchList',
+      item: 'div.merchItem',
+      sku: '.merchSKU',
+      promo: '.merch-value--gm',
+    },
+    {
+      name: 'MerchDetail',
+      item: 'div.mainItem',
+      sku: '.merch-value--sku',
+      promo: '.merch-value--gm',
+    },
+    {
+      name: 'MerchDetail modal',
+      item: 'div.oneItem',
+      sku: '.merch-value--sku',
+      promo: '.merch-value--gm',
+    },
   ];
 
   const DOM = {
@@ -107,9 +123,21 @@
   // Each parser: [type, regex, (match, fullString) => values]. Regexes are case-insensitive
   // and the input is whitespace-normalised before matching, so minor copy drift is tolerated.
   const PARSERS = [
-    ['BuyGetDollarsOff', new RegExp(`^Buy ${INT} Get \\$${MONEY} Off$`, 'i'), (m) => ({ buyQty: toNum(m[1]), amount: toNum(m[2]) })],
-    ['BuyGetPercentOff', new RegExp(`^Buy ${INT} Get ${INT} Percent Off$`, 'i'), (m) => ({ buyQty: toNum(m[1]), percent: toNum(m[2]) })],
-    ['BuyGetFree', new RegExp(`^Buy ${INT} Get ${INT} Free$`, 'i'), (m) => ({ buyQty: toNum(m[1]), getQty: toNum(m[2]) })],
+    [
+      'BuyGetDollarsOff',
+      new RegExp(`^Buy ${INT} Get \\$${MONEY} Off$`, 'i'),
+      (m) => ({ buyQty: toNum(m[1]), amount: toNum(m[2]) }),
+    ],
+    [
+      'BuyGetPercentOff',
+      new RegExp(`^Buy ${INT} Get ${INT} Percent Off$`, 'i'),
+      (m) => ({ buyQty: toNum(m[1]), percent: toNum(m[2]) }),
+    ],
+    [
+      'BuyGetFree',
+      new RegExp(`^Buy ${INT} Get ${INT} Free$`, 'i'),
+      (m) => ({ buyQty: toNum(m[1]), getQty: toNum(m[2]) }),
+    ],
     [
       'SpendGetDollarsOff',
       new RegExp(`^Spend \\$${MONEY} Get 1 for \\$${MONEY} Off$`, 'i'),
@@ -120,14 +148,31 @@
       new RegExp(`^Spend \\$${MONEY} Get 1 for ${INT}% Off$`, 'i'),
       (m) => ({ spend: toNum(m[1]), percent: toNum(m[2]) }),
     ],
-    ['SpendGetFree', new RegExp(`^Spend \\$${MONEY} Get 1 Free$`, 'i'), (m) => ({ spend: toNum(m[1]) })],
-    ['DollarsOff', new RegExp(`^\\$${MONEY} Off$`, 'i'), (m) => ({ amount: toNum(m[1]) })],
-    ['PercentOff', new RegExp(`^${INT} Percent Off$`, 'i'), (m) => ({ percent: toNum(m[1]) })],
+    [
+      'SpendGetFree',
+      new RegExp(`^Spend \\$${MONEY} Get 1 Free$`, 'i'),
+      (m) => ({ spend: toNum(m[1]) }),
+    ],
+    [
+      'DollarsOff',
+      new RegExp(`^\\$${MONEY} Off$`, 'i'),
+      (m) => ({ amount: toNum(m[1]) }),
+    ],
+    [
+      'PercentOff',
+      new RegExp(`^${INT} Percent Off$`, 'i'),
+      (m) => ({ percent: toNum(m[1]) }),
+    ],
     [
       'QuantityForDeal',
-      new RegExp(`^Buy ${INT} For \\$${MONEY}(?:, Buy ${INT} For \\$${MONEY})*$`, 'i'),
+      new RegExp(
+        `^Buy ${INT} For \\$${MONEY}(?:, Buy ${INT} For \\$${MONEY})*$`,
+        'i',
+      ),
       (m, s) => ({
-        tiers: [...s.matchAll(new RegExp(`Buy ${INT} For \\$${MONEY}`, 'gi'))].map((t) => ({
+        tiers: [
+          ...s.matchAll(new RegExp(`Buy ${INT} For \\$${MONEY}`, 'gi')),
+        ].map((t) => ({
           qty: toNum(t[1]),
           price: toNum(t[2]),
         })),
@@ -174,7 +219,10 @@
 
     for (const [key, val] of Object.entries(values)) {
       if (key === 'tiers') {
-        ctx.tiers = val.map((t) => ({ qty: String(t.qty), price: money(t.price) }));
+        ctx.tiers = val.map((t) => ({
+          qty: String(t.qty),
+          price: money(t.price),
+        }));
       } else {
         ctx[key] = MONEY_KEYS.has(key) ? money(val) : String(val);
       }
@@ -206,14 +254,17 @@
   function render(override, ctx) {
     if (typeof override === 'function') {
       const out = override(ctx);
-      if (typeof out !== 'string') throw new RenderError(`function override returned ${typeof out}`);
+      if (typeof out !== 'string')
+        throw new RenderError(`function override returned ${typeof out}`);
       return out;
     }
 
     return String(override).replace(/\{(\w+)\}/g, (_, key) => {
       const val = ctx[key];
       if (typeof val !== 'string') {
-        throw new RenderError(`placeholder {${key}} is not available for type ${ctx.type}`);
+        throw new RenderError(
+          `placeholder {${key}} is not available for type ${ctx.type}`,
+        );
       }
       return val;
     });
@@ -232,13 +283,17 @@
 
     const perSku = (config.skus && config.skus[String(sku)]) || {};
     const global = config.global || {};
-    const override = RESOLUTION_ORDER.map((pick) => pick(perSku, parsed.type, global)).find(Boolean);
+    const override = RESOLUTION_ORDER.map((pick) =>
+      pick(perSku, parsed.type, global),
+    ).find(Boolean);
     if (!override) return original;
 
     try {
       return render(override, buildContext(parsed, original, sku));
     } catch (err) {
-      warn(`override failed for sku ${sku} (${parsed.type}); using default. ${err.message}`);
+      warn(
+        `override failed for sku ${sku} (${parsed.type}); using default. ${err.message}`,
+      );
       return original;
     }
   }
@@ -252,25 +307,33 @@
     const checkKeys = (obj, where) => {
       for (const key of Object.keys(obj || {})) {
         if (key !== '*' && !KNOWN_TYPES.has(key)) {
-          problems.push(`${where}: unknown message type "${key}" (known: ${[...KNOWN_TYPES].join(', ')})`);
+          problems.push(
+            `${where}: unknown message type "${key}" (known: ${[...KNOWN_TYPES].join(', ')})`,
+          );
         }
         const val = obj[key];
         if (typeof val !== 'string' && typeof val !== 'function') {
-          problems.push(`${where}.${key}: override must be a string or function, got ${typeof val}`);
+          problems.push(
+            `${where}.${key}: override must be a string or function, got ${typeof val}`,
+          );
         }
       }
     };
 
     checkKeys(config.global, 'global');
-    if (config.global && '*' in config.global) problems.push('global: "*" is not supported at the global level');
+    if (config.global && '*' in config.global)
+      problems.push('global: "*" is not supported at the global level');
 
     for (const [sku, perSku] of Object.entries(config.skus || {})) {
       checkKeys(perSku, `skus[${sku}]`);
       // With '*'-wins ordering, per-type entries alongside '*' would be dead config.
       // Under the default specific-wins ordering this is fine, so only flag it if reordered.
-      const starWins = RESOLUTION_ORDER[0]({ '*': 'x', T: 'y' }, 'T', {}) === 'x';
+      const starWins =
+        RESOLUTION_ORDER[0]({ '*': 'x', T: 'y' }, 'T', {}) === 'x';
       if (starWins && '*' in perSku && Object.keys(perSku).length > 1) {
-        problems.push(`skus[${sku}]: per-type entries are ignored because "*" takes precedence`);
+        problems.push(
+          `skus[${sku}]: per-type entries are ignored because "*" takes precedence`,
+        );
       }
     }
 
@@ -279,7 +342,8 @@
   }
 
   function warn(msg) {
-    if (DEBUG && typeof console !== 'undefined') console.warn(`[${NAMESPACE}] ${msg}`);
+    if (DEBUG && typeof console !== 'undefined')
+      console.warn(`[${NAMESPACE}] ${msg}`);
   }
 
   // ---------------------------------------------------------------------------
@@ -296,7 +360,10 @@
     // inside an item actually belongs to it and not to a nested item (e.g. the
     // add-to-cart modal rendered inside the detail page's main item).
     const anyItem = DOM_LAYOUTS.map((l) => l.item).join(', ');
-    const ownChild = (item, selector) => [...item.querySelectorAll(selector)].find((el) => el.closest(anyItem) === item);
+    const ownChild = (item, selector) =>
+      [...item.querySelectorAll(selector)].find(
+        (el) => el.closest(anyItem) === item,
+      );
 
     for (const layout of DOM_LAYOUTS) {
       for (const item of scope.querySelectorAll(layout.item)) {
@@ -334,7 +401,11 @@
           applyPromoOverrides();
         }, 0);
       });
-      observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        characterData: true,
+      });
     }
   }
 
@@ -356,7 +427,12 @@
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = api; // Node / bundlers, e.g. for unit tests
   } else if (root) {
-    Object.defineProperty(root, NAMESPACE, { value: api, writable: false, configurable: false, enumerable: false });
+    Object.defineProperty(root, NAMESPACE, {
+      value: api,
+      writable: false,
+      configurable: false,
+      enumerable: false,
+    });
   }
 
   if (typeof document !== 'undefined') {
@@ -366,4 +442,10 @@
       initPromoOverrides();
     }
   }
-})(typeof window !== 'undefined' ? window : typeof globalThis !== 'undefined' ? globalThis : null);
+})(
+  typeof window !== 'undefined'
+    ? window
+    : typeof globalThis !== 'undefined'
+      ? globalThis
+      : null,
+);

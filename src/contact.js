@@ -35,12 +35,12 @@ $(document).ready(() => {
   });
 
   if ($('div.confirmationText').length) {
-    $('div.confirmationText').addClass('alert alert-success');
+    $('div.confirmationText').addClass('callout callout-success');
     // console.log('Message sent');
   } else {
     $('<h3>Contact Us</h3>').prependTo('.card-header');
     $(
-      '.contactInfo, .contactName, .contactAddress1, .contactAddress2, .contactCityState, .contactPhone, .contactPhone2, #contackBack'
+      '.contactInfo, .contactName, .contactAddress1, .contactAddress2, .contactCityState, .contactPhone, .contactPhone2, #contackBack',
     ).hide();
     if (
       window.location.host === 'www.uwbookstore.com' ||
@@ -111,7 +111,7 @@ $(document).ready(() => {
 
   $('.SubmitButton').addClass('btn-disabled');
   $(
-    `<p id="sel_msg" class="alert alert-danger text-center" style="max-width: 30rem; width: 100%;">Please select a valid subject</p>`
+    `<p id="sel_msg" class="callout callout-danger text-center" style="max-width: 30rem; width: 100%;">Please select a valid subject</p>`,
   ).insertAfter('#selectedSubject');
 
   if (window.location.href.search(/order_id/) !== -1) {
@@ -121,7 +121,7 @@ $(document).ready(() => {
       .addClass('dd-hidden')
       .attr('disabled', 'disabled');
     $('#message').val(
-      'Question regarding order#: ' + $.getUrlVar('order_id') + ',\n'
+      'Question regarding order#: ' + $.getUrlVar('order_id') + ',\n',
     );
     $('.SubmitButton').removeClass('btn-disabled');
     $('#sel_msg').hide();
@@ -187,7 +187,7 @@ $(document).ready(() => {
           .html(
             `
               If inquiring about an order, please include the <a href="https://secure2.mbsbooks.com/Orders?s=${subUrl}"> order number</a>.
-            `
+            `,
           )
           .show();
       } else {
@@ -210,7 +210,7 @@ $(document).ready(() => {
               <li>What browser you are using (Chrome, Firefox, Safari, IE, etc.)</li>
               <li>What page you were one when you encountered the error/problem.</li>
             </ul>
-          `
+          `,
         )
         .show();
     } else {

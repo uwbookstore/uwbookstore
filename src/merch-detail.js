@@ -365,7 +365,7 @@ if (merchDisclaimer) {
 //   categoryTitle.toLowerCase().substring(0, 15) === 'flamingo hoodie'
 // ) {
 //   $(`
-//       <div class="alert alert-warning text-center" style="max-width: 50%; margin: auto;"><h2 class="mb-0"><strong>SOLD OUT!</strong></h2></div>
+//       <div class="callout callout-warning text-center" style="max-width: 50%; margin: auto;"><h2 class="mb-0"><strong>SOLD OUT!</strong></h2></div>
 //     `).insertBefore('#merch__card');
 // }
 

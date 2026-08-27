@@ -56,7 +56,9 @@ a#goToTop,
 .hide,
 h1.visually-hidden,
 header:has(div[data-role='header']:not(.header.header__ubs)),
-footer[role='contentinfo'] {
+footer[role='contentinfo']
+// , .itemSearchWrapper
+{
   display: none !important;
 }
 

@@ -369,3 +369,29 @@ input[type='search']::-webkit-search-cancel-button {
     display: block;
   }
 }
+
+#H_Search {
+  .input-group {
+    flex-flow: row-reverse;
+    border-bottom: rem(1) solid var(--bs-black);
+
+    .searchBox.searchBoxHor-input.form-control {
+      padding-inline-start: rem(35);
+      border: none;
+      border-radius: 0;
+    }
+
+    .btn.btn-default.searchMerchHor-button {
+      position: absolute;
+      z-index: 10;
+      left: 0;
+      background: transparent;
+      border: none;
+    }
+  }
+}
+
+.searchItem .itemLink {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

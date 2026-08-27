@@ -277,7 +277,7 @@ if (!noListItems) {
     categoryTitle.textContent.toLowerCase().substring(0, 10) === 'clear bags'
   ) {
     pageBanner.innerHTML = `
-      <div class="alert alert-info" style="text-align: center; margin-inline: auto; max-width: 650px; text-wrap: balance;">
+      <div class="callout callout-info fit-content center" style="text-wrap: balance;">
         UW Carry-In Policy: One small clutch (6.5&Prime; &times; 4.5&Prime;) and one large clear bag per attendee. Large bag must be either a 1-gallon clear storage bag or a 12&Prime; &times; 6&Prime; &times; 12&Prime; clear tote. <a href="https://commencement.wisc.edu/commencement-day/carry-in-policy/" target="_blank">Official UW policy page &raquo;</a>
       </div>    
     `;
@@ -327,7 +327,7 @@ if (!noListItems) {
   // FOR AM FAM CHAMPIONSHIP ITEMS
   if (categoryTitle.textContent.toLowerCase().substring(0, 6) === 'am fam') {
     pageBanner.innerHTML = `
-      <!-- <div class="alert alert-danger text-center mb-3">
+      <!-- <div class="callout callout-danger text-center mb-3">
         <h2 class="mb-1">Thanks for supporting the American Family Championship.</h2>
         <p class="mb-0">All of the products have been packed up for the event!<br>Come see us at TPC Wisconsin June 5-7.</p>
       </div> -->
@@ -447,7 +447,7 @@ if (!noListItems) {
             <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Surface-Laptop" class="btn btn-primary">Surface Laptops</a>
           </li>
         </ul>
-        <div class="alert alert-info text-center">
+        <div class="callout callout-info text-center">
           <p class="mb-0"><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p>
         </div>
       `;
@@ -470,7 +470,7 @@ if (!noListItems) {
             <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Surface-Laptop" class="btn btn-primary">Surface Laptops</a>
           </li>
         </ul>
-        <div class="alert alert-info text-center">
+        <div class="callout callout-info text-center">
           <p class="mb-0"><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p>
         </div>
       `;
@@ -494,7 +494,7 @@ if (!noListItems) {
             <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook" class="btn btn-primary">MacBooks</a>
           </li>
         </ul>
-        <div class="alert alert-info text-center">
+        <div class="callout callout-info text-center">
           <p class="mb-0"><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p>
         </div>
       `;
@@ -517,7 +517,7 @@ if (!noListItems) {
           <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Surface-Laptop" class="btn btn-primary">Surface Laptops</a>
         </li>
         </ul>
-        <div class="alert alert-info text-center">
+        <div class="callout callout-info text-center">
           <p class="mb-0"><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p>
         </div>
       `;
@@ -540,7 +540,7 @@ if (!noListItems) {
             <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Surface-Laptop" class="btn btn-primary">Surface Laptops</a>
           </li>
         </ul>
-        <div class="alert alert-info text-center">
+        <div class="callout callout-info text-center">
           <p class="mb-0"><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</strong></p>
         </div>
       `;

@@ -52,9 +52,9 @@ $(document).ready(function () {
   if ($('.lgMessage').length) {
     $('.lgMessage')
       .removeClass('red')
-      .addClass('alert alert-danger wi-50 mx-auto');
+      .addClass('callout callout-danger fit-content center');
     $('<em class="fa fa-exclamation-triangle mr-2"></em>').prependTo(
-      '.lgMessage'
+      '.lgMessage',
     );
 
     if (
@@ -64,7 +64,7 @@ $(document).ready(function () {
       $('.lgMessage').html(
         '<em class="fa fa-exclamation-triangle"></em> &mdash; Please use your <a href="' +
           baseUrl +
-          'login">UW Student Sign In</a>'
+          'login">UW Student Sign In</a>',
       );
     }
 
@@ -78,13 +78,13 @@ $(document).ready(function () {
 
   $('#shipsubmit').removeClass('btn-default').addClass('btn-primary');
 
-  $('p#studentIDText, p.studentNumberText').addClass('alert alert-info');
+  $('p#studentIDText, p.studentNumberText').addClass('callout callout-info');
   $('p#studentIDText').parent().removeClass('left5');
 
   if (baseUrl === 'https://www.uwbookstore.com/') {
     $('#custStudID').attr(
       'placeholder',
-      '10 digit phone number or UW Student ID *'
+      '10 digit phone number or UW Student ID *',
     );
   }
 
@@ -94,12 +94,12 @@ $(document).ready(function () {
   $('.footer .copyright').html(
     '&copy; Copyright ' +
       year +
-      ' University Book Store<br><a href="/Privacy" class="privacy" tabindex="0">Privacy Policy</a>'
+      ' University Book Store<br><a href="/Privacy" class="privacy" tabindex="0">Privacy Policy</a>',
   );
 
   $.urlParam = function (name) {
     const results = new RegExp('[?&]' + name + '=([^&#]*)').exec(
-      window.location.href
+      window.location.href,
     );
     return results[1] || 0;
   };
@@ -113,7 +113,7 @@ $(document).ready(function () {
   }
 
   $(
-    '<div class="modal fade" id="content-modal" tabindex="-1" role="dialog" aria-labelledby="content-modal" aria-hidden="true"><div class="vertical-alignment-helper"><div class="modal-dialog vertical-align-center"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><h3 class="modal-title" id="content-modal-title" style="display: inline-block;"></h3></div><div id="content-modal-body" class="modal-body"></div></div></div></div></div>'
+    '<div class="modal fade" id="content-modal" tabindex="-1" role="dialog" aria-labelledby="content-modal" aria-hidden="true"><div class="vertical-alignment-helper"><div class="modal-dialog vertical-align-center"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><h3 class="modal-title" id="content-modal-title" style="display: inline-block;"></h3></div><div id="content-modal-body" class="modal-body"></div></div></div></div></div>',
   ).appendTo('body');
 
   $('.accordion')
@@ -171,7 +171,7 @@ $(document).ready(function () {
     // If the location.hash matches one of the links, use that as the active tab.
     // If no match is found, use the first link as the initial active tab.
     $active = $(
-      $links.filter('[href="' + window.location.hash + '"]')[0] || $links[0]
+      $links.filter('[href="' + window.location.hash + '"]')[0] || $links[0],
     );
     $active.addClass('meganav__tabs--link-active');
 
@@ -212,7 +212,7 @@ $(document).ready(function () {
     // If the location.hash matches one of the links, use that as the active tab.
     // If no match is found, use the first link as the initial active tab.
     $active = $(
-      $links.filter('[href="' + window.location.hash + '"]')[0] || $links[0]
+      $links.filter('[href="' + window.location.hash + '"]')[0] || $links[0],
     );
     $active.addClass('active');
 
@@ -280,7 +280,7 @@ $(document).ready(function () {
           '<em class="fa fa-search" aria-hidden="true"></em>',
           '</button>',
           '</div>',
-        ].join('\n')
+        ].join('\n'),
       );
       // Search function replacement
       $('#merch-search-term').keyup(function () {
@@ -305,7 +305,7 @@ $(document).ready(function () {
           '<em class="fa fa-search" aria-hidden="true"></em>',
           '</button>',
           '</div>',
-        ].join('\n')
+        ].join('\n'),
       );
       // Search function replacement
       $('#merch-search-term').keyup(function () {
@@ -327,7 +327,7 @@ $(document).ready(function () {
   }
 
   $('<div class="featured__items-block"></div>').insertAfter(
-    '.wiscard__wrapper'
+    '.wiscard__wrapper',
   );
   $('.panel.panel-info.Dynamic_Items')
     .addClass('container')
@@ -335,7 +335,7 @@ $(document).ready(function () {
   $('.panel.panel-info.Dynamic_Items .panel-body').addClass('merch__card flex');
   $('div.One_Dynamic')
     .removeClass(
-      'col-lg-2 col-md-2 col-sm-3 col-xs-6 textc dynamicMerchSix dynamicMerchTwo dynamicMerchFour'
+      'col-lg-2 col-md-2 col-sm-3 col-xs-6 textc dynamicMerchSix dynamicMerchTwo dynamicMerchFour',
     )
     .addClass('merch__card-item merch__card-item-small');
   $('div.One_Dynamic a').addClass('merch__card-link');
@@ -366,7 +366,7 @@ $(document).ready(function () {
               <em class="fa fa-user" aria-hidden="true"></em>
               <span>Login</span>
             </a>
-          `
+          `,
     );
   } else {
     // console.log('Should show Account...');
@@ -376,7 +376,7 @@ $(document).ready(function () {
               <em class="fa fa-user" aria-hidden="true"></em>
               <span>Account</span>
             </a>
-          `
+          `,
     );
   }
 
@@ -384,12 +384,12 @@ $(document).ready(function () {
   // $("h1.page_header").hide();
   $('#loginPanelHeader, #lostPasswordPanelHeader').hide();
   $(
-    '<h1 class="heading__line-center">Log In</h1><!--<div class="alert alert-danger"><em>Attention</em> - Guest checkout is temporarily unavailable.</div>-->'
+    '<h1 class="heading__line-center">Log In</h1><!--<div class="callout callout-danger"><em>Attention</em> - Guest checkout is temporarily unavailable.</div>-->',
   ).prependTo('#loginPanel');
 
   $('#login_UserName, #login_Password').removeClass('max_width300');
   $('<label for="login_UserName">Email/Username</label>').insertBefore(
-    '#login_UserName'
+    '#login_UserName',
   );
   $('#login_UserName').attr('type', 'email').attr('autofocus', 'autofocus');
   // $("label.radioGuest span").html(
@@ -397,7 +397,7 @@ $(document).ready(function () {
   // );
   // $('input#login_guestLogin').attr('disabled', 'disabled');
   $('<label for="login_Password">Password</label>').insertBefore(
-    '#login_Password'
+    '#login_Password',
   );
 
   $('<div class="flex form__actions"></div>').appendTo('#loginPanel');
@@ -406,7 +406,7 @@ $(document).ready(function () {
     .appendTo('.flex.form__actions');
 
   $(
-    '<div class="alert alert-danger">If checking out as a guest, please enter an email address (for transactional emails), and click "Login" to continue.</div>'
+    '<div class="callout callout-danger">If checking out as a guest, please enter an email address (for transactional emails), and click "Login" to continue.</div>',
   ).insertAfter('label.radioGuest');
   // if ($("label.radioGuest span").length) {
   //   $("input.loginSubmit").attr("value", "Continue");
@@ -416,7 +416,7 @@ $(document).ready(function () {
     .attr('class', 'forgotPasswordLink btn btn-text')
     .appendTo('.flex.form__actions');
   $(
-    '<div class="alert alert-light text-center"><p>Don\'t have a University Book Store account?</p></div>'
+    '<div class="callout callout-light text-center"><p>Don\'t have a University Book Store account?</p></div>',
   ).appendTo('#loginPanel');
   $('a.registerHereLink')
     .removeClass('bottom10')
@@ -426,17 +426,17 @@ $(document).ready(function () {
     'href',
     'https://secure2.mbsbooks.com//CustomerRegister?s=' +
       subUrl +
-      '&ReturnUrl=customeraccount'
+      '&ReturnUrl=customeraccount',
   );
 
   $('p.registerHere, p.forgotPassword').hide();
 
   // Lost Password
   $(
-    '<h1 id="lost-heading" class="heading__line-center"><span>Lost Password</span></h1>'
+    '<h1 id="lost-heading" class="heading__line-center"><span>Lost Password</span></h1>',
   ).prependTo('#lostPasswordPanel');
   $(
-    '<a href="javascript:history.go(-1)" class="btn btn-text"><i class="fa fa-chevron-left"></i> Return to Previous Page</a>'
+    '<a href="javascript:history.go(-1)" class="btn btn-text"><i class="fa fa-chevron-left"></i> Return to Previous Page</a>',
   ).insertAfter('#lost-heading');
   $('#lostPasswordPanelBody a.previousLink').hide();
   $('#lostPasswordPanelBody [class^="col"]').removeAttr('class');
@@ -445,7 +445,7 @@ $(document).ready(function () {
   $('ul#accountUL').addClass('list-group');
   $('li.accountLI').addClass('list-group-item');
   $(
-    '<li class="accountLI list-group-item"><a href="https://text.uwbookstore.com/SelectTermDept" class="accountLink">Order Course Materials</a></li>'
+    '<li class="accountLI list-group-item"><a href="https://text.uwbookstore.com/SelectTermDept" class="accountLink">Order Course Materials</a></li>',
   ).insertBefore("li.accountLI:contains('Update Your Profile')");
   $("li.accountLI a:contains('Track Orders')").text('Manage Orders');
   $("li.accountLI a:contains('Bookstore Profile Number')").parent().hide();
@@ -454,7 +454,7 @@ $(document).ready(function () {
     .hide();
   // Manager Orders
   $('div#ordersPanelBody div.oneOrder:last-child').removeClass(
-    'bottomBorder bottom10'
+    'bottomBorder bottom10',
   );
   $('div.logoutLink').hide();
 
@@ -462,7 +462,7 @@ $(document).ready(function () {
   // $("ul.breadcrumb").hide();
 
   $(
-    '<div id="order-info" class="row"><div id="list-container" class="col-md-4"></div><div class="col-md-8"></div></div>'
+    '<div id="order-info" class="row"><div id="list-container" class="col-md-4"></div><div class="col-md-8"></div></div>',
   ).insertAfter('h1#ordersHeader');
   $('div#ordersPanel').detach().appendTo('div#order-info div.col-md-8');
   $('div.orderPanel').detach().appendTo('div#order-info div.col-md-8');
@@ -479,12 +479,12 @@ $(document).ready(function () {
           baseUrl +
           'Customer-Help#return" class="list-group-item textc">Return an order</a>',
         '</div>',
-      ].join('\n')
+      ].join('\n'),
     );
 
     if (!$('div#ordersPanelBody').has('div.oneOrder').length) {
       $(
-        '<em>You have no orders.<br>If you are looking for a textbook order, please login at <a href="https://text.uwbookstore.com/login">text.uwbookstore.com</a></em>'
+        '<em>You have no orders.<br>If you are looking for a textbook order, please login at <a href="https://text.uwbookstore.com/login">text.uwbookstore.com</a></em>',
       ).appendTo('div#ordersPanelBody');
     }
   } else {
@@ -499,12 +499,12 @@ $(document).ready(function () {
           baseUrl +
           'SiteText?id=2369#return" class="list-group-item textc">Return an order</a>',
         '</div>',
-      ].join('\n')
+      ].join('\n'),
     );
 
     if (!$('div#ordersPanelBody').has('div.oneOrder').length) {
       $(
-        '<em>You have no orders.<br>If you are looking for a non-text order, please login at <a href="https://www.uwbookstore.com/login">www.uwbookstore.com</a></em>'
+        '<em>You have no orders.<br>If you are looking for a non-text order, please login at <a href="https://www.uwbookstore.com/login">www.uwbookstore.com</a></em>',
       ).appendTo('div#ordersPanelBody');
     }
   }
@@ -516,14 +516,14 @@ $(document).ready(function () {
         baseUrl +
         'contact/?order_id=' +
         orderNum +
-        '" class="list-group-item textc order_q">Question about this order?</a>'
+        '" class="list-group-item textc order_q">Question about this order?</a>',
     ).appendTo('.list-group');
   }
 
   if ($('#h_nav a:contains("Login")').length) {
     $('#logoutPanelHeader').hide();
     $(
-      '<h1 class="heading__line-center"><span>You are now logged out</span></h1>'
+      '<h1 class="heading__line-center"><span>You are now logged out</span></h1>',
     ).appendTo('#logoutPanel');
     $('.logoutText').remove();
     $(
@@ -531,7 +531,7 @@ $(document).ready(function () {
         baseUrl +
         'login" class="btn btn-secondary">Log Back In</a><a href="' +
         baseUrl +
-        'home" class="btn btn-primary">UW Book Store</a></div>'
+        'home" class="btn btn-primary">UW Book Store</a></div>',
     ).appendTo('#logoutPanel');
   }
 
@@ -544,14 +544,14 @@ $(document).ready(function () {
     $('h1.page_header').hide();
 
     $('<h1 class="heading__line">Your Shopping Cart</h1>').insertBefore(
-      '.Continue_Shopping'
+      '.Continue_Shopping',
     );
     $('.Continue_Shopping').removeClass('textr').addClass('padding0');
     $('.Continue_Shopping + div.panel-default').hide();
     $(
       '<a href="' +
         baseUrl +
-        'home" class="btn btn-primary">Continue Shopping</a>'
+        'home" class="btn btn-primary">Continue Shopping</a>',
     ).insertAfter('a#Shopping_Button');
     $('#Shopping_Button').hide();
 
@@ -560,7 +560,7 @@ $(document).ready(function () {
       $('button.Continue_Checkout_btn').is(':visible')
     ) {
       $(
-        '<p><strong>Pricing Disclaimer</strong><br/>Pricing is subject to change without notice. All totals are calculated using new prices, as we cannot guarantee the availability of used books. Pricing changes often occur daily.<br/> We make every effort to ensure the accuracy of the pricing on this web site.</p><div class="center"><strong>We screen diligently for credit card fraud.</strong></div>'
+        '<p><strong>Pricing Disclaimer</strong><br/>Pricing is subject to change without notice. All totals are calculated using new prices, as we cannot guarantee the availability of used books. Pricing changes often occur daily.<br/> We make every effort to ensure the accuracy of the pricing on this web site.</p><div class="center"><strong>We screen diligently for credit card fraud.</strong></div>',
       ).appendTo('#contentSection');
 
       $('input#PaymentBtn').val('Checkout');
@@ -572,7 +572,7 @@ $(document).ready(function () {
           baseUrl +
           '" title="Shop Clothing &amp; Gifts">Shop Clothing &amp; Gifts</a><div class="cart__account"><p><a class="btn btn-text" href="' +
           baseUrl +
-          'SiteText?id=63210" title="Customer Help">Customer Help</a></p><span class="phone">(608) 257-3784</span> or <span class="phone">(800) 993-2665</span></div></div></div>'
+          'SiteText?id=63210" title="Customer Help">Customer Help</a></p><span class="phone">(608) 257-3784</span> or <span class="phone">(800) 993-2665</span></div></div></div>',
       ).insertBefore('.Continue_Shopping');
       $('.Continue_Shopping').hide();
       // $(".Continue_Shopping, h1.page_header").hide();
@@ -581,6 +581,6 @@ $(document).ready(function () {
 
   // CHECKOUT PAGE
   $('div#registerAccount h3#registerTitle').text(
-    'Register Your Account (optional)'
+    'Register Your Account (optional)',
   );
 });

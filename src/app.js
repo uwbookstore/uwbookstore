@@ -362,7 +362,7 @@ if (window.location.href.toLowerCase().search('/shoppingcart') !== -1) {
     promoAlert.classList.add('row');
     promoAlert.innerHTML = `
     <div class="col-md-6">
-      <div class="alert alert-success">
+      <div class="callout callout-info">
         <div class="text-center bold"><em>NOTE:</em></div>
         <div class="text-center">Promotional Discounts applied to items on your cart will not be viewable until
           the end of
@@ -371,7 +371,7 @@ if (window.location.href.toLowerCase().search('/shoppingcart') !== -1) {
       </div>
     </div>
     <div class="col-md-6">
-      <div class="alert alert-info">
+      <div class="callout callout-success">
         <div class="text-center bold"><em>Do you have a Promo Code?</em></div>
         <div class="text-center">You will be prompted for your Promo Code at checkout before entering your credit card
           information.</div>

@@ -30,8 +30,14 @@
     max-width: fit-content;
   }
 
+  &-light {
+    --callout-bg: hsl(from var(--bs-black) h s 98%);
+    --callout-bdr: hsl(from var(--bs-black) h s 92%);
+    --callout-clr: hsl(from var(--bs-black) h s 10%);
+  }
+
   &-dark {
-    --callout-bg: hsl(from var(--bs-black) h s 85%);
+    --callout-bg: hsl(from var(--bs-black) h s 78%);
     --callout-bdr: hsl(from var(--bs-black) h s 72%);
     --callout-clr: hsl(from var(--bs-black) h s 10%);
   }

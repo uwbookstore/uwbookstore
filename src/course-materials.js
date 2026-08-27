@@ -22,7 +22,7 @@ $(document).ready(function () {
       .addClass('hide-btn');
     $(
       `
-      <div class="alert alert-danger mb-15">
+      <div class="callout callout-danger mb-15">
         <p>
           This course is participating in the University's Engage eText Program. The course's textbook and other required materials (e.g., homework or lab software) will be delivered digitally via an online eText tool. The eText and materials have already been pre-purchased for all students enrolled in the course, and the charges will appear on each student's tuition bill. Students who decide to opt out of using the digital materials will not be charged and will need to purchase the required text(s) elsewhere.</p>
         <p>
@@ -59,7 +59,7 @@ $(document).ready(function () {
       $(this).find('.course_after_cart_button').hide();
 
       $(
-        '<div class="panel-body"><p class="col-xs-12 textl alert alert-warning p-2">This course includes an eText textbook. The eText fees will be automatically charged via your tuition.</p></div>',
+        '<div class="panel-body"><p class="col-xs-12 textl callout callout-warning p-2">This course includes an eText textbook. The eText fees will be automatically charged via your tuition.</p></div>',
       ).appendTo($(this).find('.card-body:last()'));
     } else if ($(this).is(':contains("SEE ")')) {
       const instructor = $('span.No_Material_Course_Instructor').text();
@@ -67,26 +67,26 @@ $(document).ready(function () {
             <p class="bold">Please go to <a href="https://text.uwbookstore.com/SelectTermDept">${
               instructor.split('|')[index].split('SEE')[1]
             }</a> for course requirements.</p>
-            <!-- <div class="alert alert-info p-2">
+            <!-- <div class="callout callout-info p-2">
               <p>Textbook requirements have not yet been determined for this course.If your instructor decides not to require any materials, this course will not be processed.</p>
             </div> -->
-            <div class="alert alert-info p-2">
+            <div class="callout callout-info p-2">
               <p><em>Your professor has not provided the store a list of materials for this course. This page will be updated if we receive information. Please check back.</em></p>
               <p class="center">If you've received a syllabus from your professor indicating there is a required book or required materials, send a screenshot (must be legible) of your syllabus to Amber, <a href="mailto:textbooks@uwbookstore.com">textbooks@uwbookstore.com</a>.  Be the first person to do so and receive a free Book Store t-shirt!<br>If your instructor decides not to require any materials, this course will not be processed.</p>
             </div>
           `);
       $(this)
         .find('.No_Material_Course_Text_Req')
-        .addClass('alert alert-info p-2');
+        .addClass('callout callout-info p-2');
     } else {
       $(this)
         .find('.No_Material_Course_Text')
         .html(
           `
-          <!-- <div class="alert alert-info p-2">
+          <!-- <div class="callout callout-info p-2">
               <p>Textbook requirements have not yet been determined for this course.If your instructor decides not to require any materials, this course will not be processed.</p>
             </div> -->
-          <div class="alert alert-info p-2">
+          <div class="callout callout-info p-2">
             <p><em>Your professor has not provided the store a list of materials for this course. This page will be updated if we receive information. Please check back.</em></p>
             <p class="center">If you've received a syllabus from your professor indicating there is a required book or required materials, send a screenshot (must be legible) of your syllabus to Amber, <a href="mailto:textbooks@uwbookstore.com">textbooks@uwbookstore.com</a>.  Be the first person to do so and receive a free Book Store t-shirt!<br>If your instructor decides not to require any materials, this course will not be processed.</p>
           </div>
@@ -95,7 +95,7 @@ $(document).ready(function () {
 
       $(this)
         .find('.No_Material_Course_Text_Req')
-        .addClass('alert alert-info p-2');
+        .addClass('callout callout-info p-2');
     }
   });
 });

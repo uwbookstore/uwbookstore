@@ -263,6 +263,8 @@ if (thumbnails.length > 0) {
     '.mainItem .row .col-sm-6:has(img)',
   );
 
+  const imageWrapperBg = document.createElement('div');
+  imageWrapperBg.className = 'merch__detail-img-wrapper';
   const newImg = document.createElement('img');
   newImg.className = 'merch__detail-img';
 
@@ -274,8 +276,8 @@ if (thumbnails.length > 0) {
     newImg.alt = '';
     newImg.setAttribute('role', 'presentation');
   }
-
-  imgWrapper.appendChild(newImg);
+  imageWrapperBg.appendChild(newImg);
+  imgWrapper.appendChild(imageWrapperBg);
 }
 
 const merchSizes = document.createElement('div');

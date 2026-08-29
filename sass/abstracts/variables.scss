@@ -30,6 +30,17 @@
   --clr-gradient-end: #9a060a;
   --clr-gradient-start: #c73439;
 
+  --space-md: 8px;
+  --z-toast: 800;
+  /* ── Duration tokens ── */
+  --dur-fast: 180ms;
+  --dur-mid: 360ms;
+  --dur-slow: 600ms;
+
+  --color-text: var(--bs-black);
+  --color-bg: var(--bs-white);
+  --primary-title: var(--bs-primary);
+
   // Font-family
   --bs-font-sans-serif: 'Red Hat Text', Helvetica, Arial, sans-serif;
   --bs-font-monospace: 'Red Hat Mono', Monaco, monospace;
@@ -65,4 +76,10 @@
 
   // Landing page header clip-path
   --clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%);
+}
+
+[data-theme='dark'] {
+  --color-text: var(--bs-white);
+  --color-bg: hsl(from var(--bs-secondary) h s 8%);
+  --primary-title: #fe060f;
 }

@@ -16,6 +16,14 @@
   }
 }
 
+.flex-active-slide,
+.merch__detail-img-wrapper {
+  background: var(--bs-white);
+  border-radius: rem(8);
+  padding: rem(8);
+  overflow: hidden;
+}
+
 .flex-control {
   &-nav {
     display: flex;
@@ -25,11 +33,15 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-block-start: rem(15);
+    // margin-block-start: rem(15);
 
     li {
       width: rem(100);
       height: rem(100);
+      background: var(--bs-white);
+      border-radius: rem(4);
+
+      overflow: hidden;
 
       img {
         cursor: pointer;
@@ -106,14 +118,15 @@ h2.merchTitle {
   line-height: 1.2;
   font-style: italic;
   font-weight: 700;
-  color: var(--bs-primary);
+  color: var(--primary-title);
   text-wrap: balance;
 }
 
 .merch-value--sku {
   position: relative;
-  font-family: var(--ff-sans-serif);
+  font-family: inherit;
   font-size: 1rem;
+  color: var(--color-text);
 
   &::before {
     content: 'Item:';
@@ -154,7 +167,6 @@ h2.merchTitle {
   font-size: rem(24);
   font-style: italic;
   font-weight: 700;
-  color: var(--bs-primary);
 }
 
 .merchRegPrice,
@@ -163,7 +175,7 @@ h2.merchTitle {
 }
 
 .salePrice {
-  color: var(--bs-primary);
+  color: var(--primary-title);
   margin-inline-start: rem(15);
 }
 
@@ -172,9 +184,13 @@ h2.merchTitle {
 }
 
 .merch-add-submit {
-  font-weight: 400;
+  font-weight: 600;
   flex: initial;
 }
+
+// .merch-label {
+//   color: hsl(from var(--color-text) h s 80%);
+// }
 
 .merch-qty-step[aria-label='Decrease quantity'],
 .merch-qty-step[aria-label='Increase quantity'] {
@@ -209,6 +225,7 @@ h2.merchTitle {
   button.btn.merch-typecode-option {
     border-radius: rem(4);
     border-width: rem(1) !important;
+    // color: hsl(from var(--color-text) h s 80%);
 
     &:hover,
     &.typeSelected,
@@ -335,6 +352,10 @@ div[data-addon-host] {
         color: var(--bs-gray-600);
       }
     }
+
+    &:hover {
+      color: hsl(from var(--bs-white) h s 35%);
+    }
   }
 
   &-total-price {
@@ -350,6 +371,7 @@ div[data-addon-host] {
       font-size: rem(14);
       text-transform: lowercase;
       margin-inline-start: rem(8);
+      // color: hsl(from var(--color-text) h s 80%);
       color: var(--bs-gray-dark);
     }
   }

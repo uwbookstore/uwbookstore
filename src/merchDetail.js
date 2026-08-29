@@ -103,7 +103,7 @@ $(document).ready(function () {
   //   prodName.substring(0, 4) === 'Dell'
   // ) {
   //   $(
-  //     '<div class="alert alert-info">The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</div>'
+  //     '<div class="callout callout-info">The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</div>'
   //   ).appendTo('div#merch-info');
   // }
 
@@ -121,7 +121,7 @@ $(document).ready(function () {
     `,
   ).appendTo('div#description-block');
   $(noAddCart)
-    .addClass('alert alert-warning text-center m5')
+    .addClass('callout callout-warning text-center m5')
     .appendTo('#description-block');
   $(
     `
@@ -140,7 +140,7 @@ $(document).ready(function () {
   if (merchDisclaimer.length > 0) {
     $(
       `
-        <div id="item-disclaimer" class="alert alert-warning">
+        <div id="item-disclaimer" class="callout callout-warning">
           <label></label>
         </div>
       `,

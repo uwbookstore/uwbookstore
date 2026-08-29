@@ -122,8 +122,8 @@
 
   @include breakpoint(menu) {
     &__links {
-      background-color: var(--bs-white);
-      color: var(--bs-gray-dark);
+      background-color: transparent;
+      color: var(--color-text);
       width: 45%;
       gap: rem(20);
 
@@ -264,7 +264,7 @@
           font-size: inherit;
           background-color: transparent;
           border: none;
-          color: var(--bs-gray-dark);
+          // color: var(--bs-gray-dark);
 
           em.fa {
             font-size: rem(24);

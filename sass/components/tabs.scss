@@ -222,9 +222,17 @@
       }
 
       @include breakpoint(medium) {
-        ul {
+        ul,
+        [role='tablist'] {
           li:not(:last-child) {
             margin-inline-end: rem(15);
+          }
+
+          a {
+            &:link,
+            &:visited {
+              color: var(--color-text);
+            }
           }
         }
       }

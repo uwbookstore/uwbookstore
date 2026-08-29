@@ -40,6 +40,19 @@
     .display-none {
       display: none;
     }
+
+    .flex-control-nav.flex-control-thumbs li {
+      background: var(--bs-white);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .flex-active-slide {
+      background: var(--bs-white);
+      border-radius: 8px;
+      padding: 8px;
+      overflow: hidden;
+    }
   </style>
 </head>
 
@@ -79,34 +92,34 @@
     </div>
 
     <!-- <div id="ship99" class="banner">
-          <div id="toggle-exclusions" class="banner__message banner__info">
-            <div class="mobi-hide">
-              Free Ground Shipping with $99&nbsp;Order*. <span class="hide-sm">Must Enter Code: <span
-                  class="promo__code">Ship99</span></span> <span class="small">(Click for
-                Details)</span>
-            </div>
-            <div class="dt-hide">$99+ = Free Shipping <em class="fa fa-mouse-pointer" aria-hidden="true"
-                style="margin-inline-start: 1rem;"></em> <span class="sr-only">Click for Details</span></div>
+        <div id="toggle-exclusions" class="banner__message banner__info">
+          <div class="mobi-hide">
+            Free Ground Shipping with $99&nbsp;Order*. <span class="hide-sm">Must Enter Code: <span
+                class="promo__code">Ship99</span></span> <span class="small">(Click for
+              Details)</span>
           </div>
-          <div id="exclusions" class="banner__dropdown">
-            <div class="row">
-              <div class="col-md-6 offset-md-3">
-                <p><em>*</em>Free ground shipping to a contiguous U.S. delivery address on any $99+ online order (prior to
-                  tax). Must enter code SHIP99 in the "Apply a promo code" box to receive offer.
-                  Excludes previous purchases, custom items, Lands' End custom orders, textbooks, all Standard Chair of
-                  Gardner products, Kyle Cavan Jewelry, academic attire, computers, computer accessories, Public Access
-                  Lands
-                  Atlas of Wisconsin, Gift Cards, and drop-ship items. If applicable, items with a handling charge will
-                  receive free
-                  ground shipping but handling charge will still be applied. This offer cannot be combined with any other
-                  offers. Contact the Online Sales Department with order questions: <a
-                    href="mailto:onlinesales@uwbookstore.com">onlinesales@uwbookstore.com</a> or 1-800-993-2665. </p>
-              </div>
+          <div class="dt-hide">$99+ = Free Shipping <em class="fa fa-mouse-pointer" aria-hidden="true"
+              style="margin-inline-start: 1rem;"></em> <span class="sr-only">Click for Details</span></div>
+        </div>
+        <div id="exclusions" class="banner__dropdown">
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <p><em>*</em>Free ground shipping to a contiguous U.S. delivery address on any $99+ online order (prior to
+                tax). Must enter code SHIP99 in the "Apply a promo code" box to receive offer.
+                Excludes previous purchases, custom items, Lands' End custom orders, textbooks, all Standard Chair of
+                Gardner products, Kyle Cavan Jewelry, academic attire, computers, computer accessories, Public Access
+                Lands
+                Atlas of Wisconsin, Gift Cards, and drop-ship items. If applicable, items with a handling charge will
+                receive free
+                ground shipping but handling charge will still be applied. This offer cannot be combined with any other
+                offers. Contact the Online Sales Department with order questions: <a
+                  href="mailto:onlinesales@uwbookstore.com">onlinesales@uwbookstore.com</a> or 1-800-993-2665. </p>
             </div>
           </div>
-        </div> -->
+        </div>
+      </div> -->
 
-    <div class="header header__ubs donotprint bg-white" data-role="header">
+    <div class="header header__ubs donotprint" data-role="header">
       <div class="header__ubs--logo">
         <h2>
           <a href="https://www.uwbookstore.com/home">
@@ -156,7 +169,7 @@
           <div class="search__form">
             <div class="search__form--input">
               <label for="search-term" class="sr-only">Search</label>
-              <input type="text" id="search-term" class="search-field form-control" placeholder="Search...">
+              <input type="search" id="search-term" class="search-field form-control" placeholder="Search...">
             </div>
 
             <div class="search__form--submit">
@@ -169,6 +182,27 @@
               </button>
             </div>
           </div>
+        </li>
+
+        <li class="navbar__links--item">
+          <button class="btn theme-toggle-btn" id="theme-toggle" aria-label="Toggle light/dark theme">
+            <span class="icon-dark" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path
+                  d="M288-32c8.4 0 16.3 4.4 20.6 11.7L364.1 72.3 468.9 46c8.2-2 16.9 .4 22.8 6.3S500 67 498 75.1l-26.3 104.7 92.7 55.5c7.2 4.3 11.7 12.2 11.7 20.6s-4.4 16.3-11.7 20.6L471.7 332.1 498 436.8c2 8.2-.4 16.9-6.3 22.8S477 468 468.9 466l-104.7-26.3-55.5 92.7c-4.3 7.2-12.2 11.7-20.6 11.7s-16.3-4.4-20.6-11.7L211.9 439.7 107.2 466c-8.2 2-16.8-.4-22.8-6.3S76 445 78 436.8l26.2-104.7-92.6-55.5C4.4 272.2 0 264.4 0 256s4.4-16.3 11.7-20.6L104.3 179.9 78 75.1c-2-8.2 .3-16.8 6.3-22.8S99 44 107.2 46l104.7 26.2 55.5-92.6 1.8-2.6c4.5-5.7 11.4-9.1 18.8-9.1zm0 144a144 144 0 1 0 0 288 144 144 0 1 0 0-288zm0 240a96 96 0 1 1 0-192 96 96 0 1 1 0 192z" />
+              </svg>
+
+            </span>
+            <span class="icon-light" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                <path
+                  d="M256 0C114.6 0 0 114.6 0 256S114.6 512 256 512c68.8 0 131.3-27.2 177.3-71.4 7.3-7 9.4-17.9 5.3-27.1s-13.7-14.9-23.8-14.1c-4.9 .4-9.8 .6-14.8 .6-101.6 0-184-82.4-184-184 0-72.1 41.5-134.6 102.1-164.8 9.1-4.5 14.3-14.3 13.1-24.4S322.6 8.5 312.7 6.3C294.4 2.2 275.4 0 256 0z" />
+              </svg>
+            </span>
+          </button>
+
         </li>
       </ul>
     </div>
@@ -192,7 +226,7 @@
                   <div class="col-megamenu">
                     <h2 class="nav-title">
                       <a href="https://www.uwbookstore.com/Mens-Clothing">
-                        Men
+                        Men's
                       </a>
                     </h2>
                     <ul class="list-unstyled" id="mens-nav">
@@ -292,6 +326,11 @@
                           Made in U.S.A.
                         </a>
                       </li>
+                      <li>
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Mens/Best-Sellers">
+                          Best Sellers
+                        </a>
+                      </li>
                     </ul>
                   </div>
                   <!-- col-megamenu.// -->
@@ -302,7 +341,7 @@
                   <div class="col-megamenu">
                     <h2 class="nav-title">
                       <a href="https://www.uwbookstore.com/Womens-Clothing">
-                        Women
+                        Women's
                       </a>
                     </h2>
 
@@ -358,10 +397,10 @@
                         </a>
                       </li>
                       <!-- <li>
-                            <a href="https://www.uwbookstore.com/Womens-Tops">
-                              Women's Tops
-                            </a>
-                          </li> -->
+                          <a href="https://www.uwbookstore.com/Womens-Tops">
+                            Women's Tops
+                          </a>
+                        </li> -->
                       <li>
                         <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Sweatshirts">
                           Sweatshirts &amp; Sweaters
@@ -402,6 +441,11 @@
                           Made in U.S.A.
                         </a>
                       </li>
+                      <li>
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Womens/Best-Sellers">
+                          Best Sellers
+                        </a>
+                      </li>
                     </ul>
                   </div>
                   <!-- col-megamenu.// -->
@@ -414,7 +458,7 @@
 
                     <ul class="list-unstyled" id="infant-nav">
                       <li>
-                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers`Infant">
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Kids/Infant">
                           Infant
                         </a>
                       </li>
@@ -431,10 +475,10 @@
                     </ul>
 
                     <!-- <h2 class="nav-title"><a href="https://www.uwbookstore.com/Kids-Clothing">Toddler</a></h2>
-                      <ul class="list-unstyled" id="toddler-nav"></ul>
-    
-                      <h2 class="nav-title"><a href="https://www.uwbookstore.com/Kids-Clothing">Youth</a></h2>
-                      <ul class="list-unstyled" id="youth-nav"></ul> -->
+                    <ul class="list-unstyled" id="toddler-nav"></ul>
+  
+                    <h2 class="nav-title"><a href="https://www.uwbookstore.com/Kids-Clothing">Youth</a></h2>
+                    <ul class="list-unstyled" id="youth-nav"></ul> -->
 
                     <ul class="list-unstyled" id="kids-nav">
                       <li>
@@ -501,11 +545,11 @@
                           Winter Hats &amp; Accessories
                         </a>
                       </li>
-                      <li>
+                      <!-- <li>
                         <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Cheeseheads">
                           Cheeseheads
                         </a>
-                      </li>
+                      </li> -->
                       <li>
                         <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Hats/Bucket-Hats-and-Fedoras">
                           Bucket Hats &amp; Fedoras
@@ -672,8 +716,8 @@
                     </li>
 
                     <!-- <li>
-                          <a href="https://www.uwbookstore.com/">Desk Supplies</a>
-                        </li> -->
+                        <a href="https://www.uwbookstore.com/">Desk Supplies</a>
+                      </li> -->
 
                     <li>
                       <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Dorm-Accessories">
@@ -682,7 +726,7 @@
                     </li>
 
                     <li>
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Medical/Medical-Equipment">
+                      <a href="https://www.uwbookstore.com/HSLC">
                         Medical Equipment
                       </a>
                     </li>
@@ -698,49 +742,6 @@
                         School Tech
                       </a>
                     </li>
-
-                    <!-- <li>
-                          <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Engineering-Supplies">
-                            Engineering Supplies
-                          </a>
-                        </li>
-      
-      
-                        <li>
-                          <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Miscellaneous-Supplies">
-                            Miscellaneous Supplies
-                          </a>
-                        </li>
-      
-                        <li>
-                          <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Notebooks-Pads">
-                            Spirals, Notebooks, &amp; Pads
-                          </a>
-                        </li>
-      
-                        <li>
-                          <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Organizers-Ring-Binders">
-                            Organizers &amp; Ring Binders
-                          </a>
-                        </li>
-      
-                        <li>
-                          <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Paper">
-                            Paper
-                          </a>
-                        </li>
-      
-                        <li>
-                          <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Planners-Record-Books">
-                            Planners &amp; Record Books
-                          </a>
-                        </li>
-      
-                        <li>
-                          <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Writing-Supplies">
-                            Writing Supplies
-                          </a>
-                        </li> -->
 
                   </ul>
                 </div>
@@ -846,33 +847,11 @@
           </li>
 
           <li class="nav-item dropdown has-megamenu">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-              Tech
-            </a>
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tech</a>
             <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
-              <div class="row">
-                <div class="col-md-3 offset-md-1" id="technav-1">
-                  <div class="col-megamenu">
-                    <h2 class="nav-title">
-                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops">
-                        Laptops
-                      </a>
-                    </h2>
-                    <ul class="list-unstyled">
-                      <li>
-                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook">
-                          Apple
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop">
-                          Dell
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-3" id="technav-2">
+              <div class="row g-3">
+
+                <div class="col-md-2 offset-md-2" id="technav-1">
                   <div class="col-megamenu">
                     <h2 class="nav-title">
                       <a href="https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Apple-Products">
@@ -881,24 +860,18 @@
                     </h2>
                     <ul class="list-unstyled">
                       <li>
-                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Apple-Products"
-                          class="submenu__item--parent">
-                          Apple
-                        </a>
-                      </li>
-                      <li>
                         <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook">
                           MacBook
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-Desktop">
-                          Desktop
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-iPads">
+                          iPad
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-iPads">
-                          iPads
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-Desktop">
+                          Desktops
                         </a>
                       </li>
                       <li>
@@ -906,11 +879,11 @@
                           AirPods
                         </a>
                       </li>
-                      <!-- <li>
-                            <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-Watch">
-                              Apple Watch
-                            </a>
-                          </li> -->
+                      <li>
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-Watch">
+                          Apple Watch
+                        </a>
+                      </li>
                       <li>
                         <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare">
                           AppleCare+
@@ -924,9 +897,98 @@
                     </ul>
                   </div>
                 </div>
-                <div class="col-md-3" id="technav-3">
+
+                <div class="col-md-2" id="technav-2">
                   <div class="col-megamenu">
-                    <h2 class="nav-title"><a href="#">Accessories</a></h2>
+                    <h2 class="nav-title">
+                      <a href="http://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Dell-Products">
+                        Dell
+                      </a>
+                    </h2>
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop">
+                          Laptops
+                        </a>
+                      </li>
+                    </ul>
+                    <h2 class="nav-title">
+                      <a href="http://www.uwbookstore.com/Wisconsin-Badgers/shop-by-brand/Microsoft">
+                        Microsoft
+                      </a>
+                    </h2>
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Surface-Laptop">
+                          Surface Laptop &amp; Pro
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Microsoft-Warranties">
+                          Microsoft Warranties
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Microsoft-Accessories">
+                          Microsoft Accessories
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-2" id="technav-3">
+                  <div class="col-megamenu">
+                    <h2 class="nav-title">
+                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Laptops">
+                        Laptops
+                      </a>
+                    </h2>
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/MacBook">
+                          MacBook
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Dell-Laptop">
+                          Dell
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Surface-Laptop">
+                          Microsoft
+                        </a>
+                      </li>
+                    </ul>
+
+                    <h2 class="nav-title">
+                      <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Tablets">
+                        Tablets
+                      </a>
+                    </h2>
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Apple-iPads">
+                          iPad
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Surface-Pro">
+                          Surface Pro
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-2" id="technav-4">
+                  <div class="col-megamenu">
+                    <h2 class="nav-title">
+                      <a href="#">
+                        Accessories
+                      </a>
+                    </h2>
                     <ul class="list-unstyled">
                       <li>
                         <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Calculators">
@@ -934,13 +996,8 @@
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Headphones-and-Speakers">
-                          Headphones &amp; Speakers
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Power-and-Chargers">
-                          Power &amp; Chargers
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Cables-and-Chargers">
+                          Cables &amp; Chargers
                         </a>
                       </li>
                       <li>
@@ -949,8 +1006,8 @@
                         </a>
                       </li>
                       <li>
-                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Cables-and-Adapters">
-                          Cables &amp; Adapters
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Tech/Headphones-and-Speakers">
+                          Headphones &amp; Speakers
                         </a>
                       </li>
                       <li>
@@ -967,12 +1024,12 @@
                   </div>
                 </div>
                 <!-- <div class="col-md-3">
-                      <a href="https://www.uwbookstore.com/Tech#Graphite">
-                        <img role="presentation" class="img-fluid center-block"
-                          src="https://i.univbkstr.com/img/pages/tech/graphiteLogo.jpg" loading="lazy">
-                        <span class="sr-only">Graphite Premium Service Provider</span>
-                      </a>
-                    </div> -->
+                                      <a href="https://www.uwbookstore.com/Tech#Graphite">
+                                        <img role="presentation" class="img-fluid center-block"
+                                          src="https://i.univbkstr.com/img/pages/tech/graphiteLogo.jpg" loading="lazy">
+                                        <span class="sr-only">Graphite Premium Service Provider</span>
+                                      </a>
+                                    </div> -->
               </div>
               <div class="row mt-2">
                 <div class="col-md-12 view-all">
@@ -992,7 +1049,7 @@
 
           <li class="nav-item dropdown has-megamenu">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-              Cap &amp; Gown
+              Graduation
             </a>
             <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
               <div class="row">
@@ -1012,10 +1069,10 @@
                       </a>
                     </li>
                     <!-- <li>
-                          <a href="https://www.uwbookstore.com/May-Graduation-Timeline">
-                            Rental
-                          </a>
-                        </li> -->
+                        <a href="https://www.uwbookstore.com/May-Graduation-Timeline">
+                          Rental
+                        </a>
+                      </li> -->
                     <li>
                       <a href="https://herff.ly/uwmar">
                         Purchase
@@ -1061,10 +1118,10 @@
                       </a>
                     </li>
                     <!-- <li>
-                          <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Alumni/Herff-Jones-The-Stole-of-Gratitude-Black">
-                            The Stole of Gratitude
-                          </a>
-                        </li> -->
+                        <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Alumni/Herff-Jones-The-Stole-of-Gratitude-Black">
+                          The Stole of Gratitude
+                        </a>
+                      </li> -->
                     <li>
                       <a href="https://www.uwbookstore.com/Wisconsin-Badgers/Alumni/Graduation-Stoles">
                         Graduation Stoles
@@ -1076,9 +1133,9 @@
                   <div class="row py-3">
                     <div class="col-md-12">
                       <!-- <a href="https://www.uwbookstore.com/May-Graduation-Timeline"
-                            class="btn-x-lg page-scroll mb-3 text-center">
-                            2025 - Rent Your Cap &amp; Gown
-                          </a> -->
+                          class="btn-x-lg page-scroll mb-3 text-center">
+                          2025 - Rent Your Cap &amp; Gown
+                        </a> -->
                       <a href="https://www.uwbookstore.com/December-Graduation-Timeline"
                         class="btn-x-lg page-scroll mb-3 text-center">
                         2025 - Rent Your Cap &amp; Gown
@@ -1126,8 +1183,8 @@
                       </a>
                     </li>
                     <li>
-                      <a href="https://i.univbkstr.com/downloads/24-25_Campus_Calendar.pdf" target="_blank">
-                        '24-'25 Campus Events Calendar
+                      <a href="https://i.univbkstr.com/downloads/25-26_Campus_Calendar.pdf" target="_blank">
+                        '25-'26 Campus Events Calendar
                       </a>
                     </li>
                     <li>
@@ -2098,7 +2155,7 @@
   <!-- <script src="./src/test.js"></script> -->
   <script src="./src/menu.js"></script>
   <script src="./src/new-merch-detail.js"></script>
-  <!-- <script src="./src/tabs.js"></script> -->
+  <script src="./src/tabs.js"></script>
   <!-- <script src="./src/merch-detail.js"></script> -->
   <!-- <script src="./src/merchandise.js"></script> -->
 
@@ -2129,6 +2186,7 @@
   </script>
 
   <!-- <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'92ebcdc069e9e991',t:'MTc0NDM4ODM0Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script> -->
+  <script src="./src/theme-toggle.js"></script>
 </body>
 
 

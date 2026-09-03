@@ -243,22 +243,28 @@ h2.merchTitle {
   margin-block-end: rem(20);
 }
 
-.merchImage {
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    height: 30px;
-    aspect-ratio: 1;
-    right: 30%;
-    top: 170px;
-    border-radius: 4px;
-    padding: 4px;
-    background-color: #fff;
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0ic2l6ZS01Ij4KICA8cGF0aCBkPSJNOSA2YS43NS43NSAwIDAgMSAuNzUuNzV2MS41aDEuNWEuNzUuNzUgMCAwIDEgMCAxLjVoLTEuNXYxLjVhLjc1Ljc1IDAgMCAxLTEuNSAwdi0xLjVoLTEuNWEuNzUuNzUgMCAwIDEgMC0xLjVoMS41di0xLjVBLjc1Ljc1IDAgMCAxIDkgNloiIC8+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMiA5YTcgNyAwIDEgMSAxMi40NTIgNC4zOTFsMy4zMjggMy4zMjlhLjc1Ljc1IDAgMSAxLTEuMDYgMS4wNmwtMy4zMjktMy4zMjhBNyA3IDAgMCAxIDIgOVptNy01LjVhNS41IDUuNSAwIDEgMCAwIDExIDUuNSA1LjUgMCAwIDAgMC0xMVoiIGNsaXAtcnVsZT0iZXZlbm9kZCIgLz4KPC9zdmc+Cg==);
-  }
+.imageWrapper {
+  background: var(--bs-white);
+  border-radius: rem(4);
+  padding: rem(4);
 }
+
+// .merchImage {
+//   position: relative;
+
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     height: 30px;
+//     aspect-ratio: 1;
+//     right: 30%;
+//     top: 170px;
+//     border-radius: 4px;
+//     padding: 4px;
+//     background-color: #fff;
+//     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0ic2l6ZS01Ij4KICA8cGF0aCBkPSJNOSA2YS43NS43NSAwIDAgMSAuNzUuNzV2MS41aDEuNWEuNzUuNzUgMCAwIDEgMCAxLjVoLTEuNXYxLjVhLjc1Ljc1IDAgMCAxLTEuNSAwdi0xLjVoLTEuNWEuNzUuNzUgMCAwIDEgMC0xLjVoMS41di0xLjVBLjc1Ljc1IDAgMCAxIDkgNloiIC8+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMiA5YTcgNyAwIDEgMSAxMi40NTIgNC4zOTFsMy4zMjggMy4zMjlhLjc1Ljc1IDAgMSAxLTEuMDYgMS4wNmwtMy4zMjktMy4zMjhBNyA3IDAgMCAxIDIgOVptNy01LjVhNS41IDUuNSAwIDEgMCAwIDExIDUuNSA1LjUgMCAwIDAgMC0xMVoiIGNsaXAtcnVsZT0iZXZlbm9kZCIgLz4KPC9zdmc+Cg==);
+//   }
+// }
 
 /***************
     MERCH "ADDED TO CART" PILL

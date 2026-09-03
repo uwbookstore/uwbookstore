@@ -113,7 +113,7 @@
 
       if (upcomingSpecialDates.length > 0) {
         const alert = document.createElement('div');
-        alert.className = 'callout callout-warning';
+        alert.className = 'alert alert-warning';
         const p = document.createElement('p');
         p.className = 'bold';
         p.innerText = 'SPECIAL STORE HOURS';

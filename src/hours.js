@@ -84,7 +84,7 @@
       }
 
       // Remove old alert
-      const oldAlert = storeContainer.querySelector('.alert');
+      const oldAlert = storeContainer.querySelector('.callout');
       if (oldAlert) oldAlert.remove();
 
       // --- Build specialHoursMap keyed by local YYYY-MM-DD ---
@@ -113,7 +113,7 @@
 
       if (upcomingSpecialDates.length > 0) {
         const alert = document.createElement('div');
-        alert.className = 'alert alert-warning';
+        alert.className = 'callout callout-warning mb-2';
         const p = document.createElement('p');
         p.className = 'bold';
         p.innerText = 'SPECIAL STORE HOURS';

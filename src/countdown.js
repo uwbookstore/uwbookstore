@@ -2,7 +2,7 @@ const countdownWrapper = document.querySelector('.countdown__wrapper');
 const items = document.querySelectorAll('.timer__box p');
 
 // const centralTarget = new Date('2026-09-06T18:30:00');
-const targetInCentral = new Date(Date.UTC(2026, 8, 19, 16, 30, 0));
+const targetInCentral = new Date(Date.UTC(2026, 9, 3, 16, 30, 0));
 console.log(targetInCentral);
 const futureTime = targetInCentral.getTime();
 

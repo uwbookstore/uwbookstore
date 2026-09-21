@@ -32,6 +32,7 @@
   @include breakpoint(medium) {
     &__wrapper {
       flex-direction: row;
+      gap: rem(30);
     }
 
     &__image {
@@ -96,10 +97,6 @@
 
     &__box p:not(.expired) {
       font-size: rem(30);
-    }
-
-    &__text {
-      margin-inline-start: rem(20);
     }
   }
 }

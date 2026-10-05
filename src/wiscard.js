@@ -1,6 +1,6 @@
 // Auto apply promocode when Wiscard option is selected
 // Optional: auto remove promo code if Wiscard is deselected and applied promo code is Wiscard promo code
-const uwWiscardPromo = 'WISCARD1';
+const uwWiscardPromo = 'WISCARD2';
 
 $(document).ready(function () {
   const digitalOnlyVal = $('#digitalOnly').val()?.toLowerCase();

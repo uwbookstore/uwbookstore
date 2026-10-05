@@ -31,14 +31,14 @@ const getRemainingTime = () => {
   if (t < 0) {
     clearInterval(countdown);
     countdownWrapper.innerHTML = `
-        <div class="countdown__image mr-3">
+        <div class="countdown__image">
           <img src="https://i.univbkstr.com/img/landing/graduation/motionW.png" alt="" role="presentation"
             class="img-fluid">
         </div>
 
-        <div class="timer__text ml-0">Go Badgers!</div>
+        <div class="timer__text">Go Badgers!</div>
 
-        <div class="countdown__image ml-3">
+        <div class="countdown__image">
           <img src="https://i.univbkstr.com/img/landing/graduation/motionW.png" alt="" role="presentation"
             class="img-fluid">
         </div>

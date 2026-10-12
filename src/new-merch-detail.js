@@ -167,6 +167,21 @@ merchSelectError
   ? merchSelectError.classList.add('callout', 'callout-danger', 'fit-content')
   : '';
 
+const merchDisclaimerError = document.querySelector(
+  '[data-merch-disclaimer-error]',
+);
+merchDisclaimerError
+  ? merchDisclaimerError.classList.add(
+      'callout',
+      'callout-danger',
+      'fit-content',
+      'ml-auto',
+    )
+  : '';
+merchDisclaimerError
+  ? (merchDisclaimerError.textContent = 'Please agree to the disclaimer above.')
+  : '';
+
 // Fix MBS default messages
 const merchDiscountValue = document.querySelectorAll(
   '.merch-value.merch-value--gm',

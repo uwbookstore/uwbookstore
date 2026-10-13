@@ -439,6 +439,20 @@ div[data-merch-price-container] {
   margin: 0;
 }
 
+#item-disclaimer > .form-check-label {
+  display: flex;
+  gap: rem(10);
+
+  .form-check-input.merchDisclaimer {
+    order: -1;
+    flex: 1 0 1em;
+  }
+}
+
+// prettier-ignore
+#landsEnd, #landsEndReally, #kyleCavan, #cdiDrop, #smphLe, #jardine
+ { display: none; }
+
 .form-check:empty {
   display: none;
 }

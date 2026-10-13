@@ -167,21 +167,6 @@ merchSelectError
   ? merchSelectError.classList.add('callout', 'callout-danger', 'fit-content')
   : '';
 
-const merchDisclaimerError = document.querySelector(
-  '[data-merch-disclaimer-error]',
-);
-merchDisclaimerError
-  ? merchDisclaimerError.classList.add(
-      'callout',
-      'callout-danger',
-      'fit-content',
-      'ml-auto',
-    )
-  : '';
-merchDisclaimerError
-  ? (merchDisclaimerError.textContent = 'Please agree to the disclaimer above.')
-  : '';
-
 // Fix MBS default messages
 const merchDiscountValue = document.querySelectorAll(
   '.merch-value.merch-value--gm',
@@ -426,7 +411,9 @@ merchImageMainBottom ? (merchImageMainBottom.style.display = 'none') : '';
 
 // DISCLAIMERS
 const merchDisclaimerFormCheck = document.querySelector('.form-check.mt-3');
-const merchDisclaimer = document.querySelector('[data-merch-disclaimer]');
+const merchDisclaimerCheckbox = document.querySelector(
+  '[data-merch-disclaimer]',
+);
 const disclaimerLabel = document.querySelector(
   '.form-check.mt-3 > label.form-check-label',
 );
@@ -438,7 +425,7 @@ merchDisclaimerHtml.classList.add('callout', 'callout-warning');
 
 if (merchDisclaimerFormCheck) {
   merchDisclaimerFormCheck.style.display = 'none';
-  disclaimerLabel.appendChild(merchDisclaimer);
+  disclaimerLabel.appendChild(merchDisclaimerCheckbox);
   disclaimerLabel.appendChild(disclaimerText);
   merchDisclaimerHtml.appendChild(disclaimerLabel);
   merchDisclaimerFormCheck.after(merchDisclaimerHtml);
@@ -485,6 +472,22 @@ if (merchDisclaimerFormCheck) {
     // TODO: Move input to front of text
   }
 }
+
+// DISCLAIMER ERRORS
+const merchDisclaimerError = document.querySelector(
+  '[data-merch-disclaimer-error]',
+);
+merchDisclaimerError
+  ? merchDisclaimerError.classList.add(
+      'callout',
+      'callout-danger',
+      'fit-content',
+      'ml-auto',
+    )
+  : '';
+merchDisclaimerError
+  ? (merchDisclaimerError.textContent = 'Please agree to the disclaimer above.')
+  : '';
 
 // Check if item is discontinued. If yes, show info in tabs
 const discoTab = document.createElement('li');

@@ -170,6 +170,13 @@ if (!noListItems) {
   ) {
     categoryTitle.innerHTML = 'White Wisconsin Gear &amp; Clothing';
     document.title = 'White Wisconsin Gear & Clothing';
+  } else if (
+    categoryTitle.textContent.toLowerCase().substring(0, 22) ===
+    'chem & bio engineering'
+  ) {
+    categoryTitle.innerHTML =
+      'Department of Chemical and Biological Engineering';
+    document.title = 'Department of Chemical and Biological Engineering';
   }
 
   // HIDE SEARCHCATWRAP PARENT

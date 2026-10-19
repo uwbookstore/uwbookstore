@@ -440,7 +440,7 @@ if (merchDisclaimerFormCheck) {
   // LANDS' END DISCLAIMER
   else if (document.getElementById('landsEndReally')) {
     disclaimerText.innerHTML = `
-      <strong>PLEASE READ BEFORE PURCHASE! — Lands&apos; End may take 17-22 business days (M-F) to ship. Lands&rsquo; End orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>
+      <strong>PLEASE READ BEFORE PURCHASE! — Lands&apos; End may take 22-27 business days (M-F) to ship. Lands&rsquo; End orders will incur a $10 handling fee due to it being drop shipped from the manufacturer. Lands' End deadline for holiday deliveries is November 1, 2026.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>
     `;
   } // KYLE CAVAN DISCLAIMER
   else if (document.getElementById('kyleCavan')) {

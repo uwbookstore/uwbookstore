@@ -43,6 +43,11 @@
       position: relative;
     }
 
+    .form-control,
+    .form-control.form-select {
+      border-radius: 4px;
+    }
+
     .form-control:user-valid,
     .form-control.form-select:user-valid {
       border: 2px solid var(--bs-success);
@@ -1411,7 +1416,7 @@
               <div class="bottom10 password-block" id="newPassword">
                 <label for="custNewPassword" class="normal form-control-label">Password</label>
                 <input aria-label="Password" autocomplete="off" class="form-control" id="custNewPassword" maxlength="20"
-                  name="customerRegister.Password" placeholder="Password" required="True" type="password" value=""
+                  name="customerRegister.Password" placeholder="Password" required type="password" value=""
                   data-gtm-form-interact-field-id="1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                   title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
                 <button type="button" class="btn-show-hide">
@@ -1427,7 +1432,7 @@
               <div class="bottom10 password-block" id="confirmNewPassword">
                 <label for="custConfirmPassword" class="normal form-control-label">Confirm Password</label>
                 <input aria-label="Confirm Password" autocomplete="off" class="form-control" id="custConfirmPassword"
-                  maxlength="20" name="customerRegister.ConfirmPassword" placeholder="Confirm Password" required="True"
+                  maxlength="20" name="customerRegister.ConfirmPassword" placeholder="Confirm Password" required
                   type="password" value="" data-gtm-form-interact-field-id="2">
                 <button type="button" class="btn-show-hide">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -1520,20 +1525,18 @@
                 <div id="custBillFName" class="bottom10 col-sm-10 col-12 padding-md-left0">
                   <label for="custBillFirst" class="normal form-control-label">First Name</label>
                   <input aria-label="First Name" class="form-control" id="custBillFirst" maxlength="20"
-                    name="customerRegister.billAddress.fname" placeholder="First Name" required="true" type="text"
-                    value="">
+                    name="customerRegister.billAddress.fname" placeholder="Joe" required type="text" value="">
                 </div>
                 <div id="custBillMI" class="bottom10 col-sm-2 col-12 padding-md-right0">
                   <label for="custBillMiddle" class="normal form-control-label">Mi</label>
                   <input aria-label="Middle Initial" class="form-control" id="custBillMiddle" maxlength="1"
-                    name="customerRegister.billAddress.middle_i" placeholder="Mi" type="text" value="">
+                    name="customerRegister.billAddress.middle_i" placeholder="M" type="text" value="">
                 </div>
               </div>
               <div id="custBillLName" class="bottom10">
                 <label for="custBillLast" class="normal form-control-label">Last Name</label>
                 <input aria-label="Last Name" class="form-control" id="custBillLast" maxlength="20"
-                  name="customerRegister.billAddress.lname" placeholder="Last Name" required="true" type="text"
-                  value="">
+                  name="customerRegister.billAddress.lname" placeholder="Sample" required type="text" value="">
               </div>
               <div id="custBillBName" class="bottom10 displayn">
                 <label class="normal form-control-label">Business Name</label>
@@ -1543,13 +1546,13 @@
               <div id="custBillAddress1" class="bottom10">
                 <label class="normal form-control-label">Address Line 1</label>
                 <input aria-label="Address Line 1" class="form-control" id="custBillAdd1" maxlength="50"
-                  name="customerRegister.billAddress.address1" placeholder="Address Line 1" required="true" type="text"
+                  name="customerRegister.billAddress.address1" placeholder="1234 Sample Street" required type="text"
                   value="">
               </div>
               <div id="custBillAddress2" class="bottom10">
                 <label class="normal form-control-label">Address Line 2</label>
                 <input aria-label="Address Line 2" class="form-control" id="custBillAdd2" maxlength="50"
-                  name="customerRegister.billAddress.address2" placeholder="Address Line 2" type="text" value="">
+                  name="customerRegister.billAddress.address2" placeholder="" type="text" value="">
               </div>
               <input id="customerRegister_billAddress_profileRegister"
                 name="customerRegister.billAddress.profileRegister" type="hidden" value="True">
@@ -1559,12 +1562,12 @@
               <div id="custBillCName" class="bottom10">
                 <label class="normal form-control-label">City</label>
                 <input aria-label="City" class="form-control" id="custBillCity" maxlength="50"
-                  name="customerRegister.billAddress.city" placeholder="City" required="true" type="text" value="">
+                  name="customerRegister.billAddress.city" placeholder="Sample City" required type="text" value="">
               </div>
               <div id="custBillStateDropdown" class="bottom10">
                 <label class="normal form-control-label">State</label>
                 <select aria-label="State" class="form-control form-select" id="custBillState"
-                  name="customerRegister.billAddress.state" required="true">
+                  name="customerRegister.billAddress.state" required>
                   <option selected="selected" value="" class="subject-option">Please Choose State</option>
                   <option value="NA" class="subject-option">Not Applicable</option>
                   <option value="AS" class="subject-option">American Samoa</option>
@@ -1645,27 +1648,16 @@
                 </select>
 
               </div>
-              <div class="row">
-                <div class="col-sm-6 col-12 padding-md-left0">
-                  <div id="custBillZipCode5" class="bottom10">
-                    <label class="normal form-control-label">Zip/Postal</label>
-                    <input aria-label="Zip/Postal" class="form-control" id="custBillZip" maxlength="20"
-                      name="customerRegister.billAddress.zip" placeholder="Zip/Postal" required="true" type="text"
-                      value="">
-                  </div>
-                </div>
-                <div class="col-sm-6 col-12 padding-md-right0">
-                  <div id="custBillZipCode4" class="bottom10">
-                    <label class="normal form-control-label">Zip+4</label>
-                    <input aria-label="Zip Plus 4" class="form-control" id="custBillZip4" maxlength="4"
-                      name="customerRegister.billAddress.zipPlus4" placeholder="Zip+4" type="text" value="">
-                  </div>
-                </div>
+              <div id="custBillZipCode5" class="bottom10">
+                <label class="normal form-control-label">Zip/Postal + 4</label>
+                <input aria-label="Zip/Postal + 4" class="form-control" id="custBillZip" maxlength="20"
+                  name="customerRegister.billAddress.zip" placeholder="12345+6789" required type="text" value="">
               </div>
+
               <div id="custBillCountryDropdown" class="bottom10">
                 <label class="normal form-control-label">Country</label>
                 <select aria-label="Country" class="form-control form-select" id="custBillCountry"
-                  name="customerRegister.billAddress.country" required="true">
+                  name="customerRegister.billAddress.country" required>
                   <option value="Afghanistan" class="subject-option">Afghanistan</option>
                   <option value="Albania" class="subject-option">Albania</option>
                   <option value="Algeria" class="subject-option">Algeria</option>
@@ -1934,10 +1926,9 @@
                 </script>
               </div>
               <div id="" class="bottom10">
-                <label class="normal form-control-label">Phone Number</label>
+                <label class="normal form-control-label">Phone Number <small>(no spaces or dashes)</small></label>
                 <input aria-label="Phone Number" class="form-control" id="custBillPhone" maxlength="35"
-                  name="customerRegister.billAddress.phone" placeholder="Phone Number" required="true" type="text"
-                  value="">
+                  name="customerRegister.billAddress.phone" placeholder="3215551234" required type="tel" value="">
               </div>
             </div>
 
@@ -1945,10 +1936,467 @@
               <input class="newCheckbox" id="useSameShipping" name="customerRegister.billAddress.ShippingAsBilling"
                 type="checkbox" value="true"><input name="customerRegister.billAddress.ShippingAsBilling" type="hidden"
                 value="false">
-              <span class="newCheckboxText"> Use Billing Address as Shipping Address?</span>
+              <label for="useSameShipping" class="ml-3">Use Billing Address as Shipping Address?</label>
             </div>
           </div>
 
+        </div>
+      </div>
+
+      <div id="custShipAddressWrap" class="card">
+        <div class="card-header">
+          <h2>Shipping Address</h2>
+        </div>
+        <div id="custShipAddressBody" class="card-body">
+          <div class="res_question bottom10">
+            <p class="custShipResQuestion displayib">
+              Residential Address? <span class="required_asterisk red">*</span>
+            </p>
+
+            <fieldset id="shippingAddFieldset" class="displayib">
+              <legend class="hidden_label border_none">Is your shipping address a residential address?</legend>
+              <label>
+                <input checked="checked" class="radio-inline radioResidential" id="residentShipYes"
+                  name="customerRegister.shipAddress.Residential" type="radio" value="true"><span> Yes</span>
+              </label>
+              <label>
+                <input class="radio-inline radioResidential" id="residentShipNo"
+                  name="customerRegister.shipAddress.Residential" type="radio" value="false"><span> No</span>
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-6 col-12 clear" id="custShipCol1">
+              <div class="row">
+                <div id="custShipFName" class="bottom10 col-sm-10 col-12 padding-md-left0">
+                  <label for="custShipFirst" class="normal form-control-label">First Name</label>
+                  <input aria-label="First Name" class="form-control" id="custShipFirst" maxlength="20"
+                    name="customerRegister.shipAddress.fname" placeholder="Joe" required type="text" value="">
+                </div>
+                <div id="custShipMI" class="bottom10 col-sm-2 col-12 padding-md-right0">
+                  <label for="custShipMiddle" class="normal form-control-label">Mi</label>
+                  <input aria-label="Middle Initial" class="form-control" id="custShipMiddle" maxlength="1"
+                    name="customerRegister.shipAddress.middle_i" placeholder="M" type="text" value="">
+                </div>
+              </div>
+              <div id="custShipLName" class="bottom10">
+                <label class="normal form-control-label">Last Name</label>
+                <input aria-label="Last Name" class="form-control" id="custShipLast" maxlength="20"
+                  name="customerRegister.shipAddress.lname" placeholder="Sample" required type="text" value="">
+              </div>
+              <div id="custShipBName" class="bottom10 displayn">
+                <label for="custShipBusiness" class="normal form-control-label">Business Name</label>
+                <input aria-label="Business Name" class="form-control" id="custShipBusiness" maxlength="50"
+                  name="customerRegister.shipAddress.BusinessName" placeholder="" type="text" value="">
+              </div>
+              <div id="custShipAddress1" class="bottom10">
+                <label for="custShipAdd1" class="normal form-control-label">Address Line 1</label>
+                <input aria-label="Address Line 1" class="form-control" id="custShipAdd1" maxlength="50"
+                  name="customerRegister.shipAddress.address1" placeholder="1234 Sample Street" required type="text"
+                  value="">
+              </div>
+              <div id="custShipAddress2" class="bottom10">
+                <label for="custShipAdd2" class="normal form-control-label">Address Line 2</label>
+                <input aria-label="Address Line 2" class="form-control" id="custShipAdd2" maxlength="50"
+                  name="customerRegister.shipAddress.address2" placeholder="" type="text" value="">
+              </div>
+              <input id="customerRegister_shipAddress_profileRegister"
+                name="customerRegister.shipAddress.profileRegister" type="hidden" value="True">
+            </div>
+            <div class="col-sm-6 col-12" id="custShipCol2">
+              <div id="custShipCName" class="bottom10">
+                <label for="custShipCity" class="normal form-control-label">City</label>
+                <input aria-label="City" class="form-control" id="custShipCity" maxlength="50"
+                  name="customerRegister.shipAddress.city" placeholder="Sample City" required type="text" value="">
+              </div>
+              <div id="custShipStateDropdown" class="bottom10">
+                <label for="custShipState" class="normal form-control-label">State</label>
+                <select aria-label="State" class="form-control form-select" id="custShipState"
+                  name="customerRegister.shipAddress.state" required>
+                  <option selected="selected" value="" class="subject-option">Please Choose State</option>
+                  <option value="NA" class="subject-option">Not Applicable</option>
+                  <option value="AS" class="subject-option">American Samoa</option>
+                  <option value="AA" class="subject-option">Armed Forces, Americas</option>
+                  <option value="AP" class="subject-option">Armed Forces, Pacific</option>
+                  <option value="AE" class="subject-option">Armed Forces, Others</option>
+                  <option value="AL" class="subject-option">ALABAMA</option>
+                  <option value="AK" class="subject-option">ALASKA</option>
+                  <option value="AB" class="subject-option">ALBERTA</option>
+                  <option value="AZ" class="subject-option">ARIZONA</option>
+                  <option value="AR" class="subject-option">ARKANSAS</option>
+                  <option value="BC" class="subject-option">BRITISH COLUMBIA</option>
+                  <option value="CA" class="subject-option">CALIFORNIA</option>
+                  <option value="CO" class="subject-option">COLORADO</option>
+                  <option value="CT" class="subject-option">CONNECTICUT</option>
+                  <option value="DE" class="subject-option">DELAWARE</option>
+                  <option value="DC" class="subject-option">DISTRICT OF COLUMBIA</option>
+                  <option value="FL" class="subject-option">FLORIDA</option>
+                  <option value="GA" class="subject-option">GEORGIA</option>
+                  <option value="GU" class="subject-option">Guam</option>
+                  <option value="HI" class="subject-option">HAWAII</option>
+                  <option value="ID" class="subject-option">IDAHO</option>
+                  <option value="IL" class="subject-option">ILLINOIS</option>
+                  <option value="IN" class="subject-option">INDIANA</option>
+                  <option value="IA" class="subject-option">IOWA</option>
+                  <option value="KS" class="subject-option">KANSAS</option>
+                  <option value="KY" class="subject-option">KENTUCKY</option>
+                  <option value="LA" class="subject-option">LOUISIANA</option>
+                  <option value="ME" class="subject-option">MAINE</option>
+                  <option value="MB" class="subject-option">MANITOBA</option>
+                  <option value="MH" class="subject-option">Marshall Islands</option>
+                  <option value="MD" class="subject-option">MARYLAND</option>
+                  <option value="MA" class="subject-option">MASSACHUSETTS</option>
+                  <option value="MI" class="subject-option">MICHIGAN</option>
+                  <option value="FM" class="subject-option">Micronesia, Federated States of</option>
+                  <option value="MN" class="subject-option">MINNESOTA</option>
+                  <option value="MS" class="subject-option">MISSISSIPPI</option>
+                  <option value="MO" class="subject-option">MISSOURI</option>
+                  <option value="MT" class="subject-option">MONTANA</option>
+                  <option value="NE" class="subject-option">NEBRASKA</option>
+                  <option value="NV" class="subject-option">NEVADA</option>
+                  <option value="NB" class="subject-option">NEW BRUNSWICK</option>
+                  <option value="NH" class="subject-option">NEW HAMPSHIRE</option>
+                  <option value="NJ" class="subject-option">NEW JERSEY</option>
+                  <option value="NM" class="subject-option">NEW MEXICO</option>
+                  <option value="NY" class="subject-option">NEW YORK</option>
+                  <option value="NF" class="subject-option">NEWFOUNDLAND</option>
+                  <option value="NC" class="subject-option">NORTH CAROLINA</option>
+                  <option value="ND" class="subject-option">NORTH DAKOTA</option>
+                  <option value="MP" class="subject-option">Northern Mariana Islands</option>
+                  <option value="NT" class="subject-option">NORTHWEST TERRITORIES</option>
+                  <option value="NS" class="subject-option">NOVA SCOTIA</option>
+                  <option value="NU" class="subject-option">NUNAVUT</option>
+                  <option value="OH" class="subject-option">OHIO</option>
+                  <option value="OK" class="subject-option">OKLAHOMA</option>
+                  <option value="ON" class="subject-option">ONTARIO</option>
+                  <option value="OR" class="subject-option">OREGON</option>
+                  <option value="PW" class="subject-option">Palau</option>
+                  <option value="PR" class="subject-option">Puerto Rico</option>
+                  <option value="PA" class="subject-option">PENNSYLVANIA</option>
+                  <option value="PE" class="subject-option">PRINCE EDWARD ISLAND</option>
+                  <option value="QC" class="subject-option">QUEBEC</option>
+                  <option value="RI" class="subject-option">RHODE ISLAND</option>
+                  <option value="SK" class="subject-option">SASKATCHEWAN</option>
+                  <option value="SC" class="subject-option">SOUTH CAROLINA</option>
+                  <option value="SD" class="subject-option">SOUTH DAKOTA</option>
+                  <option value="TN" class="subject-option">TENNESSEE</option>
+                  <option value="TX" class="subject-option">TEXAS</option>
+                  <option value="UT" class="subject-option">UTAH</option>
+                  <option value="VT" class="subject-option">VERMONT</option>
+                  <option value="VI" class="subject-option">Virgin Islands (U.S.)</option>
+                  <option value="VA" class="subject-option">VIRGINIA</option>
+                  <option value="WA" class="subject-option">WASHINGTON</option>
+                  <option value="WV" class="subject-option">WEST VIRGINIA</option>
+                  <option value="WI" class="subject-option">WISCONSIN</option>
+                  <option value="WY" class="subject-option">WYOMING</option>
+                  <option value="YT" class="subject-option">YUKON</option>
+                </select>
+
+              </div>
+              <div class="row">
+                <div class="col-sm-6 col-12 padding-md-left0">
+                  <div id="custShipZipCode5" class="bottom10">
+                    <label for="custShipZip" class="normal form-control-label">Zip/Postal</label>
+                    <input aria-label="Zip/Postal" class="form-control" id="custShipZip" maxlength="20"
+                      name="customerRegister.shipAddress.zip" placeholder="12345" required type="number" value="">
+                  </div>
+                </div>
+                <div class="col-sm-6 col-12 padding-md-right0">
+                  <div id="custShipZipCode4" class="bottom10">
+                    <label for="custShipZip4" class="normal form-control-label">+4</label>
+                    <input aria-label="Zip Plus 4" class="form-control" id="custShipZip4" maxlength="4"
+                      name="customerRegister.shipAddress.zipPlus4" placeholder="5678" type="number" value="">
+                  </div>
+                </div>
+              </div>
+              <div id="custShipCountryDropdown" class="bottom10">
+                <label for="custShipCountry" class="normal form-control-label">Country</label>
+                <select aria-label="Country" class="form-control form-select" id="custShipCountry"
+                  name="customerRegister.shipAddress.country" required>
+                  <option value="Afghanistan" class="subject-option">Afghanistan</option>
+                  <option value="Albania" class="subject-option">Albania</option>
+                  <option value="Algeria" class="subject-option">Algeria</option>
+                  <option value="American Samoa" class="subject-option">American Samoa</option>
+                  <option value="Andorra" class="subject-option">Andorra</option>
+                  <option value="Anguilla" class="subject-option">Anguilla</option>
+                  <option value="Antarctica" class="subject-option">Antarctica</option>
+                  <option value="Antigua And Barbuda" class="subject-option">Antigua And Barbuda</option>
+                  <option value="Argentina" class="subject-option">Argentina</option>
+                  <option value="Armenia" class="subject-option">Armenia</option>
+                  <option value="Aruba" class="subject-option">Aruba</option>
+                  <option value="Australia" class="subject-option">Australia</option>
+                  <option value="Austria" class="subject-option">Austria</option>
+                  <option value="Azerbaijan" class="subject-option">Azerbaijan</option>
+                  <option value="Bahamas" class="subject-option">Bahamas</option>
+                  <option value="Bahrain" class="subject-option">Bahrain</option>
+                  <option value="Bangladesh" class="subject-option">Bangladesh</option>
+                  <option value="Barbados" class="subject-option">Barbados</option>
+                  <option value="Belarus" class="subject-option">Belarus</option>
+                  <option value="Belgium" class="subject-option">Belgium</option>
+                  <option value="Belize" class="subject-option">Belize</option>
+                  <option value="Benin" class="subject-option">Benin</option>
+                  <option value="Benin" class="subject-option">Benin</option>
+                  <option value="Bermuda" class="subject-option">Bermuda</option>
+                  <option value="Bhutan" class="subject-option">Bhutan</option>
+                  <option value="Bolivia" class="subject-option">Bolivia</option>
+                  <option value="Bonaire" class="subject-option">Bonaire</option>
+                  <option value="Bosnia and Herzegovina" class="subject-option">Bosnia and Herzegovina</option>
+                  <option value="Botswana" class="subject-option">Botswana</option>
+                  <option value="Bouvet Island" class="subject-option">Bouvet Island</option>
+                  <option value="Brazil" class="subject-option">Brazil</option>
+                  <option value="British Indian Ocean Territory" class="subject-option">British Indian Ocean Territory
+                  </option>
+                  <option value="Brunei Darussalam" class="subject-option">Brunei Darussalam</option>
+                  <option value="Bulgaria" class="subject-option">Bulgaria</option>
+                  <option value="Burkina Faso" class="subject-option">Burkina Faso</option>
+                  <option value="Burundi" class="subject-option">Burundi</option>
+                  <option value="Cambodia" class="subject-option">Cambodia</option>
+                  <option value="Cameroon" class="subject-option">Cameroon</option>
+                  <option value="Canada" class="subject-option">Canada</option>
+                  <option value="Cape Verde" class="subject-option">Cape Verde</option>
+                  <option value="Cayman Islands" class="subject-option">Cayman Islands</option>
+                  <option value="Central African Republic" class="subject-option">Central African Republic</option>
+                  <option value="Chad" class="subject-option">Chad</option>
+                  <option value="Chile" class="subject-option">Chile</option>
+                  <option value="China" class="subject-option">China</option>
+                  <option value="Christmas Island" class="subject-option">Christmas Island</option>
+                  <option value="Cocos (Keeling) Islands" class="subject-option">Cocos (Keeling) Islands</option>
+                  <option value="Colombia" class="subject-option">Colombia</option>
+                  <option value="Comoros" class="subject-option">Comoros</option>
+                  <option value="Congo" class="subject-option">Congo</option>
+                  <option value="Congo, the Democratic Republic of the" class="subject-option">Congo, the Democratic
+                    Republic
+                    of the</option>
+                  <option value="Cook Islands" class="subject-option">Cook Islands</option>
+                  <option value="Costa Rica" class="subject-option">Costa Rica</option>
+                  <option value="Cote d'Lvoire" class="subject-option">Cote d'Lvoire</option>
+                  <option value="Croatia" class="subject-option">Croatia</option>
+                  <option value="Cyprus" class="subject-option">Cyprus</option>
+                  <option value="Czech Republic" class="subject-option">Czech Republic</option>
+                  <option value="Denmark" class="subject-option">Denmark</option>
+                  <option value="Djibouti" class="subject-option">Djibouti</option>
+                  <option value="Dominica" class="subject-option">Dominica</option>
+                  <option value="Dominican Republic" class="subject-option">Dominican Republic</option>
+                  <option value="East Timor" class="subject-option">East Timor</option>
+                  <option value="Ecuador" class="subject-option">Ecuador</option>
+                  <option value="Egypt" class="subject-option">Egypt</option>
+                  <option value="El Salvador" class="subject-option">El Salvador</option>
+                  <option value="Equatorial Guinea" class="subject-option">Equatorial Guinea</option>
+                  <option value="Eritrea" class="subject-option">Eritrea</option>
+                  <option value="Estonia" class="subject-option">Estonia</option>
+                  <option value="Ethiopia" class="subject-option">Ethiopia</option>
+                  <option value="Falkland Islands" class="subject-option">Falkland Islands</option>
+                  <option value="Faroe Islands" class="subject-option">Faroe Islands</option>
+                  <option value="Fiji" class="subject-option">Fiji</option>
+                  <option value="Finland" class="subject-option">Finland</option>
+                  <option value="France" class="subject-option">France</option>
+                  <option value="French Guiana" class="subject-option">French Guiana</option>
+                  <option value="French Polynesia" class="subject-option">French Polynesia</option>
+                  <option value="French Southern Territories" class="subject-option">French Southern Territories
+                  </option>
+                  <option value="Gabon" class="subject-option">Gabon</option>
+                  <option value="Gambia" class="subject-option">Gambia</option>
+                  <option value="Georgia" class="subject-option">Georgia</option>
+                  <option value="Germany" class="subject-option">Germany</option>
+                  <option value="Ghana" class="subject-option">Ghana</option>
+                  <option value="Gibraltar" class="subject-option">Gibraltar</option>
+                  <option value="Great Britain" class="subject-option">Great Britain</option>
+                  <option value="Greece" class="subject-option">Greece</option>
+                  <option value="Greenland" class="subject-option">Greenland</option>
+                  <option value="Grenada" class="subject-option">Grenada</option>
+                  <option value="Guadeloupe" class="subject-option">Guadeloupe</option>
+                  <option value="Guam" class="subject-option">Guam</option>
+                  <option value="Guatemala" class="subject-option">Guatemala</option>
+                  <option value="Guernsey" class="subject-option">Guernsey</option>
+                  <option value="Guinea" class="subject-option">Guinea</option>
+                  <option value="Guinea-Bissau" class="subject-option">Guinea-Bissau</option>
+                  <option value="Guyana" class="subject-option">Guyana</option>
+                  <option value="Haiti" class="subject-option">Haiti</option>
+                  <option value="Heard and Mc Donald Islands" class="subject-option">Heard and Mc Donald Islands
+                  </option>
+                  <option value="Honduras" class="subject-option">Honduras</option>
+                  <option value="Hong Kong" class="subject-option">Hong Kong</option>
+                  <option value="Hungary" class="subject-option">Hungary</option>
+                  <option value="Iceland" class="subject-option">Iceland</option>
+                  <option value="India" class="subject-option">India</option>
+                  <option value="Indonesia" class="subject-option">Indonesia</option>
+                  <option value="Iraq" class="subject-option">Iraq</option>
+                  <option value="Iran" class="subject-option">Iran</option>
+                  <option value="Ireland" class="subject-option">Ireland</option>
+                  <option value="Isle of Man" class="subject-option">Isle of Man</option>
+                  <option value="Israel" class="subject-option">Israel</option>
+                  <option value="Italy" class="subject-option">Italy</option>
+                  <option value="Jamaica" class="subject-option">Jamaica</option>
+                  <option value="Japan" class="subject-option">Japan</option>
+                  <option value="Jersey" class="subject-option">Jersey</option>
+                  <option value="Jordan" class="subject-option">Jordan</option>
+                  <option value="Kazakhstan" class="subject-option">Kazakhstan</option>
+                  <option value="Kenya" class="subject-option">Kenya</option>
+                  <option value="Kiribati" class="subject-option">Kiribati</option>
+                  <option value="Kuwait" class="subject-option">Kuwait</option>
+                  <option value="Kyrgyzstan" class="subject-option">Kyrgyzstan</option>
+                  <option value="Lao People's Democratic Republic" class="subject-option">Lao People's Democratic
+                    Republic
+                  </option>
+                  <option value="Latvia" class="subject-option">Latvia</option>
+                  <option value="Lebanon" class="subject-option">Lebanon</option>
+                  <option value="Lesotho" class="subject-option">Lesotho</option>
+                  <option value="Liberia" class="subject-option">Liberia</option>
+                  <option value="Libya" class="subject-option">Libya</option>
+                  <option value="Liechtenstein" class="subject-option">Liechtenstein</option>
+                  <option value="Lithuania" class="subject-option">Lithuania</option>
+                  <option value="Luxembourg" class="subject-option">Luxembourg</option>
+                  <option value="Macau" class="subject-option">Macau</option>
+                  <option value="Macedonia" class="subject-option">Macedonia</option>
+                  <option value="Madagascar" class="subject-option">Madagascar</option>
+                  <option value="Malawi" class="subject-option">Malawi</option>
+                  <option value="Malaysia" class="subject-option">Malaysia</option>
+                  <option value="Maldives" class="subject-option">Maldives</option>
+                  <option value="Mali" class="subject-option">Mali</option>
+                  <option value="Malta" class="subject-option">Malta</option>
+                  <option value="Marshall Islands" class="subject-option">Marshall Islands</option>
+                  <option value="Martinique" class="subject-option">Martinique</option>
+                  <option value="Mauritania" class="subject-option">Mauritania</option>
+                  <option value="Mauritius" class="subject-option">Mauritius</option>
+                  <option value="Mayotte" class="subject-option">Mayotte</option>
+                  <option value="Mexico" class="subject-option">Mexico</option>
+                  <option value="Micronesia, Federated States of" class="subject-option">Micronesia, Federated States of
+                  </option>
+                  <option value="Monaco" class="subject-option">Monaco</option>
+                  <option value="Mongolia" class="subject-option">Mongolia</option>
+                  <option value="Montserrat" class="subject-option">Montserrat</option>
+                  <option value="Morocco" class="subject-option">Morocco</option>
+                  <option value="Mozambique" class="subject-option">Mozambique</option>
+                  <option value="Namibia" class="subject-option">Namibia</option>
+                  <option value="Nauru" class="subject-option">Nauru</option>
+                  <option value="Nepal" class="subject-option">Nepal</option>
+                  <option value="Netherlands" class="subject-option">Netherlands</option>
+                  <option value="New Caledonia" class="subject-option">New Caledonia</option>
+                  <option value="New Zealand" class="subject-option">New Zealand</option>
+                  <option value="Nicaragua" class="subject-option">Nicaragua</option>
+                  <option value="Niger" class="subject-option">Niger</option>
+                  <option value="Nigeria" class="subject-option">Nigeria</option>
+                  <option value="Niue" class="subject-option">Niue</option>
+                  <option value="Norfolk Island" class="subject-option">Norfolk Island</option>
+                  <option value="North Korea" class="subject-option">North Korea</option>
+                  <option value="Northern Mariana Islands" class="subject-option">Northern Mariana Islands</option>
+                  <option value="Norway" class="subject-option">Norway</option>
+                  <option value="Oman" class="subject-option">Oman</option>
+                  <option value="Pakistan" class="subject-option">Pakistan</option>
+                  <option value="Palau" class="subject-option">Palau</option>
+                  <option value="Panama" class="subject-option">Panama</option>
+                  <option value="Papua New Guinea" class="subject-option">Papua New Guinea</option>
+                  <option value="Paraguay" class="subject-option">Paraguay</option>
+                  <option value="Peru" class="subject-option">Peru</option>
+                  <option value="Philippines" class="subject-option">Philippines</option>
+                  <option value="Poland" class="subject-option">Poland</option>
+                  <option value="Portugal" class="subject-option">Portugal</option>
+                  <option value="Qatar" class="subject-option">Qatar</option>
+                  <option value="Reunion" class="subject-option">Reunion</option>
+                  <option value="Romania" class="subject-option">Romania</option>
+                  <option value="Russian Federation" class="subject-option">Russian Federation</option>
+                  <option value="Rwanda" class="subject-option">Rwanda</option>
+                  <option value="aint Kitts and Nevis" class="subject-option">aint Kitts and Nevis</option>
+                  <option value="Saint Lucia" class="subject-option">Saint Lucia</option>
+                  <option value="Saint Maarten" class="subject-option">Saint Maarten</option>
+                  <option value="Saint Vincent and the Grenadines" class="subject-option">Saint Vincent and the
+                    Grenadines
+                  </option>
+                  <option value="Samoa (Independent)" class="subject-option">Samoa (Independent)</option>
+                  <option value="San Marino" class="subject-option">San Marino</option>
+                  <option value="Sao Tome and Principe" class="subject-option">Sao Tome and Principe</option>
+                  <option value="Saudi Arabia" class="subject-option">Saudi Arabia</option>
+                  <option value="Senegal" class="subject-option">Senegal</option>
+                  <option value="Serbia and Montengro" class="subject-option">Serbia and Montengro</option>
+                  <option value="Seychelles" class="subject-option">Seychelles</option>
+                  <option value="Sierra Leone" class="subject-option">Sierra Leone</option>
+                  <option value="Singapore" class="subject-option">Singapore</option>
+                  <option value="Slovakia" class="subject-option">Slovakia</option>
+                  <option value="Slovenia" class="subject-option">Slovenia</option>
+                  <option value="Solomon Islands" class="subject-option">Solomon Islands</option>
+                  <option value="Somalia" class="subject-option">Somalia</option>
+                  <option value="South Africa" class="subject-option">South Africa</option>
+                  <option value="South Georgia and the South Sandwich Islands" class="subject-option">South Georgia and
+                    the
+                    South Sandwich Islands</option>
+                  <option value="South Korea" class="subject-option">South Korea</option>
+                  <option value="Spain" class="subject-option">Spain</option>
+                  <option value="Sri Lanka" class="subject-option">Sri Lanka</option>
+                  <option value="St. Helena" class="subject-option">St. Helena</option>
+                  <option value="St. Pierre and Miquelon" class="subject-option">St. Pierre and Miquelon</option>
+                  <option value="Suriname" class="subject-option">Suriname</option>
+                  <option value="Svalbard and Jan Mayen Islands" class="subject-option">Svalbard and Jan Mayen Islands
+                  </option>
+                  <option value="Swaziland" class="subject-option">Swaziland</option>
+                  <option value="Sweden" class="subject-option">Sweden</option>
+                  <option value="Switzerland" class="subject-option">Switzerland</option>
+                  <option value="Syria" class="subject-option">Syria</option>
+                  <option value="Taiwan" class="subject-option">Taiwan</option>
+                  <option value="Tajikistan" class="subject-option">Tajikistan</option>
+                  <option value="Tanzania" class="subject-option">Tanzania</option>
+                  <option value="Thailand" class="subject-option">Thailand</option>
+                  <option value="Togo" class="subject-option">Togo</option>
+                  <option value="Tokelau" class="subject-option">Tokelau</option>
+                  <option value="Tonga" class="subject-option">Tonga</option>
+                  <option value="Trinidad and Tobago" class="subject-option">Trinidad and Tobago</option>
+                  <option value="Tunisia" class="subject-option">Tunisia</option>
+                  <option value="Turkey" class="subject-option">Turkey</option>
+                  <option value="Turkmenistan" class="subject-option">Turkmenistan</option>
+                  <option value="Turks and Caicos Islands" class="subject-option">Turks and Caicos Islands</option>
+                  <option value="Tuvalu" class="subject-option">Tuvalu</option>
+                  <option value="Uganda" class="subject-option">Uganda</option>
+                  <option value="Ukraine" class="subject-option">Ukraine</option>
+                  <option value="United Arab Emirates" class="subject-option">United Arab Emirates</option>
+                  <option value="United Kingdom" class="subject-option">United Kingdom</option>
+                  <option selected="selected" value="United States" class="subject-option">United States</option>
+                  <option value="United States Minor Outlying Islands" class="subject-option">United States Minor
+                    Outlying
+                    Islands</option>
+                  <option value="Uruguay" class="subject-option">Uruguay</option>
+                  <option value="Uzbekistan" class="subject-option">Uzbekistan</option>
+                  <option value="Vanuatu" class="subject-option">Vanuatu</option>
+                  <option value="Vatican City State" class="subject-option">Vatican City State</option>
+                  <option value="Venezuela" class="subject-option">Venezuela</option>
+                  <option value="Viet Nam" class="subject-option">Viet Nam</option>
+                  <option value="Virgin Islands (British)" class="subject-option">Virgin Islands (British)</option>
+                  <option value="Virgin Islands (U.S.)" class="subject-option">Virgin Islands (U.S.)</option>
+                  <option value="Wallis and Futuna Islands" class="subject-option">Wallis and Futuna Islands</option>
+                  <option value="Western Sahara" class="subject-option">Western Sahara</option>
+                  <option value="Yemen" class="subject-option">Yemen</option>
+                  <option value="Yugoslavia" class="subject-option">Yugoslavia</option>
+                  <option value="Zambia" class="subject-option">Zambia</option>
+                  <option value="Zimbabwe" class="subject-option">Zimbabwe</option>
+                </select>
+
+
+                <script>
+                  $(document).ready(function () {
+                    var countryValue = 'United States';
+                    var countryName = 'custShip';
+                    if (countryValue == '') {
+                      $('#' + countryName + 'Country').prepend('<option value="" disabled>Please Select Country</option>');
+                      $('#' + countryName + 'Country').val('United States');
+                    }
+                  });
+                </script>
+              </div>
+              <div id="" class="bottom10">
+                <label for="custShipPhone" class="normal form-control-label">Phone Number <small>(no spaces or
+                    dashes)</small></label>
+                <input aria-label="Phone Number" class="form-control" id="custShipPhone" maxlength="35"
+                  name="customerRegister.shipAddress.phone" placeholder="3215551234" required type="tel" value="">
+              </div>
+              <div id="custShipEmailAddress" class="bottom10">
+                <label for="custShipEmail" class="normal form-control-label">Email Address</label>
+                <input aria-label="Email Address" class="form-control" id="custShipEmail" maxlength="50"
+                  name="customerRegister.shipAddress.email" placeholder="user@example.com" required type="email"
+                  value="">
+              </div>
+            </div>
+          </div>
+
+          <p class="additionalAddress bold ltGrey">Additional shipping addresses can be added later.</p>
         </div>
       </div>
 

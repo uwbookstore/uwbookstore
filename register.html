@@ -68,6 +68,10 @@
       margin-inline-start: 5px;
     }
 
+    .card-header>h2 {
+      font-size: 20px;
+    }
+
     #message {
       display: none;
       background: #f1f1f1;
@@ -136,6 +140,10 @@
 
     form>*+* {
       margin-block-start: 20px;
+    }
+
+    #custStudID {
+      letter-spacing: 1.75px;
     }
   </style>
 </head>
@@ -305,7 +313,7 @@
 
           <li class="nav-item dropdown has-megamenu">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Clothing</a>
-            <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+            <div class="dropdown-menu megamenu" role="navigation" data-bs-popper="none">
               <div class="row g-3">
                 <div class="col-md-2 offset-md-2">
 
@@ -791,7 +799,7 @@
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
               School Supplies
             </a>
-            <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+            <div class="dropdown-menu megamenu" role="navigation" data-bs-popper="none">
               <div class="row">
                 <div class="col-md-2 offset-md-2">
                   <ul class="list-unstyled">
@@ -847,7 +855,7 @@
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
               Textbooks &amp; Course Materials
             </a>
-            <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+            <div class="dropdown-menu megamenu" role="navigation" data-bs-popper="none">
               <div class="row">
                 <div class="col-md-2 offset-md-1 offset-lg-2">
                   <ul class="list-unstyled">
@@ -934,7 +942,7 @@
 
           <li class="nav-item dropdown has-megamenu">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tech</a>
-            <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+            <div class="dropdown-menu megamenu" role="navigation" data-bs-popper="none">
               <div class="row g-3">
 
                 <div class="col-md-2 offset-md-2" id="technav-1">
@@ -1137,7 +1145,7 @@
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
               Graduation
             </a>
-            <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+            <div class="dropdown-menu megamenu" role="navigation" data-bs-popper="none">
               <div class="row">
                 <div class="col-md-3 offset-md-1">
                   <ul class="list-unstyled">
@@ -1238,7 +1246,7 @@
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
               About
             </a>
-            <div class="dropdown-menu megamenu" role="menu" data-bs-popper="none">
+            <div class="dropdown-menu megamenu" role="navigation" data-bs-popper="none">
               <div class="row">
 
                 <div class="col-sm-6 mobi-hide text-center offset-md-2">
@@ -1330,52 +1338,6 @@
 
   </header>
 
-  <!-- <section class="holiday__shipping">
-    <h2 id="toggle-control">
-      <i class="fa fa-chevron-down mr-2" aria-hidden="true"></i>
-      Holiday Order Deadlines
-      <i class="fa fa-chevron-down ml-2" aria-hidden="true"></i>
-    </h2>
-
-    <div id="toggle-target" class="container">
-      <div class="holiday__shipping-deadlines">
-        <div class="flex__item">
-          <div>
-            <span>Ground Shipping</span>
-            December 19,<br>
-            noon (CST)
-          </div>
-        </div>
-        <div class="flex__item">
-          <div>
-            <span>2nd Day Air Shipping</span>
-            December 19,<br>
-            5:00 PM (CST)
-          </div>
-        </div>
-        <div class="flex__item">
-          <div>
-            <span>Next Day Air Shipping</span>
-            December 22,<br>
-            noon (CST)
-          </div>
-        </div>
-      </div>
-      <div class="text-center holiday__shipping-landsend">
-        <div class="landsend-header">
-          <span>DEADLINE FOR CDI CUSTOM ORDERS IS DEC. 15, NOON (CST)</span>
-        </div>
-        <div class="landsend-header past">
-          <span>DEADLINE FOR LANDS' END CUSTOM ORDERS IS DEC. 2, NOON(CST)</span>
-
-        </div>
-        <strong>NOTE: All Orders placed after their shipping deadline will be delivered after Dec. 25.</strong><br>
-        These order deadlines apply to destinations in the contiguous United States
-        only. Not applicable to Alaska, Hawaii or any U.S. Territory.
-      </div>
-    </div>
-  </section> -->
-
   <div id="Cart" class="btn btn-default btn-lg clear">
     <span class="fa fa-shopping-cart"></span><span id="SpanCart">
       <span id="Item-Count">Item Count: </span> <span id="ItemCount" class="Count">0</span></span><br><span
@@ -1383,7 +1345,8 @@
   </div>
 
   <main id="ContainDiv" class="container">
-
+    <div class="ubs-toast-region" id="toast-region" role="region" aria-label="Notifications" aria-live="polite"></div>
+    <h1 class="heading__line">Customer Registration</h1>
     <form>
       <p class="profileAsterisk asterisk">
         <sup class="red">*</sup>= Required
@@ -1399,8 +1362,7 @@
               <div class="bottom10" id="newUser">
                 <label for="custNewUserName" class="normal form-control-label">Email Address</label>
                 <input type="email" name="customerRegister.UserName" id="custNewUserName" class="form-control"
-                  aria-label="Email Address" placeholder="user@example.com" data-gtm-form-interact-field-id="0"
-                  required>
+                  aria-label="Email Address" placeholder="user@example.com" required>
               </div>
 
               <div class="bottom10" id="confirmNewUser">
@@ -1420,6 +1382,7 @@
                   data-gtm-form-interact-field-id="1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                   title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
                 <button type="button" class="btn-show-hide">
+                  <span class="sr-only">Show/Hide Password</span>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                     <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                     <path fill-rule="evenodd"
@@ -1435,6 +1398,7 @@
                   maxlength="20" name="customerRegister.ConfirmPassword" placeholder="Confirm Password" required
                   type="password" value="" data-gtm-form-interact-field-id="2">
                 <button type="button" class="btn-show-hide">
+                  <span class="sr-only">Show/Hide Confirm Password</span>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                     <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                     <path fill-rule="evenodd"
@@ -1539,18 +1503,18 @@
                   name="customerRegister.billAddress.lname" placeholder="Sample" required type="text" value="">
               </div>
               <div id="custBillBName" class="bottom10 displayn">
-                <label class="normal form-control-label">Business Name</label>
+                <label for="custBillBusiness" class="normal form-control-label">Business Name</label>
                 <input aria-label="Business Name" class="form-control" id="custBillBusiness" maxlength="50"
                   name="customerRegister.billAddress.BusinessName" placeholder="Business Name" type="text" value="">
               </div>
               <div id="custBillAddress1" class="bottom10">
-                <label class="normal form-control-label">Address Line 1</label>
+                <label for="custBillAdd1" class="normal form-control-label">Address Line 1</label>
                 <input aria-label="Address Line 1" class="form-control" id="custBillAdd1" maxlength="50"
                   name="customerRegister.billAddress.address1" placeholder="1234 Sample Street" required type="text"
                   value="">
               </div>
               <div id="custBillAddress2" class="bottom10">
-                <label class="normal form-control-label">Address Line 2</label>
+                <label for="custBillAdd2" class="normal form-control-label">Address Line 2</label>
                 <input aria-label="Address Line 2" class="form-control" id="custBillAdd2" maxlength="50"
                   name="customerRegister.billAddress.address2" placeholder="" type="text" value="">
               </div>
@@ -1560,12 +1524,12 @@
 
             <div class="col-sm-6 col-12" id="custBillCol2">
               <div id="custBillCName" class="bottom10">
-                <label class="normal form-control-label">City</label>
+                <label for="custBillCity" class="normal form-control-label">City</label>
                 <input aria-label="City" class="form-control" id="custBillCity" maxlength="50"
                   name="customerRegister.billAddress.city" placeholder="Sample City" required type="text" value="">
               </div>
               <div id="custBillStateDropdown" class="bottom10">
-                <label class="normal form-control-label">State</label>
+                <label for="custBillState" class="normal form-control-label">State</label>
                 <select aria-label="State" class="form-control form-select" id="custBillState"
                   name="customerRegister.billAddress.state" required>
                   <option selected="selected" value="" class="subject-option">Please Choose State</option>
@@ -1649,13 +1613,13 @@
 
               </div>
               <div id="custBillZipCode5" class="bottom10">
-                <label class="normal form-control-label">Zip/Postal + 4</label>
-                <input aria-label="Zip/Postal + 4" class="form-control" id="custBillZip" maxlength="20"
+                <label for="custBillZip" class="normal form-control-label">Zip/Postal + 4</label>
+                <input aria-label="Zip/Postal + 4" class="form-control" id="custBillZip" maxlength="20" minlength="5"
                   name="customerRegister.billAddress.zip" placeholder="12345+6789" required type="text" value="">
               </div>
 
               <div id="custBillCountryDropdown" class="bottom10">
-                <label class="normal form-control-label">Country</label>
+                <label for="custBillCountry" class="normal form-control-label">Country</label>
                 <select aria-label="Country" class="form-control form-select" id="custBillCountry"
                   name="customerRegister.billAddress.country" required>
                   <option value="Afghanistan" class="subject-option">Afghanistan</option>
@@ -1926,7 +1890,8 @@
                 </script>
               </div>
               <div id="" class="bottom10">
-                <label class="normal form-control-label">Phone Number <small>(no spaces or dashes)</small></label>
+                <label for="custBillPhone" class="normal form-control-label">Phone Number <small>(no spaces or
+                    dashes)</small></label>
                 <input aria-label="Phone Number" class="form-control" id="custBillPhone" maxlength="35"
                   name="customerRegister.billAddress.phone" placeholder="3215551234" required type="tel" value="">
               </div>
@@ -1981,7 +1946,7 @@
                 </div>
               </div>
               <div id="custShipLName" class="bottom10">
-                <label class="normal form-control-label">Last Name</label>
+                <label for="custShipLast" class="normal form-control-label">Last Name</label>
                 <input aria-label="Last Name" class="form-control" id="custShipLast" maxlength="20"
                   name="customerRegister.shipAddress.lname" placeholder="Sample" required type="text" value="">
               </div>
@@ -2098,15 +2063,15 @@
                 <div class="col-sm-6 col-12 padding-md-left0">
                   <div id="custShipZipCode5" class="bottom10">
                     <label for="custShipZip" class="normal form-control-label">Zip/Postal</label>
-                    <input aria-label="Zip/Postal" class="form-control" id="custShipZip" maxlength="20"
-                      name="customerRegister.shipAddress.zip" placeholder="12345" required type="number" value="">
+                    <input aria-label="Zip/Postal" class="form-control" id="custShipZip" maxlength="20" minlength="5"
+                      name="customerRegister.shipAddress.zip" placeholder="12345" required type="text" value="">
                   </div>
                 </div>
                 <div class="col-sm-6 col-12 padding-md-right0">
                   <div id="custShipZipCode4" class="bottom10">
                     <label for="custShipZip4" class="normal form-control-label">+4</label>
-                    <input aria-label="Zip Plus 4" class="form-control" id="custShipZip4" maxlength="4"
-                      name="customerRegister.shipAddress.zipPlus4" placeholder="5678" type="number" value="">
+                    <input aria-label="Zip Plus 4" class="form-control" id="custShipZip4" maxlength="4" minlength="4"
+                      name="customerRegister.shipAddress.zipPlus4" placeholder="5678" type="text" value="">
                   </div>
                 </div>
               </div>
@@ -2400,7 +2365,183 @@
         </div>
       </div>
 
-      <button type="submit" class="g-recaptcha btn btn-primary SubmitButton" id="submitButton">
+      <div id="custAddInfoWrap" class="card">
+        <div class="card-header">
+          <h2>Additional Information</h2>
+        </div>
+
+        <div class="card-body">
+          <div class="row">
+            <div id="custAddInfoColL" class="col-sm-6 col-12">
+              <div id="custAddInfoStudentL" class="bottom10">
+                <label id="custStudID-label" for="custStudID" class="normal form-control-label">
+                  Student ID or 10 digit phone number</label>
+                <input aria-label="Student ID" class="form-control" id="custStudID"
+                  name="customerRegister.AccountAdditionalInfo.studentNumber" type="number" value="" maxlength="10"
+                  minlength="10" pattern="^[0-9]{10,10}$" placeholder="1234567890" required>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6 col-12 padding-sm-left0">
+                  <div id="custAdditionalDegreeGoalL" class="bottom10">
+                    <label for="degreesGoalSelect" class="normal form-control-label">Degree Goal</label>
+                    <select aria-label="Degree Goal" class="form-control form-select" id="degreesGoalSelect"
+                      name="customerRegister.AccountAdditionalInfo.selectedGoal">
+                      <option value="Not Applicable" class="subject-option">Not Applicable</option>
+                      <option value="Undergrad" class="subject-option">Undergraduate</option>
+                      <option value="Graduate" class="subject-option">Graduate</option>
+                      <option value="Certification" class="subject-option">Preparing for Certification</option>
+                      <option value="Undergrad Entrance" class="subject-option">Preparing for Undergraduate Entrance
+                        Exams
+                      </option>
+                      <option value="Grad Entrance" class="subject-option">Preparing for Graduate School Entrance Exams
+                      </option>
+                      <option value="Grad School" class="subject-option">Graduate School (PhD)</option>
+                      <option value="Other" class="subject-option">Other (specify below)</option>
+                    </select>
+
+                  </div>
+                  <script type="text/javascript">
+                    $(document).ready(function () {
+                      var other = $('#degreesGoalSelect').val();
+                      if (other.toLowerCase() == "other") {
+                        $('#custAddInfoOther').removeAttr('disabled');
+                      }
+                      $('#degreesGoalSelect').change(function () {
+                        var value = $(this).val();
+                        if (value.toLowerCase() == "other") {
+                          $('#custAddInfoOther').removeAttr('disabled');
+                          $('#custAddInfoOther').focus();
+                        } else {
+                          $('#custAddInfoOther').attr('disabled', 'true');
+                          $('#custAddInfoOther').val('');
+                        }
+                      });
+                    });
+                  </script>
+                </div>
+                <div class="col-sm-6 col-12 padding-sm-right0">
+                  <div id="custAdditionalDegreeGoalR" class="bottom10">
+                    <label for="custAddInfoOther" class="normal form-control-label">Other</label>
+                    <input aria-label="Other Degree Goal" class="form-control" disabled="true" id="custAddInfoOther"
+                      maxlength="50" name="customerRegister.AccountAdditionalInfo.other" placeholder="Other" type="text"
+                      value="">
+                  </div>
+                </div>
+              </div>
+
+              <input id="customerRegister_AccountAdditionalInfo_profileRegister"
+                name="customerRegister.AccountAdditionalInfo.profileRegister" type="hidden" value="True">
+              <div class="row">
+
+                <div id="addCusotmerType" class="col-sm-6 col-12 padding-sm-left0">
+                  <div class="row">
+                    <div class="col-12 padding0">
+                      <div class="bottom10">
+                        <label for="customerTypeSelect" class="normal form-control-label">Select Customer Type</label>
+                        <select aria-label="Add Customer Type Select" class="form-control form-select"
+                          id="customerTypeSelect"
+                          name="customerRegister.AccountAdditionalInfo.customerTypes.selectedType" required>
+                          <option value="0">Please Select</option>
+                          <option value="9" class="subject-option">Student</option>
+                          <option value="227" class="subject-option">Alumni</option>
+                          <option value="336" class="subject-option">Parent/Family of Student</option>
+                          <option value="575" class="subject-option">Badger Athletics Fan</option>
+                          <option value="580" class="subject-option">Book Lover</option>
+                          <option value="581" class="subject-option">Art &amp; Office Supplies</option>
+                          <option value="593" class="subject-option">UW Department</option>
+                          <option value="610" class="subject-option">Faculty</option>
+                        </select>
+
+                        <input id="showPassword"
+                          name="customerRegister.AccountAdditionalInfo.customerTypes.showPassword" type="hidden"
+                          value="False">
+
+
+                      </div>
+                    </div>
+                    <div class="col-12 padding0">
+                      <div class="bottom10 displayn customerTypePassword-wrapper">
+                        <label for="customerRegister_AccountAdditionalInfo_customerTypes_typePassword"
+                          class="normal form-control-label">Customer Type Password</label>
+                        <input type="password" aria-label="Customer Type Password"
+                          class="form-control customerTypePassword"
+                          id="customerRegister_AccountAdditionalInfo_customerTypes_typePassword" maxlength="20"
+                          name="customerRegister.AccountAdditionalInfo.customerTypes.typePassword"
+                          placeholder="Customer Type Password" value="" disabled="disabled">
+                      </div>
+                      <p class="red addCustomerError" role="alert"></p>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="custAddInfoColR" class="col-sm-6 col-12">
+              <div id="custAddGraduationYear" class="bottom10">
+                <label for="custAddInfoGrad" class="normal form-control-label">Graduation Year</label>
+                <input aria-label="Graduation Year" class="form-control" id="custAddInfoGrad" maxlength="4"
+                  name="customerRegister.AccountAdditionalInfo.gradYear" type="number" value="">
+              </div>
+              <!-- <div id="gradYearEx">
+                <p id="example" class="bottom10">Example: 2023</p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="custEmailOptWrap" class="card">
+        <div class="card-header">
+          <h2>Email Opt In/Out</h2>
+        </div>
+
+        <div class="card-body">
+          <div class="bottom10">
+            <input checked="checked" class="newCheckbox" id="emailOptCheckbox"
+              name="customerRegister.EmailPref.allowEmail" type="checkbox" value="true">
+            <input name="customerRegister.EmailPref.allowEmail" type="hidden" value="false">
+            <label for="emailOptCheckbox" class="ml-3">
+              I want to receive emails related to my school &amp; the University Book Store.
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div id="custSMSOptWrap" class="card">
+        <div class="card-header">
+          <h2>SMS Opt In/Out</h2>
+        </div>
+
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12">
+              <div class="bottom10">
+                <input class="SMSOptCheckbox newCheckbox" id="SMSOptCheckbox_id"
+                  name="customerRegister.SMSOption.SMSEnable" type="checkbox" value="true">
+                <input name="customerRegister.SMSOption.SMSEnable" type="hidden" value="false">
+                <label for="SMSOptCheckbox_id" class="ml-3">I want to receive SMS notifications.</label>
+              </div>
+            </div>
+            <div class="col-12">
+              <p class="bold">Please enter your cell number and opt-in to receive notices about your orders, rental
+                reminders
+                and buyback notices.</p>
+            </div>
+            <div class="col-sm-4 col-12">
+              <div class="bottom10">
+                <label for="SMSPhone" class="normal form-control-label">Phone Number (ex. 1235551234)</label>
+                <input aria-label="Phone Number Example 1235551234" class="form-control" id="SMSPhone" maxlength="35"
+                  name="customerRegister.SMSOption.phone" placeholder="3215551234" type="tel" value="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button data-toast="success" data-toast-title="Your account was created successfully." type="submit"
+        class="g-recaptcha btn btn-primary SubmitButton" id="submitButton">
         Submit Profile
       </button>
     </form>
@@ -2630,6 +2771,8 @@
     </div>
   </footer>
 
+  <script src="src/phone-formatter.js"></script>
+  <script src="src/toast.js"></script>
   <script type="text/javascript">
     const baseUrl = 'https://www.uwbookstore.com/';
     const subUrl = 'a';
@@ -2641,6 +2784,11 @@
     const number = document.getElementById('number');
     const length = document.getElementById('length');
     const passMatch = document.getElementById('passMatch');
+    const form = document.querySelector('form');
+
+    form.addEventListener('click', (e) => {
+      e.preventDefault();
+    })
 
     // When the user clicks on the password field, show the message box
     passInput.onfocus = function () {
@@ -2731,6 +2879,11 @@
         }
       })
     })
+
+    // Show current year as placeholder for grad year input
+    const currentYear = new Date().getFullYear();
+    const gradYearInput = document.getElementById('custAddInfoGrad');
+    gradYearInput.placeholder = currentYear;
   </script>
   <script type="text/javascript" src="./src/app.js"></script>
 

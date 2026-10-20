@@ -183,6 +183,7 @@
     gap: rem(15);
 
     .apple-acs {
+      background-color: inherit;
       margin: 0 auto rem(10);
       width: 100%;
       max-width: rem(275);
@@ -393,7 +394,7 @@
 
         sup {
           font-size: rem(12);
-          color: var(--bs-secondary);
+          color: var(--bs-gray-800);
         }
 
         span {

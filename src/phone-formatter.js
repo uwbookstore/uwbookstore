@@ -65,4 +65,4 @@ function applyPhoneFormatToInputs(...inputIds) {
 }
 
 // Apply to your inputs
-applyPhoneFormatToInputs('custBillPhone', 'custShipPhone');
+applyPhoneFormatToInputs('custBillPhone', 'custShipPhone', 'SMSPhone');

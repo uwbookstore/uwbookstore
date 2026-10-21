@@ -52,13 +52,13 @@
     .form-control.form-select:user-valid {
       border: 2px solid var(--bs-success);
 
-      box-shadow: 0 0 0 0.25rem hsl(from var(--bs-success) h s 75%);
+      box-shadow: 0 0 0 0.25rem hsl(from var(--bs-success) h s l / .5);
     }
 
     .form-control:user-invalid,
     .form-control.form-select:user-invalid {
       border: 2px solid var(--bs-danger);
-      box-shadow: 0 0 0 0.25rem hsl(from var(--bs-danger) h s 75%);
+      box-shadow: 0 0 0 0.25rem hsl(from var(--bs-danger) h s l / .5);
     }
 
     label:has(+ input:required)::after,
@@ -147,7 +147,10 @@
     }
   </style>
 </head>
-
+<!-- 
+  Light/Dark Mode with Images
+  https://www.youtube.com/shorts/PmIZRTP_N_o
+-->
 
 <!--There may be some differences in available payment options based on the selection for how to receive your order.-->
 
@@ -2844,7 +2847,7 @@
 
     // Make sure password & confirm password match
     passConfirmInput.onkeyup = function () {
-      if (passInput.value === passConfirmInput.value) {
+      if ((passInput.value === passConfirmInput.value) && (passInput.value !== '' && passConfirmInput !== '')) {
         passMatch.classList.remove('invalid');
         passMatch.classList.add('valid')
       } else {

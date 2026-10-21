@@ -35,38 +35,38 @@
   }
 
   &-light {
-    --callout-bg: hsl(from var(--bs-black) h s 98%);
-    --callout-bdr: hsl(from var(--bs-black) h s 92%);
-    --callout-clr: hsl(from var(--bs-black) h s 10%);
+    --callout-bg: hsl(from var(--bs-black) h s l / 0.02);
+    --callout-bdr: hsl(from var(--bs-black) h s l / 0.08);
+    --callout-clr: hsl(from var(--bs-black) h s l / 0.9);
   }
 
   &-dark {
-    --callout-bg: hsl(from var(--bs-black) h s 78%);
+    --callout-bg: hsl(from var(--bs-black) h s l / 0.22);
     --callout-bdr: hsl(from var(--bs-black) h s 72%);
-    --callout-clr: hsl(from var(--bs-black) h s 10%);
+    --callout-clr: hsl(from var(--bs-black) h s l / 0.9);
   }
 
   &-success {
-    --callout-bg: hsl(from var(--bs-success) h s 92%);
-    --callout-bdr: hsl(from var(--bs-success) h s 85%);
+    --callout-bg: hsl(from var(--bs-success) h s l / 0.18);
+    --callout-bdr: hsl(from var(--bs-success) h s l / 0.15);
     --callout-clr: hsl(from var(--bs-success) h s 28%);
   }
 
   &-info {
-    --callout-bg: hsl(from var(--bs-info) h s 92%);
-    --callout-bdr: hsl(from var(--bs-info) h s 85%);
+    --callout-bg: hsl(from var(--bs-info) h s l / 0.18);
+    --callout-bdr: hsl(from var(--bs-info) h s l / 0.15);
     --callout-clr: hsl(from var(--bs-info) h s 28%);
   }
 
   &-warning {
-    --callout-bg: hsl(from var(--bs-warning) h s 92%);
-    --callout-bdr: hsl(from var(--bs-warning) h s 85%);
+    --callout-bg: hsl(from var(--bs-warning) h s l / 0.18);
+    --callout-bdr: hsl(from var(--bs-warning) h s l / 0.15);
     --callout-clr: hsl(from var(--bs-warning) h s 22%);
   }
 
   &-danger {
-    --callout-bg: hsl(from var(--bs-danger) h s 92%);
-    --callout-bdr: hsl(from var(--bs-danger) h s 85%);
+    --callout-bg: hsl(from var(--bs-danger) h s l / 0.18);
+    --callout-bdr: hsl(from var(--bs-danger) h s l / 0.15);
     --callout-clr: hsl(from var(--bs-danger) h s 40%);
   }
 }

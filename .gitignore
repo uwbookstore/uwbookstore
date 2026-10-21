@@ -151,7 +151,7 @@ inSite/index.html
 
 /progress
 /build
-/js
+# /js
 /src/googleAPI.js
 # /css
 /carousel

@@ -2,7 +2,7 @@
 <meta property="og:title" content="University Book Store" />
 <meta property="og:site_name" content="University Book Store" />
 <meta property="og:url" content="http://www.uwbookstore.com/" />
-<meta property="og:image" content="https://i.univbkstr.com/img/misc/og-img.jpg" />
+<meta property="og:image" content="https://www.uwbookstore.com/SiteImages/11-SchoolImages/11-og-img.jpg?v=030426" />
 <meta property="og:type" content="ecommerce" />
 
 <meta name="facebook-domain-verification" content="cs84knhv3fcnoaeg306yj639jznw7x" />
@@ -11,7 +11,9 @@
 <!-- add favicon and shortcut icon for IE -->
 <link rel="shortcut icon" type="image/ico" href="https://i.univbkstr.com/favicon.ico" />
 <meta name="format-detection" content="telephone=no" />
-<link rel="stylesheet" type="text/css" href="https://i.univbkstr.com/v4/css/style.v3.min.css?v=121124" />
+<link rel="stylesheet" type="text/css" href="https://i.univbkstr.com/v4/css/libraries/flickity.min.css" />
+<link rel="stylesheet" type="text/css" href="https://i.univbkstr.com/v4/css/style.min.css" />
+
 <link rel="stylesheet" type="text/css" href="https://i.univbkstr.com/v4/css/print.css" media="print">
 <!-- <script src="https://kit.fontawesome.com/c8a5338c25.js" crossorigin="anonymous"></script> -->
 
@@ -30,3 +32,35 @@
     }
   });
 </script>
+
+<style>
+  .navbar__links--item button.search-submit {
+    justify-content: center;
+  }
+</style>
+<script>
+  (function () {
+    // 1. Clean the current URL (removes query params like ?ref=, ?utm_source=, and hashes)
+    const canonicalUrl = window.location.protocol + '//' + window.location.host + window.location.pathname;
+
+    // 2. Look for an existing canonical tag
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+
+    if (canonicalLink) {
+      // Update the existing tag
+      canonicalLink.setAttribute('href', canonicalUrl);
+    } else {
+      // Create a brand new tag if it doesn't exist
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      canonicalLink.setAttribute('href', canonicalUrl);
+      document.head.appendChild(canonicalLink);
+    }
+  })();
+</script>
+
+<script async type='text/javascript'
+  src='https://static.klaviyo.com/onsite/js/WDtFQh/klaviyo.js?company_id=WDtFQh'></script>
+<script type="text/javascript">
+  //Initialize Klaviyo object on page load
+  !function () { if (!window.klaviyo) { window._klOnsite = window._klOnsite || []; try { window.klaviyo = new Proxy({}, { get: function (n, i) { return "push" === i ? function () { var n; (n = window._klOnsite).push.apply(n, arguments) } : function () { for (var n = arguments.length, o = new Array(n), w = 0; w < n; w++)o[w] = arguments[w]; var t = "function" == typeof o[o.length - 1] ? o.pop() : void 0, e = new Promise((function (n) { window._klOnsite.push([i].concat(o, [function (i) { t && t(i), n(i) }])) })); return e } } }) } catch (n) { window.klaviyo = window.klaviyo || [], window.klaviyo.push = function () { var n; (n = window._klOnsite).push.apply(n, arguments) } } } }(); </script>

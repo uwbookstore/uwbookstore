@@ -1,7 +1,31 @@
 <script type="text/javascript" src="https://i.univbkstr.com/v4/js/merch-variables.js"></script>
+<script type="text/javascript" src="https://i.univbkstr.com/v4/js/custom-gmpromo-messages.min.js"></script>
 <script type="text/javascript" src="https://i.univbkstr.com/v4/js/app.min.js"></script>
+<script type="text/javascript" src="https://i.univbkstr.com/v4/js/libraries/flickity.min.js"></script>
+<script type="text/javascript" src="https://i.univbkstr.com/v4/js/slideToggle.min.js"></script>
+
+<!-- <script type="text/javascript" src="https://i.univbkstr.com/v4/js/theme-toggle.min.js"></script>
+<script type="text/javascript" src="https://i.univbkstr.com/v4/js/text-return.min.js"></script> -->
 <script type="text/javascript" src="https://i.univbkstr.com/v4/js/menu.min.js"></script>
-<script type="text/javascript" src="https://i.univbkstr.com/v4/js/jquery.colorbox-min.js"></script>
-<script type="text/javascript" src="https://i.univbkstr.com/v4/js/smooth-scroll.js"></script>
-<script type="text/javascript" src="https://i.univbkstr.com/v4/js/pace.min.js"></script>
+<script type="text/javascript" src="https://i.univbkstr.com/v4/js/libraries/jquery.colorbox-min.js"></script>
+<script type="text/javascript" src="https://i.univbkstr.com/v4/js/libraries/smooth-scroll.min.js"></script>
+<script type="text/javascript" src="https://i.univbkstr.com/v4/js/libraries/pace.min.js"></script>
 <script type="text/javascript" src="https://i.univbkstr.com/v4/js/accordion.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    if ($(window).width() >= 768) {
+      $('.dropdown-toggle').unbind('focus');
+      $('.dropdown-toggle').unbind('click');
+    }
+
+    $('.category__sidebar-toggle').click(function () {
+      $(this).toggleClass('open');
+      $(this).next().slideToggle(500);
+    })
+  });
+</script>
+
+<script>
+  (function (d, w) { var i = 'stck-global-code'; if (w.stckEmbed || w.__stckBoot || d.getElementById(i)) return; w.__stckBoot = 1; var s = d.createElement('script'); s.id = i; s.async = 1; s.crossOrigin = 'anonymous'; var c = d.currentScript; if (c && c.nonce) s.nonce = c.nonce; s.src = 'https://embed.lndg.page/latest/index.min.js?site=019b8f72-f8fa-798f-95b1-b48578e466f2'; (d.head || d.body).appendChild(s) })(document, window);
+</script>

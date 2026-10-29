@@ -66,6 +66,7 @@ Author URI: https://www.uwbookstore.com
   }
 }
 :root {
+  interpolate-size: allow-keywords;
   --clip-path: polygon(0 15%, 50% 0, 100% 15%, 100% 85%, 50% 100%, 0 85%);
 }
 
@@ -5655,10 +5656,7 @@ span.shippingMethod-description-span div.alert {
   font-size: 0.75rem;
 }
 
-.holiday__shipping h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.holiday__shipping summary {
   gap: 0.3125rem;
   margin: 0;
   padding: 0.625rem;
@@ -5673,18 +5671,28 @@ span.shippingMethod-description-span div.alert {
   cursor: pointer;
 }
 @media (min-width: 48em) {
-  .holiday__shipping h2 {
+  .holiday__shipping summary {
     font-size: 1.5rem;
     letter-spacing: normal;
   }
 }
 @media (min-width: 64em) {
-  .holiday__shipping h2 {
+  .holiday__shipping summary {
     font-size: 1.875rem;
     letter-spacing: normal;
   }
 }
 
+.holiday__shipping {
+  margin-block-end: 1.875rem;
+  padding-inline: 0.625rem;
+  overflow: hidden;
+}
+@media (min-width: 64em) {
+  .holiday__shipping {
+    padding-inline: 0;
+  }
+}
 .holiday__shipping-deadlines {
   display: flex;
   flex-flow: row wrap;
@@ -5719,7 +5727,7 @@ span.shippingMethod-description-span div.alert {
     margin-block: 0.9375rem;
   }
   .holiday__shipping-deadlines .flex__item {
-    flex: 1 1 33.333%;
+    flex: 1 1 30%;
     border-bottom: none;
     padding-block-start: 0.625rem;
     border-right: 0.125rem solid var(--bs-gray-dark);
@@ -5756,6 +5764,7 @@ span.shippingMethod-description-span div.alert {
 }
 .holiday__shipping-landsend .landsend-header span {
   display: block;
+  text-transform: uppercase;
   color: var(--bs-primary);
 }
 @media (min-width: 48em) {
@@ -5767,6 +5776,17 @@ span.shippingMethod-description-span div.alert {
   .holiday__shipping-landsend-landsend {
     padding-inline: 0;
   }
+}
+
+.holiday__shipping::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition: block-size 0.5s, content-visibility 0.5s;
+  transition-behavior: allow-discrete !important;
+}
+
+.holiday__shipping:open::details-content {
+  block-size: auto;
 }
 
 #toggle-target {

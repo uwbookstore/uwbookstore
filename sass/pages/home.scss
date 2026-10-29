@@ -653,10 +653,10 @@
   }
 }
 
-.holiday__shipping h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.holiday__shipping summary {
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   gap: rem(5);
   margin: 0;
   padding: rem(10);
@@ -682,6 +682,14 @@
 }
 
 .holiday__shipping {
+  margin-block-end: rem(30);
+  padding-inline: rem(10);
+  overflow: hidden;
+
+  @include breakpoint(medium) {
+    padding-inline: 0;
+  }
+
   &-deadlines {
     display: flex;
     flex-flow: row wrap;
@@ -718,7 +726,7 @@
       margin-block: rem(15);
 
       .flex__item {
-        flex: 1 1 33.333%;
+        flex: 1 1 30%;
         border-bottom: none;
         padding-block-start: rem(10);
         border-right: rem(2) solid var(--bs-gray-dark);
@@ -759,6 +767,7 @@
 
       span {
         display: block;
+        text-transform: uppercase;
         color: var(--bs-primary);
       }
     }
@@ -774,6 +783,19 @@
       }
     }
   }
+}
+
+.holiday__shipping::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition:
+    block-size 0.5s,
+    content-visibility 0.5s;
+  transition-behavior: allow-discrete !important;
+}
+
+.holiday__shipping:open::details-content {
+  block-size: auto;
 }
 
 #toggle-target {

@@ -1228,7 +1228,31 @@
     </nav>
 
   </header>
+  <style>
+    ul.diamond-list {
+      list-style: none;
+      padding-inline-start: 1.5em;
+    }
 
+    .diamond-list li {
+      position: relative;
+      margin-block-end: 0.6em;
+      padding-inline-start: 0.5em;
+    }
+
+    .diamond-list li::before {
+      content: '\2666';
+      /*content: '\2662';  white diamond */
+      position: absolute;
+      left: -1rem;
+      /* top: 0.45em; */
+
+    }
+
+    .prose ol li:not(:last-child) {
+      margin-block-end: 15px;
+    }
+  </style>
   <details class="holiday__shipping">
     <summary>
       Holiday Order Deadlines

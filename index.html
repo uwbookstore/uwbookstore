@@ -1342,7 +1342,73 @@
       <div class="tech__grid--item">Item 9</div>
     </div>
 
+    <style>
+      .tech__accordion details summary {
+        display: flex;
+        cursor: pointer;
+        background: var(--bs-primary);
+        color: var(--bs-white);
+        padding: var(--_panel-padding);
+        border: 0;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      .tech__accordion details summary::before {
+        content: 'Q:';
+        font-weight: 600;
+        margin-inline-end: 5px;
+      }
+
+      .tech__accordion details::details-content {
+        block-size: 0;
+        overflow: hidden;
+        transition:
+          block-size 0.5s,
+          content-visibility 0.5s;
+        transition-behavior: allow-discrete !important;
+        background: lightgoldenrodyellow;
+      }
+
+      .tech__accordion details:open::details-content {
+        padding: var(--_panel-padding);
+        block-size: auto;
+      }
+    </style>
     <div class="tech__accordion">
+      <details name="tech-faq">
+        <summary>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque?</summary>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente ea porro adipisci repudiandae obcaecati
+          magnam! Velit sapiente laudantium fugiat nam aspernatur inventore minus? Officiis aut sunt laborum corporis
+          voluptatem assumenda.</p>
+      </details>
+
+      <details name="tech-faq">
+        <summary>Lorem ipsum dolor sit, amet consectetur adipisicing?</summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptas quibusdam eveniet repellat
+          reprehenderit culpa. Pariatur earum numquam eligendi, unde, velit commodi sed minima incidunt est nostrum
+          distinctio. Quasi repellat pariatur animi provident modi quos soluta dolorem architecto sint, molestiae
+          aspernatur voluptatem voluptatibus dolore tempore ab reprehenderit!</p>
+      </details>
+
+      <details name="tech-faq">
+        <summary>Lorem ipsum dolor sit, amet consectetur adipisicing?</summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptas quibusdam eveniet repellat
+          reprehenderit culpa. Pariatur earum numquam eligendi, unde, velit commodi sed minima incidunt est nostrum
+          distinctio. Quasi repellat pariatur animi provident modi quos soluta dolorem architecto sint, molestiae
+          aspernatur voluptatem voluptatibus dolore tempore ab reprehenderit!</p>
+      </details>
+
+      <details name="tech-faq">
+        <summary>Lorem ipsum dolor sit, amet consectetur adipisicing?</summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptas quibusdam eveniet repellat
+          reprehenderit culpa. Pariatur earum numquam eligendi, unde, velit commodi sed minima incidunt est nostrum
+          distinctio. Quasi repellat pariatur animi provident modi quos soluta dolorem architecto sint, molestiae
+          aspernatur voluptatem voluptatibus dolore tempore ab reprehenderit!</p>
+      </details>
+    </div>
+
+    <!-- <div class="tech__accordion">
       <div class="accordion-panel">
         <h2 id="panel1-heading">
           <button class="accordion-trigger" aria-controls="panel1-content" aria-expanded="false">
@@ -1404,7 +1470,7 @@
             fuga quia laudantium possimus est dolores nam provident deleniti.</p>
         </div>
       </div>
-    </div>
+    </div> -->
 
 
     <!-- <div style="max-width: 650px; margin-inline: auto;">

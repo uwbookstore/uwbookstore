@@ -291,8 +291,17 @@ if (!noListItems) {
     merchFilterWrap.after(pageBanner);
   }
 
-  // FOR NEW ARRIVALS
+  if (window.location.href.includes('/Lands-End')) {
+    pageBanner.innerHTML = `
+    <div class="callout callout-danger mx-auto fit-content">
+    <strong>Lands' End orders not guaranteed for holiday delivery.</strong>
+    </div>
+    `;
+    merchFilterWrap.after(pageBanner);
+  }
+
   if (categoryTitle.textContent.toLowerCase() === 'new arrivals') {
+    // FOR NEW ARRIVALS
     pageBanner.classList.add('text-center');
     pageBanner.innerHTML = `
     <a href="https://www.uwbookstore.com/Wisconsin-Badgers/gift-items/Back-in-Stock" class="btn btn-primary">

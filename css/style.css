@@ -4481,6 +4481,22 @@ span.shippingMethod-description-span div.alert {
   padding: 1px;
 }
 
+.form-floating:has(input#gc-verification-checkbox) {
+  --callout-bg: hsl(from var(--bs-warning) h s 92%);
+  --callout-bdr: hsl(from var(--bs-warning) h s 85%);
+  --callout-clr: hsl(from var(--bs-warning) h s 22%);
+  --callout-bdr-rad: 0.25rem;
+  border-radius: var(--callout-bdr-rad);
+  background: var(--callout-bg);
+  color: var(--callout-clr);
+  border: 0.0625rem solid var(--callout-bdr);
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.45;
+  margin-block-start: 0.9375rem;
+}
+
 .couponbook {
   display: flex;
   justify-content: center;

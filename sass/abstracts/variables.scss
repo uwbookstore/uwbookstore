@@ -1,5 +1,23 @@
 @use '../util' as *;
 
+@property --theme {
+  syntax: 'light | dark';
+  initial-value: light;
+  inherits: true;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --theme: dark;
+  }
+}
+
+@container style(--theme: dark) {
+  body {
+    line-height: inherit;
+  }
+}
+
 :root {
   --bs-navbar-toggler-icon-bg: url(
     data:image/svg + xml,

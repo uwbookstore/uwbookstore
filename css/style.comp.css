@@ -11,6 +11,21 @@ Author URI: https://www.uwbookstore.com
  * https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
  * more breakpoint reading
  */
+@property --theme {
+  syntax: "light | dark";
+  initial-value: light;
+  inherits: true;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    --theme: dark;
+  }
+}
+@container style(--theme: dark) {
+  body {
+    line-height: inherit;
+  }
+}
 :root {
   --bs-navbar-toggler-icon-bg: url(
     data:image/svg + xml,
@@ -1760,32 +1775,32 @@ fieldset:disabled .btn {
   max-width: fit-content;
 }
 .callout-light {
-  --callout-bg: hsl(from var(--bs-black) h s l / 0.02);
-  --callout-bdr: hsl(from var(--bs-black) h s l / 0.08);
-  --callout-clr: hsl(from var(--bs-black) h s l / 0.9);
+  --callout-bg: hsl(from var(--bs-black) h s 98%);
+  --callout-bdr: hsl(from var(--bs-black) h s 88%);
+  --callout-clr: hsl(from var(--bs-black) h s 1%);
 }
 .callout-dark {
-  --callout-bg: hsl(from var(--bs-black) h s l / 0.22);
+  --callout-bg: hsl(from var(--bs-black) h s 80%);
   --callout-bdr: hsl(from var(--bs-black) h s 72%);
   --callout-clr: hsl(from var(--bs-black) h s l / 0.9);
 }
 .callout-success {
-  --callout-bg: hsl(from var(--bs-success) h s l / 0.18);
+  --callout-bg: hsl(from var(--bs-success) h s 88%);
   --callout-bdr: hsl(from var(--bs-success) h s l / 0.15);
   --callout-clr: hsl(from var(--bs-success) h s 28%);
 }
 .callout-info {
-  --callout-bg: hsl(from var(--bs-info) h s l / 0.18);
+  --callout-bg: hsl(from var(--bs-info) h s 88%);
   --callout-bdr: hsl(from var(--bs-info) h s l / 0.15);
   --callout-clr: hsl(from var(--bs-info) h s 28%);
 }
 .callout-warning {
-  --callout-bg: hsl(from var(--bs-warning) h s l / 0.18);
+  --callout-bg: hsl(from var(--bs-warning) h s 88%);
   --callout-bdr: hsl(from var(--bs-warning) h s l / 0.15);
   --callout-clr: hsl(from var(--bs-warning) h s 22%);
 }
 .callout-danger {
-  --callout-bg: hsl(from var(--bs-danger) h s l / 0.18);
+  --callout-bg: hsl(from var(--bs-danger) h s 88%);
   --callout-bdr: hsl(from var(--bs-danger) h s l / 0.15);
   --callout-clr: hsl(from var(--bs-danger) h s 40%);
 }
@@ -3163,6 +3178,65 @@ input[type=search]::-webkit-search-cancel-button {
 }
 #odu-global-substitute-card .question-wrapper p strong {
   background: yellow;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(6px) !important;
+  display: grid;
+  place-items: center;
+  z-index: var(--z-modal);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur-mid);
+  padding: 1.25rem;
+}
+
+.modal-backdrop.show {
+  opacity: 1 !important;
+}
+
+.modal.fade .modal-dialog {
+  box-shadow: 0.3125rem 0.3125rem 0.625rem rgba(0, 0, 0, 0.5) !important;
+  inline-size: min(650px, 90vw) !important;
+  transform: translateY(24px) scale(0.96) !important;
+}
+
+.modal-content {
+  border-radius: 0;
+  padding: 1.25rem;
+  transition: transform var(--dur-slow) var(--ease-liquid), opacity var(--dur-slow);
+  opacity: 0;
+  overflow: hidden;
+  background: var(--bs-white);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  position: relative;
+}
+
+.modal-open .modal-content {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.modal-header,
+.modal-title {
+  padding: 0;
+  margin: 0;
+}
+
+.modal-header {
+  text-align: center;
+  color: var(--bs-primary);
+  margin-block-end: 0.9375rem;
+  font-weight: 500;
+  font-size: 2.5rem;
+  text-wrap: balance;
+}
+
+.modal-header .btn-close {
+  background-size: 1rem;
 }
 
 .navbar-toggler {
@@ -5730,7 +5804,7 @@ span.shippingMethod-description-span div.alert {
 .holiday__shipping-deadlines .flex__item span {
   font-weight: normal;
   font-size: 1.125rem;
-  color: var(--bs-gray-dark);
+  color: var(--color-text);
   display: block;
 }
 .holiday__shipping-deadlines .flex__item:last-child {
@@ -5756,7 +5830,6 @@ span.shippingMethod-description-span div.alert {
     font-size: 1rem;
     font-weight: normal;
     margin-block-end: 0;
-    color: var(--bs-gray-dark);
   }
 }
 @media (min-width: 64em) {
@@ -7683,6 +7756,7 @@ section.welcome ul {
   text-align: center;
   block-size: 200px;
   background-color: lightgoldenrodyellow;
+  color: var(--bs-black);
   border-radius: 0.5rem;
 }
 .tech__accordion {

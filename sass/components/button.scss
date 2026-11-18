@@ -5,15 +5,23 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: rem(2) solid transparent;
+  border: rem(2) solid var(--button-border, transparent);
   background-image: none;
+  background-color: var(--button-surface, transparent);
+  color: var(--button-text, inherit);
   padding: 0 rem(15);
   height: rem(50);
   text-decoration: none;
-  font-size: inherit;
+  font: inherit;
   transition: all 0.2s ease-in-out;
   border-radius: rem(4);
   line-height: 1;
+
+  &:hover {
+    background-color: var(--button-surface-hover);
+    border-color: var(--button-border-hover);
+    color: var(--button-text-hover);
+  }
 
   @include breakpoint(medium) {
     height: rem(40);
@@ -21,16 +29,15 @@
   }
 
   &-primary {
-    background-color: var(--bs-primary);
-    border-color: var(--bs-primary);
-    color: var(--bs-white);
+    --button-surface: var(--bs-primary);
+    --button-border: var(--bs-primary);
+    --button-text: var(--bs-white);
+    --button-surface-hover: #9e040a;
+    --button-border-hover: #940409;
+    --button-text-hover: var(--bs-white);
+
     &[data-bs-toggle='modal'] {
       margin-block-end: rem(20);
-    }
-
-    &:hover {
-      background-color: #9e040a;
-      border-color: #940409;
     }
 
     &.whitebtn:hover {

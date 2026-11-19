@@ -3180,6 +3180,16 @@ input[type=search]::-webkit-search-cancel-button {
   background: yellow;
 }
 
+.modal-backdrop.show {
+  opacity: 1 !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(6px) !important;
+}
+
+.modal-content {
+  border-radius: 0 !important;
+}
+
 .navbar-toggler {
   display: block;
   padding: 0.625rem;

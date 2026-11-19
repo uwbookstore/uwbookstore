@@ -1536,22 +1536,15 @@ p.merch-gm.bold.red {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 0.125rem solid var(--button-border, transparent);
+  border: 0.125rem solid transparent;
   background-image: none;
-  background-color: var(--button-surface, transparent);
-  color: var(--button-text, inherit);
   padding: 0 0.9375rem;
   height: 3.125rem;
   text-decoration: none;
-  font: inherit;
+  font-size: inherit;
   transition: all 0.2s ease-in-out;
   border-radius: 0.25rem;
   line-height: 1;
-}
-.btn:hover {
-  background-color: var(--button-surface-hover);
-  border-color: var(--button-border-hover);
-  color: var(--button-text-hover);
 }
 @media (min-width: 64em) {
   .btn {
@@ -1560,15 +1553,16 @@ p.merch-gm.bold.red {
   }
 }
 .btn-primary {
-  --button-surface: var(--bs-primary);
-  --button-border: var(--bs-primary);
-  --button-text: var(--bs-white);
-  --button-surface-hover: #9e040a;
-  --button-border-hover: #940409;
-  --button-text-hover: var(--bs-white);
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: var(--bs-white);
 }
 .btn-primary[data-bs-toggle=modal] {
   margin-block-end: 1.25rem;
+}
+.btn-primary:hover {
+  background-color: #9e040a;
+  border-color: #940409;
 }
 .btn-primary.whitebtn:hover {
   color: var(--bs-white);

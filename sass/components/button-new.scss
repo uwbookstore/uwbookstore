@@ -1,0 +1,58 @@
+@use '../util' as *;
+
+.btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: rem(2) solid var(--bs-btn-border-color, transparent);
+  background: var(--bs-btn-bg, transparent);
+  color: var(--bs-btn-color, var(--bs-black));
+  padding: 0 rem(15);
+  block-size: rem(50);
+  text-decoration: none;
+  font: inherit;
+  transition: var(--transition);
+  border-radius: rem(4);
+  line-height: 1;
+
+  @include breakpoint(medium) {
+    block-size: rem(40);
+    border-width: rem(1);
+  }
+
+  &:hover {
+    background-color: var(--bs-btn-hover-bg);
+    border-color: var(--bs-btn-hover-border-color);
+    color: var(--bs-btn-hover-color);
+  }
+
+  &:active,
+  &:focus,
+  &:focus-visible {
+    --bs-btn-color: var(--bs-black);
+  }
+
+  &-primary {
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: hsl(from var(--bs-primary) h s 35%);
+    --bs-btn-color: var(--bs-white);
+
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: hsl(from var(--bs-primary) h s 33%);
+    --bs-btn-hover-border-color: hsl(from var(--bs-primary) h s 29%);
+  }
+
+  &-outline-primary {
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-color: var(--bs-primary);
+
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: var(--bs-primary);
+    --bs-btn-hover-border-color: hsl(from var(--bs-primary) h s 33%);
+  }
+
+  // &-secondary {
+
+  // }
+}

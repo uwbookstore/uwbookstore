@@ -5178,7 +5178,7 @@ span.shippingMethod-description-span div.alert {
   align-items: flex-start;
   justify-content: space-between;
   gap: 1.25rem;
-  margin-block: 4.375rem;
+  margin-block: 1.875rem;
   padding-block: 0.625rem 0;
   overflow-x: scroll;
   scroll-snap-type: inline mandatory;
@@ -5208,6 +5208,7 @@ span.shippingMethod-description-span div.alert {
     justify-content: center;
     gap: 0.625rem;
     padding-inline: 1.25rem;
+    margin-block: 4.375rem;
   }
 }
 

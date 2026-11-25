@@ -1018,7 +1018,7 @@
 .hero {
   max-inline-size: rem(1430);
   margin-inline: auto;
-  // margin-block-start: rem(-30);
+  margin-block-start: rem(-30);
   margin-block-end: rem(30);
 
   picture {
@@ -1028,6 +1028,5 @@
   img {
     display: block;
     margin-inline: auto;
-    border: 1px solid var(--bs-gray-300);
   }
 }

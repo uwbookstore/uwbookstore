@@ -6011,6 +6011,7 @@ span.shippingMethod-description-span div.alert {
 .hero {
   max-inline-size: 89.375rem;
   margin-inline: auto;
+  margin-block-start: -1.875rem;
   margin-block-end: 1.875rem;
 }
 .hero picture {
@@ -6019,7 +6020,6 @@ span.shippingMethod-description-span div.alert {
 .hero img {
   display: block;
   margin-inline: auto;
-  border: 1px solid var(--bs-gray-300);
 }
 
 .ikea__grid-item:nth-child(1), .ikea__grid-item:nth-child(3) {

@@ -65,7 +65,7 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: rem(20);
-  margin-block: rem(20);
+  margin-block: rem(70);
   padding-block: rem(10) 0;
   overflow-x: scroll;
   scroll-snap-type: inline mandatory;
@@ -1015,11 +1015,13 @@
 }
 
 .hero {
-  margin-block-start: rem(-30);
+  max-inline-size: rem(1430);
+  margin-inline: auto;
+  // margin-block-start: rem(-30);
   margin-block-end: rem(30);
+
   picture {
     display: block;
-    margin-inline: auto;
   }
 
   img {

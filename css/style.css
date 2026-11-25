@@ -5178,7 +5178,7 @@ span.shippingMethod-description-span div.alert {
   align-items: flex-start;
   justify-content: space-between;
   gap: 1.25rem;
-  margin-block: 1.25rem;
+  margin-block: 4.375rem;
   padding-block: 0.625rem 0;
   overflow-x: scroll;
   scroll-snap-type: inline mandatory;
@@ -6008,12 +6008,12 @@ span.shippingMethod-description-span div.alert {
 }
 
 .hero {
-  margin-block-start: -1.875rem;
+  max-inline-size: 89.375rem;
+  margin-inline: auto;
   margin-block-end: 1.875rem;
 }
 .hero picture {
   display: block;
-  margin-inline: auto;
 }
 .hero img {
   display: block;

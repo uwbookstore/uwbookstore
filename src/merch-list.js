@@ -300,6 +300,15 @@ if (!noListItems) {
     merchFilterWrap.after(pageBanner);
   }
 
+  if (window.location.href.includes('/Black-Friday-2026')) {
+    pageBanner.innerHTML = `
+    <div class="callout callout-info mx-auto fit-content fw-6">
+      <h2>Black Friday! Select items 25%-50% Off!</h2>
+    </div>
+    `;
+    merchFilterWrap.after(pageBanner);
+  }
+
   if (categoryTitle.textContent.toLowerCase() === 'new arrivals') {
     // FOR NEW ARRIVALS
     pageBanner.classList.add('text-center');

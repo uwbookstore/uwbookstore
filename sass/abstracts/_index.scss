@@ -1,1 +1,14 @@
 @forward 'variables';
+// @forward 'REVENGE';
+
+// :is(div > div > div > div > *) {
+//   --warning-outline: rebeccapurple;
+
+//   outline: var(--warning-outline);
+//   --warning-divitis: "There's a whole lot of nesting going on here. Is it needed to achieve the layout? (it is not)";
+// }
+
+// header nav:has(ul > ul) {
+//   outline: var(--warning-outline);
+//   --warning-nested-navigation: 'You appear to be using tiered/nested navigation in your header. This can be difficult to traverse. Index pages with tables of content are preferable.';
+// }

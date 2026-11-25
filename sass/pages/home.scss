@@ -2,7 +2,9 @@
 
 @include breakpoint(medium) {
   .content__wrapper {
-    padding-inline: rem(20);
+    // padding-inline: rem(20);
+    max-inline-size: rem(1430);
+    margin-inline: auto;
   }
 }
 
@@ -97,15 +99,15 @@
     padding-inline: rem(20);
   }
 
-  @include breakpoint(large) {
-    gap: rem(20);
-    padding-inline: rem(30);
-  }
+  // @include breakpoint(large) {
+  //   gap: rem(20);
+  //   padding-inline: rem(30);
+  // }
 
-  @include breakpoint(xlarge) {
-    justify-content: space-between;
-    padding-inline: rem(30);
-  }
+  // @include breakpoint(xlarge) {
+  //   justify-content: space-between;
+  //   padding-inline: rem(30);
+  // }
 }
 
 .featured-item /* .carousel-item */ {
@@ -1009,5 +1011,20 @@
 
   @include breakpoint(medium) {
     width: 100%;
+  }
+}
+
+.hero {
+  margin-block-start: rem(-30);
+  margin-block-end: rem(30);
+  picture {
+    display: block;
+    margin-inline: auto;
+  }
+
+  img {
+    display: block;
+    margin-inline: auto;
+    border: 1px solid var(--bs-gray-300);
   }
 }

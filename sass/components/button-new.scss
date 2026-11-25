@@ -52,7 +52,33 @@
     --bs-btn-hover-border-color: hsl(from var(--bs-primary) h s 33%);
   }
 
-  // &-secondary {
+  &-secondary {
+    --bs-btn-bg: hsl(from var(--bs-secondary) h s 39%);
+    --bs-btn-border-color: hsl(from var(--bs-secondary) h s 35%);
+    --bs-btn-color: var(--bs-white);
 
-  // }
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: hsl(from var(--bs-secondary) h s 29%);
+    --bs-btn-hover-border-color: hsl(from var(--bs-secondary) h s 296%);
+  }
+
+  &-danger {
+    --bs-btn-bg: var(--bs-danger);
+    --bs-btn-border-color: hsl(from var(--bs-danger) h s 35%);
+    --bs-btn-color: var(--bs-white);
+
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: hsl(from var(--bs-danger) h s 39%);
+    --bs-btn-hover-border-color: hsl(from var(--bs-danger) h s 29%);
+  }
+
+  &-success {
+    --bs-btn-bg: hsl(from var(--bs-success) h s 35%);
+    --bs-btn-border-color: hsl(from var(--bs-success) h s 30%);
+    --bs-btn-color: var(--bs-white);
+
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: hsl(from var(--bs-success) h s 28%);
+    --bs-btn-hover-border-color: hsl(from var(--bs-success) h s 26%);
+  }
 }

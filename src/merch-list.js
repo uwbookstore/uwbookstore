@@ -302,7 +302,7 @@ if (!noListItems) {
 
   if (window.location.href.includes('/Black-Friday-2026')) {
     pageBanner.innerHTML = `
-    <div class="callout callout-info mx-auto fit-content fw-6">
+    <div class="callout callout-info mx-auto fit-content text-center fw-6">
       <h2>Black Friday! Select items 25%-50% Off!</h2>
     </div>
     `;
